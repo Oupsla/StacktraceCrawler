@@ -1,0 +1,14 @@
+#0  0xb7241317 in memset () from /lib/tls/i686/cmov/libc.so.6
+#1  0xb58a6b1c in fdct_ifast248 (data=0xb4000010)
+    at /build/buildd/ffmpeg-debian-0.svn20090119/libavcodec/jfdctfst.c:326
+	tmp0 = 0
+	tmp1 = 8
+	tmp2 = 0
+	tmp3 = <value optimized out>
+	tmp4 = 157766720
+	tmp5 = 0
+	tmp6 = -1275045184
+	tmp7 = -1275061344
+	tmp13 = <value optimized out>
+#2  0xb723ace1 in _int_memalign () from /lib/tls/i686/cmov/libc.so.6
+#3  0x00000000 in ?? ()

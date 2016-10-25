@@ -1,0 +1,65 @@
+#0  0x06260fad in __gmon_start__@plt () from /usr/lib/libgdu.so.0
+No symbol table info available.
+#1  0x0032e820 in static_fundamental_type_nodes ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#2  0x0627456b in ?? () from /usr/lib/libgdu.so.0
+No symbol table info available.
+#3  0x00f67522 in ?? ()
+   from /usr/lib/nautilus/extensions-2.0/libnautilus-gdu.so
+No symbol table info available.
+#4  0x00214fad in nautilus_menu_provider_get_file_items (provider=0x9b4b4b0, 
+    window=0x99e9038, files=0x9f36da0) at nautilus-menu-provider.c:85
+	__PRETTY_FUNCTION__ = "nautilus_menu_provider_get_file_items"
+#5  0x080bc391 in ?? ()
+No symbol table info available.
+#6  0x080bcab5 in ?? ()
+No symbol table info available.
+#7  0x080c3006 in ?? ()
+No symbol table info available.
+#8  0x080c825a in ?? ()
+No symbol table info available.
+#9  0x080b1746 in fm_directory_view_update_menus ()
+No symbol table info available.
+#10 0x080b26c3 in ?? ()
+No symbol table info available.
+#11 0x0039f5cc in g_timeout_dispatch (source=0x9af4110, callback=0, 
+    user_data=0xaac5a10) at /build/buildd/glib2.0-2.21.6/glib/gmain.c:3396
+No locals.
+#12 0x0039ef18 in IA__g_main_context_dispatch (context=0x99c5b90)
+    at /build/buildd/glib2.0-2.21.6/glib/gmain.c:1960
+No locals.
+#13 0x003a27c0 in g_main_context_iterate (context=0x99c5b90, 
+    block=<value optimized out>, dispatch=1, self=0x9992008)
+    at /build/buildd/glib2.0-2.21.6/glib/gmain.c:2591
+	max_priority = 2147483647
+	timeout = 12
+	some_ready = 1
+	nfds = <value optimized out>
+	allocated_nfds = <value optimized out>
+	fds = <value optimized out>
+	__PRETTY_FUNCTION__ = "g_main_context_iterate"
+#14 0x003a2c2f in IA__g_main_loop_run (loop=0x9c3b1c0)
+    at /build/buildd/glib2.0-2.21.6/glib/gmain.c:2799
+	self = (GThread *) 0x9992008
+	__PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#15 0x011166f9 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.17.11/gtk/gtkmain.c:1205
+	tmp_list = (GList *) 0x0
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0x1
+	loop = (GMainLoop *) 0x9c3b1c0
+#16 0x08081501 in ?? ()
+No symbol table info available.
+#17 0x00cfbb56 in __libc_start_main (
+    main=0x8080df0 <g_themed_icon_append_name@plt+85740>, argc=1, 
+    ubp_av=0xbfee4f84, init=0x81a2d70, fini=0x81a2d60, 
+    rtld_fini=0xe4bd20 <_dl_fini>, stack_end=0xbfee4f7c) at libc-start.c:220
+	result = <value optimized out>
+	unwind_buf = {cancel_jmp_buf = {{jmp_buf = {14913524, 0, 0, 
+        -1074901160, -144486289, -1266112751}, mask_was_saved = 0}}, priv = {
+    pad = {0x0, 0x0, 0x1, 0x806bf20}, data = {prev = 0x0, cleanup = 0x0, 
+      canceltype = 1}}}
+	not_first_call = <value optimized out>
+#18 0x0806bf41 in ?? ()
+No symbol table info available.

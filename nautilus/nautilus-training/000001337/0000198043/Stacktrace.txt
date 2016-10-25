@@ -1,0 +1,9 @@
+#0  0xb759efac in g_logv () from /usr/lib/libglib-2.0.so.0
+#1  0xb759f229 in g_log () from /usr/lib/libglib-2.0.so.0
+#2  0xb763d689 in g_type_class_ref () from /usr/lib/libgobject-2.0.so.0
+#3  0xb7621768 in g_object_newv () from /usr/lib/libgobject-2.0.so.0
+#4  0xb7621cc1 in g_object_new_valist () from /usr/lib/libgobject-2.0.so.0
+#5  0xb7621e30 in g_object_new () from /usr/lib/libgobject-2.0.so.0
+#6  0xb769850a in ?? () from /usr/lib/libgio-2.0.so.0
+#7  0x08388060 in ?? ()
+#8  0x00000000 in ?? ()

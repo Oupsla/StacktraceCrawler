@@ -1,0 +1,44 @@
+#0  0x00000000004bef0a in ?? ()
+No symbol table info available.
+#1  0x00000000004bf06b in ?? ()
+No symbol table info available.
+#2  0x00007fef3e7cc919 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#3  0x0000000000461a82 in ?? ()
+No symbol table info available.
+#4  0x0000000000465a02 in ?? ()
+No symbol table info available.
+#5  0x00007fef3eaa04a7 in ?? () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#6  0x00007fef3eab8f78 in g_signal_emit_valist () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#7  0x00007fef3eab9bd2 in g_signal_emit () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#8  0x00000000004a2038 in ?? ()
+No symbol table info available.
+#9  0x00000000004a3179 in ?? ()
+No symbol table info available.
+#10 0x00000000004a338a in ?? ()
+No symbol table info available.
+#11 0x00007fef3ed34f57 in ?? () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#12 0x00007fef3ed58617 in g_simple_async_result_complete () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#13 0x00007fef3ed58679 in ?? () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#14 0x00007fef3e7d0a65 in g_main_context_dispatch () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#15 0x00007fef3e7d0dc8 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#16 0x00007fef3e7d0e6c in g_main_context_iteration () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#17 0x00007fef3ed8997c in g_application_run () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#18 0x000000000042b561 in ?? ()
+No symbol table info available.
+#19 0x00007fef3dc99ed5 in __libc_start_main (main=0x42b4a0, argc=2, argv=0x7fff6a728218, init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, stack_end=0x7fff6a728208) at libc-start.c:287
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, -901891063600911456, 4371866, 140734979277328, 0, 0, 902129766297496480, 911325024813444000}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x4ed650, 0x7fff6a728218}, data = {prev = 0x0, cleanup = 0x0, canceltype = 5166672}}}
+        not_first_call = <optimized out>
+#20 0x000000000042b5c3 in ?? ()
+No symbol table info available.

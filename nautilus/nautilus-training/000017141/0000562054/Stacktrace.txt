@@ -1,0 +1,38 @@
+#0  0x00ef373d in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#1  0x00efc065 in gtk_icon_theme_has_icon () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#2  0x00e5f235 in gtk_action_group_add_actions_full ()
+   from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#3  0x00e5f33e in gtk_action_group_add_actions ()
+   from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#4  0x080a513f in ?? ()
+No symbol table info available.
+#5  0x080accac in ?? ()
+No symbol table info available.
+#6  0x002ee818 in g_type_create_instance () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#7  0x002d2a18 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#8  0x080abf34 in ?? ()
+No symbol table info available.
+#9  0x002d3c4c in g_object_newv () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#10 0x002d490c in g_object_new_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#11 0x01068535 in gtk_widget_new () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#12 0x08075fe3 in ?? ()
+No symbol table info available.
+#13 0x0806deea in ?? ()
+No symbol table info available.
+#14 0x0806ed0b in ?? ()
+No symbol table info available.
+#15 0x08080dcf in ?? ()
+No symbol table info available.
+#16 0x07885bd6 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#17 0x0806c6b1 in ?? ()
+No symbol table info available.

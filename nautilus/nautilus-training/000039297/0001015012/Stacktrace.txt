@@ -1,0 +1,93 @@
+#0  0x00f5a416 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x01dbc1ef in __GI_raise (sig=6) at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+        resultvar = <optimized out>
+        resultvar = <optimized out>
+        pid = 32698356
+        selftid = 1774
+#2  0x01dbf835 in __GI_abort () at abort.c:91
+        save_stage = 2
+        act = {__sigaction_handler = {sa_handler = 0xbff904dc, sa_sigaction = 0xbff904dc}, sa_mask = {__val = {4, 18017916, 32700800, 18155830, 32699456, 18004310, 18621788, 0, 0, 18018882, 3220768068, 144880288, 0, 3078056728, 17664337, 145260024, 144880288, 17919243, 0, 3220768092, 4, 18620404, 145528752, 17919222, 31014968, 3078051920, 145260024, 145528752, 144880288, 18620404, 4294967295, 114}}, sa_flags = 18620404, sa_restorer = 0x113266e}
+        sigs = {__val = {32, 0 <repeats 31 times>}}
+#3  0x01132b9e in g_assertion_message () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#4  0x0113319f in g_assertion_message_expr () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#5  0x080ff082 in ?? ()
+No symbol table info available.
+#6  0x080ff847 in ?? ()
+No symbol table info available.
+#7  0x08139b22 in ?? ()
+No symbol table info available.
+#8  0x08137f35 in nautilus_file_undo_info_apply_async ()
+No symbol table info available.
+#9  0x0813ba3b in ?? ()
+No symbol table info available.
+#10 0x00d981ec in g_cclosure_marshal_VOID__VOID () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#11 0x00d96484 in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#12 0x00da80d9 in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#13 0x00db02dc in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#14 0x00db0453 in g_signal_emit () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#15 0x006e29f6 in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#16 0x006e31d4 in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#17 0x00d96484 in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#18 0x00da80d9 in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#19 0x00dafff5 in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#20 0x00db0453 in g_signal_emit () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#21 0x006dc6ae in gtk_accel_group_activate () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#22 0x006de069 in gtk_accel_groups_activate () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#23 0x009500da in gtk_window_activate_key () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#24 0x0095013e in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#25 0x007e61b2 in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#26 0x00d952fd in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#27 0x00d96484 in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#28 0x00da870d in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#29 0x00dafff5 in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#30 0x00db0453 in g_signal_emit () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#31 0x0093031b in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#32 0x007e3e0b in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#33 0x007e5e20 in gtk_main_do_event () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#34 0x0012c63c in ?? () from /usr/lib/i386-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#35 0x00155828 in ?? () from /usr/lib/i386-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#36 0x01110d86 in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#37 0x01111125 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#38 0x01111201 in g_main_context_iteration () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#39 0x043b9824 in g_application_run () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#40 0x08068008 in ?? ()
+No symbol table info available.
+#41 0x01da74d3 in __libc_start_main (main=0x8067f50, argc=2, ubp_av=0xbff91724, init=0x815d7e0, fini=0x815d850, rtld_fini=0xdf7270 <_dl_fini>, stack_end=0xbff9171c) at libc-start.c:226
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {32698356, 0, 0, 0, -238451144, -1223851196}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x2, 0x8068034}, data = {prev = 0x0, cleanup = 0x0, canceltype = 2}}}
+        not_first_call = <optimized out>
+#42 0x08068055 in ?? ()
+No symbol table info available.

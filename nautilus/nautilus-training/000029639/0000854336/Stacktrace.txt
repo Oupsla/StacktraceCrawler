@@ -1,0 +1,51 @@
+#0  0x080cc277 in ?? ()
+No symbol table info available.
+#1  0x08095cf2 in ?? ()
+No symbol table info available.
+#2  0x00335f9a in g_cclosure_marshal_VOID__OBJECT () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#3  0x00333d8c in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#4  0x003481f0 in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#5  0x00350ebf in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#6  0x003511bf in g_signal_emit_by_name () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#7  0x0059ec9d in ?? () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#8  0x00335f9a in g_cclosure_marshal_VOID__OBJECT () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#9  0x00333d8c in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#10 0x003481f0 in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#11 0x00350ebf in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#12 0x003511bf in g_signal_emit_by_name () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#13 0x01f3f296 in ?? () from /usr/lib/gio/modules/libgioremote-volume-monitor.so
+No symbol table info available.
+#14 0x009701c0 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#15 0x0097430f in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#16 0x00974a40 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#17 0x0097504b in g_main_loop_run () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#18 0x0116bd45 in gtk_main () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#19 0x0106b1c4 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#20 0x005bcadc in g_application_run () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#21 0x08067a04 in ?? ()
+No symbol table info available.
+#22 0x0621f113 in __libc_start_main (main=0x8067940, argc=2, ubp_av=0xbf886424, init=0x81597e0, fini=0x8159850, rtld_fini=0xc2abc0, stack_end=0xbf88641c) at libc-start.c:226
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {104325108, 0, 0, 0, -1918984802, -558360339}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x2, 0x8067a1c}, data = {prev = 0x0, cleanup = 0x0, canceltype = 2}}}
+        not_first_call = <optimized out>
+#23 0x08067a3d in ?? ()
+No symbol table info available.
+Backtrace stopped: Not enough registers or memory available to unwind further

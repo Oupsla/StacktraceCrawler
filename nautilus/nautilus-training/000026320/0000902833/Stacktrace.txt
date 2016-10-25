@@ -1,0 +1,46 @@
+#0  0x0000000000468a1f in ?? ()
+No symbol table info available.
+#1  0x000000000044f1f5 in ?? ()
+No symbol table info available.
+#2  0x00007f35f7b0081c in g_closure_invoke () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#3  0x00007f35f7b12019 in ?? () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#4  0x00007f35f7b1b258 in g_signal_emit_valist () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#5  0x00007f35f7b1b60d in g_signal_emit_by_name () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#6  0x00007f35f7b0081c in g_closure_invoke () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#7  0x00007f35f7b12019 in ?? () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#8  0x00007f35f7b1b258 in g_signal_emit_valist () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#9  0x00007f35f7b1b60d in g_signal_emit_by_name () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#10 0x00007f35ddbe635b in ?? () from /usr/lib/gio/modules/libgioremote-volume-monitor.so
+No symbol table info available.
+#11 0x00007f35f71ffbcd in g_main_context_dispatch () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#12 0x00007f35f72003a8 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#13 0x00007f35f72009f2 in g_main_loop_run () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#14 0x00007f35f8da2af7 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#15 0x00000000004427d2 in ?? ()
+No symbol table info available.
+#16 0x00007f35f5bc7eff in __libc_start_main () from /lib/x86_64-linux-gnu/libc.so.6
+No symbol table info available.
+#17 0x000000000042f349 in ?? ()
+No symbol table info available.
+#18 0x00007fff4e831c58 in ?? ()
+No symbol table info available.
+#19 0x000000000000001c in ?? ()
+No symbol table info available.
+#20 0x0000000000000001 in ?? ()
+No symbol table info available.
+#21 0x00007fff4e832ae4 in ?? ()
+No symbol table info available.
+#22 0x0000000000000000 in ?? ()
+No symbol table info available.

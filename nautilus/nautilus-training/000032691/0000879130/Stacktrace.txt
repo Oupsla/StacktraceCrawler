@@ -1,0 +1,60 @@
+#0  0x00007f45559cf3a5 in raise () from /lib/x86_64-linux-gnu/libc.so.6
+No symbol table info available.
+#1  0x00007f45559d2b0b in abort () from /lib/x86_64-linux-gnu/libc.so.6
+No symbol table info available.
+#2  0x00007f4555a07113 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+No symbol table info available.
+#3  0x00007f4555a11a96 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+No symbol table info available.
+#4  0x00007f4555a15d7c in free () from /lib/x86_64-linux-gnu/libc.so.6
+No symbol table info available.
+#5  0x00007f45564251e4 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#6  0x00007f45564257c3 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#7  0x0000000000498aaf in ?? ()
+No symbol table info available.
+#8  0x0000000000497333 in ?? ()
+No symbol table info available.
+#9  0x000000000049bb2f in ?? ()
+No symbol table info available.
+#10 0x000000000046e374 in ?? ()
+No symbol table info available.
+#11 0x000000000047bda3 in ?? ()
+No symbol table info available.
+#12 0x000000000047befd in ?? ()
+No symbol table info available.
+#13 0x000000000047f7b4 in ?? ()
+No symbol table info available.
+#14 0x000000000047f93d in ?? ()
+No symbol table info available.
+#15 0x00000000004809d8 in ?? ()
+No symbol table info available.
+#16 0x000000000049ae4c in ?? ()
+No symbol table info available.
+#17 0x00007f4556437a5d in g_main_context_dispatch () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#18 0x00007f4556438258 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#19 0x00007f4556438792 in g_main_loop_run () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#20 0x00007f4558b5ae1d in gtk_main () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#21 0x00007f4556ff5a4e in g_application_run () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#22 0x000000000042af90 in ?? ()
+No symbol table info available.
+#23 0x00007f45559ba30d in __libc_start_main () from /lib/x86_64-linux-gnu/libc.so.6
+No symbol table info available.
+#24 0x000000000042afd1 in ?? ()
+No symbol table info available.
+#25 0x00007fff6835f258 in ?? ()
+No symbol table info available.
+#26 0x000000000000001c in ?? ()
+No symbol table info available.
+#27 0x0000000000000001 in ?? ()
+No symbol table info available.
+#28 0x00007fff68361409 in ?? ()
+No symbol table info available.
+#29 0x0000000000000000 in ?? ()
+No symbol table info available.

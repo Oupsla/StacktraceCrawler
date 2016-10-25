@@ -1,0 +1,32 @@
+#0  0x0811c6f9 in nautilus_file_unref ()
+No symbol table info available.
+#1  0x0041a1a9 in g_list_foreach () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#2  0x0812561f in nautilus_file_list_unref ()
+No symbol table info available.
+#3  0x08125652 in ?? ()
+No symbol table info available.
+#4  0x080d84f7 in ?? ()
+No symbol table info available.
+#5  0x080de2d3 in ?? ()
+No symbol table info available.
+#6  0x080fcdf5 in ?? ()
+No symbol table info available.
+#7  0x08101c24 in ?? ()
+No symbol table info available.
+#8  0x0041a311 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#9  0x0041eaa8 in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#10 0x0041f270 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#11 0x0041f92b in g_main_loop_run () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#12 0x01055c39 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#13 0x0807ff36 in ?? ()
+No symbol table info available.
+#14 0x01a6ee37 in __libc_start_main () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#15 0x0806a861 in ?? ()
+No symbol table info available.

@@ -1,0 +1,65 @@
+#0  0x000000000046e45b in trash_or_delete_done_cb (debuting_uris=0x10c2940, 
+    user_cancel=1, view=0x12a3640) at fm-directory-view.c:3738
+No locals.
+#1  0x00000000004c13c5 in delete_job_done (user_data=<value optimized out>)
+    at nautilus-file-operations.c:1841
+	job = (DeleteJob *) 0x11dcf80
+	debuting_uris = (GHashTable *) 0x10c2940
+#2  0x00007fd225aa62ec in ?? () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#3  0x00007fd224c82bbe in g_main_context_dispatch ()
+   from /lib/libglib-2.0.so.0
+No symbol table info available.
+#4  0x00007fd224c86588 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#5  0x00007fd224c869e5 in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#6  0x00007fd22652f177 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#7  0x0000000000443947 in main (argc=1, argv=0x7fffcbc962e8)
+    at nautilus-main.c:588
+	kill_shell = 0
+	no_default_window = 1
+	browser_window = 0
+	no_desktop = 0
+	version = 0
+	autostart_mode = <value optimized out>
+	autostart_id = <value optimized out>
+	geometry = (gchar *) 0x0
+	remaining = (gchar **) 0x0
+	perform_self_check = 0
+	application = <value optimized out>
+	context = <value optimized out>
+	file = (GFile *) 0x7fffcbc95f70
+	uri = <value optimized out>
+	uris = (char **) 0x0
+	uris_array = <value optimized out>
+	error = (GError *) 0x0
+	options = {{long_name = 0x54b6b6 "check", short_name = 99 'c', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x7fffcbc961d8, 
+    description = 0x54b700 "Perform a quick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x54b5af "version", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x7fffcbc961dc, 
+    description = 0x54b730 "Show the version of the program.", 
+    arg_description = 0x0}, {long_name = 0x54f75c "geometry", 
+    short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+    arg_data = 0x7fffcbc961d0, 
+    description = 0x54b758 "Create the initial window with the given geometry.", arg_description = 0x54b5b7 "GEOMETRY"}, {
+    long_name = 0x54b5c0 "no-default-window", short_name = 110 'n', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x7fffcbc961e8, 
+    description = 0x54b790 "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {long_name = 0x54b5d2 "no-desktop", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x7fffcbc961e0, 
+    description = 0x54b7c8 "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {
+    long_name = 0x547f00 "browser", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0x7fffcbc961e4, 
+    description = 0x54b5dd "open a browser window.", arg_description = 0x0}, {
+    long_name = 0x56ced1 "quit", short_name = 113 'q', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0x7fffcbc961ec, 
+    description = 0x54b5f4 "Quit Nautilus.", arg_description = 0x0}, {
+    long_name = 0x550d01 "", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0x7fffcbc961c8, 
+    description = 0x0, arg_description = 0x54b603 "[URI...]"}, {
+    long_name = 0x0, short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x0, description = 0x0, arg_description = 0x0}}

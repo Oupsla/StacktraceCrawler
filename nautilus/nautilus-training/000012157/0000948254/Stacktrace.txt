@@ -1,0 +1,32 @@
+#0  0xb6a70457 in g_hash_table_lookup () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#1  0x08130df4 in ?? ()
+No symbol table info available.
+#2  0x08102ff1 in ?? ()
+No symbol table info available.
+#3  0x080e0652 in ?? ()
+No symbol table info available.
+#4  0x080e13a9 in ?? ()
+No symbol table info available.
+#5  0x080e2664 in ?? ()
+No symbol table info available.
+#6  0x080e6cd9 in ?? ()
+No symbol table info available.
+#7  0x08136a1c in ?? ()
+No symbol table info available.
+#8  0x081020a9 in ?? ()
+No symbol table info available.
+#9  0x080fb427 in ?? ()
+No symbol table info available.
+#10 0x080fb514 in ?? ()
+No symbol table info available.
+#11 0x081455bc in ?? ()
+No symbol table info available.
+#12 0x08067ff7 in ?? ()
+No symbol table info available.
+#13 0xb684e4d3 in __libc_start_main (main=0x8067f30, argc=2, ubp_av=0xbff4ebc4, init=0x815dc10, fini=0x815dc80, rtld_fini=0xb7738280 <_dl_fini>, stack_end=0xbff4ebbc) at libc-start.c:226
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {-1231204364, 0, 0, 0, -14229664, 523869042}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x2, 0x8068014}, data = {prev = 0x0, cleanup = 0x0, canceltype = 2}}}
+        not_first_call = <optimized out>
+#14 0x08068035 in ?? ()
+No symbol table info available.

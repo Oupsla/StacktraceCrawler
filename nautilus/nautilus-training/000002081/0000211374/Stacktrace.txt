@@ -1,0 +1,9 @@
+#0  0xb76e12e6 in gconf_client_remove_dir (client=0xe000000c, 
+    dirname=0xb617010c <Address 0xb617010c out of bounds>, err=0x0)
+    at gconf-client.c:705
+	found = <value optimized out>
+	__PRETTY_FUNCTION__ = "gconf_client_remove_dir"
+#1  0xb616bc67 in ?? ()
+#2  0xe000000c in ?? ()
+#3  0xb617010c in ?? ()
+#4  0x00000000 in ?? ()

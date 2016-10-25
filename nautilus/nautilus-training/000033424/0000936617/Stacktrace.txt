@@ -1,0 +1,19 @@
+#0  0xb77a7424 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0xb68d01ef in raise () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#2  0xb68d3835 in abort () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#3  0xb6abd71d in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#4  0xb6b2e6d4 in g_cond_wait_until () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#5  0xb6ac2119 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#6  0xb6ac2a51 in g_async_queue_timed_pop () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#7  0xb1d822c9 in ?? ()
+No symbol table info available.
+#8  0x08adb768 in ?? ()
+No symbol table info available.
+Backtrace stopped: previous frame inner to this frame (corrupt stack?)

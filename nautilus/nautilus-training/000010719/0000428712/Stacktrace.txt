@@ -1,0 +1,62 @@
+#0  0x029bf46a in ?? () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#1  0x029c1908 in malloc () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#2  0x004243b4 in g_malloc () from /usr/lib/libglib-2.0.so.0
+No symbol table info available.
+#3  0x0043ea64 in g_strndup () from /usr/lib/libglib-2.0.so.0
+No symbol table info available.
+#4  0x0014f48a in ?? () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#5  0x001a5e26 in ?? () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#6  0x0018a3a8 in g_vfs_get_file_for_uri () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#7  0x0015260f in g_file_new_for_uri () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#8  0x0815141a in ?? ()
+No symbol table info available.
+#9  0x003ca3bf in g_type_create_instance () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#10 0x003add38 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#11 0x003ae8cc in g_object_newv () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#12 0x003af502 in g_object_new_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#13 0x003af67e in g_object_new () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#14 0x0815120c in ?? ()
+No symbol table info available.
+#15 0x080a4b47 in ?? ()
+No symbol table info available.
+#16 0x080ab630 in ?? ()
+No symbol table info available.
+#17 0x003ca370 in g_type_create_instance () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#18 0x003add38 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#19 0x080aa014 in ?? ()
+No symbol table info available.
+#20 0x003ae8cc in g_object_newv () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#21 0x003af563 in g_object_new_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#22 0x00a8bbe5 in gtk_widget_new () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#23 0x0806e0e5 in ?? ()
+No symbol table info available.
+#24 0x0806e217 in ?? ()
+No symbol table info available.
+#25 0x0806e733 in ?? ()
+No symbol table info available.
+#26 0x0806e881 in ?? ()
+No symbol table info available.
+#27 0x0806fbfa in ?? ()
+No symbol table info available.
+#28 0x080814c8 in ?? ()
+No symbol table info available.
+#29 0x02968b56 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#30 0x0806bf41 in ?? ()
+No symbol table info available.

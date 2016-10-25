@@ -1,0 +1,54 @@
+#0  0x003a4810 in g_utf8_validate () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#1  0x0810bef2 in custom_basename_to_string (format=0xb140aec0 "%B", 
+    va=0xb1e4f0c4 "øÂh·äðä±\020") at nautilus-file-operations.c:810
+	file = (GFile *) 0xb768c2f8
+	info = <value optimized out>
+	name = <value optimized out>
+	basename = 0x0
+#2  0x08192955 in eel_strdup_vprintf_with_custom (custom=0x81db680, 
+    format=0xb768a3ec <Address 0xb768a3ec out of bounds>, 
+    va_orig=0xb1e4f0b4 "") at eel-string.c:781
+	va = 0xb1e4f0c4 "øÂh·äðä±\020"
+	p = 0xb768a45e <Address 0xb768a45e out of bounds>
+	num_args = <value optimized out>
+	i = 6
+	j = 6
+	type = <value optimized out>
+	f = (GString *) 0xb1e4f06c
+	str = (GString *) 0xa6c4d80
+	s = <value optimized out>
+	__PRETTY_FUNCTION__ = "eel_strdup_vprintf_with_custom"
+#3  0x0810baae in f (format=0xb768a3ec <Address 0xb768a3ec out of bounds>)
+    at nautilus-file-operations.c:905
+	res = 0x0
+#4  0x0810d82e in report_copy_progress (copy_job=0xa6d8e90, 
+    source_info=<value optimized out>, transfer_info=0xb1e4f1d0)
+    at nautilus-file-operations.c:2856
+	files_left = 0
+	total_size = <value optimized out>
+	elapsed = 0
+	transfer_rate = 451
+	remaining_time = <value optimized out>
+	now = 1430399339968
+	is_move = 1
+#5  0x08115b6c in move_job (io_job=0xa4636b8, cancellable=0xa67f920, 
+    user_data=0xa6d8e90) at nautilus-file-operations.c:4807
+	fallbacks = (GList *) 0x0
+	source_info = {num_files = 0, num_bytes = 0, 
+  num_files_since_progress = 0, op = OP_KIND_MOVE}
+	transfer_info = {num_files = 0, num_bytes = 0, op = OP_KIND_COPY, 
+  last_report_time = 1434151132379, last_reported_files_left = 0}
+	dest_fs_id = 0xb1402f18 "l2065"
+	dest_fs_type = 0x0
+	fallback_files = <value optimized out>
+#6  0x001562f4 in ?? () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#7  0x0039f99f in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#8  0x0039e36f in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#9  0x00eaf80e in start_thread () from /lib/tls/i686/cmov/libpthread.so.0
+No symbol table info available.
+#10 0x00e007ee in clone () at ../sysdeps/unix/sysv/linux/i386/clone.S:130
+No locals.

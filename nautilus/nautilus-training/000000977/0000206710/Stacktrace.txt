@@ -1,0 +1,32 @@
+#0  0x00007f3f8d246f38 in g_type_check_instance_cast ()
+   from /usr/lib/libgobject-2.0.so.0
+#1  0x00007f3f839240f4 in ?? ()
+   from /usr/lib/gtk-2.0/2.10.0/filesystems/libgio.so
+#2  0x00007f3f8d22abcf in g_closure_invoke ()
+   from /usr/lib/libgobject-2.0.so.0
+#3  0x00007f3f8d23e6bc in ?? () from /usr/lib/libgobject-2.0.so.0
+#4  0x00007f3f8d2400d5 in g_signal_emit_valist ()
+   from /usr/lib/libgobject-2.0.so.0
+#5  0x00007f3f8d240398 in g_signal_emit_by_name ()
+   from /usr/lib/libgobject-2.0.so.0
+#6  0x00007f3f8d22abcf in g_closure_invoke ()
+   from /usr/lib/libgobject-2.0.so.0
+#7  0x00007f3f8d23e6bc in ?? () from /usr/lib/libgobject-2.0.so.0
+#8  0x00007f3f8d2400d5 in g_signal_emit_valist ()
+   from /usr/lib/libgobject-2.0.so.0
+#9  0x00007f3f8d240398 in g_signal_emit_by_name ()
+   from /usr/lib/libgobject-2.0.so.0
+#10 0x00007f3f8349b44c in ?? ()
+   from /usr/lib/gio/modules/libgiohal-volume-monitor.so
+#11 0x00007f3f8c43c222 in g_main_context_dispatch ()
+   from /usr/lib/libglib-2.0.so.0
+#12 0x00007f3f8c43f4d6 in ?? () from /usr/lib/libglib-2.0.so.0
+#13 0x00007f3f8c43f797 in g_main_loop_run () from /usr/lib/libglib-2.0.so.0
+#14 0x0000000000472442 in ?? ()
+#15 0x000000000045d634 in ?? ()
+#16 0x000000000045ea9a in brasero_burn_record ()
+#17 0x0000000000432d83 in brasero_burn_dialog_run ()
+#18 0x000000000046926c in ?? ()
+#19 0x0000000000468ede in ?? ()
+#20 0x0000000000424d16 in ?? ()
+#21 0x00000000004256cc in main ()

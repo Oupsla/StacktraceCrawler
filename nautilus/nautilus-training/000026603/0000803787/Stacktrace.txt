@@ -1,0 +1,48 @@
+#0  0x00bdc150 in g_object_unref () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#1  0x00fc0d19 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#2  0x00bdbe8b in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#3  0x005c9aa6 in g_datalist_id_set_data_full () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#4  0x00bdbf19 in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#5  0x010f11f0 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#6  0x00e99de1 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#7  0x00bdc218 in g_object_unref () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#8  0x00bdc3d2 in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#9  0x00c03fe6 in g_value_unset () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#10 0x00bf6766 in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#11 0x00bf68b3 in g_signal_emit () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#12 0x00eddf7e in gtk_container_remove () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#13 0x00fc0e18 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#14 0x00fc1b1c in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#15 0x00f278bd in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#16 0x003cd0a2 in g_simple_async_result_complete () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#17 0x003cd123 in ?? () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#18 0x005e3230 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#19 0x005e70cf in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#20 0x005e7800 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#21 0x005e7e0b in g_main_loop_run () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#22 0x00f7f675 in gtk_main () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#23 0x08066dc8 in main ()
+No symbol table info available.

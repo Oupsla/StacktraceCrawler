@@ -1,0 +1,209 @@
+#0  IA__g_str_hash (v=0x0) at /build/buildd/glib2.0-2.20.1/glib/gstring.c:95
+	p = (const signed char *) 0x9a721b0 "\b"
+	h = <value optimized out>
+#1  0xb78ee3fb in IA__g_hash_table_lookup (hash_table=0x9a721b0, key=0x0)
+    at /build/buildd/glib2.0-2.20.1/glib/ghash.c:195
+	node = <value optimized out>
+	node_index = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_hash_table_lookup"
+#2  0xb5dd6f2f in ?? ()
+#3  0xb8001033 in nautilus_info_provider_update_file_info (provider=0x0, 
+    file=0x9f92470, update_complete=0x9fda9f8, handle=0x99f9b98)
+    at nautilus-info-provider.c:76
+	__PRETTY_FUNCTION__ = "nautilus_info_provider_update_file_info"
+#4  0x080fc888 in extension_info_start (directory=0x9a4fc28, file=0x9f92470, 
+    doing_io=0xbf89cb88) at nautilus-directory-async.c:4544
+	provider = (NautilusInfoProvider *) 0x99f9b98
+	result = <value optimized out>
+	handle = <value optimized out>
+	update_complete = (GClosure *) 0x9fda9f8
+#5  0x080f9250 in nautilus_directory_async_state_changed (directory=0x9a4fc28)
+    at nautilus-directory-async.c:4625
+No locals.
+#6  0x080fa8f7 in link_info_done (directory=0x9a4fc28, file=0x9fba628, 
+    uri=0x0, name=0x0, icon=0x0, is_launcher=0, is_foreign=0)
+    at nautilus-directory-async.c:3637
+	is_trusted = 1
+#7  0x080faa14 in lacks_link_info (file=0x9fba628)
+    at nautilus-directory-async.c:1737
+No locals.
+#8  0x080f6504 in has_problem (directory=0x0, file=0x9a721b0, 
+    problem=0x80fa990 <lacks_link_info>) at nautilus-directory-async.c:1785
+	node = <value optimized out>
+#9  0x080f7d1d in request_is_satisfied (directory=0x9a4fc28, file=0x9fba628, 
+    request=1) at nautilus-directory-async.c:1868
+No locals.
+#10 0x08158f8d in vfs_file_check_if_ready (file=0x9fba628, 
+    file_attributes=547) at nautilus-vfs-file.c:87
+No locals.
+#11 0x0811a79c in nautilus_file_check_if_ready (file=0x9fba628, 
+    file_attributes=547) at nautilus-file.c:6555
+	__PRETTY_FUNCTION__ = "nautilus_file_check_if_ready"
+#12 0x080b0fc0 in process_new_files (view=0x9cfaca0)
+    at fm-directory-view.c:2627
+	new_added_files = (GList *) 0xa0354b0
+	new_changed_files = (GList *) 0x0
+	old_added_files = (GList *) 0x0
+	old_changed_files = (GList *) 0x0
+	non_ready_files = (GHashTable *) 0x9ae8f80
+	node = (GList *) 0xa0354b0
+	next = (GList *) 0xa0354d0
+	pending = (FileAndDirectory *) 0xa12d440
+	in_non_ready = 0
+#13 0x080b4145 in done_loading_callback (directory=0x9a4fc28, 
+    callback_data=0x9cfaca0) at fm-directory-view.c:3124
+	view = (FMDirectoryView *) 0x9cfaca0
+#14 0xb79ca3a4 in IA__g_cclosure_marshal_VOID__VOID (closure=0x9d30458, 
+    return_value=0x0, n_param_values=1, param_values=0xa000f48, 
+    invocation_hint=0xbf89ce6c, marshal_data=0x80b4110)
+    at /build/buildd/glib2.0-2.20.1/gobject/gmarshal.c:77
+	data1 = (gpointer) 0x9a4fc28
+	data2 = (gpointer) 0x0
+	__PRETTY_FUNCTION__ = "IA__g_cclosure_marshal_VOID__VOID"
+#15 0xb79bcc7b in IA__g_closure_invoke (closure=0x9d30458, return_value=0x0, 
+    n_param_values=1, param_values=0xa000f48, invocation_hint=0xbf89ce6c)
+    at /build/buildd/glib2.0-2.20.1/gobject/gclosure.c:767
+	marshal = (
+    GClosureMarshal) 0x8069a18 <g_cclosure_marshal_VOID__VOID@plt>
+	marshal_data = (gpointer) 0x0
+	__PRETTY_FUNCTION__ = "IA__g_closure_invoke"
+#16 0xb79d2e57 in signal_emit_unlocked_R (node=0x9a4abf0, detail=0, 
+    instance=0x9a4fc28, emission_return=0x0, instance_and_params=0xa000f48)
+    at /build/buildd/glib2.0-2.20.1/gobject/gsignal.c:3247
+	tmp = <value optimized out>
+	handler = (Handler *) 0x9cfb220
+	accumulator = (SignalAccumulator *) 0x0
+	emission = {next = 0x0, instance = 0x9a4fc28, ihint = {
+    signal_id = 155, detail = 0, run_type = G_SIGNAL_RUN_FIRST}, 
+  state = EMISSION_RUN, chain_type = 4}
+	class_closure = (GClosure *) 0x9a4ec98
+	handler_list = (Handler *) 0x9cfb220
+	return_accu = (GValue *) 0x0
+	accu = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, 
+      v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, 
+      v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, 
+      v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+	signal_id = 155
+	max_sequential_handler_number = 9634
+	return_value_altered = 0
+#17 0xb79d44b9 in IA__g_signal_emit_valist (instance=0x9a4fc28, 
+    signal_id=155, detail=0, var_args=0xbf89d00c "")
+    at /build/buildd/glib2.0-2.20.1/gobject/gsignal.c:2980
+	signal_return_type = 4
+	param_values = (GValue *) 0xa000f5c
+	node = (SignalNode *) 0x9a4abf0
+	i = 1
+	n_params = 0
+	__PRETTY_FUNCTION__ = "IA__g_signal_emit_valist"
+#18 0xb79d4936 in IA__g_signal_emit (instance=0x9a4fc28, signal_id=155, 
+    detail=0) at /build/buildd/glib2.0-2.20.1/gobject/gsignal.c:3037
+No locals.
+#19 0x0810059f in nautilus_directory_emit_done_loading (directory=0x9a4fc28)
+    at nautilus-directory.c:813
+No locals.
+#20 0x080fa410 in dequeue_pending_idle_callback (callback_data=0x9a4fc28)
+    at nautilus-directory-async.c:975
+	directory = (NautilusDirectory *) 0x9a4fc28
+	pending_file_info = (GList *) 0xa03aa50
+	node = (GList *) 0x0
+	next = <value optimized out>
+	file = <value optimized out>
+	changed_files = (GList *) 0x0
+	added_files = (GList *) 0xa035400
+	file_info = <value optimized out>
+	mimetype = <value optimized out>
+	name = 0x9fbfbe0 "initrd.img"
+	dir_load_state = (DirectoryLoadState *) 0x9d30470
+#21 0x080fa54d in directory_load_done (directory=0x9a4fc28, error=0x0)
+    at nautilus-directory-async.c:1117
+	node = (GList *) 0x9bd4420
+#22 0x080fa7ab in more_files_callback (source_object=0x9bd4420, 
+    res=0x9e30150, user_data=0x9d30470) at nautilus-directory-async.c:2153
+	directory = (NautilusDirectory *) 0x9a4fc28
+	error = (GError *) 0x0
+	files = (GList *) 0x0
+	l = (GList *) 0xa03e380
+	info = (GFileInfo *) 0x9bd4420
+	__PRETTY_FUNCTION__ = "more_files_callback"
+#23 0xb7ad486e in next_async_callback_wrapper (source_object=0x9bd4420, 
+    res=0x9e30150, user_data=0x9d30470)
+    at /build/buildd/glib2.0-2.20.1/gio/gfileenumerator.c:299
+No locals.
+#24 0xb7ae90d2 in IA__g_simple_async_result_complete (simple=0x9e30150)
+    at /build/buildd/glib2.0-2.20.1/gio/gsimpleasyncresult.c:567
+	__PRETTY_FUNCTION__ = "IA__g_simple_async_result_complete"
+#25 0xb7ae90f1 in complete_in_idle_cb (data=0x9e30150)
+    at /build/buildd/glib2.0-2.20.1/gio/gsimpleasyncresult.c:577
+No locals.
+#26 0xb78fac81 in g_idle_dispatch (source=0xa03e380, callback=0, 
+    user_data=0x9e30150) at /build/buildd/glib2.0-2.20.1/glib/gmain.c:3922
+No locals.
+#27 0xb78fcb88 in IA__g_main_context_dispatch (context=0x99fc9e0)
+    at /build/buildd/glib2.0-2.20.1/glib/gmain.c:1814
+No locals.
+#28 0xb79000eb in g_main_context_iterate (context=0x99fc9e0, block=1, 
+    dispatch=1, self=0x99cf3e8)
+    at /build/buildd/glib2.0-2.20.1/glib/gmain.c:2448
+	max_priority = 0
+	timeout = 0
+	some_ready = 1
+	nfds = 17
+	allocated_nfds = <value optimized out>
+	fds = (GPollFD *) 0xa041300
+	__PRETTY_FUNCTION__ = "g_main_context_iterate"
+#29 0xb79005ba in IA__g_main_loop_run (loop=0x9cd8ab0)
+    at /build/buildd/glib2.0-2.20.1/glib/gmain.c:2656
+	self = (GThread *) 0x99cf3e8
+	__PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#30 0xb7d0f7d9 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.16.1/gtk/gtkmain.c:1205
+	tmp_list = (GList *) 0x9a409a0
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0x9a2fe28
+	loop = (GMainLoop *) 0x9cd8ab0
+#31 0x08080d96 in main (argc=1, argv=0xbf89d544) at nautilus-main.c:518
+	kill_shell = 0
+	no_default_window = 1
+	browser_window = 0
+	no_desktop = 0
+	version = 0
+	autostart_mode = <value optimized out>
+	autostart_id = <value optimized out>
+	geometry = (gchar *) 0x0
+	remaining = (const gchar **) 0x99e47d8
+	perform_self_check = 0
+	application = (NautilusApplication *) 0x9a2fe28
+	context = <value optimized out>
+	file = <value optimized out>
+	uri = <value optimized out>
+	uris = (char **) 0x9a476f8
+	uris_array = (GPtrArray *) 0x9a409a0
+	error = (GError *) 0x0
+	options = {{long_name = 0x81a89c3 "check", short_name = 99 'c', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbf89d478, 
+    description = 0x81a8a04 "Perform a quick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x81a88f9 "version", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbf89d484, 
+    description = 0x81a8a30 "Show the version of the program.", 
+    arg_description = 0x0}, {long_name = 0x81ac32f "geometry", 
+    short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+    arg_data = 0xbf89d480, 
+    description = 0x81a8a54 "Create the initial window with the given geometry.", arg_description = 0x81a8901 "GEOMETRY"}, {
+    long_name = 0x81a890a "no-default-window", short_name = 110 'n', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbf89d490, 
+    description = 0x81a8a88 "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {long_name = 0x81a891c "no-desktop", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbf89d488, 
+    description = 0x81a8abc "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {
+    long_name = 0x81a56b9 "browser", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbf89d48c, 
+    description = 0x81a8927 "open a browser window.", arg_description = 0x0}, 
+  {long_name = 0x81c80bd "quit", short_name = 113 'q', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbf89d494, 
+    description = 0x81a893e "Quit Nautilus.", arg_description = 0x0}, {
+    long_name = 0x81ad541 "", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0xbf89d47c, 
+    description = 0x0, arg_description = 0x81a894d "[URI...]"}, {
+    long_name = 0x0, short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x0, description = 0x0, arg_description = 0x0}}

@@ -1,0 +1,26 @@
+#0  0xb7218524 in gtk_ui_manager_new_merge_id () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#1  0x0813308a in ?? ()
+No symbol table info available.
+#2  0x080bd7b2 in ?? ()
+No symbol table info available.
+#3  0x080b69a9 in ?? ()
+No symbol table info available.
+#4  0x080b6a05 in ?? ()
+No symbol table info available.
+#5  0xb6a71aef in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#6  0xb6a70d8a in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#7  0xb6a71195 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#8  0xb6a71271 in g_main_context_iteration () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#9  0xb6c0e1b4 in g_application_run () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#10 0x08067ef8 in ?? ()
+No symbol table info available.
+#11 0xb683d4d3 in __libc_start_main () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#12 0x08067f45 in ?? ()
+No symbol table info available.

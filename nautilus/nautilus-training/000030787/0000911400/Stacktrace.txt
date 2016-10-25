@@ -1,0 +1,77 @@
+#0  0x00b82416 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x014efc8f in raise () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#2  0x014f32b5 in abort () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#3  0x014e8826 in __assert_fail () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#4  0x00efa59f in _XAllocID () from /usr/lib/i386-linux-gnu/libX11.so.6
+No symbol table info available.
+#5  0x00ed70e7 in XCreatePixmap () from /usr/lib/i386-linux-gnu/libX11.so.6
+No symbol table info available.
+#6  0x00856b65 in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#7  0x008387e0 in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#8  0x0083888b in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#9  0x00800b19 in cairo_push_group_with_content () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#10 0x00c69d33 in ?? () from /usr/lib/i386-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#11 0x00c3d4cd in gdk_window_set_icon_list () from /usr/lib/i386-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#12 0x012ea9f0 in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#13 0x001c735c in g_cclosure_marshal_VOID__VOID () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#14 0x001c5dac in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#15 0x001d70c5 in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#16 0x001de942 in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#17 0x001dead3 in g_signal_emit () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#18 0x0113eeb3 in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#19 0x0113f0dd in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#20 0x001c7dea in g_cclosure_marshal_VOID__PARAM () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#21 0x001c5dac in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#22 0x001d70c5 in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#23 0x001de942 in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#24 0x001dead3 in g_signal_emit () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#25 0x001c8fff in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#26 0x001cad80 in g_object_notify () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#27 0x011ff767 in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#28 0x011778d5 in gtk_main_do_event () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#29 0x00c28bbc in ?? () from /usr/lib/i386-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#30 0x00c56378 in ?? () from /usr/lib/i386-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#31 0x0029528a in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#32 0x00295695 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#33 0x00295771 in g_main_context_iteration () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#34 0x005ed62c in g_application_run () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#35 0x08067ae4 in ?? ()
+No symbol table info available.
+#36 0x014db113 in __libc_start_main () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#37 0x08067b1d in ?? ()
+No symbol table info available.
+Backtrace stopped: Not enough registers or memory available to unwind further

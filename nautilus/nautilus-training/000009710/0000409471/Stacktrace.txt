@@ -1,0 +1,92 @@
+#0  IA__g_list_foreach (list=0x90001, func=0x4d2660 <nautilus_file_unref>, 
+    user_data=0x0) at /build/buildd/glib2.0-2.21.4/glib/glist.c:788
+	next = <value optimized out>
+#1  0x00000000004c98f9 in nautilus_file_list_free (list=0x90001)
+    at nautilus-file.c:7457
+No locals.
+#2  0x0000000000490074 in remove_pending (startup_data=0x3333870, 
+    cancel_call_when_ready=<value optimized out>, cancel_timed_wait=1, 
+    cancel_destroy_handler=1) at fm-properties-window.c:5004
+No locals.
+#3  0x0000000000497e19 in is_directory_ready_callback (
+    file=<value optimized out>, data=<value optimized out>)
+    at fm-properties-window.c:5349
+	new_window = <value optimized out>
+	startup_data = (StartupData *) 0x3333870
+#4  0x00000000004b36de in call_ready_callbacks_at_idle (
+    callback_data=<value optimized out>) at nautilus-directory-async.c:1835
+	directory = (NautilusDirectory *) 0x341a370
+	node = <value optimized out>
+	next = <value optimized out>
+	callback = (ReadyCallback *) 0x327da70
+#5  0x00007f03bc75da8e in IA__g_main_context_dispatch (context=0x248ec90)
+    at /build/buildd/glib2.0-2.21.4/glib/gmain.c:1960
+No locals.
+#6  0x00007f03bc761458 in g_main_context_iterate (context=0x248ec90, 
+    block=<value optimized out>, dispatch=<value optimized out>, 
+    self=<value optimized out>)
+    at /build/buildd/glib2.0-2.21.4/glib/gmain.c:2591
+	max_priority = 200
+	timeout = 0
+	some_ready = 1
+	nfds = 15
+	allocated_nfds = -1133060192
+	fds = <value optimized out>
+	__PRETTY_FUNCTION__ = "g_main_context_iterate"
+#7  0x00007f03bc7618b5 in IA__g_main_loop_run (loop=0x279bb80)
+    at /build/buildd/glib2.0-2.21.4/glib/gmain.c:2799
+	self = (GThread *) 0x245b690
+	__PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#8  0x00007f03be037117 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.17.6/gtk/gtkmain.c:1205
+	tmp_list = (GList *) 0x24db320
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0x0
+	loop = <value optimized out>
+#9  0x000000000044335a in main (argc=1, argv=0x7fffe6e9cf98)
+    at nautilus-main.c:548
+	kill_shell = 0
+	no_default_window = 1
+	browser_window = 0
+	no_desktop = 0
+	version = 0
+	autostart_mode = 1
+	autostart_id = <value optimized out>
+	geometry = (gchar *) 0x0
+	remaining = (const gchar **) 0x0
+	perform_self_check = 0
+	application = <value optimized out>
+	context = <value optimized out>
+	file = (GFile *) 0x1
+	uri = <value optimized out>
+	uris = (char **) 0x0
+	uris_array = <value optimized out>
+	error = (GError *) 0x0
+	options = {{long_name = 0x54a4b9 "check", short_name = 99 'c', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x7fffe6e9ce88, 
+    description = 0x54a500 "Perform a quick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x54a3ef "version", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x7fffe6e9ce8c, 
+    description = 0x54a530 "Show the version of the program.", 
+    arg_description = 0x0}, {long_name = 0x54e3d3 "geometry", 
+    short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+    arg_data = 0x7fffe6e9ce80, 
+    description = 0x54a558 "Create the initial window with the given geometry.", arg_description = 0x54a3f7 "GEOMETRY"}, {
+    long_name = 0x54a400 "no-default-window", short_name = 110 'n', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x7fffe6e9ce98, 
+    description = 0x54a590 "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {long_name = 0x54a412 "no-desktop", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x7fffe6e9ce90, 
+    description = 0x54a5c8 "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {
+    long_name = 0x546dc6 "browser", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0x7fffe6e9ce94, 
+    description = 0x54a41d "open a browser window.", arg_description = 0x0}, {
+    long_name = 0x56b6d1 "quit", short_name = 113 'q', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0x7fffe6e9ce9c, 
+    description = 0x54a434 "Quit Nautilus.", arg_description = 0x0}, {
+    long_name = 0x54f821 "", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0x7fffe6e9ce78, 
+    description = 0x0, arg_description = 0x54a443 "[URI...]"}, {
+    long_name = 0x0, short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x0, description = 0x0, arg_description = 0x0}}

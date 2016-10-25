@@ -1,0 +1,6 @@
+#0  0x00007fa9e74a35f9 in ?? () from /usr/lib/libbrasero-media.so.0
+#1  0x00007fa9e74a3ac3 in ?? () from /usr/lib/libbrasero-media.so.0
+#2  0x00007fa9f0d46954 in ?? () from /usr/lib/libglib-2.0.so.0
+#3  0x00007fa9efae83ba in start_thread () from /lib/libpthread.so.0
+#4  0x00007fa9ef854fcd in clone () from /lib/libc.so.6
+#5  0x0000000000000000 in ?? ()

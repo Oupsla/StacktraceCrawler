@@ -1,0 +1,4 @@
+#0  0xb55a967e in ff_idct_xvid_sse2_add (dest=0x0, line_size=0, block=0x0)
+    at /build/buildd/ffmpeg-debian-0.svn20090204/libavcodec/x86/idct_sse2_xvid.c:344
+No locals.
+#1  0x00000000 in ?? ()

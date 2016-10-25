@@ -1,0 +1,138 @@
+#0  0x00a20d8e in _IO_vfprintf_internal (s=Cannot access memory at address 0xffffffff
+) at vfprintf.c:1620
+        len = <value optimised out>
+        string_malloced = 0
+        step0_jumps = {0, -11390, -8502, -8428, -8349, -8279, -8190, -7949, -7661, -7303, -7127, -6857, -6552, -6390, -6354, -6126, -3593, -3495, -3405, -2714, -2979, -34, -2224, -3390, -758, -561, -3314, -6472, -6552, -8036}
+        space = <value optimised out>
+        is_short = <value optimised out>
+        use_outdigits = <value optimised out>
+        step1_jumps = {0, 0, 0, 0, 0, 0, 0, 0, 0, -7303, -7127, -6857, -6552, -6390, -6354, -6126, -3593, -3495, -3405, -2714, -2979, -34, -2224, -3390, -758, -561, -3314, -6472, -6552, 0}
+        group = <value optimised out>
+        prec = <value optimised out>
+        step2_jumps = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -7127, -6857, -6552, -6390, -6354, -6126, -3593, -3495, -3405, -2714, -2979, -34, -2224, -3390, -758, -561, -3314, -6472, -6552, 0}
+        string = <value optimised out>
+        left = <value optimised out>
+        is_long_double = <value optimised out>
+        width = <value optimised out>
+        step3a_jumps = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -6941, 0, 0, 0, -6354, -6126, -3593, -3495, -3405, 0, 0, 0, 0, -3390, 0, 0, 0, 0, 0, 0}
+        alt = <value optimised out>
+        showsign = <value optimised out>
+        is_long = <value optimised out>
+        is_char = <value optimised out>
+        pad = <value optimised out>
+        step3b_jumps = {0 <repeats 11 times>, -6552, 0, 0, -6354, -6126, -3593, -3495, -3405, -2714, -2979, -34, -2224, -3390, -758, -561, -3314, 0, 0, 0}
+        step4_jumps = {0 <repeats 14 times>, -6354, -6126, -3593, -3495, -3405, -2714, -2979, -34, -2224, -3390, -758, -561, -3314, 0, 0, 0}
+        is_negative = <value optimised out>
+        number = {longlong = 0, word = 0}
+        base = <value optimised out>
+        the_arg = {pa_wchar = 10818637 L'M', pa_int = 10818637, pa_long_int = 10818637, pa_long_long_int = 10818637, pa_u_int = 10818637, pa_u_long_int = 10818637, pa_u_long_long_int = 10818637, pa_double = 5.345116876527006e-317, pa_long_double = <invalid float value>, pa_string = 0xa5144d "e\203=\f", pa_wstring = 0xa5144d L"\xc3d8365", pa_pointer = 0xa5144d, pa_user = 0xa5144d}
+        spec = <value optimised out>
+        _buffer = {__routine = 0xb3cff4, __arg = 0xa4e81e, __canceltype = 199, __prev = 0xbfe9b468}
+        _avail = <value optimised out>
+        thousands_sep = <value optimised out>
+        grouping = <value optimised out>
+        done = <value optimised out>
+        f = <value optimised out>
+        lead_str_end = 0x94a82c1 "%s': %s"
+        end_of_spec = <value optimised out>
+        work_buffer = "\002\000\000\000\360Ǝ\n\002\200\000@P\201[\000\067\000\000\000\215y8\000\300\246\236\n\034\232D\002\250\260\351\277\364\237\030\000h\265g\t\000\000\000@\270\260\351\277,z\027\000<\243d\t\003\200\000@\003\200\000@\360Ǝ\np\261\351\277\310\000\000\000ذ\351\277,z\027\000<\243d\t\024\000\000\000\310\000\000\000\364\237\030\000\204\261\351\277\024\000\000\000\370\260\351\277<\243d\t\204\261\351\277\354\025\361\t\003\000\000\000\364\237\030\000\204\261\351\277\001\000\000\000\370\260\351\277,\235\027\000\024\000\000\000\000\000\000\000\006W\000\000\n\235\027\000\364\237\030\000\070\266g\tȱ\351\277\211,\026\000\204\261\351\277\274\262\351\277\204\261\351\277\303i\027\000p\261\351\277\001\000\000\000\006\261\351\277\364\237\030\000\001\000\000\000\204\261\351\277H\261\351\277\201\221\070\000hV\347\tzX\000\000\001\261\351\277\364\237\030\000\360Ǝ\n\364\237\030\000\210\261\351\277\321S5\000\364\377\235\000\001\000\000\000x\261\351\277eݝ\000\003\000\000\000`V\347\thV\347\tdV\347\t\310lj\t\364\237C\000ȱ\351\277!L\027\000\brd\t\030ǎ\nȱ\351\277\330\066\071\000`V\347\t\000\000\000\000"...
+        workstart = <value optimised out>
+        workend = <value optimised out>
+        ap_save = 0xbfe9bacc "336.Xu\232\n`\036f\t"
+        nspecs_done = <value optimised out>
+        save_errno = 11
+        readonly_format = <value optimised out>
+        jump_table = "\001\000\000\004\000\016\000\006\000\000\a\002\000\003\t\000\005\b\b\b\b\b\b\b\b\b\000\000\000\000\000\000\000\032\000\031\000\023\023\023\000\035\000\000\f\000\000\000\000\000\000\025\000\000\000\000\022\000\r\000\000\000\000\000\000\032\000\024\017\023\023\023\n\017\034\000\v\030\027\021\026\f\000\025\033\020\000\000\022\000\r"
+        __PRETTY_FUNCTION__ = "_IO_vfprintf_internal"
+#1  0x00ac6792 in __vasprintf_chk (result_ptr=0xbfe9b5fc, flags=1, format=0x94a829c "Unable to register window with path '%s': %s", args=0xbfe9bacc "336.Xu\232\n`\036f\t") at vasprintf_chk.c:68
+        string = 0x9f4fef0 "Unable to register window with path '"
+        sf = {_sbf = {_f = {_flags = -72515584, _IO_read_ptr = 0x9f4fef0 "Unable to register window with path '", _IO_read_end = 0x9f4fef0 "Unable to register window with path '", _IO_read_base = 0x9f4fef0 "Unable to register window with path '", _IO_write_base = 0x9f4fef0 "Unable to register window with path '", _IO_write_ptr = 0x9f4ff15 "", _IO_write_end = 0x9f4ff54 "\021", _IO_buf_base = 0x9f4fef0 "Unable to register window with path '", _IO_buf_end = 0x9f4ff54 "\021", _IO_save_base = 0x0, _IO_backup_base = 0x0, _IO_save_end = 0x0, _markers = 0x0, _chain = 0x0, _fileno = 166045279, _flags2 = 4, _old_offset = 166991576, _cur_column = 0, _vtable_offset = 0 '\000', _shortbuf = "\377", _lock = 0x0, _offset = 1546188226560, _codecvt = 0x14f, _wide_data = 0xc8, _freeres_list = 0x0, _freeres_buf = 0x0, _freeres_size = 334, _mode = -1, _unused2 = "\001\000\000\000\304\340\027\000\067#5\000\364\237C\000+\344\346\000\364?\221\000\364?\221\000\004\267\351\277\270\265\351\277@Hg"}, vtable = 0xb3cb00}, _s = {_allocate_buffer = 0xa50f20 <__libc_malloc>, _free_buffer = 0xa513e0 <__libc_free>}}
+        ret = <value optimised out>
+        needed = <value optimised out>
+        allocated = <value optimised out>
+#2  0x003ec643 in vasprintf (string=0xbfe9b5fc, format=0x94a829c "Unable to register window with path '%s': %s", args=0xbfe9bacc "336.Xu\232\n`\036f\t") at /usr/include/bits/stdio2.h:199
+No locals.
+#3  g_vasprintf (string=0xbfe9b5fc, format=0x94a829c "Unable to register window with path '%s': %s", args=0xbfe9bacc "336.Xu\232\n`\036f\t") at /build/buildd/glib2.0-2.28.1/./glib/gprintf.c:318
+        len = 16
+        __PRETTY_FUNCTION__ = "g_vasprintf"
+#4  0x003c5a22 in g_strdup_vprintf (format=0x94a829c "Unable to register window with path '%s': %s", args=0xbfe9bacc "336.Xu\232\n`\036f\t") at /build/buildd/glib2.0-2.28.1/./glib/gstrfuncs.c:255
+        string = 0x0
+#5  0x003adc36 in g_logv (log_domain=0x0, log_level=<value optimised out>, format=0x94a829c "Unable to register window with path '%s': %s", args1=0xbfe9bacc "336.Xu\232\n`\036f\t") at /build/buildd/glib2.0-2.28.1/./glib/gmessages.c:524
+        msg = <value optimised out>
+        args2 = 0xbfe9bacc "336.Xu\232\n`\036f\t"
+        depth = 1
+        domain = 0x0
+        data = 0x0
+        log_func = 0x3f936d0 <no_debug_log>
+        domain_fatal_mask = 5
+        masquerade_fatal = 0
+        test_level = G_LOG_LEVEL_WARNING
+        was_fatal = 0
+        was_recursion = 0
+        i = <value optimised out>
+#6  0x003ae0b2 in g_log (log_domain=0x0, log_level=G_LOG_LEVEL_WARNING, format=0x94a829c "Unable to register window with path '%s': %s") at /build/buildd/glib2.0-2.28.1/./glib/gmessages.c:577
+        args = 0xbfe9bacc "336.Xu\232\n`\036f\t"
+#7  0x094a6ba6 in ?? () from /usr/lib/gtk-2.0/2.10.0/menuproxies/libappmenu.so
+No symbol table info available.
+#8  0x00da2c5f in g_simple_async_result_complete (simple=0xa5230b8) at /build/buildd/glib2.0-2.28.1/./gio/gsimpleasyncresult.c:747
+        current_source = <value optimised out>
+        current_context = <value optimised out>
+        __PRETTY_FUNCTION__ = "g_simple_async_result_complete"
+#9  0x00df8b71 in reply_cb (connection=0x96b8c20, res=0xa522ce0, user_data=0xa5230b8) at /build/buildd/glib2.0-2.28.1/./gio/gdbusproxy.c:2158
+        simple = 0xa5230b8
+        value = <value optimised out>
+        error = 0xa86f000
+#10 0x00da2c5f in g_simple_async_result_complete (simple=0xa522ce0) at /build/buildd/glib2.0-2.28.1/./gio/gsimpleasyncresult.c:747
+        current_source = <value optimised out>
+        current_context = <value optimised out>
+        __PRETTY_FUNCTION__ = "g_simple_async_result_complete"
+#11 0x00dedbb3 in g_dbus_connection_call_done (source=0x96b8c20, result=0xa522eb0, user_data=0xa285620) at /build/buildd/glib2.0-2.28.1/./gio/gdbusconnection.c:4998
+        connection = 0x96b8c20
+        state = 0xa285620
+        error = 0xa86f000
+        reply = 0x0
+        value = <value optimised out>
+#12 0x00da2c5f in g_simple_async_result_complete (simple=0xa522eb0) at /build/buildd/glib2.0-2.28.1/./gio/gsimpleasyncresult.c:747
+        current_source = <value optimised out>
+        current_context = <value optimised out>
+        __PRETTY_FUNCTION__ = "g_simple_async_result_complete"
+#13 0x00da2d7d in complete_in_idle_cb (data=0xa522eb0) at /build/buildd/glib2.0-2.28.1/./gio/gsimpleasyncresult.c:757
+        simple = 0xa522eb0
+#14 0x003a0451 in g_idle_dispatch (source=0xa9926f0, callback=0xda2d60 <complete_in_idle_cb>, user_data=0xa522eb0) at /build/buildd/glib2.0-2.28.1/./glib/gmain.c:4537
+No locals.
+#15 0x003a4c08 in g_main_dispatch (context=0x9678b68) at /build/buildd/glib2.0-2.28.1/./glib/gmain.c:2440
+        dispatch = 0x3a0430 <g_idle_dispatch>
+        was_in_call = 0
+        user_data = 0xa522eb0
+        callback = 0xda2d60 <complete_in_idle_cb>
+        cb_funcs = 0x43a33c
+        cb_data = 0xa9b7240
+        current_source_link = {data = 0xa9926f0, next = 0x0}
+        need_destroy = <value optimised out>
+        source = 0xa9926f0
+        current = 0x96c0650
+        i = <value optimised out>
+#16 g_main_context_dispatch (context=0x9678b68) at /build/buildd/glib2.0-2.28.1/./glib/gmain.c:3013
+No locals.
+#17 0x003a53d0 in g_main_context_iterate (context=0x9678b68, block=3889312, dispatch=1, self=<value optimised out>) at /build/buildd/glib2.0-2.28.1/./glib/gmain.c:3091
+        max_priority = 0
+        timeout = 0
+        some_ready = 1
+        nfds = <value optimised out>
+        allocated_nfds = <value optimised out>
+        fds = 0x9ecce20
+#18 0x003a5a93 in g_main_loop_run (loop=0x9b2d1d0) at /build/buildd/glib2.0-2.28.1/./glib/gmain.c:3299
+        __PRETTY_FUNCTION__ = "g_main_loop_run"
+#19 0x00671a49 in IA__gtk_main () at /build/buildd/gtk+2.0-2.24.1/gtk/gtkmain.c:1255
+        tmp_list = <value optimised out>
+        functions = 0x0
+        init = <value optimised out>
+        loop = 0x9b2d1d0
+#20 0x08049e87 in ?? ()
+No symbol table info available.
+#21 0x009f7e36 in __libc_start_main (main=0x8049920, argc=1, ubp_av=0xbfe9bf34, init=0x804a050, fini=0x804a0b0, rtld_fini=0xb94a90 <_dl_fini>, stack_end=0xbfe9bf2c) at libc-start.c:226
+        result = <value optimised out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {11784180, 0, 0, -1075200248, 1996546711, -1702480407}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x1, 0x8049420}, data = {prev = 0x0, cleanup = 0x0, canceltype = 1}}}
+        not_first_call = <value optimised out>
+#22 0x08049441 in ?? ()
+No symbol table info available.

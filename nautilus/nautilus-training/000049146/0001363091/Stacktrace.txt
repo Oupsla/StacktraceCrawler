@@ -1,0 +1,100 @@
+#0  0x00007f1249297c90 in g_logv () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#1  0x00007f1244dda94d in ?? () from /usr/lib/x86_64-linux-gnu/libwayland-client.so.0
+No symbol table info available.
+#2  0x00007f1244dd7e09 in wl_display_connect () from /usr/lib/x86_64-linux-gnu/libwayland-client.so.0
+No symbol table info available.
+#3  0x00007f12475e37c1 in ?? () from /usr/lib/x86_64-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#4  0x00007f12475a7117 in gdk_display_manager_open_display () from /usr/lib/x86_64-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#5  0x00007f12479de1d2 in gtk_init_check () from /usr/lib/x86_64-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#6  0x00007f1249044afe in ffi_call_unix64 () from /usr/lib/x86_64-linux-gnu/libffi.so.6
+No symbol table info available.
+#7  0x00007f1249044568 in ffi_call () from /usr/lib/x86_64-linux-gnu/libffi.so.6
+No symbol table info available.
+#8  0x00007f1249a07454 in ?? () from /usr/lib/python2.7/dist-packages/gi/_gi.so
+No symbol table info available.
+#9  0x00007f1249a08d88 in ?? () from /usr/lib/python2.7/dist-packages/gi/_gi.so
+No symbol table info available.
+#10 0x00000000004c8859 in PyEval_EvalFrameEx ()
+No symbol table info available.
+#11 0x00000000004c6379 in PyEval_EvalCodeEx ()
+No symbol table info available.
+#12 0x00000000004c5c46 in PyEval_EvalCode ()
+No symbol table info available.
+#13 0x00000000004c444c in PyImport_ExecCodeModuleEx ()
+No symbol table info available.
+#14 0x00000000004c07b2 in ?? ()
+No symbol table info available.
+#15 0x00000000004ae97a in ?? ()
+No symbol table info available.
+#16 0x00000000004ae391 in ?? ()
+No symbol table info available.
+#17 0x00000000004b1226 in ?? ()
+No symbol table info available.
+#18 0x00000000004c7b35 in PyEval_EvalFrameEx ()
+No symbol table info available.
+#19 0x00000000004c6379 in PyEval_EvalCodeEx ()
+No symbol table info available.
+#20 0x00000000004c8049 in PyEval_EvalFrameEx ()
+No symbol table info available.
+#21 0x00000000004c6379 in PyEval_EvalCodeEx ()
+No symbol table info available.
+#22 0x00000000004c95bf in PyEval_EvalFrameEx ()
+No symbol table info available.
+#23 0x00000000004e3a20 in ?? ()
+No symbol table info available.
+#24 0x00000000005025d8 in ?? ()
+No symbol table info available.
+#25 0x00000000004b0bbd in ?? ()
+No symbol table info available.
+#26 0x00000000004d8de8 in PyObject_CallMethod ()
+No symbol table info available.
+#27 0x00000000004aecbf in ?? ()
+No symbol table info available.
+#28 0x00000000004b3dab in ?? ()
+No symbol table info available.
+#29 0x00000000004add32 in ?? ()
+No symbol table info available.
+#30 0x00000000004b1226 in ?? ()
+No symbol table info available.
+#31 0x00000000004cf7ab in PyEval_CallObjectWithKeywords ()
+No symbol table info available.
+#32 0x00000000004ca623 in PyEval_EvalFrameEx ()
+No symbol table info available.
+#33 0x00000000004c6379 in PyEval_EvalCodeEx ()
+No symbol table info available.
+#34 0x00000000004c5c46 in PyEval_EvalCode ()
+No symbol table info available.
+#35 0x00000000004c444c in PyImport_ExecCodeModuleEx ()
+No symbol table info available.
+#36 0x00000000004c07b2 in ?? ()
+No symbol table info available.
+#37 0x00000000004ae97a in ?? ()
+No symbol table info available.
+#38 0x00000000004ae34b in ?? ()
+No symbol table info available.
+#39 0x00000000004b1226 in ?? ()
+No symbol table info available.
+#40 0x00000000004cf7ab in PyEval_CallObjectWithKeywords ()
+No symbol table info available.
+#41 0x00000000004ca623 in PyEval_EvalFrameEx ()
+No symbol table info available.
+#42 0x00000000004c6379 in PyEval_EvalCodeEx ()
+No symbol table info available.
+#43 0x00000000005010ef in ?? ()
+No symbol table info available.
+#44 0x00000000004f6732 in PyRun_FileExFlags ()
+No symbol table info available.
+#45 0x00000000004f5827 in PyRun_SimpleFileExFlags ()
+No symbol table info available.
+#46 0x0000000000495bed in Py_Main ()
+No symbol table info available.
+#47 0x00007f124ad94ec5 in __libc_start_main (main=0x495680 <main>, argc=2, argv=0x7fff488b3d98, init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, stack_end=0x7fff488b3d88) at libc-start.c:287
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, -5695243970485334906, 4806007, 140734410472848, 0, 0, 5695079763241684102, 5679875283121032326}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x5fa5d0 <__libc_csu_init>, 0x7fff488b3d98}, data = {prev = 0x0, cleanup = 0x0, canceltype = 6268368}}}
+        not_first_call = <optimized out>
+#48 0x00000000004955a0 in _start ()
+No symbol table info available.

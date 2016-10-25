@@ -1,0 +1,66 @@
+#0  nautilus_file_peek_display_name (file=0x0) at nautilus-file.c:3793
+        name = <value optimized out>
+        escaped_name = <value optimized out>
+#1  0x0811d78a in nautilus_file_get_display_name (file=0x0) at nautilus-file.c:3816
+No locales.
+#2  0x0807ade4 in selection_changed_callback (window=0x9079050, panel=0x9096280) at nautilus-information-panel.c:1129
+        selection = 0x92d8490
+        file = 0x0
+        uri = 0x0
+        name = <value optimized out>
+#3  0x004b9f2c in g_cclosure_marshal_VOID__VOID () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#4  0x004aa412 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#5  0x004c0b85 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#6  0x004c1fac in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#7  0x004c2275 in g_signal_emit_by_name () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#8  0x080a0e88 in nautilus_window_report_selection_changed (window=0x0) at nautilus-window-manage-views.c:116
+No locales.
+#9  0x0815ef11 in nautilus_window_info_report_selection_changed (window=0x9079050) at nautilus-window-info.c:151
+        __PRETTY_FUNCTION__ = "nautilus_window_info_report_selection_changed"
+#10 0x080b1947 in fm_directory_view_send_selection_change (view=0x9274ea0) at fm-directory-view.c:2377
+No locales.
+#11 0x080b7004 in process_old_files (data=0x9274ea0) at fm-directory-view.c:2922
+        node = <value optimized out>
+        pending = <value optimized out>
+        files = 0xb385ef00
+        files_changed = <value optimized out>
+        selection = 0x92d83a0
+        send_selection_change = 1
+#12 display_pending_files (data=0x9274ea0) at fm-directory-view.c:2936
+No locales.
+#13 display_pending_callback (data=0x9274ea0) at fm-directory-view.c:3036
+No locales.
+#14 0x0080cfcc in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#15 0x0080c855 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#16 0x00810668 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#17 0x00810ba7 in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#18 0x0107f1d9 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#19 0x0807f377 in main (argc=1, argv=0xbfe6d7d4) at nautilus-main.c:544
+        kill_shell = 0
+        no_default_window = 1
+        browser_window = 0
+        no_desktop = 0
+        version = 0
+        autostart_mode = 1
+        autostart_id = <value optimized out>
+        geometry = 0x0
+        remaining = 0x0
+        perform_self_check = 0
+        application = 0x8e7f3b8
+        context = <value optimized out>
+        file = 0x1
+        uri = <value optimized out>
+        uris = 0x0
+        uris_array = <value optimized out>
+        error = 0x0
+        options = {{long_name = 0x81ae803 "check", short_name = 99 'c', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfe6d6f0, description = 0x81ae844 "Perform a quick set of self-check tests.", arg_description = 0x0}, {long_name = 0x81cd321 "version", short_name = 0 '\000', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfe6d6fc, description = 0x81ae870 "Show the version of the program.", arg_description = 0x0}, {long_name = 0x81b2498 "geometry", short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, arg_data = 0xbfe6d6f8, description = 0x81ae894 "Create the initial window with the given geometry.", arg_description = 0x81ae741 "GEOMETRY"}, {long_name = 0x81ae74a "no-default-window", short_name = 110 'n', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfe6d708, description = 0x81ae8c8 "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {long_name = 0x81ae75c "no-desktop", short_name = 0 '\000', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfe6d700, description = 0x81ae8fc "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {long_name = 0x81ab375 "browser", short_name = 0 '\000', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfe6d704, description = 0x81ae767 "open a browser window.", arg_description = 0x0}, {long_name = 0x81cf17d "quit", short_name = 113 'q', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfe6d70c, description = 0x81ae77e "Quit Nautilus.", arg_description = 0x0}, {long_name = 0x81b392f "", short_name = 0 '\000', flags = 0, arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0xbfe6d6f4, description = 0x0, arg_description = 0x81ae78d "[URI...]"}, {long_name = 0x0, short_name = 0 '\000', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x0, description = 0x0, arg_description = 0x0}}

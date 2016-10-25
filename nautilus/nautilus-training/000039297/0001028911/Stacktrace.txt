@@ -1,0 +1,265 @@
+#0  0x00007f984cabb445 in __GI_raise (sig=<optimized out>) at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+        resultvar = 0
+        pid = <optimized out>
+        selftid = 3150
+#1  0x00007f984cabebab in __GI_abort () at abort.c:91
+        save_stage = 2
+        act = {__sigaction_handler = {sa_handler = 0x400, sa_sigaction = 0x400}, sa_mask = {__val = {140292109722844, 140292097883208, 140292169180384, 32121024, 140736971686936, 1, 121, 4294967295, 32121024, 1, 32120800, 3096688, 0, 140736971687792, 140736971687696, 140292109320192}}, sa_flags = 1355405172, sa_restorer = 0x7f9800000005}
+        sigs = {__val = {32, 0 <repeats 15 times>}}
+#2  0x00007f984d5dd2e7 in g_assertion_message (domain=domain@entry=0x0, file=file@entry=0x50ddc5 "nautilus-file.c", line=line@entry=6803, func=func@entry=0x50fd90 "nautilus_file_is_in_trash", message=<optimized out>) at /build/buildd/glib2.0-2.33.6/./glib/gtestutils.c:1861
+        lstr = "6803\000\177\000\000\260D4\341\377\177\000\000V\336\355\001\000\000\000\000<qO\000\000\000\000"
+        s = 0x1ea1fe0 ""
+#3  0x00007f984d5dd804 in g_assertion_message_expr (domain=0x0, file=0x50ddc5 "nautilus-file.c", line=6803, func=0x50fd90 "nautilus_file_is_in_trash", expr=<optimized out>) at /build/buildd/glib2.0-2.33.6/./glib/gtestutils.c:1872
+        s = <optimized out>
+#4  0x00000000004ad3ab in ?? ()
+No symbol table info available.
+#5  0x0000000000442d88 in ?? ()
+No symbol table info available.
+#6  0x0000000000442ebb in ?? ()
+No symbol table info available.
+#7  0x00007f984d87a050 in g_closure_invoke (closure=0x160f820, return_value=0x0, n_param_values=2, param_values=0x7fffe1344770, invocation_hint=0x7fffe1344710) at /build/buildd/glib2.0-2.33.6/./gobject/gclosure.c:777
+        marshal = 0x424eb0 <g_cclosure_marshal_VOID__STRING@plt>
+        marshal_data = 0x0
+        in_marshal = 0
+        real_closure = 0x160f800
+        __PRETTY_FUNCTION__ = "g_closure_invoke"
+#8  0x00007f984d88bd30 in signal_emit_unlocked_R (node=node@entry=0xb2f670, detail=detail@entry=2908, instance=instance@entry=0xc5ac00, emission_return=emission_return@entry=0x0, instance_and_params=instance_and_params@entry=0x7fffe1344770) at /build/buildd/glib2.0-2.33.6/./gobject/gsignal.c:3551
+        tmp = <optimized out>
+        handler = 0x1542430
+        accumulator = 0x0
+        emission = {next = 0x7fffe1344f20, instance = 0xc5ac00, ihint = {signal_id = 159, detail = 2908, run_type = G_SIGNAL_RUN_FIRST}, state = EMISSION_RUN, chain_type = 4}
+        class_closure = 0xb2f5e0
+        hlist = 0x11f1700
+        handler_list = 0x11f1700
+        return_accu = 0x0
+        accu = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        signal_id = 159
+        max_sequential_handler_number = 88060
+        return_value_altered = 0
+#9  0x00007f984d893fb1 in g_signal_emit_valist (instance=0xc5ac00, signal_id=<optimized out>, detail=2908, var_args=var_args@entry=0x7fffe13449c8) at /build/buildd/glib2.0-2.33.6/./gobject/gsignal.c:3300
+        instance_and_params = 0x7fffe1344770
+        signal_return_type = 4
+        param_values = 0x7fffe1344788
+        node = 0xb2f670
+        i = <optimized out>
+        n_params = 1
+        __PRETTY_FUNCTION__ = "g_signal_emit_valist"
+#10 0x00007f984d894202 in g_signal_emit (instance=instance@entry=0xc5ac00, signal_id=<optimized out>, detail=<optimized out>) at /build/buildd/glib2.0-2.33.6/./gobject/gsignal.c:3356
+        var_args = {{gp_offset = 32, fp_offset = 48, overflow_arg_area = 0x7fffe1344aa0, reg_save_area = 0x7fffe13449e0}}
+#11 0x00007f984db6cdec in g_settings_real_change_event (settings=0xc5ac00, keys=<optimized out>, n_keys=1) at /build/buildd/glib2.0-2.33.6/./gio/gsettings.c:288
+        key = 0xed7730 "default-visible-columns"
+        i = <optimized out>
+#12 0x00007f98487ccbb8 in ffi_call_unix64 () from /usr/lib/x86_64-linux-gnu/libffi.so.6
+No symbol table info available.
+#13 0x00007f98487cc5c0 in ffi_call () from /usr/lib/x86_64-linux-gnu/libffi.so.6
+No symbol table info available.
+#14 0x00007f984d87b04b in g_cclosure_marshal_generic_va (closure=0xbf6860, return_value=0x7fffe1344ea0, instance=0xc5ac00, args_list=<optimized out>, marshal_data=0x7f984db6cd80, n_params=2, param_types=0xbf6890) at /build/buildd/glib2.0-2.33.6/./gobject/gclosure.c:1550
+        rtype = 0x7f98487ccee0
+        rvalue = 0x7fffe1344c60
+        n_args = 4
+        atypes = 0x7fffe1344c30
+        args = 0x7fffe1344c00
+        storage = 0x7fffe1344be0
+        i = <optimized out>
+        cif = {abi = FFI_UNIX64, nargs = 4, arg_types = 0x7fffe1344c30, rtype = 0x7f98487ccee0, bytes = 0, flags = 10}
+        cc = 0xbf6860
+        enum_tmpval = 0x7fffe1344c80
+        tmpval_used = 0
+        args_copy = {{gp_offset = 40, fp_offset = 48, overflow_arg_area = 0x7fffe1345140, reg_save_area = 0x7fffe1345080}}
+#15 0x00007f984d87a317 in _g_closure_invoke_va (closure=0xbf6860, return_value=0x7fffe1344ea0, instance=0xc5ac00, args=0x7fffe1345068, n_params=2, param_types=0xbf6890) at /build/buildd/glib2.0-2.33.6/./gobject/gclosure.c:840
+        marshal = 0x7f984d8786a0 <g_type_class_meta_marshalv>
+        marshal_data = 0xa0
+        in_marshal = 0
+        real_closure = 0xbf6840
+        __PRETTY_FUNCTION__ = "_g_closure_invoke_va"
+#16 0x00007f984d893ac8 in g_signal_emit_valist (instance=0xc5ac00, signal_id=<optimized out>, detail=0, var_args=var_args@entry=0x7fffe1345068) at /build/buildd/glib2.0-2.33.6/./gobject/gsignal.c:3211
+        return_accu = <optimized out>
+        accu = {g_type = 20, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        accumulator = 0xbf6920
+        emission = {next = 0x7fffe13455b0, instance = 0xc5ac00, ihint = {signal_id = 160, detail = 0, run_type = G_SIGNAL_RUN_LAST}, state = EMISSION_RUN, chain_type = 12815808}
+        signal_id = <optimized out>
+        instance_type = <optimized out>
+        emission_return = {g_type = 20, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        rtype = 20
+        static_scope = 0
+        closure = 0xbf6860
+        run_type = <optimized out>
+        hlist = 0xbf6920
+        l = <optimized out>
+        fastpath = 20
+        instance_and_params = <optimized out>
+        signal_return_type = <optimized out>
+        param_values = <optimized out>
+        node = 0xbf68b0
+        i = <optimized out>
+        n_params = <optimized out>
+        __PRETTY_FUNCTION__ = "g_signal_emit_valist"
+#17 0x00007f984d894202 in g_signal_emit (instance=instance@entry=0xc5ac00, signal_id=<optimized out>, detail=detail@entry=0) at /build/buildd/glib2.0-2.33.6/./gobject/gsignal.c:3356
+        var_args = {{gp_offset = 24, fp_offset = 48, overflow_arg_area = 0x7fffe1345140, reg_save_area = 0x7fffe1345080}}
+#18 0x00007f984db6d71e in settings_backend_changed (target=<optimized out>, backend=<optimized out>, key=<optimized out>, origin_tag=<optimized out>) at /build/buildd/glib2.0-2.33.6/./gio/gsettings.c:348
+        quark = 2908
+        settings = 0xc5ac00
+        ignore_this = 1298104833
+        i = <optimized out>
+#19 0x00007f984db694aa in g_settings_backend_invoke_closure (user_data=0x1c00400) at /build/buildd/glib2.0-2.33.6/./gio/gsettingsbackend.c:271
+        closure = 0x1c00400
+#20 0x00007f984d5bcf15 in g_main_context_invoke_full (context=0xb45eb0, priority=0, function=0x7f984db69490 <g_settings_backend_invoke_closure>, data=0x1c00400, notify=0) at /build/buildd/glib2.0-2.33.6/./glib/gmain.c:4962
+        __PRETTY_FUNCTION__ = "g_main_context_invoke_full"
+#21 0x00007f984d5bd090 in g_main_context_invoke (context=<optimized out>, function=<optimized out>, data=<optimized out>) at /build/buildd/glib2.0-2.33.6/./glib/gmain.c:4923
+No locals.
+#22 0x00007f984db6959a in g_settings_backend_dispatch_signal (backend=backend@entry=0xba42c0, function_offset=function_offset@entry=0, name=name@entry=0x1ea1d80 "/org/gnome/nautilus/list-view/default-visible-columns", data1=data1@entry=0x0, data1_copy=0x7f984db690b0 <pointer_id>, data1_copy@entry=0, data1_free=0x7f984db690c0 <pointer_ignore>, data1_free@entry=0, data2=data2@entry=0x0) at /build/buildd/glib2.0-2.33.6/./gio/gsettingsbackend.c:353
+        closure = 0x1c00400
+        suffix = <optimized out>
+        watch = <optimized out>
+        next = 0xc53200
+#23 0x00007f984db699aa in g_settings_backend_changed (backend=0xba42c0, key=0x1ea1d80 "/org/gnome/nautilus/list-view/default-visible-columns", origin_tag=0x0) at /build/buildd/glib2.0-2.33.6/./gio/gsettingsbackend.c:400
+        __PRETTY_FUNCTION__ = "g_settings_backend_changed"
+#24 0x00007f9843839bb3 in ?? () from /usr/lib/x86_64-linux-gnu/gio/modules/libdconfsettings.so
+No symbol table info available.
+#25 0x00007f984383ab81 in ?? () from /usr/lib/x86_64-linux-gnu/gio/modules/libdconfsettings.so
+No symbol table info available.
+#26 0x00007f9843839850 in ?? () from /usr/lib/x86_64-linux-gnu/gio/modules/libdconfsettings.so
+No symbol table info available.
+#27 0x00007f984db69f42 in g_settings_backend_write (backend=0xba42c0, key=key@entry=0x1a7b9d0 "/org/gnome/nautilus/list-view/default-visible-columns", value=value@entry=0x1ea1560, origin_tag=origin_tag@entry=0x0) at /build/buildd/glib2.0-2.33.6/./gio/gsettingsbackend.c:778
+        success = <optimized out>
+#28 0x00007f984db6cf12 in g_settings_write_to_backend (settings=settings@entry=0xc5ac00, value=value@entry=0x1ea1560, key=<error reading variable: Unhandled dwarf expression opcode 0xfa>) at /build/buildd/glib2.0-2.33.6/./gio/gsettings.c:1025
+        success = <optimized out>
+        path = 0x1a7b9d0 "/org/gnome/nautilus/list-view/default-visible-columns"
+#29 0x00007f984db6e940 in g_settings_set_value (settings=0xc5ac00, key=0x4f7787 "default-visible-columns", value=0x1ea1560) at /build/buildd/glib2.0-2.33.6/./gio/gsettings.c:1373
+        skey = {schema = 0x7f9834006b00, name = 0xed7730 "default-visible-columns", is_flags = 0, is_enum = 0, strinfo = 0x0, strinfo_length = 0, unparsed = 0x0, lc_char = 0 '\000', type = 0xe61210, minimum = 0x0, maximum = 0x0, default_value = 0x1ea14a0}
+        success = <optimized out>
+        __PRETTY_FUNCTION__ = "g_settings_set_value"
+#30 0x000000000043700d in ?? ()
+No symbol table info available.
+#31 0x00007f984d87a317 in _g_closure_invoke_va (closure=0x1ea1180, return_value=0x0, instance=0x19fd2d0, args=0x7fffe13456f8, n_params=0, param_types=0x0) at /build/buildd/glib2.0-2.33.6/./gobject/gclosure.c:840
+        marshal = 0x7f984d87bf30 <g_cclosure_marshal_VOID__VOIDv>
+        marshal_data = 0x0
+        in_marshal = 0
+        real_closure = 0x1ea1160
+        __PRETTY_FUNCTION__ = "_g_closure_invoke_va"
+#32 0x00007f984d893ac8 in g_signal_emit_valist (instance=0x19fd2d0, signal_id=<optimized out>, detail=0, var_args=var_args@entry=0x7fffe13456f8) at /build/buildd/glib2.0-2.33.6/./gobject/gsignal.c:3211
+        return_accu = <optimized out>
+        accu = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        accumulator = 0x0
+        emission = {next = 0x7fffe1345ac0, instance = 0x19fd2d0, ihint = {signal_id = 550, detail = 0, run_type = G_SIGNAL_RUN_FIRST}, state = EMISSION_RUN, chain_type = 29277392}
+        signal_id = <optimized out>
+        instance_type = <optimized out>
+        emission_return = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        rtype = 4
+        static_scope = 0
+        closure = 0x1ea1180
+        run_type = <optimized out>
+        hlist = 0x0
+        l = <optimized out>
+        fastpath = 4
+        instance_and_params = <optimized out>
+        signal_return_type = <optimized out>
+        param_values = <optimized out>
+        node = 0x1a9c420
+        i = <optimized out>
+        n_params = <optimized out>
+        __PRETTY_FUNCTION__ = "g_signal_emit_valist"
+#33 0x00007f984d894202 in g_signal_emit (instance=<optimized out>, signal_id=<optimized out>, detail=<optimized out>) at /build/buildd/glib2.0-2.33.6/./gobject/gsignal.c:3356
+        var_args = {{gp_offset = 24, fp_offset = 48, overflow_arg_area = 0x7fffe13457d0, reg_save_area = 0x7fffe1345710}}
+#34 0x00000000004892da in ?? ()
+No symbol table info available.
+#35 0x0000000000436f7c in ?? ()
+No symbol table info available.
+#36 0x0000000000437854 in ?? ()
+No symbol table info available.
+#37 0x00007f984d87a050 in g_closure_invoke (closure=0xe5ffa0, return_value=0x0, n_param_values=2, param_values=0x7fffe1345b30, invocation_hint=0x7fffe1345ad0) at /build/buildd/glib2.0-2.33.6/./gobject/gclosure.c:777
+        marshal = 0x7f984d87d640 <g_cclosure_marshal_VOID__VARIANT>
+        marshal_data = 0x0
+        in_marshal = 0
+        real_closure = 0xe5ff80
+        __PRETTY_FUNCTION__ = "g_closure_invoke"
+#38 0x00007f984d88bd30 in signal_emit_unlocked_R (node=node@entry=0xe5fce0, detail=detail@entry=0, instance=instance@entry=0xe4a640, emission_return=emission_return@entry=0x0, instance_and_params=instance_and_params@entry=0x7fffe1345b30) at /build/buildd/glib2.0-2.33.6/./gobject/gsignal.c:3551
+        tmp = <optimized out>
+        handler = 0xe5e460
+        accumulator = 0x0
+        emission = {next = 0x0, instance = 0xe4a640, ihint = {signal_id = 384, detail = 0, run_type = G_SIGNAL_RUN_FIRST}, state = EMISSION_RUN, chain_type = 4}
+        class_closure = 0x0
+        hlist = 0xe5e460
+        handler_list = 0xe5e460
+        return_accu = 0x0
+        accu = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        signal_id = 384
+        max_sequential_handler_number = 86981
+        return_value_altered = 0
+#39 0x00007f984d893fb1 in g_signal_emit_valist (instance=0xe4a640, signal_id=<optimized out>, detail=0, var_args=var_args@entry=0x7fffe1345d88) at /build/buildd/glib2.0-2.33.6/./gobject/gsignal.c:3300
+        instance_and_params = 0x7fffe1345b30
+        signal_return_type = 4
+        param_values = 0x7fffe1345b48
+        node = 0xe5fce0
+        i = <optimized out>
+        n_params = 1
+        __PRETTY_FUNCTION__ = "g_signal_emit_valist"
+#40 0x00007f984d894202 in g_signal_emit (instance=<optimized out>, signal_id=<optimized out>, detail=<optimized out>) at /build/buildd/glib2.0-2.33.6/./gobject/gsignal.c:3356
+        var_args = {{gp_offset = 32, fp_offset = 48, overflow_arg_area = 0x7fffe1345e60, reg_save_area = 0x7fffe1345da0}}
+#41 0x00007f984db619d5 in g_simple_action_activate (action=0xe4a640, parameter=0x0) at /build/buildd/glib2.0-2.33.6/./gio/gsimpleaction.c:204
+        simple = 0xe4a640
+        __PRETTY_FUNCTION__ = "g_simple_action_activate"
+#42 0x00007f984db59732 in g_application_exported_actions_activate_action_full (remote=0xb1c240, action_name=0x1bf49d0 "preferences", parameter=0x0, platform_data=0x7f9824030120) at /build/buildd/glib2.0-2.33.6/./gio/gapplication.c:305
+        exported = 0xb1c240
+#43 0x00007f984db5ff02 in org_gtk_Actions_method_call (connection=<optimized out>, sender=<optimized out>, object_path=<optimized out>, interface_name=interface_name@entry=0x7f9834009cf0 "org.gtk.Actions", method_name=method_name@entry=0x7f98340045d0 "Activate", parameters=<optimized out>, invocation=invocation@entry=0x207b8c0, user_data=user_data@entry=0xbac4c0) at /build/buildd/glib2.0-2.33.6/./gio/gactiongroupexporter.c:419
+        parameter = 0x0
+        platform_data = 0x7f9824030120
+        iter = 0x10e1ad0
+        name = 0x1bf49d0 "preferences"
+        exporter = 0xbac4c0
+        result = 0x0
+        __PRETTY_FUNCTION__ = "org_gtk_Actions_method_call"
+#44 0x00007f984db7faa2 in call_in_idle_cb (user_data=<optimized out>) at /build/buildd/glib2.0-2.33.6/./gio/gdbusconnection.c:4737
+        invocation = 0x207b8c0
+        vtable = <optimized out>
+        registration_id = <optimized out>
+        subtree_registration_id = <optimized out>
+        __PRETTY_FUNCTION__ = "call_in_idle_cb"
+#45 0x00007f984d5bbc65 in g_main_dispatch (context=0xb45eb0) at /build/buildd/glib2.0-2.33.6/./glib/gmain.c:2691
+        dispatch = 0x7f984d5b90e0 <g_idle_dispatch>
+        was_in_call = 0
+        user_data = 0x207b8c0
+        callback = 0x7f984db7f960 <call_in_idle_cb>
+        cb_funcs = 0x7f984d8689a0
+        cb_data = 0x7f98340121d0
+        current_source_link = {data = 0x7f983400dae0, next = 0x0}
+        need_destroy = <optimized out>
+        source = 0x7f983400dae0
+        current = 0xc4f7b0
+        i = <optimized out>
+#46 g_main_context_dispatch (context=context@entry=0xb45eb0) at /build/buildd/glib2.0-2.33.6/./glib/gmain.c:3195
+No locals.
+#47 0x00007f984d5bbf98 in g_main_context_iterate (context=context@entry=0xb45eb0, block=block@entry=1, dispatch=dispatch@entry=1, self=<error reading variable: Unhandled dwarf expression opcode 0xfa>) at /build/buildd/glib2.0-2.33.6/./glib/gmain.c:3266
+        max_priority = 0
+        timeout = 0
+        some_ready = 1
+        nfds = <optimized out>
+        allocated_nfds = <optimized out>
+        fds = 0xe83cf0
+#48 0x00007f984d5bc054 in g_main_context_iteration (context=0xb45eb0, context@entry=0x0, may_block=may_block@entry=1) at /build/buildd/glib2.0-2.33.6/./glib/gmain.c:3327
+        retval = <optimized out>
+#49 0x00007f984db5b72c in g_application_run (application=0xb23030, argc=<optimized out>, argv=0x7fffe1346238) at /build/buildd/glib2.0-2.33.6/./gio/gapplication.c:1607
+        arguments = 0xb12080
+        status = 0
+        i = <optimized out>
+        __PRETTY_FUNCTION__ = "g_application_run"
+#50 0x000000000042b4eb in ?? ()
+No symbol table info available.
+#51 0x00007f984caa676d in __libc_start_main (main=0x42b430, argc=2, ubp_av=0x7fffe1346238, init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, stack_end=0x7fffe1346228) at libc-start.c:226
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, 5117125574920383466, 4371740, 140736971694640, 0, 0, -5117095291992790038, -5173730190989054998}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x4f4e50, 0x7fffe1346238}, data = {prev = 0x0, cleanup = 0x0, canceltype = 5197392}}}
+        not_first_call = <optimized out>
+#52 0x000000000042b545 in ?? ()
+No symbol table info available.
+#53 0x00007fffe1346228 in ?? ()
+No symbol table info available.
+#54 0x000000000000001c in ?? ()
+No symbol table info available.
+#55 0x0000000000000002 in ?? ()
+No symbol table info available.
+#56 0x00007fffe1347a3b in ?? ()
+No symbol table info available.
+#57 0x00007fffe1347a44 in ?? ()
+No symbol table info available.
+#58 0x0000000000000000 in ?? ()
+No symbol table info available.

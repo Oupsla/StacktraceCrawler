@@ -1,0 +1,20 @@
+#0  0x0051a0d7 in gdu_device_get_object_path () from /usr/lib/libgdu.so.0
+No symbol table info available.
+#1  0x00518944 in gdu_pool_new () from /usr/lib/libgdu.so.0
+No symbol table info available.
+#2  0x08057ca7 in ?? ()
+No symbol table info available.
+#3  0x002a118a in g_object_newv () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#4  0x002a1a48 in g_object_new () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#5  0x08057ec4 in ?? ()
+No symbol table info available.
+#6  0x08058021 in ?? ()
+No symbol table info available.
+#7  0x0804e61d in ?? ()
+No symbol table info available.
+#8  0x00ebabd6 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#9  0x0804e531 in ?? ()
+No symbol table info available.

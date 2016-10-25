@@ -1,0 +1,246 @@
+#0  strcmp () at ../sysdeps/i386/i686/strcmp.S:39
+No locals.
+#1  0x00690502 in _gtk_icon_cache_has_icon (cache=0x9b5bfd0, 
+    icon_name=0x2e3327 "lpi-bug")
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkiconcache.c:353
+	chain_offset = 65536
+#2  0x00698e05 in IA__gtk_icon_theme_has_icon (icon_theme=0x9ae2880, 
+    icon_name=0x2e3327 "lpi-bug")
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkicontheme.c:1585
+	cache = (GtkIconCache *) 0xe2024a06
+	priv = (GtkIconThemePrivate *) 0x9ae2890
+	l = (GList *) 0x9b31e90
+	__PRETTY_FUNCTION__ = "IA__gtk_icon_theme_has_icon"
+#3  0x005f9215 in IA__gtk_action_group_add_actions_full (
+    action_group=0x9b26350, entries=0x2e5100, n_entries=3, user_data=0x0, 
+    destroy=0) at /build/buildd/gtk+2.0-2.18.2/gtk/gtkactiongroup.c:1048
+	action = (GtkAction *) 0x9b4c658
+	label = <value optimized out>
+	tooltip = <value optimized out>
+	i = 2
+	__PRETTY_FUNCTION__ = "IA__gtk_action_group_add_actions_full"
+#4  0x005f931e in IA__gtk_action_group_add_actions (action_group=0x9b26350, 
+    entries=0x2e5100, n_entries=3, user_data=0x0)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkactiongroup.c:965
+No locals.
+#5  0x002e27a5 in launchpad_integration_new_action_group ()
+    at ../../lib/launchpad-integration.c:163
+	action_group = (GtkActionGroup *) 0x9b26350
+#6  0x002e29ed in launchpad_integration_add_ui (ui=0x9b09918, 
+    path=0x8082726 "/menubar/Help/LaunchpadItems")
+    at ../../lib/launchpad-integration.c:195
+	action_group = <value optimized out>
+	merge_id = 162568472
+	__PRETTY_FUNCTION__ = "launchpad_integration_add_ui"
+#7  0x08072fdc in terminal_window_init (window=0x9b1f008)
+    at terminal-window.c:1982
+	menu_entries = {{name = 0x80821df "File", stock_id = 0x0, 
+    label = 0x80821de "_File", accelerator = 0x0, tooltip = 0x0, 
+    callback = 0}, {name = 0x80821e4 "FileNewWindowProfiles", 
+    stock_id = 0x80821fa "window-new", label = 0x8082205 "Open _Terminal", 
+    accelerator = 0x0, tooltip = 0x0, callback = 0}, {
+    name = 0x8082214 "FileNewTabProfiles", stock_id = 0x8082227 "tab-new", 
+    label = 0x808222f "Open Ta_b", accelerator = 0x0, tooltip = 0x0, 
+    callback = 0}, {name = 0x808223a "Edit", stock_id = 0x0, 
+    label = 0x8082239 "_Edit", accelerator = 0x0, tooltip = 0x0, 
+    callback = 0}, {name = 0x8082240 "View", stock_id = 0x0, 
+    label = 0x808223f "_View", accelerator = 0x0, tooltip = 0x0, 
+    callback = 0}, {name = 0x807f186 "Terminal", stock_id = 0x0, 
+    label = 0x808220a "_Terminal", accelerator = 0x0, tooltip = 0x0, 
+    callback = 0}, {name = 0x80817c9 "Tabs", stock_id = 0x0, 
+    label = 0x8082245 "Ta_bs", accelerator = 0x0, tooltip = 0x0, 
+    callback = 0}, {name = 0x808224c "Help", stock_id = 0x0, 
+    label = 0x808224b "_Help", accelerator = 0x0, tooltip = 0x0, 
+    callback = 0}, {name = 0x80827fb "Popup", stock_id = 0x0, label = 0x0, 
+    accelerator = 0x0, tooltip = 0x0, callback = 0}, {
+    name = 0x8082857 "NotebookPopup", stock_id = 0x0, label = 0x8081a16 "", 
+    accelerator = 0x0, tooltip = 0x0, callback = 0}, {
+    name = 0x807d14a "FileNewWindow", stock_id = 0x80821fa "window-new", 
+    label = 0x8082205 "Open _Terminal", 
+    accelerator = 0x8082251 "<shift><control>N", tooltip = 0x0, 
+    callback = 0x80720c0 <file_new_window_callback>}, {
+    name = 0x807d125 "FileNewTab", stock_id = 0x8082227 "tab-new", 
+    label = 0x808222f "Open Ta_b", 
+    accelerator = 0x8082263 "<shift><control>T", tooltip = 0x0, 
+    callback = 0x8072210 <file_new_tab_callback>}, {
+    name = 0x807d173 "FileNewProfile", stock_id = 0x8082275 "gtk-open", 
+    label = 0x808227e "New _Profileâ\200¦", accelerator = 0x8081a16 "", 
+    tooltip = 0x0, callback = 0x8076220 <file_new_profile_callback>}, {
+    name = 0x807d19b "FileCloseTab", stock_id = 0x808164c "gtk-close", 
+    label = 0x808228e "C_lose Tab", 
+    accelerator = 0x8082299 "<shift><control>W", tooltip = 0x0, 
+    callback = 0x806f940 <file_close_tab_callback>}, {
+    name = 0x80822ab "FileCloseWindow", stock_id = 0x808164c "gtk-close", 
+    label = 0x80822bb "_Close Window", 
+    accelerator = 0x80822c9 "<shift><control>Q", tooltip = 0x0, 
+    callback = 0x806fa30 <file_close_window_callback>}, {
+    name = 0x807d1b7 "EditCopy", stock_id = 0x80822db "gtk-copy", 
+    label = 0x0, accelerator = 0x80822e4 "<shift><control>C", tooltip = 0x0, 
+    callback = 0x80761e0 <edit_copy_callback>}, {
+    name = 0x807d1cf "EditPaste", stock_id = 0x80822f6 "gtk-paste", 
+    label = 0x0, accelerator = 0x8082300 "<shift><control>V", tooltip = 0x0, 
+    callback = 0x8076000 <edit_paste_callback>}, {
+    name = 0x8082312 "EditPasteURIPaths", stock_id = 0x80822f6 "gtk-paste", 
+    label = 0x8082324 "Paste _Filenames", accelerator = 0x8081a16 "", 
+    tooltip = 0x0, callback = 0x8076000 <edit_paste_callback>}, {
+    name = 0x8082335 "EditSelectAll", stock_id = 0x8082343 "gtk-select-all", 
+    label = 0x0, accelerator = 0x0, tooltip = 0x0, 
+    callback = 0x8075fc0 <edit_select_all_callback>}, {
+    name = 0x8082352 "EditProfiles", stock_id = 0x0, 
+    label = 0x808235f "P_rofilesâ\200¦", accelerator = 0x0, tooltip = 0x0, 
+    callback = 0x8075f80 <edit_profiles_callback>}, {
+    name = 0x808236c "EditKeybindings", stock_id = 0x0, 
+    label = 0x808237c "_Keyboard Shortcutsâ\200¦", accelerator = 0x0, 
+    tooltip = 0x0, callback = 0x8075f40 <edit_keybindings_callback>}, {
+    name = 0x8082393 "EditCurrentProfile", stock_id = 0x0, 
+    label = 0x80823a6 "Pr_ofile Preferences", accelerator = 0x0, 
+    tooltip = 0x0, callback = 0x8075ee0 <edit_current_profile_callback>}, {
+    name = 0x807d23f "ViewZoomIn", stock_id = 0x80823bb "gtk-zoom-in", 
+    label = 0x0, accelerator = 0x80823c7 "<control>plus", tooltip = 0x0, 
+    callback = 0x8074590 <view_zoom_in_callback>}, {
+    name = 0x807d262 "ViewZoomOut", stock_id = 0x80823d5 "gtk-zoom-out", 
+    label = 0x0, accelerator = 0x80823e2 "<control>minus", tooltip = 0x0, 
+    callback = 0x8074510 <view_zoom_out_callback>}, {
+    name = 0x807d289 "ViewZoom100", stock_id = 0x80823f1 "gtk-zoom-100", 
+    label = 0x0, accelerator = 0x80823fe "<control>0", tooltip = 0x0, 
+    callback = 0x80744d0 <view_zoom_normal_callback>}, {
+    name = 0x8082616 "TerminalProfiles", stock_id = 0x0, 
+    label = 0x8082409 "Change _Profile", accelerator = 0x0, tooltip = 0x0, 
+    callback = 0}, {name = 0x8082419 "TerminalSetTitle", stock_id = 0x0, 
+    label = 0x808242a "_Set Titleâ\200¦", accelerator = 0x0, tooltip = 0x0, 
+    callback = 0x8075ab0 <terminal_set_title_callback>}, {
+    name = 0x8082181 "TerminalSetEncoding", stock_id = 0x0, 
+    label = 0x8082438 "Set _Character Encoding", accelerator = 0x0, 
+    tooltip = 0x0, callback = 0}, {name = 0x807d2ae "TerminalReset", 
+    stock_id = 0x0, label = 0x8082450 "_Reset", accelerator = 0x0, 
+    tooltip = 0x0, callback = 0x8075a60 <terminal_reset_callback>}, {
+    name = 0x8082457 "TerminalResetClear", stock_id = 0x0, 
+    label = 0x808246a "Reset and C_lear", accelerator = 0x0, tooltip = 0x0, 
+    callback = 0x8075a10 <terminal_reset_clear_callback>}, {
+    name = 0x808247b "TerminalAddEncoding", stock_id = 0x0, 
+    label = 0x808248f "_Add or Removeâ\200¦", accelerator = 0x0, 
+    tooltip = 0x0, callback = 0x80759d0 <terminal_add_encoding_callback>}, {
+    name = 0x807d2f2 "TabsPrevious", stock_id = 0x0, 
+    label = 0x80824a1 "_Previous Tab", 
+    accelerator = 0x80824cf "<control>Page_Up", tooltip = 0x0, 
+    callback = 0x8075910 <tabs_next_or_previous_tab_cb>}, {
+    name = 0x807d321 "TabsNext", stock_id = 0x0, 
+    label = 0x80824af "_Next Tab", 
+    accelerator = 0x80824f7 "<control>Page_Down", tooltip = 0x0, 
+    callback = 0x8075910 <tabs_next_or_previous_tab_cb>}, {
+    name = 0x807d34e "TabsMoveLeft", stock_id = 0x0, 
+    label = 0x80824b9 "Move Tab _Left", 
+    accelerator = 0x80824c8 "<shift><control>Page_Up", tooltip = 0x0, 
+    callback = 0x8075890 <tabs_move_left_callback>}, {
+    name = 0x807d380 "TabsMoveRight", stock_id = 0x0, 
+    label = 0x80824e0 "Move Tab _Right", 
+    accelerator = 0x80824f0 "<shift><control>Page_Down", tooltip = 0x0, 
+    callback = 0x8075810 <tabs_move_right_callback>}, {
+    name = 0x807d3a8 "TabsDetach", stock_id = 0x0, 
+    label = 0x808250a "_Detach tab", accelerator = 0x0, tooltip = 0x0, 
+    callback = 0x8075720 <tabs_detach_tab_callback>}, {
+    name = 0x807d5cc "HelpContents", stock_id = 0x8082516 "gtk-help", 
+    label = 0x808251f "_Contents", accelerator = 0x8082529 "F1", 
+    tooltip = 0x0, callback = 0x80756f0 <help_contents_callback>}, {
+    name = 0x808252c "HelpAbout", stock_id = 0x8082536 "gtk-about", 
+    label = 0x8082540 "_About", accelerator = 0x0, tooltip = 0x0, 
+    callback = 0x8075290 <help_about_callback>}, {
+    name = 0x8082547 "PopupSendEmail", stock_id = 0x0, 
+    label = 0x8082556 "_Send Mail Toâ\200¦", accelerator = 0x0, 
+    tooltip = 0x0, callback = 0x8073ba0 <popup_open_url_callback>}, {
+    name = 0x8082567 "PopupCopyEmailAddress", stock_id = 0x0, 
+    label = 0x808257d "_Copy E-mail Address", accelerator = 0x0, 
+    tooltip = 0x0, callback = 0x8075220 <popup_copy_url_callback>}, {
+    name = 0x8082592 "PopupCall", stock_id = 0x0, 
+    label = 0x808259c "C_all Toâ\200¦", accelerator = 0x0, tooltip = 0x0, 
+    callback = 0x8073ba0 <popup_open_url_callback>}, {
+    name = 0x80825a8 "PopupCopyCallAddress", stock_id = 0x0, 
+    label = 0x80825bd "_Copy Call Address", accelerator = 0x0, tooltip = 0x0, 
+    callback = 0x8075220 <popup_copy_url_callback>}, {
+    name = 0x80825d0 "PopupOpenLink", stock_id = 0x0, 
+    label = 0x80825de "_Open Link", accelerator = 0x0, tooltip = 0x0, 
+    callback = 0x8073ba0 <popup_open_url_callback>}, {
+    name = 0x80825e9 "PopupCopyLinkAddress", stock_id = 0x0, 
+    label = 0x80825fe "_Copy Link Address", accelerator = 0x0, tooltip = 0x0, 
+    callback = 0x8075220 <popup_copy_url_callback>}, {
+    name = 0x8082611 "PopupTerminalProfiles", stock_id = 0x0, 
+    label = 0x8082627 "P_rofiles", accelerator = 0x0, tooltip = 0x0, 
+    callback = 0}, {name = 0x8082631 "PopupCopy", 
+    stock_id = 0x80822db "gtk-copy", label = 0x0, accelerator = 0x8081a16 "", 
+    tooltip = 0x0, callback = 0x80761e0 <edit_copy_callback>}, {
+    name = 0x808263b "PopupPaste", stock_id = 0x80822f6 "gtk-paste", 
+    label = 0x0, accelerator = 0x8081a16 "", tooltip = 0x0, 
+    callback = 0x8076000 <edit_paste_callback>}, {
+    name = 0x8082646 "PopupPasteURIPaths", stock_id = 0x80822f6 "gtk-paste", 
+    label = 0x8082324 "Paste _Filenames", accelerator = 0x8081a16 "", 
+    tooltip = 0x0, callback = 0x8076000 <edit_paste_callback>}, {
+    name = 0x8082659 "PopupNewTerminal", stock_id = 0x0, 
+    label = 0x8082205 "Open _Terminal", accelerator = 0x0, tooltip = 0x0, 
+    callback = 0x80720c0 <file_new_window_callback>}, {
+    name = 0x808266a "PopupNewTab", stock_id = 0x0, 
+    label = 0x808222f "Open Ta_b", accelerator = 0x0, tooltip = 0x0, 
+    callback = 0x8072210 <file_new_tab_callback>}, {
+    name = 0x8082676 "PopupCloseWindow", stock_id = 0x0, 
+    label = 0x8082003 "C_lose Window", accelerator = 0x0, tooltip = 0x0, 
+    callback = 0x806fa30 <file_close_window_callback>}, {
+    name = 0x8082687 "PopupCloseTab", stock_id = 0x0, 
+    label = 0x808228e "C_lose Tab", accelerator = 0x0, tooltip = 0x0, 
+    callback = 0x806f940 <file_close_tab_callback>}, {
+    name = 0x8082117 "PopupLeaveFullscreen", stock_id = 0x0, 
+    label = 0x8082695 "L_eave Full Screen", accelerator = 0x0, tooltip = 0x0, 
+    callback = 0x80751f0 <popup_leave_fullscreen_callback>}, {
+    name = 0x80827e8 "PopupInputMethods", stock_id = 0x0, 
+    label = 0x80826a8 "_Input Methods", accelerator = 0x0, tooltip = 0x0, 
+    callback = 0}}
+	toggle_menu_entries = {{name = 0x807d1fe "ViewMenubar", 
+    stock_id = 0x0, label = 0x80826b7 "Show _Menubar", accelerator = 0x0, 
+    tooltip = 0x0, callback = 0x8071610 <view_menubar_toggled_callback>, 
+    is_active = 0}, {name = 0x807d219 "ViewFullscreen", stock_id = 0x0, 
+    label = 0x80826c5 "_Full Screen", accelerator = 0x0, tooltip = 0x0, 
+    callback = 0x8075150 <view_fullscreen_toggled_callback>, is_active = 0}}
+	app = <value optimized out>
+	action_group = (GtkActionGroup *) 0x9b17400
+	action = <value optimized out>
+	main_vbox = (GtkWidget *) 0x9b22010
+	error = (GError *) 0x0
+	window_group = <value optimized out>
+	accel_group = (GtkAccelGroup *) 0x9b17400
+#8  0x0027d97f in g_type_create_instance () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#9  0x00262748 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#10 0x00263b62 in g_object_newv () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#11 0x0026458a in g_object_new_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#12 0x0026470e in g_object_new () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#13 0x080700eb in terminal_window_new () at terminal-window.c:2202
+No locals.
+#14 0x0805cc2a in terminal_app_new_window (app=0x9b0f858, screen=0x9ae00d8)
+    at terminal-app.c:1828
+	window = <value optimized out>
+#15 0x0805d502 in terminal_app_handle_options (app=0x9b0f858, 
+    options=0x9ac1800, allow_resume=1, error=0xbfb63434)
+    at terminal-app.c:1740
+	iw = (InitialWindow *) 0x9b1d2a0
+	window = (TerminalWindow *) 0x2
+	lt = <value optimized out>
+	lw = (GList *) 0x9b1a410
+	gdk_screen = (GdkScreen *) 0x9ae00d8
+	__PRETTY_FUNCTION__ = "terminal_app_handle_options"
+#16 0x0805ae38 in main (argc=1, argv=0xbfb63564) at terminal.c:473
+	i = <value optimized out>
+	argc_copy = <value optimized out>
+	startup_id = <value optimized out>
+	display_name = 0x9aca51c ""
+	display = <value optimized out>
+	options = (TerminalOptions *) 0x9ac1800
+	connection = (DBusGConnection *) 0x9b0b024
+	factory_name = 0x9b0cdc0 "X-GNOME-DocPath"
+	proxy = (DBusGProxy *) 0x9b06ee0
+	request_name_ret = 1
+	error = (GError *) 0x0
+	home_dir = <value optimized out>
+	working_directory = <value optimized out>
+	ret = <value optimized out>

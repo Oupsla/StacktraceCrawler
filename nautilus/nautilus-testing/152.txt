@@ -1,0 +1,46 @@
+#0  0x080eff7e in ?? ()
+No symbol table info available.
+#1  0x080eeefd in ?? ()
+No symbol table info available.
+#2  0xb6c5ec46 in mainloop_proxy_func (data=0xb1502a98) at /build/buildd/glib2.0-2.31.16/./gio/gioscheduler.c:286
+        proxy = 0xb1502a98
+#3  0xb6b074b0 in g_idle_dispatch (source=0xb150b5a8, callback=0xb6c5ec20 <mainloop_proxy_func>, user_data=0xb1502a98) at /build/buildd/glib2.0-2.31.16/./glib/gmain.c:4629
+No locals.
+#4  0xb6b09a4a in g_main_dispatch (context=0x9502348) at /build/buildd/glib2.0-2.31.16/./glib/gmain.c:2510
+        dispatch = 0xb6b07490 <g_idle_dispatch>
+        was_in_call = 0
+        user_data = 0xb1502a98
+        callback = 0xb6c5ec20 <mainloop_proxy_func>
+        cb_funcs = 0xb6bb94d8
+        cb_data = 0xb1502778
+        current_source_link = {data = 0xb150b5a8, next = 0x0}
+        need_destroy = <optimized out>
+        source = 0xb150b5a8
+        current = 0x95576a0
+        i = <optimized out>
+#5  g_main_context_dispatch (context=0x9502348) at /build/buildd/glib2.0-2.31.16/./glib/gmain.c:3047
+No locals.
+#6  0xb6b09e55 in g_main_context_iterate (dispatch=1, block=-1229883424, context=0x9502348, self=<optimized out>) at /build/buildd/glib2.0-2.31.16/./glib/gmain.c:3118
+        timeout = 1989
+        some_ready = 1
+        fds = 0x9792548
+        max_priority = 2147483647
+        nfds = <optimized out>
+        allocated_nfds = <optimized out>
+#7  g_main_context_iterate (context=0x9502348, block=-1229883424, dispatch=1, self=<optimized out>) at /build/buildd/glib2.0-2.31.16/./glib/gmain.c:3055
+        some_ready = 1
+#8  0xb6b09f31 in g_main_context_iteration (context=0x9502348, may_block=1) at /build/buildd/glib2.0-2.31.16/./glib/gmain.c:3179
+        retval = <optimized out>
+#9  0xb6ca5ecc in g_application_run (application=0x94d7800, argc=2, argv=0xbff16fa4) at /build/buildd/glib2.0-2.31.16/./gio/gapplication.c:1496
+        arguments = 0x94cd4d0
+        status = 0
+        i = <optimized out>
+        __PRETTY_FUNCTION__ = "g_application_run"
+#10 0x08067e78 in ?? ()
+No symbol table info available.
+#11 0xb68d64d3 in __libc_start_main (main=0x8067dc0, argc=2, ubp_av=0xbff16fa4, init=0x815d920, fini=0x815d990, rtld_fini=0xb7795260 <_dl_fini>, stack_end=0xbff16f9c) at libc-start.c:226
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {-1230647308, 0, 0, 0, -217719015, 185785099}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x2, 0x8067ea4}, data = {prev = 0x0, cleanup = 0x0, canceltype = 2}}}
+        not_first_call = <optimized out>
+#12 0x08067ec5 in ?? ()
+No symbol table info available.

@@ -1,0 +1,40 @@
+#0  0xb65446f0 in ?? () from /usr/lib/liboverlay-scrollbar-0.1.so.0
+No symbol table info available.
+#1  0xb6545f05 in ?? () from /usr/lib/liboverlay-scrollbar-0.1.so.0
+No symbol table info available.
+#2  0xb702d48c in g_cclosure_marshal_VOID__VOID () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#3  0xb7011352 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#4  0xb7024048 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#5  0xb702cb29 in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#6  0xb702ccc2 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#7  0xb73a8a8a in gtk_adjustment_value_changed () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#8  0xb75428dc in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#9  0xb7549196 in gtk_text_view_scroll_to_iter () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#10 0xb75492bd in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#11 0xb754933a in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#12 0xb754939e in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#13 0xb72c0e18 in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#14 0xb6f60451 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#15 0xb6f64c08 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#16 0xb6f653d0 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#17 0xb6f65a93 in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#18 0xb7477a49 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#19 0x08067f77 in main ()
+No symbol table info available.

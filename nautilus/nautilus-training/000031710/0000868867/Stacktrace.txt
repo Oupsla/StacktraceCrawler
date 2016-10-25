@@ -1,0 +1,26 @@
+#0  0x00007fe9912e8bc4 in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+No symbol table info available.
+#1  0x00007fe9912eac68 in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+No symbol table info available.
+#2  0x00007fe9912d4e5a in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+No symbol table info available.
+#3  0x00007fe998d862be in ?? () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#4  0x00007fe998d8119c in ?? () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#5  0x00007fe998cf2758 in ?? () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#6  0x00007fe998d19afc in ?? () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#7  0x00007fe998d0b3f6 in ?? () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#8  0x00007fe9981b17d8 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#9  0x00007fe9981af2b6 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#10 0x00007fe998898efc in start_thread () from /lib/x86_64-linux-gnu/libpthread.so.0
+No symbol table info available.
+#11 0x00007fe9977cc89d in clone () from /lib/x86_64-linux-gnu/libc.so.6
+No symbol table info available.
+#12 0x0000000000000000 in ?? ()
+No symbol table info available.

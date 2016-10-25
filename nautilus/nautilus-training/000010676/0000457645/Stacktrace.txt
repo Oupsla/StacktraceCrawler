@@ -1,0 +1,59 @@
+#0  0x00007fa7d6cc4c98 in g_list_remove () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#1  0x00000000004f2d50 in module_object_weak_notify (
+    user_data=<value optimized out>, object=0x1cd0e40)
+    at nautilus-module.c:145
+No locals.
+#2  0x00007fa7d73a1d40 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#3  0x00007fa7d6cb2667 in g_datalist_id_set_data_full ()
+   from /lib/libglib-2.0.so.0
+No symbol table info available.
+#4  0x00007fa7d73a24b1 in g_object_unref () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#5  0x00007fa7d6cc459c in g_list_foreach () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#6  0x0000000000526b89 in eel_g_object_list_free (list=0x1f4a480)
+    at eel-glib-extensions.c:802
+No locals.
+#7  0x00000000004d603a in finalize (object=0x1944b10) at nautilus-file.c:819
+	directory = (NautilusDirectory *) 0x1941050
+	file = (NautilusFile *) 0x1944b10
+	uri = <value optimized out>
+	__PRETTY_FUNCTION__ = "finalize"
+#8  0x00007fa7d73a252f in g_object_unref () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#9  0x00000000004a53de in nautilus_bookmark_disconnect_file (
+    bookmark=0x207a460) at nautilus-bookmark.c:486
+	__PRETTY_FUNCTION__ = "nautilus_bookmark_disconnect_file"
+#10 0x00000000004a5d93 in nautilus_bookmark_finalize (object=0x207a460)
+    at nautilus-bookmark.c:78
+	bookmark = (NautilusBookmark *) 0x207a460
+	__PRETTY_FUNCTION__ = "nautilus_bookmark_finalize"
+#11 0x00007fa7d73a252f in g_object_unref () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#12 0x00007fa7d6cc459c in g_list_foreach () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#13 0x0000000000526b89 in eel_g_object_list_free (list=0x1f4a480)
+    at eel-glib-extensions.c:802
+No locals.
+#14 0x0000000000434aae in clear (bookmarks=0x19d2070)
+    at nautilus-bookmark-list.c:207
+No locals.
+#15 0x00007fa7d73a05ae in g_closure_invoke ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#16 0x00007fa7d73b5ce6 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#17 0x00007fa7d73b6d39 in g_signal_emit_valist ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#18 0x00007fa7d73b7283 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#19 0x00007fa7d859c740 in gtk_object_finalize (gobject=0x19d2070)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkobject.c:450
+No locals.
+#20 0x0000000001973860 in ?? ()
+No symbol table info available.
+#21 0x0000000000000000 in ?? ()
+No symbol table info available.

@@ -1,0 +1,119 @@
+#0  0xb77bc424 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0xb6963c8f in __GI_raise (sig=6) at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+        resultvar = <optimized out>
+        resultvar = <optimized out>
+        pid = -1230315532
+        selftid = 2694
+#2  0xb69672b5 in __GI_abort () at abort.c:92
+        save_stage = 2
+        act = {__sigaction_handler = {sa_handler = 0x64, sa_sigaction = 0x64}, sa_mask = {__val = {3063581335, 104, 104, 3217155872, 3064651764, 148755040, 104, 104, 3064651764, 99, 100, 99, 3063515628, 148755048, 100, 3217156104, 148755048, 0, 8, 4222451712, 148755048, 148755048, 148755048, 148755048, 148755147, 148755148, 148755048, 148755148, 0, 0, 0, 0}}, sa_flags = 0, sa_restorer = 0}
+        sigs = {__val = {32, 0 <repeats 31 times>}}
+#3  0xb695c826 in __GI___assert_fail (assertion=0xb76e1419 "ret != inval_id", file=0xb76e138a "../../src/xcb_io.c", line=528, function=0xb76e149e "_XAllocID") at assert.c:81
+        buf = 0x8ddd268 "nautilus: ../../src/xcb_io.c :528 : _XAllocID:  L'assertion « ret != inval_id » a échoué.\n"
+#4  0xb766959f in _XAllocID () from /usr/lib/i386-linux-gnu/libX11.so.6
+No symbol table info available.
+#5  0xb76460e7 in XCreatePixmap () from /usr/lib/i386-linux-gnu/libX11.so.6
+No symbol table info available.
+#6  0xb6e9cb65 in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#7  0xb6e7e7e0 in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#8  0xb6e7e88b in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#9  0xb6e46b19 in cairo_push_group_with_content () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#10 0xb6ffd4b3 in gdk_window_update_icon (icon_list=0x0, window=0x86f7348) at /build/buildd/gtk+3.0-3.3.6/./gdk/x11/gdkwindow-x11.c:3276
+        width = 256
+        height = 256
+        cr = 0xb6ef8500
+        toplevel = 0x867d4d8
+        best_icon = 0x8dfd278
+        tmp_list = 0x0
+        best_size = <optimized out>
+#11 gdk_x11_window_set_icon_list (pixbufs=0x0, window=0x86f7348) at /build/buildd/gtk+3.0-3.3.6/./gdk/x11/gdkwindow-x11.c:3404
+        pixbuf = <optimized out>
+        y = <optimized out>
+        pixels = <optimized out>
+        size = <optimized out>
+        width = <optimized out>
+        stride = <optimized out>
+        n_channels = <optimized out>
+        display = 0x8564000
+        n = <optimized out>
+        data = 0xb5561008
+        p = <optimized out>
+        l = <optimized out>
+        height = <optimized out>
+        x = <optimized out>
+#12 gdk_x11_window_set_icon_list (window=0x86f7348, pixbufs=0xada58cc0) at /build/buildd/gtk+3.0-3.3.6/./gdk/x11/gdkwindow-x11.c:3301
+No locals.
+#13 0xb6fd08bd in gdk_window_set_icon_list (window=0x86f7348, pixbufs=0xada58cc0) at /build/buildd/gtk+3.0-3.3.6/./gdk/gdkwindow.c:10182
+No locals.
+#14 0xb73184e0 in gtk_window_realize_icon (window=0x86480b8) at /build/buildd/gtk+3.0-3.3.6/./gtk/gtkwindow.c:3508
+        priv = 0x8648140
+        widget = 0x86480b8
+        info = 0x866d420
+        gdk_window = <optimized out>
+        icon_list = 0xada58cc0
+        __PRETTY_FUNCTION__ = "gtk_window_realize_icon"
+#15 0xb6c1b35c in g_cclosure_marshal_VOID__VOID () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#16 0xb6c19dac in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#17 0xb6c2b0c5 in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#18 0xb6c32942 in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#19 0xb6c32ad3 in g_signal_emit () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#20 0xb716ec83 in do_theme_change (icon_theme=0x8537e90) at /build/buildd/gtk+3.0-3.3.6/./gtk/gtkicontheme.c:721
+        priv = 0x8537ea0
+#21 0xb716eead in update_current_theme (icon_theme=0x8537e90) at /build/buildd/gtk+3.0-3.3.6/./gtk/gtkicontheme.c:527
+        theme = 0x8e94c70 "hicolor"
+        fallback_theme = 0x89c9b90 "boincmgr-32"
+        changed = <optimized out>
+        priv = 0x8537ea0
+#22 0xb6c1bdea in g_cclosure_marshal_VOID__PARAM () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#23 0xb6c19dac in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#24 0xb6c2b0c5 in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#25 0xb6c32942 in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#26 0xb6c32ad3 in g_signal_emit () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#27 0xb6c1cfff in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#28 0xb6c1ed80 in g_object_notify () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#29 0xb722ce97 in _gtk_settings_handle_event (event=0x88e2d70) at /build/buildd/gtk+3.0-3.3.6/./gtk/gtksettings.c:2465
+        screen = 0x8567038
+        settings = 0x8550c78
+        pspec = <optimized out>
+        property_id = <optimized out>
+#30 0xb71a3b45 in gtk_main_do_event (event=0x88e2d70) at /build/buildd/gtk+3.0-3.3.6/./gtk/gtkmain.c:1484
+        event_widget = <optimized out>
+        grab_widget = 0x0
+        window_group = <optimized out>
+        rewritten_event = 0x0
+        device = <optimized out>
+        tmp_list = <optimized out>
+        __PRETTY_FUNCTION__ = "gtk_main_do_event"
+#31 0xb6fbbcac in _gdk_event_emit (event=0x88e2d70) at /build/buildd/gtk+3.0-3.3.6/./gdk/gdkevents.c:71
+No locals.
+#32 0xb6fe9808 in gdk_event_source_dispatch (source=0x856f470, callback=0, user_data=0x0) at /build/buildd/gtk+3.0-3.3.6/./gdk/x11/gdkeventsource.c:368
+        display = <optimized out>
+        event = 0x88e2d70
+#33 0xb6b5c41a in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#34 0xb6b5c825 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#35 0xb6b5c901 in g_main_context_iteration () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#36 0xb6d0e85c in g_application_run () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#37 0x08067b34 in main (argc=2, argv=0xbfc1f514) at nautilus-main.c:102
+        retval = <optimized out>
+        application = 0x8537000

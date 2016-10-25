@@ -1,0 +1,87 @@
+#0  0x00007f3eb3337cc0 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#1  0x00007f3eb3334346 in g_variant_builder_add_value ()
+   from /lib/libglib-2.0.so.0
+No symbol table info available.
+#2  0x00007f3eb3336846 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#3  0x00007f3eb3336c97 in g_variant_new_va () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#4  0x00007f3eb3336e69 in g_variant_new () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#5  0x00007f3eb762a795 in brasero_inhibit_suspend ()
+   from /usr/lib/libbrasero-burn.so.1
+No symbol table info available.
+#6  0x00007f3eb76210bb in ?? () from /usr/lib/libbrasero-burn.so.1
+No symbol table info available.
+#7  0x00007f3eb7624023 in brasero_burn_record ()
+   from /usr/lib/libbrasero-burn.so.1
+No symbol table info available.
+#8  0x00007f3eb763d9d6 in ?? () from /usr/lib/libbrasero-burn.so.1
+No symbol table info available.
+#9  0x00007f3eb763dd29 in brasero_burn_dialog_run ()
+   from /usr/lib/libbrasero-burn.so.1
+No symbol table info available.
+#10 0x00000000004478ce in brasero_app_burn ()
+No symbol table info available.
+#11 0x000000000042744a in ?? ()
+No symbol table info available.
+#12 0x00007f3eb3bbcafe in g_closure_invoke ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#13 0x00007f3eb3bd5379 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#14 0x00007f3eb3bd6af6 in g_signal_emit_valist ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#15 0x00007f3eb3bd7353 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#16 0x00007f3eb6509845 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#17 0x00007f3eb3bbcafe in g_closure_invoke ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#18 0x00007f3eb3bd4c43 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#19 0x00007f3eb3bd6af6 in g_signal_emit_valist ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#20 0x00007f3eb3bd7353 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#21 0x00007f3eb65081d7 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#22 0x00007f3eb65cc6e3 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#23 0x00007f3eb3bbcafe in g_closure_invoke ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#24 0x00007f3eb3bd4fc2 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#25 0x00007f3eb3bd693c in g_signal_emit_valist ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#26 0x00007f3eb3bd7353 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#27 0x00007f3eb66ffc0f in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#28 0x00007f3eb65c33b3 in gtk_propagate_event ()
+   from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#29 0x00007f3eb65c458b in gtk_main_do_event ()
+   from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#30 0x00007f3eb621ee9c in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#31 0x00007f3eb32fc7e2 in g_main_context_dispatch ()
+   from /lib/libglib-2.0.so.0
+No symbol table info available.
+#32 0x00007f3eb3300748 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#33 0x00007f3eb3300c55 in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#34 0x00007f3eb65c4a47 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#35 0x0000000000446265 in brasero_app_run_mainwin ()
+No symbol table info available.
+#36 0x000000000041dd41 in main ()
+No symbol table info available.

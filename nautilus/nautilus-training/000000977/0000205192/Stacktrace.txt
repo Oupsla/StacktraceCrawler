@@ -1,0 +1,14 @@
+#0  0xb7b9185c in g_type_check_instance_cast ()
+   from /usr/lib/libgobject-2.0.so.0
+#1  0xb6d342ab in ?? () from /usr/lib/gtk-2.0/2.10.0/filesystems/libgio.so
+#2  0x0a60f880 in ?? ()
+#3  0x0a0fdc20 in ?? ()
+#4  0xbfb7f808 in ?? ()
+#5  0xb7efc8c5 in pthread_getspecific ()
+   from /lib/tls/i686/cmov/libpthread.so.0
+#6  0xb7b80f5a in g_cclosure_marshal_VOID__OBJECT ()
+   from /usr/lib/libgobject-2.0.so.0
+#7  0xb7b74759 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+#8  0xb7b88d1d in ?? () from /usr/lib/libgobject-2.0.so.0
+#9  0x0a25cde0 in ?? ()
+#10 0x00000000 in ?? ()

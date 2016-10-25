@@ -1,0 +1,10 @@
+#0  0x00000000004868c4 in ?? ()
+No symbol table info available.
+#1  0x000000000045515d in ?? ()
+No symbol table info available.
+#2  0x00007fbbd6282ed4 in g_closure_remove_finalize_notifier () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#3  0x00007fff42aed450 in ?? ()
+No symbol table info available.
+#4  0x0000000000000000 in ?? ()
+No symbol table info available.

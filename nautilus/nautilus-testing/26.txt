@@ -1,0 +1,30 @@
+#0  0xb7464aa4 in gtk_ui_manager_new_merge_id () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#1  0x0812827a in ?? ()
+No symbol table info available.
+#2  0x080b6298 in ?? ()
+No symbol table info available.
+#3  0x08079ecd in ?? ()
+No symbol table info available.
+#4  0x080af119 in ?? ()
+No symbol table info available.
+#5  0x080af175 in ?? ()
+No symbol table info available.
+#6  0xb69a47ef in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#7  0xb69a3b13 in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#8  0xb69a3eb0 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#9  0xb69a3f91 in g_main_context_iteration () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#10 0xb6b48d4c in g_application_run () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#11 0x080678c8 in ?? ()
+No symbol table info available.
+#12 0xb676d4d3 in __libc_start_main (main=0x80677e0, argc=2, ubp_av=0xbf9d6e44, init=0x814eb50, fini=0x814ebc0, rtld_fini=0xb76ff270 <_dl_fini>, stack_end=0xbf9d6e3c) at libc-start.c:226
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {-1232121868, 0, 0, 0, -2016884087, 1354403482}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x2, 0x80678f4}, data = {prev = 0x0, cleanup = 0x0, canceltype = 2}}}
+        not_first_call = <optimized out>
+#13 0x08067915 in ?? ()
+No symbol table info available.

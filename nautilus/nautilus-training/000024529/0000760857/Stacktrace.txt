@@ -1,0 +1,38 @@
+#0  __strlen_sse42 () at ../sysdeps/x86_64/multiarch/strlen-sse4.S:32
+No locals.
+#1  0x00007f4828eefe7e in g_variant_is_object_path () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#2  0x00007f482a1d0f65 in g_dbus_connection_register_object () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#3  0x00007f482652131d in ?? () from /usr/lib/libdbusmenu-glib.so.3
+No symbol table info available.
+#4  0x00007f4826522830 in ?? () from /usr/lib/libdbusmenu-glib.so.3
+No symbol table info available.
+#5  0x00007f482a18cd49 in ?? () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#6  0x00007f4828eb9bcd in g_main_context_dispatch () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#7  0x00007f4828eba3a8 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#8  0x00007f4828eba9f2 in g_main_loop_run () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#9  0x00007f482aa5da37 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#10 0x00000000004427d2 in ?? ()
+No symbol table info available.
+#11 0x00007f4827881eff in __libc_start_main (main=0x442150, argc=1, ubp_av=0x7fff71f11378, init=<value optimized out>, fini=<value optimized out>, rtld_fini=<value optimized out>, stack_end=0x7fff71f11368) at libc-start.c:226
+        result = <value optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, -3090511502908174139, 4387616, 140735105012592, 0, 0, 3090225583622607045, 3137886586731122885}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x54ea40, 0x7fff71f11378}, data = {prev = 0x0, cleanup = 0x0, canceltype = 5564992}}}
+        not_first_call = <value optimized out>
+#12 0x000000000042f349 in ?? ()
+No symbol table info available.
+#13 0x00007fff71f11368 in ?? ()
+No symbol table info available.
+#14 0x000000000000001c in ?? ()
+No symbol table info available.
+#15 0x0000000000000001 in ?? ()
+No symbol table info available.
+#16 0x00007fff71f12ae0 in ?? ()
+No symbol table info available.
+#17 0x0000000000000000 in ?? ()
+No symbol table info available.

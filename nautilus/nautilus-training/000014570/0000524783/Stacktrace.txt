@@ -1,0 +1,149 @@
+#0  0x0088f422 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x002af5e1 in raise () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#2  0x002b2a42 in abort () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#3  0x080c93e1 in ?? ()
+No symbol table info available.
+#4  <signal handler called>
+No symbol table info available.
+#5  0x0088f422 in __kernel_vsyscall ()
+No symbol table info available.
+#6  0x002af5e1 in raise () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#7  0x002b2a42 in abort () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#8  0x002a8748 in __assert_fail () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#9  0x034efc29 in _XAllocID () from /usr/lib/libX11.so.6
+No symbol table info available.
+#10 0x034c51a8 in XCreatePixmap () from /usr/lib/libX11.so.6
+No symbol table info available.
+#11 0x008d5e39 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#12 0x008bfdf6 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#13 0x008bffcb in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#14 0x008c0148 in cairo_surface_create_similar () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#15 0x013dae51 in ?? () from /usr/lib/librsvg-2.so.2
+No symbol table info available.
+#16 0x013d6181 in ?? () from /usr/lib/librsvg-2.so.2
+No symbol table info available.
+#17 0x013cf400 in ?? () from /usr/lib/librsvg-2.so.2
+No symbol table info available.
+#18 0x013cef69 in ?? () from /usr/lib/librsvg-2.so.2
+No symbol table info available.
+#19 0x013cf43d in ?? () from /usr/lib/librsvg-2.so.2
+No symbol table info available.
+#20 0x013cef69 in ?? () from /usr/lib/librsvg-2.so.2
+No symbol table info available.
+#21 0x013cf31b in ?? () from /usr/lib/librsvg-2.so.2
+No symbol table info available.
+#22 0x013cef69 in ?? () from /usr/lib/librsvg-2.so.2
+No symbol table info available.
+#23 0x013dd24e in rsvg_handle_render_cairo_sub () from /usr/lib/librsvg-2.so.2
+No symbol table info available.
+#24 0x013dd2dc in rsvg_handle_render_cairo () from /usr/lib/librsvg-2.so.2
+No symbol table info available.
+#25 0x0751b4e7 in ?? ()
+No symbol table info available.
+#26 0x0751b4a0 in ?? ()
+No symbol table info available.
+#27 0x0751b054 in ?? ()
+No symbol table info available.
+#28 0x075220a4 in ?? ()
+No symbol table info available.
+#29 0x03205229 in ?? ()
+No symbol table info available.
+#30 0x0751a6c9 in ?? ()
+No symbol table info available.
+#31 0x0438ae5a in ?? ()
+No symbol table info available.
+#32 0x0438ac0c in ?? ()
+No symbol table info available.
+#33 0x08115daf in mono_runtime_invoke_array ()
+No symbol table info available.
+#34 0x0811c5a9 in ?? ()
+No symbol table info available.
+#35 0x00da0b23 in ?? ()
+No symbol table info available.
+#36 0x00da089d in ?? ()
+No symbol table info available.
+#37 0x00da07ee in ?? ()
+No symbol table info available.
+#38 0x0438ab93 in ?? ()
+No symbol table info available.
+#39 0x0438a9f5 in ?? ()
+No symbol table info available.
+#40 0x0438a9ba in ?? ()
+No symbol table info available.
+#41 0x0438a989 in ?? ()
+No symbol table info available.
+#42 0x0438a85c in ?? ()
+No symbol table info available.
+#43 0x04388ca9 in ?? ()
+No symbol table info available.
+#44 0x00dab673 in ?? ()
+No symbol table info available.
+#45 0x009fae52 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#46 0x00a11088 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#47 0x00a12083 in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#48 0x00a126a6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#49 0x07ab90ce in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#50 0x0796dc94 in gtk_main_do_event () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#51 0x007de9db in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#52 0x007de98a in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#53 0x0080e014 in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#54 0x007db143 in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#55 0x007e00d7 in gdk_window_process_all_updates ()
+   from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#56 0x078d42fd in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#57 0x007b84b8 in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#58 0x001ff071 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#59 0x00200f95 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#60 0x00204c98 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#61 0x002051ef in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#62 0x0796df39 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#63 0x04387498 in ?? ()
+No symbol table info available.
+#64 0x04387393 in ?? ()
+No symbol table info available.
+#65 0x04387373 in ?? ()
+No symbol table info available.
+#66 0x00bcd329 in ?? ()
+No symbol table info available.
+#67 0x00bcd203 in ?? ()
+No symbol table info available.
+#68 0x0811209e in mono_runtime_exec_main ()
+No symbol table info available.
+#69 0x081142ea in mono_runtime_run_main ()
+No symbol table info available.
+#70 0x080b23dd in mono_main ()
+No symbol table info available.
+#71 0x0805ac45 in ?? ()
+No symbol table info available.
+#72 0x0029bbd6 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#73 0x0805ab81 in ?? ()
+No symbol table info available.

@@ -1,0 +1,53 @@
+#0  0x080aa089 in ?? ()
+No symbol table info available.
+#1  0x0815e231 in ?? ()
+No symbol table info available.
+#2  0x0808e439 in ?? ()
+No symbol table info available.
+#3  0xb70ead1c in g_cclosure_marshal_VOID__OBJECT ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#4  0xb70dc1aa in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#5  0xb70f417d in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#6  0xb70f57e4 in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#7  0xb70f5ad5 in g_signal_emit_by_name () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#8  0xb72934ae in ?? () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#9  0xb70ead1c in g_cclosure_marshal_VOID__OBJECT ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#10 0xb70dc1aa in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#11 0xb70f417d in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#12 0xb70f57e4 in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#13 0xb70f5ad5 in g_signal_emit_by_name () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#14 0xb3689236 in ?? ()
+   from /usr/lib/gio/modules/libgioremote-volume-monitor.so
+No symbol table info available.
+#15 0xb6fff251 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#16 0xb7001265 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#17 0xb7005088 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#18 0xb70055c7 in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#19 0xb74fe3c9 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.20.1/gtk/gtkmain.c:1219
+        tmp_list = 0x0
+        functions = 0x0
+        init = 0x1
+        loop = 0x885a1b0
+#20 0x08080e08 in ?? ()
+No symbol table info available.
+#21 0xb6ad4bd6 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#22 0x0806c6b1 in ?? ()
+No symbol table info available.

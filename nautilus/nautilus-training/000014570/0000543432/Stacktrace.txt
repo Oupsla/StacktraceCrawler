@@ -1,0 +1,135 @@
+#0  0x00214422 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x007fc230 in raise () from /lib/tls/i686/cmov/libpthread.so.0
+No symbol table info available.
+#2  0x00ff79be in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#3  <signal handler called>
+No symbol table info available.
+#4  0x00214422 in __kernel_vsyscall ()
+No symbol table info available.
+#5  0x1a908601 in raise () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#6  0x1a90ba62 in abort () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#7  0x1a901768 in __assert_fail () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#8  0x00909c29 in _XAllocID () from /usr/lib/libX11.so.6
+No symbol table info available.
+#9  0x00201df7 in XRenderCreatePicture () from /usr/lib/libXrender.so.1
+No symbol table info available.
+#10 0x01957e02 in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#11 0x0195a1af in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#12 0x0193a92a in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#13 0x0193aa79 in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#14 0x0193d933 in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#15 0x0193e0b8 in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#16 0x0193a84e in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#17 0x0193ba46 in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#18 0x0191f0f0 in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#19 0x01921d6c in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#20 0x0191b54d in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#21 0x0117b650 in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#22 0x0117e7d2 in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#23 0x0117f580 in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#24 0x0118708a in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#25 0x011876b9 in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#26 0x01187817 in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#27 0x011876b9 in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#28 0x01187817 in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#29 0x011876b9 in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#30 0x01199693 in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#31 0x011a32bc in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#32 0x01418729 in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#33 0x01419518 in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#34 0x014199f7 in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#35 0x0141457b in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#36 0x017c288f in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#37 0x017c9e06 in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#38 0x017ca167 in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#39 0x0b704c18 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#40 0x007821f2 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#41 0x0079981d in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#42 0x0079adf3 in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#43 0x0079b6d6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#44 0x0b84a9e6 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#45 0x0b6fd800 in gtk_main_do_event () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#46 0x003a5c0b in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#47 0x003d5444 in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#48 0x003a2363 in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#49 0x003a7307 in gdk_window_process_all_updates ()
+   from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#50 0x003a738b in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#51 0x0037f5a8 in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#52 0x0060c441 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#53 0x0060e3c5 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#54 0x006120f0 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#55 0x00612288 in g_main_context_iteration () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#56 0x017ce5ec in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#57 0x017e3d4c in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#58 0x017e3e98 in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#59 0x018b105f in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#60 0x0187fc67 in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#61 0x017e3ffe in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#62 0x016a73d0 in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#63 0x00ff2894 in XRE_main () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#64 0x007d29c3 in ?? ()
+No symbol table info available.
+#65 0x1a8f4bd6 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#66 0x007d2711 in ?? ()
+No symbol table info available.

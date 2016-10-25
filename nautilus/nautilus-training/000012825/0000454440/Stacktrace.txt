@@ -1,0 +1,117 @@
+#0  0x00942422 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x00d434d1 in ?? () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#2  0x00d46932 in __gconv_get_path () at gconv_conf.c:491
+	nelems = <value optimized out>
+	gconv_path = 0xe38ffa "-10646/UCS2/"
+	gconv_path_len = 0
+	elem = <value optimized out>
+	oldp = <value optimized out>
+	cp = 0xe6cff4 "|=\025"
+	cwd = 0x0
+	cwdlen = 0
+	result = (struct path_elem *) 0x0
+	lock = 0
+	__PRETTY_FUNCTION__ = "__gconv_get_path"
+#3  0x00d3c648 in ?? () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#4  0x00a7b199 in _XAllocID (dpy=0xe6cff4) at ../../src/xcb_io.c:378
+	ret = 11447524
+	__PRETTY_FUNCTION__ = "_XAllocID"
+#5  0x00a51048 in XCreatePixmap (dpy=0x8b83268, d=277, width=22, height=22, 
+    depth=1) at ../../src/CrPixmap.c:58
+No locals.
+#6  0x0016de4c in _gdk_drawable_impl_x11_get_type ()
+    at /build/buildd/gtk+2.0-2.18.3/gdk/x11/gdkdrawable-x11.c:147
+	g_define_type_id = <value optimized out>
+	g_define_type_id__volatile = 146344888
+#7  0x00137860 in composite_0888 (src_buf=0x8b96800 "\210%·\b\002", 
+    src_rowstride=22, dest_buf=0x16 <Address 0x16 out of bounds>, 
+    dest_rowstride=1, dest_byte_order=22, width=22, height=1)
+    at /build/buildd/gtk+2.0-2.18.3/gdk/gdkdraw.c:1382
+	t = <value optimized out>
+	p = (guchar *) 0x6 <Address 0x6 out of bounds>
+	src = (guchar *) 0x16 <Address 0x16 out of bounds>
+	dest = (guchar *) 0x1 <Address 0x1 out of bounds>
+#8  0x0013765d in gdk_display_manager_set_property (object=0x8bf3da0, 
+    prop_id=146365464, value=0x8b7c46c, pspec=0x8b7c470)
+    at /build/buildd/gtk+2.0-2.18.3/gdk/gdkdisplaymanager.c:120
+No locals.
+#9  0x0052300a in IA__gtk_toolbar_set_icon_size (toolbar=0x8bd9210, 
+    icon_size=1777652) at /build/buildd/gtk+2.0-2.18.3/gtk/gtktoolbar.c:3232
+	__PRETTY_FUNCTION__ = "IA__gtk_toolbar_set_icon_size"
+#10 0x0052bac6 in gtk_tool_item_get_property (object=0x8bd9210, 
+    prop_id=146641424, value=0x6, pspec=0x8bd92b8)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtktoolitem.c:406
+No locals.
+#11 0x0022094c in g_object_newv () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#12 0x00211719 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#13 0x00213092 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#14 0x00228000 in g_signal_name () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#15 0x00229a7d in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#16 0x00229f06 in g_signal_handler_find () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#17 0x0051a231 in gtk_text_view_drag_data_received (widget=0x6d2ff4, 
+    context=0xbfb6351c, x=-1078577928, y=8076136, selection_data=0x8bd9210, 
+    info=146641424, time=3216389384)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtktextview.c:6905
+	start = {dummy1 = 0xbfb63438, dummy2 = 0x229f06, dummy3 = 146641424, 
+  dummy4 = 19, dummy5 = 0, dummy6 = 2283284, dummy7 = 7155700, 
+  dummy8 = 146641424, dummy9 = 0xbfb634a8, dummy10 = 0x518340, 
+  dummy11 = 146641424, dummy12 = 19, dummy13 = 2265803, dummy14 = 0x6d2ff4}
+	end = {dummy1 = 0x0, dummy2 = 0x0, dummy3 = 0, dummy4 = 2283284, 
+  dummy5 = 184, dummy6 = 21, dummy7 = 160, dummy8 = 7155700, 
+  dummy9 = 0x8bd9210, dummy10 = 0xbfb6351c, dummy11 = 2265803, 
+  dummy12 = 2283284, dummy13 = 146641424, dummy14 = 0x1}
+	copy_tags = 0
+	drop_point = {dummy1 = 0x8bd9210, dummy2 = 0x8bd8920, 
+  dummy3 = -1078578056, dummy4 = 2268934, dummy5 = 146641424, dummy6 = 16, 
+  dummy7 = 0, dummy8 = -1078578036, dummy9 = 0x6d2ff4, dummy10 = 0x8bd9210, 
+  dummy11 = -1078578008, dummy12 = 5349937, dummy13 = 146641424, 
+  dummy14 = 0x10}
+	buffer = (GtkTextBuffer *) 0x0
+	__PRETTY_FUNCTION__ = "gtk_text_view_drag_data_received"
+#18 0x0052c1f8 in gtk_tooltip_start_delay (display=0x0)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtktooltip.c:1071
+	timeout = <value optimized out>
+	tooltip = <value optimized out>
+	settings = <value optimized out>
+#19 0x0022094c in g_object_newv () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#20 0x00211719 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#21 0x00213092 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#22 0x00228000 in g_signal_name () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#23 0x00229a7d in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#24 0x00229f06 in g_signal_handler_find () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#25 0x0051b206 in gtk_text_view_button_release_event (widget=0x6d2ff4, 
+    event=0x8bd9210) at /build/buildd/gtk+2.0-2.18.3/gtk/gtktextview.c:4406
+No locals.
+#26 0x003667d0 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#27 0x0804da77 in show_error_dialog (info=<value optimized out>)
+    at xrandr-capplet.c:120
+	dialog = (GtkWidget *) 0xbfb6388c
+#28 0x0804dc19 in check_required_virtual_size (app=0x8c2f238)
+    at xrandr-capplet.c:1876
+	status = 256
+	err = (GError *) 0x0
+	error = (gchar *) 0x8bd9210 " \211½\b\005"
+	req_width = 2960
+	req_height = 1050
+	min_width = 320
+	max_width = 1680
+	min_height = 200
+	max_height = 1680
+#29 0x08050f87 in main (argc=1, argv=0xbfb63ad4) at xrandr-capplet.c:2070
+No locals.

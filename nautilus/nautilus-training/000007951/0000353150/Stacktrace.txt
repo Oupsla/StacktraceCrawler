@@ -1,0 +1,19 @@
+#0  0x00007f7ab226d641 in brasero_medium_init_real (object=0x105ce60, 
+    handle=0x101f7d0) at brasero-medium.c:2680
+	i = <value optimized out>
+	name = <value optimized out>
+	result = <value optimized out>
+	priv = (BraseroMediumPrivate *) 0x105ce80
+	code = BRASERO_SCSI_ERR_UNKNOWN
+	buffer = "ð~3«\237ÿ\235\\ü²£\024hcéè\016²ôÿg\233O|à<èzzÀ\020ÑëàúôÞä\004R£çìÓ\232\037Á\004«,eØ<M\016\017", '\0' <repeats 199 times>
+#1  0x00007f7ab226da63 in brasero_medium_probe_thread (self=0x105ce60)
+    at brasero-medium.c:2991
+	counter = 16414512
+	path = <value optimized out>
+	code = BRASERO_SCSI_ERR_UNKNOWN
+	priv = <value optimized out>
+	handle = <value optimized out>
+#2  0x00007f7abc863954 in ?? () from /usr/lib/libglib-2.0.so.0
+#3  0x00007f7abb6053ba in start_thread () from /lib/libpthread.so.0
+#4  0x00007f7abb371fcd in clone () from /lib/libc.so.6
+#5  0x0000000000000000 in ?? ()

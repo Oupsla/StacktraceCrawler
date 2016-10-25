@@ -1,0 +1,23 @@
+#0  0x0141aa20 in ?? ()
+No symbol table info available.
+#1  0x00e770cf in __gconv_transform_utf8_internal (step=0x0, data=0xbfd60794, 
+    inptrp=0xbfd607ac, inend=0xb7803d80 "", outbufstart=0xbfd60750, 
+    irreversible=0xffffffff, do_flush=2314228, consume_incomplete=134605424)
+    at ../iconv/skeleton.c:674
+	outerr = (const unsigned char *) 0xf9c304 "ÀÌù"
+	result = <value optimized out>
+	trans = <value optimized out>
+	inptr = <value optimized out>
+	lirreversiblep = (size_t *) 0x0
+	outbuf = (unsigned char *) 0xf9ccc0 ""
+	outend = (unsigned char *) 0x0
+	lirreversible = 1
+	next_step = (struct __gconv_step *) 0x0
+	next_data = (struct __gconv_step_data *) 0x0
+	fct = (__gconv_fct) 0
+	status = 0
+	__PRETTY_FUNCTION__ = "__gconv_transform_utf8_internal"
+#2  0x00e5eb5e in ?? () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#3  0x0806c071 in _start () at ../sysdeps/i386/elf/start.S:119
+No locals.

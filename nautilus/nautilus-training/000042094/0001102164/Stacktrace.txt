@@ -1,0 +1,24 @@
+#0  0x00007f05fa2d0966 in g_file_info_get_size () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#1  0x00007f05fa2c7f50 in g_file_copy () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#2  0x00000000004b6345 in ?? ()
+No symbol table info available.
+#3  0x00000000004b64db in ?? ()
+No symbol table info available.
+#4  0x00000000004b64db in ?? ()
+No symbol table info available.
+#5  0x00000000004b76fb in ?? ()
+No symbol table info available.
+#6  0x00007f05fa2de136 in ?? () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#7  0x00007f05fa300055 in ?? () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#8  0x00007f05f9d9ee32 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#9  0x00007f05f9d9e5f5 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#10 0x00007f05f9600f9f in start_thread () from /lib/x86_64-linux-gnu/libpthread.so.0
+No symbol table info available.
+#11 0x00007f05f932e0cd in clone () from /lib/x86_64-linux-gnu/libc.so.6
+No symbol table info available.

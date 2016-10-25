@@ -1,0 +1,285 @@
+#0  0x005e9422 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x00ca04d1 in *__GI_raise (sig=6)
+    at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+	resultvar = <value optimized out>
+	pid = 14376948
+	selftid = 1827
+#2  0x00ca3932 in *__GI_abort () at abort.c:92
+	act = {__sigaction_handler = {
+    sa_handler = 0xce682d <*__GI___libc_realloc+221>, 
+    sa_sigaction = 0xce682d <*__GI___libc_realloc+221>}, sa_mask = {__val = {
+      104, 88, 3219380592, 3219380832, 3219380620, 104, 88, 80, 150853712, 
+      14376948, 80, 79, 3219380792, 13458370, 150853720, 80, 3219380832, 
+      150853720, 0, 4222451712, 150853720, 150853720, 150853720, 150853720, 
+      150853799, 150853820, 150853720, 150853820, 0, 0, 0, 0}}, sa_flags = 0, 
+  sa_restorer = 0x20}
+	sigs = {__val = {32, 0 <repeats 31 times>}}
+#3  0x00c99648 in *__GI___assert_fail (assertion=0xf15b65 "ret != inval_id", 
+    file=0xf15b29 "../../src/xcb_io.c", line=378, 
+    function=0xf15ce4 "_XAllocID") at assert.c:81
+	buf = 0x8fdd858 "gigolo: ../../src/xcb_io.c:378: _XAllocID: Assertion `ret != inval_id' failed.\n"
+#4  0x00ea6199 in _XAllocID (dpy=0x8d70ae0) at ../../src/xcb_io.c:378
+	ret = 4294967295
+	__PRETTY_FUNCTION__ = "_XAllocID"
+#5  0x00e7b883 in XCreateGC (dpy=0x8d70ae0, d=46137546, 
+    valuemask=<value optimized out>, values=0xbfe3db30) at ../../src/CrGC.c:93
+	ext = <value optimized out>
+#6  0x00b9e6d3 in _gdk_x11_gc_new (drawable=0x8e7de60, values=0x0, 
+    values_mask=0) at /build/buildd/gtk+2.0-2.18.3/gdk/x11/gdkgc-x11.c:142
+	gc = (GdkGC *) 0x8f86da0
+	xvalues = {function = 3, plane_mask = 10256372, 
+  foreground = 3219381112, background = 2803652, line_width = 148312108, 
+  line_style = -1075586172, cap_style = -1075586168, join_style = 12152334, 
+  fill_style = 0, fill_rule = 12431348, arc_mode = 1, tile = 2803652, 
+  stipple = 3219381320, ts_x_origin = 0, ts_y_origin = -1075586024, 
+  font = 12431348, subwindow_mode = 0, graphics_exposures = 0, 
+  clip_x_origin = -1075586136, clip_y_origin = 12431348, 
+  clip_mask = 149413472, dash_offset = 148549152, dashes = -88 '¨'}
+	xvalues_mask = 4292865
+	__PRETTY_FUNCTION__ = "_gdk_x11_gc_new"
+#7  0x00b652cf in IA__gdk_gc_new_with_values (drawable=0x0, values=0x0, 
+    values_mask=0) at /build/buildd/gtk+2.0-2.18.3/gdk/gdkgc.c:130
+	__PRETTY_FUNCTION__ = "IA__gdk_gc_new_with_values"
+#8  0x00b652cf in IA__gdk_gc_new_with_values (drawable=0x0, values=0x0, 
+    values_mask=0) at /build/buildd/gtk+2.0-2.18.3/gdk/gdkgc.c:130
+	__PRETTY_FUNCTION__ = "IA__gdk_gc_new_with_values"
+#9  0x00b65341 in IA__gdk_gc_new (drawable=0x0)
+    at /build/buildd/gtk+2.0-2.18.3/gdk/gdkgc.c:108
+	__PRETTY_FUNCTION__ = "IA__gdk_gc_new"
+#10 0x00b62235 in _gdk_drawable_get_scratch_gc (drawable=0x8db6cb0, 
+    graphics_exposures=0) at /build/buildd/gtk+2.0-2.18.3/gdk/gdkdraw.c:1826
+	screen = (GdkScreen *) 0x8d800c8
+	__PRETTY_FUNCTION__ = "_gdk_drawable_get_scratch_gc"
+#11 0x00b6e540 in IA__gdk_pixbuf_render_pixmap_and_mask_for_colormap (
+    pixbuf=0x8fa2520, colormap=0x8d7f418, pixmap_return=0x8db6e3c, 
+    mask_return=0x8db6e40, alpha_threshold=128)
+    at /build/buildd/gtk+2.0-2.18.3/gdk/gdkpixbuf-render.c:307
+	gc = <value optimized out>
+	screen = (GdkScreen *) 0x8d800c8
+	__PRETTY_FUNCTION__ = "IA__gdk_pixbuf_render_pixmap_and_mask_for_colormap"
+#12 0x0085631a in gtk_window_realize_icon (window=0x8db2038)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkwindow.c:3142
+	info = (GtkWindowIconInfo *) 0x8db6e38
+	icon_list = <value optimized out>
+	__PRETTY_FUNCTION__ = "gtk_window_realize_icon"
+#13 0x0085edd6 in gtk_window_realize (widget=0x8db2038)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkwindow.c:4854
+	parent_window = (GdkWindow *) 0x8d84000
+	attributes = {title = 0x8dae4f0 "Gigolo", event_mask = 64514, x = 0, 
+  y = 650, width = 650, height = 350, wclass = GDK_INPUT_OUTPUT, 
+  visual = 0x8d82008, colormap = 0x8d7f418, 
+  window_type = GDK_WINDOW_TOPLEVEL, cursor = 0x8f5f940, 
+  wmclass_name = 0x8db0ac8 "gigolo", wmclass_class = 0x8d9a720 "Gigolo", 
+  override_redirect = 148578360, type_hint = GDK_WINDOW_TYPE_HINT_NORMAL}
+	__PRETTY_FUNCTION__ = "gtk_window_realize"
+#14 0x0029f9fc in g_cclosure_marshal_VOID__VOID ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#15 0x002906f9 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#16 0x00292072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#17 0x002a70b0 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#18 0x002a8b2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#19 0x002a8fb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#20 0x0084d4e1 in IA__gtk_widget_realize (widget=0x8db2038)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkwidget.c:3328
+	mode = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_widget_realize"
+#21 0x0085f508 in gtk_window_show (widget=0x8db2038)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkwindow.c:4488
+	info = (GtkWindowGeometryInfo *) 0x8dcba58
+	allocation = {x = 0, y = 0, width = 650, height = 350}
+	configure_request = {x = 120, y = 355, width = 650, height = 350}
+	new_geometry = {min_width = 317, min_height = 181, max_width = 0, 
+  max_height = 0, base_width = 0, base_height = 0, width_inc = 0, 
+  height_inc = 0, min_aspect = 0, max_aspect = 0, 
+  win_gravity = GDK_GRAVITY_NORTH_WEST}
+	new_flags = 66
+#22 0x0029f9fc in g_cclosure_marshal_VOID__VOID ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#23 0x002906f9 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#24 0x00292072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#25 0x002a70b0 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#26 0x002a8b2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#27 0x002a8fb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#28 0x0084e4b6 in IA__gtk_widget_show (widget=0x8db2038)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkwidget.c:3012
+	__PRETTY_FUNCTION__ = "IA__gtk_widget_show"
+#29 0x00858029 in IA__gtk_window_present (window=0x8db2038)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkwindow.c:6716
+No locals.
+#30 0x0029f118 in g_cclosure_marshal_VOID__PARAM ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#31 0x00292072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#32 0x002a77a8 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#33 0x002a8b2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#34 0x002a8fb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#35 0x002963e1 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#36 0x00292daf in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#37 0x00297ec3 in g_object_notify () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#38 0x0079f207 in gtk_status_icon_embedded_changed (status_icon=0x8f7d728)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkstatusicon.c:1684
+No locals.
+#39 0x0029f118 in g_cclosure_marshal_VOID__PARAM ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#40 0x00292072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#41 0x002a77a8 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#42 0x002a8b2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#43 0x002a8fb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#44 0x002963e1 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#45 0x00292daf in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#46 0x00297ec3 in g_object_notify () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#47 0x008c6638 in _gtk_plug_windowing_filter_func (gdk_xevent=0xbfe3ef3c, 
+    event=0x8f8ade8, data=0x8f79808)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkplug-x11.c:282
+	was_embedded = 1
+	screen = (GdkScreen *) 0x8d800c8
+	display = (GdkDisplay *) 0x8d7c000
+	return_val = <value optimized out>
+#48 0x00b9a92b in gdk_event_translate (display=<value optimized out>, 
+    event=<value optimized out>, xevent=0xbfe3ef3c, return_exposes=0)
+    at /build/buildd/gtk+2.0-2.18.3/gdk/x11/gdkevents-x11.c:351
+	window = <value optimized out>
+	window_private = <value optimized out>
+	filter_window = (GdkWindow *) 0x8d84498
+	window_impl = (GdkWindowImplX11 *) 0x8f7d760
+	return_val = <value optimized out>
+	screen = <value optimized out>
+	screen_x11 = <value optimized out>
+	toplevel = (GdkToplevelX11 *) 0x8d7d8c8
+	xwindow = <value optimized out>
+	filter_xwindow = <value optimized out>
+#49 0x00b9c1a1 in _gdk_events_queue (display=0x8d7c000)
+    at /build/buildd/gtk+2.0-2.18.3/gdk/x11/gdkevents-x11.c:2302
+	node = (GList *) 0x8fecb50
+	event = (GdkEvent *) 0x8f8ade8
+	xevent = {type = 21, xany = {type = 21, serial = 663, send_event = 0, 
+    display = 0x8d70ae0, window = 46137503}, xkey = {type = 21, serial = 663, 
+    send_event = 0, display = 0x8d70ae0, window = 46137503, root = 46137503, 
+    subwindow = 251, time = 0, x = 0, y = 0, x_root = 0, y_root = 134807304, 
+    state = 0, keycode = 247, same_screen = 73}, xbutton = {type = 21, 
+    serial = 663, send_event = 0, display = 0x8d70ae0, window = 46137503, 
+    root = 46137503, subwindow = 251, time = 0, x = 0, y = 0, x_root = 0, 
+    y_root = 134807304, state = 0, button = 247, same_screen = 73}, 
+  xmotion = {type = 21, serial = 663, send_event = 0, display = 0x8d70ae0, 
+    window = 46137503, root = 46137503, subwindow = 251, time = 0, x = 0, 
+    y = 0, x_root = 0, y_root = 134807304, state = 0, is_hint = -9 '÷', 
+    same_screen = 73}, xcrossing = {type = 21, serial = 663, send_event = 0, 
+    display = 0x8d70ae0, window = 46137503, root = 46137503, subwindow = 251, 
+    time = 0, x = 0, y = 0, x_root = 0, y_root = 134807304, mode = 0, 
+    detail = 247, same_screen = 73, focus = 0, state = 0}, xfocus = {
+    type = 21, serial = 663, send_event = 0, display = 0x8d70ae0, 
+    window = 46137503, mode = 46137503, detail = 251}, xexpose = {type = 21, 
+    serial = 663, send_event = 0, display = 0x8d70ae0, window = 46137503, 
+    x = 46137503, y = 251, width = 0, height = 0, count = 0}, 
+  xgraphicsexpose = {type = 21, serial = 663, send_event = 0, 
+    display = 0x8d70ae0, drawable = 46137503, x = 46137503, y = 251, 
+    width = 0, height = 0, count = 0, major_code = 0, 
+    minor_code = 134807304}, xnoexpose = {type = 21, serial = 663, 
+    send_event = 0, display = 0x8d70ae0, drawable = 46137503, 
+    major_code = 46137503, minor_code = 251}, xvisibility = {type = 21, 
+    serial = 663, send_event = 0, display = 0x8d70ae0, window = 46137503, 
+    state = 46137503}, xcreatewindow = {type = 21, serial = 663, 
+    send_event = 0, display = 0x8d70ae0, parent = 46137503, 
+    window = 46137503, x = 251, y = 0, width = 0, height = 0, 
+    border_width = 0, override_redirect = 134807304}, xdestroywindow = {
+    type = 21, serial = 663, send_event = 0, display = 0x8d70ae0, 
+    event = 46137503, window = 46137503}, xunmap = {type = 21, serial = 663, 
+    send_event = 0, display = 0x8d70ae0, event = 46137503, window = 46137503, 
+    from_configure = 251}, xmap = {type = 21, serial = 663, send_event = 0, 
+    display = 0x8d70ae0, event = 46137503, window = 46137503, 
+    override_redirect = 251}, xmaprequest = {type = 21, serial = 663, 
+    send_event = 0, display = 0x8d70ae0, parent = 46137503, 
+    window = 46137503}, xreparent = {type = 21, serial = 663, send_event = 0, 
+    display = 0x8d70ae0, event = 46137503, window = 46137503, parent = 251, 
+    x = 0, y = 0, override_redirect = 0}, xconfigure = {type = 21, 
+    serial = 663, send_event = 0, display = 0x8d70ae0, event = 46137503, 
+    window = 46137503, x = 251, y = 0, width = 0, height = 0, 
+    border_width = 0, above = 134807304, override_redirect = 0}, xgravity = {
+    type = 21, serial = 663, send_event = 0, display = 0x8d70ae0, 
+    event = 46137503, window = 46137503, x = 251, y = 0}, xresizerequest = {
+    type = 21, serial = 663, send_event = 0, display = 0x8d70ae0, 
+    window = 46137503, width = 46137503, height = 251}, xconfigurerequest = {
+    type = 21, serial = 663, send_event = 0, display = 0x8d70ae0, 
+    parent = 46137503, window = 46137503, x = 251, y = 0, width = 0, 
+    height = 0, border_width = 0, above = 134807304, detail = 0, 
+    value_mask = 247}, xcirculate = {type = 21, serial = 663, send_event = 0, 
+    display = 0x8d70ae0, event = 46137503, window = 46137503, place = 251}, 
+  xcirculaterequest = {type = 21, serial = 663, send_event = 0, 
+    display = 0x8d70ae0, parent = 46137503, window = 46137503, place = 251}, 
+  xproperty = {type = 21, serial = 663, send_event = 0, display = 0x8d70ae0, 
+    window = 46137503, atom = 46137503, time = 251, state = 0}, 
+  xselectionclear = {type = 21, serial = 663, send_event = 0, 
+    display = 0x8d70ae0, window = 46137503, selection = 46137503, 
+    time = 251}, xselectionrequest = {type = 21, serial = 663, 
+    send_event = 0, display = 0x8d70ae0, owner = 46137503, 
+    requestor = 46137503, selection = 251, target = 0, property = 0, 
+    time = 0}, xselection = {type = 21, serial = 663, send_event = 0, 
+    display = 0x8d70ae0, requestor = 46137503, selection = 46137503, 
+    target = 251, property = 0, time = 0}, xcolormap = {type = 21, 
+    serial = 663, send_event = 0, display = 0x8d70ae0, window = 46137503, 
+    colormap = 46137503, new = 251, state = 0}, xclient = {type = 21, 
+    serial = 663, send_event = 0, display = 0x8d70ae0, window = 46137503, 
+    message_type = 46137503, format = 251, data = {
+      b = '\0' <repeats 16 times>, "\bÿ\b\b", s = {0, 0, 0, 0, 0, 0, 0, 0, 
+        -248, 2056}, l = {0, 0, 0, 0, 134807304}}}, xmapping = {type = 21, 
+    serial = 663, send_event = 0, display = 0x8d70ae0, window = 46137503, 
+    request = 46137503, first_keycode = 251, count = 0}, xerror = {type = 21, 
+    display = 0x297, resourceid = 0, serial = 148310752, 
+    error_code = 159 '\237', request_code = 0 '\0', minor_code = 192 'À'}, 
+  xkeymap = {type = 21, serial = 663, send_event = 0, display = 0x8d70ae0, 
+    window = 46137503, 
+    key_vector = "\237\000À\002û", '\0' <repeats 19 times>, "\bÿ\b\b\000\000\000"}, pad = {21, 663, 0, 148310752, 46137503, 46137503, 251, 0, 0, 0, 0, 
+    134807304, 0, 247, 73, 0, 0, 0, 0, 0, 0, 0, 0, 0}}
+	xdisplay = (Display *) 0x8d70ae0
+#50 0x00b9c5ff in gdk_event_dispatch (source=0x8d85fd8, callback=0, 
+    user_data=0x0)
+    at /build/buildd/gtk+2.0-2.18.3/gdk/x11/gdkevents-x11.c:2363
+	display = (GdkDisplay *) 0x8d7c000
+	event = <value optimized out>
+#51 0x002fde78 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#52 0x00301720 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#53 0x00301b8f in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#54 0x00721419 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkmain.c:1218
+	tmp_list = (GList *) 0x8d95180
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0x8db0938
+	loop = (GMainLoop *) 0x8f8b498
+#55 0x0805078b in main (argc=1, argv=0xbfe3f284) at ../src/main.c:145
+	settings = (GigoloSettings *) 0x8daf808
+	gis = (GigoloSingleInstance *) 0x8d95180
+	vm_impl = <value optimized out>
+	accel_filename = <value optimized out>
+	context = <value optimized out>
+	window = (GtkWidget *) 0x8db2038

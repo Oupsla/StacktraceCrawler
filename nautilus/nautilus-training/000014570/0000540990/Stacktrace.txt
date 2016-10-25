@@ -1,0 +1,72 @@
+#0  0x00974422 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x004ca230 in raise () from /lib/tls/i686/cmov/libpthread.so.0
+No symbol table info available.
+#2  0x00bf29be in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#3  <signal handler called>
+No symbol table info available.
+#4  0x00974422 in __kernel_vsyscall ()
+No symbol table info available.
+#5  0x095b5601 in raise () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#6  0x095b8a62 in abort () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#7  0x095ae768 in __assert_fail () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#8  0x1f7d1c29 in _XAllocID () from /usr/lib/libX11.so.6
+No symbol table info available.
+#9  0x1f7a69e3 in XCreateGC () from /usr/lib/libX11.so.6
+No symbol table info available.
+#10 0x00532bcb in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#11 0x004f3cef in gdk_gc_new_with_values () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#12 0x004f3cef in gdk_gc_new_with_values () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#13 0x004f3d61 in gdk_gc_new () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#14 0x004f0b95 in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#15 0x004fd929 in gdk_pixbuf_render_pixmap_and_mask_for_colormap ()
+   from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#16 0x038193ea in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#17 0x03823fce in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#18 0x004443dc in g_cclosure_marshal_VOID__VOID ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#19 0x00434859 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#20 0x004361f2 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#21 0x0044d1ba in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#22 0x0044ef84 in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#23 0x0044f6e6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#24 0x03810297 in gtk_widget_realize () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#25 0x038103e3 in gtk_widget_realize () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#26 0x013c5dc3 in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#27 0x01295150 in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#28 0x01292a51 in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#29 0x01292e4b in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#30 0x012a248c in ?? () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#31 0x00bed577 in XRE_main () from /usr/lib/firefox-3.6/libxul.so
+No symbol table info available.
+#32 0x00a359c3 in ?? ()
+No symbol table info available.
+#33 0x095a1bd6 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#34 0x00a35711 in ?? ()
+No symbol table info available.

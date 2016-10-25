@@ -1,0 +1,289 @@
+#0  0x006c7422 in huff_vlc_tables () from /usr/lib/i686/cmov/libavcodec.so.52
+No symbol table info available.
+#1  0x004734d1 in *__GI_raise (sig=6)
+    at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+	resultvar = <value optimized out>
+	pid = 5804020
+	selftid = 2544
+#2  0x00476932 in *__GI_abort () at abort.c:92
+	act = {__sigaction_handler = {
+    sa_handler = 0x4b982d <*__GI___libc_realloc+221>, 
+    sa_sigaction = 0x4b982d <*__GI___libc_realloc+221>}, sa_mask = {__val = {
+      112, 88, 3218674592, 3218674832, 3218674620, 112, 88, 82, 173252200, 
+      5804020, 82, 81, 3218674792, 4885442, 173252208, 82, 3218674832, 
+      173252208, 0, 4222451712, 173252208, 173252208, 173252208, 173252208, 
+      173252289, 173252308, 173252208, 173252308, 0, 0, 0, 0}}, sa_flags = 0, 
+  sa_restorer = 0x20}
+	sigs = {__val = {32, 0 <repeats 31 times>}}
+#3  0x0046c648 in *__GI___assert_fail (
+    assertion=0x4efc3b65 "ret != inval_id", 
+    file=0x4efc3b29 "../../src/xcb_io.c", line=378, 
+    function=0x4efc3ce4 "_XAllocID") at assert.c:81
+	buf = 0xa539e70 "nautilus: ../../src/xcb_io.c:378: _XAllocID: Assertion `ret != inval_id' failed.\n"
+#4  0x4ef54199 in _XAllocID (dpy=0xa02b090) at ../../src/xcb_io.c:378
+	ret = 4294967295
+	__PRETTY_FUNCTION__ = "_XAllocID"
+#5  0x4ef2a048 in XCreatePixmap (dpy=0xa02b090, d=278, width=22, height=22, 
+    depth=1) at ../../src/CrPixmap.c:58
+No locals.
+#6  0x42bcff6c in _gdk_pixmap_new (drawable=0xa03e800, width=22, height=22, 
+    depth=1) at /build/buildd/gtk+2.0-2.18.2/gdk/x11/gdkpixmap-x11.c:175
+	pixmap = (GdkPixmap *) 0xa4f03b0
+	cmap = <value optimized out>
+	window_depth = 24
+	__PRETTY_FUNCTION__ = "_gdk_pixmap_new"
+#7  0x42b998c0 in IA__gdk_pixmap_new (drawable=0xa03e800, width=22, 
+    height=22, depth=1) at /build/buildd/gtk+2.0-2.18.2/gdk/gdkpixmap.c:249
+	source_drawable = (GdkDrawable *) 0x0
+#8  0x42b996bd in IA__gdk_pixbuf_render_pixmap_and_mask_for_colormap (
+    pixbuf=0xa4b3e48, colormap=0xa03dc18, pixmap_return=0xa0ac3b4, 
+    mask_return=0xa0ac3b8, alpha_threshold=128)
+    at /build/buildd/gtk+2.0-2.18.2/gdk/gdkpixbuf-render.c:332
+	screen = (GdkScreen *) 0xa03a0c8
+	__PRETTY_FUNCTION__ = "IA__gdk_pixbuf_render_pixmap_and_mask_for_colormap"
+#9  0x42e8326a in gtk_window_realize_icon (window=0xa09b038)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwindow.c:3142
+	info = (GtkWindowIconInfo *) 0xa0ac3b0
+	icon_list = <value optimized out>
+	__PRETTY_FUNCTION__ = "gtk_window_realize_icon"
+#10 0x42e8bd26 in gtk_window_realize (widget=0xa09b038)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwindow.c:4854
+	parent_window = (GdkWindow *) 0xa03e800
+	attributes = {title = 0xa4d3b20 "x-nautilus-desktop", 
+  event_mask = 64514, x = 0, y = 9511700, width = 1280, height = 800, 
+  wclass = GDK_INPUT_OUTPUT, visual = 0xa03c008, colormap = 0xa03dc18, 
+  window_type = GDK_WINDOW_TOPLEVEL, cursor = 0x0, 
+  wmclass_name = 0xa09a2e8 "desktop_window", 
+  wmclass_class = 0xa099680 "Nautilus", override_redirect = 168407043, 
+  type_hint = GDK_WINDOW_TYPE_HINT_NORMAL}
+	__PRETTY_FUNCTION__ = "gtk_window_realize"
+#11 0x080aa086 in nautilus_window_realize (widget=0xa09b038)
+    at nautilus-window.c:883
+No locals.
+#12 0x08076fb2 in realize (widget=0xa09b038) at nautilus-desktop-window.c:229
+No locals.
+#13 0x008ed9fc in g_cclosure_marshal_VOID__VOID ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#14 0x008de6f9 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#15 0x008e0072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#16 0x008f50b0 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#17 0x008f6b2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#18 0x008f6fb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#19 0x42e7a431 in IA__gtk_widget_realize (widget=0xa09b038)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwidget.c:3328
+	mode = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_widget_realize"
+#20 0x42e7a530 in IA__gtk_widget_realize (widget=0xa0985e8)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwidget.c:3324
+	mode = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_widget_realize"
+#21 0x42e7a530 in IA__gtk_widget_realize (widget=0xa0d7c60)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwidget.c:3324
+	mode = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_widget_realize"
+#22 0x42e7a530 in IA__gtk_widget_realize (widget=0xa0d7d10)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwidget.c:3324
+	mode = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_widget_realize"
+#23 0x42e7a530 in IA__gtk_widget_realize (widget=0xa0d7dc0)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwidget.c:3324
+	mode = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_widget_realize"
+#24 0x42e7a530 in IA__gtk_widget_realize (widget=0xa136280)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwidget.c:3324
+	mode = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_widget_realize"
+#25 0x42e7a530 in IA__gtk_widget_realize (widget=0xa139248)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwidget.c:3324
+	mode = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_widget_realize"
+#26 0x0816a3f4 in eel_canvas_item_realize (item=0xa03d810) at eel-canvas.c:351
+No locals.
+#27 0x0816a3a0 in eel_canvas_item_realize (item=0xa15c0c8) at eel-canvas.c:348
+No locals.
+#28 0x08165da3 in eel_canvas_item_show (item=0xa15c0c8) at eel-canvas.c:774
+	__PRETTY_FUNCTION__ = "eel_canvas_item_show"
+#29 0x081346c1 in redo_layout_internal (container=0xa139248)
+    at nautilus-icon-container.c:7133
+No locals.
+#30 0x080c895e in fm_icon_view_emblems_changed (directory_view=0xa136280)
+    at fm-icon-view.c:2405
+	__PRETTY_FUNCTION__ = "fm_icon_view_emblems_changed"
+#31 0x080b57b1 in file_changed_callback (file=0xa13a0e0, 
+    callback_data=0xa136280) at fm-directory-view.c:9058
+No locals.
+#32 0x008ed9fc in g_cclosure_marshal_VOID__VOID ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#33 0x008e0072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#34 0x008f57a8 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#35 0x008f6b2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#36 0x008f6fb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#37 0x0811d94c in nautilus_file_emit_changed (file=0xa13a0e0)
+    at nautilus-file.c:7078
+	link_files = (GList *) 0x911ff4
+	p = <value optimized out>
+	__PRETTY_FUNCTION__ = "nautilus_file_emit_changed"
+#38 0x0811d890 in nautilus_file_changed (file=0xa13a0e0)
+    at nautilus-file.c:7019
+	fake_list = {data = 0x14efc0, next = 0x8198a0b, prev = 0x811d7fa}
+	__PRETTY_FUNCTION__ = "nautilus_file_changed"
+#39 0x08198d92 in nautilus_desktop_set_metadata_string (file=0xa13a0e0, 
+    name=0x81bdeac "directory", 
+    key=0x81aa8f8 "nautilus-window-scroll-position", string=0x0)
+    at nautilus-desktop-directory-file.c:489
+	client = (GConfClient *) 0xa066ab0
+	gconf_key = <value optimized out>
+#40 0x08198df5 in nautilus_desktop_directory_file_set_metadata (
+    file=0xa13a0e0, key=0x81aa8f8 "nautilus-window-scroll-position", 
+    value=0x0) at nautilus-desktop-directory-file.c:597
+No locals.
+#41 0x0811c30f in nautilus_file_set_metadata (file=0xa13a0e0, 
+    key=0x81aa8f8 "nautilus-window-scroll-position", default_metadata=0x0, 
+    metadata=0x0) at nautilus-file.c:3484
+	val = 0x0
+	__PRETTY_FUNCTION__ = "nautilus_file_set_metadata"
+#42 0x0809e36e in save_spatial_data (slot=0xa132670)
+    at nautilus-spatial-window.c:300
+No locals.
+#43 0x0809e46f in real_close_slot (window=0xa09b038, slot=0xa132670)
+    at nautilus-spatial-window.c:482
+No locals.
+#44 0x080a914e in nautilus_window_close_slot (window=0xa09b038, 
+    slot=0xa132670) at nautilus-window.c:733
+	__PRETTY_FUNCTION__ = "nautilus_window_close_slot"
+#45 0x080ab4ff in nautilus_window_destroy (object=0xa09b038)
+    at nautilus-window.c:608
+	window = (NautilusWindow *) 0xa09b038
+	l = (GList *) 0xa4bb620
+	slots = (GList *) 0xa4bb620
+#46 0x008ed9fc in g_cclosure_marshal_VOID__VOID ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#47 0x008de6f9 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#48 0x008e0072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#49 0x008f5b09 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#50 0x008f6b2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#51 0x008f6fb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#52 0x42d79e51 in gtk_object_dispose (gobject=0xa09b038)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkobject.c:421
+No locals.
+#53 0x42e7b2c0 in gtk_widget_dispose (object=0xa09b038)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwidget.c:8370
+No locals.
+#54 0x42e88f46 in gtk_window_dispose (object=0xa09b038)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwindow.c:2151
+No locals.
+#55 0x008e266f in g_object_run_dispose () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#56 0x42d79b5e in IA__gtk_object_destroy (object=0xa09b038)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkobject.c:406
+	__PRETTY_FUNCTION__ = "IA__gtk_object_destroy"
+#57 0x0808189a in nautilus_main_event_loop_quit (explicit=1)
+    at nautilus-main.c:154
+No locals.
+#58 0x008ed9fc in g_cclosure_marshal_VOID__VOID ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#59 0x008e0072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#60 0x008f57a8 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#61 0x008f6b2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#62 0x008f6fb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#63 0x0815c902 in egg_sm_client_quit (client=0xa066a40) at eggsmclient.c:574
+	__PRETTY_FUNCTION__ = "egg_sm_client_quit"
+#64 0x0815ec57 in xsmp_die (smc_conn=0xa06a798, client_data=0xa066a40)
+    at eggsmclient-xsmp.c:961
+No locals.
+#65 0x4fb81428 in _SmcProcessMessage (iceConn=0xa069d58, 
+    clientData=0xa06a798, opcode=9, length=0, swap=0, replyWait=0x0, 
+    replyReadyRet=0xbfd92af8) at ../../src/sm_process.c:335
+No locals.
+#66 0x4fb70e83 in IceProcessMessages (iceConn=0xa069d58, replyWait=0x0, 
+    replyReadyRet=0x0) at ../../src/process.c:343
+	header = <value optimized out>
+	replyReady = 0
+	useThisReplyWait = (IceReplyWaitInfo *) 0x0
+	retStatus = <value optimized out>
+#67 0x0815e9e9 in process_ice_messages (ice_conn=0xa069d58)
+    at eggsmclient-xsmp.c:1286
+	status = <value optimized out>
+	__PRETTY_FUNCTION__ = "process_ice_messages"
+#68 0x00fb5d5b in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#69 0x00f7ee78 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#70 0x00f82720 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#71 0x00f82b8f in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#72 0x42d4e3a9 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkmain.c:1216
+	tmp_list = (GList *) 0x0
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0x1
+	loop = (GMainLoop *) 0xa169220
+#73 0x0808177f in main (argc=1, argv=0xbfd92fe4) at nautilus-main.c:588
+	kill_shell = 0
+	no_default_window = 1
+	browser_window = 0
+	no_desktop = 0
+	version = 0
+	autostart_mode = 1
+	autostart_id = <value optimized out>
+	geometry = (gchar *) 0x0
+	remaining = (gchar **) 0x0
+	perform_self_check = 0
+	application = (NautilusApplication *) 0xa069400
+	context = <value optimized out>
+	file = (GFile *) 0x1
+	uri = <value optimized out>
+	uris = (char **) 0x0
+	uris_array = <value optimized out>
+	error = (GError *) 0x0
+	options = {{long_name = 0x81a6b96 "check", short_name = 99 'c', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfd92f00, 
+    description = 0x81a6bd8 "Perform a quick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x81a6a8f "version", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfd92f0c, 
+    description = 0x81a6c04 "Show the version of the program.", 
+    arg_description = 0x0}, {long_name = 0x81aa778 "geometry", 
+    short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+    arg_data = 0xbfd92f08, 
+    description = 0x81a6c28 "Create the initial window with the given geometry.", arg_description = 0x81a6a97 "GEOMETRY"}, {
+    long_name = 0x81a6aa0 "no-default-window", short_name = 110 'n', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfd92f18, 
+    description = 0x81a6c5c "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {long_name = 0x81a6ab2 "no-desktop", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfd92f10, 
+    description = 0x81a6c90 "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {
+    long_name = 0x81a378b "browser", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbfd92f14, 
+    description = 0x81a6abd "open a browser window.", arg_description = 0x0}, 
+  {long_name = 0x81c637d "quit", short_name = 113 'q', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbfd92f1c, 
+    description = 0x81a6ad4 "Quit Nautilus.", arg_description = 0x0}, {
+    long_name = 0x81abac1 "", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0xbfd92f04, 
+    description = 0x0, arg_description = 0x81a6ae3 "[URI...]"}, {
+    long_name = 0x0, short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x0, description = 0x0, arg_description = 0x0}}

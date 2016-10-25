@@ -1,0 +1,89 @@
+#0  0x00007fc9fe5bab4e in IA__g_file_query_info (file=0x3, 
+    attributes=0x56997f "standard::display-name", 
+    flags=G_FILE_QUERY_INFO_NONE, cancellable=0x150cc90, error=0x0)
+    at /build/buildd/glib2.0-2.23.6/gio/gfile.c:1090
+        __t = 17802672
+        __r = <value optimised out>
+        __PRETTY_FUNCTION__ = "IA__g_file_query_info"
+#1  0x00000000004c2479 in custom_basename_to_string (
+    format=<value optimised out>, va=<value optimised out>)
+    at nautilus-file-operations.c:798
+        file = 0x3
+        info = <value optimised out>
+        name = <value optimised out>
+        basename = <value optimised out>
+#2  0x000000000053e351 in eel_strdup_vprintf_with_custom (
+    custom=<value optimised out>, format=<value optimised out>, 
+    va_orig=0x7fc9dfe88a80) at eel-string.c:781
+        va = {{gp_offset = 16, fp_offset = 48, 
+            overflow_arg_area = 0x7fc9dfe88b60, 
+            reg_save_area = 0x7fc9dfe88aa0}}
+        p = 0x7fca00c5839e <Address 0x7fca00c5839e out of bounds>
+        num_args = <value optimised out>
+        i = 0
+        j = 3
+        type = <value optimised out>
+        f = <value optimised out>
+        str = 0x1bdd600
+        s = <value optimised out>
+        __PRETTY_FUNCTION__ = "eel_strdup_vprintf_with_custom"
+#3  0x00000000004c2197 in f (format=0x56997f "standard::display-name")
+    at nautilus-file-operations.c:907
+        va = {{gp_offset = 8, fp_offset = 48, 
+            overflow_arg_area = 0x7fc9dfe88b60, 
+            reg_save_area = 0x7fc9dfe88aa0}}
+        res = 0x10fa5b0 "\001"
+#4  0x00000000004c3cc1 in report_copy_progress (copy_job=0x15ade70, 
+    source_info=0x7fc9dfe88c80, transfer_info=0x7fc9dfe88c50)
+    at nautilus-file-operations.c:2888
+        files_left = 3
+        total_size = <value optimised out>
+        elapsed = <value optimised out>
+        transfer_rate = <value optimised out>
+        remaining_time = <value optimised out>
+        now = <value optimised out>
+        is_move = 0
+#5  0x00000000004ca05d in copy_files (io_job=<value optimised out>, 
+    cancellable=<value optimised out>, user_data=<value optimised out>)
+    at nautilus-file-operations.c:4285
+        dest_fs_type = 0x0
+        inf = <value optimised out>
+        src = <value optimised out>
+        unique_names = 32713
+        readonly_source_fs = 32713
+        l = <value optimised out>
+        same_fs = <value optimised out>
+        i = <value optimised out>
+        point = 0x7fc9d4000020
+        skipped_file = <value optimised out>
+        dest = <value optimised out>
+        source_dir = <value optimised out>
+#6  copy_job (io_job=<value optimised out>, 
+    cancellable=<value optimised out>, user_data=<value optimised out>)
+    at nautilus-file-operations.c:4415
+        job = 0x15ade70
+        source_info = {num_files = 3, num_bytes = 15416918, 
+          num_files_since_progress = 3, op = OP_KIND_COPY}
+        transfer_info = {num_files = 0, num_bytes = 0, op = OP_KIND_COPY, 
+          last_report_time = 12345889254571, last_reported_files_left = 3}
+        dest_fs_id = 0x7fc9d4002480 "l2051"
+        dest = 0x11f6600
+#7  0x00007fc9fe5d1aa6 in io_job_thread (data=<value optimised out>, 
+    user_data=<value optimised out>)
+    at /build/buildd/glib2.0-2.23.6/gio/gioscheduler.c:182
+        job = 0x1c26ee0
+        result = 17802672
+#8  0x00007fc9fd5b5d4f in g_thread_pool_thread_proxy (
+    data=<value optimised out>)
+    at /build/buildd/glib2.0-2.23.6/glib/gthreadpool.c:315
+        task = 0x1c26ee0
+        pool = 0x110c7b0
+#9  0x00007fc9fd5b3e74 in g_thread_create_proxy (data=0x1582230)
+    at /build/buildd/glib2.0-2.23.6/glib/gthread.c:1893
+        __PRETTY_FUNCTION__ = "g_thread_create_proxy"
+#10 0x00007fc9ff75b9ca in start_thread () from /lib/libpthread.so.0
+No symbol table info available.
+#11 0x00007fc9fc2586dd in clone () from /lib/libc.so.6
+No symbol table info available.
+#12 0x0000000000000000 in ?? ()
+No symbol table info available.

@@ -1,0 +1,67 @@
+#0  0x00007f86ae1f04b5 in *__GI_raise (sig=<value optimized out>)
+    at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+        pid = <value optimized out>
+        selftid = <value optimized out>
+#1  0x00007f86ae1f3f50 in *__GI_abort () at abort.c:92
+        act = {__sigaction_handler = {sa_handler = 0x1, sa_sigaction = 0x1}, 
+          sa_mask = {__val = {140216423905262, 1024, 2048, 36045120, 
+              140216444465537, 1, 36045120, 140216423430832, 140216501102984, 
+              35250176, 4294967295, 1, 140216444096512, 5662000, 34506864, 
+              140735892445680}}, sa_flags = 26258576, sa_restorer = 0x2c5068}
+        sigs = {__val = {32, 0 <repeats 15 times>}}
+#2  0x00007f86af5da540 in g_assertion_message () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#3  0x00007f86af5daab0 in g_assertion_message_expr ()
+   from /lib/libglib-2.0.so.0
+No symbol table info available.
+#4  0x00000000004d4f29 in ?? ()
+No symbol table info available.
+#5  0x0000000000463c51 in ?? ()
+No symbol table info available.
+#6  0x0000000000463eff in ?? ()
+No symbol table info available.
+#7  0x00007f86a6eb91a9 in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+No symbol table info available.
+#8  0x00007f86a70ddb31 in ?? () from /usr/lib/libgvfscommon.so.0
+No symbol table info available.
+#9  0x00007f86aca3aeba in ?? () from /lib/libdbus-1.so.3
+No symbol table info available.
+#10 0x00007f86aca3d0ff in dbus_connection_dispatch () from /lib/libdbus-1.so.3
+No symbol table info available.
+#11 0x00007f86a70dc405 in ?? () from /usr/lib/libgvfscommon.so.0
+No symbol table info available.
+#12 0x00007f86af5b4bbe in g_main_context_dispatch ()
+   from /lib/libglib-2.0.so.0
+No symbol table info available.
+#13 0x00007f86af5b8588 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#14 0x00007f86af5b89e5 in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#15 0x00007f86b0e61177 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#16 0x0000000000443947 in ?? ()
+No symbol table info available.
+#17 0x00007f86ae1dbabd in __libc_start_main (main=<value optimized out>, 
+    argc=<value optimized out>, ubp_av=<value optimized out>, 
+    init=<value optimized out>, fini=<value optimized out>, 
+    rtld_fini=<value optimized out>, stack_end=0x7fffa0e061b8)
+    at libc-start.c:220
+        result = <value optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, -6741559353957678392, 
+                4391888, 140735892447680, 0, 0, 6741443050637361864, 
+                6736390289865573064}, mask_was_saved = 0}}, priv = {pad = {
+              0x0, 0x0, 0x5478b0, 0x7fffa0e061c8}, data = {prev = 0x0, 
+              cleanup = 0x0, canceltype = 5535920}}}
+        not_first_call = <value optimized out>
+#18 0x00000000004303f9 in ?? ()
+No symbol table info available.
+#19 0x00007fffa0e061b8 in ?? ()
+No symbol table info available.
+#20 0x000000000000001c in ?? ()
+No symbol table info available.
+#21 0x0000000000000005 in ?? ()
+No symbol table info available.
+#22 0x00007fffa0e06a89 in ?? ()
+No symbol table info available.
+#23 0x0000000000000000 in ?? ()
+No symbol table info available.

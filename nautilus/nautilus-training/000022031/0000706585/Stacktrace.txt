@@ -1,0 +1,70 @@
+#0  0x00007f13f1f7dba5 in raise () from /lib/libc.so.6
+No symbol table info available.
+#1  0x00007f13f1f814f6 in abort () from /lib/libc.so.6
+No symbol table info available.
+#2  0x00007f13f1fb66bb in ?? () from /lib/libc.so.6
+No symbol table info available.
+#3  0x00007f13f1fc04e6 in ?? () from /lib/libc.so.6
+No symbol table info available.
+#4  0x00007f13f0cd89a0 in ?? () from /usr/lib/libpangocairo-1.0.so.0
+No symbol table info available.
+#5  0x00007f13f2dbb385 in g_datalist_clear () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#6  0x00007f13f3498514 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#7  0x00007f13f3497e24 in g_object_unref () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#8  0x00007f13f4199906 in ?? () from /usr/lib/librsvg-2.so.2
+No symbol table info available.
+#9  0x00007f13f41999e0 in ?? () from /usr/lib/librsvg-2.so.2
+No symbol table info available.
+#10 0x00007f13f4199c81 in ?? () from /usr/lib/librsvg-2.so.2
+No symbol table info available.
+#11 0x00007f13f4194623 in ?? () from /usr/lib/librsvg-2.so.2
+No symbol table info available.
+#12 0x00007f13f4194ae3 in ?? () from /usr/lib/librsvg-2.so.2
+No symbol table info available.
+#13 0x00007f13f41a0a67 in ?? () from /usr/lib/librsvg-2.so.2
+No symbol table info available.
+#14 0x00007f13f419efd6 in ?? () from /usr/lib/librsvg-2.so.2
+No symbol table info available.
+#15 0x00007f13f419f7eb in ?? () from /usr/lib/librsvg-2.so.2
+No symbol table info available.
+#16 0x00007f13f419c860 in ?? () from /usr/lib/librsvg-2.so.2
+No symbol table info available.
+#17 0x00007f13f4192479 in ?? () from /usr/lib/librsvg-2.so.2
+No symbol table info available.
+#18 0x00007f13f4194623 in ?? () from /usr/lib/librsvg-2.so.2
+No symbol table info available.
+#19 0x00007f13f41949bc in ?? () from /usr/lib/librsvg-2.so.2
+No symbol table info available.
+#20 0x00007f13f4194623 in ?? () from /usr/lib/librsvg-2.so.2
+No symbol table info available.
+#21 0x00007f13f419cceb in rsvg_handle_get_dimensions_sub () from /usr/lib/librsvg-2.so.2
+No symbol table info available.
+#22 0x00007f13f419cfa1 in rsvg_handle_get_dimensions () from /usr/lib/librsvg-2.so.2
+No symbol table info available.
+#23 0x00007f13f41a01a3 in ?? () from /usr/lib/librsvg-2.so.2
+No symbol table info available.
+#24 0x00007f13f41a06a2 in rsvg_handle_render_cairo_sub () from /usr/lib/librsvg-2.so.2
+No symbol table info available.
+#25 0x00007f13f41a0bdc in rsvg_handle_get_pixbuf_sub () from /usr/lib/librsvg-2.so.2
+No symbol table info available.
+#26 0x00007f13e1733ceb in ?? () from /usr/lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-svg.so
+No symbol table info available.
+#27 0x00007f13f3c2c1d1 in gdk_pixbuf_loader_close () from /usr/lib/libgdk_pixbuf-2.0.so.0
+No symbol table info available.
+#28 0x000000000043882e in eog_image_load ()
+No symbol table info available.
+#29 0x0000000000443d14 in ?? ()
+No symbol table info available.
+#30 0x0000000000442d0a in ?? ()
+No symbol table info available.
+#31 0x00007f13f2dfe684 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#32 0x00007f13f43b2d8c in start_thread () from /lib/libpthread.so.0
+No symbol table info available.
+#33 0x00007f13f202a61d in clone () from /lib/libc.so.6
+No symbol table info available.
+#34 0x0000000000000000 in ?? ()
+No symbol table info available.

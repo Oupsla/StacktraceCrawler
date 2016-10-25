@@ -1,0 +1,20 @@
+#0  0x00007f6c8f35cd8a in realloc () from /lib/libc.so.6
+#1  0x00007f6c781ac829 in av_fast_realloc () from /usr/lib/libavcodec.so.52
+#2  0x00007f6c78335eaf in ff_vdpau_add_data_chunk ()
+   from /usr/lib/libavcodec.so.52
+#3  0x00007f6c78329b5c in ?? () from /usr/lib/libavcodec.so.52
+#4  0x00007f6c7832ad98 in ?? () from /usr/lib/libavcodec.so.52
+#5  0x00007f6c781aaf2b in avcodec_decode_video ()
+   from /usr/lib/libavcodec.so.52
+#6  0x00007f6c78cb7bcb in ?? () from /usr/lib/gstreamer-0.10/libgstffmpeg.so
+#7  0x00007f6c78cb9c80 in ?? () from /usr/lib/gstreamer-0.10/libgstffmpeg.so
+#8  0x00007f6c95542f76 in ?? () from /usr/lib/libgstreamer-0.10.so.0
+#9  0x00007f6c95544253 in gst_pad_push () from /usr/lib/libgstreamer-0.10.so.0
+#10 0x00007f6c866ea832 in ?? ()
+   from /usr/lib/gstreamer-0.10/libgstcoreelements.so
+#11 0x00007f6c95563d86 in ?? () from /usr/lib/libgstreamer-0.10.so.0
+#12 0x00007f6c8f6b72f7 in ?? () from /usr/lib/libglib-2.0.so.0
+#13 0x00007f6c8f6b5d64 in ?? () from /usr/lib/libglib-2.0.so.0
+#14 0x00007f6c925883ba in start_thread () from /lib/libpthread.so.0
+#15 0x00007f6c8f3c60ad in clone () from /lib/libc.so.6
+#16 0x0000000000000000 in ?? ()

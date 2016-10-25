@@ -1,0 +1,107 @@
+#0  0x00007ff5e2e17037 in __GI_raise (sig=sig@entry=6) at ../nptl/sysdeps/unix/sysv/linux/raise.c:56
+        resultvar = 0
+        pid = 2485
+        selftid = 2485
+#1  0x00007ff5e2e1a698 in __GI_abort () at abort.c:90
+        save_stage = 2
+        act = {__sigaction_handler = {sa_handler = 0x503443, sa_sigaction = 0x503443}, sa_mask = {__val = {34423200, 131, 140694119689365, 5, 0, 4294967296, 140694049942760, 105033856, 131, 140737392312608, 140694119716645, 145, 51, 140694053853080, 0, 0}}, sa_flags = 0, sa_restorer = 0x20}
+        sigs = {__val = {32, 0 <repeats 15 times>}}
+#2  0x00007ff5e3933d7d in _g_log_abort () at /build/buildd/glib2.0-2.37.2/./glib/gmessages.c:255
+No locals.
+#3  0x00007ff5e3951016 in g_assertion_message (domain=domain@entry=0x0, file=file@entry=0x503443 "nautilus-bookmark.c", line=line@entry=350, func=func@entry=0x503a50 "nautilus_bookmark_connect_file", message=<optimized out>) at /build/buildd/glib2.0-2.37.2/./glib/gtestutils.c:2075
+        lstr = "350\000\377\177\000\000\060\201F\372\377\177\000\000\001\000\000\000\000\000\000\000X7P\000\000\000\000"
+        s = 0x642b080 "`\306\022\a"
+#4  0x00007ff5e3951074 in g_assertion_message_expr (domain=0x0, file=0x503443 "nautilus-bookmark.c", line=350, func=0x503a50 "nautilus_bookmark_connect_file", expr=<optimized out>) at /build/buildd/glib2.0-2.37.2/./glib/gtestutils.c:2086
+        s = <optimized out>
+#5  0x00000000004850e9 in ?? ()
+No symbol table info available.
+#6  0x0000000000485134 in ?? ()
+No symbol table info available.
+#7  0x00007ff5e3bfa37a in g_object_new_internal (class=class@entry=0x2141bc0, params=params@entry=0x7ffffa4683f0, n_params=3) at /build/buildd/glib2.0-2.37.2/./gobject/gobject.c:1782
+        nqueue = 0x5977e60
+        object = 0x7ff58c014300
+        __PRETTY_FUNCTION__ = "g_object_new_internal"
+#8  0x00007ff5e3bfc4f4 in g_object_new_valist (object_type=object_type@entry=34870800, first_property_name=first_property_name@entry=0x4ffac4 "location", var_args=var_args@entry=0x7ffffa468548) at /build/buildd/glib2.0-2.37.2/./gobject/gobject.c:1999
+        stack_params = {{pspec = 0x20d41a0, value = 0x7ffffa468340}, {pspec = 0x2128890, value = 0x7ffffa468310}, {pspec = 0x20d4130, value = 0x7ffffa4682e0}, {pspec = 0x0, value = 0x0}, {pspec = 0x400000001, value = 0x0}, {pspec = 0x1f30000, value = 0x0}, {pspec = 0x719a970, value = 0xc58fb51b74f39c00}, {pspec = 0x7ff5d8f63e30, value = 0x0}, {pspec = 0x4f4701, value = 0x0}, {pspec = 0x7fffffffffff, value = 0x1ddc8d0}, {pspec = 0x7ffffa4685f0, value = 0x7ff5e31a0720 <_IO_str_jumps>}, {pspec = 0x7ff5e2e63520 <__GI___libc_malloc>, value = 0x7ff5e2e639b0 <__GI___libc_free>}, {pspec = 0x7ffffa468508, value = 0x64e8850}, {pspec = 0x53cd3a0, value = 0x1}, {pspec = 0x1, value = 0x7ff5e396c577 <g_vasprintf+39>}, {pspec = 0x71d9fb0, value = 0x64e8850}}
+        params = 0x7ffffa4683f0
+        name = <optimized out>
+        n_params = 3
+        class = <optimized out>
+        unref_class = <optimized out>
+        object = <optimized out>
+        __PRETTY_FUNCTION__ = "g_object_new_valist"
+#9  0x00007ff5e3bfc8d4 in g_object_new (object_type=34870800, first_property_name=0x4ffac4 "location") at /build/buildd/glib2.0-2.37.2/./gobject/gobject.c:1556
+        var_args = {{gp_offset = 48, fp_offset = 48, overflow_arg_area = 0x7ffffa468640, reg_save_area = 0x7ffffa468560}}
+        __PRETTY_FUNCTION__ = "g_object_new"
+#10 0x00000000004854a4 in ?? ()
+No symbol table info available.
+#11 0x0000000000478a9b in ?? ()
+No symbol table info available.
+#12 0x00007ff5e3bf51c8 in g_closure_invoke (closure=0x557de30, return_value=0x0, n_param_values=1, param_values=0x7ffffa468860, invocation_hint=0x7ffffa468800) at /build/buildd/glib2.0-2.37.2/./gobject/gclosure.c:777
+        marshal = 0x4291f0 <g_cclosure_marshal_VOID__VOID@plt>
+        marshal_data = 0x0
+        in_marshal = 0
+        real_closure = 0x557de10
+        __PRETTY_FUNCTION__ = "g_closure_invoke"
+#13 0x00007ff5e3c0761d in signal_emit_unlocked_R (node=node@entry=0x1f22bd0, detail=detail@entry=0, instance=instance@entry=0x24602d0, emission_return=emission_return@entry=0x0, instance_and_params=instance_and_params@entry=0x7ffffa468860) at /build/buildd/glib2.0-2.37.2/./gobject/gsignal.c:3582
+        tmp = <optimized out>
+        handler = 0x388a780
+        accumulator = 0x0
+        emission = {next = 0x0, instance = 0x24602d0, ihint = {signal_id = 503, detail = 0, run_type = G_SIGNAL_RUN_FIRST}, state = EMISSION_RUN, chain_type = 4}
+        handler_list = 0x388a780
+        return_accu = 0x0
+        accu = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        signal_id = 503
+        max_sequential_handler_number = 121783
+        return_value_altered = 0
+#14 0x00007ff5e3c0f80a in g_signal_emit_valist (instance=<optimized out>, signal_id=<optimized out>, detail=<optimized out>, var_args=var_args@entry=0x7ffffa4689e8) at /build/buildd/glib2.0-2.37.2/./gobject/gsignal.c:3326
+        instance_and_params = 0x7ffffa468860
+        signal_return_type = <optimized out>
+        param_values = 0x7ffffa468878
+        i = <optimized out>
+        n_params = <optimized out>
+        __PRETTY_FUNCTION__ = "g_signal_emit_valist"
+#15 0x00007ff5e3c0fae2 in g_signal_emit (instance=<optimized out>, signal_id=<optimized out>, detail=<optimized out>) at /build/buildd/glib2.0-2.37.2/./gobject/gsignal.c:3382
+        var_args = {{gp_offset = 24, fp_offset = 48, overflow_arg_area = 0x7ffffa468ac0, reg_save_area = 0x7ffffa468a00}}
+#16 0x00000000004684db in ?? ()
+No symbol table info available.
+#17 0x00000000004687e5 in ?? ()
+No symbol table info available.
+#18 0x00000000004a79cb in ?? ()
+No symbol table info available.
+#19 0x00007ff5e392d0a6 in g_main_dispatch (context=0x1d8d4c0) at /build/buildd/glib2.0-2.37.2/./glib/gmain.c:3058
+        dispatch = 0x7ff5e392a0f0 <g_idle_dispatch>
+        was_in_call = 0
+        user_data = 0x7ff5d4012d80
+        callback = 0x4a7920
+        cb_funcs = 0x7ff5e3be3940 <g_source_callback_funcs>
+        cb_data = 0x706ace0
+        need_destroy = <optimized out>
+        current_source_link = {data = 0x647ae50, next = 0x0}
+        source = 0x647ae50
+        current = 0x1da0f70
+        i = 0
+#20 g_main_context_dispatch (context=context@entry=0x1d8d4c0) at /build/buildd/glib2.0-2.37.2/./glib/gmain.c:3634
+No locals.
+#21 0x00007ff5e392d3f8 in g_main_context_iterate (context=context@entry=0x1d8d4c0, block=block@entry=1, dispatch=dispatch@entry=1, self=<optimized out>) at /build/buildd/glib2.0-2.37.2/./glib/gmain.c:3705
+        max_priority = 200
+        timeout = 0
+        some_ready = 1
+        nfds = <optimized out>
+        allocated_nfds = 9
+        fds = 0x2139ec0
+#22 0x00007ff5e392d49c in g_main_context_iteration (context=0x1d8d4c0, context@entry=0x0, may_block=may_block@entry=1) at /build/buildd/glib2.0-2.37.2/./glib/gmain.c:3766
+        retval = <optimized out>
+#23 0x00007ff5e3ed548c in g_application_run (application=0x1d63120, argc=2, argv=0x7ffffa468d98) at /build/buildd/glib2.0-2.37.2/./gio/gapplication.c:1638
+        arguments = 0x1d4f3c0
+        status = 0
+        i = <optimized out>
+        __PRETTY_FUNCTION__ = "g_application_run"
+#24 0x000000000042b0b1 in ?? ()
+No symbol table info available.
+#25 0x00007ff5e2e01ea5 in __libc_start_main (main=0x42aff0, argc=2, ubp_av=0x7ffffa468d98, init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, stack_end=0x7ffffa468d88) at libc-start.c:260
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, 1055456406884284401, 4370668, 140737392315792, 0, 0, -1055451381336410127, -1058774985360443407}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x4ef600, 0x7ffffa468d98}, data = {prev = 0x0, cleanup = 0x0, canceltype = 5174784}}}
+        not_first_call = <optimized out>
+#26 0x000000000042b115 in ?? ()
+No symbol table info available.

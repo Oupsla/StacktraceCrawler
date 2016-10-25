@@ -1,0 +1,35 @@
+#0  0x002abe09 in pa_shm_create_rw () from /usr/lib/libpulsecommon-0.9.21.so
+No symbol table info available.
+#1  0x0029d80f in pa_mempool_new () from /usr/lib/libpulsecommon-0.9.21.so
+No symbol table info available.
+#2  0x00967a55 in pa_context_new_with_proplist () from /usr/lib/libpulse.so.0
+No symbol table info available.
+#3  0x00967b3c in pa_context_new () from /usr/lib/libpulse.so.0
+No symbol table info available.
+#4  0x0026a85d in conf_pulse_hook_load_if_running ()
+   from /usr/lib/alsa-lib/libasound_module_conf_pulse.so
+No symbol table info available.
+#5  0x0033c4bf in ?? () from /usr/lib/libasound.so.2
+No symbol table info available.
+#6  0x0033cad5 in snd_config_searcha_hooks () from /usr/lib/libasound.so.2
+No symbol table info available.
+#7  0x0033cc24 in snd_config_searchva_hooks () from /usr/lib/libasound.so.2
+No symbol table info available.
+#8  0x0033cdc0 in ?? () from /usr/lib/libasound.so.2
+No symbol table info available.
+#9  0x0033cfbb in snd_config_search_definition () from /usr/lib/libasound.so.2
+No symbol table info available.
+#10 0x0034b2ad in ?? () from /usr/lib/libasound.so.2
+No symbol table info available.
+#11 0x00ce6099 in ?? () from /usr/lib/jack/jack_alsa.so
+No symbol table info available.
+#12 0x00ce839c in driver_initialize () from /usr/lib/jack/jack_alsa.so
+No symbol table info available.
+#13 0x00c85f60 in jack_engine_load_driver () from /usr/lib/libjackserver.so.0
+No symbol table info available.
+#14 0x0804a826 in ?? ()
+No symbol table info available.
+#15 0x00126bd6 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#16 0x08049471 in ?? ()
+No symbol table info available.

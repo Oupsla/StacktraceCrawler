@@ -1,0 +1,52 @@
+#0  0x00007f2776d51f90 in g_str_hash () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#1  0x00007f2776d517a3 in g_hash_table_lookup () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#2  0x00007f275fde7d03 in gdu_pool_get_by_object_path () from /usr/lib/x86_64-linux-gnu/libgdu.so.0
+No symbol table info available.
+#3  0x00007f275fdead27 in ?? () from /usr/lib/x86_64-linux-gnu/libgdu.so.0
+No symbol table info available.
+#4  0x00007f276180c0a7 in ?? () from /usr/lib/x86_64-linux-gnu/libdbus-glib-1.so.2
+No symbol table info available.
+#5  0x00007f277701c154 in g_closure_invoke () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#6  0x00007f277702bf55 in ?? () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#7  0x00007f277703392b in g_signal_emit_valist () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#8  0x00007f2777033af2 in g_signal_emit () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#9  0x00007f276180c6e6 in ?? () from /usr/lib/x86_64-linux-gnu/libdbus-glib-1.so.2
+No symbol table info available.
+#10 0x00007f276f61f986 in dbus_connection_dispatch () from /lib/x86_64-linux-gnu/libdbus-1.so.3
+No symbol table info available.
+#11 0x00007f2761805425 in ?? () from /usr/lib/x86_64-linux-gnu/libdbus-glib-1.so.2
+No symbol table info available.
+#12 0x00007f2776d6158a in g_main_context_dispatch () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#13 0x00007f2776d61950 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#14 0x00007f2776d61a14 in g_main_context_iteration () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#15 0x00007f27775107d4 in g_application_run () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#16 0x000000000042b200 in ?? ()
+No symbol table info available.
+#17 0x00007f27762e030d in __libc_start_main (main=0x42b160, argc=2, ubp_av=0x7fff9e4e58a8, init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, stack_end=0x7fff9e4e5898) at libc-start.c:226
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, 7571562292791903559, 4370968, 140735849322656, 0, 0, -7571488484587043513, -7539734316485802681}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x4ffc70, 0x7fff9e4e58a8}, data = {prev = 0x0, cleanup = 0x0, canceltype = 5241968}}}
+        not_first_call = <optimized out>
+#18 0x000000000042b241 in ?? ()
+No symbol table info available.
+#19 0x00007fff9e4e5898 in ?? ()
+No symbol table info available.
+#20 0x000000000000001c in ?? ()
+No symbol table info available.
+#21 0x0000000000000002 in ?? ()
+No symbol table info available.
+#22 0x00007fff9e4e6a94 in ?? ()
+No symbol table info available.
+#23 0x00007fff9e4e6a9d in ?? ()
+No symbol table info available.
+#24 0x0000000000000000 in ?? ()
+No symbol table info available.

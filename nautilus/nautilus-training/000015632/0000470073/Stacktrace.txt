@@ -1,0 +1,139 @@
+#0  pa_shm_create_rw (m=0x96ccbc8, size=<value optimized out>, shared=true, 
+    mode=448) at ./pulsecore/atomic.h:61
+	marker = (struct shm_marker *) 0xb6609000
+	fn = "/pulse-shm-2301008907\000Õ\213#\032\215\232£\n\224"
+	fd = 10
+	__func__ = "pa_shm_create_rw"
+	__PRETTY_FUNCTION__ = "pa_shm_create_rw"
+#1  0x003ce24f in pa_mempool_new (shared=123, size=0)
+    at pulsecore/memblock.c:731
+	p = (pa_mempool *) 0x96ccbc0
+	t1 = "²>\000K6ðyj\002Ë@"
+	t2 = "\000\000È#¤¿\237\200;\000Æ"
+	__func__ = "pa_mempool_new"
+#2  0x001308a4 in pa_context_new_with_proplist (mainloop=0x96c1d08, 
+    name=0x69f993 "Alsa hook", p=0x0) at pulse/context.c:199
+	c = (pa_context *) 0x96c1d68
+	__func__ = "pa_context_new_with_proplist"
+	__PRETTY_FUNCTION__ = "pa_context_new_with_proplist"
+#3  0x0013098c in pa_context_new (mainloop=0x96c1d08, 
+    name=0x69f993 "Alsa hook") at pulse/context.c:116
+No locals.
+#4  0x0069f87d in conf_pulse_hook_load_if_running (root=0x9696348, 
+    config=0x96bd4f8, dst=0xbfa424f0, private_data=0x0) at conf_pulse.c:55
+	loop = <value optimized out>
+	context = (pa_context *) 0x9697690
+	ret = <value optimized out>
+	err = <value optimized out>
+#5  0x003093d7 in snd_config_hooks (config=<value optimized out>)
+    at conf.c:2712
+	n = (snd_config_t *) 0x96bd4f8
+	id = <value optimized out>
+	i = 0
+	n = (snd_config_t *) 0x96bd4c0
+	i = <value optimized out>
+	err = <value optimized out>
+	hit = <value optimized out>
+	idx = 0
+#6  0x003099c5 in snd_config_searcha_hooks (root=0x9696348, config=0x9696348, 
+    key=0x39638a "ctl", result=0xbfa425ac) at conf.c:2560
+	n = (snd_config_t *) 0x3abff4
+	err = <value optimized out>
+	p = 0x2f340a "snd_dlopen"
+	__PRETTY_FUNCTION__ = "snd_config_searcha_hooks"
+#7  0x00309b14 in snd_config_searchva_hooks (root=0x9696348, config=0xe7b, 
+    result=0xbfa4261c) at conf.c:2581
+	k = 0xe7b <Address 0xe7b out of bounds>
+	err = <value optimized out>
+	n = (snd_config_t *) 0x214ca8
+	arg = 0xbfa425e0 "`&¤¿"
+	__PRETTY_FUNCTION__ = "snd_config_searchva_hooks"
+#8  0x00309caa in snd1_config_search_alias_hooks (config=0x9696348, 
+    base=0x39638a "ctl", key=0xbfa42660 "hw", result=0xbfa42698)
+    at conf.c:2601
+	old_key = 0x9697678 "hw"
+	err = -1079761176
+	res = (snd_config_t *) 0x0
+	first = 0
+	maxloop = 1000
+	__PRETTY_FUNCTION__ = "snd1_config_search_alias_hooks"
+	__FUNCTION__ = "snd1_config_search_alias_hooks"
+#9  0x00309e7b in snd_config_search_definition (config=0x9696348, 
+    base=0x39638a "ctl", name=0x96a65e0 "hw:0", result=0xbfa4273c)
+    at conf.c:4033
+	conf = (snd_config_t *) 0x234b
+	key = 0xbfa42660 "hw"
+	args = <value optimized out>
+	err = <value optimized out>
+#10 0x00317dbd in snd_ctl_open_noupdate (ctlp=<value optimized out>, 
+    root=0xe7b, name=0x96a65e0 "hw:0", mode=0) at control.c:907
+	err = <value optimized out>
+	ctl_conf = <value optimized out>
+	__FUNCTION__ = "snd_ctl_open_noupdate"
+#11 0x00744de9 in alsa_driver_check_card_type (driver=0x969c060)
+    at alsa_driver.c:126
+	err = <value optimized out>
+	ctl_name = 0x96a65e0 "hw:0"
+	expression = {__buffer = 0x96ac7f0 "8Ðj\t\031", __allocated = 140, 
+  __used = 140, __syntax = 4436732, __fastmap = 0x969c230 "", 
+  __translate = 0x0, re_nsub = 2, __can_be_null = 0, __regs_allocated = 0, 
+  __fastmap_accurate = 1, __no_sub = 0, __not_bol = 0, __not_eol = 0, 
+  __newline_anchor = 0}
+#12 0x0074715c in driver_initialize (client=0x9694c10, params=0x96ac888)
+    at alsa_driver.c:2075
+	srate = 44100
+	frames_per_interrupt = 128
+	user_nperiods = 2
+	playback_pcm_name = <value optimized out>
+	capture_pcm_name = 0x96ac7e0 "hw:0"
+	hw_monitoring = 0
+	hw_metering = 0
+	capture = 1
+	playback = 1
+	soft_mode = 0
+	monitor = 0
+	dither = None
+	user_capture_nchnls = 0
+	user_playback_nchnls = 0
+	shorts_first = 0
+	systemic_input_latency = 0
+	systemic_output_latency = 0
+	midi_driver_name = 0x969c060 ""
+	midi = (alsa_midi_t *) 0x0
+	node = <value optimized out>
+	param = <value optimized out>
+#13 0x008c7110 in jack_engine_load_driver (engine=0x96a5098, 
+    driver_desc=0x96ab3a0, driver_params=0x96ac888) at engine.c:1074
+	client = (jack_client_internal_t *) 0x96acc60
+	driver = <value optimized out>
+#14 0x0804a7bf in main (argc=9, argv=0xbfa42dd4) at jackd.c:157
+	desc = (jack_driver_desc_t *) 0x96ab3a0
+	long_options = {{name = 0x804b7cc "driver", has_arg = 1, flag = 0x0, 
+    val = 100}, {name = 0x804b84e "verbose", has_arg = 0, flag = 0x0, 
+    val = 118}, {name = 0x804b648 "help", has_arg = 0, flag = 0x0, 
+    val = 104}, {name = 0x804b856 "tmpdir-location", has_arg = 0, flag = 0x0, 
+    val = 108}, {name = 0x804b866 "port-max", has_arg = 1, flag = 0x0, 
+    val = 112}, {name = 0x804b86f "no-mlock", has_arg = 0, flag = 0x0, 
+    val = 109}, {name = 0x804b878 "name", has_arg = 1, flag = 0x0, 
+    val = 110}, {name = 0x804b87d "unlock", has_arg = 0, flag = 0x0, 
+    val = 117}, {name = 0x804b884 "realtime", has_arg = 0, flag = 0x0, 
+    val = 82}, {name = 0x804b88d "replace-registry", has_arg = 0, flag = 0x0, 
+    val = 114}, {name = 0x804b89e "realtime-priority", has_arg = 1, 
+    flag = 0x0, val = 80}, {name = 0x804b8b0 "timeout", has_arg = 1, 
+    flag = 0x0, val = 116}, {name = 0x804b8b8 "temporary", has_arg = 0, 
+    flag = 0x0, val = 84}, {name = 0x804b8c2 "version", has_arg = 0, 
+    flag = 0x0, val = 86}, {name = 0x804b8ca "silent", has_arg = 0, 
+    flag = 0x0, val = 115}, {name = 0x804b8d1 "clock-source", has_arg = 1, 
+    flag = 0x0, val = 99}, {name = 0x804b8de "nozombies", has_arg = 0, 
+    flag = 0x0, val = 90}, {name = 0x0, has_arg = 0, flag = 0x0, val = 0}}
+	opt = <value optimized out>
+	option_index = 0
+	seen_driver = <value optimized out>
+	driver_name = <value optimized out>
+	driver_args = (char **) 0x96ac888
+	driver_params = (JSList *) 0x96ac888
+	driver_nargs = <value optimized out>
+	show_version = <value optimized out>
+	replace_registry = 0
+	i = <value optimized out>
+	rc = <value optimized out>

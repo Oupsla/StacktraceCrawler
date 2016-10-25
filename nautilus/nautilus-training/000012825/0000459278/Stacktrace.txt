@@ -1,0 +1,99 @@
+#0  0xb7f3a430 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0xb726c4d1 in *__GI_raise (sig=6)
+    at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+        resultvar = <value optimized out>
+        pid = -1221058572
+        selftid = 2861
+#2  0xb726f932 in *__GI_abort () at abort.c:92
+        act = {__sigaction_handler = {
+            sa_handler = 0xb72b282d <*__GI___libc_realloc+221>, 
+            sa_sigaction = 0xb72b282d <*__GI___libc_realloc+221>}, sa_mask = {
+            __val = {104, 104, 3220532160, 3220532400, 3220532188, 104, 104, 
+              100, 175983816, 3073908724, 100, 99, 3220532360, 3072990146, 
+              175983824, 100, 3220532400, 175983824, 0, 4222451712, 
+              175983824, 175983824, 175983824, 175983824, 175983923, 
+              175983924, 175983824, 175983924, 0, 0, 0, 0}}, sa_flags = 0, 
+          sa_restorer = 0x2}
+        sigs = {__val = {32, 0 <repeats 31 times>}}
+#3  0xb7265648 in *__GI___assert_fail (
+    assertion=0xb7594b65 "ret != inval_id", 
+    file=0xb7594b29 "../../src/xcb_io.c", line=378, 
+    function=0xb7594ce4 "_XAllocID") at assert.c:81
+        buf = 0xa7d4cd0 "nautilus: ../../src/xcb_io.c :378 : _XAllocID:  L'assertion « ret != inval_id » a échoué.\n"
+#4  0xb7525199 in _XAllocID () from /usr/lib/libX11.so.6
+No symbol table info available.
+#5  0xb74fb048 in XCreatePixmap () from /usr/lib/libX11.so.6
+No symbol table info available.
+#6  0xb7a62f4c in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#7  0xb7a2c8a0 in gdk_pixmap_new () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#8  0xb7a2c69d in gdk_pixbuf_render_pixmap_and_mask_for_colormap ()
+   from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#9  0xb7d0731a in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#10 0xb7d0a392 in gtk_window_set_icon_name ()
+   from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#11 0x080a6960 in ?? ()
+No symbol table info available.
+#12 0x080a25b1 in ?? ()
+No symbol table info available.
+#13 0x0815958d in ?? ()
+No symbol table info available.
+#14 0x080b5458 in ?? ()
+No symbol table info available.
+#15 0x08199834 in ?? ()
+No symbol table info available.
+#16 0x080fa855 in ?? ()
+No symbol table info available.
+#17 0x080fed84 in ?? ()
+No symbol table info available.
+#18 0xb77740f1 in g_idle_dispatch (source=0xa2030e8, callback=0, 
+    user_data=0xa24c130) at /build/buildd/glib2.0-2.22.2/glib/gmain.c:4065
+No locals.
+#19 0xb7775e78 in g_main_dispatch (context=0xa1abab8)
+    at /build/buildd/glib2.0-2.22.2/glib/gmain.c:1960
+        dispatch = 0xb77740d0 <g_idle_dispatch>
+        user_data = 0xa24c130
+        callback = 0x80fed00
+        cb_funcs = 0xb77f231c
+        cb_data = 0xa203120
+        current_source_link = {data = 0xa2030e8, next = 0x0}
+        source = 0xa20f068
+        current = 0xa1c4b38
+        i = 4
+#20 IA__g_main_context_dispatch (context=0xa1abab8)
+    at /build/buildd/glib2.0-2.22.2/glib/gmain.c:2513
+No locals.
+#21 0xb7779720 in g_main_context_iterate (context=0xa1abab8, 
+    block=<value optimized out>, dispatch=1, self=0xa176008)
+    at /build/buildd/glib2.0-2.22.2/glib/gmain.c:2591
+        max_priority = 200
+        timeout = 0
+        some_ready = 1
+        nfds = <value optimized out>
+        allocated_nfds = <value optimized out>
+        fds = <value optimized out>
+        __PRETTY_FUNCTION__ = "g_main_context_iterate"
+#22 0xb7779b8f in IA__g_main_loop_run (loop=0xa25e748)
+    at /build/buildd/glib2.0-2.22.2/glib/gmain.c:2799
+        self = 0xa176008
+        __PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#23 0xb7bd2419 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#24 0x0808185f in ?? ()
+No symbol table info available.
+#25 0xb7258b56 in __libc_start_main (main=0x8081040, argc=1, 
+    ubp_av=0xbff57534, init=0x81a3430, fini=0x81a3420, 
+    rtld_fini=0xb7f48d20 <_dl_fini>, stack_end=0xbff5752c) at libc-start.c:220
+        result = <value optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {-1221058572, 0, 0, 
+                -1074432760, -476241573, 1113732938}, mask_was_saved = 0}}, 
+          priv = {pad = {0x0, 0x0, 0x1, 0x806c110}, data = {prev = 0x0, 
+              cleanup = 0x0, canceltype = 1}}}
+        not_first_call = <value optimized out>
+#26 0x0806c131 in ?? ()
+No symbol table info available.

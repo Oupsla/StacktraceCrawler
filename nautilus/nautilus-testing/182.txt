@@ -1,0 +1,44 @@
+#0  0xb759a557 in g_str_hash () from /usr/lib/libglib-2.0.so.0
+#1  0xb756b7fb in g_hash_table_lookup () from /usr/lib/libglib-2.0.so.0
+#2  0x0810a08f in get_link_files (target_file=<value optimized out>) at nautilus-file.c:1513
+	uri = 0x0
+#3  0x0810a131 in nautilus_file_emit_changed (file=0x8a548d0) at nautilus-file.c:6156
+	link_files = <value optimized out>
+	p = <value optimized out>
+	__PRETTY_FUNCTION__ = "nautilus_file_emit_changed"
+#4  0x080f1d9a in nautilus_directory_emit_change_signals (directory=0x82b1228, changed_files=0xb6060a00)
+    at nautilus-directory.c:792
+	p = (GList *) 0xb6060a00
+#5  0x080f1e07 in call_files_changed_common (directory=0x82b1228, file_list=0xb6060a00)
+    at nautilus-directory.c:884
+	node = (GList *) 0x0
+	file = <value optimized out>
+#6  0x080f2b00 in call_files_changed_unref_free_list (key=0x82b1228, value=0xb6060a00, user_data=0x0)
+    at nautilus-directory.c:903
+	__PRETTY_FUNCTION__ = "call_files_changed_unref_free_list"
+#7  0xb756b783 in g_hash_table_foreach () from /usr/lib/libglib-2.0.so.0
+#8  0x080f42e1 in nautilus_directory_notify_files_removed (files=0x8a782d0) at nautilus-directory.c:1172
+	changed_lists = (GHashTable *) 0x867c940
+	p = (GList *) 0x0
+	directory = <value optimized out>
+	parent_directories = (GHashTable *) 0x863ea28
+	file = (NautilusFile *) 0x0
+	location = (GFile *) 0x864e000
+#9  0x080f8d4a in nautilus_file_changes_consume_changes (consume_all=1) at nautilus-file-changes-queue.c:442
+	change = (NautilusFileChange *) 0x8baf938
+	additions = (GList *) 0x0
+	changes = (GList *) 0x0
+	deletions = (GList *) 0x8a782d0
+	moves = (GList *) 0x0
+	metadata_copy_requests = (GList *) 0x0
+	metadata_move_requests = (GList *) 0x0
+	metadata_remove_requests = (GList *) 0x0
+	position_set_requests = (GList *) 0x0
+	chunk_count = 4
+	queue = (NautilusFileChangesQueue *) 0x831d590
+	flush_needed = <value optimized out>
+	__PRETTY_FUNCTION__ = "nautilus_file_changes_consume_changes"
+#10 0x0812f2ee in call_consume_changes_idle_cb (not_used=0x0) at nautilus-monitor.c:68
+No locals.
+#11 0xb7577171 in ?? () from /usr/lib/libglib-2.0.so.0
+#12 0x00000000 in ?? ()

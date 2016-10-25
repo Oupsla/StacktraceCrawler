@@ -1,0 +1,37 @@
+#0  0x00007ffecb4073fa in g_object_unref () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#1  0x00007ffec080fbe4 in ubuntuone_nautilus_finalize (
+    object=<value optimized out>) at ubuntuone-nautilus.c:691
+	uon = <value optimized out>
+#2  0x00007ffecb40752f in g_object_unref () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#3  0x00000000004f2dbc in ?? ()
+No symbol table info available.
+#4  0x0000000000516538 in ?? ()
+No symbol table info available.
+#5  0x00000000004438d9 in ?? ()
+No symbol table info available.
+#6  0x00007ffec9952abd in __libc_start_main (main=<value optimized out>, 
+    argc=<value optimized out>, ubp_av=<value optimized out>, 
+    init=<value optimized out>, fini=<value optimized out>, 
+    rtld_fini=<value optimized out>, stack_end=0x7ffffca3e2e8)
+    at libc-start.c:220
+	result = <value optimized out>
+	unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, 1383446123580172631, 
+        4391792, 140737431986928, 0, 0, -1383443271327209129, 
+        -1382763684835415721}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 
+      0x547710, 0x7ffffca3e2f8}, data = {prev = 0x0, cleanup = 0x0, 
+      canceltype = 5535504}}}
+	not_first_call = <value optimized out>
+#7  0x0000000000430399 in ?? ()
+No symbol table info available.
+#8  0x00007ffffca3e2e8 in ?? ()
+No symbol table info available.
+#9  0x000000000000001c in ?? ()
+No symbol table info available.
+#10 0x0000000000000001 in ?? ()
+No symbol table info available.
+#11 0x00007ffffca3f9bc in ?? ()
+No symbol table info available.
+#12 0x0000000000000000 in ?? ()
+No symbol table info available.

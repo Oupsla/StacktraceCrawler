@@ -1,0 +1,30 @@
+#0  0x0048a369 in g_atomic_int_exchange_and_add () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#1  0x004f4f9d in g_variant_unref () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#2  0x0031bb9d in ?? () from /usr/lib/libdbusmenu-glib.so.3
+No symbol table info available.
+#3  0x0031c3c3 in ?? () from /usr/lib/libdbusmenu-glib.so.3
+No symbol table info available.
+#4  0x00581e7f in g_object_set_property () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#5  0x0031cbb9 in dbusmenu_server_set_root () from /usr/lib/libdbusmenu-glib.so.3
+No symbol table info available.
+#6  0x00afaf95 in ?? () from /usr/lib/gtk-2.0/2.10.0/menuproxies/libappmenu.so
+No symbol table info available.
+#7  0x004b753c in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#8  0x004b5c18 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#9  0x004b63e0 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#10 0x004b6aa3 in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#11 0x00d379c9 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#12 0x0807f586 in ?? ()
+No symbol table info available.
+#13 0x042b5e36 in __libc_start_main () from /lib/libc.so.6
+No symbol table info available.
+#14 0x0806a661 in ?? ()
+No symbol table info available.

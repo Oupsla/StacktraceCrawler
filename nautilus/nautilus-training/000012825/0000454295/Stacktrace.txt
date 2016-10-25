@@ -1,0 +1,813 @@
+#0  0x0016b422 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x07b6f4d1 in *__GI_raise (sig=6)
+    at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+	resultvar = <value optimized out>
+	pid = 130568180
+	selftid = 7567
+#2  0x07b72932 in *__GI_abort () at abort.c:92
+	act = {__sigaction_handler = {
+    sa_handler = 0x7bb582d <*__GI___libc_realloc+221>, 
+    sa_sigaction = 0x7bb582d <*__GI___libc_realloc+221>}, sa_mask = {__val = {
+      104, 104, 3218624288, 3218624528, 3218624316, 104, 104, 97, 157878912, 
+      130568180, 97, 96, 3218624488, 129649602, 157878920, 97, 3218624528, 
+      157878920, 0, 4222451712, 157878920, 157878920, 157878920, 157878920, 
+      157879016, 157879020, 157878920, 157879020, 0, 0, 0, 0}}, sa_flags = 0, 
+  sa_restorer = 0x20}
+	sigs = {__val = {32, 0 <repeats 31 times>}}
+#3  0x07b68648 in *__GI___assert_fail (assertion=0x6823b65 "ret != inval_id", 
+    file=0x6823b29 "../../src/xcb_io.c", line=378, 
+    function=0x6823ce4 "_XAllocID") at assert.c:81
+	buf = 0x9690a88 "gnome-system-monitor: ../../src/xcb_io.c:378: _XAllocID: AfirmaciÃ³n `ret != inval_id' fallida.\n"
+#4  0x067b4199 in _XAllocID (dpy=0x9521bd0) at ../../src/xcb_io.c:378
+	ret = 4294967295
+	__PRETTY_FUNCTION__ = "_XAllocID"
+#5  0x00baed97 in XRenderCreatePicture (dpy=0x9521bd0, drawable=69335165, 
+    format=0x953fa80, valuemask=0, attributes=0x0) at ../../src/Picture.c:90
+	info = <value optimized out>
+	pid = <value optimized out>
+#6  0x00e0eeaa in _cairo_xlib_surface_ensure_dst_picture (surface=0x95a7c00)
+    at /build/buildd/cairo-1.8.8/src/cairo-xlib-surface.c:887
+No locals.
+#7  0x00e11268 in _cairo_xlib_surface_fill_rectangles (
+    abstract_surface=0x95a7c00, op=CAIRO_OPERATOR_OVER, color=0x9599f38, 
+    rects=0xbfd85ad8, num_rects=1)
+    at /build/buildd/cairo-1.8.8/src/cairo-xlib-surface.c:1949
+	render_color = {red = 65535, green = 65535, blue = 65535, 
+  alpha = 65535}
+	static_xrects = {{x = 1, y = 57, width = 969, height = 505}, {x = 4, 
+    y = 0, width = 17472, height = 2407}, {x = 103, y = 0, width = 15, 
+    height = 0}, {x = 22260, y = -16424, width = 22032, height = 49112}, {
+    x = 15613, y = 258, width = 40948, height = 305}, {x = 26776, y = 2401, 
+    width = 0, height = 0}, {x = 21096, y = -16424, width = 41759, 
+    height = 258}, {x = -2736, y = 2406, width = 38912, height = 2409}, {
+    x = 0, y = 0, width = 0, height = 0}, {x = -32644, y = 2411, 
+    width = 26776, height = 2401}, {x = 7983, y = 295, width = 335, 
+    height = 0}, {x = 4, y = 0, width = 17472, height = 2407}, {x = 22200, 
+    y = -16424, width = 35962, height = 222}, {x = -31348, y = 2411, 
+    width = 0, height = 0}, {x = 32464, y = 222, width = 32528, 
+    height = 222}, {x = 0, y = 0, width = 32864, height = 222}, {x = 21988, 
+    y = -16424, width = 0, height = 0}, {x = 128, y = 0, width = 0, 
+    height = 0}, {x = 21988, y = -16424, width = 22032, height = 49112}, {
+    x = -26214, y = -26215, width = 7983, height = 295}, {x = -32644, 
+    y = 2411, width = 58554, height = 306}, {x = 128, y = 0, width = 0, 
+    height = 17080}, {x = 32464, y = 222, width = 33173, height = 221}, {
+    x = 0, y = 0, width = 32864, height = 222}, {x = 22052, y = -16424, 
+    width = 58495, height = 306}, {x = -21225, y = 191, width = 0, 
+    height = 0}, {x = 21096, y = -16424, width = 64316, height = 306}, {
+    x = 25716, y = -16424, width = 1, height = 0}, {x = 57, y = 0, 
+    width = 969, height = 0}, {x = 505, y = 0, width = 21484, 
+    height = 49112}, {x = 21112, y = -16424, width = 28660, height = 84}, {
+    x = -4087, y = 222, width = 28660, height = 84}, {x = 21544, y = -16424, 
+    width = 35115, height = 221}, {x = 21372, y = -16424, width = 21484, 
+    height = 49112}, {x = -26214, y = -26215, width = 53236, height = 228}, {
+    x = 21136, y = -16424, width = 0, height = 0}, {x = 23208, y = -16424, 
+    width = 62457, height = 222}, {x = 25716, y = -16424, width = 21136, 
+    height = 49112}, {x = 1, y = 0, width = 58554, height = 306}, {x = 970, 
+    y = 0, width = 1, height = 0}, {x = 970, y = 0, width = 21136, 
+    height = 49112}, {x = 1, y = 0, width = 57, height = 0}, {x = 970, y = 0, 
+    width = 562, height = 0}, {x = 14888, y = 2409, width = 51752, 
+    height = 2388}, {x = 21208, y = -16424, width = 53236, height = 228}, {
+    x = 0, y = 0, width = 53236, height = 228}, {x = 21208, y = -16424, 
+    width = 38719, height = 223}, {x = -31544, y = 2411, width = 21608, 
+    height = 49112}, {x = 21628, y = -16424, width = 61428, height = 2175}, {
+    x = -4087, y = 222, width = 61428, height = 2175}, {x = 21688, 
+    y = -16424, width = 35115, height = 221}, {x = 21516, y = -16424, 
+    width = 21608, height = 49112}, {x = 21628, y = -16424, width = 39321, 
+    height = 16313}, {x = 21516, y = -16424, width = 200, height = 0}, {
+    x = 21544, y = -16424, width = 5780, height = 225}, {x = -32224, 
+    y = 2395, width = 33312, height = 2395}, {x = -2384, y = 196, 
+    width = 41278, height = 198}, {x = -26214, y = -26215, width = 39321, 
+    height = 16313}, {x = 21352, y = -16424, width = 0, height = 0}, {
+    x = -31544, y = 2411, width = 21628, height = 49112}, {x = 21516, 
+    y = -16424, width = 21608, height = 49112}, {x = 21508, y = -16424, 
+    width = 18333, height = 1979}, {x = -31268, y = 2411, width = 34212, 
+    height = 2411}, {x = 21508, y = -16424, width = 26504, height = 144}, {
+    x = 32, y = 0, width = 21384, height = 49112}, {x = 20, y = 0, width = 1, 
+    height = 0}, {x = 4, y = 0, width = 13882, height = 455}, {x = -31348, 
+    y = 2411, width = 1, height = 0}, {x = 21400, y = -16424, width = 31042, 
+    height = 222}, {x = 21384, y = -16424, width = 1, height = 0}, {
+    x = 21440, y = -16424, width = 0, height = 0}, {x = 256, y = 0, 
+    width = 8704, height = 0}, {x = -13824, y = 3, width = 14592, 
+    height = 0}, {x = 1, y = 0, width = 1, height = 0}, {x = 21404, 
+    y = -16424, width = 8704, height = 0}, {x = 14592, y = 0, width = 256, 
+    height = 0}, {x = 8704, y = 0, width = 256, height = 0}, {x = 14592, 
+    y = 0, width = 51712, height = 3}, {x = 8704, y = 0, width = 51712, 
+    height = 3}, {x = 14592, y = 0, width = 1, height = 0}, {x = 0, y = 0, 
+    width = 0, height = 0}, {x = -8192, y = 3, width = 13056, height = 2}, {
+    x = 21560, y = -16424, width = 0, height = 0}, {x = -31744, y = 2411, 
+    width = 0, height = 0}, {x = 256, y = 0, width = 1, height = 0}, {x = 34, 
+    y = 0, width = 970, height = 0}, {x = 57, y = 0, width = 0, height = 0}, {
+    x = 0, y = 0, width = 0, height = 0}, {x = -31268, y = 2411, width = 0, 
+    height = 0}, {x = -17152, y = 3, width = 9728, height = 0}, {x = -13824, 
+    y = 3, width = 13568, height = 0}, {x = 1, y = 0, width = 1, height = 0}, 
+  {x = 21548, y = -16424, width = 9728, height = 0}, {x = 13568, y = 0, 
+    width = 48384, height = 3}, {x = 9728, y = 0, width = 8484, 
+    height = 221}, {x = 13568, y = 0, width = 51712, height = 3}, {x = 9728, 
+    y = 0, width = 51712, height = 3}, {x = -12300, y = 228, width = 0, 
+    height = 0}, {x = 21640, y = -16424, width = 10033, height = 221}, {
+    x = 7292, y = 2403, width = 0, height = 0}, {x = 957, y = 0, 
+    width = 9940, height = 221}, {x = 970, y = 0, width = 53, height = 0}, {
+    x = 7292, y = 2403, width = 957, height = 0}, {x = -21225, y = 191, 
+    width = 7280, height = 2403}, {x = -16103, y = 191, width = 56053, 
+    height = 222}, {x = 7292, y = 2403, width = 4630, height = 1979}, {x = 0, 
+    y = 0, width = 53236, height = 228}, {x = 7280, y = 2403, width = 54480, 
+    height = 228}, {x = 21736, y = -16424, width = 56823, height = 222}, {
+    x = -11056, y = 228, width = 33792, height = 2411}, {x = 21736, 
+    y = -16424, width = 8484, height = 221}, {x = -12300, y = 228, 
+    width = 33960, height = 2411}, {x = 21736, y = -16424, width = 28308, 
+    height = 223}, {x = -12300, y = 228, width = 0, height = 0}, {x = 913, 
+    y = 0, width = 40, height = 0}, {x = 25504, y = 1992, width = 20468, 
+    height = 1992}, {x = 25504, y = 1992, width = 33820, height = 2411}, {
+    x = 21768, y = -16424, width = 18333, height = 1979}, {x = -31736, 
+    y = 2411, width = 53236, height = 228}, {x = -12300, y = 228, 
+    width = 33792, height = 2411}, {x = 21832, y = -16424, width = 31207, 
+    height = 221}, {x = -31744, y = 2411, width = 0, height = 0}, {x = -8192, 
+    y = 16525, width = 0, height = 0}, {x = 0, y = 16400, width = 0, 
+    height = 0}, {x = -31352, y = 2411, width = 33824, height = 2411}, {
+    x = 0, y = 16430, width = 18264, height = 2409}, {x = 16, y = 0, 
+    width = 61428, height = 2175}, {x = -26624, y = 2409, width = 33792, 
+    height = 2411}, {x = 22040, y = -16424, width = 32621, height = 2174}, {
+    x = -31744, y = 2411, width = 59200, height = 2384}, {x = 3042, y = 286, 
+    width = 40757, height = 187}, {x = 2, y = 0, width = 32152, 
+    height = 2387}, {x = 0, y = 0, width = 12276, height = 200}, {x = 15680, 
+    y = 2401, width = 15680, height = 2401}, {x = -9224, y = 2406, 
+    width = 12495, height = 197}, {x = 15684, y = 2401, width = 4, 
+    height = 0}, {x = 3, y = 0, width = 0, height = 0}, {x = 0, y = 0, 
+    width = 0, height = 0}, {x = 0, y = 0, width = 47044, height = 198}, {
+    x = 15684, y = 2401, width = 1, height = 0}, {x = -29653, y = 267, 
+    width = 40948, height = 305}, {x = 22156, y = -16424, width = 22016, 
+    height = 49112}, {x = 22104, y = -16424, width = 60606, height = 75}, {
+    x = -23815, y = 77, width = 28660, height = 84}, {x = 21992, y = -16424, 
+    width = 10207, height = 78}, {x = 28, y = 0, width = 62368, 
+    height = 2402}, {x = 22024, y = -16424, width = 28660, height = 84}, {
+    x = 28660, y = 84, width = 38912, height = 2409}, {x = 22040, y = -16424, 
+    width = 158, height = 76}, {x = -26624, y = 2409, width = 9840, 
+    height = 2387}, {x = 22016, y = -16424, width = 0, height = 0}, {
+    x = 22236, y = -16424, width = 0, height = 0}, {x = 32267, y = 2174, 
+    width = 40948, height = 305}, {x = -9224, y = 2406, width = 32, 
+    height = 0}, {x = 22136, y = -16424, width = 34556, height = 267}, {
+    x = -9224, y = 2406, width = 38912, height = 2409}, {x = 0, y = 0, 
+    width = 1, height = 0}, {x = 16964, y = 2401, width = 15680, 
+    height = 2401}, {x = -273, y = 294, width = 4, height = 0}, {x = 1, 
+    y = 0, width = 958, height = 0}, {x = 6, y = 0, width = 10, height = 0}, {
+    x = 10, y = 0, width = 10, height = 0}, {x = 22136, y = -16424, 
+    width = 39989, height = 277}, {x = 15680, y = 2401, width = 54064, 
+    height = 2387}, {x = 22152, y = -16424, width = 40948, height = 305}, {
+    x = 15680, y = 2401, width = 10, height = 0}, {x = 22264, y = -16424, 
+    width = 33727, height = 246}, {x = -9224, y = 2406, width = 38912, 
+    height = 2409}, {x = 0, y = 0, width = 1, height = 0}, {x = 16964, 
+    y = 2401, width = 15680, height = 2401}, {x = -273, y = 294, width = 4, 
+    height = 0}, {x = 1, y = 0, width = 958, height = 0}, {x = 6, y = 0, 
+    width = 10, height = 0}, {x = 10, y = 0, width = 33120, height = 2411}, {
+    x = 22264, y = -16424, width = 29818, height = 250}, {x = 958, y = 0, 
+    width = 4, height = 0}, {x = 3199, y = 895, width = 6, height = 0}, {
+    x = 18552, y = 2407, width = 18552, height = 2407}, {x = 22264, 
+    y = -16424, width = 31076, height = 199}, {x = 18552, y = 2407, 
+    width = 22352, height = 49112}, {x = -26214, y = -26215, width = 40948, 
+    height = 305}, {x = -24588, y = 305, width = 22676, height = 49112}, {
+    x = 22328, y = -16424, width = 42000, height = 259}, {x = 22676, 
+    y = -16424, width = 0, height = 0}, {x = -11472, y = 2387, width = 12276, 
+    height = 200}, {x = 18552, y = 2407, width = 51752, height = 2388}, {
+    x = 22328, y = -16424, width = 13788, height = 199}, {x = 18552, 
+    y = 2407, width = 51752, height = 2388}, {x = 22376, y = -16424, 
+    width = 12276, height = 200}, {x = 18552, y = 2407, width = 51752, 
+    height = 2388}, {x = 22376, y = -16424, width = 63225, height = 196}, {
+    x = -13784, y = 2388, width = 22676, height = 49112}, {x = 2, y = 0, 
+    width = 18552, height = 2407}, {x = 22656, y = -16424, width = 33296, 
+    height = 246}, {x = -1, y = 255, width = 12276, height = 200}, {
+    x = -13784, y = 2388, width = 51752, height = 2388}, {x = 22520, 
+    y = -16424, width = 4051, height = 197}, {x = -13784, y = 2388, 
+    width = 32773, height = 16384}, {x = -32763, y = 16384, width = 41278, 
+    height = 198}, {x = 22656, y = -16424, width = 200, height = 0}...}
+	xrects = (XRectangle *) 0xbfd85148
+	i = <value optimized out>
+#8  0x00df5b4d in _cairo_surface_fill_rectangles (surface=0x95a7c00, 
+    op=CAIRO_OPERATOR_OVER, color=0x9599f38, rects=0xbfd85ad8, num_rects=1)
+    at /build/buildd/cairo-1.8.8/src/cairo-surface.c:1459
+	status = <value optimized out>
+	__PRETTY_FUNCTION__ = "_cairo_surface_fill_rectangles"
+#9  0x00df5ce5 in _cairo_surface_fill_region (surface=0x95a7c00, 
+    op=CAIRO_OPERATOR_OVER, color=0x9599f38, region=0xbfd86474)
+    at /build/buildd/cairo-1.8.8/src/cairo-surface.c:1410
+	num_boxes = 1
+	boxes = (cairo_box_int_t *) 0x0
+	stack_rects = {{x = 1, y = 57, width = 969, height = 505}, {x = 970, 
+    y = 562, width = 1072693248, height = 0}, {x = -1076339912, y = 16198157, 
+    width = 157367616, height = 3218627464}, {x = -1076339928, y = 12295989, 
+    width = 2, height = 926365496}, {x = 1072655645, y = 156920592, 
+    width = 1072647630, height = 9461748}, {x = -1076339816, y = 20029428, 
+    width = 156829376, height = 157291520}, {x = -1076339864, y = 16409028, 
+    width = 156829376, height = 1}, {x = 16406112, y = -1076339832, 
+    width = 156491752, height = 19528816}, {x = 16, y = 20029428, 
+    width = 156829376, height = 158040576}, {x = -1076339800, y = 16413818, 
+    width = 156829376, height = 16406112}, {x = -1076339832, y = 13119476, 
+    width = 157337920, height = 157337920}, {x = 156829376, y = 13072740, 
+    width = 157337920, height = 16}, {x = 16, y = 20029428, width = 20029428, 
+    height = 3218627908}, {x = -1076339736, y = 17015824, width = 3218627908, 
+    height = 0}, {x = 156488496, y = 13119476, width = 157337920, 
+    height = 156551720}, {x = -1076339736, y = 13055452, width = 157337920, 
+    height = 156551720}, {x = -1076339688, y = 13119476, width = 157337920, 
+    height = 156551720}, {x = -1076339688, y = 12908281, width = 156551720, 
+    height = 3218627908}, {x = 2, y = 157337920, width = 3218627888, 
+    height = 16413648}, {x = -1076339640, y = 13119476, width = 156551720, 
+    height = 156551720}, {x = -1076339544, y = 12914643, width = 156551720, 
+    height = 1073774596}, {x = 1073774596, y = 13017406, width = 3218627888, 
+    height = 200}, {x = -1076339592, y = 13023172, width = 156353464, 
+    height = 3218627764}, {x = 12908208, y = 13017406, width = 3218627888, 
+    height = 1073741827}, {x = -1076339544, y = 13119476, width = 3218627908, 
+    height = 20}, {x = -1076339544, y = 13057739, width = 3218627908, 
+    height = 156515488}, {x = 157894488, y = 13119476, width = 3218627908, 
+    height = 9463688}, {x = -1076339544, y = 13055580, width = 20, 
+    height = 0}, {x = 0, y = 13055546, width = 13119476, height = 12567040}, {
+    x = -1076339320, y = 13002474, width = 3218627908, height = 3218628236}, {
+    x = -1076339388, y = 0, width = 3218627888, height = 157337920}, {
+    x = -1076339480, y = 12923778, width = 156829380, height = 1}, {
+    x = -1076339450, y = 13023172, width = 9462752, height = 3218627880}, {
+    x = -1076339416, y = 8891240, width = 156829376, height = 40}, {
+    x = -1076339432, y = 12295989, width = 2, height = 156551952}, {
+    x = 156268128, y = 156829376, width = 3218628076, height = 9461748}, {
+    x = -1076339320, y = 13119476, width = 32, height = 32}, {
+    x = -1076339320, y = 12979032, width = 156268128, height = 156829376}, {
+    x = 2, y = 32, width = 4, height = 0}, {x = 0, y = 156829380, width = 0, 
+    height = 0}, {x = 20, y = 156264880, width = 12561687, height = 4}, {
+    x = 12566809, y = 13013631, width = 156829376, height = 0}, {
+    x = 12979005, y = 13119476, width = 12567040, height = 1}, {
+    x = -1076339016, y = 13006559, width = 13120364, height = 156488496}, {
+    x = -1076339188, y = 0, width = 156743096, height = 157352384}, {
+    x = 129704830, y = 20029428, width = 157367616, height = 3218628144}, {
+    x = -1076339240, y = 18188918, width = 156550528, height = 20}, {
+    x = 9462712, y = 9462752, width = 40, height = 156552224}, {
+    x = 157337920, y = 1, width = 156550496, height = 1}, {x = 156270928, 
+    y = 156550440, width = 3218628236, height = 3218628108}, {
+    x = -1076338956, y = 0, width = 3218628316, height = 130568180}, {
+    x = 130573216, y = -1076338900, width = 0, height = 0}, {x = 0, y = 0, 
+    width = 0, height = 0}, {x = 0, y = 0, width = 0, height = 0}, {x = 0, 
+    y = 0, width = 0, height = 0}, {x = 0, y = 13023172, width = 0, 
+    height = 0}, {x = 0, y = 0, width = 0, height = 0}, {x = 0, y = 12573793, 
+    width = 12308468, height = 28}, {x = -1076339048, y = 12295989, 
+    width = 2, height = 0}, {x = 0, y = 12573793, width = 12308468, 
+    height = 80}, {x = -1076339016, y = 12295989, width = 2, height = 2}, {
+    x = 1, y = 20029428, width = 158040576, height = 9461748}, {
+    x = -1076338904, y = 9080770, width = 156769536, height = 130568180}, {
+    x = 130573216, y = 156829376, width = 156999360, height = 7}, {
+    x = -1076338904, y = 72, width = 1, height = 3}, {x = 32, y = 51, 
+    width = 157476384, height = 43}, {x = 3, y = 156264920, width = 80, 
+    height = 9}, {x = 80, y = 20, width = 28, height = 157480000}, {
+    x = -1076338872, y = 5533684, width = 158040576, height = 156829376}, {
+    x = -1076338872, y = 4989628, width = 80, height = 158040576}, {
+    x = 19316821, y = 20029428, width = 20029428, height = 158040576}, {
+    x = -1076338808, y = 16406064, width = 158040576, height = 158040576}, {
+    x = -1076338824, y = 20029428, width = 157380864, height = 23}, {
+    x = -1076338632, y = 16225265, width = 157754768, height = 157915136}, {
+    x = 16405691, y = 20029428, width = 157380864, height = 156603616}, {
+    x = -1076338776, y = 16406145, width = 157380864, height = 156829376}, {
+    x = 158221472, y = 9078478, width = 158088784, height = 157942928}, {
+    x = -1076338744, y = 16181325, width = 156829376, height = 3218628632}, {
+    x = -1076338616, y = 20029428, width = 157380864, height = 156603616}, {
+    x = -1076338696, y = 16409028, width = 157380864, height = 1}, {
+    x = 16406112, y = -1076338664, width = 9462972, height = 13119476}, {
+    x = 0, y = 20029428, width = 157380864, height = 158221472}, {
+    x = -1076338632, y = 16413818, width = 157380864, height = 16406112}, {
+    x = -1076338664, y = 12923087, width = 157378716, height = 1}, {
+    x = 157380864, y = 158221472, width = 156491752, height = 19528816}, {
+    x = 0, y = 20029428, width = 157380864, height = 158221472}, {
+    x = -1076338568, y = 16225665, width = 157380864, height = 158221472}, {
+    x = 0, y = 14654221, width = 19316821, height = 19462088}, {
+    x = -1076338568, y = 13072740, width = 157891864, height = 157894488}, {
+    x = 3, y = 20029428, width = 20029428, height = 3218629140}, {
+    x = -1076338504, y = 17015824, width = 3218629140, height = 0}, {
+    x = 156488496, y = 13119476, width = 157891864, height = 156551720}, {
+    x = -1076338504, y = 0, width = 144128, height = 248320}, {x = 256, 
+    y = -1076337388, width = 157891864, height = 156551720}, {
+    x = -1076338456, y = 14995444, width = 3218629876, height = 158041580}, {
+    x = -1076338408, y = 14656352, width = 3218629876, height = 14592}, {
+    x = 143872, y = -1076338432, width = 3218628848, height = 156551720}, {
+    x = -1076338312, y = 12914643, width = 248320, height = 14592}, {
+    x = 248320, y = 143872, width = 256, height = 14592}, {x = 256, 
+    y = 143872, width = 3218630000, height = 256}, {x = -1076337480, 
+    y = 14575970, width = 3218629876, height = 158041564}, {x = 158041580, 
+    y = 13119476, width = 3218629140, height = 20}, {x = -1076338312, 
+    y = 13057739, width = 3218629140, height = 3218629168}, {x = 156561714, 
+    y = 13119476, width = 2576980378, height = 1069128089}, {x = -1076338312, 
+    y = 248320, width = 20, height = 0}, {x = 0, y = 13055546, 
+    width = 13119476, height = 12567040}, {x = -1076338088, y = 13002474, 
+    width = 3218629140, height = 3218629468}, {x = -1076338156, y = 0, 
+    width = 3218629120, height = 157891864}, {x = -1076338248, y = 12923778, 
+    width = 157380868, height = 1}, {x = 18188038, y = 13023172, 
+    width = 9462752, height = 3218629112}, {x = -1076338184, y = 8891240, 
+    width = 157380864, height = 40}, {x = -1076338200, y = 12295989, 
+    width = 2, height = 156551952}, {x = 0, y = 157380864, width = 16, 
+    height = 9461748}, {x = -1076338088, y = 13119476, width = 32, 
+    height = 32}, {x = -1076338088, y = 12979134, width = 3218629168, 
+    height = 157281440}, {x = 2, y = 32, width = 4, height = 0}, {x = 1, 
+    y = -1076338128, width = 16, height = 157281440}, {x = 12967264, 
+    y = 157281440, width = 32, height = 4}, {x = 12566809, y = 13013631, 
+    width = 157380864, height = 157894916}, {x = 12979005, y = 13119476, 
+    width = 12567040, height = 1}, {x = -1076337784, y = 13006559, 
+    width = 13120364, height = 156488496}, {x = -1076337956, y = 0, 
+    width = 0, height = 0}, {x = 129704830, y = 156920592, width = 0, 
+    height = 0}, {x = 0, y = 20029428, width = 156550528, height = 20}, {
+    x = 9462712, y = 9462752, width = 40, height = 156552224}, {
+    x = 157891864, y = 1, width = 156550496, height = 1}, {x = 156270928, 
+    y = 156550440, width = 3218629468, height = 3218629340}, {
+    x = -1076337724, y = 0, width = 156829376, height = 130568180}}
+	rects = (cairo_rectangle_int_t *) 0xbfd85ad8
+	status = <value optimized out>
+	i = 7567
+	__PRETTY_FUNCTION__ = "_cairo_surface_fill_region"
+#10 0x00df8c29 in _clip_and_composite_trapezoids (src=<value optimized out>, 
+    op=CAIRO_OPERATOR_OVER, dst=0x95a7c00, traps=0xbfd864f4, clip=0x0, 
+    antialias=CAIRO_ANTIALIAS_DEFAULT)
+    at /build/buildd/cairo-1.8.8/src/cairo-surface-fallback.c:617
+	color = (const cairo_color_t *) 0x0
+	clip_surface = <value optimized out>
+	status = <value optimized out>
+	trap_region = {rgn = {extents = {x1 = 1, y1 = 57, x2 = 970, 
+      y2 = 562}, data = 0x0}}
+	clear_region = {rgn = {extents = {x1 = 157327712, y1 = 157380864, 
+      x2 = -1076336424, y2 = 13072740}, data = 0x9693db8}}
+	has_trap_region = 1
+	has_clear_region = <value optimized out>
+	extents = {x = 1, y = 57, width = 969, height = 505}
+	traps_info = {traps = 0xbfd864b8, antialias = 14564639}
+#11 0x00df8e4a in _cairo_surface_fallback_fill (surface=0x95a7c00, 
+    op=CAIRO_OPERATOR_OVER, source=0x9599ee0, path=0x96b858c, 
+    fill_rule=CAIRO_FILL_RULE_WINDING, tolerance=0.10000000000000001, 
+    antialias=CAIRO_ANTIALIAS_DEFAULT)
+    at /build/buildd/cairo-1.8.8/src/cairo-surface-fallback.c:902
+	status = <value optimized out>
+	traps = {status = CAIRO_STATUS_SUCCESS, extents = {p1 = {x = 256, 
+      y = 14592}, p2 = {x = 248320, y = 143872}}, num_traps = 1, 
+  traps_size = 1, traps = 0xbfd86514, traps_embedded = {{top = 14592, 
+      bottom = 143872, left = {p1 = {x = 256, y = 14592}, p2 = {x = 256, 
+          y = 143872}}, right = {p1 = {x = 248320, y = 14592}, p2 = {
+          x = 248320, y = 143872}}}}, has_limits = 1, limits = {p1 = {x = 0, 
+      y = 0}, p2 = {x = 253952, y = 144128}}}
+	box = {p1 = {x = 0, y = 0}, p2 = {x = 253952, y = 144128}}
+	extents = {x = 0, y = 0, width = 992, height = 563}
+#12 0x00df52f7 in _cairo_surface_fill (surface=0x95a7c00, 
+    op=CAIRO_OPERATOR_OVER, source=0xbfd86624, path=0x96b858c, 
+    fill_rule=CAIRO_FILL_RULE_WINDING, tolerance=0.10000000000000001, 
+    antialias=CAIRO_ANTIALIAS_DEFAULT)
+    at /build/buildd/cairo-1.8.8/src/cairo-surface.c:1685
+	status = <value optimized out>
+	dev_source = (cairo_pattern_t *) 0x9599ee0
+	__PRETTY_FUNCTION__ = "_cairo_surface_fill"
+#13 0x00ddbec6 in _cairo_gstate_fill (gstate=0x96b8420, path=0x96b858c)
+    at /build/buildd/cairo-1.8.8/src/cairo-gstate.c:1021
+	status = <value optimized out>
+	pattern = {base = {type = CAIRO_PATTERN_TYPE_SOLID, ref_count = {
+      ref_count = 0}, status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, 
+      num_elements = 0, element_size = 12, elements = 0x0, is_snapshot = 0}, 
+    matrix = {xx = 1, yx = 0, xy = 0, yy = 1, x0 = 0, y0 = 0}, 
+    filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_PAD}, solid = {base = {
+      type = CAIRO_PATTERN_TYPE_SOLID, ref_count = {ref_count = 0}, 
+      status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, num_elements = 0, 
+        element_size = 12, elements = 0x0, is_snapshot = 0}, matrix = {
+        xx = 1, yx = 0, xy = 0, yy = 1, x0 = 0, y0 = 0}, 
+      filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_PAD}, color = {
+      red = 1, green = 1, blue = 1, alpha = 1, red_short = 65535, 
+      green_short = 65535, blue_short = 65535, alpha_short = 65535}, 
+    content = CAIRO_CONTENT_COLOR}, surface = {base = {
+      type = CAIRO_PATTERN_TYPE_SOLID, ref_count = {ref_count = 0}, 
+      status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, num_elements = 0, 
+        element_size = 12, elements = 0x0, is_snapshot = 0}, matrix = {
+        xx = 1, yx = 0, xy = 0, yy = 1, x0 = 0, y0 = 0}, 
+      filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_PAD}, surface = 0x0}, 
+  gradient = {base = {base = {type = CAIRO_PATTERN_TYPE_SOLID, ref_count = {
+          ref_count = 0}, status = CAIRO_STATUS_SUCCESS, user_data = {
+          size = 0, num_elements = 0, element_size = 12, elements = 0x0, 
+          is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, x0 = 0, 
+          y0 = 0}, filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_PAD}, 
+      n_stops = 0, stops_size = 1072693248, stops = 0x0, stops_embedded = {{
+          offset = 5.2998088236266445e-315, color = {
+            red = 5.2998088236266445e-315, green = -nan(0xfffff3ff00000), 
+            blue = 8.6938167555842266e-311, alpha = 1.735721664849034e-304, 
+            red_short = 34188, green_short = 2411, blue_short = 256, 
+            alpha_short = 0}}, {offset = 2.0502744892594146e-263, color = {
+            red = 2.7306949343178788e-263, green = 1.6737620495843747e-304, 
+            blue = 969.00001796723654, alpha = 1.0716125501205863e-311, 
+            red_short = 28660, green_short = 84, blue_short = 26384, 
+            alpha_short = 2404}}}}, linear = {base = {base = {
+          type = CAIRO_PATTERN_TYPE_SOLID, ref_count = {ref_count = 0}, 
+          status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, 
+            num_elements = 0, element_size = 12, elements = 0x0, 
+            is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, 
+            x0 = 0, y0 = 0}, filter = CAIRO_FILTER_GOOD, 
+          extend = CAIRO_EXTEND_PAD}, n_stops = 0, stops_size = 1072693248, 
+        stops = 0x0, stops_embedded = {{offset = 5.2998088236266445e-315, 
+            color = {red = 5.2998088236266445e-315, 
+              green = -nan(0xfffff3ff00000), blue = 8.6938167555842266e-311, 
+              alpha = 1.735721664849034e-304, red_short = 34188, 
+              green_short = 2411, blue_short = 256, alpha_short = 0}}, {
+            offset = 2.0502744892594146e-263, color = {
+              red = 2.7306949343178788e-263, green = 1.6737620495843747e-304, 
+              blue = 969.00001796723654, alpha = 1.0716125501205863e-311, 
+              red_short = 28660, green_short = 84, blue_short = 26384, 
+              alpha_short = 2404}}}}, p1 = {x = -1076336824, y = 4964400}, 
+      p2 = {x = 158041088, y = 0}}, radial = {base = {base = {
+          type = CAIRO_PATTERN_TYPE_SOLID, ref_count = {ref_count = 0}, 
+          status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, 
+            num_elements = 0, element_size = 12, elements = 0x0, 
+            is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, 
+            x0 = 0, y0 = 0}, filter = CAIRO_FILTER_GOOD, 
+          extend = CAIRO_EXTEND_PAD}, n_stops = 0, stops_size = 1072693248, 
+        stops = 0x0, stops_embedded = {{offset = 5.2998088236266445e-315, 
+            color = {red = 5.2998088236266445e-315, 
+              green = -nan(0xfffff3ff00000), blue = 8.6938167555842266e-311, 
+              alpha = 1.735721664849034e-304, red_short = 34188, 
+              green_short = 2411, blue_short = 256, alpha_short = 0}}, {
+            offset = 2.0502744892594146e-263, color = {
+              red = 2.7306949343178788e-263, green = 1.6737620495843747e-304, 
+              blue = 969.00001796723654, alpha = 1.0716125501205863e-311, 
+              red_short = 28660, green_short = 84, blue_short = 26384, 
+              alpha_short = 2404}}}}, c1 = {x = -1076336824, y = 4964400}, 
+      r1 = 158041088, c2 = {x = 0, y = 0}, r2 = 0}}}
+#14 0x00dd5efd in *INT_cairo_fill_preserve (cr=0x96b8400)
+    at /build/buildd/cairo-1.8.8/src/cairo.c:2167
+	status = <value optimized out>
+#15 0x00dd5f22 in cairo_fill (cr=0x96b8400)
+    at /build/buildd/cairo-1.8.8/src/cairo.c:2143
+No locals.
+#16 0x004da15f in gdk_window_clear_backing_region (
+    window=<value optimized out>, region=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.2/gdk/gdkwindow.c:4226
+	method = {cr = 0x96b8400, gc = 0x0}
+	clip = (GdkRegion *) 0x962f440
+	clipbox = {x = 0, y = 0, width = 969, height = 505}
+	__PRETTY_FUNCTION__ = "gdk_window_clear_backing_region"
+#17 0x004dbbcc in IA__gdk_window_begin_paint_region (window=0x9535738, 
+    region=0x962f480) at /build/buildd/gtk+2.0-2.18.2/gdk/gdkwindow.c:2787
+	clip_box = {x = 0, y = 0, width = 969, height = 505}
+	implicit_paint = <value optimized out>
+	list = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gdk_window_begin_paint_region"
+#18 0x01034114 in IA__gtk_main_do_event (event=0xbfd868d8)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkmain.c:1568
+	event_widget = (GtkWidget *) 0x960a160
+	grab_widget = <value optimized out>
+	window_group = (GtkWindowGroup *) 0x96a7450
+	rewritten_event = (GdkEvent *) 0x0
+	tmp_list = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_main_do_event"
+#19 0x004e51f4 in _gdk_window_process_updates_recurse (window=0x9535738, 
+    expose_region=0x962f480)
+    at /build/buildd/gtk+2.0-2.18.2/gdk/gdkwindow.c:5061
+	event = {type = GDK_EXPOSE, any = {type = GDK_EXPOSE, 
+    window = 0x9535738, send_event = 0 '\0'}, expose = {type = GDK_EXPOSE, 
+    window = 0x9535738, send_event = 0 '\0', area = {x = 0, y = 0, 
+      width = 969, height = 505}, region = 0x962f480, count = 0}, 
+  no_expose = {type = GDK_EXPOSE, window = 0x9535738, send_event = 0 '\0'}, 
+  visibility = {type = GDK_EXPOSE, window = 0x9535738, send_event = 0 '\0', 
+    state = GDK_VISIBILITY_UNOBSCURED}, motion = {type = GDK_EXPOSE, 
+    window = 0x9535738, send_event = 0 '\0', time = 0, 
+    x = 2.0562139214453489e-311, y = 1.8811324771122602e-263, axes = 0x0, 
+    state = 5043649, is_hint = 24608, device = 0x1, 
+    x_root = 4.547456500348887e-307, y_root = 1.8811325327767965e-263}, 
+  button = {type = GDK_EXPOSE, window = 0x9535738, send_event = 0 '\0', 
+    time = 0, x = 2.0562139214453489e-311, y = 1.8811324771122602e-263, 
+    axes = 0x0, state = 5043649, button = 157966368, device = 0x1, 
+    x_root = 4.547456500348887e-307, y_root = 1.8811325327767965e-263}, 
+  scroll = {type = GDK_EXPOSE, window = 0x9535738, send_event = 0 '\0', 
+    time = 0, x = 2.0562139214453489e-311, y = 1.8811324771122602e-263, 
+    state = 0, direction = 5043649, device = 0x96a6020, 
+    x_root = -0.38142204284667974, y_root = 2.4861283311173398e-263}, key = {
+    type = GDK_EXPOSE, window = 0x9535738, send_event = 0 '\0', time = 0, 
+    state = 0, keyval = 969, length = 505, string = 0x962f480 "\002", 
+    hardware_keycode = 0, group = 0 '\0', is_modifier = 0}, crossing = {
+    type = GDK_EXPOSE, window = 0x9535738, send_event = 0 '\0', 
+    subwindow = 0x0, time = 0, x = 1.0716078749162121e-311, 
+    y = 7.780548952728084e-316, x_root = 2.6175459321276654e-263, 
+    y_root = -0.38142204284667974, mode = 5533684, detail = 157879584, 
+    focus = 157480064, state = 1}, focus_change = {type = GDK_EXPOSE, 
+    window = 0x9535738, send_event = 0 '\0', in = 2410}, configure = {
+    type = GDK_EXPOSE, window = 0x9535738, send_event = 0 '\0', x = 0, y = 0, 
+    width = 969, height = 505}, property = {type = GDK_EXPOSE, 
+    window = 0x9535738, send_event = 0 '\0', atom = 0x0, time = 0, 
+    state = 969}, selection = {type = GDK_EXPOSE, window = 0x9535738, 
+    send_event = 0 '\0', selection = 0x0, target = 0x0, property = 0x3c9, 
+    time = 505, requestor = 157480064}, owner_change = {type = GDK_EXPOSE, 
+    window = 0x9535738, send_event = 0 '\0', owner = 0, 
+    reason = GDK_OWNER_CHANGE_NEW_OWNER, selection = 0x3c9, time = 505, 
+    selection_time = 157480064}, proximity = {type = GDK_EXPOSE, 
+    window = 0x9535738, send_event = 0 '\0', time = 0, device = 0x0}, 
+  client = {type = GDK_EXPOSE, window = 0x9535738, send_event = 0 '\0', 
+    message_type = 0x0, data_format = 0, data = {
+      b = "É\003\000\000ù\001\000\000\200ôb\t\000\000\000\000ÁõL", s = {969, 
+        0, 505, 0, -2944, 2402, 0, 0, -2623, 76}, l = {969, 505, 157480064, 
+        0, 5043649}}}, dnd = {type = GDK_EXPOSE, window = 0x9535738, 
+    send_event = 0 '\0', context = 0x0, time = 0, x_root = 969, y_root = 0}, 
+  window_state = {type = GDK_EXPOSE, window = 0x9535738, send_event = 0 '\0', 
+    changed_mask = 0, new_window_state = 0}, setting = {type = GDK_EXPOSE, 
+    window = 0x9535738, send_event = 0 '\0', action = GDK_SETTING_ACTION_NEW, 
+    name = 0x0}, grab_broken = {type = GDK_EXPOSE, window = 0x9535738, 
+    send_event = 0 '\0', keyboard = 0, implicit = 0, grab_window = 0x3c9}}
+	child = (GdkWindowObject *) 0x9535738
+	child_region = (GdkRegion *) 0x96a6030
+	r = {x = 41, y = 528, width = 130573216, height = 157591776}
+	l = <value optimized out>
+	children = (GList *) 0x0
+#20 0x004e51a3 in _gdk_window_process_updates_recurse (window=0x9535690, 
+    expose_region=0x9690d20)
+    at /build/buildd/gtk+2.0-2.18.2/gdk/gdkwindow.c:5034
+	child = (GdkWindowObject *) 0x9535738
+	child_region = (GdkRegion *) 0x962f480
+	r = {x = 0, y = 23, width = 975, height = 505}
+	l = (GList *) 0x95e9db0
+	children = (GList *) 0x96557c0
+#21 0x004e51a3 in _gdk_window_process_updates_recurse (window=0x95351f8, 
+    expose_region=0x9684360)
+    at /build/buildd/gtk+2.0-2.18.2/gdk/gdkwindow.c:5034
+	child = (GdkWindowObject *) 0x9535690
+	child_region = (GdkRegion *) 0x9690d20
+	r = {x = 14, y = 93, width = 969, height = 528}
+	l = (GList *) 0x96541d0
+	children = (GList *) 0x9654220
+#22 0x00508754 in _gdk_windowing_window_process_updates_recurse (
+    window=0x95351f8, region=0x9684360)
+    at /build/buildd/gtk+2.0-2.18.2/gdk/x11/gdkwindow-x11.c:5566
+No locals.
+#23 0x004dc89f in gdk_window_process_updates_internal (window=0x95351f8)
+    at /build/buildd/gtk+2.0-2.18.2/gdk/gdkwindow.c:5220
+	expose_region = (GdkRegion *) 0x9684360
+	save_region = 157984080
+	clip_box = {x = 13, y = 59, width = 992, height = 563}
+#24 0x004e0a70 in IA__gdk_window_process_updates (window=0x9699800, 
+    update_children=1) at /build/buildd/gtk+2.0-2.18.2/gdk/gdkwindow.c:5394
+	impl_window = (GdkWindowObject *) 0x95351f8
+	__PRETTY_FUNCTION__ = "IA__gdk_window_process_updates"
+#25 0x0112f030 in gtk_tree_view_adjustment_changed (adjustment=0x9534e20, 
+    tree_view=0x960a160)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtktreeview.c:10540
+	dy = 1
+#26 0x00c5e9fc in g_cclosure_marshal_VOID__VOID ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#27 0x00c51072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#28 0x00c667a8 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#29 0x00c67b2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#30 0x00c67fb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#31 0x00f6593a in IA__gtk_adjustment_value_changed (adjustment=0x9534e20)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkadjustment.c:668
+	__PRETTY_FUNCTION__ = "IA__gtk_adjustment_value_changed"
+#32 0x0113997d in gtk_tree_view_size_allocate (widget=0x960a160, 
+    allocation=0xbfd872e0)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtktreeview.c:2408
+	tmp_list = <value optimized out>
+	width_changed = 1
+	old_width = 969
+#33 0x00c5e068 in g_cclosure_marshal_VOID__BOXED ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#34 0x00c4f6f9 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#35 0x00c50f98 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#36 0x00c660b0 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#37 0x00c67b2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#38 0x00c67fb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#39 0x0115e540 in IA__gtk_widget_size_allocate (widget=0x960a160, 
+    allocation=0xbfd87344)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwidget.c:3887
+	aux_info = <value optimized out>
+	real_allocation = {x = 14, y = 93, width = 969, height = 528}
+	old_allocation = {x = 14, y = 93, width = 969, height = 528}
+	size_changed = 0
+	position_changed = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_widget_size_allocate"
+#40 0x0109efb1 in gtk_scrolled_window_size_allocate (widget=0x9589180, 
+    allocation=0xbfd87700)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkscrolledwindow.c:1430
+	previous_hvis = 1
+	previous_vvis = 1
+	relative_allocation = {x = 1, y = 1, width = 969, height = 528}
+	child_allocation = {x = 14, y = 93, width = 969, height = 528}
+	scrollbars_within_bevel = <value optimized out>
+	scrollbar_spacing = 3
+	__PRETTY_FUNCTION__ = "gtk_scrolled_window_size_allocate"
+#41 0x00c5e068 in g_cclosure_marshal_VOID__BOXED ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#42 0x00c4f6f9 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#43 0x00c50f98 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#44 0x00c660b0 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#45 0x00c67b2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#46 0x00c67fb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#47 0x0115e540 in IA__gtk_widget_size_allocate (widget=0x9589180, 
+    allocation=0xbfd87798)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwidget.c:3887
+	aux_info = <value optimized out>
+	real_allocation = {x = 13, y = 92, width = 992, height = 551}
+	old_allocation = {x = 13, y = 92, width = 992, height = 551}
+	size_changed = 0
+	position_changed = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_widget_size_allocate"
+#48 0x00f72c9f in gtk_box_size_allocate (widget=<value optimized out>, 
+    allocation=0xbfd87b40) at /build/buildd/gtk+2.0-2.18.2/gtk/gtkbox.c:500
+	child = (GtkBoxChild *) 0x5c
+	children = (GList *) 0x95a79c0
+	child_allocation = {x = 13, y = 92, width = 992, height = 551}
+	nvis_children = <value optimized out>
+	nexpand_children = <value optimized out>
+	child_width = <value optimized out>
+	child_height = 551
+	width = -466
+	height = 0
+	extra = 466
+	x = <value optimized out>
+	y = 92
+	direction = GTK_TEXT_DIR_LTR
+#49 0x00c5e068 in g_cclosure_marshal_VOID__BOXED ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#50 0x00c4f6f9 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#51 0x00c50f98 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#52 0x00c660b0 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#53 0x00c67b2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#54 0x00c67fb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#55 0x0115e540 in IA__gtk_widget_size_allocate (widget=0x9590120, 
+    allocation=0xbfd87bd0)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwidget.c:3887
+	aux_info = <value optimized out>
+	real_allocation = {x = 1, y = 47, width = 1016, height = 653}
+	old_allocation = {x = 1, y = 47, width = 1016, height = 653}
+	size_changed = 0
+	position_changed = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_widget_size_allocate"
+#56 0x0105c08d in gtk_notebook_size_allocate (widget=0x9601800, 
+    allocation=0xbfd87f70)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtknotebook.c:2134
+	border_width = <value optimized out>
+	page = <value optimized out>
+	child_allocation = {x = 1, y = 47, width = 1016, height = 653}
+	children = (GList *) 0x95b4300
+	tab_pos = 2
+#57 0x00c5e068 in g_cclosure_marshal_VOID__BOXED ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#58 0x00c4f6f9 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#59 0x00c50f98 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#60 0x00c660b0 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#61 0x00c67b2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#62 0x00c67fb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#63 0x0115e540 in IA__gtk_widget_size_allocate (widget=0x9601800, 
+    allocation=0xbfd88008)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwidget.c:3887
+	aux_info = <value optimized out>
+	real_allocation = {x = 0, y = 23, width = 1018, height = 678}
+	old_allocation = {x = 0, y = 23, width = 1018, height = 678}
+	size_changed = 0
+	position_changed = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_widget_size_allocate"
+#64 0x00f72c9f in gtk_box_size_allocate (widget=<value optimized out>, 
+    allocation=0xbfd883b0) at /build/buildd/gtk+2.0-2.18.2/gtk/gtkbox.c:500
+	child = (GtkBoxChild *) 0x17
+	children = (GList *) 0x964d400
+	child_allocation = {x = 0, y = 23, width = 1018, height = 678}
+	nvis_children = <value optimized out>
+	nexpand_children = <value optimized out>
+	child_width = <value optimized out>
+	child_height = 678
+	width = -305
+	height = 0
+	extra = 305
+	x = <value optimized out>
+	y = 23
+	direction = GTK_TEXT_DIR_LTR
+#65 0x00c5e068 in g_cclosure_marshal_VOID__BOXED ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#66 0x00c4f6f9 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#67 0x00c50f98 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#68 0x00c660b0 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#69 0x00c67b2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#70 0x00c67fb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#71 0x0115e540 in IA__gtk_widget_size_allocate (widget=0x9590018, 
+    allocation=0xbfd883f0)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwidget.c:3887
+	aux_info = <value optimized out>
+	real_allocation = {x = 0, y = 0, width = 1018, height = 720}
+	old_allocation = {x = 0, y = 0, width = 1018, height = 720}
+	size_changed = 0
+	position_changed = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_widget_size_allocate"
+#72 0x01170d3b in gtk_window_size_allocate (widget=0x958c838, 
+    allocation=0xbfd88790)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwindow.c:4941
+	child_allocation = {x = 0, y = 0, width = 1018, height = 720}
+#73 0x00c5e068 in g_cclosure_marshal_VOID__BOXED ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#74 0x00c4f6f9 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#75 0x00c51072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#76 0x00c660b0 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#77 0x00c67b2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#78 0x00c67fb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#79 0x0115e540 in IA__gtk_widget_size_allocate (widget=0x958c838, 
+    allocation=0x958c85c) at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwidget.c:3887
+	aux_info = <value optimized out>
+	real_allocation = {x = 0, y = 0, width = 1018, height = 720}
+	old_allocation = {x = 0, y = 0, width = 1018, height = 720}
+	size_changed = 0
+	position_changed = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_widget_size_allocate"
+#80 0x00fa624f in IA__gtk_container_resize_children (container=0x958c838)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkcontainer.c:1470
+	__PRETTY_FUNCTION__ = "IA__gtk_container_resize_children"
+#81 0x0117127c in gtk_window_check_resize (container=0x958c838)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwindow.c:6352
+No locals.
+#82 0x00c5e9fc in g_cclosure_marshal_VOID__VOID ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#83 0x00c4f6f9 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#84 0x00c51072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#85 0x00c6649e in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#86 0x00c67b2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#87 0x00c67fb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#88 0x00fa62ea in IA__gtk_container_check_resize (container=0x958c838)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkcontainer.c:1424
+	__PRETTY_FUNCTION__ = "IA__gtk_container_check_resize"
+#89 0x00fa6340 in gtk_container_idle_sizer (data=0x0)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkcontainer.c:1350
+	widget = (GtkWidget *) 0x958c838
+#90 0x004baf98 in gdk_threads_dispatch (data=0x96e4fb0)
+    at /build/buildd/gtk+2.0-2.18.2/gdk/gdk.c:506
+	ret = 0
+#91 0x008880f1 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#92 0x00889e78 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#93 0x0088d720 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#94 0x0088db8f in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#95 0x010343a9 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkmain.c:1216
+	tmp_list = (GList *) 0xbfd88f48
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0xbfd88f28
+	loop = (GMainLoop *) 0x9672ef0
+#96 0x003395e7 in Gtk::Main::run_impl (this=0xbfd88f38) at main.cc:536
+No locals.
+#97 0x003393e2 in Gtk::Main::run () at main.cc:483
+No locals.
+#98 0x08056be4 in main (argc=1, argv=0xbfd89034) at procman.cpp:757
+	procdata = (ProcData *) 0x8081ce0
+	conn = <value optimized out>
+	context = {_vptr.OptionContext = 0x6c7878, gobject_ = 0x9505140, 
+  has_ownership_ = true}
+	__func__ = "main"
+	__PRETTY_FUNCTION__ = "int main(int, char**)"
+	startup_timestamp = 0
+	client = <value optimized out>
+	option_group = {<Glib::OptionGroup> = {_vptr.OptionGroup = 0x8077398, 
+    map_entries_ = {_M_t = {
+        _M_impl = {<std::allocator<std::_Rb_tree_node<std::pair<const Glib::ustring, Glib::OptionGroup::CppOptionEntry> > >> = {<__gnu_cxx::new_allocator<std::_Rb_tree_node<std::pair<const Glib::ustring, Glib::OptionGroup::CppOptionEntry> > >> = {<No data fields>}, <No data fields>}, 
+          _M_key_compare = {<std::binary_function<Glib::ustring, Glib::ustring, bool>> = {<No data fields>}, <No data fields>}, _M_header = {
+            _M_color = std::_S_red, _M_parent = 0x9505f48, 
+            _M_left = 0x9505f48, _M_right = 0x9505f48}, _M_node_count = 1}}}, 
+    gobject_ = 0x9505d50, has_ownership_ = false}, show_system_tab = false}
+	kit = {<sigc::trackable> = {callback_list_ = 0x0}, 
+  _vptr.Main = 0x479088, static signal_run_ = {<No data fields>}, 
+  static signal_quit_ = {<No data fields>}, 
+  static signal_key_snooper_ = {<No data fields>}, 
+  static instance_ = 0xbfd88f38}

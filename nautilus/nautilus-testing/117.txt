@@ -1,0 +1,36 @@
+#0  0x09667b28 in ?? () from /lib/libc.so.6
+No symbol table info available.
+#1  0x00bba724 in g_str_equal () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#2  0x08141448 in ?? ()
+No symbol table info available.
+#3  0x00b8574a in g_hash_table_lookup () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#4  0x081418ed in ?? ()
+No symbol table info available.
+#5  0x081234af in ?? ()
+No symbol table info available.
+#6  0x080c71d6 in ?? ()
+No symbol table info available.
+#7  0x08130ab9 in ?? ()
+No symbol table info available.
+#8  0x0813790f in ?? ()
+No symbol table info available.
+#9  0x08137dd2 in ?? ()
+No symbol table info available.
+#10 0x00b92451 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#11 0x00b96c08 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#12 0x00b973d0 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#13 0x00b97a93 in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#14 0x00ed4a49 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#15 0x0807fb66 in ?? ()
+No symbol table info available.
+#16 0x09561e36 in __libc_start_main () from /lib/libc.so.6
+No symbol table info available.
+#17 0x0806a791 in ?? ()
+No symbol table info available.

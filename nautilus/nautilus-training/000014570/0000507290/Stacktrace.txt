@@ -1,0 +1,43 @@
+#0  0x00cb9422 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x008dd5b1 in raise () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#2  0x008e0a12 in abort () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#3  0x008d6718 in __assert_fail () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#4  0x00672cf9 in _XAllocID () from /usr/lib/libX11.so.6
+No symbol table info available.
+#5  0x0077bb88 in XRenderCreateCursor () from /usr/lib/libXrender.so.1
+No symbol table info available.
+#6  0x008869e2 in XcursorImageLoadCursor () from /usr/lib/libXcursor.so.1
+No symbol table info available.
+#7  0x00887766 in XcursorImagesLoadCursors () from /usr/lib/libXcursor.so.1
+No symbol table info available.
+#8  0x00887887 in XcursorImagesLoadCursor () from /usr/lib/libXcursor.so.1
+No symbol table info available.
+#9  0x0088b188 in XcursorTryShapeCursor () from /usr/lib/libXcursor.so.1
+No symbol table info available.
+#10 0x00647d3d in XCreateGlyphCursor () from /usr/lib/libX11.so.6
+No symbol table info available.
+#11 0x00648459 in XCreateFontCursor () from /usr/lib/libX11.so.6
+No symbol table info available.
+#12 0x003174c8 in gdk_cursor_new_for_display ()
+   from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#13 0x002e5f7a in gdk_cursor_new () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#14 0x0805b712 in ?? ()
+No symbol table info available.
+#15 0x0805c0e1 in ?? ()
+No symbol table info available.
+#16 0x08053b30 in ?? ()
+No symbol table info available.
+#17 0x08053b9f in ?? ()
+No symbol table info available.
+#18 0x0806053c in ?? ()
+No symbol table info available.
+#19 0x008c9bd6 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#20 0x08053741 in ?? ()
+No symbol table info available.

@@ -1,0 +1,129 @@
+#0  0x08197c26 in nautilus_desktop_update_metadata_from_gconf (
+    file=0x89260e0, 
+    name=0x81bca2c " Nautilus pixmap path \"%s\". Incomplete installation?")
+    at nautilus-desktop-directory-file.c:548
+	client = (GConfClient *) 0x877ae90
+	entries = (GSList *) 0x8dcb440
+	l = <value optimized out>
+	dir = 0x8b75978 "?\032?\b"
+	key = <value optimized out>
+	entry = <value optimized out>
+	value = <value optimized out>
+	info = (GFileInfo *) 0x8b75898
+	changed = <value optimized out>
+	gio_key = <value optimized out>
+	value_list = <value optimized out>
+	i = <value optimized out>
+#1  0x08197ec3 in nautilus_desktop_directory_file_set_metadata_as_list (
+    file=0x89260e0, 
+    key=0x81bca2c " Nautilus pixmap path \"%s\". Incomplete installation?", 
+    value=0x81a96f8) at nautilus-desktop-directory-file.c:602
+No locals.
+#2  0x08197f35 in nautilus_desktop_set_metadata_string (file=0x89260e0, 
+    name=0x81a96f8 "", key=0x0, string=0x0)
+    at nautilus-desktop-directory-file.c:486
+	client = (GConfClient *) 0x877ae90
+	gconf_key = 0x87a0180 "metadata::window_scroll_position"
+#3  0x0811b4af in nautilus_file_set_metadata (file=0x89260e0, 
+    key=0x8207ff4 "p| \bp??", default_metadata=0x0, metadata=0x0)
+    at nautilus-file.c:3470
+	__t = 142213504
+	__r = <value optimized out>
+	val = 0x0
+	__PRETTY_FUNCTION__ = "nautilus_file_set_metadata"
+#4  0x0809df1e in save_spatial_data (slot=0x891c000)
+    at nautilus-spatial-window.c:294
+No locals.
+#5  0x0809e01f in real_close_slot (window=0x87aa068, slot=0x891c000)
+    at nautilus-spatial-window.c:485
+No locals.
+#6  0x080a8c5e in nautilus_window_close_slot (window=0x87aa068, 
+    slot=0x891c000) at nautilus-window.c:733
+	__PRETTY_FUNCTION__ = "nautilus_window_close_slot"
+#7  0x080ab05f in nautilus_window_destroy (object=0x87aa068)
+    at nautilus-window.c:605
+	window = (NautilusWindow *) 0x87aa068
+	l = <value optimized out>
+	slots = <value optimized out>
+#8  0x0053b15c in ?? ()
+#9  0x0052b789 in ?? ()
+#10 0x0052d102 in ?? ()
+#11 0x00543e49 in ?? ()
+#12 0x00544ecd in ?? ()
+#13 0x00545386 in ?? ()
+#14 0x01101b5e in ?? ()
+#15 0x01218b61 in ?? ()
+#16 0x0122751c in ?? ()
+#17 0x0052f82f in ?? ()
+#18 0x011017d2 in ?? ()
+#19 0x0808145a in ?? () at nautilus-main.c:485
+	event_loop_registrants = (GSList *) 0x0
+	exit_with_last_window = 1
+	default_log_handler = (GLogFunc) 0x76d320
+	debug_log_pipes = {7, 8}
+#20 0x0053b15c in ?? ()
+#21 0x0052d102 in ?? ()
+#22 0x00543ae8 in ?? ()
+#23 0x00544ecd in ?? ()
+#24 0x00545386 in ?? ()
+#25 0x0815b7f2 in egg_sm_client_quit (client=0x0) at eggsmclient.c:570
+	__PRETTY_FUNCTION__ = "egg_sm_client_quit"
+#26 0x00000090 in ?? ()
+#27 0x0815db27 in sm_client_xsmp_end_session (client=0x877eb08, 
+    style=142061088, request_confirmation=8) at eggsmclient-xsmp.c:524
+	save_type = 134863680
+#28 0x00cdf428 in ?? ()
+#29 0x00240e83 in ?? ()
+#30 0x0815d8b9 in sm_client_xsmp_disconnect (xsmp=0xce1ff4)
+    at eggsmclient-xsmp.c:300
+	connection = <value optimized out>
+#31 0x0079ab5b in ?? ()
+#32 0x00763c48 in ?? ()
+#33 0x007674f0 in ?? ()
+#34 0x0076795f in ?? ()
+#35 0x010cea49 in ?? ()
+#36 0x08081351 in main (argc=1, argv=0xbfc69814) at nautilus-main.c:542
+	kill_shell = 0
+	no_default_window = 1
+	browser_window = 0
+	no_desktop = 0
+	version = 0
+	autostart_mode = 142076680
+	autostart_id = <value optimized out>
+	geometry = (gchar *) 0x0
+	remaining = (const gchar **) 0x0
+	perform_self_check = 0
+	application = (NautilusApplication *) 0x877eac0
+	context = <value optimized out>
+	file = (GFile *) 0x877eb08
+	uri = <value optimized out>
+	uris = (char **) 0x815dac0
+	uris_array = <value optimized out>
+	error = (GError *) 0x0
+	options = {{long_name = 0x81a5c19 "Nautilus.", short_name = 99 'c', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfc69750, 
+    description = 0x81a5c5c "UTOSTART_ID", arg_description = 0x0}, {
+    long_name = 0x81a5b4f "\b\235?\a\b\235?\a\b:?\a\b??\a\bresponse_callback", short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfc6975c, description = 0x81a5c88 "debug-log.conf", 
+    arg_description = 0x0}, {long_name = 0x81a96ef "", short_name = 103 'g', 
+    flags = 0, arg = G_OPTION_ARG_STRING, arg_data = 0xbfc69758, 
+    description = 0x81a5cac "us-main.c", 
+    arg_description = 0x81a5b57 "\b:?\a\b??\a\bresponse_callback"}, {
+    long_name = 0x81a5b60 "response_callback", short_name = 110 'n', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfc69768, 
+    description = 0x81a5ce0 "orm a quick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x81a5b72 "NautilusLocationEntry", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfc69760, description = 0x81a5d14 "sion of the program.", 
+    arg_description = 0x0}, {long_name = 0x81a2891 "ion", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfc69764, description = 0x81a5b7d "ationEntry", 
+    arg_description = 0x0}, {
+    long_name = 0x81c4edd ",??S+??S+??S+??S+??S+??S+??S+??S+??S+??S+??S+??S+??S+??\016,??t+??S+???+??S+??S+???+??S+??\212+??S+??t+??t+??S+??S+??S+??S+??S+??S+???+??t+???-??\0044???3???3???3???3??\2343??\2043??l3??\\3??L3??<3??,3??\\.??client =="..., short_name = 113 'q', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfc6976c, description = 0x81a5b94 "on-release", 
+    arg_description = 0x0}, {long_name = 0x81aa921 "sconnect_proxy", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_STRING_ARRAY, 
+    arg_data = 0xbfc69754, description = 0x0, 
+    arg_description = 0x81a5ba3 "completion_data"}, {long_name = 0x0, 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x0, 
+    description = 0x0, arg_description = 0x0}}

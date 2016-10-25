@@ -1,0 +1,26 @@
+#0  0x0000000000447a81 in ?? ()
+#1  0x00007f07d9995c1f in g_closure_invoke ()
+   from /usr/lib/libgobject-2.0.so.0
+#2  0x00007f07d99aaa92 in ?? () from /usr/lib/libgobject-2.0.so.0
+#3  0x00007f07d99ac377 in g_signal_emit_valist ()
+   from /usr/lib/libgobject-2.0.so.0
+#4  0x00007f07d99ac833 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+#5  0x00000000004e5511 in ?? ()
+#6  0x00007f07d08e9c47 in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+#7  0x00007f07d08e97ae in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+#8  0x00007f07d08f047e in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+#9  0x00007f07d08f4c63 in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+#10 0x00007f07d7c616da in ?? () from /usr/lib/libdbus-1.so.3
+#11 0x00007f07d7c62e51 in dbus_connection_dispatch ()
+   from /usr/lib/libdbus-1.so.3
+#12 0x00007f07d08f3595 in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+#13 0x00007f07d94ff3b4 in g_main_context_dispatch ()
+   from /usr/lib/libglib-2.0.so.0
+#14 0x00007f07d95026c5 in ?? () from /usr/lib/libglib-2.0.so.0
+#15 0x00007f07d95029e5 in g_main_loop_run () from /usr/lib/libglib-2.0.so.0
+#16 0x00007f07daf4ad63 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+#17 0x000000000043feb3 in ?? ()
+#18 0x00007f07d80d01c4 in __libc_start_main () from /lib/libc.so.6
+#19 0x000000000042d3e9 in ?? ()
+#20 0x00007fffe5827218 in ?? ()
+#21 0x0000000000000000 in ?? ()

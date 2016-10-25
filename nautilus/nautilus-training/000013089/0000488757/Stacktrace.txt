@@ -1,0 +1,75 @@
+#0  0x013780b6 in PyThreadState_New () from /usr/lib/libpython2.6.so.1.0
+No symbol table info available.
+#1  0x01378176 in PyGILState_Ensure () from /usr/lib/libpython2.6.so.1.0
+No symbol table info available.
+#2  0x04593d79 in pyglib_gil_state_ensure ()
+    at /build/buildd/pygobject-2.18.0/glib/pyglib.c:110
+	__PRETTY_FUNCTION__ = "pyglib_gil_state_ensure"
+#3  0x052eb7dc in ?? ()
+   from /usr/lib/pymodules/python2.6/gtk-2.0/gobject/_gobject.so
+No symbol table info available.
+#4  0x00a35a78 in g_datalist_clear () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#5  0x00989410 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#6  0x0812581f in finalize (object=0x9d5e8e0) at nautilus-file.c:833
+	directory = (NautilusDirectory *) 0x9d5d080
+	file = (NautilusFile *) 0x9d5e8e0
+	uri = <value optimized out>
+	__PRETTY_FUNCTION__ = "finalize"
+#7  0x009871bb in g_object_unref () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#8  0x081226e0 in nautilus_file_unref (file=0x9d5e8e0) at nautilus-file.c:864
+	__PRETTY_FUNCTION__ = "nautilus_file_unref"
+#9  0x08116f87 in free_xdg_dir_cache () at nautilus-file-utilities.c:343
+No locals.
+#10 0x08117027 in destroy_xdg_dir_cache () at nautilus-file-utilities.c:355
+No locals.
+#11 0x0816d5dc in eel_debug_shut_down () at eel-debug.c:109
+	f = (ShutdownFunction *) 0x9d4d180
+#12 0x08081871 in main (argc=1, argv=0xbf84fa74) at nautilus-main.c:598
+	kill_shell = 0
+	no_default_window = 1
+	browser_window = 0
+	no_desktop = 0
+	version = 0
+	autostart_mode = 1
+	autostart_id = <value optimized out>
+	geometry = (gchar *) 0x0
+	remaining = (gchar **) 0x0
+	perform_self_check = 0
+	application = (NautilusApplication *) 0x9d33400
+	context = (GOptionContext *) 0x0
+	file = (GFile *) 0x1
+	uri = <value optimized out>
+	uris = (char **) 0x0
+	uris_array = <value optimized out>
+	error = (GError *) 0x0
+	options = {{long_name = 0x81a6e16 "check", short_name = 99 'c', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbf84f990, 
+    description = 0x81a6e58 "Perform a quick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x81a6d0f "version", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbf84f99c, 
+    description = 0x81a6e84 "Show the version of the program.", 
+    arg_description = 0x0}, {long_name = 0x81aaa18 "geometry", 
+    short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+    arg_data = 0xbf84f998, 
+    description = 0x81a6ea8 "Create the initial window with the given geometry.", arg_description = 0x81a6d17 "GEOMETRY"}, {
+    long_name = 0x81a6d20 "no-default-window", short_name = 110 'n', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbf84f9a8, 
+    description = 0x81a6edc "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {long_name = 0x81a6d32 "no-desktop", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbf84f9a0, 
+    description = 0x81a6f10 "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {
+    long_name = 0x81a3a0b "browser", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbf84f9a4, 
+    description = 0x81a6d3d "open a browser window.", arg_description = 0x0}, 
+  {long_name = 0x81c661d "quit", short_name = 113 'q', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbf84f9ac, 
+    description = 0x81a6d54 "Quit Nautilus.", arg_description = 0x0}, {
+    long_name = 0x81abd61 "", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0xbf84f994, 
+    description = 0x0, arg_description = 0x81a6d63 "[URI...]"}, {
+    long_name = 0x0, short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x0, description = 0x0, arg_description = 0x0}}

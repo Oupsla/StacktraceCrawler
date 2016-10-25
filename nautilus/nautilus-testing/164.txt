@@ -1,0 +1,45 @@
+#0  0x01214ae2 in pa_shm_cleanup () from /usr/lib/libpulsecommon-0.9.21.so
+No symbol table info available.
+#1  0x01214cad in pa_shm_create_rw () from /usr/lib/libpulsecommon-0.9.21.so
+No symbol table info available.
+#2  0x012067ef in pa_mempool_new () from /usr/lib/libpulsecommon-0.9.21.so
+No symbol table info available.
+#3  0x06e7ba55 in pa_context_new_with_proplist () from /usr/lib/libpulse.so.0
+No symbol table info available.
+#4  0x082f27bb in ?? () from /usr/lib/libcanberra-0.22/libcanberra-pulse.so
+No symbol table info available.
+#5  0x082f2a55 in pulse_driver_open ()
+   from /usr/lib/libcanberra-0.22/libcanberra-pulse.so
+No symbol table info available.
+#6  0x00619e46 in ?? () from /usr/lib/libcanberra.so.0
+No symbol table info available.
+#7  0x00610888 in ?? () from /usr/lib/libcanberra.so.0
+No symbol table info available.
+#8  0x00611135 in ca_context_play_full () from /usr/lib/libcanberra.so.0
+No symbol table info available.
+#9  0x00535a56 in ca_gtk_play_for_widget () from /usr/lib/libcanberra-gtk.so.0
+No symbol table info available.
+#10 0x005655cf in ?? ()
+   from /usr/lib/gtk-2.0/modules/libcanberra-gtk-module.so
+No symbol table info available.
+#11 0x005659a1 in ?? ()
+   from /usr/lib/gtk-2.0/modules/libcanberra-gtk-module.so
+No symbol table info available.
+#12 0x00a8d318 in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#13 0x0076e6c1 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#14 0x00770645 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#15 0x00774338 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#16 0x00774877 in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#17 0x00df3299 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#18 0x08080e08 in ?? ()
+No symbol table info available.
+#19 0x02991bd6 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#20 0x0806c6b1 in ?? ()
+No symbol table info available.

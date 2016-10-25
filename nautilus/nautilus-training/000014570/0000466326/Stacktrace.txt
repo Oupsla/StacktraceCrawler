@@ -1,0 +1,274 @@
+#0  0xb7f7a430 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0xb737b4d1 in *__GI_raise (sig=6)
+    at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+	resultvar = <value optimized out>
+	pid = -1219948556
+	selftid = 4814
+#2  0xb737e932 in *__GI_abort () at abort.c:92
+	act = {__sigaction_handler = {sa_handler = 0xb7490ff4, 
+    sa_sigaction = 0xb7490ff4}, sa_mask = {__val = {305, 56, 3075023776, 
+      3075018740, 3075023776, 102, 3220778560, 3074164637, 138928408, 
+      3075018740, 3075018740, 103, 3220778760, 3074100248, 138927368, 
+      138927368, 102, 138928408, 0, 4222451712, 138927368, 138927469, 
+      138927368, 138927368, 138927470, 138927668, 138927368, 138927668, 0, 0, 
+      0, 0}}, sa_flags = 0, sa_restorer = 0x2}
+	sigs = {__val = {32, 0 <repeats 31 times>}}
+#3  0xb7374648 in *__GI___assert_fail (
+    assertion=0xb7546b65 "ret != inval_id", 
+    file=0xb7546b29 "../../src/xcb_io.c", line=378, 
+    function=0xb7546ce4 "_XAllocID") at assert.c:81
+	buf = 0x847e118 "gnome-panel: ../../src/xcb_io.c :378 : _XAllocID:  L'assertion « ret != inval_id » a échoué.\n"
+#4  0xb74d7199 in _XAllocID (dpy=0x8116770) at ../../src/xcb_io.c:378
+	ret = 4294967295
+	__PRETTY_FUNCTION__ = "_XAllocID"
+#5  0xb74ad048 in XCreatePixmap (dpy=0x8116770, d=265, width=24, height=24, 
+    depth=32) at ../../src/CrPixmap.c:58
+No locals.
+#6  0xb6fa18de in XcursorImageLoadCursor (dpy=0x8116770, image=0x84856c8)
+    at ../../src/cursor.c:582
+	screen = 0
+	gc = <value optimized out>
+	ximage = {width = 24, height = 24, xoffset = 0, format = 2, 
+  data = 0x84856e8 "", byte_order = 0, bitmap_unit = 32, 
+  bitmap_bit_order = 0, bitmap_pad = 32, depth = 32, bytes_per_line = 96, 
+  bits_per_pixel = 32, red_mask = 16711680, green_mask = 65280, 
+  blue_mask = 255, obdata = 0x0, f = {
+    create_image = 0xb74b8280 <XCreateImage>, 
+    destroy_image = 0xb74b8640 <_XDestroyImage>, 
+    get_pixel = 0xb74b7aa0 <_XGetPixel32>, 
+    put_pixel = 0xb74b7d40 <_XPutPixel32>, 
+    sub_image = 0xb74b8470 <_XSubImage>, add_pixel = 0xb74b8100 <_XAddPixel>}}
+	pixmap = 0
+	picture = <value optimized out>
+	format = <value optimized out>
+	cursor = <value optimized out>
+#7  0xb6fa27f5 in XcursorImagesLoadCursor (dpy=0x8116770, images=0x847fa80)
+    at ../../src/cursor.c:700
+	cursor = <value optimized out>
+#8  0xb6fa61f7 in XcursorTryShapeCursor (dpy=0x8116770, source_font=31459753, 
+    mask_font=31459753, source_char=152, mask_char=153, 
+    foreground=0xb753960c, background=0xb7539618) at ../../src/xlib.c:110
+	size = <value optimized out>
+	theme = <value optimized out>
+	images = <value optimized out>
+	cursor = <value optimized out>
+#9  0xb74acafd in XCreateGlyphCursor (dpy=0x8116770, source_font=31459753, 
+    mask_font=31459753, source_char=152, mask_char=153, 
+    foreground=0xb753960c, background=0xb7539618) at ../../src/CrGlCur.c:179
+	cid = <value optimized out>
+#10 0xb74ad219 in XCreateFontCursor (dpy=0x8116770, which=152)
+    at ../../src/Cursor.c:52
+No locals.
+#11 0xb7946a67 in IA__gdk_cursor_new_for_display (display=0x8122000, 
+    cursor_type=GDK_XTERM)
+    at /build/buildd/gtk+2.0-2.18.3/gdk/x11/gdkcursor-x11.c:282
+	private = <value optimized out>
+	cursor = <value optimized out>
+	xcursor = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gdk_cursor_new_for_display"
+#12 0xb7aba381 in gtk_label_create_window (label=0x8457238)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtklabel.c:4418
+	attributes = {title = 0xb767a788 "\001", event_mask = 8988, x = 73, 
+  y = 13, width = 369, height = 19, wclass = GDK_INPUT_ONLY, 
+  visual = 0xb76c2200, colormap = 0xb767a788, window_type = GDK_WINDOW_CHILD, 
+  cursor = 0xb76b7ff4, wmclass_name = 0xb7d51ff4 "D�;", 
+  wmclass_class = 0x8457238 "83,\b\002", override_redirect = 1, 
+  type_hint = 3081479270}
+	__PRETTY_FUNCTION__ = "gtk_label_create_window"
+#13 0xb76939fc in g_cclosure_marshal_VOID__VOID ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#14 0xb76846f9 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#15 0xb7686072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#16 0xb769b0b0 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#17 0xb769cb2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#18 0xb769cfb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#19 0xb7bf84e1 in IA__gtk_widget_realize (widget=0x8457238)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkwidget.c:3328
+	mode = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_widget_realize"
+#20 0xb7bf8d60 in IA__gtk_widget_map (widget=0x8457238)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkwidget.c:3202
+	__PRETTY_FUNCTION__ = "IA__gtk_widget_map"
+#21 0xb7a0a9b5 in gtk_box_forall (container=0x838a220, include_internals=1, 
+    callback=0xb7a40230 <gtk_container_map_child>, callback_data=0x0)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkbox.c:1249
+	child = <value optimized out>
+	children = <value optimized out>
+#22 0xb7a3e1f4 in IA__gtk_container_forall (container=0x838a220, 
+    callback=0xb7a40230 <gtk_container_map_child>, callback_data=0x0)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkcontainer.c:1499
+	__PRETTY_FUNCTION__ = "IA__gtk_container_forall"
+#23 0xb7a4020b in gtk_container_map (widget=0x838a220)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkcontainer.c:2665
+No locals.
+#24 0xb76939fc in g_cclosure_marshal_VOID__VOID ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#25 0xb76846f9 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#26 0xb7685f98 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#27 0xb769b0b0 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#28 0xb769cb2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#29 0xb769cfb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#30 0xb7bf8d0c in IA__gtk_widget_map (widget=0x838a220)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkwidget.c:3204
+	__PRETTY_FUNCTION__ = "IA__gtk_widget_map"
+#31 0xb7a0a9b5 in gtk_box_forall (container=0x838a1c8, include_internals=1, 
+    callback=0xb7a40230 <gtk_container_map_child>, callback_data=0x0)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkbox.c:1249
+	child = <value optimized out>
+	children = <value optimized out>
+#32 0xb7a3e1f4 in IA__gtk_container_forall (container=0x838a1c8, 
+    callback=0xb7a40230 <gtk_container_map_child>, callback_data=0x0)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkcontainer.c:1499
+	__PRETTY_FUNCTION__ = "IA__gtk_container_forall"
+#33 0xb7a4020b in gtk_container_map (widget=0x838a1c8)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkcontainer.c:2665
+No locals.
+#34 0xb76939fc in g_cclosure_marshal_VOID__VOID ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#35 0xb76846f9 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#36 0xb7685f98 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#37 0xb769b0b0 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#38 0xb769cb2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#39 0xb769cfb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#40 0xb7bf8d0c in IA__gtk_widget_map (widget=0x838a1c8)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkwidget.c:3204
+	__PRETTY_FUNCTION__ = "IA__gtk_widget_map"
+#41 0xb7a0a9b5 in gtk_box_forall (container=0x838a170, include_internals=1, 
+    callback=0xb7a40230 <gtk_container_map_child>, callback_data=0x0)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkbox.c:1249
+	child = <value optimized out>
+	children = <value optimized out>
+#42 0xb7a3e1f4 in IA__gtk_container_forall (container=0x838a170, 
+    callback=0xb7a40230 <gtk_container_map_child>, callback_data=0x0)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkcontainer.c:1499
+	__PRETTY_FUNCTION__ = "IA__gtk_container_forall"
+#43 0xb7a4020b in gtk_container_map (widget=0x838a170)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkcontainer.c:2665
+No locals.
+#44 0xb76939fc in g_cclosure_marshal_VOID__VOID ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#45 0xb76846f9 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#46 0xb7685f98 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#47 0xb769b0b0 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#48 0xb769cb2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#49 0xb769cfb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#50 0xb7bf8d0c in IA__gtk_widget_map (widget=0x838a170)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkwidget.c:3204
+	__PRETTY_FUNCTION__ = "IA__gtk_widget_map"
+#51 0xb7c0a3d5 in gtk_window_map (widget=0x846c808)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkwindow.c:4546
+	priv = (GtkWindowPrivate *) 0x846c8b0
+	toplevel = (GdkWindow *) 0xb769f13e
+#52 0xb7a45cb3 in gtk_dialog_map (widget=0x846c808)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdialog.c:403
+No locals.
+#53 0xb76939fc in g_cclosure_marshal_VOID__VOID ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#54 0xb76846f9 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#55 0xb7686072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#56 0xb769b0b0 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#57 0xb769cb2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#58 0xb769cfb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#59 0xb7bf8d0c in IA__gtk_widget_map (widget=0x846c808)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkwidget.c:3204
+	__PRETTY_FUNCTION__ = "IA__gtk_widget_map"
+#60 0xb7c0a4de in gtk_window_show (widget=0x846c808)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkwindow.c:4511
+No locals.
+#61 0xb76939fc in g_cclosure_marshal_VOID__VOID ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#62 0xb76846f9 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#63 0xb7686072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#64 0xb769b0b0 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#65 0xb769cb2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#66 0xb769cfb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#67 0xb7bf94b6 in IA__gtk_widget_show (widget=0x846c808)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkwidget.c:3012
+	__PRETTY_FUNCTION__ = "IA__gtk_widget_show"
+#68 0x08088b85 in panel_applet_frame_cnx_broken (cnx=0x8302d40, 
+    frame=0x83164b0) at panel-applet-frame.c:1002
+	dialog = (GtkWidget *) 0x846c808
+	screen = (GdkScreen *) 0x8126108
+	applet_name = 0x846bd98 "Moniteur réseau"
+	dialog_txt = <value optimized out>
+	__PRETTY_FUNCTION__ = "panel_applet_frame_cnx_broken"
+#69 0xb7db90b1 in link_connection_emit_broken (cnx=0x8302d40, callbacks=0x6)
+    at linc-connection.c:146
+	bc = (BrokenCallback *) 0x82da160
+	l = (GSList *) 0x8256ed8
+#70 0xb7db9114 in dispatch_callbacks_drop_lock (cnx=0x8302d40)
+    at linc-connection.c:273
+	callbacks = (GSList *) 0x8256ed8
+#71 0xb7db97e5 in link_connection_state_changed_T_R (cnx=0x8302d40, 
+    status=LINK_DISCONNECTED) at linc-connection.c:352
+	klass = <value optimized out>
+	__PRETTY_FUNCTION__ = "link_connection_state_changed_T_R"
+#72 0xb7db99e2 in link_connection_state_changed (cnx=0x8302d40, 
+    status=LINK_DISCONNECTED) at linc-connection.c:851
+No locals.
+#73 0xb7d9b05e in giop_connection_handle_input (lcnx=0x8302d40)
+    at giop-recv-buffer.c:1330
+	buf = (GIOPRecvBuffer *) 0x8453ed8
+	__PRETTY_FUNCTION__ = "giop_connection_handle_input"
+#74 0xb7dba743 in link_connection_io_handler (gioc=0x0, 
+    condition=<value optimized out>, data=0x8302d40) at linc-connection.c:1475
+No locals.
+#75 0xb7dbd016 in link_source_dispatch (source=0x6, callback=0x12ce, 
+    user_data=0x8302d40) at linc-source.c:164
+No locals.
+#76 0xb75fde78 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#77 0xb7601720 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#78 0xb7601b8f in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#79 0xb7acc419 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkmain.c:1218
+	tmp_list = (GList *) 0x8173f20
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0x0
+	loop = (GMainLoop *) 0x824dee8
+#80 0x08063870 in main (argc=1, argv=0xbff94f24) at main.c:154
+	context = <value optimized out>
+	program = <value optimized out>
+	app = (GAppInfo *) 0xbff94e78
+	new_app = (GAppInfo *) 0xb7f88d20
+	gc = (GConfClient *) 0x8161598
+	l = (GList *) 0x817725c

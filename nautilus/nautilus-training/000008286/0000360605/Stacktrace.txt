@@ -1,0 +1,7 @@
+#0  0xb57f3807 in ?? ()
+#1  0xb78937bf in g_thread_create_proxy (data=0x0)
+    at /build/buildd/glib2.0-2.20.1/glib/gthread.c:635
+	__PRETTY_FUNCTION__ = "g_thread_create_proxy"
+#2  0xb74db4ff in start_thread () from /lib/tls/i686/cmov/libpthread.so.0
+#3  0xb745549e in clone () at ../sysdeps/unix/sysv/linux/i386/clone.S:130
+No locals.

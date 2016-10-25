@@ -1,0 +1,117 @@
+#0  0x00007f5434c6e022 in ?? () from /lib/libc.so.6
+No symbol table info available.
+#1  0x00007f5426ce526a in na_icontextual_is_candidate ()
+   from /usr/lib/nautilus-actions/libna-core.so
+No symbol table info available.
+#2  0x00007f54268c949a in ?? ()
+   from /usr/lib/nautilus/extensions-2.0/libnautilus-actions.so
+No symbol table info available.
+#3  0x00007f54268c99db in ?? ()
+   from /usr/lib/nautilus/extensions-2.0/libnautilus-actions.so
+No symbol table info available.
+#4  0x000000000047b03e in get_all_extension_menu_items (window=0x19020e0, 
+    selection=0x1b8b2a0) at fm-directory-view.c:4603
+        file_items = <value optimized out>
+        items = 0x0
+        providers = 0x1c05180
+        l = 0x1c10800
+#5  0x00000000004814ce in reset_extension_actions_menu (view=0x19615a0)
+    at fm-directory-view.c:4872
+        items = <value optimized out>
+        ui_manager = <value optimized out>
+#6  real_update_menus (view=0x19615a0) at fm-directory-view.c:8879
+        selection = 0x1b8b2a0
+        l = <value optimized out>
+        tip = <value optimized out>
+        label = 0x1 <Address 0x1 out of bounds>
+        label_with_underscore = 0x1c605a0 "\220\205\250\001"
+        selection_contains_special_link = <value optimized out>
+        selection_contains_desktop_or_home_dir = 1
+        can_create_files = 1
+        can_delete_files = 1
+        can_duplicate_files = 1
+        show_separate_delete_command = <value optimized out>
+        vfolder_directory = 0
+        disable_command_line = <value optimized out>
+        show_open_alternate = 1
+        show_save_search = <value optimized out>
+        save_search_sensitive = <value optimized out>
+        show_save_search_as = <value optimized out>
+        show_open_folder_window = 0
+        action = 0x1980d50
+        app = 0x1
+        app_icon = <value optimized out>
+        menuitem = <value optimized out>
+        next_pane_is_writable = <value optimized out>
+#7  0x00000000004866c5 in fm_icon_view_update_menus (view=0x19615a0)
+    at fm-icon-view.c:1654
+        icon_view = 0x19615a0
+        selection = <value optimized out>
+        action = <value optimized out>
+        icon_container = <value optimized out>
+        editable = <value optimized out>
+#8  0x0000000000471ebb in fm_directory_view_update_menus (view=0x19615a0)
+    at fm-directory-view.c:10022
+        __PRETTY_FUNCTION__ = "fm_directory_view_update_menus"
+#9  0x0000000000472b65 in update_menus_timeout_callback (
+    data=<value optimized out>) at fm-directory-view.c:2947
+No locals.
+#10 0x00007f543600409b in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#11 0x00007f54360038c2 in g_main_context_dispatch ()
+   from /lib/libglib-2.0.so.0
+No symbol table info available.
+#12 0x00007f5436007748 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#13 0x00007f5436007c55 in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#14 0x00007f5437ad5af7 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#15 0x0000000000443164 in main (argc=1, argv=0x7fffe046c978)
+    at nautilus-main.c:583
+        kill_shell = 0
+        no_default_window = 1
+        browser_window = 0
+        no_desktop = 0
+        version = 0
+        autostart_mode = 1
+        autostart_id = <value optimized out>
+        geometry = 0x0
+        remaining = 0x0
+        perform_self_check = 0
+        application = <value optimized out>
+        context = <value optimized out>
+        file = 0x1
+        uri = <value optimized out>
+        uris = 0x0
+        uris_array = <value optimized out>
+        error = 0x0
+        options = {{long_name = 0x550c43 "check", short_name = 99 'c', 
+            flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x7fffe046c868, 
+            description = 0x550cc8 "Perform a quick set of self-check tests.", arg_description = 0x0}, {long_name = 0x571958 "version", 
+            short_name = 0 '\000', flags = 0, arg = G_OPTION_ARG_NONE, 
+            arg_data = 0x7fffe046c86c, 
+            description = 0x550cf8 "Show the version of the program.", 
+            arg_description = 0x0}, {long_name = 0x554dbc "geometry", 
+            short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+            arg_data = 0x7fffe046c860, 
+            description = 0x550d20 "Create the initial window with the given geometry.", arg_description = 0x550b81 "GEOMETRY"}, {
+            long_name = 0x550b8a "no-default-window", short_name = 110 'n', 
+            flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x7fffe046c878, 
+            description = 0x550d58 "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {long_name = 0x550b9c "no-desktop", 
+            short_name = 0 '\000', flags = 0, arg = G_OPTION_ARG_NONE, 
+            arg_data = 0x7fffe046c870, 
+            description = 0x550d90 "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {
+            long_name = 0x54d46d "browser", short_name = 0 '\000', flags = 0, 
+            arg = G_OPTION_ARG_NONE, arg_data = 0x7fffe046c874, 
+            description = 0x550ba7 "open a browser window.", 
+            arg_description = 0x0}, {long_name = 0x573811 "quit", 
+            short_name = 113 'q', flags = 0, arg = G_OPTION_ARG_NONE, 
+            arg_data = 0x7fffe046c87c, 
+            description = 0x550bbe "Quit Nautilus.", arg_description = 0x0}, {
+            long_name = 0x5564ef "", short_name = 0 '\000', flags = 0, 
+            arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0x7fffe046c858, 
+            description = 0x0, arg_description = 0x550bcd "[URI...]"}, {
+            long_name = 0x0, short_name = 0 '\000', flags = 0, 
+            arg = G_OPTION_ARG_NONE, arg_data = 0x0, description = 0x0, 
+            arg_description = 0x0}}

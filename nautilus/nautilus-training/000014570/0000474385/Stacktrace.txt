@@ -1,0 +1,178 @@
+#0  0x008f4422 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x013154d1 in raise () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#2  0x01318932 in abort () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#3  0x0130e648 in __assert_fail () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#4  0x01470199 in _XAllocID () from /usr/lib/libX11.so.6
+No symbol table info available.
+#5  0x00a77d97 in XRenderCreatePicture () from /usr/lib/libXrender.so.1
+No symbol table info available.
+#6  0x052c3c02 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#7  0x052c58a5 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#8  0x052aa132 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#9  0x052adf3c in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#10 0x052ace5c in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#11 0x052ad8f7 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#12 0x052ade4a in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#13 0x052aa2f7 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#14 0x05290ec6 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#15 0x0528aefd in cairo_fill_preserve () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#16 0x0528af22 in cairo_fill () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#17 0x036fbf8a in ?? () from /usr/lib/gtk-2.0/2.10.0/engines/libclearlooks.so
+No symbol table info available.
+#18 0x036e09b1 in ?? () from /usr/lib/gtk-2.0/2.10.0/engines/libclearlooks.so
+No symbol table info available.
+#19 0x03004ca8 in gtk_paint_extension () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#20 0x02fa8715 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#21 0x02fa8c9d in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#22 0x02f87474 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#23 0x00aa56f9 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#24 0x00aa6f98 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#25 0x00abc49e in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#26 0x00abd9b8 in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#27 0x00abdfb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#28 0x030a396e in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#29 0x02ef2683 in gtk_container_propagate_expose ()
+   from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#30 0x02ef26b1 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#31 0x010ce6cb in ?? () from /usr/lib/libwx_gtk2u_core-2.8.so.0
+No symbol table info available.
+#32 0x02ef31f4 in gtk_container_forall () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#33 0x02ef44aa in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#34 0x02f87474 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#35 0x00aa56f9 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#36 0x00aa7072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#37 0x00abc49e in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#38 0x00abd9b8 in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#39 0x00abdfb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#40 0x030a396e in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#41 0x02f81190 in gtk_main_do_event () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#42 0x00ea51d4 in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#43 0x00ea5183 in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#44 0x00ea5183 in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#45 0x00ea5183 in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#46 0x00ea5183 in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#47 0x00ec8734 in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#48 0x00e9c87f in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#49 0x00ea0a50 in gdk_window_process_updates ()
+   from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#50 0x010d0ed8 in wxWindow::GtkUpdate() ()
+   from /usr/lib/libwx_gtk2u_core-2.8.so.0
+No symbol table info available.
+#51 0x010d0f3d in wxWindow::Update() ()
+   from /usr/lib/libwx_gtk2u_core-2.8.so.0
+No symbol table info available.
+#52 0x00673fa7 in wxAuiManager::Update() ()
+   from /usr/lib/libwx_gtk2u_aui-2.8.so.0
+No symbol table info available.
+#53 0x006745b0 in wxAuiManager::DoEndResizeAction(wxMouseEvent&) ()
+   from /usr/lib/libwx_gtk2u_aui-2.8.so.0
+No symbol table info available.
+#54 0x0067475b in wxAuiManager::OnLeftUp(wxMouseEvent&) ()
+   from /usr/lib/libwx_gtk2u_aui-2.8.so.0
+No symbol table info available.
+#55 0x00525a9f in wxAppConsole::HandleEvent(wxEvtHandler*, void (wxEvtHandler::*)(wxEvent&), wxEvent&) const () from /usr/lib/libwx_baseu-2.8.so.0
+No symbol table info available.
+#56 0x005c4379 in wxEvtHandler::ProcessEventIfMatches(wxEventTableEntryBase const&, wxEvtHandler*, wxEvent&) () from /usr/lib/libwx_baseu-2.8.so.0
+No symbol table info available.
+#57 0x005c5424 in wxEventHashTable::HandleEvent(wxEvent&, wxEvtHandler*) ()
+   from /usr/lib/libwx_baseu-2.8.so.0
+No symbol table info available.
+#58 0x005c5523 in wxEvtHandler::ProcessEvent(wxEvent&) ()
+   from /usr/lib/libwx_baseu-2.8.so.0
+No symbol table info available.
+#59 0x010cf7ab in wxWindow::GTKProcessEvent(wxEvent&) const ()
+   from /usr/lib/libwx_gtk2u_core-2.8.so.0
+No symbol table info available.
+#60 0x010d490f in ?? () from /usr/lib/libwx_gtk2u_core-2.8.so.0
+No symbol table info available.
+#61 0x02f87474 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#62 0x00aa7072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#63 0x00abc7a8 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#64 0x00abd9b8 in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#65 0x00abdfb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#66 0x030a396e in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#67 0x02f7fc20 in gtk_propagate_event () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#68 0x02f80ea9 in gtk_main_do_event () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#69 0x00eba62a in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#70 0x092a7e78 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#71 0x092ab720 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#72 0x092abb8f in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#73 0x02f81419 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#74 0x010bfc78 in wxEventLoop::Run() ()
+   from /usr/lib/libwx_gtk2u_core-2.8.so.0
+No symbol table info available.
+#75 0x01152e3e in wxAppBase::MainLoop() ()
+   from /usr/lib/libwx_gtk2u_core-2.8.so.0
+No symbol table info available.
+#76 0x01152a31 in wxAppBase::OnRun() ()
+   from /usr/lib/libwx_gtk2u_core-2.8.so.0
+No symbol table info available.
+#77 0x0055f7aa in wxEntry(int&, wchar_t**) ()
+   from /usr/lib/libwx_baseu-2.8.so.0
+No symbol table info available.
+#78 0x0055f987 in wxEntry(int&, char**) () from /usr/lib/libwx_baseu-2.8.so.0
+No symbol table info available.
+#79 0x0807cb8b in ?? ()
+No symbol table info available.
+#80 0x01301b56 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#81 0x0807c991 in ?? ()
+No symbol table info available.

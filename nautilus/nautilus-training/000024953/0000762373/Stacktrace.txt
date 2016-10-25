@@ -1,0 +1,54 @@
+#0  0x00007f6614522d05 in raise () from /lib/x86_64-linux-gnu/libc.so.6
+No symbol table info available.
+#1  0x00007f6614526ab6 in abort () from /lib/x86_64-linux-gnu/libc.so.6
+No symbol table info available.
+#2  0x00007f6615b6b51d in g_assertion_message () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#3  0x00007f6615b6bae0 in g_assertion_message_expr () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#4  0x00000000005093bb in ?? ()
+No symbol table info available.
+#5  0x000000000044f1fd in ?? ()
+No symbol table info available.
+#6  0x00007f661644681c in g_closure_invoke () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#7  0x00007f6616458019 in ?? () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#8  0x00007f6616461258 in g_signal_emit_valist () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#9  0x00007f661646160d in g_signal_emit_by_name () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#10 0x00007f661644681c in g_closure_invoke () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#11 0x00007f6616458019 in ?? () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#12 0x00007f6616461258 in g_signal_emit_valist () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#13 0x00007f661646160d in g_signal_emit_by_name () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#14 0x00007f6607bf435b in ?? () from /usr/lib/gio/modules/libgioremote-volume-monitor.so
+No symbol table info available.
+#15 0x00007f6615b45bcd in g_main_context_dispatch () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#16 0x00007f6615b463a8 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#17 0x00007f6615b469f2 in g_main_loop_run () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#18 0x00007f66176e9a37 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#19 0x00000000004427d2 in ?? ()
+No symbol table info available.
+#20 0x00007f661450deff in __libc_start_main () from /lib/x86_64-linux-gnu/libc.so.6
+No symbol table info available.
+#21 0x000000000042f349 in ?? ()
+No symbol table info available.
+#22 0x00007fff803faf68 in ?? ()
+No symbol table info available.
+#23 0x000000000000001c in ?? ()
+No symbol table info available.
+#24 0x0000000000000001 in ?? ()
+No symbol table info available.
+#25 0x00007fff803fbabe in ?? ()
+No symbol table info available.
+#26 0x0000000000000000 in ?? ()
+No symbol table info available.

@@ -1,0 +1,103 @@
+#0  0xb771b424 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0xb689fc8f in raise () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#2  0xb68a32b5 in abort () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#3  0xb6898826 in __assert_fail () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#4  0xb75c559f in _XAllocID () from /usr/lib/i386-linux-gnu/libX11.so.6
+No symbol table info available.
+#5  0xb75a20e7 in XCreatePixmap () from /usr/lib/i386-linux-gnu/libX11.so.6
+No symbol table info available.
+#6  0xb6deab65 in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#7  0xb6defbe1 in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#8  0xb6dcc9d5 in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#9  0xb6dbc1ee in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#10 0xb6dbd4c8 in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#11 0xb6deec9f in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#12 0xb6dca528 in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#13 0xb6dce6d6 in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#14 0xb6dce89d in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#15 0xb6dcac5c in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#16 0xb6dd0074 in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#17 0xb6dd16db in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#18 0xb6dcabc5 in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#19 0xb6da006f in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#20 0xb6d961b3 in cairo_paint () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#21 0xb71ececb in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#22 0xb719fc7d in gtk_render_icon () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#23 0x08158dc2 in ?? ()
+No symbol table info available.
+#24 0x08139b92 in ?? ()
+No symbol table info available.
+#25 0x0813addb in ?? ()
+No symbol table info available.
+#26 0xb71014ea in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#27 0xb72593f3 in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#28 0xb6b549dd in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#29 0xb6b55f8c in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#30 0xb6b67e7f in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#31 0xb6b6efe7 in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#32 0xb6b6f253 in g_signal_emit () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#33 0xb726d0c6 in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#34 0xb726d263 in gtk_widget_send_expose () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#35 0xb7101414 in gtk_main_do_event () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#36 0xb6f09cfc in ?? () from /usr/lib/i386-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#37 0xb6f1e568 in ?? () from /usr/lib/i386-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#38 0xb6f43f73 in ?? () from /usr/lib/i386-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#39 0xb6f1dacb in ?? () from /usr/lib/i386-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#40 0xb6f1df47 in gdk_window_process_all_updates () from /usr/lib/i386-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#41 0xb6f1dfd4 in ?? () from /usr/lib/i386-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#42 0xb6f0001e in ?? () from /usr/lib/i386-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#43 0xb6a96150 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#44 0xb6a986ea in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#45 0xb6a98af5 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#46 0xb6a98bd1 in g_main_context_iteration () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#47 0xb6c50c4c in g_application_run () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#48 0x08067bc4 in ?? ()
+No symbol table info available.
+#49 0xb688b113 in __libc_start_main () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#50 0x08067bfd in ?? ()
+No symbol table info available.
+Backtrace stopped: Not enough registers or memory available to unwind further

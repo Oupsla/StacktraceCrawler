@@ -1,0 +1,135 @@
+#0  0xb76a7d07 in g_str_hash () from /usr/lib/libglib-2.0.so.0
+#1  0xb7676d6b in g_hash_table_lookup_extended ()
+   from /usr/lib/libglib-2.0.so.0
+#2  0x0811a701 in modify_link_hash_table (file=0x91e14c0, 
+    modify_function=0x8117bf0 <add_to_link_hash_table_list>)
+    at nautilus-file.c:435
+	target_uri = 0x0
+	found = <value opusernameized out>
+	original_key = <value opusernameized out>
+	list_ptr = <value opusernameized out>
+#3  0x0811bccd in update_info_internal (file=0x91e14c0, info=0x8f93f18, 
+    update_name=1) at nautilus-file.c:477
+	node = (GList *) 0x0
+	changed = 1
+	is_symlink = <value opusernameized out>
+	is_hidden = <value opusernameized out>
+	is_backup = <value opusernameized out>
+	is_mountpoint = <value opusernameized out>
+	has_permissions = <value opusernameized out>
+	permissions = <value opusernameized out>
+	can_read = 1
+	can_write = 0
+	can_execute = 0
+	can_delete = 0
+	can_trash = 0
+	can_rename = 0
+	can_mount = 0
+	can_unmount = 0
+	can_eject = 0
+	thumbnailing_failed = <value opusernameized out>
+	uid = <value opusernameized out>
+	gid = <value opusernameized out>
+	size = <value opusernameized out>
+	sort_order = <value opusernameized out>
+	ausernamee = <value opusernameized out>
+	musernamee = <value opusernameized out>
+	cusernamee = <value opusernameized out>
+	symlink_name = <value opusernameized out>
+	mime_type = <value opusernameized out>
+	selinux_context = <value opusernameized out>
+	name = 0x92c1548 "ubuntu"
+	thumbnail_path = <value opusernameized out>
+	file_type = <value opusernameized out>
+	icon = <value opusernameized out>
+	old_activation_location = <value opusernameized out>
+	activation_uri = <value opusernameized out>
+	description = <value opusernameized out>
+	filesystem_id = <value opusernameized out>
+	trash_orig_path = <value opusernameized out>
+#4  0x08121466 in nautilus_file_new_from_info (directory=0x91aa5c0, 
+    info=0x8f93f18) at nautilus-file.c:1917
+	file = (NautilusFile *) 0x91e14c0
+	mime_type = <value opusernameized out>
+	__PRETTY_FUNCTION__ = "nautilus_file_new_from_info"
+#5  0x080f95f7 in dequeue_pending_idle_callback (callback_data=0x91aa5c0)
+    at nautilus-directory-async.c:888
+	directory = (NautilusDirectory *) 0x91aa5c0
+	pending_file_info = (GList *) 0x927b410
+	node = (GList *) 0x91d5c80
+	next = <value opusernameized out>
+	file = (NautilusFile *) 0x0
+	changed_files = (GList *) 0x0
+	added_files = (GList *) 0x91f14c0
+	file_info = (GFileInfo *) 0x8f93f18
+	mimetype = <value opusernameized out>
+	name = 0x92c1548 "ubuntu"
+	dir_load_state = (DirectoryLoadState *) 0x91d1798
+#6  0x080f9762 in directory_load_done (directory=0x91aa5c0, error=0x0)
+    at nautilus-directory-async.c:1064
+	node = (GList *) 0x8c3a158
+#7  0x080f99bb in more_files_callback (source_object=0x8c3a158, 
+    res=0x915f060, user_data=0x91d1798) at nautilus-directory-async.c:2140
+	directory = (NautilusDirectory *) 0x91aa5c0
+	error = (GError *) 0x0
+	files = (GList *) 0x0
+	l = (GList *) 0x91d3698
+	info = (GFileInfo *) 0x8c3a158
+	__PRETTY_FUNCTION__ = "more_files_callback"
+#8  0xb776ac4b in ?? () from /usr/lib/libgio-2.0.so.0
+#9  0xb777dbb2 in g_simple_async_result_complete ()
+   from /usr/lib/libgio-2.0.so.0
+#10 0xb777dbd1 in ?? () from /usr/lib/libgio-2.0.so.0
+#11 0xb76827c1 in ?? () from /usr/lib/libglib-2.0.so.0
+#12 0xb76846f8 in g_main_context_dispatch () from /usr/lib/libglib-2.0.so.0
+#13 0xb7687da3 in ?? () from /usr/lib/libglib-2.0.so.0
+#14 0xb76882c2 in g_main_loop_run () from /usr/lib/libglib-2.0.so.0
+#15 0xb7a863a9 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+#16 0x08080ae3 in main (argc=3, argv=0xbfdf00a4) at nautilus-main.c:596
+	kill_shell = 0
+	restart_shell = 0
+	no_default_window = 1
+	browser_window = 1
+	no_desktop = 0
+	autostart_mode = 1
+	has_sm_argv = 0
+	startup_id = <value opusernameized out>
+	autostart_id = <value opusernameized out>
+	startup_id_copy = 0x8bd9e98 "/usr/share/icons/Tango/16x16/places/folder.png"
+	session_to_load = 0x0
+	geometry = (gchar *) 0x0
+	remaining = (const gchar **) 0x0
+	perform_self_check = 0
+	context = (GOptionContext *) 0x0
+	application = (NautilusApplication *) 0x8c00848
+	program = (GnomeProgram *) 0x8be5c58
+	options = {{long_name = 0x8164fe9 "check", short_name = 99 'c', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfdeff70, 
+    description = 0x8165058 "Perform a quick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x8168b6f "geometry", 
+    short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+    arg_data = 0xbfdeff78, 
+    description = 0x8165084 "Create the initial window with the given geometry.", arg_description = 0x8164e69 "GEOMETRY"}, {
+    long_name = 0x8164e72 "no-default-window", short_name = 110 'n', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfdeff88, 
+    description = 0x81650b8 "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {long_name = 0x8164e84 "no-desktop", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfdeff80, 
+    description = 0x81650ec "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {
+    long_name = 0x8167c9e "browser", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbfdeff84, 
+    description = 0x8164e8f "open a browser window.", arg_description = 0x0}, 
+  {long_name = 0x8164ff1 "quit", short_name = 113 'q', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbfdeff90, 
+    description = 0x8164ea6 "Quit Nautilus.", arg_description = 0x0}, {
+    long_name = 0x8164ff8 "restart", short_name = 0 '\0', flags = 1, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbfdeff8c, 
+    description = 0x8164eb5 "Restart Nautilus.", arg_description = 0x0}, {
+    long_name = 0x8169d88 "", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0xbfdeff74, 
+    description = 0x0, arg_description = 0x8164ec7 "[URI...]"}, {
+    long_name = 0x8161480 "load-session", short_name = 108 'l', flags = 0, 
+    arg = G_OPTION_ARG_STRING, arg_data = 0xbfdeff7c, 
+    description = 0x8165140 "Load a saved session from the specified file. Implies \"--no-default-window\".", arg_description = 0x8164ed0 "FILENAME"}, {
+    long_name = 0x0, short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x0, description = 0x0, arg_description = 0x0}}

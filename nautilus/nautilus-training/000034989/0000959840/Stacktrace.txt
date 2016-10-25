@@ -1,0 +1,318 @@
+#0  0xb705f0e3 in g_type_check_instance_cast (type_instance=0x859e228, iface_type=139468544) at /build/buildd/glib2.0-2.31.20/./gobject/gtype.c:4000
+        node = 0x7b204f5c
+        iface = 0x86a6b38
+        is_instantiatable = <optimized out>
+        check = <optimized out>
+#1  0xb6bc7647 in ?? () from /usr/lib/i386-linux-gnu/libdbusmenu-gtk3.so.4
+No symbol table info available.
+#2  0xb703c38c in g_cclosure_marshal_VOID__VOID (closure=0x86a6b38, return_value=0x0, n_param_values=1, param_values=0x8839718, invocation_hint=0xbfcf9870, marshal_data=0x0) at /build/buildd/glib2.0-2.31.20/./gobject/gmarshal.c:85
+        callback = 0xb6bc7620
+        cc = 0x86a6b38
+        data1 = 0x8593e60
+        data2 = <optimized out>
+        __PRETTY_FUNCTION__ = "g_cclosure_marshal_VOID__VOID"
+#3  0xb703a624 in g_closure_invoke (closure=0x86a6b38, return_value=0x0, n_param_values=1, param_values=0x8839718, invocation_hint=0xbfcf9870) at /build/buildd/glib2.0-2.31.20/./gobject/gclosure.c:777
+        marshal = 0xb703c300 <g_cclosure_marshal_VOID__VOID>
+        marshal_data = 0x0
+        in_marshal = 0
+        real_closure = 0x86a6b28
+        __PRETTY_FUNCTION__ = "g_closure_invoke"
+#4  0xb704d029 in signal_emit_unlocked_R (node=0x85981c8, detail=0, instance=0x8593e60, emission_return=0x0, instance_and_params=0x8839718) at /build/buildd/glib2.0-2.31.20/./gobject/gsignal.c:3547
+        tmp = <optimized out>
+        handler = 0x85d0f40
+        accumulator = 0x0
+        emission = {next = 0x0, instance = 0x8593e60, ihint = {signal_id = 220, detail = 0, run_type = G_SIGNAL_RUN_FIRST}, state = EMISSION_RUN, chain_type = 4}
+        class_closure = 0x8593ab8
+        hlist = 0x859a550
+        handler_list = 0x8603960
+        return_accu = 0x0
+        accu = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        signal_id = 220
+        max_sequential_handler_number = 904032
+        return_value_altered = 1
+#5  0xb70556d0 in g_signal_emit_valist (instance=0x8593e60, signal_id=220, detail=0, var_args=0xbfcf9abc "@\231<\267\223\205\274\b`>Y\bp>Y\b\364\317\a\001p>Y\b\360\210W\b\210\311`\b\360\251Y\b\a\b") at /build/buildd/glib2.0-2.31.20/./gobject/gsignal.c:3295
+        instance_and_params = 0x8839718
+        signal_return_type = 4
+        param_values = 0x883972c
+        node = 0x85981c8
+        i = <optimized out>
+        n_params = 0
+        __PRETTY_FUNCTION__ = "g_signal_emit_valist"
+#6  0xb70558d3 in g_signal_emit (instance=0x8593e60, signal_id=220, detail=0) at /build/buildd/glib2.0-2.31.20/./gobject/gsignal.c:3352
+        var_args = 0xbfcf9abc "@\231<\267\223\205\274\b`>Y\bp>Y\b\364\317\a\001p>Y\b\360\210W\b\210\311`\b\360\251Y\b\a\b"
+#7  0xb73cca86 in ensure_valid_themes (icon_theme=0x8593e60) at /build/buildd/gtk+3.0-3.3.18/./gtk/gtkicontheme.c:1300
+        priv = 0x8593e70
+        tv = {tv_sec = 1332192485, tv_usec = 214332}
+        was_valid = 1
+#8  0xb73ccb8b in choose_icon (icon_theme=<optimized out>, icon_names=0xbfcf9c38, size=16, flags=GTK_ICON_LOOKUP_USE_BUILTIN) at /build/buildd/gtk+3.0-3.3.18/./gtk/gtkicontheme.c:1332
+        priv = 0x8593e70
+        l = <optimized out>
+        icon_info = 0x0
+        unthemed_icon = 0x0
+        allow_svg = 1
+        use_builtin = 4
+        i = <optimized out>
+#9  0xb73cd788 in gtk_icon_theme_lookup_icon (icon_theme=0x8593e60, icon_name=0xb75ff0bb "edit-find", size=16, flags=GTK_ICON_LOOKUP_USE_BUILTIN) at /build/buildd/gtk+3.0-3.3.18/./gtk/gtkicontheme.c:1507
+        names = {0xb75ff0bb "edit-find", 0x0}
+        info = <optimized out>
+        __PRETTY_FUNCTION__ = "gtk_icon_theme_lookup_icon"
+#10 0xb73ce3af in gtk_icon_theme_load_icon (icon_theme=0x8593e60, icon_name=0xb75ff0bb "edit-find", size=16, flags=0, error=0xbfcf9d24) at /build/buildd/gtk+3.0-3.3.18/./gtk/gtkicontheme.c:1604
+        icon_info = <optimized out>
+        pixbuf = 0x0
+        __PRETTY_FUNCTION__ = "gtk_icon_theme_load_icon"
+#11 0xb73c7b26 in render_icon_name_pixbuf (size=GTK_ICON_SIZE_MENU, context=<optimized out>, icon_source=<optimized out>) at /build/buildd/gtk+3.0-3.3.18/./gtk/gtkiconfactory.c:1560
+        tmp_source = {type = 3077939188, source = {icon_name = 0x0, filename = 0x0, pixbuf = 0x0}, filename_pixbuf = 0xb75fb8b7, direction = 3074191324, state = 141744584, size = 3076503735, any_direction = 0, any_state = 0, any_size = 0}
+        width = 16
+        height = 16
+        pixel_size = 16
+        dist = <optimized out>
+        pixbuf = <optimized out>
+        tmp_pixbuf = <optimized out>
+        screen = <optimized out>
+        icon_theme = 0x8593e60
+        settings = <optimized out>
+        sizes = <optimized out>
+        s = <optimized out>
+        error = 0x0
+#12 find_and_render_icon_source (size=<optimized out>, state=<optimized out>, direction=<optimized out>, context=<optimized out>, icon_set=<optimized out>) at /build/buildd/gtk+3.0-3.3.18/./gtk/gtkiconfactory.c:1632
+        source = 0x8793d60
+        failed = <optimized out>
+        pixbuf = <optimized out>
+#13 gtk_icon_set_render_icon_pixbuf (icon_set=0x8793d48, context=0x89b0460, size=GTK_ICON_SIZE_MENU) at /build/buildd/gtk+3.0-3.3.18/./gtk/gtkiconfactory.c:1728
+        icon = 0x0
+        flags = <optimized out>
+        state = GTK_STATE_NORMAL
+        direction = GTK_TEXT_DIR_LTR
+        __PRETTY_FUNCTION__ = "gtk_icon_set_render_icon_pixbuf"
+#14 0xb75725f4 in gtk_widget_render_icon_pixbuf (widget=0x8510480, stock_id=0xb75fb8b7 "gtk-find", size=GTK_ICON_SIZE_MENU) at /build/buildd/gtk+3.0-3.3.18/./gtk/gtkwidget.c:8934
+        context = 0x89b0460
+        icon_set = <optimized out>
+        __PRETTY_FUNCTION__ = "gtk_widget_render_icon_pixbuf"
+#15 0xb739d7b3 in render_search_icon (impl=0x8510480) at /build/buildd/gtk+3.0-3.3.18/./gtk/gtkfilechooserdefault.c:1162
+No locales.
+#16 0xb73aa7a2 in shortcuts_append_search (impl=0x8510480) at /build/buildd/gtk+3.0-3.3.18/./gtk/gtkfilechooserdefault.c:1730
+        pixbuf = <optimized out>
+        iter = {stamp = -1217028108, user_data = 0x85243a8, user_data2 = 0xb73afc9f, user_data3 = 0x85243a8}
+#17 shortcuts_model_create (impl=0x8510480) at /build/buildd/gtk+3.0-3.3.18/./gtk/gtkfilechooserdefault.c:2176
+No locales.
+#18 gtk_file_chooser_default_constructor (type=142075008, n_construct_properties=0, construct_params=0x0) at /build/buildd/gtk+3.0-3.3.18/./gtk/gtkfilechooserdefault.c:5088
+        impl = 0x8510480
+        object = 0x8510480
+        __PRETTY_FUNCTION__ = "gtk_file_chooser_default_constructor"
+#19 0xb70417a1 in g_object_newv (object_type=142075008, n_parameters=0, parameters=0x0) at /build/buildd/glib2.0-2.31.20/./gobject/gobject.c:1632
+        cparams = 0x0
+        oparams = 0x0
+        nqueue = 0x0
+        object = <optimized out>
+        class = 0x8773e28
+        unref_class = 0x0
+        slist = 0x0
+        n_total_cparams = <optimized out>
+        n_cparams = 0
+        n_oparams = 0
+        n_cvalues = <optimized out>
+        cvalues = <optimized out>
+        clist = <optimized out>
+        newly_constructed = <optimized out>
+        i = <optimized out>
+        __PRETTY_FUNCTION__ = "g_object_newv"
+#20 0xb7041d38 in g_object_new (object_type=142075008, first_property_name=0x0) at /build/buildd/glib2.0-2.31.20/./gobject/gobject.c:1542
+        object = <optimized out>
+        var_args = <optimized out>
+        __PRETTY_FUNCTION__ = "g_object_new"
+#21 0xb73ac514 in _gtk_file_chooser_default_new () at /build/buildd/gtk+3.0-3.3.18/./gtk/gtkfilechooserdefault.c:10230
+No locales.
+#22 0xb73afb92 in gtk_file_chooser_widget_constructor (type=142065496, n_construct_properties=0, construct_params=0x0) at /build/buildd/gtk+3.0-3.3.18/./gtk/gtkfilechooserwidget.c:122
+        priv = 0x8524438
+        object = 0x85243a8
+#23 0xb70417a1 in g_object_newv (object_type=142065496, n_parameters=0, parameters=0x0) at /build/buildd/glib2.0-2.31.20/./gobject/gobject.c:1632
+        cparams = 0x0
+        oparams = 0x0
+        nqueue = 0x0
+        object = <optimized out>
+        class = 0x877b978
+        unref_class = 0x0
+        slist = 0x0
+        n_total_cparams = <optimized out>
+        n_cparams = 0
+        n_oparams = 0
+        n_cvalues = <optimized out>
+        cvalues = <optimized out>
+        clist = <optimized out>
+        newly_constructed = <optimized out>
+        i = <optimized out>
+        __PRETTY_FUNCTION__ = "g_object_newv"
+#24 0xb7041d38 in g_object_new (object_type=142065496, first_property_name=0x0) at /build/buildd/glib2.0-2.31.20/./gobject/gobject.c:1542
+        object = <optimized out>
+        var_args = <optimized out>
+        __PRETTY_FUNCTION__ = "g_object_new"
+#25 0xb73acc52 in gtk_file_chooser_dialog_constructor (type=142050656, n_construct_properties=3, construct_params=0x8bb0f40) at /build/buildd/gtk+3.0-3.3.18/./gtk/gtkfilechooserdialog.c:449
+        priv = 0x877c148
+        content_area = <optimized out>
+        object = 0x877c050
+#26 0xb7041269 in g_object_newv (object_type=142050656, n_parameters=2, parameters=0x8821c98) at /build/buildd/glib2.0-2.31.20/./gobject/gobject.c:1713
+        cparams = 0x8bb0f40
+        oparams = 0x89da9d0
+        nqueue = 0x0
+        object = <optimized out>
+        class = 0x877b000
+        unref_class = 0x0
+        slist = <optimized out>
+        n_total_cparams = <optimized out>
+        n_cparams = <optimized out>
+        n_oparams = <optimized out>
+        n_cvalues = <optimized out>
+        cvalues = 0x8924360
+        clist = <optimized out>
+        newly_constructed = <optimized out>
+        i = <optimized out>
+        __PRETTY_FUNCTION__ = "g_object_newv"
+#27 0xb7041ab3 in g_object_new_valist (object_type=142050656, first_property_name=0xb75e53f1 "title", var_args=0xbfcfa228 "\364o") at /build/buildd/glib2.0-2.31.20/./gobject/gobject.c:1830
+        class = 0x877b000
+        params = 0x8821c98
+        name = <optimized out>
+        object = <optimized out>
+        n_params = <optimized out>
+        n_alloced_params = <optimized out>
+        __PRETTY_FUNCTION__ = "g_object_new_valist"
+#28 0xb7041d10 in g_object_new (object_type=142050656, first_property_name=0xb75e53f1 "title") at /build/buildd/glib2.0-2.31.20/./gobject/gobject.c:1545
+        object = <optimized out>
+        var_args = 0xbfcfa218 ""
+        __PRETTY_FUNCTION__ = "g_object_new"
+#29 0xb73ad0f7 in gtk_file_chooser_dialog_new_valist (varargs=0xbfcfa270 "\372\377\377\377\262\236_\267\375\377\377\377", first_button_text=0xb75dc692 "gtk-cancel", action=GTK_FILE_CHOOSER_ACTION_OPEN, parent=0x0, title=0x0) at /build/buildd/gtk+3.0-3.3.18/./gtk/gtkfilechooserdialog.c:569
+        result = <optimized out>
+        button_text = 0xb75dc692 "gtk-cancel"
+        response_id = <optimized out>
+#30 gtk_file_chooser_dialog_new (title=0x0, parent=0x0, action=GTK_FILE_CHOOSER_ACTION_OPEN, first_button_text=0xb75dc692 "gtk-cancel") at /build/buildd/gtk+3.0-3.3.18/./gtk/gtkfilechooserdialog.c:613
+        result = 0x0
+        varargs = 0xbfcfa270 "\372\377\377\377\262\236_\267\375\377\377\377"
+#31 0xb7399140 in gtk_file_chooser_button_constructor (type=141895232, n_params=1, params=0x85a2ff0) at /build/buildd/gtk+3.0-3.3.18/./gtk/gtkfilechooserbutton.c:685
+        object = 0x8513ae8
+        button = 0x8513ae8
+        priv = 0x8513b78
+        list = <optimized out>
+        current_folder = <optimized out>
+#32 0xb7041269 in g_object_newv (object_type=141895232, n_parameters=0, parameters=0x0) at /build/buildd/glib2.0-2.31.20/./gobject/gobject.c:1713
+        cparams = 0x85a2ff0
+        oparams = 0x0
+        nqueue = 0x0
+        object = <optimized out>
+        class = 0x8773000
+        unref_class = 0x0
+        slist = <optimized out>
+        n_total_cparams = <optimized out>
+        n_cparams = <optimized out>
+        n_oparams = <optimized out>
+        n_cvalues = <optimized out>
+        cvalues = 0x89daa30
+        clist = <optimized out>
+        newly_constructed = <optimized out>
+        i = <optimized out>
+        __PRETTY_FUNCTION__ = "g_object_newv"
+#33 0xb730de6d in _gtk_builder_construct (builder=0x8c90028, info=0x8cf7ce0, error=0xbfcfa51c) at /build/buildd/gtk+3.0-3.3.18/./gtk/gtkbuilder.c:648
+        parameters = 0x8d1d6e0
+        construct_parameters = 0x86d1180
+        object_type = 141895232
+        obj = <optimized out>
+        i = <optimized out>
+        iface = <optimized out>
+        custom_set_property = <optimized out>
+        buildable = <optimized out>
+        __PRETTY_FUNCTION__ = "_gtk_builder_construct"
+#34 0xb730e424 in builder_construct (error=0xbfcfa51c, object_info=<optimized out>, data=<optimized out>) at /build/buildd/gtk+3.0-3.3.18/./gtk/gtkbuilderparser.c:195
+        object = <optimized out>
+#35 builder_construct (object_info=<optimized out>, error=0xbfcfa51c, data=<optimized out>) at /build/buildd/gtk+3.0-3.3.18/./gtk/gtkbuilderparser.c:182
+        object = 0x0
+#36 0xb7310337 in end_element (error=0xbfcfa51c, user_data=0x8b02bf8, element_name=0x8b571a0 "X\207\261\b", context=<optimized out>) at /build/buildd/gtk+3.0-3.3.18/./gtk/gtkbuilderparser.c:993
+        object_info = 0x8cf7ce0
+        child_info = 0x8b571a0
+#37 end_element (context=0x8ac1588, element_name=<optimized out>, user_data=0x8b02bf8, error=0xbfcfa51c) at /build/buildd/gtk+3.0-3.3.18/./gtk/gtkbuilderparser.c:927
+        data = 0x8b02bf8
+#38 0xb6f5a3f0 in g_markup_parse_context_parse (context=0x8ac1588, text=0x8920200 "<?xml version=\"1.0\"?>\n<interface>\n  <!-- interface-requires gtk+ 2.6 -->\n  <!-- interface-naming-policy toplevel-contextual -->\n      <object class=\"GtkNotebook\" id=\"eap_tls_notebook\">\n        <proper"..., text_len=<optimized out>, error=0xbfcfa5ec) at /build/buildd/glib2.0-2.31.20/./glib/gmarkup.c:1559
+        tmp_error = 0x0
+        close_name = 0x8c80c10
+        __PRETTY_FUNCTION__ = "g_markup_parse_context_parse"
+#39 0xb73106d0 in _gtk_builder_parser_parse_buffer (builder=0x8c90028, filename=0xb6f077c4 "/usr/share/nm-applet/eap-method-tls.ui", buffer=0x8920200 "<?xml version=\"1.0\"?>\n<interface>\n  <!-- interface-requires gtk+ 2.6 -->\n  <!-- interface-naming-policy toplevel-contextual -->\n      <object class=\"GtkNotebook\" id=\"eap_tls_notebook\">\n        <proper"..., length=8736, requested_objs=0x0, error=0xbfcfa5ec) at /build/buildd/gtk+3.0-3.3.18/./gtk/gtkbuilderparser.c:1175
+        domain = 0x0
+        data = 0x8b02bf8
+        l = <optimized out>
+#40 0xb730b650 in gtk_builder_add_from_file (builder=0x8c90028, filename=0xb6f077c4 "/usr/share/nm-applet/eap-method-tls.ui", error=0xbfcfa63c) at /build/buildd/gtk+3.0-3.3.18/./gtk/gtkbuilder.c:897
+        buffer = 0x8920200 "<?xml version=\"1.0\"?>\n<interface>\n  <!-- interface-requires gtk+ 2.6 -->\n  <!-- interface-naming-policy toplevel-contextual -->\n      <object class=\"GtkNotebook\" id=\"eap_tls_notebook\">\n        <proper"...
+        length = 8736
+        tmp_error = 0x0
+        __PRETTY_FUNCTION__ = "gtk_builder_add_from_file"
+#41 0xb6efa7c0 in ?? () from /usr/lib/libnm-gtk.so.0
+No symbol table info available.
+#42 0xb6efc138 in ?? () from /usr/lib/libnm-gtk.so.0
+No symbol table info available.
+#43 0xb6ef5d13 in ?? () from /usr/lib/libnm-gtk.so.0
+No symbol table info available.
+#44 0xb6ef9327 in ?? () from /usr/lib/libnm-gtk.so.0
+No symbol table info available.
+#45 0xb6eecd13 in ?? () from /usr/lib/libnm-gtk.so.0
+No symbol table info available.
+#46 0xb6eee161 in ?? () from /usr/lib/libnm-gtk.so.0
+No symbol table info available.
+#47 0xb6eef63d in nma_wireless_dialog_new () from /usr/lib/libnm-gtk.so.0
+No symbol table info available.
+#48 0x0806963c in ?? ()
+No symbol table info available.
+#49 0x0805edb1 in ?? ()
+No symbol table info available.
+#50 0x08061040 in ?? ()
+No symbol table info available.
+#51 0xb700dfc9 in ?? () from /usr/lib/i386-linux-gnu/libgnome-keyring.so.0
+No symbol table info available.
+#52 0xb700fcb4 in ?? () from /usr/lib/i386-linux-gnu/libgnome-keyring.so.0
+No symbol table info available.
+#53 0xb7018f28 in ?? () from /usr/lib/i386-linux-gnu/libgnome-keyring.so.0
+No symbol table info available.
+#54 0xb700dc70 in ?? () from /usr/lib/i386-linux-gnu/libgnome-keyring.so.0
+No symbol table info available.
+#55 0xb7010694 in ?? () from /usr/lib/i386-linux-gnu/libgnome-keyring.so.0
+No symbol table info available.
+#56 0xb7010f21 in ?? () from /usr/lib/i386-linux-gnu/libgnome-keyring.so.0
+No symbol table info available.
+#57 0xb70b9961 in _dbus_pending_call_complete (pending=0x8baebb8) at ../../dbus/dbus-pending-call.c:199
+        user_data = <optimized out>
+#58 0xb70a4897 in complete_pending_call_and_unlock (connection=0x86adf00, pending=0x8baebb8, message=0x87a1e50) at ../../dbus/dbus-connection.c:2303
+No locales.
+#59 0xb70a8177 in dbus_connection_dispatch (connection=0x86adf00) at ../../dbus/dbus-connection.c:4552
+        message = 0x87a1e50
+        link = <optimized out>
+        filter_list_copy = <optimized out>
+        message_link = 0x85ad9d8
+        result = DBUS_HANDLER_RESULT_NOT_YET_HANDLED
+        pending = <optimized out>
+        reply_serial = <optimized out>
+        status = <optimized out>
+        __FUNCTION__ = "dbus_connection_dispatch"
+#60 0xb701d82d in ?? () from /usr/lib/i386-linux-gnu/libgnome-keyring.so.0
+No symbol table info available.
+#61 0xb6f55d8a in g_main_dispatch (context=0x845f408) at /build/buildd/glib2.0-2.31.20/./glib/gmain.c:2510
+        dispatch = 0xb701d800
+        was_in_call = 0
+        user_data = 0x0
+        callback = 0
+        cb_funcs = 0x0
+        cb_data = 0x0
+        current_source_link = {data = 0x85fdfb8, next = 0x0}
+        need_destroy = <optimized out>
+        source = 0x85fdfb8
+        current = 0x85a5760
+        i = <optimized out>
+#62 g_main_context_dispatch (context=0x845f408) at /build/buildd/glib2.0-2.31.20/./glib/gmain.c:3047
+No locales.
+#63 0xb6f56195 in g_main_context_iterate (dispatch=1, block=-1225376944, context=0x845f408, self=<optimized out>) at /build/buildd/glib2.0-2.31.20/./glib/gmain.c:3118
+        timeout = 0
+        some_ready = 1
+        fds = 0x8777850
+        max_priority = 0
+        nfds = <optimized out>
+        allocated_nfds = <optimized out>
+#64 g_main_context_iterate (context=0x845f408, block=-1225376944, dispatch=1, self=<optimized out>) at /build/buildd/glib2.0-2.31.20/./glib/gmain.c:3055
+        some_ready = 1
+#65 0xb6f565db in g_main_loop_run (loop=0x850de00) at /build/buildd/glib2.0-2.31.20/./glib/gmain.c:3312
+        __PRETTY_FUNCTION__ = "g_main_loop_run"
+#66 0x08057822 in main ()
+No symbol table info available.

@@ -1,0 +1,124 @@
+#0  *INT_cairo_surface_get_font_options (surface=0xb78086a0, options=0x9688e80)
+    at /build/buildd/cairo-1.6.4/src/cairo-surface.c:633
+No locals.
+#1  0xb7228c00 in _pango_cairo_update_context (cr=0x8e36808, context=0x8dd3cf0)
+    at /build/buildd/pango1.0-1.21.3/pango/pangocairo-context.c:104
+	info = (PangoCairoContextInfo *) 0x98c9840
+	cairo_matrix = {xx = -1.667335739498894e-41, yx = 2.6629322274470552e-267, 
+  xy = -4.2458933122252789e-43, yy = 5.6672479863462401e-266, x0 = -4.1600285101525437e-43, 
+  y0 = 1.4580379106921624e-267}
+	target = (cairo_surface_t *) 0xb78086a0
+	pango_matrix = {xx = -9.9323417509544179e-42, xy = 1.4580379094910454e-267, 
+  yx = -8.8070004422276986e-42, yy = 2.1927140174974026e-314, x0 = -1.6658621865824984e-41, 
+  y0 = 5.6672479902668967e-266}
+	current_matrix = <value optimized out>
+	merged_options = <value optimized out>
+	old_merged_options = <value optimized out>
+	changed = <value optimized out>
+	identity_matrix = {xx = 1, xy = 0, yx = 0, yy = 1, x0 = 0, y0 = 0}
+#2  0xb7ea4586 in rsvg_cairo_create_pango_context (ctx=0x969e878) at rsvg-cairo-draw.c:467
+	fontmap = <value optimized out>
+	context = (PangoContext *) 0x8dd3cf0
+	render = (RsvgCairoRender *) 0x8e9c360
+#3  0xb7e9cea4 in rsvg_text_render_text (ctx=0x969e878, text=0x9568440 "", x=0xb21f0d58, y=0xb21f0d50)
+    at rsvg-text.c:847
+	context = <value optimized out>
+	layout = <value optimized out>
+	iter = <value optimized out>
+	state = (RsvgState *) 0x8b57bd8
+	w = <value optimized out>
+	h = 21
+#4  0xb7e9d2c0 in _rsvg_node_text_type_children (self=0x97ba4f0, ctx=0x969e878, x=0xb21f0d58, y=0xb21f0d50, 
+    lastwasspace=0xb21f0d64) at rsvg-text.c:178
+	str = (GString *) 0x99fc3d0
+	node = (RsvgNode *) 0x97ba760
+	i = 0
+#5  0xb7e9d60c in _rsvg_node_text_draw (self=0x97ba4f0, ctx=0x969e878, dominate=0) at rsvg-text.c:253
+	x = 0
+	y = 2
+	lastwasspace = 1
+#6  0xb7e966e1 in rsvg_node_draw (self=0x9688e80, ctx=0x969e878, dominate=0) at rsvg-structure.c:53
+	state = (RsvgState *) 0xb7808ff4
+	stacksave = (GSList *) 0x0
+#7  0xb7e9693a in _rsvg_node_draw_children (self=0x97b3828, ctx=0x969e878, dominate=0) at rsvg-structure.c:69
+	i = 32
+#8  0xb7e966e1 in rsvg_node_draw (self=0x9688e80, ctx=0x969e878, dominate=0) at rsvg-structure.c:53
+	state = (RsvgState *) 0xb7808ff4
+	stacksave = (GSList *) 0x0
+#9  0xb7e9693a in _rsvg_node_draw_children (self=0x95513c8, ctx=0x969e878, dominate=0) at rsvg-structure.c:69
+	i = 16
+#10 0xb7e966e1 in rsvg_node_draw (self=0x9688e80, ctx=0x969e878, dominate=0) at rsvg-structure.c:53
+	state = (RsvgState *) 0xb7808ff4
+	stacksave = (GSList *) 0x0
+#11 0xb7e971da in rsvg_node_svg_draw (self=0x8de8e50, ctx=0x969e878, dominate=0) at rsvg-structure.c:309
+	state = <value optimized out>
+	affine = {0.99999999999998979, 0, 0, 1.0000000001779179, 0, 0}
+	affine_old = {0.14562002275312855, 0, 0, 0.14562002275312855, 0, 0}
+	affine_new = {0.14562002275312705, 0, 0, 0.14562002277903696, 0, 0}
+	i = 8
+	nx = 0
+	ny = 0
+	nw = 878.90999999999099
+	nh = 878.916425156375
+#12 0xb7e966e1 in rsvg_node_draw (self=0x9688e80, ctx=0x969e878, dominate=0) at rsvg-structure.c:53
+	state = (RsvgState *) 0xb7808ff4
+	stacksave = (GSList *) 0x0
+#13 0xb7ea4abf in rsvg_handle_render_cairo_sub (handle=0x8dd1ea0, cr=0x8e36808, id=0x0)
+    at rsvg-cairo-render.c:228
+	drawsub = (RsvgNode *) 0x8b572c8
+	__PRETTY_FUNCTION__ = "rsvg_handle_render_cairo_sub"
+#14 0xb7ea501e in rsvg_handle_get_pixbuf_sub (handle=0x8dd1ea0, id=0x0) at rsvg.c:100
+	dimensions = {width = 128, height = 128, em = 879, ex = 879}
+	output = <value optimized out>
+	surface = (cairo_surface_t *) 0x90d7250
+	cr = (cairo_t *) 0x8e36808
+	rowstride = 512
+	__PRETTY_FUNCTION__ = "rsvg_handle_get_pixbuf_sub"
+#15 0xb7ea50f5 in rsvg_handle_get_pixbuf (handle=0x8dd1ea0) at rsvg.c:133
+No locals.
+#16 0xb45bcaea in gdk_pixbuf__svg_image_stop_load (data=0x8e624e0, error=0xb21f11d8) at io-svg.c:154
+	pixbuf = <value optimized out>
+#17 0xb7814467 in IA__gdk_pixbuf_loader_close (loader=0x8e35810, error=0x0)
+    at /build/buildd/gtk+2.0-2.13.6/gdk-pixbuf/gdk-pixbuf-loader.c:724
+	tmp = (GError *) 0x0
+	priv = (GdkPixbufLoaderPrivate *) 0x8e9bf30
+	retval = 1
+	__PRETTY_FUNCTION__ = "IA__gdk_pixbuf_loader_close"
+#18 0xb7e260b8 in gnome_gdk_pixbuf_new_from_uri_at_scale (uri=0x8e0eee8 "file:///tmp/output-13437-z14.svg", 
+    width=128, height=128, preserve_aspect_ratio=1) at gnome-vfs-util.c:231
+	result = GNOME_VFS_OK
+	buffer = ">\n         <text x=\"1263.548\" y=\"981.392052543109\" k=\"name\" class=\"place-caption locality-caption\">Obernberg</text>\n         <text x=\"503.789000000001\" y=\"664.527611808224\" k=\"name\" class=\"caption-cas"...
+	bytes_read = <value optimized out>
+	loader = (GdkPixbufLoader *) 0x8e35810
+	pixbuf = <value optimized out>
+	animation = <value optimized out>
+	iter = (GdkPixbufAnimationIter *) 0x80
+	info = {width = 128, height = 128, input_width = 879, input_height = 879, preserve_aspect_ratio = 1}
+	file = (GFile *) 0x8de8f80
+	file_input_stream = (GFileInputStream *) 0x8dda2f0
+	__PRETTY_FUNCTION__ = "gnome_gdk_pixbuf_new_from_uri_at_scale"
+#19 0xb7e151dc in gnome_thumbnail_factory_generate_thumbnail (factory=0x8e03e40, 
+    uri=0x8e0eee8 "file:///tmp/output-13437-z14.svg", mime_type=0x8e37010 "image/svg+xml")
+    at gnome-thumbnail.c:660
+	pixbuf = (GdkPixbuf *) 0x0
+	scaled = <value optimized out>
+	tmp_pixbuf = <value optimized out>
+	expanded_script = 0x0
+	width = <value optimized out>
+	height = <value optimized out>
+	size = 128
+	original_width = -1207245208
+	original_height = -1306582272
+	dimension = "\\ÑÜ·ô_\030\b\000\000\000"
+	scale = 0
+	exit_status = 5
+	tmpname = 0x8186a9c "\020Pá·Z\\\006\bj\\\006\bz\\\006\b\212\\\006\b\232\\\006\bª\\\006\b`3j·Ê\\\006\bÚ\\\006\bàÝm·ú\\\006\b\n]\006\b\032]\006\b*]\006\bàÆ¥·J]\006\bZ]\006\bÀÝ\207·P&¡·0\n\206·\232]\006\bª]\006\bº]\006\bÊ]\006\bP\026¶·ê]\006\bú]\006\b\n^\006\b\200Ð\207·*^\006\bÐÛ¶·Ð)\225·Z^\006\bàý^·\220»o·\212^\006\b\232^\006\b \207a·°g_·Ê^\006\bÐ=¶·ê^\006\bú^\006\bp\vH·"
+	__PRETTY_FUNCTION__ = "gnome_thumbnail_factory_generate_thumbnail"
+#20 0x0814c27e in thumbnail_thread_start (data=0x0) at nautilus-thumbnails.c:981
+	info = (NautilusThumbnailInfo *) 0x8ddafe8
+	pixbuf = (GdkPixbuf *) 0x0
+	current_orig_mtime = 1218328193
+	current_time = 1218329387
+	__PRETTY_FUNCTION__ = "thumbnail_thread_start"
+#21 0xb739f4ff in start_thread () from /lib/tls/i686/cmov/libpthread.so.0
+#22 0xb731c64e in clone () from /lib/tls/i686/cmov/libc.so.6

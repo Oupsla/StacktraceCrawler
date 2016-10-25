@@ -1,0 +1,108 @@
+#0  0x00007fa6edb441f9 in g_timer_stop () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#1  0x00007fa6ebafbc3b in ?? () from /usr/lib/x86_64-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#2  0x00007fa6eb638ccf in ?? () from /usr/lib/x86_64-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#3  0x00007fa6edb2208b in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#4  0x00007fa6edb2144a in g_main_context_dispatch () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#5  0x00007fa6edb21810 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#6  0x00007fa6edb218d4 in g_main_context_iteration () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#7  0x00007fa6eba1ebf5 in gtk_main_iteration () from /usr/lib/x86_64-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#8  0x00007fa6ed17aa14 in ffi_call_unix64 () from /usr/lib/x86_64-linux-gnu/libffi.so.6
+No symbol table info available.
+#9  0x00007fa6ed17a435 in ffi_call () from /usr/lib/x86_64-linux-gnu/libffi.so.6
+No symbol table info available.
+#10 0x00007fa6ee022810 in ?? () from /usr/lib/libgirepository-1.0.so.1
+No symbol table info available.
+#11 0x00007fa6ee023b7e in g_function_info_invoke () from /usr/lib/libgirepository-1.0.so.1
+No symbol table info available.
+#12 0x00007fa6ee25c488 in ?? () from /usr/lib/python2.7/dist-packages/gi/_gi.so
+No symbol table info available.
+#13 0x00000000004ba3bb in PyEval_EvalFrameEx ()
+No symbol table info available.
+#14 0x00000000004bd4d5 in PyEval_EvalCodeEx ()
+No symbol table info available.
+#15 0x00000000004b6caa in PyEval_EvalFrameEx ()
+No symbol table info available.
+#16 0x00000000004bcedd in PyEval_EvalCodeEx ()
+No symbol table info available.
+#17 0x000000000044917f in ?? ()
+No symbol table info available.
+#18 0x000000000041ae4a in PyObject_Call ()
+No symbol table info available.
+#19 0x000000000043099e in ?? ()
+No symbol table info available.
+#20 0x000000000041ae4a in PyObject_Call ()
+No symbol table info available.
+#21 0x00000000004b5f66 in PyEval_CallObjectWithKeywords ()
+No symbol table info available.
+#22 0x00007fa6ef0d8f09 in PyCallbackObj::RunSimpleCallback(char const*, _object*, _object**) () from /usr/lib/python2.7/dist-packages/apt_pkg.so
+No symbol table info available.
+#23 0x00007fa6eee6bfde in debStatusIndex::Merge(pkgCacheGenerator&, OpProgress*) const () from /usr/lib/libapt-pkg.so.4.11
+No symbol table info available.
+#24 0x00007fa6eee145a7 in ?? () from /usr/lib/libapt-pkg.so.4.11
+No symbol table info available.
+#25 0x00007fa6eee1a9a3 in pkgCacheGenerator::MakeStatusCache(pkgSourceList&, OpProgress*, MMap**, bool) () from /usr/lib/libapt-pkg.so.4.11
+No symbol table info available.
+#26 0x00007fa6eee0e082 in pkgCacheFile::BuildCaches(OpProgress*, bool) () from /usr/lib/libapt-pkg.so.4.11
+No symbol table info available.
+#27 0x00007fa6eee0e4a4 in pkgCacheFile::Open(OpProgress*, bool) () from /usr/lib/libapt-pkg.so.4.11
+No symbol table info available.
+#28 0x00007fa6ef0cc1da in ?? () from /usr/lib/python2.7/dist-packages/apt_pkg.so
+No symbol table info available.
+#29 0x000000000047c2e5 in ?? ()
+No symbol table info available.
+#30 0x000000000041ae4a in PyObject_Call ()
+No symbol table info available.
+#31 0x00000000004b6e5e in PyEval_EvalFrameEx ()
+No symbol table info available.
+#32 0x00000000004bcedd in PyEval_EvalCodeEx ()
+No symbol table info available.
+#33 0x00000000004b6caa in PyEval_EvalFrameEx ()
+No symbol table info available.
+#34 0x00000000004bcedd in PyEval_EvalCodeEx ()
+No symbol table info available.
+#35 0x000000000044917f in ?? ()
+No symbol table info available.
+#36 0x000000000041ae4a in PyObject_Call ()
+No symbol table info available.
+#37 0x000000000043099e in ?? ()
+No symbol table info available.
+#38 0x000000000041ae4a in PyObject_Call ()
+No symbol table info available.
+#39 0x0000000000480e33 in ?? ()
+No symbol table info available.
+#40 0x000000000047c391 in ?? ()
+No symbol table info available.
+#41 0x000000000041ae4a in PyObject_Call ()
+No symbol table info available.
+#42 0x00000000004b6e5e in PyEval_EvalFrameEx ()
+No symbol table info available.
+#43 0x00000000004b6fc7 in PyEval_EvalFrameEx ()
+No symbol table info available.
+#44 0x00000000004b6fc7 in PyEval_EvalFrameEx ()
+No symbol table info available.
+#45 0x00000000004b6fc7 in PyEval_EvalFrameEx ()
+No symbol table info available.
+#46 0x00000000004bcedd in PyEval_EvalCodeEx ()
+No symbol table info available.
+#47 0x00000000004bd9b2 in PyEval_EvalCode ()
+No symbol table info available.
+#48 0x00000000004dce62 in ?? ()
+No symbol table info available.
+#49 0x00000000004dda24 in PyRun_FileExFlags ()
+No symbol table info available.
+#50 0x00000000004de52e in PyRun_SimpleFileExFlags ()
+No symbol table info available.
+#51 0x00000000004ee8bd in Py_Main ()
+No symbol table info available.
+#52 0x00007fa6efb3430d in __libc_start_main () from /lib/x86_64-linux-gnu/libc.so.6
+No symbol table info available.
+#53 0x000000000041cd09 in _start ()
+No symbol table info available.

@@ -1,0 +1,223 @@
+#0  0x00f71416 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x0047e1ef in __GI_raise (sig=6) at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+        resultvar = <optimized out>
+        resultvar = <optimized out>
+        pid = 6234100
+        selftid = 2964
+#2  0x00481835 in __GI_abort () at abort.c:91
+        save_stage = 2
+        act = {__sigaction_handler = {sa_handler = 0x50, sa_sigaction = 0x50}, sa_mask = {__val = {79, 4947484, 165250768, 80, 3217361556, 165250768, 0, 7, 6234100, 4690112, 6238432, 3217361516, 16716, 5034589, 4222451712, 165250768, 165250768, 165250768, 165250768, 165250847, 165250868, 165250768, 165250868, 0, 0, 0, 0, 0, 4681493, 0, 5867891, 150994944}}, sa_flags = 0, sa_restorer = 0}
+        sigs = {__val = {32, 0 <repeats 31 times>}}
+#3  0x00477095 in __assert_fail_base (fmt=0x5b0858 "%s%s%s:%u: %s%sAssertion `%s' failed.\n%n", assertion=0x7fbdd79 "ret != inval_id", file=0x7fbdcea "../../src/xcb_io.c", line=528, function=0x7fbddfe "_XAllocID") at assert.c:94
+        str = 0x9d986d0 "\310H\244\tp$_"
+        total = 4096
+#4  0x00477147 in __GI___assert_fail (assertion=0x7fbdd79 "ret != inval_id", file=0x7fbdcea "../../src/xcb_io.c", line=528, function=0x7fbddfe "_XAllocID") at assert.c:103
+No locals.
+#5  0x07f4650f in _XAllocID (dpy=0x9a38268) at ../../src/xcb_io.c:528
+        ret = 4294967295
+        __PRETTY_FUNCTION__ = "_XAllocID"
+#6  0x008f098c in XRenderCreateCursor (dpy=0x9a38268, source=41953120, x=12, y=12) at ../../src/Cursor.c:44
+        info = 0x9b3e1d0
+        cid = <optimized out>
+        req = 0x9a3e14c
+#7  0x00d8d3a2 in XcursorImageLoadCursor (dpy=0x9a38268, image=0x9b9a6f8) at ../../src/cursor.c:590
+        screen = <optimized out>
+        gc = <optimized out>
+        ximage = {width = 24, height = 24, xoffset = 0, format = 2, data = 0x9b9a718 "", byte_order = 0, bitmap_unit = 32, bitmap_bit_order = 0, bitmap_pad = 32, depth = 32, bytes_per_line = 96, bits_per_pixel = 32, red_mask = 16711680, green_mask = 65280, blue_mask = 255, obdata = 0x0, f = {create_image = 0x7f2ed70 <XCreateImage>, destroy_image = 0x7f2e170 <_XDestroyImage>, get_pixel = 0x7f2f380 <_XGetPixel32>, put_pixel = 0x7f2f290 <_XPutPixel32>, sub_image = 0x7f2ef80 <_XSubImage>, add_pixel = 0x7f2e240 <_XAddPixel>}}
+        pixmap = 41953118
+        picture = 41953120
+        format = <optimized out>
+        cursor = <optimized out>
+#8  0x00d8e0a9 in XcursorImagesLoadCursors (dpy=0x9a38268, images=0x9d7db70) at ../../src/cursor.c:683
+        cursors = 0x9d297f0
+        n = <optimized out>
+#9  0x00d8e168 in XcursorImagesLoadCursor (dpy=0x9a38268, images=0x9d7db70) at ../../src/cursor.c:702
+        cursors = <optimized out>
+        anim = <optimized out>
+        n = <optimized out>
+        cursor = <optimized out>
+#10 0x00d913d2 in XcursorLibraryLoadCursor (dpy=0x9a38268, file=0xd9236c "watch") at ../../src/library.c:337
+        size = <optimized out>
+        theme = <optimized out>
+        images = <optimized out>
+        cursor = <optimized out>
+#11 0x00d9146b in XcursorShapeLoadCursor (dpy=0x9a38268, shape=150) at ../../src/library.c:507
+        id = <optimized out>
+#12 0x0079ffb2 in _gdk_x11_cursor_update_theme (cursor=0x9f49140) at /build/buildd/gtk+3.0-3.4.0/./gdk/x11/gdkcursor-x11.c:410
+        xdisplay = 0x9a38268
+        private = 0x9f49140
+        new_cursor = 0
+        display_x11 = <optimized out>
+#13 0x007a001f in update_cursor (data=0x9f49140, user_data=0x0) at /build/buildd/gtk+3.0-3.4.0/./gdk/x11/gdkcursor-x11.c:431
+        cursor = 0x9f49140
+#14 0x003ac7a8 in g_slist_foreach (list=<optimized out>, func=0x7a0000 <update_cursor>, user_data=0x0) at /build/buildd/glib2.0-2.32.0/./glib/gslist.c:840
+        next = 0x9ba4cb8
+#15 0x007a011a in gdk_x11_display_set_cursor_theme (display=0x9a43080, theme=0x0, size=0) at /build/buildd/gtk+3.0-3.4.0/./gdk/x11/gdkcursor-x11.c:482
+        xdisplay = 0x9a38268
+        old_theme = <optimized out>
+        old_size = <optimized out>
+        __PRETTY_FUNCTION__ = "gdk_x11_display_set_cursor_theme"
+#16 0x08eec224 in settings_update_cursor_theme (settings=0x9a347b8) at /build/buildd/gtk+3.0-3.4.0/./gtk/gtksettings.c:2651
+        display = 0x9a43080
+        theme = 0x0
+        size = 0
+#17 0x08eee787 in gtk_settings_notify (object=0x9a347b8, pspec=0x9b31cf8) at /build/buildd/gtk+3.0-3.4.0/./gtk/gtksettings.c:1803
+        settings = 0x9a347b8
+        priv = 0x9a347c8
+        property_id = <optimized out>
+#18 0x0030b183 in g_cclosure_marshal_VOID__PARAM (closure=0x993b1e8, return_value=0x0, n_param_values=2, param_values=0xbfc510b0, invocation_hint=0xbfc51030, marshal_data=0x8eee640) at /build/buildd/glib2.0-2.32.0/./gobject/gmarshal.c:1042
+        callback = 0x8eee640 <gtk_settings_notify>
+        cc = 0x993b1e8
+        data1 = <optimized out>
+        data2 = <optimized out>
+        __PRETTY_FUNCTION__ = "g_cclosure_marshal_VOID__PARAM"
+#19 0x003072dd in g_type_class_meta_marshal (closure=0x993b1e8, return_value=0x0, n_param_values=2, param_values=0xbfc510b0, invocation_hint=0xbfc51030, marshal_data=0x20) at /build/buildd/glib2.0-2.32.0/./gobject/gclosure.c:970
+        class = <optimized out>
+        callback = <optimized out>
+        offset = 32
+#20 0x00308464 in g_closure_invoke (closure=0x993b1e8, return_value=0x0, n_param_values=2, param_values=0xbfc510b0, invocation_hint=0xbfc51030) at /build/buildd/glib2.0-2.32.0/./gobject/gclosure.c:777
+        marshal = 0x307280 <g_type_class_meta_marshal>
+        marshal_data = 0x20
+        in_marshal = 0
+        real_closure = 0x993b1d8
+        __PRETTY_FUNCTION__ = "g_closure_invoke"
+#21 0x0031a515 in signal_emit_unlocked_R (node=0x9922e60, detail=758, instance=0x9a347b8, emission_return=0x0, instance_and_params=0xbfc510b0) at /build/buildd/glib2.0-2.32.0/./gobject/gsignal.c:3477
+        accumulator = 0x0
+        emission = {next = 0x0, instance = 0x9a347b8, ihint = {signal_id = 1, detail = 758, run_type = G_SIGNAL_RUN_FIRST}, state = EMISSION_RUN, chain_type = 162718608}
+        class_closure = 0x993b1e8
+        hlist = 0x9b5fe20
+        handler_list = <optimized out>
+        return_accu = 0x0
+        accu = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        signal_id = 1
+        max_sequential_handler_number = 1039
+        return_value_altered = <optimized out>
+#22 0x003222bc in g_signal_emit_valist (instance=0x9a347b8, signal_id=1, detail=758, var_args=0xbfc512c0 "\370\034\263\t\360\t\223\t`") at /build/buildd/glib2.0-2.32.0/./gobject/gsignal.c:3296
+        instance_and_params = 0xbfc510b0
+        signal_return_type = 4
+        param_values = 0xbfc510c4
+        node = 0x9922e60
+        i = <optimized out>
+        n_params = <optimized out>
+        __PRETTY_FUNCTION__ = "g_signal_emit_valist"
+#23 0x00322433 in g_signal_emit (instance=0x9a347b8, signal_id=1, detail=758) at /build/buildd/glib2.0-2.32.0/./gobject/gsignal.c:3352
+        var_args = 0xbfc512bc "\370\034\263\t\370\034\263\t\360\t\223\t`"
+#24 0x0030cc3f in g_object_dispatch_properties_changed (object=0x9a347b8, n_pspecs=1, pspecs=0xbfc5130c) at /build/buildd/glib2.0-2.32.0/./gobject/gobject.c:1041
+        i = <optimized out>
+#25 0x0030e7f0 in g_object_notify_by_spec_internal (pspec=0x9b31cf8, object=0x9a347b8) at /build/buildd/glib2.0-2.32.0/./gobject/gobject.c:1133
+        nqueue = 0x0
+        notify_pspec = 0x9b31cf8
+#26 g_object_notify (object=0x9a347b8, property_name=0x90ce366 "gtk-cursor-theme-size") at /build/buildd/glib2.0-2.32.0/./gobject/gobject.c:1175
+        pspec = 0x9b31cf8
+        __PRETTY_FUNCTION__ = "g_object_notify"
+#27 0x08ef1fb7 in _gtk_settings_handle_event (event=0x9a1adf0) at /build/buildd/gtk+3.0-3.4.0/./gtk/gtksettings.c:2542
+        screen = 0x9a46040
+        settings = 0x9a347b8
+        pspec = 0x9b31cf8
+        property_id = <optimized out>
+#28 0x08e6d8d5 in gtk_main_do_event (event=0x9a1adf0) at /build/buildd/gtk+3.0-3.4.0/./gtk/gtkmain.c:1498
+        event_widget = <optimized out>
+        grab_widget = 0x0
+        topmost_widget = 0x0
+        window_group = <optimized out>
+        rewritten_event = 0x0
+        device = <optimized out>
+        tmp_list = <optimized out>
+        __PRETTY_FUNCTION__ = "gtk_main_do_event"
+#29 0x0078653c in _gdk_event_emit (event=0x9a1adf0) at /build/buildd/gtk+3.0-3.4.0/./gdk/gdkevents.c:69
+No locals.
+#30 0x007af808 in gdk_event_source_dispatch (source=0x9a4f310, callback=0, user_data=0x0) at /build/buildd/gtk+3.0-3.4.0/./gdk/x11/gdkeventsource.c:358
+        display = <optimized out>
+        event = 0x9a1adf0
+#31 0x00390cda in g_main_dispatch (context=0x9a4ae98) at /build/buildd/glib2.0-2.32.0/./glib/gmain.c:2515
+        dispatch = 0x7af7d0 <gdk_event_source_dispatch>
+        was_in_call = 0
+        user_data = 0x0
+        callback = 0
+        cb_funcs = 0x0
+        cb_data = 0x0
+        current_source_link = {data = 0x9a4f310, next = 0x0}
+        need_destroy = <optimized out>
+        source = 0x9a4f310
+        current = 0x9c98ea8
+        i = <optimized out>
+#32 g_main_context_dispatch (context=0x9a4ae98) at /build/buildd/glib2.0-2.32.0/./glib/gmain.c:3052
+No locals.
+#33 0x003910e5 in g_main_context_iterate (dispatch=1, block=3795552, context=0x9a4ae98, self=<optimized out>) at /build/buildd/glib2.0-2.32.0/./glib/gmain.c:3123
+        timeout = 0
+        some_ready = 1
+        fds = 0xa128b88
+        max_priority = 0
+        nfds = <optimized out>
+        allocated_nfds = <optimized out>
+#34 g_main_context_iterate (context=0x9a4ae98, block=3795552, dispatch=1, self=<optimized out>) at /build/buildd/glib2.0-2.32.0/./glib/gmain.c:3060
+        some_ready = 1
+#35 0x0039152b in g_main_loop_run (loop=0xa12e540) at /build/buildd/glib2.0-2.32.0/./glib/gmain.c:3317
+        __PRETTY_FUNCTION__ = "g_main_loop_run"
+#36 0x08e6ca25 in gtk_main () at /build/buildd/gtk+3.0-3.4.0/./gtk/gtkmain.c:1165
+        loop = 0xa12e540
+#37 0x005fa35a in ffi_call_SYSV () at ../src/x86/sysv.S:64
+No locals.
+#38 0x005fa08f in ffi_call (cif=0xbfc51654, fn=0x8e6c980 <gtk_main>, rvalue=0xbfc5166c, avalue=0xbfc515e0) at ../src/x86/ffi.c:303
+        ecif = {cif = 0xbfc51654, rvalue = 0xbfc5166c, avalue = 0xbfc515e0}
+#39 0x002cc406 in _g_callable_info_invoke (info=0x9d16ef0, function=0x8e6c980, in_args=0x0, n_in_args=0, out_args=0x0, n_out_args=0, return_value=0xbfc51784, is_method=0, throws=0, error=0xbfc51794) at girepository/gicallableinfo.c:610
+        cif = {abi = FFI_SYSV, nargs = 0, arg_types = 0xbfc515f0, rtype = 0x5fa5e4, bytes = 0, flags = 0}
+        rtype = 0x5fa5e4
+        atypes = 0xbfc515f0
+        tinfo = <optimized out>
+        rinfo = 0x9d22800
+        rtag = GI_TYPE_TAG_VOID
+        ainfo = <optimized out>
+        n_args = 0
+        n_invoke_args = 0
+        in_pos = 0
+        out_pos = <optimized out>
+        i = <optimized out>
+        args = 0xbfc515e0
+        success = 0
+        local_error = 0x0
+        error_address = 0xbfc51674
+        ffi_return_value = {v_boolean = 4000098, v_int8 = 98 'b', v_uint8 = 98 'b', v_int16 = 2402, v_uint16 = 2402, v_int32 = 4000098, v_uint32 = 4000098, v_int64 = 4298967394, v_uint64 = 4298967394, v_float = 5.60533118e-39, v_double = 2.1239721019670706e-314, v_short = 2402, v_ushort = 2402, v_int = 4000098, v_uint = 4000098, v_long = 4000098, v_ulong = 4000098, v_ssize = 4000098, v_size = 4000098, v_string = 0x3d0962 "\203\304\030[\303\211\366\215\274'", v_pointer = 0x3d0962}
+        return_value_p = 0xbfc5166c
+        __PRETTY_FUNCTION__ = "_g_callable_info_invoke"
+#40 0x002cda31 in g_function_info_invoke (info=0x9d16ef0, in_args=0x0, n_in_args=0, out_args=0x0, n_out_args=0, return_value=0xbfc51784, error=0xbfc51794) at girepository/gifunctioninfo.c:274
+        symbol = <optimized out>
+        func = 0x8e6c980
+        is_method = 0
+        throws = <optimized out>
+#41 0x00861177 in _invoke_callable (callable_info=<optimized out>, cache=0xa12b720, state=0xbfc51764) at /build/buildd/pygobject-3.2.0/gi/pygi-invoke.c:52
+        _save = 0x0
+        error = 0x0
+        retval = <optimized out>
+#42 _wrap_g_callable_info_invoke (self=0xa0ae42c, py_args=(), kwargs=Traceback (most recent call last):
+  File "/tmp/tmpaVMzsf/usr/lib/debug/usr/bin/python2.7-gdb.py", line 1099, in to_string
+    return pyop.get_truncated_repr(MAX_OUTPUT_LEN)
+  File "/tmp/tmpaVMzsf/usr/lib/debug/usr/bin/python2.7-gdb.py", line 183, in get_truncated_repr
+    self.write_repr(out, set())
+  File "/tmp/tmpaVMzsf/usr/lib/debug/usr/bin/python2.7-gdb.py", line 651, in write_repr
+    for pyop_key, pyop_value in self.iteritems():
+  File "/tmp/tmpaVMzsf/usr/lib/debug/usr/bin/python2.7-gdb.py", line 622, in iteritems
+    for i in safe_range(self.field('ma_mask') + 1):
+  File "/tmp/tmpaVMzsf/usr/lib/debug/usr/bin/python2.7-gdb.py", line 159, in field
+    return self._gdbval.dereference()[name]
+gdb.error: There is no member named ma_mask.
+) at /build/buildd/pygobject-3.2.0/gi/pygi-invoke.c:633
+        state = {py_in_args = (), n_py_in_args = 0, current_arg = 0, implementor_gtype = 0, args = 0x0, in_args = 0x0, out_args = 0x0, out_values = 0x0, return_arg = {v_boolean = 0, v_int8 = 0 '\000', v_uint8 = 0 '\000', v_int16 = 0, v_uint16 = 0, v_int32 = 0, v_uint32 = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_short = 0, v_ushort = 0, v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_ssize = 0, v_size = 0, v_string = 0x0, v_pointer = 0x0}, error = 0x0, failed = 0}
+        ret = 0x0
+#43 0x0815ad43 in PyEval_EvalFrameEx ()
+No locals.
+#44 0x081842f0 in PyEval_EvalCodeEx ()
+No locals.
+#45 0x0815749c in PyEval_EvalFrameEx ()
+No locals.
+#46 0x0815758c in PyEval_EvalFrameEx ()
+No locals.
+#47 0x081842f0 in PyEval_EvalCodeEx ()
+No locals.
+#48 0x08194fd1 in PyRun_SimpleFileExFlags ()
+No locals.
+#49 0x08198cf9 in Py_Main ()
+No locals.
+#50 0x0805e93b in main ()
+No locals.

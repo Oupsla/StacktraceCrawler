@@ -1,0 +1,18 @@
+#0  0x00007f05490d90b5 in g_slice_alloc () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#1  0x00007f05490da28e in g_slist_prepend () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#2  0x00007f053e9fc225 in gconf_value_decode () from /usr/lib/libgconf-2.so.4
+No symbol table info available.
+#3  0x00007f053ea120f1 in gconf_dbus_utils_get_entries () from /usr/lib/libgconf-2.so.4
+No symbol table info available.
+#4  0x00007f053ea0fffc in gconf_engine_all_entries () from /usr/lib/libgconf-2.so.4
+No symbol table info available.
+#5  0x00007f053ea08274 in ?? () from /usr/lib/libgconf-2.so.4
+No symbol table info available.
+#6  0x00007f053ea0b66b in gconf_client_add_dir () from /usr/lib/libgconf-2.so.4
+No symbol table info available.
+#7  0x00007f053f0b554b in ?? () from /usr/lib/nautilus-sendto/plugins/libnstevolution.so
+No symbol table info available.
+#8  0x000000000040397d in main ()
+No symbol table info available.

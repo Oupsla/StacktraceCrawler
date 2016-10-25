@@ -1,0 +1,122 @@
+#0  0x00c3d422 in __kernel_vsyscall ()
+#1  0x029964d1 in *__GI_raise (sig=6)
+    at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+	resultvar = <value optimized out>
+	pid = 44826612
+	selftid = 4091
+#2  0x02999932 in *__GI_abort () at abort.c:92
+	act = {__sigaction_handler = {sa_handler = 0xae, 
+    sa_sigaction = 0xae}, sa_mask = {__val = {3217544376, 44493912, 6849124, 
+      917504, 135809520, 134559404, 0, 48179, 3217544524, 134526556, 20, 2, 
+      3217544376, 44239662, 4, 0, 3217544452, 44826612, 20, 3217545908, 
+      3217544568, 44357076, 2, 3217544452, 4, 0, 3, 0, 2, 44618623, 44618619, 
+      44614195}}, sa_flags = 44614169, sa_restorer = 0x2a8e6c7}
+	sigs = {__val = {32, 0 <repeats 31 times>}}
+#3  0x029ccf85 in __libc_message (do_abort=2, 
+    fmt=0x2a904b0 "*** glibc detected *** %s: %s: 0x%s ***\n")
+    at ../sysdeps/unix/sysv/linux/libc_fatal.c:189
+	ap = <value optimized out>
+	fd = -1077422416
+	on_2 = <value optimized out>
+	list = <value optimized out>
+	nlist = <value optimized out>
+	cp = <value optimized out>
+	written = false
+#4  0x029d7091 in malloc_printerr (action=<value optimized out>, 
+    str=0x6 <Address 0x6 out of bounds>, ptr=0x667875) at malloc.c:6217
+	buf = "00667875"
+	cp = <value optimized out>
+#5  0x029da45b in _int_malloc (av=<value optimized out>, 
+    bytes=<value optimized out>) at malloc.c:4279
+	p = <value optimized out>
+	nb = 16
+	idx = 0
+	bin = <value optimized out>
+	victim = (mchunkptr) 0x66786d
+	size = <value optimized out>
+	victim_index = <value optimized out>
+	remainder = <value optimized out>
+	remainder_size = <value optimized out>
+	block = <value optimized out>
+	bit = <value optimized out>
+	map = <value optimized out>
+	fwd = <value optimized out>
+	bck = <value optimized out>
+	__PRETTY_FUNCTION__ = "_int_malloc"
+#6  0x029db908 in *__GI___libc_malloc (bytes=12) at malloc.c:3638
+	ar_ptr = (mstate) 0x2ac13a0
+	victim = <value optimized out>
+	__PRETTY_FUNCTION__ = "__libc_malloc"
+#7  0x00c7f214 in IA__g_malloc (n_bytes=12)
+    at /build/buildd/glib2.0-2.21.5/glib/gmem.c:131
+	mem = (gpointer) 0x0
+#8  0x00c97c91 in IA__g_memdup (mem=0xb6e4913c, byte_size=12)
+    at /build/buildd/glib2.0-2.21.5/glib/gstrfuncs.c:119
+	new_mem = (gpointer) 0x0
+#9  0x013b6aca in gst_registry_binary_load_plugin (
+    registry=<value optimized out>, in=0xbfc7de08, 
+    end=0xb6ecc188 <Address 0xb6ecc188 out of bounds>)
+    at gstregistrybinary.c:955
+	plugin = (GstPlugin *) 0x921a0a8
+	i = <value optimized out>
+	n = 2
+	__PRETTY_FUNCTION__ = "gst_registry_binary_load_plugin"
+#10 0x013b77fd in gst_registry_binary_read_cache (registry=0x91cd880, 
+    location=0x91f4d10 "/root/.gstreamer-0.10/registry.i486.bin")
+    at gstregistrybinary.c:1296
+	mapped = (GMappedFile *) 0x9209f80
+	contents = (gchar *) 0xb6e49000 <Address 0xb6e49000 out of bounds>
+	in = (gchar *) 0xb6e4913c <Address 0xb6e4913c out of bounds>
+	size = 536968
+	err = (GError *) 0x0
+	res = <value optimized out>
+	timer = (GTimer *) 0x9219fc8
+	seconds = 0
+	__PRETTY_FUNCTION__ = "gst_registry_binary_read_cache"
+#11 0x01343d03 in ensure_current_registry (error=<value optimized out>)
+    at gst.c:938
+	registry_file = <value optimized out>
+	default_registry = (GstRegistry *) 0x91cd880
+	ret = <value optimized out>
+	have_cache = <value optimized out>
+	__PRETTY_FUNCTION__ = "ensure_current_registry"
+#12 0x01345d25 in init_post (context=0x920b760, group=0x920c530, data=0x0, 
+    error=0x0) at gst.c:1128
+	__PRETTY_FUNCTION__ = "init_post"
+#13 0x00c85a70 in IA__g_option_context_parse (context=0x920b760, argc=0x0, 
+    argv=0x0, error=0x0) at /build/buildd/glib2.0-2.21.5/glib/goption.c:1947
+	group = (GOptionGroup *) 0x0
+	i = 153139040
+	j = <value optimized out>
+	k = <value optimized out>
+	list = (GList *) 0x920a050
+#14 0x0134536e in gst_init_check (argc=0x0, argv=0x0, err=0x0) at gst.c:452
+	group = <value optimized out>
+	ctx = (GOptionContext *) 0x920b760
+	res = <value optimized out>
+	__PRETTY_FUNCTION__ = "gst_init_check"
+#15 0x048f992e in brasero_burn_library_start (argc=0x0, argv=0x0)
+    at burn-basics.c:232
+	client = <value optimized out>
+#16 0x084c82ef in nautilus_module_initialize (module=0x91e9ac0)
+    at nautilus-burn-extension.c:933
+No locals.
+#17 0x08145eae in ?? ()
+#18 0x00db08c0 in IA__g_type_module_use (module=0x91e9ac0)
+    at /build/buildd/glib2.0-2.21.5/gobject/gtypemodule.c:257
+	tmp_list = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_type_module_use"
+#19 0x08145fea in ?? ()
+#20 0x0806f9bf in ?? ()
+#21 0x080814c8 in ?? ()
+#22 0x02982b56 in __libc_start_main (
+    main=0x8080df0 <g_themed_icon_append_name@plt+85740>, argc=1, 
+    ubp_av=0xbfc7e414, init=0x81a2d40, fini=0x81a2d30, 
+    rtld_fini=0x677d30 <_dl_fini>, stack_end=0xbfc7e40c) at libc-start.c:220
+	result = <value optimized out>
+	unwind_buf = {cancel_jmp_buf = {{jmp_buf = {44826612, 0, 0, 
+        -1077419032, 1047293380, -2114143554}, mask_was_saved = 0}}, priv = {
+    pad = {0x0, 0x0, 0x1, 0x806bf20}, data = {prev = 0x0, cleanup = 0x0, 
+      canceltype = 1}}}
+	not_first_call = <value optimized out>
+#23 0x0806bf41 in ?? ()

@@ -1,0 +1,13 @@
+#0  0xb6cf8c4a in ?? () from /usr/lib/libdbus-1.so.3
+#1  0xb6d0ad85 in ?? () from /usr/lib/libdbus-1.so.3
+#2  0xb6cfd7f5 in ?? () from /usr/lib/libdbus-1.so.3
+#3  0xb6d0fbe2 in dbus_timeout_handle () from /usr/lib/libdbus-1.so.3
+#4  0xb69919c0 in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+#5  0xb7560466 in ?? () from /usr/lib/libglib-2.0.so.0
+#6  0xb755fcf6 in g_main_context_dispatch () from /usr/lib/libglib-2.0.so.0
+#7  0xb75630b3 in ?? () from /usr/lib/libglib-2.0.so.0
+#8  0xb7563497 in g_main_loop_run () from /usr/lib/libglib-2.0.so.0
+#9  0xb794d264 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+#10 0x0807efc5 in ?? ()
+#11 0xb71d0450 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+#12 0x08069c41 in ?? ()

@@ -1,0 +1,190 @@
+#0  0xb77bd424 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0xb6945c8f in raise () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#2  0xb69492b5 in abort () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#3  0xb693e826 in __assert_fail () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#4  0xb766e4af in _XAllocID () from /usr/lib/i386-linux-gnu/libX11.so.6
+No symbol table info available.
+#5  0xb764be22 in XCreatePixmap () from /usr/lib/i386-linux-gnu/libX11.so.6
+No symbol table info available.
+#6  0xb6e93b65 in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#7  0xb6e757e0 in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#8  0xb6e7588b in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#9  0xb6e3db19 in cairo_push_group_with_content () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#10 0xb6ff4553 in ?? () from /usr/lib/i386-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#11 0xb6fc79cd in gdk_window_set_icon_list () from /usr/lib/i386-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#12 0xb731add0 in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#13 0xb6c0053c in g_cclosure_marshal_VOID__VOID () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#14 0xb6bfef8c in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#15 0xb6c10845 in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#16 0xb6c180c2 in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#17 0xb6c18253 in g_signal_emit () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#18 0xb7178626 in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#19 0xb717872b in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#20 0x081236bd in ?? ()
+No symbol table info available.
+#21 0x08103a6d in ?? ()
+No symbol table info available.
+#22 0x0807cf01 in ?? ()
+No symbol table info available.
+#23 0x08112320 in ?? ()
+No symbol table info available.
+#24 0x08119fee in ?? ()
+No symbol table info available.
+#25 0x0811a52a in ?? ()
+No symbol table info available.
+#26 0xb6c0053c in g_cclosure_marshal_VOID__VOID () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#27 0xb6bfd9dd in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#28 0xb6bfef8c in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#29 0xb6c10c9f in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#30 0xb6c180c2 in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#31 0xb6c18253 in g_signal_emit () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#32 0xb730fd12 in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#33 0xb6c0053c in g_cclosure_marshal_VOID__VOID () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#34 0xb6bfef8c in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#35 0xb6c10845 in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#36 0xb6c180c2 in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#37 0xb6c18253 in g_signal_emit () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#38 0xb7246565 in gtk_style_context_invalidate () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#39 0xb7246a50 in gtk_style_context_set_path () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#40 0xb7313734 in gtk_widget_get_path () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#41 0xb7313802 in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#42 0xb70b102c in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#43 0xb72241e0 in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#44 0xb7106467 in gtk_container_forall () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#45 0xb731385e in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#46 0xb71e3efc in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#47 0xb7106467 in gtk_container_forall () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#48 0xb731385e in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#49 0xb70b609b in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#50 0xb7106467 in gtk_container_forall () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#51 0xb731385e in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#52 0xb71d7574 in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#53 0xb7106467 in gtk_container_forall () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#54 0xb731385e in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#55 0xb70b609b in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#56 0xb7106467 in gtk_container_forall () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#57 0xb731385e in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#58 0xb71e7d02 in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#59 0xb7106467 in gtk_container_forall () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#60 0xb731385e in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#61 0xb70b609b in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#62 0xb7106467 in gtk_container_forall () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#63 0xb731385e in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#64 0xb71e7d12 in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#65 0xb7106467 in gtk_container_forall () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#66 0xb731385e in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#67 0xb70814b1 in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#68 0xb7106467 in gtk_container_forall () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#69 0xb731385e in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#70 0xb70b102c in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#71 0xb7106467 in gtk_container_forall () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#72 0xb731385e in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#73 0xb73138f0 in gtk_widget_reset_style () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#74 0xb7243182 in gtk_style_context_reset_widgets () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#75 0xb72302d3 in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#76 0xb6c00fca in g_cclosure_marshal_VOID__PARAM () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#77 0xb6bfd9dd in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#78 0xb6bfef8c in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#79 0xb6c10c9f in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#80 0xb6c180c2 in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#81 0xb6c18253 in g_signal_emit () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#82 0xb6c0240f in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#83 0xb6c04270 in g_object_notify () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#84 0xb7233d07 in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#85 0xb71aa7f5 in gtk_main_do_event () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#86 0xb6fb2d0c in ?? () from /usr/lib/i386-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#87 0xb6fe0838 in ?? () from /usr/lib/i386-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#88 0xb6b416ea in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#89 0xb6b41af5 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#90 0xb6b41bd1 in g_main_context_iteration () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#91 0xb6cf9e3c in g_application_run () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#92 0x08067d14 in ?? ()
+No symbol table info available.
+#93 0xb6931113 in __libc_start_main () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#94 0x08067d4d in ?? ()
+No symbol table info available.

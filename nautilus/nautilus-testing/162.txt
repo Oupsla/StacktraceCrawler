@@ -1,0 +1,40 @@
+#0  0x00ab36b9 in ?? () from /usr/lib/libgvfscommon.so.0
+No symbol table info available.
+#1  0x00ab3a8e in g_mount_spec_match_with_path ()
+   from /usr/lib/libgvfscommon.so.0
+No symbol table info available.
+#2  0x077fb812 in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+No symbol table info available.
+#3  0x077fba1d in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+No symbol table info available.
+#4  0x077fde0c in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+No symbol table info available.
+#5  0x077fdf0d in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+No symbol table info available.
+#6  0x0022009d in g_file_query_filesystem_info_async ()
+   from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#7  0x0812005d in ?? ()
+No symbol table info available.
+#8  0x080b7ac7 in ?? ()
+No symbol table info available.
+#9  0x080b7d72 in ?? ()
+No symbol table info available.
+#10 0x080b8539 in ?? ()
+No symbol table info available.
+#11 0x0077ed5c in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#12 0x0077e5e5 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#13 0x007822d8 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#14 0x00782817 in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#15 0x00ef8299 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#16 0x08080e08 in ?? ()
+No symbol table info available.
+#17 0x01ab2bd6 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#18 0x0806c6b1 in ?? ()
+No symbol table info available.

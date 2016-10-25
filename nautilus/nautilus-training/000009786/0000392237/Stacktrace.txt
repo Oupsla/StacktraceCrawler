@@ -1,0 +1,244 @@
+#0  cell_view_is_sensitive (cell_view=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.17.2/gtk/gtkcombobox.c:1703
+	cells = (GList *) 0xffffffffd80a9600
+	list = (GList *) 0xffffffffd80a9600
+	sensitive = 0
+#1  0x00007f82eaebdfdb in update_menu_sensitivity (combo_box=0x3589860, 
+    menu=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.17.2/gtk/gtkcombobox.c:1781
+	priv = (GtkComboBoxPrivate *) 0x35898e0
+	children = (GList *) 0x3ddcc80
+	child = (GList *) 0x33a2f00
+	item = (GtkWidget *) 0x3a92190
+	submenu = <value optimized out>
+	sensitive = <value optimized out>
+#2  0x00007f82eaebe0ae in gtk_combo_box_menu_popup (combo_box=0x7f82d80a9600, 
+    button=1, activate_time=0)
+    at /build/buildd/gtk+2.0-2.17.2/gtk/gtkcombobox.c:1808
+	priv = (GtkComboBoxPrivate *) 0x35898e0
+	path = <value optimized out>
+	active_item = <value optimized out>
+	requisition = {width = 44760912, height = 0}
+	width = <value optimized out>
+#3  0x00007f82eaec0069 in gtk_combo_box_menu_button_press (
+    widget=<value optimized out>, event=0x3506df0, 
+    user_data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.17.2/gtk/gtkcombobox.c:3149
+	combo_box = (GtkComboBox *) 0x3589860
+	priv = (GtkComboBoxPrivate *) 0x35898e0
+#4  0x00007f82eaf61a03 in _gtk_marshal_BOOLEAN__BOXED (closure=0x3a1ae80, 
+    return_value=0x7fffc4974470, n_param_values=<value optimized out>, 
+    param_values=0x3dab870, invocation_hint=<value optimized out>, 
+    marshal_data=0x7f82eaebffc0)
+    at /build/buildd/gtk+2.0-2.17.2/gtk/gtkmarshalers.c:84
+	data1 = (gpointer) 0x3a18390
+	data2 = (gpointer) 0x3589860
+	v_return = <value optimized out>
+	__PRETTY_FUNCTION__ = "_gtk_marshal_BOOLEAN__BOXED"
+#5  0x00007f82ec61662e in IA__g_closure_invoke (closure=0x3a1ae80, 
+    return_value=0x7fffc4974470, n_param_values=2, param_values=0x3dab870, 
+    invocation_hint=0x7fffc4974430)
+    at /build/buildd/glib2.0-2.21.2/gobject/gclosure.c:767
+	marshal = (GClosureMarshal) 0x7f82d80a9600
+	marshal_data = (gpointer) 0x1
+	__PRETTY_FUNCTION__ = "IA__g_closure_invoke"
+#6  0x00007f82ec62c836 in signal_emit_unlocked_R (node=0x2db4b70, 
+    detail=<value optimized out>, instance=<value optimized out>, 
+    emission_return=<value optimized out>, 
+    instance_and_params=<value optimized out>)
+    at /build/buildd/glib2.0-2.21.2/gobject/gsignal.c:3247
+	tmp = (Handler *) 0x7f82efe015b0
+	handler = (Handler *) 0x3440a90
+	accumulator = (SignalAccumulator *) 0x2db4df0
+	emission = {next = 0x0, instance = 0x3a18390, ihint = {
+    signal_id = 30, detail = 0, run_type = G_SIGNAL_RUN_FIRST}, 
+  state = EMISSION_RUN, chain_type = 4}
+	class_closure = (GClosure *) 0x2db4b00
+	handler_list = (Handler *) 0x3440a90
+	return_accu = <value optimized out>
+	accu = {g_type = 20, data = {{v_int = 0, v_uint = 0, v_long = 0, 
+      v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, 
+      v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, 
+      v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+	signal_id = 30
+	max_sequential_handler_number = <value optimized out>
+	return_value_altered = 0
+#7  0x00007f82ec62db3e in IA__g_signal_emit_valist (instance=0x3a18390, 
+    signal_id=<value optimized out>, detail=0, var_args=0x7fffc4974620)
+    at /build/buildd/glib2.0-2.21.2/gobject/gsignal.c:2990
+	return_value = {g_type = 20, data = {{v_int = 0, v_uint = 0, 
+      v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, 
+      v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, 
+      v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, 
+      v_pointer = 0x0}}}
+	error = <value optimized out>
+	signal_return_type = 20
+	param_values = <value optimized out>
+	node = (SignalNode *) 0x2db4b70
+	i = <value optimized out>
+	n_params = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_signal_emit_valist"
+#8  0x00007f82ec62e203 in IA__g_signal_emit (instance=0x7f82d80a9600, 
+    signal_id=4028680176, detail=0)
+    at /build/buildd/glib2.0-2.21.2/gobject/gsignal.c:3037
+	var_args = {{gp_offset = 32, fp_offset = 48, 
+    overflow_arg_area = 0x7fffc4974700, reg_save_area = 0x7fffc4974640}}
+#9  0x00007f82eb080bdf in gtk_widget_event_internal (widget=0x3a18390, 
+    event=0x3506df0) at /build/buildd/gtk+2.0-2.17.2/gtk/gtkwidget.c:4761
+	signal_num = <value optimized out>
+	return_val = 0
+#10 0x00007f82eaf589d4 in IA__gtk_propagate_event (widget=0x3a18390, 
+    event=0x3506df0) at /build/buildd/gtk+2.0-2.17.2/gtk/gtkmain.c:2396
+	tmp = (GtkWidget *) 0x3a18390
+	handled_event = 58232160
+	__PRETTY_FUNCTION__ = "IA__gtk_propagate_event"
+#11 0x00007f82eaf59af3 in IA__gtk_main_do_event (event=0x3506df0)
+    at /build/buildd/gtk+2.0-2.17.2/gtk/gtkmain.c:1601
+	event_widget = <value optimized out>
+	grab_widget = (GtkWidget *) 0x3a18390
+	window_group = (GtkWindowGroup *) 0x3788d60
+	rewritten_event = (GdkEvent *) 0x0
+	tmp_list = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_main_do_event"
+#12 0x00007f82eabaf90c in gdk_event_dispatch (source=<value optimized out>, 
+    callback=<value optimized out>, user_data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.17.2/gdk/x11/gdkevents-x11.c:2367
+	display = <value optimized out>
+	event = <value optimized out>
+#13 0x00007f82ebf708fe in IA__g_main_context_dispatch (context=0x2d9e600)
+    at /build/buildd/glib2.0-2.21.2/glib/gmain.c:1814
+No locals.
+#14 0x00007f82ebf73fd8 in g_main_context_iterate (context=0x2d9e600, 
+    block=<value optimized out>, dispatch=<value optimized out>, 
+    self=<value optimized out>)
+    at /build/buildd/glib2.0-2.21.2/glib/gmain.c:2445
+	max_priority = 0
+	timeout = 0
+	some_ready = 1
+	nfds = 13
+	allocated_nfds = -336066192
+	fds = <value optimized out>
+	__PRETTY_FUNCTION__ = "g_main_context_iterate"
+#15 0x00007f82ebf74435 in IA__g_main_loop_run (loop=0x3767ee0)
+    at /build/buildd/glib2.0-2.21.2/glib/gmain.c:2653
+	self = (GThread *) 0x2d810c0
+	__PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#16 0x00007f82eaf5a027 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.17.2/gtk/gtkmain.c:1205
+	tmp_list = (GList *) 0x7f82eb8d8db8
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0x3446600
+	loop = <value optimized out>
+#17 0x00007f82eb5e9d02 in ?? ()
+#18 0x0000000002a0f798 in ?? ()
+#19 0x0000000002a0f580 in ?? ()
+#20 0x00000000027d00a0 in ?? ()
+#21 0x00000000004a2348 in PyEval_EvalFrameEx (f=0x3446600, 
+    throwflag=<value optimized out>) at ../Python/ceval.c:3690
+	sp = (PyObject **) 0x2a0f798
+	stack_pointer = (PyObject **) 0x7f82eb8d8db8
+	next_instr = (unsigned char *) 0x2890da5 "\001Wd"
+	opcode = <value optimized out>
+	oparg = <value optimized out>
+	why = <value optimized out>
+	err = <value optimized out>
+	x = <value optimized out>
+	v = <value optimized out>
+	w = <value optimized out>
+	u = <value optimized out>
+	t = <value optimized out>
+	stream = <value optimized out>
+	freevars = (PyObject **) 0x2a0f790
+	retval = (PyObject *) 0x0
+	tstate = (PyThreadState *) 0x27d00a0
+	co = (PyCodeObject *) 0x7f82f013c5d0
+	instr_ub = -1
+	instr_lb = 0
+	instr_prev = -1
+	first_instr = (unsigned char *) 0x2890a24 "t"
+	names = (PyObject *) 0x288e710
+	consts = (PyObject *) 0x7f82f01eb7d0
+#22 0x00000000004a2c4f in PyEval_EvalFrameEx (f=0x286d030, 
+    throwflag=<value optimized out>) at ../Python/ceval.c:3792
+	sp = (PyObject **) 0x286d1b0
+	stack_pointer = <value optimized out>
+	next_instr = (unsigned char *) 0x285e8d3 "\001Wq?\001\004e'"
+	opcode = <value optimized out>
+	oparg = <value optimized out>
+	why = <value optimized out>
+	err = <value optimized out>
+	x = (PyObject *) 0x0
+	v = <value optimized out>
+	w = <value optimized out>
+	u = <value optimized out>
+	t = <value optimized out>
+	stream = <value optimized out>
+	freevars = (PyObject **) 0x286d1a8
+	retval = (PyObject *) 0x0
+	tstate = (PyThreadState *) 0x27d00a0
+	co = (PyCodeObject *) 0x7f82f013c648
+	instr_ub = -1
+	instr_lb = 0
+	instr_prev = -1
+	first_instr = (unsigned char *) 0x285e764 "d"
+	names = (PyObject *) 0x2878be0
+	consts = (PyObject *) 0x287a4e0
+#23 0x00000000004a4040 in PyEval_EvalCodeEx (co=0x7f82f013c648, 
+    globals=<value optimized out>, locals=<value optimized out>, args=0x0, 
+    argcount=<value optimized out>, kws=<value optimized out>, kwcount=0, 
+    defs=0x0, defcount=0, closure=0x0) at ../Python/ceval.c:2968
+	f = (PyFrameObject *) 0x286d030
+	retval = <value optimized out>
+	freevars = <value optimized out>
+	tstate = (PyThreadState *) 0x27d00a0
+	x = (PyObject *) 0x1
+	u = <value optimized out>
+#24 0x00000000004a4112 in PyEval_EvalCode (co=0x7f82d80a9600, 
+    globals=0x7f82f020c7f0, locals=0x0) at ../Python/ceval.c:522
+No locals.
+#25 0x00000000004c34f0 in PyRun_FileExFlags (fp=0x2859650, 
+    filename=<value optimized out>, start=<value optimized out>, 
+    globals=<value optimized out>, locals=0x280b270, closeit=1, 
+    flags=0x7fffc4974eb0) at ../Python/pythonrun.c:1335
+	ret = (PyObject *) 0x7f82d80a9600
+	mod = (mod_ty) 0x288d528
+	arena = (PyArena *) 0x27d0ba0
+#26 0x00000000004c36b4 in PyRun_SimpleFileExFlags (fp=<value optimized out>, 
+    filename=0x7fffc4975bd5 "/usr/share/virt-manager/virt-manager.py", 
+    closeit=1, flags=0x7fffc4974eb0) at ../Python/pythonrun.c:931
+	m = <value optimized out>
+	d = <value optimized out>
+	v = <value optimized out>
+	ext = <value optimized out>
+	set_file_name = 1
+	ret = <value optimized out>
+	len = -670394880
+#27 0x0000000000418a27 in Py_Main (argc=-267243392, 
+    argv=<value optimized out>) at ../Modules/main.c:599
+	c = <value optimized out>
+	sts = 0
+	command = 0x0
+	filename = 0x7f82f020c7f0 "\001"
+	module = 0x0
+	fp = (FILE *) 0x2859650
+	p = <value optimized out>
+	unbuffered = <value optimized out>
+	skipfirstline = 0
+	stdin_is_interactive = -267207024
+	help = <value optimized out>
+	version = <value optimized out>
+	saw_unbuffered_flag = <value optimized out>
+	cf = {cf_flags = 0}
+#28 0x00007f82ef1ff5e6 in __libc_start_main (main=0x417ce0 <main>, argc=2, 
+    ubp_av=0x7fffc4974fc8, init=0x542680 <__libc_csu_init>, 
+    fini=<value optimized out>, rtld_fini=<value optimized out>, 
+    stack_end=0x7fffc4974fb8) at libc-start.c:220
+	result = <value optimized out>
+	unwind_buf = {cancel_jmp_buf = {{jmp_buf = {5514880, 
+        -1284832111597479938, 4291568, 140736491638720, 0, 0, 
+        1284886191115048958, 1238070157141972990}, mask_was_saved = 0}}, 
+  priv = {pad = {0x0, 0x0, 0x2, 0x417ce0}, data = {prev = 0x0, cleanup = 0x0, 
+      canceltype = 2}}}
+	not_first_call = <value optimized out>
+#29 0x0000000000417c19 in _start () at ../sysdeps/x86_64/elf/start.S:113
+No locals.

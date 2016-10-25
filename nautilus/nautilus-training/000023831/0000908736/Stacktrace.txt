@@ -1,0 +1,42 @@
+#0  0x08123ea1 in ?? ()
+No symbol table info available.
+#1  0x081244fa in ?? ()
+No symbol table info available.
+#2  0x0807bff4 in ?? ()
+No symbol table info available.
+#3  0x00c9348c in g_cclosure_marshal_VOID__VOID () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#4  0x00c77372 in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#5  0x00c8a048 in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#6  0x00c92b29 in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#7  0x00c92e3d in g_signal_emit_by_name () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#8  0x080a1258 in ?? ()
+No symbol table info available.
+#9  0x0815f111 in ?? ()
+No symbol table info available.
+#10 0x080b9437 in ?? ()
+No symbol table info available.
+#11 0x080bc768 in ?? ()
+No symbol table info available.
+#12 0x00579311 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#13 0x0057daa8 in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#14 0x0057e270 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#15 0x0057e92b in g_main_loop_run () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#16 0x01107c39 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#17 0x0807ff36 in ?? ()
+No symbol table info available.
+#18 0x02726e37 in __libc_start_main (main=0x807f830, argc=5, ubp_av=0xbfdbd814, init=0x81ac190, fini=0x81ac1f0, rtld_fini=0xdc0a50, stack_end=0xbfdbd80c) at libc-start.c:226
+        result = <value optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {42389492, 0, 0, -1076111384, -1067085077, -1827632240}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x5, 0x806a840}, data = {prev = 0x0, cleanup = 0x0, canceltype = 5}}}
+        not_first_call = <value optimized out>
+#19 0x0806a861 in ?? ()
+No symbol table info available.

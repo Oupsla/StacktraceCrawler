@@ -1,0 +1,176 @@
+#0  0x00b2c422 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x071dd4d1 in *__GI_raise (sig=6)
+    at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+	resultvar = <value optimized out>
+	pid = 120532980
+	selftid = 1392
+#2  0x071e0932 in *__GI_abort () at abort.c:92
+	act = {__sigaction_handler = {sa_handler = 0x739ff4, 
+    sa_sigaction = 0x739ff4}, sa_mask = {__val = {3219129440, 3079240848, 
+      3219129396, 7499785, 3219129380, 3824876, 3219129368, 7579596, 0, 
+      3079198608, 5, 0, 1, 4071814, 168585032, 4294967295, 120534368, 
+      4546548, 4546548, 134, 3219129480, 3079240408, 0, 3219129440, 
+      3219129368, 3219129380, 0, 114, 3858728, 24, 120538016, 120532980}}, 
+  sa_flags = 120538016, sa_restorer = 0x81dbf44 <stderr@@GLIBC_2.0>}
+	sigs = {__val = {32, 0 <repeats 31 times>}}
+#3  0x00400ddc in g_assertion_message () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#4  0x0040143d in g_assertion_message_expr () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#5  0x080cc9d5 in fm_icon_view_icon_text_changed_callback (
+    container=0x9bd3488, file=0xa119da0, new_name=0xa01b780 "Tum Mile", 
+    icon_view=0x9ff7c08) at fm-icon-view.c:2331
+	__PRETTY_FUNCTION__ = "fm_icon_view_icon_text_changed_callback"
+#6  0x0813fe3f in nautilus_marshal_VOID__POINTER_STRING (closure=0x9f1d0c8, 
+    return_value=0x0, n_param_values=3, param_values=0xa0679d0, 
+    invocation_hint=0xbfe00700, marshal_data=0x80cc960)
+    at nautilus-marshal-guts.c:627
+	data1 = (gpointer) 0x6
+	data2 = <value optimized out>
+	__PRETTY_FUNCTION__ = "nautilus_marshal_VOID__POINTER_STRING"
+#7  0x00203072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#8  0x002187a8 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#9  0x00219b2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#10 0x00219fb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#11 0x08127f69 in end_renaming_mode (container=0x9bd3488, 
+    commit=<value optimized out>) at nautilus-icon-container.c:8441
+	icon = (NautilusIcon *) 0xa0c8890
+	changed_text = 0x570 <Address 0x570 out of bounds>
+#12 0x081382ec in key_press_event (widget=0x9bd3488, event=0xa0f9d60)
+    at nautilus-icon-container.c:5365
+	container = (NautilusIconContainer *) 0x9bd3488
+	handled = <value optimized out>
+#13 0x0112c404 in _gtk_marshal_BOOLEAN__BOXED (closure=0x9a75e80, 
+    return_value=0xbfe00b24, n_param_values=2, param_values=0x9dbb450, 
+    invocation_hint=0xbfe00b10, marshal_data=0x8138010)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkmarshalers.c:84
+	data1 = (gpointer) 0x6
+	data2 = <value optimized out>
+	v_return = <value optimized out>
+	__PRETTY_FUNCTION__ = "_gtk_marshal_BOOLEAN__BOXED"
+#14 0x002016f9 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#15 0x00202f98 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#16 0x0021849e in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#17 0x002199b8 in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#18 0x00219fb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#19 0x0124887e in gtk_widget_event_internal (widget=<value optimized out>, 
+    event=0xa0f9d60) at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwidget.c:4767
+	signal_num = <value optimized out>
+	return_val = 0
+#20 0x0125d3aa in IA__gtk_window_propagate_key_event (window=0x9ff37d8, 
+    event=0xa0f9d60) at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwindow.c:5144
+	parent = (GtkWidget *) 0x9bd3488
+	handled = 1392
+	focus = (GtkWidget *) 0x9bd3488
+	__PRETTY_FUNCTION__ = "IA__gtk_window_propagate_key_event"
+#21 0x0126063c in gtk_window_key_press_event (widget=0x9ff37d8, 
+    event=0xa0f9d60) at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwindow.c:5174
+	handled = 0
+#22 0x0112c404 in _gtk_marshal_BOOLEAN__BOXED (closure=0x9a75e80, 
+    return_value=0xbfe00f34, n_param_values=2, param_values=0xa10db90, 
+    invocation_hint=0xbfe00f20, marshal_data=0x8086e30)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkmarshalers.c:84
+	data1 = (gpointer) 0x6
+	data2 = <value optimized out>
+	v_return = <value optimized out>
+	__PRETTY_FUNCTION__ = "_gtk_marshal_BOOLEAN__BOXED"
+#23 0x002016f9 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#24 0x00203072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#25 0x0021849e in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#26 0x002199b8 in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#27 0x00219fb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#28 0x0124887e in gtk_widget_event_internal (widget=<value optimized out>, 
+    event=0xa0f9d60) at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwidget.c:4767
+	signal_num = <value optimized out>
+	return_val = 0
+#29 0x01124c7b in IA__gtk_propagate_event (widget=0x9ff37d8, event=0xa0f9d60)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkmain.c:2389
+	window = (GtkWidget *) 0x6
+	handled_event = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_propagate_event"
+#30 0x01125e39 in IA__gtk_main_do_event (event=0xa0f9d60)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkmain.c:1620
+	event_widget = (GtkWidget *) 0x0
+	grab_widget = (GtkWidget *) 0x6
+	window_group = (GtkWindowGroup *) 0xa0f9d60
+	rewritten_event = (GdkEvent *) 0x0
+	tmp_list = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_main_do_event"
+#31 0x0056c64a in gdk_event_dispatch (source=0x9a74778, callback=0, 
+    user_data=0x0)
+    at /build/buildd/gtk+2.0-2.18.2/gdk/x11/gdkevents-x11.c:2369
+	display = <value optimized out>
+	event = <value optimized out>
+#32 0x003d9e78 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#33 0x003dd720 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#34 0x003ddb8f in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#35 0x011263a9 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkmain.c:1216
+	tmp_list = (GList *) 0x0
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0x1
+	loop = (GMainLoop *) 0x9d10f28
+#36 0x080817ef in main (argc=1, argv=0xbfe01654) at nautilus-main.c:588
+	kill_shell = 0
+	no_default_window = 1
+	browser_window = 0
+	no_desktop = 0
+	version = 0
+	autostart_mode = 1
+	autostart_id = <value optimized out>
+	geometry = (gchar *) 0x0
+	remaining = (gchar **) 0x0
+	perform_self_check = 0
+	application = (NautilusApplication *) 0x9a97200
+	context = <value optimized out>
+	file = (GFile *) 0x1
+	uri = <value optimized out>
+	uris = (char **) 0x0
+	uris_array = <value optimized out>
+	error = (GError *) 0x0
+	options = {{long_name = 0x81a6c16 "check", short_name = 99 'c', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfe01570, 
+    description = 0x81a6c58 "Perform a quick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x81a6b0f "version", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfe0157c, 
+    description = 0x81a6c84 "Show the version of the program.", 
+    arg_description = 0x0}, {long_name = 0x81aa7f8 "geometry", 
+    short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+    arg_data = 0xbfe01578, 
+    description = 0x81a6ca8 "Create the initial window with the given geometry.", arg_description = 0x81a6b17 "GEOMETRY"}, {
+    long_name = 0x81a6b20 "no-default-window", short_name = 110 'n', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfe01588, 
+    description = 0x81a6cdc "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {long_name = 0x81a6b32 "no-desktop", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfe01580, 
+    description = 0x81a6d10 "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {
+    long_name = 0x81a380b "browser", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbfe01584, 
+    description = 0x81a6b3d "open a browser window.", arg_description = 0x0}, 
+  {long_name = 0x81c63fd "quit", short_name = 113 'q', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbfe0158c, 
+    description = 0x81a6b54 "Quit Nautilus.", arg_description = 0x0}, {
+    long_name = 0x81abb41 "", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0xbfe01574, 
+    description = 0x0, arg_description = 0x81a6b63 "[URI...]"}, {
+    long_name = 0x0, short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x0, description = 0x0, arg_description = 0x0}}

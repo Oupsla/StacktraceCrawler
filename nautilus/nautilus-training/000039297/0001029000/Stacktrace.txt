@@ -1,0 +1,58 @@
+#0  0xb775e416 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0xb68061ef in raise () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#2  0xb6809835 in abort () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#3  0xb6a4b018 in g_assertion_message () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#4  0xb6a4b61f in g_assertion_message_expr () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#5  0x080c0764 in ?? ()
+No symbol table info available.
+#6  0x080bc05e in ?? ()
+No symbol table info available.
+#7  0x080bd722 in ?? ()
+No symbol table info available.
+#8  0x0811f4e2 in ?? ()
+No symbol table info available.
+#9  0x080f9b99 in ?? ()
+No symbol table info available.
+#10 0x080bd01e in ?? ()
+No symbol table info available.
+#11 0x080c0990 in ?? ()
+No symbol table info available.
+#12 0xb630b48e in ffi_call_SYSV () from /usr/lib/i386-linux-gnu/libffi.so.6
+No symbol table info available.
+#13 0xb630b1ef in ffi_call () from /usr/lib/i386-linux-gnu/libffi.so.6
+No symbol table info available.
+#14 0xb6aea06c in g_cclosure_marshal_generic () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#15 0xb6ae9736 in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#16 0xb6afc2df in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#17 0xb6b0475b in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#18 0xb6b04953 in g_signal_emit () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#19 0x080a721c in ?? ()
+No symbol table info available.
+#20 0x080a7967 in ?? ()
+No symbol table info available.
+#21 0xb6a28bcf in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#22 0xb6a27ef3 in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#23 0xb6a28290 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#24 0xb6a28371 in g_main_context_iteration () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#25 0xb6bcdbec in g_application_run () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#26 0x08067d78 in ?? ()
+No symbol table info available.
+#27 0xb67f14d3 in __libc_start_main () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#28 0x08067dc5 in ?? ()
+No symbol table info available.

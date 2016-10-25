@@ -1,0 +1,70 @@
+#0  0x089518f4 in gdu_device_get_object_path () from /usr/lib/i386-linux-gnu/libgdu.so.0
+No symbol table info available.
+#1  0x0894a586 in gdu_pool_new_for_address () from /usr/lib/i386-linux-gnu/libgdu.so.0
+No symbol table info available.
+#2  0x0894aa53 in gdu_pool_new () from /usr/lib/i386-linux-gnu/libgdu.so.0
+No symbol table info available.
+#3  0x014aa3f7 in unity::launcher::DeviceLauncherIcon::DeviceLauncherIcon(unity::launcher::Launcher*, _GVolume*) () from /usr/lib/compiz/libunityshell.so
+No symbol table info available.
+#4  0x013c3cdb in unity::launcher::DeviceLauncherSection::OnVolumeAdded(_GVolumeMonitor*, _GVolume*, unity::launcher::DeviceLauncherSection*) () from /usr/lib/compiz/libunityshell.so
+No symbol table info available.
+#5  0x0063b23a in g_cclosure_marshal_VOID__OBJECT () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#6  0x00638f8c in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#7  0x0064a845 in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#8  0x006520c2 in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#9  0x006526af in g_signal_emit_by_name () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#10 0x052972fd in ?? () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#11 0x0063b23a in g_cclosure_marshal_VOID__OBJECT () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#12 0x00638f8c in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#13 0x0064a845 in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#14 0x006520c2 in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#15 0x006526af in g_signal_emit_by_name () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#16 0x01949176 in ?? () from /usr/lib/i386-linux-gnu/gio/modules/libgioremote-volume-monitor.so
+No symbol table info available.
+#17 0x00401fd0 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#18 0x0040456a in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#19 0x00404975 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#20 0x00404a51 in g_main_context_iteration () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#21 0x00faa2ac in ?? () from /usr/lib/compizconfig/backends/libgconf.so
+No symbol table info available.
+#22 0x01174abf in ccsProcessEvents () from /usr/lib/libcompizconfig.so.0
+No symbol table info available.
+#23 0x00dfc57b in CcpScreen::timeout() () from /usr/lib/compiz/libccp.so
+No symbol table info available.
+#24 0x00dfcc61 in boost::detail::function::function_obj_invoker0<boost::_bi::bind_t<bool, boost::_mfi::mf0<bool, CcpScreen>, boost::_bi::list1<boost::_bi::value<CcpScreen*> > >, bool>::invoke(boost::detail::function::function_buffer&) () from /usr/lib/compiz/libccp.so
+No symbol table info available.
+#25 0x080686c4 in CompTimer::triggerCallback() ()
+No symbol table info available.
+#26 0x080687de in CompTimeoutSource::callback() ()
+No symbol table info available.
+#27 0x08067cbf in CompTimeoutSource::dispatch(sigc::slot_base*) ()
+No symbol table info available.
+#28 0x001599e1 in Glib::Source::dispatch_vfunc(_GSource*, int (*)(void*), void*) () from /usr/lib/i386-linux-gnu/libglibmm-2.4.so.1
+No symbol table info available.
+#29 0x0040456a in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#30 0x00404975 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#31 0x00404dbb in g_main_loop_run () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#32 0x0015b063 in Glib::MainLoop::run() () from /usr/lib/i386-linux-gnu/libglibmm-2.4.so.1
+No symbol table info available.
+#33 0x08072497 in CompScreen::eventLoop() ()
+No symbol table info available.
+#34 0x08065634 in main ()
+No symbol table info available.

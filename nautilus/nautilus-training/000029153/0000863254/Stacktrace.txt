@@ -1,0 +1,47 @@
+#0  0xb74064bb in gtk_tree_model_get_valist () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#1  0xb74066d0 in gtk_tree_model_get () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#2  0x08093df9 in ?? ()
+No symbol table info available.
+#3  0x08097693 in ?? ()
+No symbol table info available.
+#4  0xb72f91a2 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#5  0xb6c93c3c in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#6  0xb6ca69f0 in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#7  0xb6caf599 in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#8  0xb6caf8f3 in g_signal_emit () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#9  0xb74493a3 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#10 0xb72f88e2 in gtk_propagate_event () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#11 0xb72f8d48 in gtk_main_do_event () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#12 0xb714213c in ?? () from /usr/lib/libgdk-3.so.0
+No symbol table info available.
+#13 0xb7169ec8 in ?? () from /usr/lib/libgdk-3.so.0
+No symbol table info available.
+#14 0xb6bca25f in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#15 0xb6bca990 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#16 0xb6bcaf9b in g_main_loop_run () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#17 0xb72f7f95 in gtk_main () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#18 0xb720bfe4 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#19 0xb6d8a50c in g_application_run () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#20 0x08067884 in ?? ()
+No symbol table info available.
+#21 0xb69c2113 in __libc_start_main () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#22 0x080678bd in ?? ()
+No symbol table info available.
+Backtrace stopped: Not enough registers or memory available to unwind further

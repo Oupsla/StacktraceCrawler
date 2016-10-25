@@ -1,0 +1,148 @@
+#0  IA__g_str_hash (v=0x0) at /build/buildd/glib2.0-2.18.1/glib/gstring.c:95
+	p = (const signed char *) 0x0
+	h = <value optimized out>
+#1  0xb74e6d7b in IA__g_hash_table_lookup_extended (hash_table=0x90cadb8, lookup_key=0x0, orig_key=0xbfe59478, 
+    value=0xbfe59474) at /build/buildd/glib2.0-2.18.1/glib/ghash.c:118
+	node = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_hash_table_lookup_extended"
+#2  0x0811a441 in modify_link_hash_table (file=0x98fdf08, modify_function=0x8117930 <add_to_link_hash_table_list>)
+    at nautilus-file.c:435
+	target_uri = 0x0
+	found = <value optimized out>
+	original_key = <value optimized out>
+	list_ptr = <value optimized out>
+#3  0x0811ba0d in update_info_internal (file=0x98fdf08, info=0x9a6a680, update_name=1) at nautilus-file.c:477
+	node = (GList *) 0x0
+	changed = 1
+	is_symlink = <value optimized out>
+	is_hidden = <value optimized out>
+	is_backup = <value optimized out>
+	is_mountpoint = <value optimized out>
+	has_permissions = <value optimized out>
+	permissions = <value optimized out>
+	can_read = 1
+	can_write = 0
+	can_execute = 0
+	can_delete = 0
+	can_trash = 0
+	can_rename = 0
+	can_mount = 0
+	can_unmount = 0
+	can_eject = 0
+	thumbnailing_failed = <value optimized out>
+	uid = <value optimized out>
+	gid = <value optimized out>
+	size = <value optimized out>
+	sort_order = <value optimized out>
+	atime = <value optimized out>
+	mtime = <value optimized out>
+	ctime = <value optimized out>
+	symlink_name = <value optimized out>
+	mime_type = <value optimized out>
+	selinux_context = <value optimized out>
+	name = 0x9b271c8 "ubuntu"
+	thumbnail_path = <value optimized out>
+	file_type = <value optimized out>
+	icon = <value optimized out>
+	old_activation_location = <value optimized out>
+	activation_uri = <value optimized out>
+	description = <value optimized out>
+	filesystem_id = <value optimized out>
+	trash_orig_path = <value optimized out>
+#4  0x08121196 in nautilus_file_new_from_info (directory=0x977a228, info=0x9a6a680) at nautilus-file.c:1917
+	file = (NautilusFile *) 0x98fdf08
+	mime_type = <value optimized out>
+	__PRETTY_FUNCTION__ = "nautilus_file_new_from_info"
+#5  0x080f9357 in dequeue_pending_idle_callback (callback_data=0x977a228) at nautilus-directory-async.c:888
+	directory = (NautilusDirectory *) 0x977a228
+	pending_file_info = (GList *) 0x9150da0
+	node = (GList *) 0x96681b0
+	next = <value optimized out>
+	file = (NautilusFile *) 0x0
+	changed_files = (GList *) 0x0
+	added_files = (GList *) 0x9a88320
+	file_info = (GFileInfo *) 0x9a6a680
+	mimetype = <value optimized out>
+	name = 0x9b271c8 "ubuntu"
+	dir_load_state = (DirectoryLoadState *) 0x9a46ea0
+#6  0x080f94c2 in directory_load_done (directory=0x977a228, error=0x0) at nautilus-directory-async.c:1064
+	node = (GList *) 0x96628a8
+#7  0x080f971b in more_files_callback (source_object=0x96628a8, res=0x969bf20, user_data=0x9a46ea0)
+    at nautilus-directory-async.c:2140
+	directory = (NautilusDirectory *) 0x977a228
+	error = (GError *) 0x0
+	files = (GList *) 0x0
+	l = (GList *) 0x9a88c00
+	info = (GFileInfo *) 0x96628a8
+	__PRETTY_FUNCTION__ = "more_files_callback"
+#8  0xb75d9bbb in next_async_callback_wrapper (source_object=0x96628a8, res=0x969bf20, user_data=0x9a46ea0)
+    at /build/buildd/glib2.0-2.18.1/gio/gfileenumerator.c:298
+No locals.
+#9  0xb75ecb22 in IA__g_simple_async_result_complete (simple=0x969bf20)
+    at /build/buildd/glib2.0-2.18.1/gio/gsimpleasyncresult.c:554
+	__PRETTY_FUNCTION__ = "IA__g_simple_async_result_complete"
+#10 0xb75ecb41 in complete_in_idle_cb (data=0x969bf20) at /build/buildd/glib2.0-2.18.1/gio/gsimpleasyncresult.c:564
+No locals.
+#11 0xb74f27c1 in g_idle_dispatch (source=0x9a88c00, callback=0, user_data=0x969bf20)
+    at /build/buildd/glib2.0-2.18.1/glib/gmain.c:4233
+No locals.
+#12 0xb74f46f8 in IA__g_main_context_dispatch (context=0x8eecdd0) at /build/buildd/glib2.0-2.18.1/glib/gmain.c:2142
+No locals.
+#13 0xb74f7da3 in g_main_context_iterate (context=0x8eecdd0, block=1, dispatch=1, self=0x8ebd408)
+    at /build/buildd/glib2.0-2.18.1/glib/gmain.c:2776
+	max_priority = 0
+	timeout = 0
+	some_ready = 1
+	nfds = 23
+	allocated_nfds = <value optimized out>
+	fds = (GPollFD *) 0x9ac5000
+	__PRETTY_FUNCTION__ = "g_main_context_iterate"
+#14 0xb74f82c2 in IA__g_main_loop_run (loop=0x8f4d728) at /build/buildd/glib2.0-2.18.1/glib/gmain.c:2984
+	self = (GThread *) 0x8ebd408
+	__PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#15 0xb78f6269 in IA__gtk_main () at /build/buildd/gtk+2.0-2.14.3/gtk/gtkmain.c:1200
+	tmp_list = (GList *) 0x8ec5e98
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0x0
+	loop = (GMainLoop *) 0x8f4d728
+#16 0x08080963 in main (argc=3, argv=0xbfe59b34) at nautilus-main.c:596
+	kill_shell = 0
+	restart_shell = 0
+	no_default_window = 1
+	browser_window = 1
+	no_desktop = 0
+	autostart_mode = 1
+	has_sm_argv = 0
+	startup_id = <value optimized out>
+	autostart_id = <value optimized out>
+	startup_id_copy = 0x8ec5e98 "¨ø¤\tð>X·¨ø¤\t@<X·¨ø¤\t\220:X·"
+	session_to_load = 0x0
+	geometry = (gchar *) 0x0
+	remaining = (const gchar **) 0x0
+	perform_self_check = 0
+	context = (GOptionContext *) 0x0
+	application = (NautilusApplication *) 0x8eea450
+	program = (GnomeProgram *) 0x8ed2058
+	options = {{long_name = 0x8164c69 "check", short_name = 99 'c', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfe59a00, description = 0x8164cd8 "Perform a quick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x81687ef "geometry", short_name = 103 'g', flags = 0, 
+    arg = G_OPTION_ARG_STRING, arg_data = 0xbfe59a08, 
+    description = 0x8164d04 "Create the initial window with the given geometry.", 
+    arg_description = 0x8164ae9 "GEOMETRY"}, {long_name = 0x8164af2 "no-default-window", short_name = 110 'n', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfe59a18, 
+    description = 0x8164d38 "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {
+    long_name = 0x8164b04 "no-desktop", short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfe59a10, 
+    description = 0x8164d6c "Do not manage the desktop (ignore the preference set in the preferences dialog).", 
+    arg_description = 0x0}, {long_name = 0x816791e "browser", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbfe59a14, description = 0x8164b0f "open a browser window.", 
+    arg_description = 0x0}, {long_name = 0x8164c71 "quit", short_name = 113 'q', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfe59a20, description = 0x8164b26 "Quit Nautilus.", arg_description = 0x0}, {
+    long_name = 0x8164c78 "restart", short_name = 0 '\0', flags = 1, arg = G_OPTION_ARG_NONE, arg_data = 0xbfe59a1c, 
+    description = 0x8164b35 "Restart Nautilus.", arg_description = 0x0}, {long_name = 0x8169a08 "", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0xbfe59a04, description = 0x0, 
+    arg_description = 0x8164b47 "[URI...]"}, {long_name = 0x8161100 "load-session", short_name = 108 'l', flags = 0, 
+    arg = G_OPTION_ARG_STRING, arg_data = 0xbfe59a0c, 
+    description = 0x8164dc0 "Load a saved session from the specified file. Implies \"--no-default-window\".", 
+    arg_description = 0x8164b50 "FILENAME"}, {long_name = 0x0, short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0x0, description = 0x0, arg_description = 0x0}}

@@ -1,0 +1,124 @@
+#0  0xb768f72a in IA__g_object_ref (_object=0xaaaaaaaa)
+    at /build/buildd/glib2.0-2.15.4/gobject/gobject.c:1718
+	__r = <value optimized out>
+	object = <value optimized out>
+	old_val = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_object_ref"
+#1  0xb76ee834 in IA__g_io_scheduler_push_job (
+    job_func=0xb76f58f0 <run_in_thread>, user_data=0x8b18380, notify=0, 
+    io_priority=0, cancellable=0xaaaaaaaa)
+    at /build/buildd/glib2.0-2.15.4/gio/gioscheduler.c:242
+	once_init = {status = G_ONCE_STATUS_READY, retval = 0x0}
+	__PRETTY_FUNCTION__ = "IA__g_io_scheduler_push_job"
+#2  0xb76f558e in IA__g_simple_async_result_run_in_thread (simple=0x8b23f80, 
+    func=0xb76e3080 <next_files_thread>, io_priority=0, cancellable=0xaaaaaaaa)
+    at /build/buildd/glib2.0-2.15.4/gio/gsimpleasyncresult.c:647
+	__PRETTY_FUNCTION__ = "IA__g_simple_async_result_run_in_thread"
+#3  0xb76e305f in g_file_enumerator_real_next_files_async (
+    enumerator=0x89ccee0, num_files=100, io_priority=0, 
+    cancellable=0xaaaaaaaa, callback=0xb76e2920 <next_async_callback_wrapper>, 
+    user_data=0x8b5d180)
+    at /build/buildd/glib2.0-2.15.4/gio/gfileenumerator.c:596
+	res = (GSimpleAsyncResult *) 0x8b23f80
+#4  0xb76e2915 in IA__g_file_enumerator_next_files_async (
+    enumerator=0x89ccee0, num_files=100, io_priority=0, 
+    cancellable=0xaaaaaaaa, callback=0xb5b32e20 <enumerator_files_callback>, 
+    user_data=0x8b5d180)
+    at /build/buildd/glib2.0-2.15.4/gio/gfileenumerator.c:326
+	class = (GFileEnumeratorClass *) 0x831e560
+	simple = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_file_enumerator_next_files_async"
+#5  0xb5b32f43 in enumerator_files_callback (source_object=0x89ccee0, 
+    result=0x8991980, user_data=0x8b5d180) at gtkfilesystemgio.c:650
+	file_system = (GtkFileSystemGio *) 0x84b9db0
+	enumerator = (GFileEnumerator *) 0x89ccee0
+	folder = (GtkFileFolderGio *) 0x8b5d180
+	error = (GError *) 0x0
+	added_files = (GSList *) 0x84b51b8
+	files = (GList *) 0x8a82190
+	f = (GList *) 0x0
+#6  0xb76e2973 in next_async_callback_wrapper (source_object=0x89ccee0, 
+    res=0x8991980, user_data=0x8b5d180)
+    at /build/buildd/glib2.0-2.15.4/gio/gfileenumerator.c:244
+	enumerator = (GFileEnumerator *) 0x89ccee0
+#7  0xb76f56e1 in IA__g_simple_async_result_complete (simple=0x8991980)
+    at /build/buildd/glib2.0-2.15.4/gio/gsimpleasyncresult.c:553
+	__PRETTY_FUNCTION__ = "IA__g_simple_async_result_complete"
+#8  0xb76f574e in complete_in_idle_cb (data=0x8991980)
+    at /build/buildd/glib2.0-2.15.4/gio/gsimpleasyncresult.c:563
+No locals.
+#9  0xb76061c1 in g_idle_dispatch (source=0x8b067c0, callback=0xaaaaaaaa, 
+    user_data=0x8991980) at /build/buildd/glib2.0-2.15.4/glib/gmain.c:4142
+No locals.
+#10 0xb7607d76 in IA__g_main_context_dispatch (context=0x81948c0)
+    at /build/buildd/glib2.0-2.15.4/glib/gmain.c:2064
+No locals.
+#11 0xb760b133 in g_main_context_iterate (context=0x81948c0, block=1, 
+    dispatch=1, self=0x816f408)
+    at /build/buildd/glib2.0-2.15.4/glib/gmain.c:2697
+	got_ownership = <value optimized out>
+	max_priority = 2147483647
+	timeout = 4359
+	some_ready = 1
+	nfds = <value optimized out>
+	allocated_nfds = <value optimized out>
+	fds = (GPollFD *) 0x852d3f8
+	__PRETTY_FUNCTION__ = "g_main_context_iterate"
+#12 0xb760b517 in IA__g_main_loop_run (loop=0x81b2d50)
+    at /build/buildd/glib2.0-2.15.4/glib/gmain.c:2905
+	got_ownership = -1220856544
+	self = (GThread *) 0x816f408
+	__PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#13 0xb79f5d54 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.12.7/gtk/gtkmain.c:1163
+	tmp_list = (GList *) 0x81b2d50
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0x0
+	loop = (GMainLoop *) 0x81b2d50
+#14 0x0807c34d in main (argc=4, argv=0xbf8b7244) at nautilus-main.c:572
+	kill_shell = 0
+	restart_shell = 0
+	no_default_window = 1
+	browser_window = 0
+	no_desktop = 0
+	startup_id = <value optimized out>
+	startup_id_copy = 0x81b2d50 "ÀH\031\b\001"
+	session_to_load = 0x0
+	geometry = (gchar *) 0x0
+	remaining = (const gchar **) 0x0
+	perform_self_check = 0
+	context = <value optimized out>
+	application = (NautilusApplication *) 0x8191850
+	program = (GnomeProgram *) 0x817b858
+	options = {{long_name = 0x8149de0 "check", short_name = 99 'c', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbf8b7110, 
+    description = 0x8149e0c "Perform a quick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x814cf5b "geometry", 
+    short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+    arg_data = 0xbf8b7118, 
+    description = 0x8149e38 "Create the initial window with the given geometry.", arg_description = 0x8149c56 "GEOMETRY"}, {
+    long_name = 0x8149c5f "no-default-window", short_name = 110 'n', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbf8b7128, 
+    description = 0x8149e6c "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {long_name = 0x8149c71 "no-desktop", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbf8b7120, 
+    description = 0x8149ea0 "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {
+    long_name = 0x814bff2 "browser", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbf8b7124, 
+    description = 0x8149c7c "open a browser window.", arg_description = 0x0}, {
+    long_name = 0x8149de8 "quit", short_name = 113 'q', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbf8b7130, 
+    description = 0x8149c93 "Quit Nautilus.", arg_description = 0x0}, {
+    long_name = 0x8149def "restart", short_name = 0 '\0', flags = 1, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbf8b712c, 
+    description = 0x8149ca2 "Restart Nautilus.", arg_description = 0x0}, {
+    long_name = 0x814e0d1 "", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0xbf8b7114, description = 0x0, 
+    arg_description = 0x8149cb4 "[URI...]"}, {
+    long_name = 0x8146655 "load-session", short_name = 108 'l', flags = 0, 
+    arg = G_OPTION_ARG_STRING, arg_data = 0xbf8b711c, 
+    description = 0x8149ef4 "Load a saved session from the specified file. Implies \"--no-default-window\".", arg_description = 0x8149cbd "FILENAME"}, {
+    long_name = 0x0, short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x0, description = 0x0, arg_description = 0x0}}
+#15 0xb7273450 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+#16 0x08069c31 in _start ()

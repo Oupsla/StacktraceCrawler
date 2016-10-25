@@ -1,0 +1,189 @@
+#0  0x00c0aa74 in gtk_tree_view_real_move_cursor (tree_view=0x8fea638, 
+    step=GTK_MOVEMENT_PAGES, count=1)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtktreeview.c:9709
+	state = 0
+	__PRETTY_FUNCTION__ = "gtk_tree_view_real_move_cursor"
+#1  0x00b04fdb in _gtk_marshal_BOOLEAN__ENUM_INT (closure=0x8b5a4a0, 
+    return_value=0xbfc0fc7c, n_param_values=3, param_values=0x93e37c0, 
+    invocation_hint=0xbfc0fb80, marshal_data=0xc0a490)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkmarshalers.c:286
+	data1 = (gpointer) 0xffffffff
+	data2 = <value optimized out>
+	v_return = <value optimized out>
+	__PRETTY_FUNCTION__ = "_gtk_marshal_BOOLEAN__ENUM_INT"
+#2  0x00f866f9 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#3  0x00f88072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#4  0x00f9d49e in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#5  0x00a3a782 in gtk_binding_entry_activate (entry=0x0, 
+    object=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkbindings.c:537
+	params = <value optimized out>
+	return_val = {g_type = 20, data = {{v_int = 0, v_uint = 0, 
+      v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, 
+      v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, 
+      v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, 
+      v_pointer = 0x0}}}
+	accelerator = (gchar *) 0xbfc0fc7c "\024"
+	query = {signal_id = 124, signal_name = 0xcb77cb "move-cursor", 
+  itype = 146109744, signal_flags = 34, return_type = 20, n_params = 2, 
+  param_types = 0x8b34538}
+	signal_id = 124
+	sig = (GtkBindingSignal *) 0xbfc0fc7c
+	handled = 0
+	i = <value optimized out>
+#6  0x00a3ad5f in binding_match_activate (pspec_list=<value optimized out>, 
+    object=<value optimized out>, path_length=11, 
+    path=0x9480548 "GtkTreeView", path_reversed=0x92d7a98 "weiVeerTktG", 
+    unbound=0xbfc0fd20) at /build/buildd/gtk+2.0-2.18.3/gtk/gtkbindings.c:1123
+	pspec = <value optimized out>
+	binding_set = <value optimized out>
+	slist = (GSList *) 0x8f21b40
+#7  0x00a3afc8 in gtk_bindings_activate_list (object=<value optimized out>, 
+    entries=<value optimized out>, is_release=0)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkbindings.c:1268
+	patterns = (GSList *) 0x93aa750
+	class_type = 146109744
+	unbound = 0
+	handled = 0
+#8  0x00a3b12f in IA__gtk_bindings_activate_event (object=0x8fea638, 
+    event=0x9454a98) at /build/buildd/gtk+2.0-2.18.3/gtk/gtkbindings.c:1361
+	entries = (GSList *) 0x93c75d8
+	display = <value optimized out>
+	key_hash = <value optimized out>
+	handled = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_bindings_activate_event"
+#9  0x00c09e16 in gtk_tree_view_key_press (widget=0x8fea638, event=0x9454a98)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtktreeview.c:5369
+No locals.
+#10 0x00b05474 in _gtk_marshal_BOOLEAN__BOXED (closure=0x8b45598, 
+    return_value=0xbfc0ff84, n_param_values=2, param_values=0x931ba00, 
+    invocation_hint=0xbfc0ff70, marshal_data=0xc09c10)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkmarshalers.c:84
+	data1 = (gpointer) 0xffffffff
+	data2 = <value optimized out>
+	v_return = <value optimized out>
+	__PRETTY_FUNCTION__ = "_gtk_marshal_BOOLEAN__BOXED"
+#11 0x00f866f9 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#12 0x00f87f98 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#13 0x00f9d49e in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#14 0x00f9e9b8 in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#15 0x00f9efb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#16 0x00c2196e in gtk_widget_event_internal (widget=<value optimized out>, 
+    event=0x9454a98) at /build/buildd/gtk+2.0-2.18.3/gtk/gtkwidget.c:4767
+	signal_num = <value optimized out>
+	return_val = 0
+#17 0x00c3645a in IA__gtk_window_propagate_key_event (window=0x9166680, 
+    event=0x9454a98) at /build/buildd/gtk+2.0-2.18.3/gtk/gtkwindow.c:5144
+	parent = (GtkWidget *) 0x9454a98
+	handled = 0
+	focus = (GtkWidget *) 0x8fea638
+	__PRETTY_FUNCTION__ = "IA__gtk_window_propagate_key_event"
+#18 0x00c396ec in gtk_window_key_press_event (widget=0x9166680, 
+    event=0x9454a98) at /build/buildd/gtk+2.0-2.18.3/gtk/gtkwindow.c:5174
+	handled = 0
+#19 0x00b05474 in _gtk_marshal_BOOLEAN__BOXED (closure=0x8b45598, 
+    return_value=0xbfc10394, n_param_values=2, param_values=0x931b8a0, 
+    invocation_hint=0xbfc10380, marshal_data=0x8086ea0)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkmarshalers.c:84
+	data1 = (gpointer) 0xffffffff
+	data2 = <value optimized out>
+	v_return = <value optimized out>
+	__PRETTY_FUNCTION__ = "_gtk_marshal_BOOLEAN__BOXED"
+#20 0x00f866f9 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#21 0x00f88072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#22 0x00f9d49e in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#23 0x00f9e9b8 in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#24 0x00f9efb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#25 0x00c2196e in gtk_widget_event_internal (widget=<value optimized out>, 
+    event=0x9454a98) at /build/buildd/gtk+2.0-2.18.3/gtk/gtkwidget.c:4767
+	signal_num = <value optimized out>
+	return_val = 0
+#26 0x00afdceb in IA__gtk_propagate_event (widget=0x9166680, event=0x9454a98)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkmain.c:2391
+	window = (GtkWidget *) 0xffffffff
+	handled_event = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_propagate_event"
+#27 0x00afeea9 in IA__gtk_main_do_event (event=0x9454a98)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkmain.c:1622
+	event_widget = (GtkWidget *) 0x0
+	grab_widget = (GtkWidget *) 0xffffffff
+	window_group = (GtkWindowGroup *) 0x9454a98
+	rewritten_event = (GdkEvent *) 0x0
+	tmp_list = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_main_do_event"
+#28 0x00e3962a in gdk_event_dispatch (source=0x8b2fc80, callback=0, 
+    user_data=0x0)
+    at /build/buildd/gtk+2.0-2.18.3/gdk/x11/gdkevents-x11.c:2369
+	display = <value optimized out>
+	event = <value optimized out>
+#29 0x00ee0e78 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#30 0x00ee4720 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#31 0x00ee4b8f in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#32 0x00aff419 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkmain.c:1218
+	tmp_list = (GList *) 0x0
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0x1
+	loop = (GMainLoop *) 0x8d912d8
+#33 0x0808185f in main (argc=1, argv=0xbfc10ab4) at nautilus-main.c:588
+	kill_shell = 0
+	no_default_window = 1
+	browser_window = 0
+	no_desktop = 0
+	version = 0
+	autostart_mode = 1
+	autostart_id = <value optimized out>
+	geometry = (gchar *) 0x0
+	remaining = (gchar **) 0x0
+	perform_self_check = 0
+	application = (NautilusApplication *) 0x8b6b7b8
+	context = <value optimized out>
+	file = (GFile *) 0x1
+	uri = <value optimized out>
+	uris = (char **) 0x0
+	uris_array = <value optimized out>
+	error = (GError *) 0x0
+	options = {{long_name = 0x81a6e16 "check", short_name = 99 'c', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfc109d0, 
+    description = 0x81a6e58 "Perform a quick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x81a6d0f "version", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfc109dc, 
+    description = 0x81a6e84 "Show the version of the program.", 
+    arg_description = 0x0}, {long_name = 0x81aaa18 "geometry", 
+    short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+    arg_data = 0xbfc109d8, 
+    description = 0x81a6ea8 "Create the initial window with the given geometry.", arg_description = 0x81a6d17 "GEOMETRY"}, {
+    long_name = 0x81a6d20 "no-default-window", short_name = 110 'n', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfc109e8, 
+    description = 0x81a6edc "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {long_name = 0x81a6d32 "no-desktop", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfc109e0, 
+    description = 0x81a6f10 "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {
+    long_name = 0x81a3a0b "browser", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbfc109e4, 
+    description = 0x81a6d3d "open a browser window.", arg_description = 0x0}, 
+  {long_name = 0x81c661d "quit", short_name = 113 'q', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbfc109ec, 
+    description = 0x81a6d54 "Quit Nautilus.", arg_description = 0x0}, {
+    long_name = 0x81abd61 "", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0xbfc109d4, 
+    description = 0x0, arg_description = 0x81a6d63 "[URI...]"}, {
+    long_name = 0x0, short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x0, description = 0x0, arg_description = 0x0}}

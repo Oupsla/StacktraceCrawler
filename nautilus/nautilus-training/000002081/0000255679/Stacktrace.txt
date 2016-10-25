@@ -1,0 +1,72 @@
+#0  gconf_client_remove_dir (client=0x5e00000c, 
+    dirname=0x7f86c7547f30 "/apps/nautilus-actions/configurations", err=0x0)
+    at gconf-client.c:705
+	found = <value optimized out>
+	__PRETTY_FUNCTION__ = "gconf_client_remove_dir"
+#1  0x00007f86c75445ea in nautilus_actions_config_gconf_reader_finalize (
+    object=0x1c0ca30) at nautilus-actions-config-gconf-reader.c:63
+	__PRETTY_FUNCTION__ = "nautilus_actions_config_gconf_reader_finalize"
+#2  0x00007f86d0e9e3a8 in IA__g_object_unref (_object=<value optimized out>)
+    at /build/buildd/glib2.0-2.17.6/gobject/gobject.c:2411
+	object = (GObject *) 0x1c0ca30
+	__PRETTY_FUNCTION__ = "IA__g_object_unref"
+#3  0x00007f86c7541aa0 in nautilus_actions_instance_dispose (obj=0x1c0ca00)
+    at nautilus-actions.c:178
+No locals.
+#4  0x00007f86d0e9e332 in IA__g_object_unref (_object=<value optimized out>)
+    at /build/buildd/glib2.0-2.17.6/gobject/gobject.c:2383
+	object = (GObject *) 0x1c0ca00
+	__PRETTY_FUNCTION__ = "IA__g_object_unref"
+#5  0x00000000004ef83c in free_module_objects () at nautilus-module.c:219
+	l = (GList *) 0x7fffdcbc36cf
+	next = (GList *) 0x7f86c0002f40
+#6  0x00007f86d4555da8 in eel_debug_shut_down () at eel-debug.c:110
+	f = (ShutdownFunction *) 0x668fce0
+#7  0x00000000004417cd in main (argc=<value optimized out>, 
+    argv=0x7fffdcbc3d18) at nautilus-main.c:590
+	kill_shell = 0
+	restart_shell = 0
+	no_default_window = 1
+	browser_window = 1
+	no_desktop = 0
+	autostart_mode = 1
+	startup_id = <value optimized out>
+	autostart_id = <value optimized out>
+	startup_id_copy = 0x1b66bb0 "Gtk/IMModule"
+	session_to_load = 0x0
+	geometry = (gchar *) 0x0
+	remaining = (const gchar **) 0x0
+	perform_self_check = 0
+	context = (GOptionContext *) 0x1b67e40
+	application = (NautilusApplication *) 0x1b9f8b0
+	program = (GnomeProgram *) 0x1b7b850
+	options = {{long_name = 0x50c678 "check", short_name = 99 'c', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x7fffdcbc3b28, 
+    description = 0x50c6f0 "Perform a quick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x510793 "geometry", 
+    short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+    arg_data = 0x7fffdcbc3b18, 
+    description = 0x50c720 "Create the initial window with the given geometry.", arg_description = 0x50c505 "GEOMETRY"}, {
+    long_name = 0x50c50e "no-default-window", short_name = 110 'n', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0x7fffdcbc3b34, 
+    description = 0x50c758 "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {long_name = 0x50c520 "no-desktop", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x7fffdcbc3b2c, 
+    description = 0x50c790 "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {
+    long_name = 0x50f7d2 "browser", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0x7fffdcbc3b30, 
+    description = 0x50c52b "open a browser window.", arg_description = 0x0}, {
+    long_name = 0x50c680 "quit", short_name = 113 'q', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0x7fffdcbc3b3c, 
+    description = 0x50c542 "Quit Nautilus.", arg_description = 0x0}, {
+    long_name = 0x50c687 "restart", short_name = 0 '\0', flags = 1, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0x7fffdcbc3b38, 
+    description = 0x50c551 "Restart Nautilus.", arg_description = 0x0}, {
+    long_name = 0x511ccc "", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0x7fffdcbc3b10, 
+    description = 0x0, arg_description = 0x50c563 "[URI...]"}, {
+    long_name = 0x50878f "load-session", short_name = 108 'l', flags = 0, 
+    arg = G_OPTION_ARG_STRING, arg_data = 0x7fffdcbc3b20, 
+    description = 0x50c7e8 "Load a saved session from the specified file. Implies \"--no-default-window\".", arg_description = 0x50c56c "FILENAME"}, {
+    long_name = 0x0, short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x0, description = 0x0, arg_description = 0x0}}

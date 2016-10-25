@@ -1,0 +1,90 @@
+#0  0x008b9422 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x00da4651 in raise () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#2  0x00da7a82 in abort () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#3  0x00d9d718 in __assert_fail () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#4  0x009c4c29 in _XAllocID () from /usr/lib/libX11.so.6
+No symbol table info available.
+#5  0x0099a1a8 in XCreatePixmap () from /usr/lib/libX11.so.6
+No symbol table info available.
+#6  0x005effe9 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#7  0x005f4efc in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#8  0x005d96cb in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#9  0x005cf80c in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#10 0x005d0cae in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#11 0x005f4844 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#12 0x005d9416 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#13 0x005dbc4a in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#14 0x005dbf6a in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#15 0x005d83c7 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#16 0x005bef46 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#17 0x005b8f6d in cairo_fill_preserve () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#18 0x005b8f92 in cairo_fill () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#19 0x0019e2b8 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#20 0x0019ac60 in gtk_cell_renderer_render ()
+   from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#21 0x08090595 in ?? ()
+No symbol table info available.
+#22 0x0024d424 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#23 0x00ac48b9 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#24 0x00ac6252 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#25 0x00ada5e6 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#26 0x00adbc33 in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#27 0x00adc256 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#28 0x0037a636 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#29 0x0024711b in gtk_main_do_event () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#30 0x0053584b in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#31 0x0055ead4 in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#32 0x00531fa3 in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#33 0x00533fbf in gdk_window_process_all_updates ()
+   from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#34 0x001bc76f in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#35 0x00510358 in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#36 0x006c1661 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#37 0x006c35e5 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#38 0x006c72d8 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#39 0x006c7817 in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#40 0x002473c9 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#41 0x0809224d in ?? ()
+No symbol table info available.
+#42 0x00d90bd6 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#43 0x0805b7e1 in ?? ()
+No symbol table info available.

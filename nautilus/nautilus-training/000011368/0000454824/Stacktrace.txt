@@ -1,0 +1,18 @@
+#0  0x00007f3d6373b5f0 in ?? ()
+No symbol table info available.
+#1  0x00007f3d6fa1dc12 in *__GI_exit (status=0) at exit.c:78
+No locals.
+#2  0x00007f3d6fa03ac4 in __libc_start_main (main=<value optimized out>, 
+    argc=<value optimized out>, ubp_av=<value optimized out>, 
+    init=<value optimized out>, fini=<value optimized out>, 
+    rtld_fini=<value optimized out>, stack_end=0x7fffb53d9f68)
+    at libc-start.c:252
+	result = 1668527600
+	unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, -8084259807240522334, 
+        4391792, 140736234102640, 0, 0, 8084413172967404962, 
+        8193226166346577314}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 
+      0x547710, 0x7fffb53d9f78}, data = {prev = 0x0, cleanup = 0x0, 
+      canceltype = 5535504}}}
+	not_first_call = <value optimized out>
+#3  0x0000000000430399 in _start () at ../sysdeps/x86_64/elf/start.S:113
+No locals.

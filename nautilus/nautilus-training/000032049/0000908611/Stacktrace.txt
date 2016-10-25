@@ -1,0 +1,54 @@
+#0  0x00007f2cc1a6f7ab in g_logv () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#1  0x00007f2cc1a6f982 in g_log () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#2  0x00007f2cc38d52d3 in ?? () from /usr/lib/x86_64-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#3  0x00007f2cc38e2037 in ?? () from /usr/lib/x86_64-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#4  0x00007f2cc4d3e07f in _XError () from /usr/lib/x86_64-linux-gnu/libX11.so.6
+No symbol table info available.
+#5  0x00007f2cc4d3ae31 in ?? () from /usr/lib/x86_64-linux-gnu/libX11.so.6
+No symbol table info available.
+#6  0x00007f2cc4d3bd87 in _XReply () from /usr/lib/x86_64-linux-gnu/libX11.so.6
+No symbol table info available.
+#7  0x00007f2cbed9c515 in XIQueryDevice () from /usr/lib/x86_64-linux-gnu/libXi.so.6
+No symbol table info available.
+#8  0x00007f2cc38d24b5 in ?? () from /usr/lib/x86_64-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#9  0x00007f2cc38dedd0 in ?? () from /usr/lib/x86_64-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#10 0x00007f2cc38de8ff in ?? () from /usr/lib/x86_64-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#11 0x00007f2cc38b1371 in gdk_display_get_event () from /usr/lib/x86_64-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#12 0x00007f2cc38de412 in ?? () from /usr/lib/x86_64-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#13 0x00007f2cc1a6844a in g_main_context_dispatch () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#14 0x00007f2cc1a68810 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#15 0x00007f2cc1a688d4 in g_main_context_iteration () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#16 0x00007f2cc2217454 in g_application_run () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#17 0x000000000042b200 in ?? ()
+No symbol table info available.
+#18 0x00007f2cc0fe730d in __libc_start_main (main=0x42b160, argc=2, ubp_av=0x7fff3626f058, init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, stack_end=0x7fff3626f048) at libc-start.c:226
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, -1549140605330469019, 4370968, 140734101909584, 0, 0, 1548733175594012517, 1502470747224067941}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x4ffc70, 0x7fff3626f058}, data = {prev = 0x0, cleanup = 0x0, canceltype = 5241968}}}
+        not_first_call = <optimized out>
+#19 0x000000000042b241 in ?? ()
+No symbol table info available.
+#20 0x00007fff3626f048 in ?? ()
+No symbol table info available.
+#21 0x000000000000001c in ?? ()
+No symbol table info available.
+#22 0x0000000000000002 in ?? ()
+No symbol table info available.
+#23 0x00007fff3626f869 in ?? ()
+No symbol table info available.
+#24 0x00007fff3626f872 in ?? ()
+No symbol table info available.
+#25 0x0000000000000000 in ?? ()
+No symbol table info available.

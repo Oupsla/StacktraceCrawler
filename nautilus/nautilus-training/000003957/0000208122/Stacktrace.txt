@@ -1,0 +1,48 @@
+#0  _dbus_pthread_mutex_lock (mutex=<value optimized out>) at dbus-sysdeps-pthread.c:160
+	pmutex = (DBusMutexPThread *) 0x7fcb26dbb9c9
+	self = 140510744213408
+#1  0x00007fcb2c771a2d in _dbus_connection_lock (connection=0xcdfc50) at dbus-connection.c:355
+No locals.
+#2  0x00007fcb2c78203d in _dbus_pending_call_get_connection_and_lock (pending=0x11698f0)
+    at dbus-pending-call.c:309
+No locals.
+#3  0x00007fcb2c775c8f in reply_handler_timeout (data=0x7fcb26dbb9c9) at dbus-connection.c:3098
+	connection = <value optimized out>
+	status = <value optimized out>
+	pending = <value optimized out>
+#4  0x00007fcb26262c4d in timeout_handler_dispatch (data=<value optimized out>) at gdbusutils.c:992
+No locals.
+#5  0x00007fcb317c694b in g_timeout_dispatch (source=0x1123f40, callback=0x6b636162, user_data=0x1165180)
+    at /build/buildd/glib2.0-2.16.1/glib/gmain.c:3437
+No locals.
+#6  0x00007fcb317c6222 in IA__g_main_context_dispatch (context=0x6e1f90)
+    at /build/buildd/glib2.0-2.16.1/glib/gmain.c:2003
+No locals.
+#7  0x00007fcb317c94d6 in g_main_context_iterate (context=0x6e1f90, block=1, dispatch=1, 
+    self=<value optimized out>) at /build/buildd/glib2.0-2.16.1/glib/gmain.c:2636
+	got_ownership = <value optimized out>
+	max_priority = 0
+	timeout = 0
+	some_ready = 1
+	nfds = <value optimized out>
+	allocated_nfds = <value optimized out>
+	fds = (GPollFD *) 0x11672b0
+	__PRETTY_FUNCTION__ = "g_main_context_iterate"
+#8  0x00007fcb317c9797 in IA__g_main_loop_run (loop=0xb6f9a0)
+    at /build/buildd/glib2.0-2.16.1/glib/gmain.c:2844
+	got_ownership = <value optimized out>
+	self = (GThread *) 0x6af1c0
+	__PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#9  0x00007fcb338cdee3 in IA__gtk_main () at /build/buildd/gtk+2.0-2.12.9/gtk/gtkmain.c:1163
+	tmp_list = (GList *) 0x730270
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0x73c190
+	loop = (GMainLoop *) 0xb6f9a0
+#10 0x00000000004286d6 in main (argc=2, argv=0x7fff3d0139c8) at gedit.c:586
+	program = (GnomeProgram *) 0x6bd850
+	context = <value optimized out>
+	engine = (GeditPluginsEngine *) 0x730270
+	window = (GeditWindow *) 0x73c190
+	app = <value optimized out>
+	restored = <value optimized out>
+	__PRETTY_FUNCTION__ = "main"

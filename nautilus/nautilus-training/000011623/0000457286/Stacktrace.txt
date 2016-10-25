@@ -1,0 +1,100 @@
+#0  0x0811aa11 in nautilus_file_set_display_name (file=0xa2cdf50, 
+    display_name=0x9c7f9c8 "", edit_name=0x0, custom=135386426)
+    at nautilus-file.c:198
+	changed = <value optimized out>
+#1  0x0811abba in nautilus_file_set_display_name (file=0x0, 
+    display_name=0xa165e10 "", edit_name=0x0, custom=8675316)
+    at nautilus-file.c:235
+	changed = 0
+#2  0x0807dd54 in selection_changed_callback (window=0xa853c40, 
+    panel=0x9ffaf20) at nautilus-information-panel.c:1128
+	selection = <value optimized out>
+	file = <value optimized out>
+	uri = <value optimized out>
+	name = <value optimized out>
+#3  0x008219fc in ?? ()
+No symbol table info available.
+#4  0x00814072 in ?? ()
+No symbol table info available.
+#5  0x008297a8 in ?? ()
+No symbol table info available.
+#6  0x0082ab2d in ?? ()
+No symbol table info available.
+#7  0x0082ae42 in ?? ()
+No symbol table info available.
+#8  0x080a2398 in nautilus_window_report_location_change (window=0x845ff4)
+    at nautilus-window-manage-views.c:1347
+	__t = 0
+	__r = <value optimized out>
+	slot = (NautilusWindowSlot *) 0x807dcb0
+	location = <value optimized out>
+	__PRETTY_FUNCTION__ = "nautilus_window_report_location_change"
+#9  0x08159131 in nautilus_window_info_push_status (window=0x1, 
+    status=0x9c6d3c8 "") at nautilus-window-info.c:174
+	__t = 0
+	__r = <value optimized out>
+	__PRETTY_FUNCTION__ = "nautilus_window_info_push_status"
+#10 0x080b1567 in disconnect_model_handlers (view=0xa1dcce8)
+    at fm-directory-view.c:9356
+No locals.
+#11 0x080b6ab8 in display_pending_callback (data=0xa1dcce8)
+    at fm-directory-view.c:2810
+	view = (FMDirectoryView *) 0x81d8ff4
+#12 0x003620f1 in ?? ()
+No symbol table info available.
+#13 0x00363e78 in ?? ()
+No symbol table info available.
+#14 0x00367720 in ?? ()
+No symbol table info available.
+#15 0x00367b8f in ?? ()
+No symbol table info available.
+#16 0x010e6419 in ?? ()
+No symbol table info available.
+#17 0x080817ef in main (argc=1, argv=0xbffbd184) at nautilus-main.c:574
+	kill_shell = 0
+	no_default_window = 1
+	browser_window = 0
+	no_desktop = 0
+	version = 0
+	autostart_mode = -1074016896
+	autostart_id = <value optimized out>
+	geometry = (gchar *) 0x0
+	remaining = (gchar **) 0x0
+	perform_self_check = 0
+	application = (NautilusApplication *) 0x3dfff4
+	context = <value optimized out>
+	file = (GFile *) 0xbffbcd80
+	uri = <value optimized out>
+	uris = (char **) 0xa447c60
+	uris_array = <value optimized out>
+	error = (GError *) 0x0
+	options = {{long_name = 0x81a6c16 "", short_name = 99 'c', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbffbd0a0, 
+    description = 0x81a6c58 "#nautilus-open-location", 
+    arg_description = 0x0}, {long_name = 0x81a6b0f "window.", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbffbd0ac, 
+    description = 0x81a6c84 "\n\003\b\bm\002\b\b\n\003\b\bm\002\b\bm\002\b\b\n\003\b\b¨\002\b\bresponse_callback", arg_description = 0x0}, {
+    long_name = 0x81aa7f8 "GTK_WIDGET_NO_WINDOW (user_data)", 
+    short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+    arg_data = 0xbffbd0a8, description = 0x81a6ca8 "_callback", 
+    arg_description = 0x81a6b17 ""}, {
+    long_name = 0x81a6b20 "_IS_LOCATION_BAR (widget)", short_name = 110 'n', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbffbd0b8, 
+    description = 0x81a6cdc "se", arg_description = 0x0}, {
+    long_name = 0x81a6b32 "widget)", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbffbd0b0, 
+    description = 0x81a6d10 "ersion", arg_description = 0x0}, {
+    long_name = 0x81a380b "erences/media_automount", short_name = 0 '\0', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbffbd0b4, 
+    description = 0x81a6b3d "", arg_description = 0x0}, {
+    long_name = 0x81c63fd "not accept documents on command line", 
+    short_name = 113 'q', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbffbd0bc, description = 0x81a6b54 "\001", 
+    arg_description = 0x0}, {
+    long_name = 0x81abb41 "autilus_window_report_load_complete", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_STRING_ARRAY, 
+    arg_data = 0xbffbd0a4, description = 0x0, 
+    arg_description = 0x81a6b63 ""}, {long_name = 0x0, short_name = 0 '\0', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x0, description = 0x0, 
+    arg_description = 0x0}}

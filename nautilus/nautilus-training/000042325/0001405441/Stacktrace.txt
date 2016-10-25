@@ -1,0 +1,82 @@
+#0  0x00007f37cd17e8f3 in _IO_vfprintf_internal (s=s@entry=0x7fff36e8aa30, format=<optimized out>, format@entry=0x4f454e "%s\n%s", ap=ap@entry=0x7fff36e8aba8) at vfprintf.c:1661
+        len = <optimized out>
+        string_malloced = <optimized out>
+        step0_jumps = {0, -9485, -2676, -2589, 2607, 2694, 2015, 2291, 2998, -574, -238, 3335, 2510, 3607, -2495, -15046, -727, 1092, 1034, 1620, -14278, -28, 1449, -10481, -10405, -15728, 1138, 3510, 3510, 2188}
+        space = 0
+        is_short = 0
+        use_outdigits = 0
+        step1_jumps = {0, 0, 0, 0, 0, 0, 0, 0, 0, -574, -238, 3335, 2510, 3607, -2495, -15046, -727, 1092, 1034, 1620, -14278, -28, 1449, -10481, -10405, -15728, 1138, 3510, 3510, 0}
+        group = 0
+        prec = -1
+        step2_jumps = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -238, 3335, 2510, 3607, -2495, -15046, -727, 1092, 1034, 1620, -14278, -28, 1449, -10481, -10405, -15728, 1138, 3510, 3510, 0}
+        string = <optimized out>
+        left = 0
+        is_long_double = 0
+        width = 0
+        step3a_jumps = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3238, 0, 0, 0, -2495, -15046, -727, 1092, 1034, 0, 0, 0, 0, -10481, 0, 0, 0, 0, 0, 0}
+        alt = 0
+        showsign = 0
+        is_long = 0
+        is_char = 0
+        pad = 32 ' '
+        step3b_jumps = {0 <repeats 11 times>, 2510, 0, 0, -2495, -15046, -727, 1092, 1034, 1620, -14278, -28, 1449, -10481, -10405, -15728, 1138, 0, 0, 0}
+        step4_jumps = {0 <repeats 14 times>, -2495, -15046, -727, 1092, 1034, 1620, -14278, -28, 1449, -10481, -10405, -15728, 1138, 0, 0, 0}
+        is_negative = <optimized out>
+        number = <optimized out>
+        base = <optimized out>
+        the_arg = {pa_wchar = 9642272 L'\x932120', pa_int = 9642272, pa_long_int = 9642272, pa_long_long_int = 9642272, pa_u_int = 9642272, pa_u_long_int = 9642272, pa_u_long_long_int = 9642272, pa_double = 4.763915343056968e-317, pa_long_double = <invalid float value>, pa_string = 0x932120 "", pa_wstring = 0x932120 L"ЀϽϿͲͲ", pa_pointer = 0x932120, pa_user = 0x932120}
+        spec = 115 's'
+        _buffer = {__routine = 0x0, __arg = 0x0, __canceltype = 0, __prev = 0x4}
+        _avail = <optimized out>
+        thousands_sep = 0x0
+        grouping = 0xffffffffffffffff <error: Cannot access memory at address 0xffffffffffffffff>
+        done = 7
+        f = 0x4f4552 "s"
+        lead_str_end = <optimized out>
+        end_of_spec = <optimized out>
+        work_buffer = '\000' <repeats 41 times>, "\275\212\006,;k\026\200\272\352\000\000\000\000\000\220\244f\320\067\177\000\000\200\002\357\000\000\000\000\000\003\000\000\000\000\000\000\000\340\250\350\066\377\177\000\000\200\250\350\066\377\177\000\000\000\000\000\000\000\000\000\000\342\234\366\315\067\177\000\000@\v\353\000\000\000\000\000(\000\000\000\060\000\000\000@\342\352\000\000\000\000\000\020\000\000\000\000\000\000\000 )\353\000\000\000\000\000)-\314\315\067\177\000\000\360\302\351\000\000\000\000\000`'O\315\067\177\000\000\004\000\000\000\000\000\000\000 )\353", '\000' <repeats 13 times>...
+        workstart = 0x0
+        workend = <optimized out>
+        ap_save = {{gp_offset = 8, fp_offset = 48, overflow_arg_area = 0x7fff36e8ac80, reg_save_area = 0x7fff36e8abc0}}
+        nspecs_done = 1
+        save_errno = <optimized out>
+        readonly_format = 0
+        args_malloced = 0x0
+        specs = <optimized out>
+        specs_malloced = false
+        jump_table = "\001\000\000\004\000\016\000\006\000\000\a\002\000\003\t\000\005\b\b\b\b\b\b\b\b\b\000\000\000\000\000\000\000\032\000\031\000\023\023\023\000\035\000\000\f\000\000\000\000\000\000\025\000\000\000\000\022\000\r\000\000\000\000\000\000\032\000\024\017\023\023\023\n\017\034\000\v\030\027\021\026\f\000\025\033\020\000\000\022\000\r"
+        __PRETTY_FUNCTION__ = "_IO_vfprintf_internal"
+#1  0x00007f37cd23df75 in __GI___vasprintf_chk (result_ptr=0x7fff36e8ab88, flags=1, format=0x4f454e "%s\n%s", args=0x7fff36e8aba8) at vasprintf_chk.c:66
+        string = 0xeb2ef0 "(null)\n"
+        sf = {_sbf = {_f = {_flags = -72515584, _IO_read_ptr = 0xeb2ef0 "(null)\n", _IO_read_end = 0xeb2ef0 "(null)\n", _IO_read_base = 0xeb2ef0 "(null)\n", _IO_write_base = 0xeb2ef0 "(null)\n", _IO_write_ptr = 0xeb2ef7 "", _IO_write_end = 0xeb2f54 "", _IO_buf_base = 0xeb2ef0 "(null)\n", _IO_buf_end = 0xeb2f54 "", _IO_save_base = 0x0, _IO_backup_base = 0x0, _IO_save_end = 0x0, _markers = 0x0, _chain = 0x0, _fileno = 921217904, _flags2 = 4, _old_offset = 140734114605744, _cur_column = 0, _vtable_offset = -24 '\350', _shortbuf = "6", _lock = 0x0, _offset = 140734114605992, _codecvt = 0xeb2920, _wide_data = 0xffffffffffffffff, _freeres_list = 0x0, _freeres_buf = 0x0, _freeres_size = 140734114606272, _mode = -1, _unused2 = "\000\000\000\000\060b\033\315\067\177\000\000\000\000\000\000\000\000\000"}, vtable = 0x7f37cd4f1760 <_IO_str_jumps>}, _s = {_allocate_buffer = 0x7f37cd1b61d0 <__GI___libc_malloc>, _free_buffer = 0x7f37cd1b6870 <__GI___libc_free>}}
+        ret = <optimized out>
+        needed = <optimized out>
+        allocated = <optimized out>
+#2  0x00007f37cdcc20fc in g_vasprintf () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#3  0x00007f37cdc9dc80 in g_strdup_vprintf () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#4  0x00007f37cdc9dd1c in g_strdup_printf () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#5  0x0000000000454c9b in ?? ()
+No symbol table info available.
+#6  0x00000000004580b2 in ?? ()
+No symbol table info available.
+#7  0x00000000004a4213 in ?? ()
+No symbol table info available.
+#8  0x00007f37cdc80ce5 in g_main_context_dispatch () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#9  0x00007f37cdc81048 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#10 0x00007f37cdc810ec in g_main_context_iteration () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#11 0x00007f37ce233b9c in g_application_run () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#12 0x000000000042ba01 in ?? ()
+No symbol table info available.
+#13 0x00007f37cd154ec5 in __libc_start_main (main=0x42b940, argc=1, argv=0x7fff36e8b0a8, init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, stack_end=0x7fff36e8b098) at libc-start.c:287
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, 3837644274213419304, 4373050, 140734114607264, 0, 0, -3838086185005254360, -3806220045580273368}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x4ed990, 0x7fff36e8b0a8}, data = {prev = 0x0, cleanup = 0x0, canceltype = 5167504}}}
+        not_first_call = <optimized out>
+#14 0x000000000042ba63 in ?? ()
+No symbol table info available.

@@ -1,0 +1,28 @@
+#0  0x080c42b2 in ?? ()
+No symbol table info available.
+#1  0x080c65ef in ?? ()
+No symbol table info available.
+#2  0x080cafaa in ?? ()
+No symbol table info available.
+#3  0x080b0d41 in ?? ()
+No symbol table info available.
+#4  0x080b3706 in fm_directory_view_update_menus ()
+No symbol table info available.
+#5  0x080b45c3 in ?? ()
+No symbol table info available.
+#6  0x005deb3c in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#7  0x005de3c5 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#8  0x005e20f0 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#9  0x005e261f in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#10 0x00f72b19 in gtk_main_iteration_do () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#11 0x08080e88 in ?? ()
+No symbol table info available.
+#12 0x06560bd6 in ?? () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#13 0x0806c741 in ?? ()
+No symbol table info available.

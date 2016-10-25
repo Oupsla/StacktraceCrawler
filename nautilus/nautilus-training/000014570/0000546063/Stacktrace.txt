@@ -1,0 +1,157 @@
+#0  0x00cba422 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x002de641 in raise () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#2  0x002e1a72 in abort () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#3  0x002d7708 in __assert_fail () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#4  0x00cfcc29 in _XAllocID () from /usr/lib/libX11.so.6
+No symbol table info available.
+#5  0x00ef1df7 in XRenderCreatePicture () from /usr/lib/libXrender.so.1
+No symbol table info available.
+#6  0x009d6e3b in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#7  0x009d9964 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#8  0x009be416 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#9  0x009bff05 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#10 0x009c0a1f in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#11 0x009c0f6a in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#12 0x009bd3c7 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#13 0x009a3f46 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#14 0x0099df6d in cairo_fill_preserve () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#15 0x0099df92 in cairo_fill () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#16 0x05df9982 in ?? () from /usr/lib/gtk-2.0/2.10.0/engines/libmurrine.so
+No symbol table info available.
+#17 0x05e0bf36 in ?? () from /usr/lib/gtk-2.0/2.10.0/engines/libmurrine.so
+No symbol table info available.
+#18 0x05e02b90 in ?? () from /usr/lib/gtk-2.0/2.10.0/engines/libmurrine.so
+No symbol table info available.
+#19 0x0065d4e8 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#20 0x0061ab1e in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#21 0x0063af75 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#22 0x005cde08 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#23 0x00ba0859 in g_closure_new_simple () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#24 0x00ba2118 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#25 0x00bb9566 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#26 0x00bbae03 in g_source_set_closure () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#27 0x00bbb6e6 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#28 0x00713e46 in gtk_tree_view_column_set_sort_column_id ()
+   from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#29 0x0052c923 in gtk_button_box_get_child_secondary ()
+   from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#30 0x0052efc6 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#31 0x004f2800 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#32 0x0052d5e4 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#33 0x0052ef69 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#34 0x005cde08 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#35 0x00ba0859 in g_closure_new_simple () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#36 0x00ba2118 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#37 0x00bb9566 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#38 0x00bbae03 in g_source_set_closure () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#39 0x00bbb6e6 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#40 0x00713e46 in gtk_tree_view_column_set_sort_column_id ()
+   from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#41 0x0052c923 in gtk_button_box_get_child_secondary ()
+   from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#42 0x0052efc6 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#43 0x004ee47a in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#44 0x0052d5e4 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#45 0x0052ef69 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#46 0x0072ebb2 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#47 0x005cde08 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#48 0x00ba0859 in g_closure_new_simple () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#49 0x00ba21f2 in g_object_force_floating () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#50 0x00bb9566 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#51 0x00bbae03 in g_source_set_closure () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#52 0x00bbb6e6 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#53 0x00713e46 in gtk_tree_view_column_set_sort_column_id ()
+   from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#54 0x005c6a5b in gtk_icon_view_set_tooltip_cell ()
+   from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#55 0x00928bab in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#56 0x009583c4 in gdk_x11_xatom_to_atom_for_display ()
+   from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#57 0x00925313 in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#58 0x0092a2a7 in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#59 0x0052da9d in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#60 0x009025a8 in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#61 0x00227411 in g_main_context_acquire () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#62 0x00229395 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#63 0x0022d088 in g_markup_parse_context_parse () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#64 0x0022d5c7 in g_markup_parse_context_parse () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#65 0x0043bc73 in bonobo_main () from /usr/lib/libbonobo-2.so.0
+No symbol table info available.
+#66 0x00439e5e in bonobo_generic_factory_main_timeout ()
+   from /usr/lib/libbonobo-2.so.0
+No symbol table info available.
+#67 0x00439ee3 in bonobo_generic_factory_main ()
+   from /usr/lib/libbonobo-2.so.0
+No symbol table info available.
+#68 0x00140aa4 in panel_applet_factory_main_closure ()
+   from /usr/lib/libpanel-applet-2.so.0
+No symbol table info available.
+#69 0x00140b8b in panel_applet_factory_main ()
+   from /usr/lib/libpanel-applet-2.so.0
+No symbol table info available.
+#70 0x08049f02 in ?? ()
+No symbol table info available.
+#71 0x002cabd6 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#72 0x08049d31 in ?? ()
+No symbol table info available.

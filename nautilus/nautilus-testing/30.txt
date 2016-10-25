@@ -1,0 +1,30 @@
+#0  0x00bf62bb in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+No symbol table info available.
+#1  0x00bf79c2 in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+No symbol table info available.
+#2  0x00bf8f3c in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+No symbol table info available.
+#3  0x00bf93b3 in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+No symbol table info available.
+#4  0x00be24c8 in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+No symbol table info available.
+#5  0x009e9fb4 in ?? () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#6  0x009e5298 in ?? () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#7  0x009a1468 in g_file_query_info () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#8  0x009a44e4 in ?? () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#9  0x009c3939 in ?? () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#10 0x009b7dac in ?? () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#11 0x00420cec in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#12 0x0041edcf in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#13 0x0011596e in start_thread () from /lib/tls/i686/cmov/libpthread.so.0
+No symbol table info available.
+#14 0x05b11a0e in clone () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.

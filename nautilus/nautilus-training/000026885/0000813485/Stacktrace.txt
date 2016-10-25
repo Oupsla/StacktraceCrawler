@@ -1,0 +1,32 @@
+#0  0x0037a1b2 in g_file_equal () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#1  0x009f3a58 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#2  0x0094eb6c in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#3  0x00957c8d in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#4  0x003a70e2 in g_simple_async_result_complete () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#5  0x003a7163 in ?? () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#6  0x00dec370 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#7  0x00df054f in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#8  0x00df0c80 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#9  0x00df128b in g_main_loop_run () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#10 0x009afa45 in gtk_main () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#11 0x008b2424 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#12 0x003d94ac in g_application_run () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#13 0x080675d4 in ?? ()
+No symbol table info available.
+#14 0x01002da7 in __libc_start_main () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#15 0x0806760d in ?? ()
+No symbol table info available.

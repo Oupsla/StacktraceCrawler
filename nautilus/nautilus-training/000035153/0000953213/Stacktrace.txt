@@ -1,0 +1,34 @@
+#0  0x0039fe4a in g_list_foreach () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#1  0x0039fea2 in g_list_free_full () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#2  0x0810542d in ?? ()
+No symbol table info available.
+#3  0x0810558c in ?? ()
+No symbol table info available.
+#4  0x08105b33 in ?? ()
+No symbol table info available.
+#5  0x08107813 in ?? ()
+No symbol table info available.
+#6  0x0031d953 in nautilus_file_info_invalidate_extension_info () from /usr/lib/libnautilus-extension.so.1
+No symbol table info available.
+#7  0x07868e9e in ?? () from /usr/lib/nautilus/extensions-3.0/libnautilus-dropbox.so
+No symbol table info available.
+#8  0x0786ac9a in ?? () from /usr/lib/nautilus/extensions-3.0/libnautilus-dropbox.so
+No symbol table info available.
+#9  0x003e2fae in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#10 0x003a2d8a in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#11 0x003a3195 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#12 0x003a3271 in g_main_context_iteration () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#13 0x007631a4 in g_application_run () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#14 0x08068068 in ?? ()
+No symbol table info available.
+#15 0x00a544d3 in __libc_start_main () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#16 0x080680b5 in ?? ()
+No symbol table info available.

@@ -1,0 +1,44 @@
+#0  0x0011c416 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x06332e71 in raise () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#2  0x0633634e in abort () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#3  0x002383a0 in g_assertion_message () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#4  0x0023897d in g_assertion_message_expr () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#5  0x0077ffa4 in ?? () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#6  0x0078015a in g_bus_get () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#7  0x002e8f9d in ?? () from /usr/lib/libdbusmenu-glib.so.3
+No symbol table info available.
+#8  0x0012b784 in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#9  0x0012e674 in g_object_newv () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#10 0x0012f900 in g_object_new_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#11 0x0012fa17 in g_object_new () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#12 0x002e9418 in dbusmenu_server_new () from /usr/lib/libdbusmenu-glib.so.3
+No symbol table info available.
+#13 0x00e39741 in ?? () from /usr/lib/gtk-2.0/2.10.0/menuproxies/libappmenu.so
+No symbol table info available.
+#14 0x002123cc in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#15 0x00210aa8 in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#16 0x00211270 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#17 0x0021192b in g_main_loop_run () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#18 0x00435c39 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#19 0x0807ff36 in ?? ()
+No symbol table info available.
+#20 0x0631ee37 in __libc_start_main () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#21 0x0806a861 in ?? ()
+No symbol table info available.

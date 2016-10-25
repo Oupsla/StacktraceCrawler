@@ -1,0 +1,14 @@
+#0  0x00007fa564646ec3 in g_logv () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#1  0x00007fa564647252 in g_log () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#2  0x00007fa56548b9a2 in ?? () from /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0
+No symbol table info available.
+#3  0x00007fa56464af18 in g_option_context_parse () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#4  0x00007fa56548bb2b in gtk_init_with_args () from /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0
+No symbol table info available.
+#5  0x0000000000414d80 in base_application_run ()
+No symbol table info available.
+#6  0x0000000000413d58 in main ()
+No symbol table info available.

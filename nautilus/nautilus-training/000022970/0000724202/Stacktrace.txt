@@ -1,0 +1,16 @@
+#0  0x00007f16f236dd28 in g_type_check_instance_cast (type_instance=0x2718810, iface_type=33672672) at /build/buildd/glib2.0-2.28.1/./gobject/gtype.c:3991
+        node = 0x7f1600000000
+        iface = 0x7fff464e4b50
+        is_instantiatable = <value optimised out>
+        check = <value optimised out>
+#1  0x00007f16efdcba9e in ?? () from /usr/lib/libdbusmenu-gtk.so.3
+No symbol table info available.
+#2  0x0000000002026120 in ?? ()
+No symbol table info available.
+#3  0x00007f16f2370a05 in g_value_peek_pointer (value=0x1) at /build/buildd/glib2.0-2.28.1/./gobject/gvalue.c:316
+        value_table = <value optimised out>
+        __PRETTY_FUNCTION__ = "g_value_peek_pointer"
+#4  0x00007f16e004c620 in ?? ()
+No symbol table info available.
+#5  0x0000000000000000 in ?? ()
+No symbol table info available.

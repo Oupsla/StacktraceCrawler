@@ -1,0 +1,219 @@
+#0  0x001a8422 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x0079c4d1 in *__GI_raise (sig=6)
+    at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+	resultvar = <value optimized out>
+	pid = 9117684
+	selftid = 11697
+#2  0x0079f932 in *__GI_abort () at abort.c:92
+	act = {__sigaction_handler = {
+    sa_handler = 0x7e282d <*__GI___libc_realloc+221>, 
+    sa_sigaction = 0x7e282d <*__GI___libc_realloc+221>}, sa_mask = {__val = {
+      104, 104, 3216651632, 3216651872, 3216651660, 104, 104, 95, 151213312, 
+      9117684, 95, 94, 3216651832, 8199106, 151213320, 95, 3216651872, 
+      151213320, 0, 4222451712, 151213320, 151213320, 151213320, 151213320, 
+      151213414, 151213420, 151213320, 151213420, 0, 0, 0, 0}}, sa_flags = 0, 
+  sa_restorer = 0}
+	sigs = {__val = {32, 0 <repeats 31 times>}}
+#3  0x00795648 in *__GI___assert_fail (assertion=0xb7db65 "ret != inval_id", 
+    file=0xb7db29 "../../src/xcb_io.c", line=378, 
+    function=0xb7dce4 "_XAllocID") at assert.c:81
+	buf = 0x9035508 "xfce4-xfapplet-plugin: ../../src/xcb_io.c:378: _XAllocID: Assertion `ret != inval_id' failed.\n"
+#4  0x00b0e199 in _XAllocID (dpy=0x8f0b148) at ../../src/xcb_io.c:378
+	ret = 4294967295
+	__PRETTY_FUNCTION__ = "_XAllocID"
+#5  0x00ae4149 in XCreateSimpleWindow (dpy=0x8f0b148, parent=58720291, x=-1, 
+    y=-1, width=1, height=1, borderWidth=0, border=0, background=0)
+    at ../../src/CrWindow.c:58
+No locals.
+#6  0x004fe02a in setup_toplevel_window (window=0x8f1f540, 
+    parent=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gdk/x11/gdkwindow-x11.c:519
+	toplevel = (GdkToplevelX11 *) 0x90369f8
+	xdisplay = (Display *) 0x8f0b148
+	xid = 58720291
+	xparent = <value optimized out>
+	screen_x11 = (GdkScreenX11 *) 0x8f1a0c8
+	size_hints = {flags = -1078315160, x = 8263581, y = 5204781, 
+  width = 12554228, height = 12554228, min_width = 150642344, 
+  min_height = -1078315064, max_width = 11535455, max_height = 150642344, 
+  width_inc = 58720291, height_inc = 17, min_aspect = {x = 31, y = 9122720}, 
+  max_aspect = {x = 9117684, y = 9122720}, base_width = 150074688, 
+  base_height = -1078315096, win_gravity = 8263581}
+	pid = <value optimized out>
+	leader_window = <value optimized out>
+#7  0x004fefef in _gdk_window_impl_new (window=0x8f1f540, 
+    real_parent=0x8f1f000, screen=0x8f1a0c8, visual=0x8f19408, 
+    event_mask=2293510, attributes=0xbfba394c, 
+    attributes_mask=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gdk/x11/gdkwindow-x11.c:821
+	impl = (GdkWindowImplX11 *) 0x8f34290
+	xparent = 279
+	xvisual = (Visual *) 0x8f14fb0
+	xdisplay = (Display *) 0x8f0b148
+	xattributes = {background_pixmap = 150040944, background_pixel = 0, 
+  border_pixmap = 20680692, border_pixel = 0, bit_gravity = 1, 
+  win_gravity = 7223176, backing_store = 2, backing_planes = 150073344, 
+  backing_pixel = 150062600, save_under = 9614043, event_mask = 6520959, 
+  do_not_propagate_mask = 150195648, override_redirect = 0, colormap = 32, 
+  cursor = 6704486}
+	xattributes_mask = <value optimized out>
+	class_hint = <value optimized out>
+	class = 1
+	title = <value optimized out>
+	i = <value optimized out>
+#8  0x004d3354 in IA__gdk_window_new (parent=0x8f1f000, 
+    attributes=0xbfba394c, attributes_mask=738)
+    at /build/buildd/gtk+2.0-2.18.3/gdk/gdkwindow.c:1426
+	window = (GdkWindow *) 0x8f1f540
+	screen = (GdkScreen *) 0x8f1a0c8
+	visual = (GdkVisual *) 0x2db1
+	x = <value optimized out>
+	y = <value optimized out>
+	native = 1
+	event_mask = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gdk_window_new"
+#9  0x01270c1d in gtk_window_realize (widget=0x8f66848)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkwindow.c:4790
+	parent_window = (GdkWindow *) 0x8f1f000
+	attributes = {title = 0x8f050a8 "", event_mask = 64514, x = 5, 
+  y = 367, width = 377, height = 133, wclass = GDK_INPUT_OUTPUT, 
+  visual = 0x8f19408, colormap = 0x8f1c818, 
+  window_type = GDK_WINDOW_TOPLEVEL, cursor = 0x8f4baa0, 
+  wmclass_name = 0x8f45d38 "xfce4-xfapplet-plugin", 
+  wmclass_class = 0x8f55c50 "Xfce4-xfapplet-plugin", 
+  override_redirect = 150366280, type_hint = GDK_WINDOW_TYPE_HINT_DIALOG}
+	__PRETTY_FUNCTION__ = "gtk_window_realize"
+#10 0x009319fc in g_cclosure_marshal_VOID__VOID ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#11 0x009226f9 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#12 0x00924072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#13 0x009390b0 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#14 0x0093ab2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#15 0x0093afb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#16 0x0125f4e1 in IA__gtk_widget_realize (widget=0x8f66848)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkwidget.c:3328
+	mode = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_widget_realize"
+#17 0x01271508 in gtk_window_show (widget=0x8f66848)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkwindow.c:4488
+	info = (GtkWindowGeometryInfo *) 0x8f6a028
+	allocation = {x = 0, y = 0, width = 377, height = 133}
+	configure_request = {x = 531, y = 383, width = 377, height = 133}
+	new_geometry = {min_width = 377, min_height = 133, max_width = 377, 
+  max_height = 133, base_width = 0, base_height = 0, width_inc = 0, 
+  height_inc = 0, min_aspect = 0, max_aspect = 0, 
+  win_gravity = GDK_GRAVITY_NORTH_WEST}
+	new_flags = 70
+#18 0x009319fc in g_cclosure_marshal_VOID__VOID ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#19 0x009226f9 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#20 0x00924072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#21 0x009390b0 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#22 0x0093ab2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#23 0x0093afb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#24 0x012604b6 in IA__gtk_widget_show (widget=0x8f66848)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkwidget.c:3012
+	__PRETTY_FUNCTION__ = "IA__gtk_widget_show"
+#25 0x001630b1 in link_connection_emit_broken (cnx=0x8f1e690, callbacks=0x6)
+    at linc-connection.c:146
+	bc = (BrokenCallback *) 0x8f6c018
+	l = (GSList *) 0x8f60fe0
+#26 0x00163114 in dispatch_callbacks_drop_lock (cnx=0x8f1e690)
+    at linc-connection.c:273
+	callbacks = (GSList *) 0x8f60fe0
+#27 0x001637e5 in link_connection_state_changed_T_R (cnx=0x8f1e690, 
+    status=LINK_DISCONNECTED) at linc-connection.c:352
+	klass = <value optimized out>
+	__PRETTY_FUNCTION__ = "link_connection_state_changed_T_R"
+#28 0x001639e2 in link_connection_state_changed (cnx=0x8f1e690, 
+    status=LINK_DISCONNECTED) at linc-connection.c:851
+No locals.
+#29 0x00163bfd in link_connection_exec_disconnect (cmd=0x8f61ea0, immediate=1)
+    at linc-connection.c:1547
+No locals.
+#30 0x0016246c in link_dispatch_command (data=0x0, immediate=6) at linc.c:494
+No locals.
+#31 0x00162757 in link_exec_command (cmd=0x8f61ea0) at linc.c:135
+	res = <value optimized out>
+#32 0x00163381 in link_connection_disconnect (cnx=0x8f1e690)
+    at linc-connection.c:1562
+No locals.
+#33 0x001409c6 in giop_connection_close (cnx=0x8f1e690)
+    at giop-connection.c:58
+No locals.
+#34 0x00140a5a in giop_connection_dispose (obj=0x8f1e690)
+    at giop-connection.c:68
+	__PRETTY_FUNCTION__ = "giop_connection_dispose"
+#35 0x0092666f in g_object_run_dispose () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#36 0x00162b9a in link_connections_close () at linc-connection.c:1655
+	cnx = (GList *) 0x8f603b0
+	l = (GList *) 0x8f60620
+#37 0x001410a7 in giop_shutdown () at giop.c:658
+No locals.
+#38 0x00145c19 in CORBA_ORB_shutdown (orb=0x8f52638, 
+    wait_for_completion=1 '\001', ev=0xbfba4378) at corba-orb.c:1238
+	root_poa = (PortableServer_POA) 0x6
+#39 0x00145d7f in CORBA_ORB_destroy (orb=0x8f52638, ev=0xbfba4378)
+    at corba-orb.c:1257
+	root_poa = <value optimized out>
+	__PRETTY_FUNCTION__ = "CORBA_ORB_destroy"
+#40 0x0014755f in shutdown_orb () at corba-orb.c:306
+	orb = (CORBA_ORB) 0x8f52638
+	ev = {_id = 0x0, _major = 0, _any = {_type = 0x0, _value = 0x0, 
+    _release = 0 '\0'}}
+#41 0x007a105f in __run_exit_handlers (status=1, listp=0x8b2304, 
+    run_list_atexit=true) at exit.c:78
+	atfct = <value optimized out>
+	onfct = <value optimized out>
+	cxafct = (void (*)(void *, int)) 0x6
+#42 0x007a10cf in *__GI_exit (status=1) at exit.c:100
+No locals.
+#43 0x004f3610 in gdk_x_io_error (display=0x8f0b148)
+    at /build/buildd/gtk+2.0-2.18.3/gdk/x11/gdkmain-x11.c:524
+No locals.
+#44 0x00b062e6 in _XIOError (dpy=0x8f0b148) at ../../src/XlibInt.c:2959
+No locals.
+#45 0x00b0df8a in process_responses (dpy=0x8f0b148, 
+    wait_for_first_event=<value optimized out>, current_error=0x0, 
+    current_request=0) at ../../src/xcb_io.c:240
+	reply = (void *) 0x0
+	event = (xcb_generic_event_t *) 0x0
+	error = (xcb_generic_error_t *) 0x8b33a0
+	c = (xcb_connection_t *) 0x8f0b688
+	__PRETTY_FUNCTION__ = "process_responses"
+#46 0x00b0e8c6 in _XEventsQueued (dpy=0x8f0b148, mode=2)
+    at ../../src/xcb_io.c:256
+No locals.
+#47 0x00af7588 in XPending (dpy=0x8f0b148) at ../../src/Pending.c:56
+	ret_val = 0
+#48 0x004e8c29 in gdk_event_check (source=0x8f20800)
+    at /build/buildd/gtk+2.0-2.18.3/gdk/x11/gdkevents-x11.c:154
+	retval = <value optimized out>
+#49 0x00669cc1 in g_main_context_check () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#50 0x0066a46c in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#51 0x0066ab8f in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#52 0x01133419 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkmain.c:1218
+	tmp_list = (GList *) 0x0
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0x0
+	loop = (GMainLoop *) 0x8f50728
+#53 0x0804b72f in main (argc=150194176, argv=0x1) at xfapplet.c:814
+	plugin = <value optimized out>

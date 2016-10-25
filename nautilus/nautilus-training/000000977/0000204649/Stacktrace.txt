@@ -1,0 +1,123 @@
+#0  0xb6e23c1b in check_plugin_U (plugin=0x7365642c, need_complete_type_info=10073536, 
+    need_complete_interface_info=-1079398584, type_name=0x8723760 "`Î¼\b`\204·\b")
+    at /build/buildd/glib2.0-2.16.1/gobject/gtype.c:576
+No locals.
+#1  0xb423e2ab in volumes_drives_changed (volume_monitor=0x8a27580, volume=0x84dda60, 
+    user_data=0x8723760) at gtkfilesystemgio.c:398
+No locals.
+#2  0xb6e1300a in IA__g_cclosure_marshal_VOID__POINTER (closure=0x857e7e8, return_value=0x0, 
+    n_param_values=2, param_values=0xbfa9b274, invocation_hint=0xbfa9b17c, 
+    marshal_data=0xb423e280) at /build/buildd/glib2.0-2.16.1/gobject/gmarshal.c:601
+	data1 = (gpointer) 0x8a27580
+	data2 = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_cclosure_marshal_VOID__POINTER"
+#3  0xb6e06759 in IA__g_closure_invoke (closure=0x857e7e8, return_value=0x0, n_param_values=2, 
+    param_values=0xbfa9b274, invocation_hint=0xbfa9b17c)
+    at /build/buildd/glib2.0-2.16.1/gobject/gclosure.c:490
+	marshal = (GClosureMarshal) 0xb6e12fb0 <IA__g_cclosure_marshal_VOID__POINTER>
+	marshal_data = (gpointer) 0x0
+	__PRETTY_FUNCTION__ = "IA__g_closure_invoke"
+#4  0xb6e1af8b in signal_emit_unlocked_R (node=0x8a27020, detail=0, instance=0x8a27580, 
+    emission_return=0x0, instance_and_params=0xbfa9b274)
+    at /build/buildd/glib2.0-2.16.1/gobject/gsignal.c:2509
+	tmp = <value optimized out>
+	handler = (Handler *) 0xb7b19531
+	accumulator = (SignalAccumulator *) 0x0
+	emission = {next = 0xbfa9b6e4, instance = 0x8a27580, ihint = {signal_id = 574, 
+    detail = 0, run_type = G_SIGNAL_RUN_FIRST}, state = EMISSION_RUN, chain_type = 4}
+	class_closure = (GClosure *) 0x8a26f60
+	handler_list = (Handler *) 0xb104afa0
+	return_accu = (GValue *) 0x0
+	accu = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, 
+      v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, 
+      v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, 
+      v_pointer = 0x0}}}
+	signal_id = 574
+	max_sequential_handler_number = 16277
+	return_value_altered = 1
+#5  0xb6e1cc1f in IA__g_signal_emit_by_name (instance=0x8a27580, 
+    detailed_signal=0x23e <Address 0x23e out of bounds>)
+    at /build/buildd/glib2.0-2.16.1/gobject/gsignal.c:2256
+	detail = 3068248891
+	signal_id = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_signal_emit_by_name"
+#6  0xb6e1cee0 in IA__g_signal_emitv (instance_and_params=0x8a27580, signal_id=574, 
+    detail=139319904, return_value=0xb6e37680)
+    at /build/buildd/glib2.0-2.16.1/gobject/gsignal.c:2048
+	instance = (gpointer) 0xb7b1adf0
+	node = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_signal_emitv"
+#7  0xb61a587e in _g_union_volume_monitor_get_type ()
+    at /build/buildd/glib2.0-2.16.1/gio/gunionvolumemonitor.c:54
+	g_define_type_id = 1936024623
+	g_define_type_id__volatile = 20
+#8  0xb6e1300a in IA__g_cclosure_marshal_VOID__POINTER (closure=0xb6e37680, return_value=0x0, 
+    n_param_values=2, param_values=0xbfa9b7e4, invocation_hint=0xbfa9b6ec, 
+    marshal_data=0xb61a5859) at /build/buildd/glib2.0-2.16.1/gobject/gmarshal.c:601
+	data1 = (gpointer) 0xb2373c78
+	data2 = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_cclosure_marshal_VOID__POINTER"
+#9  0xb6e06759 in IA__g_closure_invoke (closure=0x84b2968, return_value=0x0, n_param_values=2, 
+    param_values=0xbfa9b7e4, invocation_hint=0xbfa9b6ec)
+    at /build/buildd/glib2.0-2.16.1/gobject/gclosure.c:490
+	marshal = (GClosureMarshal) 0xb6e12fb0 <IA__g_cclosure_marshal_VOID__POINTER>
+	marshal_data = (gpointer) 0x0
+	__PRETTY_FUNCTION__ = "IA__g_closure_invoke"
+#10 0xb6e1af8b in signal_emit_unlocked_R (node=0x8a27020, detail=0, instance=0xb2373c78, 
+    emission_return=0x0, instance_and_params=0xbfa9b7e4)
+    at /build/buildd/glib2.0-2.16.1/gobject/gsignal.c:2509
+	tmp = <value optimized out>
+	handler = (Handler *) 0x0
+	accumulator = (SignalAccumulator *) 0x0
+	emission = {next = 0x0, instance = 0xb2373c78, ihint = {signal_id = 574, detail = 0, 
+    run_type = G_SIGNAL_RUN_FIRST}, state = EMISSION_RUN, chain_type = 4}
+	class_closure = (GClosure *) 0x8a26f60
+	handler_list = (Handler *) 0x8a25060
+	return_accu = (GValue *) 0x0
+	accu = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, 
+      v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, 
+      v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, 
+      v_pointer = 0x0}}}
+	signal_id = 574
+	max_sequential_handler_number = 16277
+	return_value_altered = 0
+#11 0xb6e1cc1f in IA__g_signal_emit_by_name (instance=0xb2373c78, 
+    detailed_signal=0x23e <Address 0x23e out of bounds>)
+    at /build/buildd/glib2.0-2.16.1/gobject/gsignal.c:2256
+	detail = 3068248891
+	signal_id = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_signal_emit_by_name"
+#12 0xb6e1cee0 in IA__g_signal_emitv (instance_and_params=0xb2373c78, signal_id=574, 
+    detail=139319904, return_value=0xb6da790b)
+    at /build/buildd/glib2.0-2.16.1/gobject/gsignal.c:2048
+	instance = (gpointer) 0xb7b1adf0
+	node = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_signal_emitv"
+#13 0xb422a079 in update_from_hal (mv=0xb7b1aa0c, emit_changed=-1226718405) at ghalvolume.c:353
+	old_name = 0xb6e37680 "@µ\003"
+	old_icon = 0x23e <Address 0x23e out of bounds>
+	old_mount_path = 0xb7b1adf0 "Uº\001"
+#14 0xb6d7e171 in check_for_child_exited (source=0xb6df6248)
+    at /build/buildd/glib2.0-2.16.1/glib/gmain.c:3754
+	child_status = <value optimized out>
+	count = -1079395684
+#15 0xb6d7fd16 in IA__g_main_context_dispatch (context=0x8094eb0)
+    at /build/buildd/glib2.0-2.16.1/glib/gmain.c:1918
+No locals.
+#16 0xb6d830d3 in IA__g_main_loop_run (loop=0x1) at /build/buildd/glib2.0-2.16.1/glib/gmain.c:2814
+	got_ownership = 0
+	self = (GThread *) 0xc8
+	__PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#17 0xb6d834b7 in IA__g_main_context_pending (context=0xb7b19520)
+    at /build/buildd/glib2.0-2.16.1/glib/gmain.c:2665
+	retval = 134973832
+#18 0xb7776a93 in bonobo_main () at bonobo-main.c:311
+	loop = (GMainLoop *) 0x80b8988
+#19 0x0805ed59 in main (argc=2, argv=0xbfa9bd94) at main.c:782
+	fd = <value optimized out>
+	client = (GConfClient *) 0x809b558
+	program = (GnomeProgram *) 0x8070058
+	master_client = (GnomeClient *) 0x8072010
+	context = <value optimized out>
+#20 0xb6c0f450 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+#21 0x08050431 in _start ()

@@ -1,0 +1,237 @@
+#0  IA__g_logv (log_domain=<value optimized out>, 
+    log_level=G_LOG_LEVEL_ERROR, format=0xca1b93 "%s", args1=0xbfb9f2bc "")
+    at /build/buildd/glib2.0-2.21.4/glib/gmessages.c:512
+	depth = 0
+	domain = <value optimized out>
+	data = (gpointer) 0x0
+	log_func = (GLogFunc) 0x8080b50 <log_override_cb>
+	domain_fatal_mask = 5
+	test_level = G_LOG_FLAG_FATAL
+	was_recursion = 0
+	i = <value optimized out>
+#1  0x002f8d86 in IA__g_log (log_domain=0xc8410b "Gdk", 
+    log_level=G_LOG_LEVEL_ERROR, format=0xca1b93 "%s")
+    at /build/buildd/glib2.0-2.21.4/glib/gmessages.c:526
+No locals.
+#2  0x00c6d501 in gdk_x_error (display=0x89675e8, error=0xbfb9f38c)
+    at /build/buildd/gtk+2.0-2.17.7/gdk/x11/gdkmain-x11.c:466
+	buf = "BadWindow (invalid Window parameter)", '\0' <repeats 27 times>
+#3  0x00d01839 in _XError (dpy=0x89675e8, rep=0x8fc7d30)
+    at ../../src/XlibInt.c:2924
+	rtn_val = <value optimized out>
+	event = {type = 0, xany = {type = 0, serial = 144078312, 
+    send_event = 65494463, display = 0x113ec, window = 771}, xkey = {
+    type = 0, serial = 144078312, send_event = 65494463, display = 0x113ec, 
+    window = 771, root = 14839063, subwindow = 144079656, time = 14844185, 
+    x = -1078332312, y = 148470584, x_root = 1, y_root = 0, state = 7856116, 
+    keycode = 1, same_screen = -1078332308}, xbutton = {type = 0, 
+    serial = 144078312, send_event = 65494463, display = 0x113ec, 
+    window = 771, root = 14839063, subwindow = 144079656, time = 14844185, 
+    x = -1078332312, y = 148470584, x_root = 1, y_root = 0, state = 7856116, 
+    button = 1, same_screen = -1078332308}, xmotion = {type = 0, 
+    serial = 144078312, send_event = 65494463, display = 0x113ec, 
+    window = 771, root = 14839063, subwindow = 144079656, time = 14844185, 
+    x = -1078332312, y = 148470584, x_root = 1, y_root = 0, state = 7856116, 
+    is_hint = 1 '\001', same_screen = -1078332308}, xcrossing = {type = 0, 
+    serial = 144078312, send_event = 65494463, display = 0x113ec, 
+    window = 771, root = 14839063, subwindow = 144079656, time = 14844185, 
+    x = -1078332312, y = 148470584, x_root = 1, y_root = 0, mode = 7856116, 
+    detail = 1, same_screen = -1078332308, focus = -1078332408, 
+    state = 7776342}, xfocus = {type = 0, serial = 144078312, 
+    send_event = 65494463, display = 0x113ec, window = 771, mode = 14839063, 
+    detail = 144079656}, xexpose = {type = 0, serial = 144078312, 
+    send_event = 65494463, display = 0x113ec, window = 771, x = 14839063, 
+    y = 144079656, width = 14844185, height = -1078332312, 
+    count = 148470584}, xgraphicsexpose = {type = 0, serial = 144078312, 
+    send_event = 65494463, display = 0x113ec, drawable = 771, x = 14839063, 
+    y = 144079656, width = 14844185, height = -1078332312, count = 148470584, 
+    major_code = 1, minor_code = 0}, xnoexpose = {type = 0, 
+    serial = 144078312, send_event = 65494463, display = 0x113ec, 
+    drawable = 771, major_code = 14839063, minor_code = 144079656}, 
+  xvisibility = {type = 0, serial = 144078312, send_event = 65494463, 
+    display = 0x113ec, window = 771, state = 14839063}, xcreatewindow = {
+    type = 0, serial = 144078312, send_event = 65494463, display = 0x113ec, 
+    parent = 771, window = 14839063, x = 144079656, y = 14844185, 
+    width = -1078332312, height = 148470584, border_width = 1, 
+    override_redirect = 0}, xdestroywindow = {type = 0, serial = 144078312, 
+    send_event = 65494463, display = 0x113ec, event = 771, 
+    window = 14839063}, xunmap = {type = 0, serial = 144078312, 
+    send_event = 65494463, display = 0x113ec, event = 771, window = 14839063, 
+    from_configure = 144079656}, xmap = {type = 0, serial = 144078312, 
+    send_event = 65494463, display = 0x113ec, event = 771, window = 14839063, 
+    override_redirect = 144079656}, xmaprequest = {type = 0, 
+    serial = 144078312, send_event = 65494463, display = 0x113ec, 
+    parent = 771, window = 14839063}, xreparent = {type = 0, 
+    serial = 144078312, send_event = 65494463, display = 0x113ec, 
+    event = 771, window = 14839063, parent = 144079656, x = 14844185, 
+    y = -1078332312, override_redirect = 148470584}, xconfigure = {type = 0, 
+    serial = 144078312, send_event = 65494463, display = 0x113ec, 
+    event = 771, window = 14839063, x = 144079656, y = 14844185, 
+    width = -1078332312, height = 148470584, border_width = 1, above = 0, 
+    override_redirect = 7856116}, xgravity = {type = 0, serial = 144078312, 
+    send_event = 65494463, display = 0x113ec, event = 771, window = 14839063, 
+    x = 144079656, y = 14844185}, xresizerequest = {type = 0, 
+    serial = 144078312, send_event = 65494463, display = 0x113ec, 
+    window = 771, width = 14839063, height = 144079656}, xconfigurerequest = {
+    type = 0, serial = 144078312, send_event = 65494463, display = 0x113ec, 
+    parent = 771, window = 14839063, x = 144079656, y = 14844185, 
+    width = -1078332312, height = 148470584, border_width = 1, above = 0, 
+    detail = 7856116, value_mask = 1}, xcirculate = {type = 0, 
+    serial = 144078312, send_event = 65494463, display = 0x113ec, 
+    event = 771, window = 14839063, place = 144079656}, xcirculaterequest = {
+    type = 0, serial = 144078312, send_event = 65494463, display = 0x113ec, 
+    parent = 771, window = 14839063, place = 144079656}, xproperty = {
+    type = 0, serial = 144078312, send_event = 65494463, display = 0x113ec, 
+    window = 771, atom = 14839063, time = 144079656, state = 14844185}, 
+  xselectionclear = {type = 0, serial = 144078312, send_event = 65494463, 
+    display = 0x113ec, window = 771, selection = 14839063, time = 144079656}, 
+  xselectionrequest = {type = 0, serial = 144078312, send_event = 65494463, 
+    display = 0x113ec, owner = 771, requestor = 14839063, 
+    selection = 144079656, target = 14844185, property = 3216634984, 
+    time = 148470584}, xselection = {type = 0, serial = 144078312, 
+    send_event = 65494463, display = 0x113ec, requestor = 771, 
+    selection = 14839063, target = 144079656, property = 14844185, 
+    time = 3216634984}, xcolormap = {type = 0, serial = 144078312, 
+    send_event = 65494463, display = 0x113ec, window = 771, 
+    colormap = 14839063, new = 144079656, state = 14844185}, xclient = {
+    type = 0, serial = 144078312, send_event = 65494463, display = 0x113ec, 
+    window = 771, message_type = 14839063, format = 144079656, data = {
+      b = "\031\201?\000h???8{?\b\001\000\000\000\000\000\000", s = {-32487, 
+        226, -2968, -16455, 31544, 2265, 1, 0, 0, 0}, l = {14844185, 
+        -1078332312, 148470584, 1, 0}}}, xmapping = {type = 0, 
+    serial = 144078312, send_event = 65494463, display = 0x113ec, 
+    window = 771, request = 14839063, first_keycode = 144079656, 
+    count = 14844185}, xerror = {type = 0, display = 0x89675e8, 
+    resourceid = 65494463, serial = 70636, error_code = 3 '\003', 
+    request_code = 3 '\003', minor_code = 0 '\0'}, xkeymap = {type = 0, 
+    serial = 144078312, send_event = 65494463, display = 0x113ec, 
+    window = 771, 
+    key_vector = "\027m?\000({\226\b\031\201?\000h???8{?\b\001\000\000\000\000\000\000\000??w"}, pad = {0, 144078312, 65494463, 70636, 771, 14839063, 
+    144079656, 14844185, -1078332312, 148470584, 1, 0, 7856116, 1, 
+    -1078332308, -1078332408, 7776342, 144079668, -1078332312, 17, 144078312, 
+    59986848, 59981812, 59986848}}
+	async = <value optimized out>
+	next = <value optimized out>
+#4  0x00d07e9f in process_responses (dpy=0x89675e8, 
+    wait_for_first_event=<value optimized out>, current_error=0xbfb9f4bc, 
+    current_request=70643) at ../../src/xcb_io.c:207
+	req = (PendingRequest *) 0x8e6af10
+	event_sequence = <value optimized out>
+	reply = (void *) 0x0
+	event = (xcb_generic_event_t *) 0x8fc7d30
+	error = (xcb_generic_error_t *) 0x0
+	c = (xcb_connection_t *) 0x8967b28
+	__PRETTY_FUNCTION__ = "process_responses"
+#5  0x00d08526 in _XReply (dpy=0x89675e8, rep=0xbfb9f568, extra=0, discard=1)
+    at ../../src/xcb_io.c:457
+	error = <value optimized out>
+	c = (xcb_connection_t *) 0x8d97b10
+	__PRETTY_FUNCTION__ = "_XReply"
+#6  0x00c4f13b in _gdk_x11_get_window_child_info (display=0x8972000, 
+    window=135, get_wm_state=0, win_has_wm_state=0x0, children=0xbfb9f6cc, 
+    nchildren=0xbfb9f6c8)
+    at /build/buildd/gtk+2.0-2.17.7/gdk/x11/gdkasync.c:731
+	rep = {type = 136 '\210', depth = 245 '?', sequenceNumber = 49081, 
+  length = 0, root = 2, x = 0, y = 0, width = 33339, height = 196, 
+  borderWidth = 55998, pad1 = 195, pad2 = 13336564, pad3 = 12939120}
+	dpy = (Display *) 0x89675e8
+	async = {next = 0x0, handler = 0xc4e6e0 <get_child_info_handler>, 
+  data = 0xbfb9f520 ""}
+	state = {get_wm_state = 0, children = 0x904c698, nchildren = 110, 
+  child_info = 0x90430f8, child_states = 0x8e45628, current_child = 106, 
+  n_children_found = 106, current_request = 2, have_error = 1, 
+  child_has_error = 1}
+	wm_state_atom = <value optimized out>
+	has_wm_state = 0
+	i = 110
+#7  0x00c59338 in IA__gdk_drag_find_window_for_screen (context=0x8b59438, 
+    drag_window=0x8978d40, screen=0x89760c8, x_root=393, y_root=260, 
+    dest_window=0xbfb9f72c, protocol=0xbfb9f728)
+    at /build/buildd/gtk+2.0-2.17.7/gdk/x11/gdkdnd-x11.c:486
+	window_cache = <value optimized out>
+	display = (GdkDisplay *) 0x8972000
+	dest = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gdk_drag_find_window_for_screen"
+#8  0x010ec1e0 in gtk_drag_update_idle (data=0x8fbba80)
+    at /build/buildd/gtk+2.0-2.17.7/gtk/gtkdnd.c:3989
+	dest_window = <value optimized out>
+	protocol = <value optimized out>
+	selection = <value optimized out>
+	action = <value optimized out>
+	possible_actions = <value optimized out>
+	time = 15241452
+#9  0x00c210c8 in gdk_threads_dispatch (data=0x8d653c0)
+    at /build/buildd/gtk+2.0-2.17.7/gdk/gdk.c:498
+	ret = 0
+#10 0x002ecec1 in g_idle_dispatch (source=0x8d546b0, callback=0, 
+    user_data=0x8d653c0) at /build/buildd/glib2.0-2.21.4/glib/gmain.c:4065
+No locals.
+#11 0x002eec48 in IA__g_main_context_dispatch (context=0x897a7a8)
+    at /build/buildd/glib2.0-2.21.4/glib/gmain.c:1960
+No locals.
+#12 0x002f24f0 in g_main_context_iterate (context=0x897a7a8, 
+    block=<value optimized out>, dispatch=1, self=0x894b558)
+    at /build/buildd/glib2.0-2.21.4/glib/gmain.c:2591
+	max_priority = 125
+	timeout = 0
+	some_ready = 1
+	nfds = <value optimized out>
+	allocated_nfds = <value optimized out>
+	fds = <value optimized out>
+	__PRETTY_FUNCTION__ = "g_main_context_iterate"
+#13 0x002f295f in IA__g_main_loop_run (loop=0x8c6e2b0)
+    at /build/buildd/glib2.0-2.21.4/glib/gmain.c:2799
+	self = (GThread *) 0x894b558
+	__PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#14 0x00f8a2f9 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.17.7/gtk/gtkmain.c:1205
+	tmp_list = (GList *) 0x0
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0x1
+	loop = (GMainLoop *) 0x8c6e2b0
+#15 0x08081381 in main (argc=1, argv=0xbfb9fbf4) at nautilus-main.c:548
+	kill_shell = 0
+	no_default_window = 1
+	browser_window = 0
+	no_desktop = 0
+	version = 0
+	autostart_mode = 1
+	autostart_id = <value optimized out>
+	geometry = (gchar *) 0x0
+	remaining = (const gchar **) 0x0
+	perform_self_check = 0
+	application = (NautilusApplication *) 0x899d000
+	context = <value optimized out>
+	file = (GFile *) 0x1
+	uri = <value optimized out>
+	uris = (char **) 0x0
+	uris_array = <value optimized out>
+	error = (GError *) 0x0
+	options = {{long_name = 0x81a5c99 "check", short_name = 99 'c', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfb9fb10, 
+    description = 0x81a5cdc "Perform a quick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x81a5bcf "version", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfb9fb1c, 
+    description = 0x81a5d08 "Show the version of the program.", 
+    arg_description = 0x0}, {long_name = 0x81a976f "geometry", 
+    short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+    arg_data = 0xbfb9fb18, 
+    description = 0x81a5d2c "Create the initial window with the given geometry.", arg_description = 0x81a5bd7 "GEOMETRY"}, {
+    long_name = 0x81a5be0 "no-default-window", short_name = 110 'n', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfb9fb28, 
+    description = 0x81a5d60 "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {long_name = 0x81a5bf2 "no-desktop", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfb9fb20, 
+    description = 0x81a5d94 "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {
+    long_name = 0x81a2911 "browser", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbfb9fb24, 
+    description = 0x81a5bfd "open a browser window.", arg_description = 0x0}, 
+  {long_name = 0x81c4fbd "quit", short_name = 113 'q', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbfb9fb2c, 
+    description = 0x81a5c14 "Quit Nautilus.", arg_description = 0x0}, {
+    long_name = 0x81aa9a1 "", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0xbfb9fb14, 
+    description = 0x0, arg_description = 0x81a5c23 "[URI...]"}, {
+    long_name = 0x0, short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x0, description = 0x0, arg_description = 0x0}}

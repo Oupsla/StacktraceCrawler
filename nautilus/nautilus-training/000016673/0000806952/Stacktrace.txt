@@ -1,0 +1,80 @@
+#0  0x00007fd278ec3d4c in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#1  0x00007fd278dc0a5c in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#2  0x00007fd276e7481c in g_closure_invoke () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#3  0x00007fd276e85e1f in ?? () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#4  0x00007fd276e8e800 in g_signal_emitv () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#5  0x00007fd278d0a8d3 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#6  0x00007fd278d0ae58 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#7  0x00007fd278d0b0b2 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#8  0x00007fd278d0bfca in gtk_bindings_activate_event () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#9  0x00007fd278ec4b49 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#10 0x00007fd278dc0578 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#11 0x00007fd276e74765 in g_closure_invoke () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#12 0x00007fd276e85e1f in ?? () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#13 0x00007fd276e8efa9 in g_signal_emit_valist () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#14 0x00007fd276e8f41f in g_signal_emit () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#15 0x00007fd278edc4d1 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#16 0x00007fd278ef1f5b in gtk_window_propagate_key_event () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#17 0x00007fd278ef4a8b in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#18 0x00007fd278dc0578 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#19 0x00007fd276e7481c in g_closure_invoke () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#20 0x00007fd276e85e1f in ?? () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#21 0x00007fd276e8efa9 in g_signal_emit_valist () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#22 0x00007fd276e8f41f in g_signal_emit () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#23 0x00007fd278edc4d1 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#24 0x00007fd278dbe834 in gtk_propagate_event () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#25 0x00007fd278dbea5b in gtk_main_do_event () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#26 0x00007fd278a315cc in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#27 0x00007fd276bb9bcd in g_main_context_dispatch () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#28 0x00007fd276bba3a8 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#29 0x00007fd276bba9f2 in g_main_loop_run () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#30 0x00007fd278dbdaf7 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#31 0x00000000004110fc in ?? ()
+No symbol table info available.
+#32 0x00007fd276060eff in __libc_start_main (main=0x410bc0, argc=1, ubp_av=0x7ffff7d146d8, init=<value optimized out>, fini=<value optimized out>, rtld_fini=<value optimized out>, stack_end=0x7ffff7d146c8) at libc-start.c:226
+        result = <value optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, -9166822454919063012, 4256576, 140737351075536, 0, 0, 9166804538780916252, 9181726417200454172}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x430f70, 0x7ffff7d146d8}, data = {prev = 0x0, cleanup = 0x0, canceltype = 4394864}}}
+        not_first_call = <value optimized out>
+#33 0x000000000040f369 in ?? ()
+No symbol table info available.
+#34 0x00007ffff7d146c8 in ?? ()
+No symbol table info available.
+#35 0x000000000000001c in ?? ()
+No symbol table info available.
+#36 0x0000000000000001 in ?? ()
+No symbol table info available.
+#37 0x00007ffff7d14a31 in ?? ()
+No symbol table info available.
+#38 0x0000000000000000 in ?? ()
+No symbol table info available.

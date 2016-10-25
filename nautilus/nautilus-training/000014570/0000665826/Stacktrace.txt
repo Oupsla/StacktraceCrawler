@@ -1,0 +1,148 @@
+#0  0x00ff8416 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x01023941 in raise (sig=6) at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+        resultvar = <value optimized out>
+        pid = 18165748
+        selftid = 6240
+#2  0x01026e42 in abort () at abort.c:92
+        act = {__sigaction_handler = {sa_handler = 0xbfb5bbd0, sa_sigaction = 0xbfb5bbd0}, sa_mask = {__val = {17215315, 104, 104, 3216358592, 3216358380, 104, 104, 94, 151935336, 18165748, 94, 93, 3216358552, 17145714, 151935344, 94, 3216358592, 151935344, 0, 4222451712, 151935344, 151935344, 151935344, 151935344, 151935437, 151935444, 151935344, 151935444, 0, 0, 0, 0}}, sa_flags = 0, sa_restorer = 0x4}
+        sigs = {__val = {32, 0 <repeats 31 times>}}
+#3  0x0101c8e8 in __assert_fail (assertion=0xb0f4e5 "ret != inval_id", file=0xb0f4a9 "../../src/xcb_io.c", line=385, function=0xb0f664 "_XAllocID") at assert.c:81
+        buf = 0x90e5970 "gtk-window-decorator: ../../src/xcb_io.c:385: _XAllocID: Assertion `ret != inval_id' failed.\n"
+#4  0x00a9fc99 in _XAllocID (dpy=0x8f839d0) at ../../src/xcb_io.c:385
+        ret = 4294967295
+        __PRETTY_FUNCTION__ = "_XAllocID"
+#5  0x00a751d8 in XCreatePixmap (dpy=0x8f839d0, d=46140976, width=23, height=24, depth=32) at ../../src/CrPixmap.c:56
+No locals.
+#6  0x00956435 in _cairo_xlib_surface_create_similar (abstract_src=0x90db368, content=CAIRO_CONTENT_COLOR_ALPHA, width=23, height=24) at /build/buildd/cairo-1.10.0/src/cairo-xlib-surface.c:393
+        visual = <value optimized out>
+        xrender_format = 0x8f9d0e8
+        display = 0x9049978
+        pix = 46141043
+#7  0x00956596 in _cairo_xlib_surface_clone_similar (abstract_surface=0x90db368, src=0x9059bf0, src_x=1, src_y=0, width=23, height=24, clone_offset_x=0xbfb5c06c, clone_offset_y=0xbfb5c068, clone_out=0xbfb5c35c) at /build/buildd/cairo-1.10.0/src/cairo-xlib-surface.c:1498
+        status = <value optimized out>
+#8  0x00931fed in _cairo_surface_clone_similar (surface=0x90db368, src=0x9059bf0, src_x=1, src_y=0, width=23, height=24, clone_offset_x=0xbfb5c06c, clone_offset_y=0xbfb5c068, clone_out=0xbfb5c35c) at /build/buildd/cairo-1.10.0/src/cairo-surface.c:1684
+        status = CAIRO_STATUS_SUCCESS
+        image = <value optimized out>
+        image_extra = <value optimized out>
+#9  0x0092141c in _cairo_pattern_acquire_surface_for_surface (pattern=0xbfb5cd48, dst=0x90db368, x=588, y=0, width=0, height=0, flags=<value optimized out>, surface_out=0xbfb5c35c, attributes=0xbfb5c2e8) at /build/buildd/cairo-1.10.0/src/cairo-pattern.c:2438
+        surface = 0x9059bf0
+        extents = {x = 1, y = 0, width = 23, height = 24}
+        y1 = 0
+        tx = -587
+        is_bounded = <value optimized out>
+        x1 = 588
+        y2 = 24
+        ty = 0
+        sampled_area = {x = 1, y = 0, width = 23, height = 24}
+        x2 = 611
+        pad = 0
+        is_identity = 1
+#10 _cairo_pattern_acquire_surface (pattern=0xbfb5cd48, dst=0x90db368, x=588, y=0, width=0, height=0, flags=<value optimized out>, surface_out=0xbfb5c35c, attributes=0xbfb5c2e8) at /build/buildd/cairo-1.10.0/src/cairo-pattern.c:2540
+        __PRETTY_FUNCTION__ = "_cairo_pattern_acquire_surface"
+#11 0x009239c6 in _cairo_pattern_acquire_surfaces (src=0xbfb5cd48, mask=0x0, dst=0x90db368, src_x=588, src_y=0, mask_x=0, mask_y=0, width=23, height=24, flags=0, src_out=0xbfb5c35c, mask_out=0xbfb5c358, src_attributes=0xbfb5c2e8, mask_attributes=0xbfb5c2a0) at /build/buildd/cairo-1.10.0/src/cairo-pattern.c:2613
+        status = <value optimized out>
+        src_tmp = {type = 3216359912, base = {type = 3216359912, ref_count = {ref_count = 9544059}, status = 3216359792, user_data = {size = 0, num_elements = 0, element_size = 150509688, elements = 0x1e33b7, is_snapshot = 10047712}, matrix = {xx = 8.9892332134641555e-306, yx = 7.5045034093261127e-316, xy = 8.9892332006662875e-306, yy = 7.4750341721880073e-316, x0 = 5.747539332649634e-306, y0 = 13.000000268756409}, filter = 1984425, extend = 9454239, has_component_alpha = 0}, solid = {base = {type = 3216359912, ref_count = {ref_count = 9544059}, status = 3216359792, user_data = {size = 0, num_elements = 0, element_size = 150509688, elements = 0x1e33b7, is_snapshot = 10047712}, matrix = {xx = 8.9892332134641555e-306, yx = 7.5045034093261127e-316, xy = 8.9892332006662875e-306, yy = 7.4750341721880073e-316, x0 = 5.747539332649634e-306, y0 = 13.000000268756409}, filter = 1984425, extend = 9454239, has_component_alpha = 0}, color = {red = 1.8782894077729943e-265, green = 3.1943355523580992e-265, blue = -0.084982395172119141, alpha = 3.1943355521137193e-265, red_short = 20000, green_short = 2318, blue_short = 37179, alpha_short = 154}}, surface = {base = {type = 3216359912, ref_count = {ref_count = 9544059}, status = 3216359792, user_data = {size = 0, num_elements = 0, element_size = 150509688, elements = 0x1e33b7, is_snapshot = 10047712}, matrix = {xx = 8.9892332134641555e-306, yx = 7.5045034093261127e-316, xy = 8.9892332006662875e-306, yy = 7.4750341721880073e-316, x0 = 5.747539332649634e-306, y0 = 13.000000268756409}, filter = 1984425, extend = 9454239, has_component_alpha = 0}, surface = 0x9049978}, gradient = {base = {base = {type = 3216359912, ref_count = {ref_count = 9544059}, status = 3216359792, user_data = {size = 0, num_elements = 0, element_size = 150509688, elements = 0x1e33b7, is_snapshot = 10047712}, matrix = {xx = 8.9892332134641555e-306, yx = 7.5045034093261127e-316, xy = 8.9892332006662875e-306, yy = 7.4750341721880073e-316, x0 = 5.747539332649634e-306, y0 = 13.000000268756409}, filter = 1984425, extend = 9454239, has_component_alpha = 0}, n_stops = 151296376, stops_size = 150485456, stops = 0x993ff4, stops_embedded = {{offset = 7.475035753198074e-316, color = {red = 6.5794648965833337e-306, green = 4.6992726551536497e-265, blue = 9.5232509395122787e-306, alpha = 3.2040271932369424e-265, red_short = 49560, green_short = 49077, blue_short = 28661, alpha_short = 154}}, {offset = 4.6998783774262123e-265, color = {red = 1.6829381012317382e-305, green = 0, blue = 8.9892332006662875e-306, alpha = 4.9620890261290587e-317, red_short = 49608, green_short = 49077, blue_short = 57203, alpha_short = 148}}}}, linear = {base = {base = {type = 3216359912, ref_count = {ref_count = 9544059}, status = 3216359792, user_data = {size = 0, num_elements = 0, element_size = 150509688, elements = 0x1e33b7, is_snapshot = 10047712}, matrix = {xx = 8.9892332134641555e-306, yx = 7.5045034093261127e-316, xy = 8.9892332006662875e-306, yy = 7.4750341721880073e-316, x0 = 5.747539332649634e-306, y0 = 13.000000268756409}, filter = 1984425, extend = 9454239, has_component_alpha = 0}, n_stops = 151296376, stops_size = 150485456, stops = 0x993ff4, stops_embedded = {{offset = 7.475035753198074e-316, color = {red = 6.5794648965833337e-306, green = 4.6992726551536497e-265, blue = 9.5232509395122787e-306, alpha = 3.2040271932369424e-265, red_short = 49560, green_short = 49077, blue_short = 28661, alpha_short = 154}}, {offset = 4.6998783774262123e-265, color = {red = 1.6829381012317382e-305, green = 0, blue = 8.9892332006662875e-306, alpha = 4.9620890261290587e-317, red_short = 49608, green_short = 49077, blue_short = 57203, alpha_short = 148}}}}, p1 = {x = 151296488, y = 151297624}, p2 = {x = 1984425, y = 9772574}}, radial = {base = {base = {type = 3216359912, ref_count = {ref_count = 9544059}, status = 3216359792, user_data = {size = 0, num_elements = 0, element_size = 150509688, elements = 0x1e33b7, is_snapshot = 10047712}, matrix = {xx = 8.9892332134641555e-306, yx = 7.5045034093261127e-316, xy = 8.9892332006662875e-306, yy = 7.4750341721880073e-316, x0 = 5.747539332649634e-306, y0 = 13.000000268756409}, filter = 1984425, extend = 9454239, has_component_alpha = 0}, n_stops = 151296376, stops_size = 150485456, stops = 0x993ff4, stops_embedded = {{offset = 7.475035753198074e-316, color = {red = 6.5794648965833337e-306, green = 4.6992726551536497e-265, blue = 9.5232509395122787e-306, alpha = 3.2040271932369424e-265, red_short = 49560, green_short = 49077, blue_short = 28661, alpha_short = 154}}, {offset = 4.6998783774262123e-265, color = {red = 1.6829381012317382e-305, green = 0, blue = 8.9892332006662875e-306, alpha = 4.9620890261290587e-317, red_short = 49608, green_short = 49077, blue_short = 57203, alpha_short = 148}}}}, c1 = {x = 151296488, y = 151297624}, r1 = 1984425, c2 = {x = 9772574, y = 151300504}, r2 = 151296376}}}
+#12 0x009553b2 in _cairo_xlib_surface_acquire_pattern_surfaces (op=CAIRO_OPERATOR_OVER, src_pattern=0xbfb5cd48, mask_pattern=0x0, abstract_dst=0x90db368, src_x=588, src_y=0, mask_x=0, mask_y=0, dst_x=588, dst_y=0, width=23, height=24, clip_region=0x0) at /build/buildd/cairo-1.10.0/src/cairo-xlib-surface.c:2299
+No locals.
+#13 _cairo_xlib_surface_composite (op=CAIRO_OPERATOR_OVER, src_pattern=0xbfb5cd48, mask_pattern=0x0, abstract_dst=0x90db368, src_x=588, src_y=0, mask_x=0, mask_y=0, dst_x=588, dst_y=0, width=23, height=24, clip_region=0x0) at /build/buildd/cairo-1.10.0/src/cairo-xlib-surface.c:2466
+        src_attr = {matrix = {xx = 1, yx = 0, xy = 0, yy = 1, x0 = 0, y0 = 0}, extend = CAIRO_EXTEND_NONE, filter = CAIRO_FILTER_NEAREST, has_component_alpha = 0, x_offset = -587, y_offset = 0, extra = 0x8fc16d}
+        mask_attr = {matrix = {xx = -0.085138603977425842, yx = 6.1140694776100262e-306, xy = 144, yy = 5.6881295649293256e-306, x0 = 144, y0 = 6.4902881083483962e-306}, extend = 151102640, filter = 151336857, has_component_alpha = -1078607096, x_offset = 9635940, y_offset = 10047484, extra = 0x9950b8}
+        src = <value optimized out>
+        mask = <value optimized out>
+        display = 0x9049978
+        status = <value optimized out>
+        operation = <value optimized out>
+        itx = <value optimized out>
+        ity = <value optimized out>
+        is_integer_translation = <value optimized out>
+        gc = <value optimized out>
+        __PRETTY_FUNCTION__ = "_cairo_xlib_surface_composite"
+#14 0x009300c1 in _cairo_surface_composite (op=CAIRO_OPERATOR_OVER, src=0xbfb5cd48, mask=0x0, dst=0x90db368, src_x=588, src_y=0, mask_x=0, mask_y=0, dst_x=588, dst_y=0, width=23, height=24, clip_region=0x0) at /build/buildd/cairo-1.10.0/src/cairo-surface.c:1802
+        status = <value optimized out>
+        __PRETTY_FUNCTION__ = "_cairo_surface_composite"
+#15 0x00934407 in _composite_rectangle (src=<value optimized out>, op=CAIRO_OPERATOR_OVER, dst=0x90db368, traps=0xbfb5c5a0, antialias=CAIRO_ANTIALIAS_DEFAULT, clip=0x0, extents=0xbfb5cc94) at /build/buildd/cairo-1.10.0/src/cairo-surface-fallback.c:762
+No locals.
+#16 _clip_and_composite_trapezoids (src=<value optimized out>, op=CAIRO_OPERATOR_OVER, dst=0x90db368, traps=0xbfb5c5a0, antialias=CAIRO_ANTIALIAS_DEFAULT, clip=0x0, extents=0xbfb5cc94) at /build/buildd/cairo-1.10.0/src/cairo-surface-fallback.c:812
+        trap_region = 0x0
+        traps_info = {traps = 0x40710000, antialias = CAIRO_ANTIALIAS_DEFAULT}
+        clip_region = 0x0
+        clip_surface = 0
+        status = <value optimized out>
+#17 0x00934dd2 in _cairo_surface_fallback_paint (surface=0x90db368, op=CAIRO_OPERATOR_OVER, source=0xbfb5cd48, clip=0x0) at /build/buildd/cairo-1.10.0/src/cairo-surface-fallback.c:935
+        extents = {source = {x = 587, y = 0, width = 24, height = 24}, mask = {x = 588, y = 0, width = 23, height = 24}, bounded = {x = 588, y = 0, width = 23, height = 24}, unbounded = {x = 588, y = 0, width = 25, height = 25}, is_bounded = 6}
+        rect = {x = 0, y = 0, width = 644, height = 25}
+        clip_path = 0x90e2400
+        boxes_stack = {{p1 = {x = 150528, y = 0}, p2 = {x = 156416, y = 6144}}, {p1 = {x = 17210973, y = -1078604872}, p2 = {x = 0, y = 13365236}}, {p1 = {x = 151283712, y = -1078605128}, p2 = {x = 12809350, y = 151283712}}, {p1 = {x = 1071794468, y = 15139595}, p2 = {x = 15167476, y = 15167476}}, {p1 = {x = 0, y = -1078604808}, p2 = {x = 15142051, y = 151283712}}, {p1 = {x = 24, y = 24}, p2 = {x = 96, y = 4}}, {p1 = {x = 1, y = 151653696}, p2 = {x = 42, y = 42}}, {p1 = {x = 168, y = 4}, p2 = {x = 1, y = -1840700270}}, {p1 = {x = 1071794468, y = -1840700270}, p2 = {x = 1071794468, y = 0}}, {p1 = {x = 0, y = 0}, p2 = {x = 0, y = 0}}, {p1 = {x = -1078604872, y = 15135200}, p2 = {x = 15135024, y = 0}}, {p1 = {x = 0, y = 0}, p2 = {x = 150420924, y = 0}}, {p1 = {x = 0, y = 24}, p2 = {x = 8296475, y = 150420892}}, {p1 = {x = 192, y = 8}, p2 = {x = 151932448, y = 151932616}}, {p1 = {x = 16, y = -1078604748}, p2 = {x = 151909568, y = 151956616}}, {p1 = {x = 0, y = 0}, p2 = {x = 8351732, y = 1}}, {p1 = {x = 3, y = -1078604424}, p2 = {x = 8301399, y = 4}}, {p1 = {x = -1078604200, y = -1078604200}, p2 = {x = 1071794468, y = 0}}, {p1 = {x = 0, y = -1078604872}, p2 = {x = 24, y = -1840700270}}, {p1 = {x = 1071794468, y = -1078604820}, p2 = {x = 58657919, y = 150793720}}, {p1 = {x = 8331126, y = 8331115}, p2 = {x = 8331438, y = 8331446}}, {p1 = {x = 4, y = -1078604820}, p2 = {x = 7, y = -1}}, {p1 = {x = 1, y = -1078604832}, p2 = {x = -1078604832, y = 0}}, {p1 = {x = 0, y = 0}, p2 = {x = 2, y = 151909380}}, {p1 = {x = 151183616, y = 0}, p2 = {x = 2, y = 151956616}}, {p1 = {x = 24, y = 24}, p2 = {x = 96, y = 4}}, {p1 = {x = 1, y = 151653696}, p2 = {x = 42, y = 42}}, {p1 = {x = 168, y = 17201470}, p2 = {x = 1, y = 0}}, {p1 = {x = 0, y = -1078604712}, p2 = {x = 9627631, y = 151362544}}, {p1 = {x = -1078604656, y = 0}, p2 = {x = 150528, y = 0}}, {p1 = {x = 151337528, y = -1078604616}, p2 = {x = 9568010, y = 151362544}}, {p1 = {x = -1078604656, y = -1078604664}, p2 = {x = 9627631, y = 151362544}}}
+        clip_boxes = 0xbfb5ca74
+        boxes = {status = CAIRO_STATUS_SUCCESS, limit = {p1 = {x = 2, y = 0}, p2 = {x = 1984425, y = 1}}, limits = 0xe73377, num_limits = 0, num_boxes = 1, is_pixel_aligned = 1, chunks = {next = 0x0, base = 0xbfb5ca74, count = 1, size = 1}, tail = 0xbfb5c860, boxes_embedded = {{p1 = {x = 15151991, y = 6240}, p2 = {x = 13365236, y = 1984656}}, {p1 = {x = 151909576, y = -1078605624}, p2 = {x = 1991745, y = 1937396}}, {p1 = {x = 151297424, y = -1078605640}, p2 = {x = 1928421, y = 2}}, {p1 = {x = 0, y = 1984425}, p2 = {x = 12926692, y = 15151991}}, {p1 = {x = 15151991, y = 17201470}, p2 = {x = 12902775, y = 150410600}}, {p1 = {x = 13365236, y = -1078605560}, p2 = {x = 12710898, y = 15151991}}, {p1 = {x = 18171000, y = -1078605576}, p2 = {x = 1928421, y = 1153}}, {p1 = {x = 9240, y = 109}, p2 = {x = 18021474, y = 18021503}}, {p1 = {x = 18022230, y = 18035440}, p2 = {x = 18170860, y = 18170860}}, {p1 = {x = 18170816, y = 0}, p2 = {x = 18021831, y = 18170864}}, {p1 = {x = 16, y = 18165748}, p2 = {x = 151958920, y = 240248}}, {p1 = {x = -1078605440, y = 17198317}, p2 = {x = 17211187, y = 8}}, {p1 = {x = 151034560, y = -1078605480}, p2 = {x = 8296475, y = 43}}, {p1 = {x = 1, y = -1078605384}, p2 = {x = 15136476, y = 151958916}}, {p1 = {x = 23, y = 4}, p2 = {x = 1, y = 1}}, {p1 = {x = 0, y = 9225}, p2 = {x = 8351732, y = 1}}, {p1 = {x = 3, y = -1078604936}, p2 = {x = 8301399, y = 2}}, {p1 = {x = -1078604200, y = 12}, p2 = {x = 164, y = 13365236}}, {p1 = {x = 151958928, y = -1078605384}, p2 = {x = 12809350, y = 151958928}}, {p1 = {x = 0, y = -1078605332}, p2 = {x = 172, y = -1078604960}}, {p1 = {x = 8331126, y = 8331115}, p2 = {x = 8331438, y = 8331446}}, {p1 = {x = 2, y = -1078605332}, p2 = {x = 3, y = -1}}, {p1 = {x = 1, y = -1078605344}, p2 = {x = -1078605344, y = 0}}, {p1 = {x = 1, y = 0}, p2 = {x = 2, y = 2}}, {p1 = {x = 15135024, y = 0}, p2 = {x = 24, y = 0}}, {p1 = {x = 151032456, y = 151032400}, p2 = {x = 151034560, y = -1078605272}}, {p1 = {x = 23, y = 24}, p2 = {x = 576, y = 114688}}, {p1 = {x = 151958928, y = 17196950}, p2 = {x = 151956708, y = 151956620}}, {p1 = {x = 151956712, y = 24}, p2 = {x = 0, y = 0}}, {p1 = {x = 1071794468, y = -1078605064}, p2 = {x = 24, y = 937896}}, {p1 = {x = 150564688, y = 151660584}, p2 = {x = 114688, y = 0}}, {p1 = {x = 0, y = 18171000}, p2 = {x = 144, y = 18170816}}}}
+        num_boxes = 1
+        status = <value optimized out>
+        traps = {status = CAIRO_STATUS_SUCCESS, limits = 0x0, num_limits = 0, maybe_region = 1, has_intersections = 0, is_rectilinear = 1, is_rectangular = 1, num_traps = 1, traps_size = 16, traps = 0xbfb5c5bc, traps_embedded = {{top = 0, bottom = 6144, left = {p1 = {x = 150528, y = 0}, p2 = {x = 150528, y = 6144}}, right = {p1 = {x = 156416, y = 0}, p2 = {x = 156416, y = 6144}}}, {top = 1076953088, bottom = 81, left = {p1 = {x = 0, y = 1081417728}, p2 = {x = 0, y = 1076953088}}, right = {p1 = {x = 81, y = 0}, p2 = {x = 1081450496, y = 0}}}, {top = 1076953088, bottom = 72, left = {p1 = {x = 0, y = 1081483264}, p2 = {x = 0, y = 1076953088}}, right = {p1 = {x = 70, y = 0}, p2 = {x = 1081511936, y = 0}}}, {top = 1076953088, bottom = 87, left = {p1 = {x = 0, y = 1081536512}, p2 = {x = 0, y = 1076953088}}, right = {p1 = {x = 76, y = 0}, p2 = {x = 1081556992, y = 0}}}, {top = 1076953088, bottom = 82, left = {p1 = {x = 0, y = 1081573376}, p2 = {x = 0, y = 1076953088}}, right = {p1 = {x = 81, y = 0}, p2 = {x = 1081602048, y = 0}}}, {top = 1076953088, bottom = 3, left = {p1 = {x = 0, y = 1081634816}, p2 = {x = 0, y = 1076953088}}, right = {p1 = {x = 46, y = 0}, p2 = {x = 1081651200, y = 0}}}, {top = 1076953088, bottom = 76, left = {p1 = {x = 0, y = 1081683968}, p2 = {x = 0, y = 1076953088}}, right = {p1 = {x = 87, y = 0}, p2 = {x = 1081700352, y = 0}}}, {top = 1076953088, bottom = 7187469, left = {p1 = {x = 7331828, y = 1984656}, p2 = {x = 1, y = -1078605784}}, right = {p1 = {x = 7210285, y = 7332868}, p2 = {x = 80, y = -1078606024}}}, {top = 12710776, bottom = 151909736, left = {p1 = {x = 13365245, y = 1}, p2 = {x = 16, y = -1078606060}}, right = {p1 = {x = 256, y = 150411408}, p2 = {x = 151909736, y = 256}}}, {top = 163840, bottom = 512, left = {p1 = {x = 7331828, y = 1}, p2 = {x = 1, y = -1078605928}}, right = {p1 = {x = 7187496, y = 150411408}, p2 = {x = 151909736, y = 731}}}, {top = 7246913, bottom = 987, left = {p1 = {x = 164315, y = -1078605928}, p2 = {x = 12710776, y = 151909568}}, right = {p1 = {x = 805, y = 987}, p2 = {x = 8351732, y = 1}}}, {top = 3, bottom = 1984425, left = {p1 = {x = 151909568, y = 4}, p2 = {x = -1078604200, y = 7187469}}, right = {p1 = {x = 7331828, y = 1}, p2 = {x = 1, y = -1078605832}}}, {top = 7187496, bottom = 150411408, left = {p1 = {x = 151909568, y = -1078605880}, p2 = {x = 7246913, y = 2}}, right = {p1 = {x = 13365236, y = -1078605784}, p2 = {x = 12899306, y = 150410600}}}, {top = 13365236, bottom = -1078605768, left = {p1 = {x = 12899306, y = 1}, p2 = {x = 1, y = 1984425}}, right = {p1 = {x = 0, y = 0}, p2 = {x = 1, y = 7187469}}}, {top = 7331828, bottom = 1984656, left = {p1 = {x = 1, y = -1078605512}, p2 = {x = 7210285, y = 7332868}}, right = {p1 = {x = 80, y = -1078605784}, p2 = {x = 1928421, y = 2}}}, {top = 13365236, bottom = -1078605688, left = {p1 = {x = 12899306, y = 150410600}, p2 = {x = 13365236, y = -1078605672}}, right = {p1 = {x = 12899306, y = 150410600}, p2 = {x = 151297480, y = -1078605736}}}}}
+        __PRETTY_FUNCTION__ = "_cairo_surface_fallback_paint"
+#18 0x0093172d in _cairo_surface_paint (surface=0x90db368, op=CAIRO_OPERATOR_OVER, source=0xbfb5cd48, clip=0xbfb5ce28) at /build/buildd/cairo-1.10.0/src/cairo-surface.c:2027
+        status = CAIRO_STATUS_SUCCESS
+#19 0x00906544 in _cairo_gstate_paint (gstate=0x994e28) at /build/buildd/cairo-1.10.0/src/cairo-gstate.c:1049
+        source_pattern = {type = CAIRO_PATTERN_TYPE_SURFACE, base = {type = CAIRO_PATTERN_TYPE_SURFACE, ref_count = {ref_count = 0}, status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, num_elements = 0, element_size = 12, elements = 0x0, is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, x0 = -587, y0 = -0}, filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_NONE, has_component_alpha = 0}, solid = {base = {type = CAIRO_PATTERN_TYPE_SURFACE, ref_count = {ref_count = 0}, status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, num_elements = 0, element_size = 12, elements = 0x0, is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, x0 = -587, y0 = -0}, filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_NONE, has_component_alpha = 0}, color = {red = 7.4783033057534097e-316, green = 4.7607869193875012e-317, blue = 4.7619270194753226e-265, alpha = 1.2349078441240885e-306, red_short = 46472, green_short = 2318, blue_short = 52840, alpha_short = 49077}}, surface = {base = {type = CAIRO_PATTERN_TYPE_SURFACE, ref_count = {ref_count = 0}, status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, num_elements = 0, element_size = 12, elements = 0x0, is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, x0 = -587, y0 = -0}, filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_NONE, has_component_alpha = 0}, surface = 0x9059bf0}, gradient = {base = {base = {type = CAIRO_PATTERN_TYPE_SURFACE, ref_count = {ref_count = 0}, status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, num_elements = 0, element_size = 12, elements = 0x0, is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, x0 = -587, y0 = -0}, filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_NONE, has_component_alpha = 0}, n_stops = 151362544, stops_size = 0, stops = 0x930864, stops_embedded = {{offset = 1.2367901381540773e-306, color = {red = 1.234907867032519e-306, green = 4.7619080906388168e-265, blue = 8.7779513346141045e-307, alpha = 3.350820308979705e-265, red_short = 0, green_short = 0, blue_short = 22528, alpha_short = 16514}}, {offset = 0, color = {red = 5.3049894786483449e-313, green = -0.08520483984585081, blue = 1.5890944865700403e-314, alpha = 0, red_short = 39321, green_short = 16313, blue_short = 52828, alpha_short = 49077}}}}, linear = {base = {base = {type = CAIRO_PATTERN_TYPE_SURFACE, ref_count = {ref_count = 0}, status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, num_elements = 0, element_size = 12, elements = 0x0, is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, x0 = -587, y0 = -0}, filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_NONE, has_component_alpha = 0}, n_stops = 151362544, stops_size = 0, stops = 0x930864, stops_embedded = {{offset = 1.2367901381540773e-306, color = {red = 1.234907867032519e-306, green = 4.7619080906388168e-265, blue = 8.7779513346141045e-307, alpha = 3.350820308979705e-265, red_short = 0, green_short = 0, blue_short = 22528, alpha_short = 16514}}, {offset = 0, color = {red = 5.3049894786483449e-313, green = -0.08520483984585081, blue = 1.5890944865700403e-314, alpha = 0, red_short = 39321, green_short = 16313, blue_short = 52828, alpha_short = 49077}}}}, p1 = {x = 0, y = 1082284032}, p2 = {x = -1078604216, y = 8351732}}, radial = {base = {base = {type = CAIRO_PATTERN_TYPE_SURFACE, ref_count = {ref_count = 0}, status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, num_elements = 0, element_size = 12, elements = 0x0, is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, x0 = -587, y0 = -0}, filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_NONE, has_component_alpha = 0}, n_stops = 151362544, stops_size = 0, stops = 0x930864, stops_embedded = {{offset = 1.2367901381540773e-306, color = {red = 1.234907867032519e-306, green = 4.7619080906388168e-265, blue = 8.7779513346141045e-307, alpha = 3.350820308979705e-265, red_short = 0, green_short = 0, blue_short = 22528, alpha_short = 16514}}, {offset = 0, color = {red = 5.3049894786483449e-313, green = -0.08520483984585081, blue = 1.5890944865700403e-314, alpha = 0, red_short = 39321, green_short = 16313, blue_short = 52828, alpha_short = 49077}}}}, c1 = {x = 0, y = 1082284032}, r1 = -1078604216, c2 = {x = 8351732, y = 151447040}, r2 = -1078603780}}}
+        pattern = 0x1860
+        clip = {path = 0x90e2400, all_clipped = 0}
+        status = <value optimized out>
+        op = <value optimized out>
+#20 0x008fca8c in cairo_paint (cr=0x994e08) at /build/buildd/cairo-1.10.0/src/cairo.c:2227
+        status = <value optimized out>
+#21 0x007ef4e7 in ?? () from /usr/lib/libmetacity-private.so.0
+No symbol table info available.
+#22 0x007f038a in meta_draw_op_list_draw_with_style () from /usr/lib/libmetacity-private.so.0
+No symbol table info available.
+#23 0x007ef59f in ?? () from /usr/lib/libmetacity-private.so.0
+No symbol table info available.
+#24 0x007f038a in meta_draw_op_list_draw_with_style () from /usr/lib/libmetacity-private.so.0
+No symbol table info available.
+#25 0x007f0a35 in meta_frame_style_draw_with_style () from /usr/lib/libmetacity-private.so.0
+No symbol table info available.
+#26 0x007f0f1f in meta_theme_draw_frame_with_style () from /usr/lib/libmetacity-private.so.0
+No symbol table info available.
+#27 0x007f0ff3 in meta_theme_draw_frame () from /usr/lib/libmetacity-private.so.0
+No symbol table info available.
+#28 0x080546a8 in ?? ()
+No symbol table info available.
+#29 0x0804de1b in ?? ()
+No symbol table info available.
+#30 0x00c2c841 in g_idle_dispatch (source=0x9046578, callback=0, user_data=0x0) at /build/buildd/glib2.0-2.26.0/glib/gmain.c:4254
+No locals.
+#31 0x00c2e855 in g_main_dispatch (context=0x8f97c38) at /build/buildd/glib2.0-2.26.0/glib/gmain.c:2149
+        dispatch = 0xc2c820 <g_idle_dispatch>
+        user_data = 0x0
+        callback = 0x804ddf0
+        cb_funcs = 0xcbf33c
+        cb_data = 0x8f8ea00
+        current_source_link = {data = 0x9046578, next = 0x0}
+        source = 0xbfb5e838
+        current = 0x9008c80
+        i = 0
+#32 g_main_context_dispatch (context=0x8f97c38) at /build/buildd/glib2.0-2.26.0/glib/gmain.c:2702
+No locals.
+#33 0x00c32668 in g_main_context_iterate (context=0x8f97c38, block=<value optimized out>, dispatch=1, self=0x8f70c80) at /build/buildd/glib2.0-2.26.0/glib/gmain.c:2780
+        max_priority = 200
+        timeout = 0
+        some_ready = 1
+        nfds = <value optimized out>
+        allocated_nfds = <value optimized out>
+        fds = <value optimized out>
+        __PRETTY_FUNCTION__ = "g_main_context_iterate"
+#34 0x00c32ba7 in g_main_loop_run (loop=0x905f618) at /build/buildd/glib2.0-2.26.0/glib/gmain.c:2988
+        self = 0x8f70c80
+        __PRETTY_FUNCTION__ = "g_main_loop_run"
+#35 0x003851d9 in IA__gtk_main () at /build/buildd/gtk+2.0-2.22.0/gtk/gtkmain.c:1237
+        tmp_list = 0x8f839d0
+        functions = 0x0
+        init = 0x8ffb930
+        loop = 0x905f618
+#36 0x08055ccb in ?? ()
+No symbol table info available.
+#37 0x0100fce7 in __libc_start_main (main=0x8055410, argc=1, ubp_av=0xbfb5ebe4, init=0x8058620, fini=0x8058610, rtld_fini=0x246ac0 <_dl_fini>, stack_end=0xbfb5ebdc) at libc-start.c:226
+        result = <value optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {18165748, 0, 0, -1078596680, -2085083495, -375914524}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x1, 0x804cae0}, data = {prev = 0x0, cleanup = 0x0, canceltype = 1}}}
+        not_first_call = <value optimized out>
+#38 0x0804cb01 in ?? ()
+No symbol table info available.

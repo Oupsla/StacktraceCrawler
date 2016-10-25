@@ -1,0 +1,128 @@
+#0  IA__g_logv (log_domain=<value optimized out>, log_level=G_LOG_LEVEL_ERROR, 
+    format=0x1acff3 "%s", args1=0xbf8f0bfc "\30\37\311\n\3")
+    at /build/buildd/glib2.0-2.21.6/glib/gmessages.c:512
+        depth = 0
+        domain = <value optimized out>
+        data = 0x0
+        log_func = 0x8080cd0 <g_themed_icon_append_name@plt+85452>
+        domain_fatal_mask = 5
+        test_level = G_LOG_FLAG_FATAL
+        was_recursion = 0
+        i = <value optimized out>
+#1  0x00523f96 in IA__g_log (log_domain=0x18f4eb "Gdk", 
+    log_level=G_LOG_LEVEL_ERROR, format=0x1acff3 "%s")
+    at /build/buildd/glib2.0-2.21.6/glib/gmessages.c:526
+No locals.
+#2  0x00178921 in gdk_x_error (display=0x971f130, error=0xbf8f0ccc)
+    at /build/buildd/gtk+2.0-2.17.10/gdk/x11/gdkmain-x11.c:466
+        buf = "BadWindow (invalid Window parameter)", '\0' <repeats 27 times>
+#3  0x005f1839 in _XError () from /usr/lib/libX11.so.6
+#4  0x005f7e9f in ?? () from /usr/lib/libX11.so.6
+#5  0x005f8526 in _XReply () from /usr/lib/libX11.so.6
+#6  0x0015a54b in _gdk_x11_get_window_child_info (display=0x972b000, 
+    window=423, get_wm_state=0, win_has_wm_state=0x0, children=0xbf8f100c, 
+    nchildren=0xbf8f1008)
+    at /build/buildd/gtk+2.0-2.17.10/gdk/x11/gdkasync.c:731
+        rep = {type = 200 '\310', depth = 14 '\16', sequenceNumber = 49039, 
+          length = 0, root = 2, x = 0, y = 0, width = 27584, height = 93, 
+          borderWidth = 35422, pad1 = 20, pad2 = 1847284, pad3 = 1450880}
+        dpy = 0x971f130
+        async = {next = 0x0, handler = 0x159af0 <get_child_info_handler>, 
+          data = 0xbf8f0e60 ""}
+        state = {get_wm_state = 0, children = 0xac550e0, nchildren = 157, 
+          child_info = 0xac8d9a0, child_states = 0xac8e860, 
+          current_child = 154, n_children_found = 154, current_request = 2, 
+          have_error = 1, child_has_error = 1}
+        wm_state_atom = <value optimized out>
+        has_wm_state = 0
+        i = 157
+#7  0x00164748 in gdk_window_cache_new (context=0x9993278, 
+    drag_window=0xab6f800, screen=0x97300c8, x_root=525, y_root=543, 
+    dest_window=0xbf8f106c, protocol=0xbf8f1068)
+    at /build/buildd/gtk+2.0-2.17.10/gdk/x11/gdkdnd-x11.c:486
+        xdisplay = 0x971f130
+        root_window = <value optimized out>
+        nchildren = <value optimized out>
+        i = <value optimized out>
+        xwa = {x = 0, y = 0, width = 1280, height = 1024, border_width = 0, 
+          depth = 24, visual = 0x9729418, root = 423, class = 1, 
+          bit_gravity = 0, win_gravity = 1, backing_store = 0, 
+          backing_planes = 4294967295, backing_pixel = 0, save_under = 0, 
+          colormap = 32, map_installed = 1, map_state = 2, 
+          all_event_masks = 8028223, your_event_mask = 4194304, 
+          do_not_propagate_mask = 0, override_redirect = 0, screen = 0x971ef18}
+        children = <value optimized out>
+#8  drag_context_find_window_cache (context=0x9993278, drag_window=0xab6f800, 
+    screen=0x97300c8, x_root=525, y_root=543, dest_window=0xbf8f106c, 
+    protocol=0xbf8f1068)
+    at /build/buildd/gtk+2.0-2.17.10/gdk/x11/gdkdnd-x11.c:3155
+        private = 0x99932b0
+        tmp_list = <value optimized out>
+#9  IA__gdk_drag_find_window_for_screen (context=0x9993278, 
+    drag_window=0xab6f800, screen=0x97300c8, x_root=525, y_root=543, 
+    dest_window=0xbf8f106c, protocol=0xbf8f1068)
+    at /build/buildd/gtk+2.0-2.17.10/gdk/x11/gdkdnd-x11.c:3198
+        window_cache = <value optimized out>
+        display = 0x972b000
+        dest = <value optimized out>
+        __PRETTY_FUNCTION__ = "IA__gdk_drag_find_window_for_screen"
+#10 0x00fdfa40 in gtk_drag_update_idle (data=0xac6e3e0)
+    at /build/buildd/gtk+2.0-2.17.10/gtk/gtkdnd.c:3989
+        dest_window = <value optimized out>
+        protocol = <value optimized out>
+        selection = <value optimized out>
+        action = <value optimized out>
+        possible_actions = <value optimized out>
+        time = 416938313
+#11 0x0012c0d8 in gdk_threads_dispatch (data=0xac64b00)
+    at /build/buildd/gtk+2.0-2.17.10/gdk/gdk.c:506
+        ret = 0
+#12 0x005180d1 in g_idle_dispatch (source=0xac6d1d0, callback=0, 
+    user_data=0xac64b00) at /build/buildd/glib2.0-2.21.6/glib/gmain.c:4065
+No locals.
+#13 0x00519e58 in g_main_dispatch (context=0x9736070)
+    at /build/buildd/glib2.0-2.21.6/glib/gmain.c:1960
+        dispatch = 0x5180b0 <g_idle_dispatch>
+        user_data = 0xac64b00
+        callback = 0x12c070 <gdk_threads_dispatch>
+        cb_funcs = 0x5a531c
+        cb_data = 0xabf3310
+        current_source_link = {data = 0xac6d1d0, next = 0x0}
+        source = 0xac6d1d0
+        current = 0x977f9a8
+        i = 0
+#14 IA__g_main_context_dispatch (context=0x9736070)
+    at /build/buildd/glib2.0-2.21.6/glib/gmain.c:2513
+No locals.
+#15 0x0051d700 in g_main_context_iterate (context=0x9736070, 
+    block=<value optimized out>, dispatch=1, self=0x9703008)
+    at /build/buildd/glib2.0-2.21.6/glib/gmain.c:2591
+        max_priority = 125
+        timeout = 0
+        some_ready = 1
+        nfds = <value optimized out>
+        allocated_nfds = <value optimized out>
+        fds = <value optimized out>
+        __PRETTY_FUNCTION__ = "g_main_context_iterate"
+#16 0x0051db6f in IA__g_main_loop_run (loop=0x99777a0)
+    at /build/buildd/glib2.0-2.21.6/glib/gmain.c:2799
+        self = 0x9703008
+        __PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#17 0x00e7d5e9 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.17.10/gtk/gtkmain.c:1205
+        tmp_list = 0x0
+        functions = 0x0
+        init = 0x1
+        loop = 0x99777a0
+#18 0x08081501 in ?? ()
+#19 0x050e1b56 in __libc_start_main (
+    main=0x8080df0 <g_themed_icon_append_name@plt+85740>, argc=1, 
+    ubp_av=0xbf8f1534, init=0x81a2d70, fini=0x81a2d60, 
+    rtld_fini=0xc9cd30 <_dl_fini>, stack_end=0xbf8f152c) at libc-start.c:220
+        result = <value optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {86110196, 0, 0, 
+                -1081142008, 945202091, 977908958}, mask_was_saved = 0}}, 
+          priv = {pad = {0x0, 0x0, 0x1, 0x806bf20}, data = {prev = 0x0, 
+              cleanup = 0x0, canceltype = 1}}}
+        not_first_call = <value optimized out>
+#20 0x0806bf41 in ?? ()

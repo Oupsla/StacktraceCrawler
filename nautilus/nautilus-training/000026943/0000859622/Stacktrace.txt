@@ -1,0 +1,52 @@
+#0  0x00d2a872 in app_chooser_online_get_default_ready_cb (source=0x96794c8, res=0x94baaf0, user_data=0x8ff4130) at /build/buildd/gtk+3.0-3.1.92/./gtk/gtkappchooserdialog.c:167
+        self = 0x8ff4130
+#1  0x00ad0572 in g_simple_async_result_complete (simple=0x94baaf0) at /build/buildd/glib2.0-2.29.92/./gio/gsimpleasyncresult.c:749
+        current_source = <optimized out>
+        current_context = <optimized out>
+        __PRETTY_FUNCTION__ = "g_simple_async_result_complete"
+#2  0x00fc6ddd in pk_proxy_created_cb (source=0x9433a70, result=0x9758398, user_data=0x96794c8) at /build/buildd/gtk+3.0-3.1.92/./gtk/gtkappchooseronlinepk.c:187
+        self = 0x96794c8
+        proxy = 0x9433a70
+#3  0x00ad0572 in g_simple_async_result_complete (simple=0x9758398) at /build/buildd/glib2.0-2.29.92/./gio/gsimpleasyncresult.c:749
+        current_source = <optimized out>
+        current_context = <optimized out>
+        __PRETTY_FUNCTION__ = "g_simple_async_result_complete"
+#4  0x00ad06ac in complete_in_idle_cb (data=0x9758398) at /build/buildd/glib2.0-2.29.92/./gio/gsimpleasyncresult.c:761
+        simple = <optimized out>
+#5  0x007cb1a0 in g_idle_dispatch (source=0x9926500, callback=0xad0680 <complete_in_idle_cb>, user_data=0x9758398) at /build/buildd/glib2.0-2.29.92/./glib/gmain.c:4801
+No locals.
+#6  0x007cf2ef in g_main_dispatch (context=0x8f32560) at /build/buildd/glib2.0-2.29.92/./glib/gmain.c:2441
+        dispatch = 0x7cb180 <g_idle_dispatch>
+        was_in_call = 0
+        user_data = 0x9758398
+        callback = 0xad0680 <complete_in_idle_cb>
+        cb_funcs = 0x88435c
+        cb_data = 0x96d6840
+        current_source_link = {data = 0x9926500, next = 0x0}
+        need_destroy = <optimized out>
+        source = 0x9926500
+        current = 0x8fbc218
+        i = <optimized out>
+#7  g_main_context_dispatch (context=0x8f32560) at /build/buildd/glib2.0-2.29.92/./glib/gmain.c:3011
+No locals.
+#8  0x007cfa20 in g_main_context_iterate (context=0x8f32560, block=8250352, dispatch=1, self=<optimized out>) at /build/buildd/glib2.0-2.29.92/./glib/gmain.c:3089
+        max_priority = 0
+        timeout = 0
+        some_ready = 1
+        nfds = <optimized out>
+        allocated_nfds = <optimized out>
+        fds = 0x925c238
+#9  0x007d002b in g_main_loop_run (loop=0x8f031f8) at /build/buildd/glib2.0-2.29.92/./glib/gmain.c:3297
+        __PRETTY_FUNCTION__ = "g_main_loop_run"
+#10 0x00e2e5f5 in gtk_main () at /build/buildd/gtk+3.0-3.1.92/./gtk/gtkmain.c:1367
+        loop = 0x8f031f8
+#11 0x00d2c654 in gtk_application_run_mainloop (application=0x8f03c00) at /build/buildd/gtk+3.0-3.1.92/./gtk/gtkapplication.c:115
+No locals.
+#12 0x00b06adc in g_application_run (application=0x8f03c00, argc=2, argv=0xbf9eb594) at /build/buildd/glib2.0-2.29.92/./gio/gapplication.c:1323
+        arguments = 0x8f031f8
+        status = 0
+        i = <optimized out>
+        __PRETTY_FUNCTION__ = "g_application_run"
+#13 0x08067774 in main (argc=2, argv=0xbf9eb594) at nautilus-main.c:102
+        retval = <optimized out>
+        application = 0x8f03c00

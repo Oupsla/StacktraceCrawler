@@ -1,0 +1,57 @@
+#0  0x06194ec4 in ?? ()
+#1  0x00a9e3f3 in IA__g_object_unref (_object=0x9ca7de0)
+    at /build/buildd/glib2.0-2.21.4/gobject/gobject.c:2421
+	object = (GObject *) 0x9ca7de0
+	old_ref = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_object_unref"
+#2  0x0814508d in free_module_objects () at nautilus-module.c:216
+	l = <value optimized out>
+	next = (GList *) 0x9d4e430
+#3  0x0816c4fc in eel_debug_shut_down () at eel-debug.c:109
+	f = (ShutdownFunction *) 0x9cda978
+#4  0x08081363 in main (argc=1, argv=0xbf8d4494) at nautilus-main.c:558
+	kill_shell = 0
+	no_default_window = 1
+	browser_window = 0
+	no_desktop = 0
+	version = 0
+	autostart_mode = 1
+	autostart_id = <value optimized out>
+	geometry = (gchar *) 0x0
+	remaining = (const gchar **) 0x0
+	perform_self_check = 0
+	application = (NautilusApplication *) 0x9cfbdb8
+	context = (GOptionContext *) 0x0
+	file = (GFile *) 0x1
+	uri = <value optimized out>
+	uris = (char **) 0x0
+	uris_array = <value optimized out>
+	error = (GError *) 0x0
+	options = {{long_name = 0x81a5c39 "check", short_name = 99 'c', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbf8d43d0, 
+    description = 0x81a5c7c "Perform a quick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x81a5b6f "version", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbf8d43dc, 
+    description = 0x81a5ca8 "Show the version of the program.", 
+    arg_description = 0x0}, {long_name = 0x81a970f "geometry", 
+    short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+    arg_data = 0xbf8d43d8, 
+    description = 0x81a5ccc "Create the initial window with the given geometry.", arg_description = 0x81a5b77 "GEOMETRY"}, {
+    long_name = 0x81a5b80 "no-default-window", short_name = 110 'n', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbf8d43e8, 
+    description = 0x81a5d00 "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {long_name = 0x81a5b92 "no-desktop", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbf8d43e0, 
+    description = 0x81a5d34 "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {
+    long_name = 0x81a28b1 "browser", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbf8d43e4, 
+    description = 0x81a5b9d "open a browser window.", arg_description = 0x0}, 
+  {long_name = 0x81c4efd "quit", short_name = 113 'q', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbf8d43ec, 
+    description = 0x81a5bb4 "Quit Nautilus.", arg_description = 0x0}, {
+    long_name = 0x81aa941 "", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0xbf8d43d4, 
+    description = 0x0, arg_description = 0x81a5bc3 "[URI...]"}, {
+    long_name = 0x0, short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x0, description = 0x0, arg_description = 0x0}}

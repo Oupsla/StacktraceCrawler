@@ -1,0 +1,11 @@
+#0  0xb76d9d4f in g_drive_eject_finish () from /usr/lib/libgio-2.0.so.0
+#1  0xb69a0377 in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+#2  0xb73b1520 in ?? () from /lib/tls/i686/cmov/libpthread.so.0
+#3  0x087b7fb0 in ?? ()
+#4  0xbfac6c28 in ?? ()
+#5  0xb7724b80 in ?? () from /usr/lib/libgio-2.0.so.0
+#6  0x081e10d8 in ?? ()
+#7  0x081e1010 in ?? ()
+#8  0xbfac6c08 in ?? ()
+#9  0xb76f222e in g_mount_eject_finish () from /usr/lib/libgio-2.0.so.0
+Backtrace stopped: frame did not save the PC

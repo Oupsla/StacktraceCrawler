@@ -1,0 +1,514 @@
+#0  0x006b1422 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x03648601 in raise () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#2  0x0364ba62 in abort () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#3  0x03641768 in __assert_fail () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#4  0x00ab8c29 in _XAllocID () from /usr/lib/libX11.so.6
+No symbol table info available.
+#5  0x00a8e1a8 in XCreatePixmap () from /usr/lib/libX11.so.6
+No symbol table info available.
+#6  0x00796fe9 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#7  0x0079befc in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#8  0x007806cb in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#9  0x0077680c in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#10 0x00777cae in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#11 0x0079b844 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#12 0x00780416 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#13 0x00782c4a in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#14 0x007832f9 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#15 0x0077fb33 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#16 0x007668ea in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#17 0x00760103 in cairo_paint () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#18 0x007601da in cairo_paint_with_alpha () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#19 0x0175cc03 in WebCore::BitmapImage::draw (this=0xa44d768, 
+    context=0xbf8efda0, dst=..., src=..., 
+    styleColorSpace=WebCore::DeviceColorSpace, 
+    op=WebCore::CompositeSourceOver)
+    at ../WebCore/platform/graphics/cairo/ImageCairo.cpp:165
+        cr = 0xa44d768
+        scaleY = -0
+        matrix = {xx = 1, yx = 0, xy = 0, yy = 1, x0 = 0, y0 = 20}
+        shadowSize = {m_width = 0, m_height = 0}
+        shadowBlur = 0
+        shadowColor = {<WTF::FastAllocBase> = {<No data fields>}, 
+          static black = 4278190080, static white = 4294967295, 
+          static darkGray = 4286611584, static gray = 4288716960, 
+          static lightGray = 4290822336, static transparent = 0, m_color = 0, 
+          m_valid = false}
+        dstRect = {m_location = {m_x = 60, m_y = 3114}, m_size = {
+            m_width = 455, m_height = 10}}
+        image = 0xa439e20
+        pattern = 0xa439e20
+        scaleX = -71
+#20 0x014c8df5 in WebCore::Image::drawTiled (this=0xb04e5180, 
+    ctxt=0xbf8efda0, destRect=..., srcPoint=..., scaledTileSize=..., 
+    styleColorSpace=WebCore::DeviceColorSpace, 
+    op=WebCore::CompositeSourceOver)
+    at ../WebCore/platform/graphics/Image.cpp:135
+        visibleSrcRect = {m_location = {m_x = 0, m_y = 20}, m_size = {
+            m_width = 455, m_height = 10}}
+        patternTransform = {<WTF::FastAllocBase> = {<No data fields>}, 
+          m_transform = {-0.015132193856297216, 0, 0, 1, 0, 
+            1.4410952824578297e-314}}
+        tileRect = {m_location = {m_x = 0, m_y = 0}, m_size = {
+            m_width = 3007, m_height = 3.73329425e-38}}
+        intrinsicTileSize = {m_width = 3007, m_height = 30}
+        oneTileRect = {m_location = {m_x = 60, m_y = 3094}, m_size = {
+            m_width = 3007, m_height = 30}}
+#21 0x014c5459 in WebCore::GraphicsContext::drawTiledImage (this=0xbf8efda0, 
+    image=0xb04e5180, styleColorSpace=WebCore::DeviceColorSpace, rect=..., 
+    srcPoint=..., tileSize=..., op=WebCore::CompositeSourceOver, 
+    useLowQualityScale=false)
+    at ../WebCore/platform/graphics/GraphicsContext.cpp:422
+No locals.
+#22 0x0154ccc2 in WebCore::RenderBoxModelObject::paintFillLayerExtended (
+    this=0xb0521220, paintInfo=..., c=..., bgLayer=0xaddafa6c, tx=60, 
+    ty=3114, w=455, h=10, box=0x0, op=WebCore::CompositeSourceOver, 
+    backgroundObject=0xb0521220)
+    at ../WebCore/rendering/RenderBoxModelObject.cpp:610
+        compositeOp = WebCore::CompositeSourceOver
+        clientForBackgroundImage = <value optimized out>
+        image = 0xb04e5180
+        useLowQualityScaling = <value optimized out>
+        destRect = {m_location = {m_x = 60, m_y = 3114}, m_size = {
+            m_width = 455, m_height = 10}}
+        phase = {m_x = 0, m_y = 20}
+        tileSize = {m_width = 3007, m_height = 30}
+        includeRightEdge = <value optimized out>
+        pLeft = 0
+        bg = <value optimized out>
+        includeLeftEdge = 108
+        bLeft = 0
+        bRight = 0
+        shouldPaintBackgroundImage = 108
+        bgColor = {<WTF::FastAllocBase> = {<No data fields>}, 
+          static black = 4278190080, static white = 4294967295, 
+          static darkGray = 4286611584, static gray = 4288716960, 
+          static lightGray = 4290822336, static transparent = 0, m_color = 0, 
+          m_valid = false}
+        context = 0xbf8efda0
+        pRight = <value optimized out>
+        clippedToBorderRadius = false
+        clippedWithLocalScrolling = false
+        isOpaqueRoot = <value optimized out>
+#23 0x015410f4 in WebCore::RenderBox::paintFillLayer (this=0xb0521220, 
+    paintInfo=..., c=..., fillLayer=0xaddafa6c, tx=60, ty=3114, width=455, 
+    height=10, op=WebCore::CompositeSourceOver, backgroundObject=0xb0521220)
+    at ../WebCore/rendering/RenderBox.cpp:753
+No locals.
+#24 0x015a12e9 in WebCore::RenderTableCell::paintBackgroundsBehindCell (
+    this=0xb0521220, paintInfo=..., tx=60, ty=3114, 
+    backgroundObject=0xb0521220)
+    at ../WebCore/rendering/RenderTableCell.cpp:827
+        w = 455
+        c = {<WTF::FastAllocBase> = {<No data fields>}, 
+          static black = 4278190080, static white = 4294967295, 
+          static darkGray = 4286611584, static gray = 4288716960, 
+          static lightGray = 4290822336, static transparent = 0, m_color = 0, 
+          m_valid = false}
+        tableElt = 0xb05d5e84
+        h = 10
+        bgLayer = 0xa38
+#25 0x015a150e in WebCore::RenderTableCell::paintBoxDecorations (
+    this=0xb0521220, paintInfo=..., tx=60, ty=3114)
+    at ../WebCore/rendering/RenderTableCell.cpp:849
+        tableElt = 0xb05d5e84
+        w = 455
+        h = 10
+#26 0x0152dff7 in WebCore::RenderBlock::paintObject (this=0xb0521220, 
+    paintInfo=..., tx=60, ty=3114)
+    at ../WebCore/rendering/RenderBlock.cpp:1711
+        paintPhase = WebCore::PaintPhaseChildBlockBackground
+        scrolledX = -1081152600
+        scrolledY = 22286580
+#27 0x01528207 in WebCore::RenderBlock::paint (this=0xb0521220, 
+    paintInfo=..., tx=60, ty=3114)
+    at ../WebCore/rendering/RenderBlock.cpp:1531
+        phase = WebCore::PaintPhaseChildBlockBackground
+        pushedClip = <value optimized out>
+#28 0x015a41a0 in WebCore::RenderTableCell::paint (this=0xb0521220, 
+    paintInfo=..., tx=6, ty=0) at ../WebCore/rendering/RenderTableCell.cpp:644
+No locals.
+#29 0x015a6926 in WebCore::RenderTableSection::paintObject (this=0xb05d5f38, 
+    paintInfo=..., tx=60, ty=3051)
+    at ../WebCore/rendering/RenderTableSection.cpp:1062
+        c = <value optimized out>
+        r = 2
+        totalCols = 2
+        paintPhase = WebCore::PaintPhaseChildBlockBackground
+        w = 0
+        endcol = <value optimized out>
+        x = 0
+        h = 0
+        os = -1336798776
+        startrow = <value optimized out>
+        totalRows = <value optimized out>
+        y = 16
+        endrow = <value optimized out>
+        startcol = <value optimized out>
+#30 0x015a6df8 in WebCore::RenderTableSection::paint (this=0xb05d5f38, 
+    paintInfo=..., tx=60, ty=<value optimized out>)
+    at ../WebCore/rendering/RenderTableSection.cpp:959
+        phase = WebCore::PaintPhaseChildBlockBackground
+        pushedClip = <value optimized out>
+#31 0x0159e568 in WebCore::RenderTable::paintObject (this=0xb05d5e84, 
+    paintInfo=..., tx=60, ty=3051) at ../WebCore/rendering/RenderTable.cpp:461
+        child = 0xb05d5f38
+        paintPhase = WebCore::PaintPhaseChildBlockBackground
+        info = {context = 0xbf8efda0, rect = {m_location = {m_x = 0, 
+              m_y = 3096}, m_size = {m_width = 544, m_height = 366}}, 
+          phase = WebCore::PaintPhaseChildBlockBackground, 
+          forceBlackText = false, paintingRoot = 0x0, outlineObjects = 0x0, 
+          overlapTestRequests = 0x0}
+#32 0x0159d604 in WebCore::RenderTable::paint (this=0xb05d5e84, 
+    paintInfo=..., tx=50, ty=6) at ../WebCore/rendering/RenderTable.cpp:431
+        paintPhase = WebCore::PaintPhaseChildBlockBackground
+        os = 0
+        pushedClip = <value optimized out>
+#33 0x0152843a in WebCore::RenderBlock::paintChildren (this=0xb05d5c2c, 
+    paintInfo=..., tx=50, ty=3051)
+    at ../WebCore/rendering/RenderBlock.cpp:1673
+        child = 0xb05d5e84
+        newPhase = <value optimized out>
+        info = {context = 0xbf8efda0, rect = {m_location = {m_x = 0, 
+              m_y = 3096}, m_size = {m_width = 544, m_height = 366}}, 
+          phase = WebCore::PaintPhaseChildBlockBackground, 
+          forceBlackText = false, paintingRoot = 0x0, outlineObjects = 0x0, 
+          overlapTestRequests = 0x0}
+        isPrinting = false
+#34 0x0152e0f5 in WebCore::RenderBlock::paintObject (this=0xb05d5c2c, 
+    paintInfo=..., tx=50, ty=3051)
+    at ../WebCore/rendering/RenderBlock.cpp:1739
+        paintPhase = WebCore::PaintPhaseChildBlockBackgrounds
+        scrolledX = 50
+        scrolledY = 3051
+#35 0x01528207 in WebCore::RenderBlock::paint (this=0xb05d5c2c, 
+    paintInfo=..., tx=50, ty=3051)
+    at ../WebCore/rendering/RenderBlock.cpp:1531
+        phase = WebCore::PaintPhaseChildBlockBackgrounds
+        pushedClip = <value optimized out>
+#36 0x0157bb57 in WebCore::RenderLayer::paintLayer (this=0xb05d5ca0, 
+    rootLayer=0xaddb51e0, p=0xbf8efda0, paintDirtyRect=..., 
+    paintBehavior=<value optimized out>, paintingRoot=0x0, 
+    overlapTestRequests=0xbf8efb2c, paintFlags=<value optimized out>)
+    at ../WebCore/rendering/RenderLayer.cpp:2314
+        paintInfo = {context = 0xbf8efda0, rect = {m_location = {m_x = 0, 
+              m_y = 3096}, m_size = {m_width = 544, m_height = 366}}, 
+          phase = WebCore::PaintPhaseChildBlockBackgrounds, 
+          forceBlackText = false, paintingRoot = 0x0, outlineObjects = 0x0, 
+          overlapTestRequests = 0x0}
+        haveTransparency = false
+        layerBounds = {m_location = {m_x = 50, m_y = 3051}, m_size = {
+            m_width = 473, m_height = 73}}
+        damageRect = {m_location = {m_x = 0, m_y = 3096}, m_size = {
+            m_width = 544, m_height = 366}}
+        shouldPaint = true
+        localPaintFlags = 0
+        outlineRect = {m_location = {m_x = 0, m_y = 3096}, m_size = {
+            m_width = 544, m_height = 366}}
+        x = <value optimized out>
+        tx = 10
+        paintingRootForRenderer = 0x0
+        clipRectToApply = {m_location = {m_x = 0, m_y = 3096}, m_size = {
+            m_width = 544, m_height = 366}}
+        y = <value optimized out>
+        ty = 3050
+        selectionOnly = false
+#37 0x0157bc81 in WebCore::RenderLayer::paintLayer (this=0xaddb530c, 
+    rootLayer=0xaddb51e0, p=0xbf8efda0, paintDirtyRect=..., paintBehavior=0, 
+    paintingRoot=0x0, overlapTestRequests=0xbf8efb2c, 
+    paintFlags=<value optimized out>)
+    at ../WebCore/rendering/RenderLayer.cpp:2345
+        it = 0xb04f11c0
+        haveTransparency = false
+        layerBounds = {m_location = {m_x = 0, m_y = 0}, m_size = {
+            m_width = 544, m_height = 3462}}
+        damageRect = {m_location = {m_x = 0, m_y = 3096}, m_size = {
+            m_width = 544, m_height = 366}}
+        shouldPaint = <value optimized out>
+        localPaintFlags = 0
+        outlineRect = {m_location = {m_x = 0, m_y = 3096}, m_size = {
+            m_width = 544, m_height = 366}}
+        x = <value optimized out>
+        tx = 0
+        paintingRootForRenderer = 0x0
+        clipRectToApply = {m_location = {m_x = 0, m_y = 3096}, m_size = {
+            m_width = 544, m_height = 366}}
+        y = <value optimized out>
+        ty = 0
+        selectionOnly = false
+#38 0x0157bc81 in WebCore::RenderLayer::paintLayer (this=0xaddb51e0, 
+    rootLayer=0xaddb51e0, p=0xbf8efda0, paintDirtyRect=..., paintBehavior=0, 
+    paintingRoot=0x0, overlapTestRequests=0xbf8efb2c, 
+    paintFlags=<value optimized out>)
+    at ../WebCore/rendering/RenderLayer.cpp:2345
+        it = 0xb05c0444
+        haveTransparency = false
+        layerBounds = {m_location = {m_x = 0, m_y = 0}, m_size = {
+            m_width = 544, m_height = 3462}}
+        damageRect = {m_location = {m_x = 0, m_y = 3096}, m_size = {
+            m_width = 544, m_height = 366}}
+        shouldPaint = <value optimized out>
+        localPaintFlags = 0
+        outlineRect = {m_location = {m_x = 0, m_y = 3096}, m_size = {
+            m_width = 544, m_height = 366}}
+        x = <value optimized out>
+        tx = 0
+        paintingRootForRenderer = 0x0
+        clipRectToApply = {m_location = {m_x = 0, m_y = 3096}, m_size = {
+            m_width = 544, m_height = 366}}
+        y = <value optimized out>
+        ty = 0
+        selectionOnly = false
+#39 0x0157c4c1 in WebCore::RenderLayer::paint (this=0xaddb51e0, p=0xbf8efda0, 
+    damageRect=..., paintBehavior=0, paintingRoot=0x0)
+    at ../WebCore/rendering/RenderLayer.cpp:2124
+        overlapTestRequests = {<WTF::FastAllocBase> = {<No data fields>}, 
+          m_impl = {static m_minTableSize = <optimized out>, 
+            static m_maxLoad = <optimized out>, 
+            static m_minLoad = <optimized out>, m_table = 0x0, 
+            m_tableSize = 0, m_tableSizeMask = 0, m_keyCount = 0, 
+            m_deletedCount = 0}}
+#40 0x014660d7 in WebCore::FrameView::paintContents (this=0xb04e48c0, 
+    p=0xbf8efda0, rect=...) at ../WebCore/page/FrameView.cpp:1751
+        document = 0xb0545800
+        isTopLevelPainter = true
+        contentRenderer = <value optimized out>
+        eltRenderer = 0x6
+        paintBehavior = <value optimized out>
+#41 0x014a924c in WebCore::ScrollView::paint (this=0xb04e48c0, 
+    context=0xbf8efda0, rect=...) at ../WebCore/platform/ScrollView.cpp:790
+        documentDirtyRect = {m_location = {m_x = 0, m_y = 3096}, m_size = {
+            m_width = 544, m_height = 366}}
+#42 0x017be77a in webkit_web_view_expose_event (widget=0x9d77a38, 
+    event=0xbf8f0208) at ../WebKit/gtk/webkit/webkitwebview.cpp:475
+        rect = {m_location = {m_x = 0, m_y = 0}, m_size = {m_width = 544, 
+            m_height = 366}}
+        ctx = {<WTFNoncopyable::Noncopyable> = {<WTF::FastAllocBase> = {<No data fields>}, <No data fields>}, m_common = 0xadec9c30, m_data = 0xaddbf648}
+        rects = {<WTFNoncopyable::Noncopyable> = {<WTF::FastAllocBase> = {<No data fields>}, <No data fields>}, m_ptr = 0x9c5e548}
+        rectCount = 1
+        cr = <value optimized out>
+        priv = 0x9d77a88
+        frame = 0xb0508680
+#43 0x022a9c18 in _gtk_marshal_BOOLEAN__BOXED (closure=0x9b8d940, 
+    return_value=0xbf8eff64, n_param_values=2, param_values=0xa77fcc8, 
+    invocation_hint=0xbf8eff50, marshal_data=0x17be610)
+    at /build/buildd/gtk+2.0-2.19.7/gtk/gtkmarshalers.c:84
+        data1 = 0x9d77a38
+        data2 = 0x9c292b8
+        v_return = <value optimized out>
+        __PRETTY_FUNCTION__ = "_gtk_marshal_BOOLEAN__BOXED"
+#44 0x00667859 in g_type_class_meta_marshal (closure=0x9b8d940, 
+    return_value=0xbf8eff64, n_param_values=2, param_values=0xa77fcc8, 
+    invocation_hint=0xbf8eff50, marshal_data=0xc8)
+    at /build/buildd/glib2.0-2.23.5/gobject/gclosure.c:878
+        callback = <value optimized out>
+#45 0x006691f2 in IA__g_closure_invoke (closure=0x9b8d940, 
+    return_value=0xbf8eff64, n_param_values=2, param_values=0xa77fcc8, 
+    invocation_hint=0xbf8eff50)
+    at /build/buildd/glib2.0-2.23.5/gobject/gclosure.c:767
+        marshal = 0x667810 <g_type_class_meta_marshal>
+        marshal_data = 0xc8
+        __PRETTY_FUNCTION__ = "IA__g_closure_invoke"
+#46 0x00680566 in signal_emit_unlocked_R (node=<value optimized out>, 
+    detail=<value optimized out>, instance=0x9d77a38, 
+    emission_return=0xbf8f00ac, instance_and_params=0xa77fcc8)
+    at /build/buildd/glib2.0-2.23.5/gobject/gsignal.c:3286
+        accumulator = 0x9b8db08
+        emission = {next = 0x0, instance = 0x9d77a38, ihint = {
+            signal_id = 62, detail = 0, run_type = G_SIGNAL_RUN_LAST}, 
+          state = EMISSION_RUN, chain_type = 166532736}
+        class_closure = 0x9b8d940
+        handler_list = 0x0
+        return_accu = <value optimized out>
+        accu = {g_type = 20, data = {{v_int = 0, v_uint = 0, v_long = 0, 
+              v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, 
+              v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, 
+              v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, 
+              v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        signal_id = 62
+        max_sequential_handler_number = 14539
+        return_value_altered = 0
+#47 0x00681e03 in IA__g_signal_emit_valist (instance=0x9d77a38, signal_id=62, 
+    detail=0, 
+    var_args=0xbf8f0110 "<\001\217\277\060\243\301\tx\332\327\tz\367>\002\364oV\002\070z\327\tX\001\217\277\070z\327\t8z\327\t\270\222\302\t\340\001")
+    at /build/buildd/glib2.0-2.23.5/gobject/gsignal.c:2991
+        return_value = {g_type = 20, data = {{v_int = 0, v_uint = 0, 
+              v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, 
+              v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, 
+              v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, 
+              v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        error = <value optimized out>
+        signal_return_type = 20
+        node = 0x9b8dac0
+        i = <value optimized out>
+        n_params = 1
+        __PRETTY_FUNCTION__ = "IA__g_signal_emit_valist"
+#48 0x006826e6 in IA__g_signal_emit (instance=0x9d77a38, signal_id=62, 
+    detail=0) at /build/buildd/glib2.0-2.23.5/gobject/gsignal.c:3038
+No locals.
+#49 0x023ef9e6 in gtk_widget_event_internal (widget=<value optimized out>, 
+    event=0xbf8f0208) at /build/buildd/gtk+2.0-2.19.7/gtk/gtkwidget.c:4951
+        signal_num = <value optimized out>
+        return_val = 0
+#50 0x022a286b in IA__gtk_main_do_event (event=0xbf8f0208)
+    at /build/buildd/gtk+2.0-2.19.7/gtk/gtkmain.c:1572
+        event_widget = 0x9d77a38
+        grab_widget = <value optimized out>
+        window_group = 0x9ce09a0
+        rewritten_event = 0x0
+        tmp_list = <value optimized out>
+        __PRETTY_FUNCTION__ = "IA__gtk_main_do_event"
+#51 0x005f7c0b in _gdk_window_process_updates_recurse (window=0xa77dc98, 
+    expose_region=0x9de9f40)
+    at /build/buildd/gtk+2.0-2.19.7/gdk/gdkwindow.c:5181
+        event = {type = GDK_EXPOSE, any = {type = GDK_EXPOSE, 
+            window = 0xa77dc98, send_event = 0 '\000'}, expose = {
+            type = GDK_EXPOSE, window = 0xa77dc98, send_event = 0 '\000', 
+            area = {x = 0, y = 0, width = 544, height = 366}, 
+            region = 0x9de9f40, count = 0}, no_expose = {type = GDK_EXPOSE, 
+            window = 0xa77dc98, send_event = 0 '\000'}, visibility = {
+            type = GDK_EXPOSE, window = 0xa77dc98, send_event = 0 '\000', 
+            state = GDK_VISIBILITY_UNOBSCURED}, motion = {type = GDK_EXPOSE, 
+            window = 0xa77dc98, send_event = 0 '\000', time = 0, 
+            x = 1.1543657102851081e-311, y = 3.8898989690134861e-261, 
+            axes = 0x0, state = 6187569, is_hint = -8892, device = 0x1, 
+            x_root = 1.2323453970706896e-311, 
+            y_root = 3.8898990442228309e-261}, button = {type = GDK_EXPOSE, 
+            window = 0xa77dc98, send_event = 0 '\000', time = 0, 
+            x = 1.1543657102851081e-311, y = 3.8898989690134861e-261, 
+            axes = 0x0, state = 6187569, button = 175627588, device = 0x1, 
+            x_root = 1.2323453970706896e-311, 
+            y_root = 3.8898990442228309e-261}, scroll = {type = GDK_EXPOSE, 
+            window = 0xa77dc98, send_event = 0 '\000', time = 0, 
+            x = 1.1543657102851081e-311, y = 3.8898989690134861e-261, 
+            state = 0, direction = 6187569, device = 0xa77dd44, 
+            x_root = -0.015141308307647707, 
+            y_root = 7.8497632733119028e-261}, key = {type = GDK_EXPOSE, 
+            window = 0xa77dc98, send_event = 0 '\000', time = 0, state = 0, 
+            keyval = 544, length = 366, string = 0x9de9f40 "\001", 
+            hardware_keycode = 0, group = 0 '\000', is_modifier = 0}, 
+          crossing = {type = GDK_EXPOSE, window = 0xa77dc98, 
+            send_event = 0 '\000', subwindow = 0x0, time = 0, 
+            x = 7.7665045976206138e-312, y = 8.180971372319164e-316, 
+            x_root = 3.104221998772692e-258, y_root = -0.015141308307647707, 
+            mode = 580, detail = 166651328, focus = 165584704, state = 1}, 
+          focus_change = {type = GDK_EXPOSE, window = 0xa77dc98, 
+            send_event = 0 '\000', in = 2628}, configure = {
+            type = GDK_EXPOSE, window = 0xa77dc98, send_event = 0 '\000', 
+            x = 0, y = 0, width = 544, height = 366}, property = {
+            type = GDK_EXPOSE, window = 0xa77dc98, send_event = 0 '\000', 
+            atom = 0x0, time = 0, state = 544}, selection = {
+            type = GDK_EXPOSE, window = 0xa77dc98, send_event = 0 '\000', 
+            selection = 0x0, target = 0x0, property = 0x220, time = 366, 
+            requestor = 165584704}, owner_change = {type = GDK_EXPOSE, 
+            window = 0xa77dc98, send_event = 0 '\000', owner = 0, 
+            reason = GDK_OWNER_CHANGE_NEW_OWNER, selection = 0x220, 
+            time = 366, selection_time = 165584704}, proximity = {
+            type = GDK_EXPOSE, window = 0xa77dc98, send_event = 0 '\000', 
+            time = 0, device = 0x0}, client = {type = GDK_EXPOSE, 
+            window = 0xa77dc98, send_event = 0 '\000', message_type = 0x0, 
+            data_format = 0, data = {
+              b = " \002\000\000n\001\000\000@\237\336\t\000\000\000\000\061j^", s = {544, 0, 366, 0, -24768, 2526, 0, 0, 27185, 94}, l = {544, 366, 
+                165584704, 0, 6187569}}}, dnd = {type = GDK_EXPOSE, 
+            window = 0xa77dc98, send_event = 0 '\000', context = 0x0, 
+            time = 0, x_root = 544, y_root = 0}, window_state = {
+            type = GDK_EXPOSE, window = 0xa77dc98, send_event = 0 '\000', 
+            changed_mask = 0, new_window_state = 0}, setting = {
+            type = GDK_EXPOSE, window = 0xa77dc98, send_event = 0 '\000', 
+            action = GDK_SETTING_ACTION_NEW, name = 0x0}, grab_broken = {
+            type = GDK_EXPOSE, window = 0xa77dc98, send_event = 0 '\000', 
+            keyboard = 0, implicit = 0, grab_window = 0x220}}
+        child = 0xa77dc98
+        child_region = 0x1e0
+        r = {x = 0, y = 437, width = 560, height = 172265712}
+        l = <value optimized out>
+        children = 0x0
+#52 0x005f7bba in _gdk_window_process_updates_recurse (window=0xa77de90, 
+    expose_region=0x9eee5c0)
+    at /build/buildd/gtk+2.0-2.19.7/gdk/gdkwindow.c:5154
+        child = 0xa77dc98
+        child_region = 0x9de9f40
+        r = {x = 10, y = 71, width = 544, height = 366}
+        l = 0x9c4e840
+        children = 0x9e96e70
+#53 0x00627444 in _gdk_windowing_window_process_updates_recurse (
+    window=0xa77de90, region=0x9eee5c0)
+    at /build/buildd/gtk+2.0-2.19.7/gdk/x11/gdkwindow-x11.c:5566
+No locals.
+#54 0x005f4363 in gdk_window_process_updates_internal (window=0xa77de90)
+    at /build/buildd/gtk+2.0-2.19.7/gdk/gdkwindow.c:5340
+        expose_region = 0x9eee5c0
+        save_region = 163599904
+        clip_box = {x = 0, y = 0, width = 580, height = 480}
+#55 0x005f9307 in IA__gdk_window_process_all_updates ()
+    at /build/buildd/gtk+2.0-2.19.7/gdk/gdkwindow.c:5448
+        old_update_windows = 0x9e5b050
+        tmp_list = 0x9f8e480
+        in_process_all_updates = 1
+        got_recursive_update = 0
+#56 0x022099cd in gtk_container_idle_sizer (data=0x0)
+    at /build/buildd/gtk+2.0-2.19.7/gtk/gtkcontainer.c:1353
+No locals.
+#57 0x005d15a8 in gdk_threads_dispatch (data=0x9eefcd0)
+    at /build/buildd/gtk+2.0-2.19.7/gdk/gdk.c:512
+        ret = 0
+#58 0x01f17411 in g_idle_dispatch (source=0x9f95b28, callback=0, 
+    user_data=0x9eefcd0) at /build/buildd/glib2.0-2.23.5/glib/gmain.c:4065
+No locals.
+#59 0x01f19395 in g_main_dispatch (context=0x9c13c30)
+    at /build/buildd/glib2.0-2.23.5/glib/gmain.c:1960
+        dispatch = 0x1f173f0 <g_idle_dispatch>
+        user_data = 0x9eefcd0
+        callback = 0x5d1540 <gdk_threads_dispatch>
+        cb_funcs = 0x1fa333c
+        cb_data = 0x9f57788
+        current_source_link = {data = 0x9f95b28, next = 0x0}
+        source = 0x9f95b28
+        current = 0x9c53db0
+        i = 0
+#60 IA__g_main_context_dispatch (context=0x9c13c30)
+    at /build/buildd/glib2.0-2.23.5/glib/gmain.c:2513
+No locals.
+#61 0x01f1d088 in g_main_context_iterate (context=0x9c13c30, 
+    block=<value optimized out>, dispatch=1, self=0x9b57218)
+    at /build/buildd/glib2.0-2.23.5/glib/gmain.c:2591
+        max_priority = 110
+        timeout = 0
+        some_ready = 1
+        nfds = <value optimized out>
+        allocated_nfds = <value optimized out>
+        fds = <value optimized out>
+        __PRETTY_FUNCTION__ = "g_main_context_iterate"
+#62 0x01f1d5c7 in IA__g_main_loop_run (loop=0x9d7dc28)
+    at /build/buildd/glib2.0-2.23.5/glib/gmain.c:2799
+        self = 0x9b57218
+        __PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#63 0x022a2b19 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.19.7/gtk/gtkmain.c:1219
+        tmp_list = 0x9c48f18
+        functions = 0x0
+        init = 0x9cde590
+        loop = 0x9d7dc28
+#64 0x0808277a in ?? ()
+No symbol table info available.
+#65 0x03634bd6 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#66 0x080668b1 in ?? ()
+No symbol table info available.

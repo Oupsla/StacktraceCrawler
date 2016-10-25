@@ -1,0 +1,56 @@
+#0  0x00007f6b32486d27 in __GI_raise (sig=sig@entry=6) at ../nptl/sysdeps/unix/sysv/linux/raise.c:56
+        resultvar = 0
+        pid = 4500
+        selftid = 4500
+#1  0x00007f6b32488418 in __GI_abort () at abort.c:89
+        save_stage = 2
+        act = {__sigaction_handler = {sa_handler = 0x5055b0, sa_sigaction = 0x5055b0}, sa_mask = {__val = {18824032, 131, 140098452780375, 140733193388037, 0, 4294967296, 140098381638952, 23719600, 131, 140098396415008, 140098452809013, 0, 27178880, 0, 0, 140098385536864}}, sa_flags = -3459152, sa_restorer = 0xffffffffffcb37a0}
+        sigs = {__val = {32, 0 <repeats 15 times>}}
+#2  0x00007f6b32fcfae5 in g_assertion_message () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#3  0x00007f6b32fcfb7a in g_assertion_message_expr () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#4  0x0000000000483c59 in ?? ()
+No symbol table info available.
+#5  0x0000000000483ca4 in ?? ()
+No symbol table info available.
+#6  0x00007f6b332859b4 in ?? () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#7  0x00007f6b33287655 in g_object_new_valist () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#8  0x00007f6b33287991 in g_object_new () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#9  0x0000000000484017 in ?? ()
+No symbol table info available.
+#10 0x000000000047675d in ?? ()
+No symbol table info available.
+#11 0x00007f6b33280245 in g_closure_invoke () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#12 0x00007f6b33291f3c in ?? () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#13 0x00007f6b3329a748 in g_signal_emit_valist () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#14 0x00007f6b3329a9af in g_signal_emit () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#15 0x00000000004638d4 in ?? ()
+No symbol table info available.
+#16 0x0000000000463cf3 in ?? ()
+No symbol table info available.
+#17 0x00000000004a71b3 in ?? ()
+No symbol table info available.
+#18 0x00007f6b32fa9b2d in g_main_context_dispatch () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#19 0x00007f6b32fa9f08 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#20 0x00007f6b32fa9fbc in g_main_context_iteration () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#21 0x00007f6b3356d1bc in g_application_run () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#22 0x000000000042b451 in ?? ()
+No symbol table info available.
+#23 0x00007f6b32471ec5 in __libc_start_main (main=0x42b390, argc=2, argv=0x7ffff2da9588, init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, stack_end=0x7ffff2da9578) at libc-start.c:287
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, 6256287318139120030, 4371594, 140737267799424, 0, 0, -6256298548714362466, -6339756948429428322}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x4f12e0, 0x7ffff2da9588}, data = {prev = 0x0, cleanup = 0x0, canceltype = 5182176}}}
+        not_first_call = <optimized out>
+#24 0x000000000042b4b3 in ?? ()
+No symbol table info available.

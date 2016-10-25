@@ -1,0 +1,38 @@
+#0  0x00007f523aa7ce80 in g_type_check_instance_is_a () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#1  0x00007f523aa593ad in g_object_unref () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#2  0x00007f523bf8e042 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#3  0x00007f523aa59142 in ?? () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#4  0x00007f523aa59452 in g_object_unref () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#5  0x00007f523aa80093 in g_value_unset () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#6  0x00007f523aa731fc in g_signal_emit_valist () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#7  0x00007f523aa73392 in g_signal_emit () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#8  0x00007f523bf8e11d in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#9  0x00007f523bf8ecbd in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#10 0x00007f523bf028a7 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#11 0x00007f523ad05661 in g_simple_async_result_complete () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#12 0x00007f523ad05708 in ?? () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#13 0x00007f523a59985d in g_main_context_dispatch () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#14 0x00007f523a59a058 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#15 0x00007f523a59a592 in g_main_loop_run () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#16 0x00007f523bf51dcd in gtk_main () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#17 0x00007f523ad3248e in g_application_run () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#18 0x00007f523c88303a in main ()
+No symbol table info available.

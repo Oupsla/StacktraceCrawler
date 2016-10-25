@@ -1,0 +1,24 @@
+#0  0x0949f0fc in ?? () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#1  0x094a14b2 in ?? () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#2  0x094a3009 in calloc () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#3  0x003cb33c in g_malloc0 () from /usr/lib/libglib-2.0.so.0
+No symbol table info available.
+#4  0x003e165c in g_slice_alloc () from /usr/lib/libglib-2.0.so.0
+No symbol table info available.
+#5  0x003e29d2 in g_slist_prepend () from /usr/lib/libglib-2.0.so.0
+No symbol table info available.
+#6  0x00def0d7 in ?? () from /usr/lib/libbrasero-media.so.0
+No symbol table info available.
+#7  0x00df19f3 in ?? () from /usr/lib/libbrasero-media.so.0
+No symbol table info available.
+#8  0x00df1d36 in ?? () from /usr/lib/libbrasero-media.so.0
+No symbol table info available.
+#9  0x003ed57f in ?? () from /usr/lib/libglib-2.0.so.0
+No symbol table info available.
+#10 0x0072680e in start_thread () from /lib/tls/i686/cmov/libpthread.so.0
+No symbol table info available.
+#11 0x095007ee in clone () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.

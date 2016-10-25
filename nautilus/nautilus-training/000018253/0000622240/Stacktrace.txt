@@ -1,0 +1,47 @@
+#0  0x00269ea4 in g_object_set () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#1  0x00ca6b1a in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#2  0x0027303c in g_cclosure_marshal_VOID__PARAM ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#3  0x002631b2 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#4  0x0027bde5 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#5  0x0027d45c in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#6  0x0027dbc2 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#7  0x00267b41 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#8  0x00263f3f in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#9  0x00266cbc in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#10 0x00269b36 in g_object_set_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#11 0x00269f06 in g_object_set () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#12 0x0772e286 in ?? () from /usr/lib/gtk-2.0/2.10.0/menuproxies/libappmenu.so
+No symbol table info available.
+#13 0x0772e377 in ?? () from /usr/lib/gtk-2.0/2.10.0/menuproxies/libappmenu.so
+No symbol table info available.
+#14 0x077300bd in ?? () from /usr/lib/gtk-2.0/2.10.0/menuproxies/libappmenu.so
+No symbol table info available.
+#15 0x003ed12c in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#16 0x003ec9b5 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#17 0x003f07c8 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#18 0x003f0d07 in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#19 0x00c8a749 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#20 0x0807f587 in ?? ()
+No symbol table info available.
+#21 0x04fbcce7 in __libc_start_main () from /lib/libc.so.6
+No symbol table info available.
+#22 0x0806a6a1 in ?? ()
+No symbol table info available.

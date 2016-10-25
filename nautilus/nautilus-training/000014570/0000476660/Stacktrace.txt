@@ -1,0 +1,308 @@
+#0  0x00fed422 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x080c24d1 in *__GI_raise (sig=6)
+    at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+	resultvar = <value optimized out>
+	pid = 136151028
+	selftid = 3133
+#2  0x080c5932 in *__GI_abort () at abort.c:92
+	act = {__sigaction_handler = {
+    sa_handler = 0x810882d <*__GI___libc_realloc+221>, 
+    sa_sigaction = 0x810882d <*__GI___libc_realloc+221>}, sa_mask = {__val = {
+      104, 112, 3214939648, 3214939888, 3214939676, 104, 112, 101, 148445896, 
+      136151028, 101, 100, 3214939848, 135232450, 148445904, 101, 3214939888, 
+      148445904, 0, 4222451712, 148445904, 148445904, 148445904, 148445904, 
+      148446004, 148446004, 148445904, 148446004, 0, 0, 0, 0}}, sa_flags = 0, 
+  sa_restorer = 0}
+	sigs = {__val = {32, 0 <repeats 31 times>}}
+#3  0x080bb648 in *__GI___assert_fail (assertion=0x9b7b65 "ret != inval_id", 
+    file=0x9b7b29 "../../src/xcb_io.c", line=378, 
+    function=0x9b7ce4 "_XAllocID") at assert.c:81
+	buf = 0x8d91ad0 "gnome-appearance-properties: ../../src/xcb_io.c:378: _XAllocID: Assertion `ret != inval_id' failed.\n"
+#4  0x00948199 in _XAllocID (dpy=0x8d25e78) at ../../src/xcb_io.c:378
+	ret = 4294967295
+	__PRETTY_FUNCTION__ = "_XAllocID"
+#5  0x00292d97 in XRenderCreatePicture (dpy=0x8d25e78, drawable=46142048, 
+    format=0x8d42900, valuemask=256, attributes=0xbfa017dc)
+    at ../../src/Picture.c:90
+	info = <value optimized out>
+	pid = <value optimized out>
+#6  0x00420c02 in _cairo_xlib_surface_set_attributes (
+    surface=<value optimized out>, attributes=<value optimized out>)
+    at /build/buildd/cairo-1.8.8/src/cairo-xlib-surface.c:844
+	status = <value optimized out>
+#7  0x00423726 in _cairo_xlib_surface_composite (op=CAIRO_OPERATOR_OVER, 
+    src_pattern=0x8de6430, mask_pattern=0x0, abstract_dst=0x8dd5bc0, 
+    src_x=80, src_y=16, mask_x=80, mask_y=16, dst_x=80, dst_y=16, width=9, 
+    height=9) at /build/buildd/cairo-1.8.8/src/cairo-xlib-surface.c:1747
+	src_attr = {matrix = {xx = 1, yx = 0, xy = 0, yy = 1, x0 = 0, 
+    y0 = 0}, extend = CAIRO_EXTEND_NONE, filter = CAIRO_FILTER_NEAREST, 
+  x_offset = -80, y_offset = -16, acquired = 0, extra = 0x3ea6c4}
+	mask_attr = {matrix = {xx = -0.031445883170863581, 
+    yx = 1.5883916090196407e-314, xy = 4.9761777754030882e-266, 
+    yy = 6.0157207594113364e-305, x0 = 5.3049894777096202e-313, 
+    y0 = 3.3951932672736655e-313}, extend = 89, filter = 74, x_offset = 95, 
+  y_offset = 80, acquired = 13440936, extra = 0xcd17a8}
+	src = (cairo_xlib_surface_t *) 0x8d91900
+	mask = (cairo_xlib_surface_t *) 0x0
+	status = 0
+	operation = <value optimized out>
+	itx = <value optimized out>
+	ity = <value optimized out>
+	is_integer_translation = <value optimized out>
+	__PRETTY_FUNCTION__ = "_cairo_xlib_surface_composite"
+#8  0x00408336 in _cairo_surface_composite (op=CAIRO_OPERATOR_OVER, 
+    src=0x8de6430, mask=0x0, dst=0x8dd5bc0, src_x=80, src_y=16, mask_x=80, 
+    mask_y=16, dst_x=80, dst_y=16, width=9, height=9)
+    at /build/buildd/cairo-1.8.8/src/cairo-surface.c:1288
+	status = <value optimized out>
+	__PRETTY_FUNCTION__ = "_cairo_surface_composite"
+#9  0x0040ab2a in _clip_and_composite_trapezoids (src=<value optimized out>, 
+    op=CAIRO_OPERATOR_OVER, dst=0x8dd5bc0, traps=0xbfa01bd4, clip=0x8e27f10, 
+    antialias=CAIRO_ANTIALIAS_NONE)
+    at /build/buildd/cairo-1.8.8/src/cairo-surface-fallback.c:449
+	clip_surface = <value optimized out>
+	status = <value optimized out>
+	trap_region = {rgn = {extents = {x1 = 80, y1 = 16, x2 = 89, y2 = 25}, 
+    data = 0x0}}
+	clear_region = {rgn = {extents = {x1 = 0, y1 = 1076887552, x2 = 0, 
+      y2 = 0}, data = 0x9}}
+	has_trap_region = 1
+	has_clear_region = <value optimized out>
+	extents = {x = 80, y = 16, width = 9, height = 9}
+	traps_info = {traps = 0x19, antialias = CAIRO_ANTIALIAS_DEFAULT}
+#10 0x0040b1d9 in _cairo_surface_fallback_paint (surface=0x8dd5bc0, 
+    op=CAIRO_OPERATOR_OVER, source=0x8de6430)
+    at /build/buildd/cairo-1.8.8/src/cairo-surface-fallback.c:705
+	status = <value optimized out>
+	extents = {x = 80, y = 16, width = 9, height = 9}
+	box = {p1 = {x = 20480, y = 4096}, p2 = {x = 22784, y = 6400}}
+	traps = {status = CAIRO_STATUS_SUCCESS, extents = {p1 = {x = 20480, 
+      y = 4096}, p2 = {x = 22784, y = 6400}}, num_traps = 1, traps_size = 1, 
+  traps = 0xbfa01bf4, traps_embedded = {{top = 4096, bottom = 6400, left = {
+        p1 = {x = 20480, y = 4096}, p2 = {x = 20480, y = 6400}}, right = {
+        p1 = {x = 22784, y = 4096}, p2 = {x = 22784, y = 6400}}}}, 
+  has_limits = 0, limits = {p1 = {x = 148724716, y = 41}, p2 = {x = 1, 
+      y = 4583412}}}
+#11 0x00407a63 in _cairo_surface_paint (surface=0x8dd5bc0, 
+    op=CAIRO_OPERATOR_OVER, source=0xbfa01ce4)
+    at /build/buildd/cairo-1.8.8/src/cairo-surface.c:1493
+	status = <value optimized out>
+	dev_source = (cairo_pattern_t *) 0x8de6430
+	__PRETTY_FUNCTION__ = "_cairo_surface_paint"
+#12 0x003ee86a in _cairo_gstate_paint (gstate=0x8e27e88)
+    at /build/buildd/cairo-1.8.8/src/cairo-gstate.c:878
+	status = <value optimized out>
+	pattern = {base = {type = CAIRO_PATTERN_TYPE_SURFACE, ref_count = {
+      ref_count = 0}, status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, 
+      num_elements = 0, element_size = 12, elements = 0x0, is_snapshot = 0}, 
+    matrix = {xx = 1, yx = 0, xy = 0, yy = 1, x0 = -80, y0 = -16}, 
+    filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_NONE}, solid = {base = {
+      type = CAIRO_PATTERN_TYPE_SURFACE, ref_count = {ref_count = 0}, 
+      status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, num_elements = 0, 
+        element_size = 12, elements = 0x0, is_snapshot = 0}, matrix = {
+        xx = 1, yx = 0, xy = 0, yy = 1, x0 = -80, y0 = -16}, 
+      filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_NONE}, color = {
+      red = 7.3685657922768354e-316, green = 6.1406607693258801e-305, 
+      blue = 7.6437948257113123e-266, alpha = 7.3685657922768354e-316, 
+      red_short = 0, green_short = 16468, blue_short = 0, alpha_short = 0}, 
+    content = 1076887552}, surface = {base = {
+      type = CAIRO_PATTERN_TYPE_SURFACE, ref_count = {ref_count = 0}, 
+      status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, num_elements = 0, 
+        element_size = 12, elements = 0x0, is_snapshot = 0}, matrix = {
+        xx = 1, yx = 0, xy = 0, yy = 1, x0 = -80, y0 = -16}, 
+      filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_NONE}, 
+    surface = 0x8e3b7b8}, gradient = {base = {base = {
+        type = CAIRO_PATTERN_TYPE_SURFACE, ref_count = {ref_count = 0}, 
+        status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, 
+          num_elements = 0, element_size = 12, elements = 0x0, 
+          is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, 
+          x0 = -80, y0 = -16}, filter = CAIRO_FILTER_GOOD, 
+        extend = CAIRO_EXTEND_NONE}, n_stops = 149141432, stops_size = 0, 
+      stops = 0x8e19c44, stops_embedded = {{offset = 2.9340954684615766e-307, 
+          color = {red = 7.64379502440406e-266, green = 80, blue = 16, 
+            alpha = 6.0878022279573933e-305, red_short = 29644, 
+            green_short = 234, blue_short = 61428, alpha_short = 200}}, {
+          offset = -2.0299997794909552e-41, color = {
+            red = -nan(0xfffff00000000), green = 6.1406606308458873e-305, 
+            blue = -0.031477451324462898, alpha = 5.0992152021811286e-266, 
+            red_short = 0, green_short = 0, blue_short = 1, 
+            alpha_short = 0}}}}, linear = {base = {base = {
+          type = CAIRO_PATTERN_TYPE_SURFACE, ref_count = {ref_count = 0}, 
+          status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, 
+            num_elements = 0, element_size = 12, elements = 0x0, 
+            is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, 
+            x0 = -80, y0 = -16}, filter = CAIRO_FILTER_GOOD, 
+          extend = CAIRO_EXTEND_NONE}, n_stops = 149141432, stops_size = 0, 
+        stops = 0x8e19c44, stops_embedded = {{
+            offset = 2.9340954684615766e-307, color = {
+              red = 7.64379502440406e-266, green = 80, blue = 16, 
+              alpha = 6.0878022279573933e-305, red_short = 29644, 
+              green_short = 234, blue_short = 61428, alpha_short = 200}}, {
+            offset = -2.0299997794909552e-41, color = {
+              red = -nan(0xfffff00000000), green = 6.1406606308458873e-305, 
+              blue = -0.031477451324462898, alpha = 5.0992152021811286e-266, 
+              red_short = 0, green_short = 0, blue_short = 1, 
+              alpha_short = 0}}}}, p1 = {x = 1, y = 0}, p2 = {x = 1, 
+        y = 12942716}}, radial = {base = {base = {
+          type = CAIRO_PATTERN_TYPE_SURFACE, ref_count = {ref_count = 0}, 
+          status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, 
+            num_elements = 0, element_size = 12, elements = 0x0, 
+            is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, 
+            x0 = -80, y0 = -16}, filter = CAIRO_FILTER_GOOD, 
+          extend = CAIRO_EXTEND_NONE}, n_stops = 149141432, stops_size = 0, 
+        stops = 0x8e19c44, stops_embedded = {{
+            offset = 2.9340954684615766e-307, color = {
+              red = 7.64379502440406e-266, green = 80, blue = 16, 
+              alpha = 6.0878022279573933e-305, red_short = 29644, 
+              green_short = 234, blue_short = 61428, alpha_short = 200}}, {
+            offset = -2.0299997794909552e-41, color = {
+              red = -nan(0xfffff00000000), green = 6.1406606308458873e-305, 
+              blue = -0.031477451324462898, alpha = 5.0992152021811286e-266, 
+              red_short = 0, green_short = 0, blue_short = 1, 
+              alpha_short = 0}}}}, c1 = {x = 1, y = 0}, r1 = 1, c2 = {
+        x = 12942716, y = 233836}, r2 = 12935168}}}
+#13 0x003e8093 in *INT_cairo_paint (cr=0x8d48848)
+    at /build/buildd/cairo-1.8.8/src/cairo.c:1947
+	status = <value optimized out>
+#14 0x00c7b5c5 in gtkDrawCheck (style=0x8e0af78, window=0x8d9bf20, 
+    state=GTK_STATE_NORMAL, shadow_type=GTK_SHADOW_IN, area=0xbfa024a8, 
+    widget=0x8dd51e0, detail=0x12d8b45 "checkbutton", x=78, y=14, width=13, 
+    height=13)
+    at /build/buildd/gtk2-engines-qtcurve-0.69.1/style/qtcurve.c:4691
+	pix = (GdkPixbuf *) 0x8de6998
+	pw = <value optimized out>
+	ph = <value optimized out>
+	cr = (cairo_t *) 0x8d48848
+	list = 0
+	ind_state = 0
+	mnu = <value optimized out>
+	doEtch = 1
+	new_colors = {{pixel = 19176015, red = 20960, green = 2269, 
+    blue = 1}, {pixel = 3214941952, red = 0, green = 0, blue = 20964}, {
+    pixel = 1, red = 40107, green = 282, blue = 51140}, {pixel = 3214942156, 
+    red = 7984, green = 49056, blue = 18866}, {pixel = 3214942092, 
+    red = 20960, green = 2269, blue = 29544}, {pixel = 3214941952, 
+    red = 35998, green = 74, blue = 28329}, {pixel = 5386228, red = 7976, 
+    green = 49056, blue = 28911}, {pixel = 0, red = 0, green = 0, blue = 0}, {
+    pixel = 5386228, red = 12276, green = 82, blue = 48928}, {
+    pixel = 3214942040, red = 41086, green = 74, blue = 48928}}
+	btn_colors = <value optimized out>
+#15 0x011a9231 in IA__gtk_paint_check (style=0x8e0af78, window=0x8d9bf20, 
+    state_type=GTK_STATE_NORMAL, shadow_type=GTK_SHADOW_IN, area=0xbfa024a8, 
+    widget=0x8dd51e0, detail=0x12d8b45 "checkbutton", x=78, y=14, width=13, 
+    height=13) at /build/buildd/gtk+2.0-2.18.3/gtk/gtkstyle.c:6169
+	__PRETTY_FUNCTION__ = "IA__gtk_paint_check"
+#16 0x010823b9 in gtk_real_check_button_draw_indicator (
+    check_button=0x8dd51e0, area=0xbfa024a8)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkcheckbutton.c:420
+	child = <value optimized out>
+	state_type = 3133
+	shadow_type = 6
+	x = 78
+	indicator_size = 13
+	indicator_spacing = 2
+	focus_width = 1
+	focus_pad = 1
+	interior_focus = 1
+#17 0x0108268a in gtk_check_button_expose (widget=0x8dd51e0, event=0xbfa0249c)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkcheckbutton.c:340
+No locals.
+#18 0x0112b474 in _gtk_marshal_BOOLEAN__BOXED (closure=0x8d3f260, 
+    return_value=0xbfa02274, n_param_values=2, param_values=0x8d844f0, 
+    invocation_hint=0xbfa02260, marshal_data=0x10824d0)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkmarshalers.c:84
+	data1 = (gpointer) 0x6
+	data2 = <value optimized out>
+	v_return = <value optimized out>
+	__PRETTY_FUNCTION__ = "_gtk_marshal_BOOLEAN__BOXED"
+#19 0x003706f9 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#20 0x00372072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#21 0x0038749e in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#22 0x003889b8 in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#23 0x00388fb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#24 0x0124796e in gtk_widget_event_internal (widget=<value optimized out>, 
+    event=0xbfa0249c) at /build/buildd/gtk+2.0-2.18.3/gtk/gtkwidget.c:4767
+	signal_num = <value optimized out>
+	return_val = 0
+#25 0x08071ffb in fake_expose_widget (widget=0x8dd51e0, pixmap=0x6, area=0x0)
+    at theme-thumbnail.c:113
+	tmp_window = (GdkWindow *) 0x8d373f0
+	event = {type = GDK_EXPOSE, window = 0x8d9bf20, send_event = 0 '\0', 
+  area = {x = 74, y = 6, width = 21, height = 29}, region = 0x0, count = 0}
+#26 0x080725c2 in create_gtk_theme_pixbuf (
+    theme_thumbnail_data=<value optimized out>) at theme-thumbnail.c:418
+	settings = <value optimized out>
+	window = (GtkWidget *) 0x8e33810
+	vbox = (GtkWidget *) 0x8e14f30
+	box = (GtkWidget *) 0x8d9bf20
+	stock_button = (GtkWidget *) 0x8e1f1e8
+	checkbox = (GtkWidget *) 0x8dd51e0
+	radio = (GtkWidget *) 0x8dd5260
+	requisition = {width = 128, height = 41}
+	allocation = {x = 0, y = 0, width = 128, height = 41}
+	visual = (GdkVisual *) 0x0
+	pixmap = (GdkPixmap *) 0x8d9bf20
+	pixbuf = <value optimized out>
+	retval = (GdkPixbuf *) 0x0
+	width = 128
+	height = 41
+	__PRETTY_FUNCTION__ = "create_gtk_theme_pixbuf"
+#27 0x08072c0b in message_from_capplet (source=0x8d8dc50, condition=G_IO_IN, 
+    data=0xbfa02c44) at theme-thumbnail.c:680
+	pixbuf = (GdkPixbuf *) 0x8d8acb8
+	i = <value optimized out>
+	rowstride = 384
+	type = <value optimized out>
+	pixels = <value optimized out>
+	width = <value optimized out>
+	height = <value optimized out>
+	buffer = "gtk\000QtCurve\000\000\000\000Sans 10\000or:#ffffff\nfg_color:#000000\ntooltip_fg_color:#000000\nselected_bg_color:#8ÄÇ8\0009\nselected_fg_color:#ffffff\nÄÇ8\000_color:#1A1A\016îM\000g_color:#EDEô?:\000\030dÓ\b\030dÓ\b\b' ¿Ï@7\000\034dÓ\b+\000\000\000*\000\000\000ô/R\000\000LÝ\b"...
+	status = <value optimized out>
+	bytes_read = 23
+	__PRETTY_FUNCTION__ = "message_from_capplet"
+#28 0x00f0fd5b in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#29 0x00ed8e78 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#30 0x00edc720 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#31 0x00edcb8f in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#32 0x01125419 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkmain.c:1218
+	tmp_list = (GList *) 0x8d8dc50
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0xbfa02d10
+	loop = (GMainLoop *) 0x8d8c5f0
+#33 0x08071e22 in theme_thumbnail_factory_init (argc=1, argv=0xbfa02de4)
+    at theme-thumbnail.c:1201
+	data = {status = 7, type = 0x8d0b190, control_theme_name = 0x8d0b130, 
+  gtk_color_scheme = 0x8d0b280, wm_theme_name = 0x8d0b330, 
+  icon_theme_name = 0x8d0b420, application_font = 0x8d0b480}
+	channel = (GIOChannel *) 0x8d8dc50
+	__PRETTY_FUNCTION__ = "theme_thumbnail_factory_init"
+#34 0x0805ce9a in main (argc=1, argv=0xbfa02de4) at appearance-main.c:42
+	w = <value optimized out>
+	install_filename = (gchar *) 0x0
+	start_page = (gchar *) 0x0
+	wallpaper_files = (gchar **) 0x0
+	option_context = (GOptionContext *) 0x8d0a008
+	option_entries = {{long_name = 0x8075bb8 "install-theme", 
+    short_name = 105 'i', flags = 2, arg = G_OPTION_ARG_FILENAME, 
+    arg_data = 0xbfa02d1c, 
+    description = 0x8075c98 "Specify the filename of a theme to install", 
+    arg_description = 0x8075bc6 "filename"}, {
+    long_name = 0x8075bcf "show-page", short_name = 112 'p', flags = 2, 
+    arg = G_OPTION_ARG_STRING, arg_data = 0xbfa02d18, 
+    description = 0x8075cc4 "Specify the name of the page to show (theme|background|fonts|interface)", arg_description = 0x8075bd4 "page"}, {
+    long_name = 0x8077330 "", short_name = 0 '\0', flags = 2, 
+    arg = G_OPTION_ARG_FILENAME_ARRAY, arg_data = 0xbfa02d14, 
+    description = 0x0, arg_description = 0x8075bd9 "[WALLPAPER...]"}, {
+    long_name = 0x0, short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x0, description = 0x0, arg_description = 0x0}}

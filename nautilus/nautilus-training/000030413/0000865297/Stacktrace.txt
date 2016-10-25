@@ -1,0 +1,42 @@
+#0  0x00007f90759fe8be in gconf_client_get () from /usr/lib/libgconf-2.so.4
+No symbol table info available.
+#1  0x00007f90759fedb0 in gconf_client_get_bool () from /usr/lib/libgconf-2.so.4
+No symbol table info available.
+#2  0x00007f9075c14d9b in ?? () from /usr/lib/nautilus/extensions-3.0/libnautilus-open-terminal.so
+No symbol table info available.
+#3  0x00000000004840fb in ?? ()
+No symbol table info available.
+#4  0x00000000004817a5 in ?? ()
+No symbol table info available.
+#5  0x0000000000472338 in ?? ()
+No symbol table info available.
+#6  0x0000000000496ca2 in ?? ()
+No symbol table info available.
+#7  0x000000000049ae4c in ?? ()
+No symbol table info available.
+#8  0x00007f907f9cca5d in g_main_context_dispatch () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#9  0x00007f907f9cd258 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#10 0x00007f907f9cd792 in g_main_loop_run () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#11 0x00007f90820efe1d in gtk_main () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#12 0x00007f908058aa4e in g_application_run () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#13 0x000000000042af90 in ?? ()
+No symbol table info available.
+#14 0x00007f907ef4f30d in __libc_start_main () from /lib/x86_64-linux-gnu/libc.so.6
+No symbol table info available.
+#15 0x000000000042afd1 in ?? ()
+No symbol table info available.
+#16 0x00007fff060adff8 in ?? ()
+No symbol table info available.
+#17 0x000000000000001c in ?? ()
+No symbol table info available.
+#18 0x0000000000000001 in ?? ()
+No symbol table info available.
+#19 0x00007fff060afa75 in ?? ()
+No symbol table info available.
+#20 0x0000000000000000 in ?? ()
+No symbol table info available.

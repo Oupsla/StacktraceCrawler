@@ -1,0 +1,66 @@
+#0  0x00007fb116d2ccd0 in gdu_device_get_object_path () from /usr/lib/libgdu.so.0
+No symbol table info available.
+#1  0x00007fb116d2b34c in gdu_pool_new_for_address () from /usr/lib/libgdu.so.0
+No symbol table info available.
+#2  0x00007fb116d2b7ac in gdu_pool_new () from /usr/lib/libgdu.so.0
+No symbol table info available.
+#3  0x00007fb116f5185e in ?? () from /usr/lib/nautilus/extensions-2.0/libnautilus-gdu.so
+No symbol table info available.
+#4  0x000000000047a01e in ?? ()
+No symbol table info available.
+#5  0x000000000047c457 in ?? ()
+No symbol table info available.
+#6  0x0000000000485545 in ?? ()
+No symbol table info available.
+#7  0x0000000000470e1b in fm_directory_view_update_menus ()
+No symbol table info available.
+#8  0x0000000000471ac5 in ?? ()
+No symbol table info available.
+#9  0x00007fb12d352b1b in g_timeout_dispatch (source=0x2032390, callback=0x25, user_data=0x24) at /build/buildd/glib2.0-2.26.1/glib/gmain.c:3585
+No locales.
+#10 0x00007fb12d352342 in g_main_dispatch (context=0x15e8ab0) at /build/buildd/glib2.0-2.26.1/glib/gmain.c:2149
+        dispatch = 0x7fb12d352b00 <g_timeout_dispatch>
+        user_data = 0x1a61db0
+        callback = 0x471a80
+        cb_funcs = 0x7fb12d5f2610
+        cb_data = 0x1c40170
+        current_source_link = {data = 0x2032390, next = 0x0}
+        source = 0x2032390
+        current = 0x1662590
+        i = 1
+#11 g_main_context_dispatch (context=0x15e8ab0) at /build/buildd/glib2.0-2.26.1/glib/gmain.c:2702
+No locales.
+#12 0x00007fb12d3562a8 in g_main_context_iterate (context=0x15e8ab0, block=<value optimized out>, dispatch=<value optimized out>, self=<value optimized out>) at /build/buildd/glib2.0-2.26.1/glib/gmain.c:2780
+        max_priority = 0
+        timeout = 0
+        some_ready = 1
+        nfds = 17
+        allocated_nfds = 758526352
+        fds = <value optimized out>
+        __PRETTY_FUNCTION__ = "g_main_context_iterate"
+#13 0x00007fb12d3567b5 in g_main_loop_run (loop=0x1820ff0) at /build/buildd/glib2.0-2.26.1/glib/gmain.c:2988
+        self = 0x15a8010
+        __PRETTY_FUNCTION__ = "g_main_loop_run"
+#14 0x00007fb12eeb23e7 in IA__gtk_main () at /build/buildd/gtk+2.0-2.22.0/gtk/gtkmain.c:1237
+        tmp_list = 0x1654d90
+        functions = 0x0
+        init = 0x0
+        loop = <value optimized out>
+#15 0x0000000000441d22 in ?? ()
+No symbol table info available.
+#16 0x00007fb12bf57d8e in __libc_start_main (main=<value optimized out>, argc=<value optimized out>, ubp_av=<value optimized out>, init=<value optimized out>, fini=<value optimized out>, rtld_fini=<value optimized out>, stack_end=0x7fff0aa4f5c8) at libc-start.c:226
+        result = <value optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, -2430078298835205904, 4386656, 140733371971024, 0, 0, 2429891974380830960, 2388305571546185968}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x54f8b0, 0x7fff0aa4f5d8}, data = {prev = 0x0, cleanup = 0x0, canceltype = 5568688}}}
+        not_first_call = <value optimized out>
+#17 0x000000000042ef89 in ?? ()
+No symbol table info available.
+#18 0x00007fff0aa4f5c8 in ?? ()
+No symbol table info available.
+#19 0x000000000000001c in ?? ()
+No symbol table info available.
+#20 0x0000000000000001 in ?? ()
+No symbol table info available.
+#21 0x00007fff0aa50b1e in ?? ()
+No symbol table info available.
+#22 0x0000000000000000 in ?? ()
+No symbol table info available.

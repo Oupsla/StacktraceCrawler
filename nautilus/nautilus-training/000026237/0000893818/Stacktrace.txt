@@ -1,0 +1,56 @@
+#0  0x00832416 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x02271e71 in raise () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#2  0x0227534e in abort () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#3  0x0048ef27 in g_logv () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#4  0x0048ef62 in g_log () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#5  0x0032a3b3 in ?? () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#6  0x0032cf55 in ?? () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#7  0x0078ac72 in g_object_newv () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#8  0x0078b900 in g_object_new_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#9  0x0078ba17 in g_object_new () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#10 0x0032d9b1 in g_settings_new () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#11 0x06b52e5e in ?? () from /usr/lib/nautilus/extensions-2.0/libnautilus-brasero-extension.so
+No symbol table info available.
+#12 0x06b5361f in ?? () from /usr/lib/nautilus/extensions-2.0/libnautilus-brasero-extension.so
+No symbol table info available.
+#13 0x00d45dad in nautilus_menu_provider_get_file_items () from /usr/lib/libnautilus-extension.so.1
+No symbol table info available.
+#14 0x080b3481 in ?? ()
+No symbol table info available.
+#15 0x080c11dd in ?? ()
+No symbol table info available.
+#16 0x080c9f3d in ?? ()
+No symbol table info available.
+#17 0x080b0261 in ?? ()
+No symbol table info available.
+#18 0x080b4dc6 in fm_directory_view_update_menus ()
+No symbol table info available.
+#19 0x080b50b3 in ?? ()
+No symbol table info available.
+#20 0x004873cc in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#21 0x00485aa8 in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#22 0x00486270 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#23 0x0048692b in g_main_loop_run () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#24 0x00fbdc39 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#25 0x0807ff36 in ?? ()
+No symbol table info available.
+#26 0x0225de37 in __libc_start_main () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#27 0x0806a861 in ?? ()
+No symbol table info available.

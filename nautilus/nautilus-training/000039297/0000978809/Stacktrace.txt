@@ -1,0 +1,189 @@
+#0  0x00eb1416 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x00d1cc8f in __GI_raise (sig=6) at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+        resultvar = <optimized out>
+        resultvar = <optimized out>
+        pid = 15110132
+        selftid = 1598
+#2  0x00d202b5 in __GI_abort () at abort.c:92
+        save_stage = 2
+        act = {__sigaction_handler = {sa_handler = 0xbfa0d778, sa_sigaction = 0xbfa0d778}, sa_mask = {__val = {5802297, 3214989156, 11048404, 3214989132, 5892724, 0, 3078063136, 5, 0, 1, 3078094848, 165448432, 11336731, 165448432, 3214989228, 4, 12050420, 3048295280, 11336710, 12050420, 0, 165448432, 3214989216, 164739712, 0, 3078094848, 11089258, 14022211, 11461006, 165448432, 0, 3214989228}}, sa_flags = 4, sa_restorer = 0x9c13788}
+        sigs = {__val = {32, 0 <repeats 31 times>}}
+#3  0x00aee6ce in g_assertion_message (domain=0x0, file=0x8163b16 "nautilus-view.c", line=2120, func=0x8167bfa "action_properties_callback", message=<optimized out>) at /build/buildd/glib2.0-2.30.0/./glib/gtestutils.c:1425
+        lstr = "2120\000\375\254\000\364߷\000\364߷\000\f\177\256\000˫\340\t\003\271\261\000\000\000\000"
+        s = 0x9d1ba80 "\350\212\334\t0\244", <incomplete sequence \346>
+#4  0x00aeeccf in g_assertion_message_expr (domain=0x0, file=0x8163b16 "nautilus-view.c", line=2120, func=0x8167bfa "action_properties_callback", expr=0x816556c "NAUTILUS_IS_VIEW (callback_data)") at /build/buildd/glib2.0-2.30.0/./glib/gtestutils.c:1436
+        s = <optimized out>
+#5  0x080bbd32 in ?? ()
+No symbol table info available.
+#6  0x00a4514c in g_cclosure_marshal_VOID__VOID (closure=0x98bda30, return_value=0x0, n_param_values=1, param_values=0x9af8438, invocation_hint=0xbfa0d9e0, marshal_data=0x0) at /build/buildd/glib2.0-2.30.0/./gobject/gmarshal.c:85
+        callback = 0x80bbcd0
+        cc = 0x98bda30
+        data1 = 0x93f2af8
+        data2 = <optimized out>
+        __PRETTY_FUNCTION__ = "g_cclosure_marshal_VOID__VOID"
+#7  0x00a43c3c in g_closure_invoke (closure=0x98bda30, return_value=0x0, n_param_values=1, param_values=0x9af8438, invocation_hint=0xbfa0d9e0) at /build/buildd/glib2.0-2.30.0/./gobject/gclosure.c:774
+        marshal = 0x8065a10 <g_cclosure_marshal_VOID__VOID@plt>
+        marshal_data = 0x0
+        in_marshal = 0
+        __PRETTY_FUNCTION__ = "g_closure_invoke"
+#8  0x00a569f0 in signal_emit_unlocked_R (node=0x9378bf8, detail=0, instance=0x93f2af8, emission_return=0x0, instance_and_params=0x9af8438) at /build/buildd/glib2.0-2.30.0/./gobject/gsignal.c:3272
+        tmp = <optimized out>
+        handler = 0x9c194e0
+        accumulator = 0x0
+        emission = {next = 0x0, instance = 0x93f2af8, ihint = {signal_id = 283, detail = 0, run_type = G_SIGNAL_RUN_FIRST}, state = EMISSION_RUN, chain_type = 4}
+        class_closure = 0x9378a08
+        hlist = 0x97a67d0
+        handler_list = 0x9c194e0
+        return_accu = 0x0
+        accu = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        signal_id = 283
+        max_sequential_handler_number = 98838
+        return_value_altered = 1
+#9  0x00a5f787 in g_signal_emit_valist (instance=0x93f2af8, signal_id=283, detail=0, var_args=0xbfa0db9c "\364߷") at /build/buildd/glib2.0-2.30.0/./gobject/gsignal.c:3003
+        instance_and_params = 0x9af8438
+        signal_return_type = 4
+        param_values = 0x9af844c
+        node = 0x9378bf8
+        i = <optimized out>
+        n_params = 0
+        __PRETTY_FUNCTION__ = "g_signal_emit_valist"
+#10 0x00a5f8f3 in g_signal_emit (instance=0x93f2af8, signal_id=283, detail=0) at /build/buildd/glib2.0-2.30.0/./gobject/gsignal.c:3060
+        var_args = 0xbfa0db9c "\364߷"
+#11 0x00f10406 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#12 0x00f10b9d in gtk_action_activate () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#13 0x0101c565 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#14 0x00a4514c in g_cclosure_marshal_VOID__VOID (closure=0x92896d8, return_value=0x0, n_param_values=1, param_values=0x9a0ea08, invocation_hint=0xbfa0dd40, marshal_data=0x101c540) at /build/buildd/glib2.0-2.30.0/./gobject/gmarshal.c:85
+        callback = 0x101c540
+        cc = 0x92896d8
+        data1 = 0x95cda58
+        data2 = <optimized out>
+        __PRETTY_FUNCTION__ = "g_cclosure_marshal_VOID__VOID"
+#15 0x00a4268d in g_type_class_meta_marshal (closure=0x92896d8, return_value=0x0, n_param_values=1, param_values=0x9a0ea08, invocation_hint=0xbfa0dd40, marshal_data=0x1fc) at /build/buildd/glib2.0-2.30.0/./gobject/gclosure.c:885
+        class = <optimized out>
+        callback = <optimized out>
+        offset = 508
+#16 0x00a43c3c in g_closure_invoke (closure=0x92896d8, return_value=0x0, n_param_values=1, param_values=0x9a0ea08, invocation_hint=0xbfa0dd40) at /build/buildd/glib2.0-2.30.0/./gobject/gclosure.c:774
+        marshal = 0xa42630 <g_type_class_meta_marshal>
+        marshal_data = 0x1fc
+        in_marshal = 0
+        __PRETTY_FUNCTION__ = "g_closure_invoke"
+#17 0x00a561b7 in signal_emit_unlocked_R (node=0x9289728, detail=0, instance=0x95cda58, emission_return=0x0, instance_and_params=0x9a0ea08) at /build/buildd/glib2.0-2.30.0/./gobject/gsignal.c:3202
+        accumulator = 0x0
+        emission = {next = 0xbfa0e148, instance = 0x95cda58, ihint = {signal_id = 89, detail = 0, run_type = G_SIGNAL_RUN_FIRST}, state = EMISSION_RUN, chain_type = 154634200}
+        class_closure = 0x92896d8
+        hlist = 0x97f9778
+        handler_list = <optimized out>
+        return_accu = 0x0
+        accu = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        signal_id = 89
+        max_sequential_handler_number = 98838
+        return_value_altered = <optimized out>
+#18 0x00a5f787 in g_signal_emit_valist (instance=0x95cda58, signal_id=89, detail=0, var_args=0xbfa0defc "\364\377\062\001\364\377\062\001\270\310\306\t\270\310\306\tz+\002\001X\332\\\t\260\365\\\t\001") at /build/buildd/glib2.0-2.30.0/./gobject/gsignal.c:3003
+        instance_and_params = 0x9a0ea08
+        signal_return_type = 4
+        param_values = 0x9a0ea1c
+        node = 0x9289728
+        i = <optimized out>
+        n_params = 0
+        __PRETTY_FUNCTION__ = "g_signal_emit_valist"
+#19 0x00a5f8f3 in g_signal_emit (instance=0x95cda58, signal_id=89, detail=0) at /build/buildd/glib2.0-2.30.0/./gobject/gsignal.c:3060
+        var_args = 0xbfa0defc "\364\377\062\001\364\377\062\001\270\310\306\t\270\310\306\tz+\002\001X\332\\\t\260\365\\\t\001"
+#20 0x0115a775 in gtk_widget_activate () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#21 0x01022b7a in gtk_menu_shell_activate_item () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#22 0x01022f8c in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#23 0x01015925 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#24 0x0100b272 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#25 0x00a4268d in g_type_class_meta_marshal (closure=0x9284ca0, return_value=0xbfa0e164, n_param_values=2, param_values=0x9d11e00, invocation_hint=0xbfa0e150, marshal_data=0xc4) at /build/buildd/glib2.0-2.30.0/./gobject/gclosure.c:885
+        class = <optimized out>
+        callback = <optimized out>
+        offset = 196
+#26 0x00a43c3c in g_closure_invoke (closure=0x9284ca0, return_value=0xbfa0e164, n_param_values=2, param_values=0x9d11e00, invocation_hint=0xbfa0e150) at /build/buildd/glib2.0-2.30.0/./gobject/gclosure.c:774
+        marshal = 0xa42630 <g_type_class_meta_marshal>
+        marshal_data = 0xc4
+        in_marshal = 0
+        __PRETTY_FUNCTION__ = "g_closure_invoke"
+#27 0x00a56838 in signal_emit_unlocked_R (node=0x9284f08, detail=0, instance=0x95cf5b0, emission_return=0xbfa0e29c, instance_and_params=0x9d11e00) at /build/buildd/glib2.0-2.30.0/./gobject/gsignal.c:3310
+        accumulator = 0x9284e40
+        emission = {next = 0x0, instance = 0x95cf5b0, ihint = {signal_id = 41, detail = 0, run_type = G_SIGNAL_RUN_LAST}, state = EMISSION_RUN, chain_type = 153638120}
+        class_closure = 0x9284ca0
+        hlist = 0x9916f10
+        handler_list = 0x0
+        return_accu = 0xbfa0e164
+        accu = {g_type = 20, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        signal_id = 41
+        max_sequential_handler_number = 98838
+        return_value_altered = 0
+#28 0x00a5f599 in g_signal_emit_valist (instance=0x95cf5b0, signal_id=41, detail=0, var_args=0xbfa0e310 "<㠿`-u\t") at /build/buildd/glib2.0-2.30.0/./gobject/gsignal.c:3013
+        return_value = {g_type = 20, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        error = 0x0
+        rtype = <optimized out>
+        static_scope = 0
+        instance_and_params = 0x9d11e00
+        signal_return_type = 20
+        param_values = 0x9d11e14
+        node = 0x9284f08
+        i = <optimized out>
+        n_params = 1
+        __PRETTY_FUNCTION__ = "g_signal_emit_valist"
+#29 0x00a5f8f3 in g_signal_emit (instance=0x95cf5b0, signal_id=41, detail=0) at /build/buildd/glib2.0-2.30.0/./gobject/gsignal.c:3060
+        var_args = 0xbfa0e30c "`-u\t<㠿`-u\t"
+#30 0x0115b593 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#31 0x0100a9b2 in gtk_propagate_event () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#32 0x0100ae18 in gtk_main_do_event () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#33 0x0032813c in ?? () from /usr/lib/libgdk-3.so.0
+No symbol table info available.
+#34 0x00350028 in ?? () from /usr/lib/libgdk-3.so.0
+No symbol table info available.
+#35 0x00ac925f in g_main_dispatch (context=0x92ab890) at /build/buildd/glib2.0-2.30.0/./glib/gmain.c:2441
+        dispatch = 0x34fff0
+        was_in_call = 0
+        user_data = 0x0
+        callback = 0
+        cb_funcs = 0x0
+        cb_data = 0x0
+        current_source_link = {data = 0x92a7f10, next = 0x0}
+        need_destroy = <optimized out>
+        source = 0x92a7f10
+        current = 0x92eb700
+        i = <optimized out>
+#36 g_main_context_dispatch (context=0x92ab890) at /build/buildd/glib2.0-2.30.0/./glib/gmain.c:3011
+No locals.
+#37 0x00ac9990 in g_main_context_iterate (context=0x92ab890, block=11371296, dispatch=1, self=<optimized out>) at /build/buildd/glib2.0-2.30.0/./glib/gmain.c:3089
+        max_priority = 2147483647
+        timeout = 453
+        some_ready = 1
+        nfds = <optimized out>
+        allocated_nfds = <optimized out>
+        fds = 0x94c6cc0
+#38 0x00ac9f9b in g_main_loop_run (loop=0x927a1f8) at /build/buildd/glib2.0-2.30.0/./glib/gmain.c:3297
+        __PRETTY_FUNCTION__ = "g_main_loop_run"
+#39 0x0100a065 in gtk_main () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#40 0x00f1e094 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#41 0x0094850c in g_application_run (application=0x927ac00, argc=2, argv=0xbfa0e674) at /build/buildd/glib2.0-2.30.0/./gio/gapplication.c:1323
+        arguments = 0x927a1f8
+        status = 0
+        i = <optimized out>
+        __PRETTY_FUNCTION__ = "g_application_run"
+#42 0x08067914 in ?? ()
+No symbol table info available.
+#43 0x00d08113 in __libc_start_main (main=0x8067850, argc=2, ubp_av=0xbfa0e674, init=0x8159220, fini=0x8159290, rtld_fini=0x58dba0, stack_end=0xbfa0e66c) at libc-start.c:226
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {15110132, 0, 0, 0, -1374282477, 1323071597}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x2, 0x806792c}, data = {prev = 0x0, cleanup = 0x0, canceltype = 2}}}
+        not_first_call = <optimized out>
+#44 0x0806794d in ?? ()
+No symbol table info available.
+Backtrace stopped: Not enough registers or memory available to unwind further

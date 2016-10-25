@@ -1,0 +1,48 @@
+#0  0x00007fea6e09ddc0 in gdu_device_get_object_path ()
+   from /usr/lib/libgdu.so.0
+No symbol table info available.
+#1  0x00007fea6e09c43c in gdu_pool_new_for_address ()
+   from /usr/lib/libgdu.so.0
+No symbol table info available.
+#2  0x00007fea6e09c89c in gdu_pool_new () from /usr/lib/libgdu.so.0
+No symbol table info available.
+#3  0x00007fea6e2c29de in ?? ()
+   from /usr/lib/nautilus/extensions-2.0/libnautilus-gdu.so
+No symbol table info available.
+#4  0x000000000047b06e in ?? ()
+No symbol table info available.
+#5  0x00000000004814fe in ?? ()
+No symbol table info available.
+#6  0x0000000000486705 in ?? ()
+No symbol table info available.
+#7  0x0000000000471edb in fm_directory_view_update_menus ()
+No symbol table info available.
+#8  0x0000000000472b85 in ?? ()
+No symbol table info available.
+#9  0x00007fea795ba14b in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#10 0x00007fea795b9972 in g_main_context_dispatch ()
+   from /lib/libglib-2.0.so.0
+No symbol table info available.
+#11 0x00007fea795bd7f8 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#12 0x00007fea795bdd05 in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#13 0x00007fea7b095af7 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#14 0x0000000000443164 in ?? ()
+No symbol table info available.
+#15 0x00007fea781bfc4d in __libc_start_main () from /lib/libc.so.6
+No symbol table info available.
+#16 0x0000000000430b69 in ?? ()
+No symbol table info available.
+#17 0x00007ffff7db89d8 in ?? ()
+No symbol table info available.
+#18 0x000000000000001c in ?? ()
+No symbol table info available.
+#19 0x0000000000000001 in ?? ()
+No symbol table info available.
+#20 0x00007ffff7db9b0a in ?? ()
+No symbol table info available.
+#21 0x0000000000000000 in ?? ()
+No symbol table info available.

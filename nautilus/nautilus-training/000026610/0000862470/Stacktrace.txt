@@ -1,0 +1,29 @@
+#0  0x0088018e in g_type_check_instance_cast () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#1  0x0810f04d in ?? ()
+No symbol table info available.
+#2  0x0810f0e8 in ?? ()
+No symbol table info available.
+#3  0x008e192f in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#4  0x008e025f in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#5  0x008e0990 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#6  0x008e0f9b in g_main_loop_run () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#7  0x00ea3f95 in gtk_main () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#8  0x00db7fe4 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#9  0x0066650c in g_application_run () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#10 0x08067884 in ?? ()
+No symbol table info available.
+#11 0x0450d113 in __libc_start_main (main=0x80677c0, argc=1, ubp_av=0xbfb99514, init=0x8159240, fini=0x81592b0, rtld_fini=0xb38bc0, stack_end=0xbfb9950c) at libc-start.c:226
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {73842676, 0, 0, 0, 2021773808, -1442220921}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x1, 0x806789c}, data = {prev = 0x0, cleanup = 0x0, canceltype = 1}}}
+        not_first_call = <optimized out>
+#12 0x080678bd in ?? ()
+No symbol table info available.
+Backtrace stopped: Not enough registers or memory available to unwind further

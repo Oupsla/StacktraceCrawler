@@ -1,0 +1,24 @@
+#0  0x00007f3c577ce21a in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+No symbol table info available.
+#1  0x00007f3c599d332f in ?? () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#2  0x00007f3c599cf7e2 in ?? () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#3  0x00007f3c5993c979 in ?? () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#4  0x00007f3c5996657c in ?? () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#5  0x00007f3c59956e16 in ?? () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#6  0x00007f3c586aba28 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#7  0x00007f3c586a9506 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#8  0x00007f3c547dcbc3 in ?? () from /usr/lib/nvidia-current/libGL.so.1
+No symbol table info available.
+#9  0x00007f3c57a55d8c in start_thread () from /lib/x86_64-linux-gnu/libpthread.so.0
+No symbol table info available.
+#10 0x00007f3c5778f1dd in clone () from /lib/x86_64-linux-gnu/libc.so.6
+No symbol table info available.
+#11 0x0000000000000000 in ?? ()
+No symbol table info available.

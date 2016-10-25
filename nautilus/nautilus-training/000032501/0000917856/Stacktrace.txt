@@ -1,0 +1,39 @@
+#0  0x00a56ced in g_file_is_native () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#1  0x080d449c in ?? ()
+No symbol table info available.
+#2  0x080c3fb3 in ?? ()
+No symbol table info available.
+#3  0x003e894a in g_cclosure_marshal_VOID(unsigned int0_t) () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#4  0x003e6f8c in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#5  0x003f8845 in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#6  0x004000c2 in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#7  0x00400253 in g_signal_emit () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#8  0x0016a0fe in ?? () from /usr/lib/i386-linux-gnu/libdbusmenu-glib.so.4
+No symbol table info available.
+#9  0x0016cdce in dbusmenu_menuitem_handle_event () from /usr/lib/i386-linux-gnu/libdbusmenu-glib.so.4
+No symbol table info available.
+#10 0x0016e613 in ?? () from /usr/lib/i386-linux-gnu/libdbusmenu-glib.so.4
+No symbol table info available.
+#11 0x0082744f in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#12 0x008266ea in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#13 0x00826af5 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#14 0x00826bd1 in g_main_context_iteration () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#15 0x00abbc4c in g_application_run () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#16 0x08067bc4 in ?? ()
+No symbol table info available.
+#17 0x03071113 in __libc_start_main () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#18 0x08067bfd in ?? ()
+No symbol table info available.
+Backtrace stopped: Not enough registers or memory available to unwind further

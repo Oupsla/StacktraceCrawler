@@ -1,0 +1,34 @@
+#0  0x00007ff78d0c239a in g_object_unref () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#1  0x00007ff78df8c042 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#2  0x00007ff78d0c2142 in ?? () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#3  0x00007ff78d0c2452 in g_object_unref () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#4  0x00007ff78d0e9093 in g_value_unset () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#5  0x00007ff78d0dc1fc in g_signal_emit_valist () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#6  0x00007ff78d0dc392 in g_signal_emit () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#7  0x00007ff78df8c11d in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#8  0x00007ff78df8ccbd in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#9  0x00007ff78df008a7 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#10 0x00007ff78d88a661 in g_simple_async_result_complete () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#11 0x00007ff78d88a708 in ?? () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#12 0x00007ff78cc0285d in g_main_context_dispatch () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#13 0x00007ff78cc03058 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#14 0x00007ff78cc03592 in g_main_loop_run () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#15 0x00007ff78df4fdcd in gtk_main () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#16 0x0000000000408020 in main ()
+No symbol table info available.

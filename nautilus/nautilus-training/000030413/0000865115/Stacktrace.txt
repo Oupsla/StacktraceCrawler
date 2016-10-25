@@ -1,0 +1,41 @@
+#0  0x05900f99 in gconf_client_get () from /usr/lib/libgconf-2.so.4
+No symbol table info available.
+#1  0x059014d4 in gconf_client_get_bool () from /usr/lib/libgconf-2.so.4
+No symbol table info available.
+#2  0x0129a932 in nautilus_open_terminal_get_file_items () from /usr/lib/nautilus/extensions-3.0/libnautilus-open-terminal.so
+No symbol table info available.
+#3  0x0049bbf7 in nautilus_menu_provider_get_file_items () from /usr/lib/libnautilus-extension.so.1
+No symbol table info available.
+#4  0x080b291b in ?? ()
+No symbol table info available.
+#5  0x080bdd8d in ?? ()
+No symbol table info available.
+#6  0x0807883d in ?? ()
+No symbol table info available.
+#7  0x080712a7 in ?? ()
+No symbol table info available.
+#8  0x080b69a6 in ?? ()
+No symbol table info available.
+#9  0x080b6a05 in ?? ()
+No symbol table info available.
+#10 0x0092892f in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#11 0x0092725f in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#12 0x00927990 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#13 0x00927f9b in g_main_loop_run () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#14 0x00ed9f95 in gtk_main () at /build/buildd/gtk+3.0-3.2.0/./gtk/gtkmain.c:1367
+        loop = 0x83614f0
+#15 0x00dedfe4 in gtk_application_run_mainloop (application=0x8361c00) at /build/buildd/gtk+3.0-3.2.0/./gtk/gtkapplication.c:115
+No locals.
+#16 0x0083250c in g_application_run () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#17 0x08067914 in ?? ()
+No symbol table info available.
+#18 0x02357113 in __libc_start_main () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#19 0x0806794d in ?? ()
+No symbol table info available.
+Backtrace stopped: Not enough registers or memory available to unwind further

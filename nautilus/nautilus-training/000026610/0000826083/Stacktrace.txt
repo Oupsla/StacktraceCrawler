@@ -1,0 +1,55 @@
+#0  0x00000000004c0cbe in ?? ()
+No symbol table info available.
+#1  0x00007f90d6864d9b in g_timeout_dispatch (source=0x7f90b82740c0, callback=<optimized out>, user_data=<optimized out>) at /build/buildd/glib2.0-2.29.14/./glib/gmain.c:3991
+        timeout_source = 0x7f90b82740c0
+        again = <optimized out>
+#2  0x00007f90d68635bd in g_main_dispatch (context=0x1cbcca0) at /build/buildd/glib2.0-2.29.14/./glib/gmain.c:2500
+        dispatch = 0x7f90d6864d80 <g_timeout_dispatch>
+        was_in_call = 0
+        user_data = 0x2089460
+        callback = 0x4c0cb0
+        cb_funcs = 0x7f90d6b13650
+        cb_data = 0x7f90b812e550
+        current_source_link = {data = 0x7f90b82740c0, next = 0x0}
+        need_destroy = <optimized out>
+        source = 0x7f90b82740c0
+        current = 0x1dafb40
+        i = <optimized out>
+#3  g_main_context_dispatch (context=0x1cbcca0) at /build/buildd/glib2.0-2.29.14/./glib/gmain.c:3083
+No locales.
+#4  0x00007f90d6863db8 in g_main_context_iterate (context=0x1cbcca0, block=<optimized out>, dispatch=1, self=<optimized out>) at /build/buildd/glib2.0-2.29.14/./glib/gmain.c:3161
+        max_priority = 2147483647
+        timeout = 467
+        some_ready = 1
+        nfds = 7
+        allocated_nfds = <optimized out>
+        fds = <optimized out>
+#5  0x00007f90d68642f2 in g_main_loop_run (loop=0x1ca0990) at /build/buildd/glib2.0-2.29.14/./glib/gmain.c:3369
+        __PRETTY_FUNCTION__ = "g_main_loop_run"
+#6  0x00007f90d8a7200d in gtk_main () at /build/buildd/gtk+3.0-3.1.10/./gtk/gtkmain.c:1367
+        loop = 0x1ca0990
+#7  0x00007f90d7424a8e in g_application_run (application=0x1ca1800, argc=<optimized out>, argv=<optimized out>) at /build/buildd/glib2.0-2.29.14/./gio/gapplication.c:1325
+        arguments = 0x1ca0990
+        status = 0
+        i = <optimized out>
+        __PRETTY_FUNCTION__ = "g_application_run"
+#8  0x000000000042b270 in ?? ()
+No symbol table info available.
+#9  0x00007f90d5de630d in __libc_start_main (main=0x42b1d0, argc=2, ubp_av=0x7fff358d5908, init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, stack_end=0x7fff358d58f8) at libc-start.c:226
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, -1632412404061701688, 4371080, 140734091843840, 0, 0, 1632249801726097864, 1619371916016351688}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x501f10, 0x7fff358d5908}, data = {prev = 0x0, cleanup = 0x0, canceltype = 5250832}}}
+        not_first_call = <optimized out>
+#10 0x000000000042b2b1 in ?? ()
+No symbol table info available.
+#11 0x00007fff358d58f8 in ?? ()
+No symbol table info available.
+#12 0x000000000000001c in ?? ()
+No symbol table info available.
+#13 0x0000000000000002 in ?? ()
+No symbol table info available.
+#14 0x00007fff358d6a95 in ?? ()
+No symbol table info available.
+#15 0x00007fff358d6a9e in ?? ()
+No symbol table info available.
+#16 0x0000000000000000 in ?? ()
+No symbol table info available.

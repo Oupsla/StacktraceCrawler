@@ -1,0 +1,1003 @@
+#0  0x00648422 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x001e04d1 in *__GI_raise (sig=6)
+    at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+	resultvar = <value optimized out>
+	pid = 3104756
+	selftid = 2121
+#2  0x001e3932 in *__GI_abort () at abort.c:92
+	act = {__sigaction_handler = {
+    sa_handler = 0x22682d <*__GI___libc_realloc+221>, 
+    sa_sigaction = 0x22682d <*__GI___libc_realloc+221>}, sa_mask = {__val = {
+      112, 88, 3220682160, 3220682400, 3220682188, 112, 88, 80, 174973960, 
+      3104756, 80, 79, 3220682360, 2186178, 174973968, 80, 3220682400, 
+      174973968, 0, 4222451712, 174973968, 174973968, 174973968, 174973968, 
+      174974047, 174974068, 174973968, 174974068, 0, 0, 0, 0}}, sa_flags = 0, 
+  sa_restorer = 0}
+	sigs = {__val = {32, 0 <repeats 31 times>}}
+#3  0x001d9648 in *__GI___assert_fail (assertion=0x832b65 "ret != inval_id", 
+    file=0x832b29 "../../src/xcb_io.c", line=378, 
+    function=0x832ce4 "_XAllocID") at assert.c:81
+	buf = 0xa6de410 "python: ../../src/xcb_io.c:378: _XAllocID: Assertion `ret != inval_id' failed.\n"
+#4  0x007c3199 in _XAllocID (dpy=0xa2d33f8) at ../../src/xcb_io.c:378
+	ret = 4294967295
+	__PRETTY_FUNCTION__ = "_XAllocID"
+#5  0x001a7d97 in XRenderCreatePicture (dpy=0xa2d33f8, drawable=65013548, 
+    format=0xa2f17f8, valuemask=0, attributes=0x0) at ../../src/Picture.c:90
+	info = <value optimized out>
+	pid = <value optimized out>
+#6  0x00504eaa in _cairo_xlib_surface_ensure_dst_picture (surface=0xa716528)
+    at /build/buildd/cairo-1.8.8/src/cairo-xlib-surface.c:887
+No locals.
+#7  0x00507268 in _cairo_xlib_surface_fill_rectangles (
+    abstract_surface=0xa716528, op=CAIRO_OPERATOR_OVER, color=0xa2b2370, 
+    rects=0xa76f680, num_rects=593)
+    at /build/buildd/cairo-1.8.8/src/cairo-xlib-surface.c:1949
+	render_color = {red = 59110, green = 56797, blue = 54741, 
+  alpha = 65535}
+	static_xrects = {{x = 29600, y = 47, width = 26064, height = 2673}, {
+    x = -18440, y = -16393, width = 30632, height = 47}, {x = 124, y = 0, 
+    width = 50303, height = 53}, {x = -4108, y = 193, width = 28664, 
+    height = 45}, {x = 1188, y = 0, width = 9520, height = 0}, {x = 109, 
+    y = 0, width = 9496, height = 0}, {x = 29656, y = 47, width = 7056, 
+    height = 2679}, {x = 9504, y = 0, width = 7056, height = 2679}, {
+    x = 29600, y = 47, width = 29648, height = 47}, {x = 7056, y = 2679, 
+    width = 24564, height = 47}, {x = 29600, y = 47, width = 593, 
+    height = 0}, {x = -18344, y = -16393, width = 22632, height = 34}, {
+    x = 12, y = 0, width = 16804, height = 30}, {x = -21812, y = 2681, 
+    width = 43752, height = 2681}, {x = 12, y = 0, width = 61428, 
+    height = 193}, {x = -13564, y = -16393, width = 593, height = 0}, {
+    x = -18312, y = -16393, width = 35196, height = 190}, {x = 9496, y = 0, 
+    width = 2, height = 0}, {x = 13182, y = 34, width = 13824, 
+    height = 24123}, {x = 19784, y = 2673, width = 61428, height = 193}, {
+    x = -18264, y = -16393, width = 35455, height = 190}, {x = -21812, 
+    y = 2681, width = 8726, height = 34}, {x = 124, y = 0, width = 35424, 
+    height = 76}, {x = 0, y = 0, width = 28664, height = 45}, {x = 1187, 
+    y = 0, width = 61428, height = 193}, {x = -13564, y = -16393, 
+    width = 593, height = 0}, {x = -18184, y = -16393, width = 43786, 
+    height = 190}, {x = 7072, y = 2679, width = 63104, height = 2678}, {
+    x = 9488, y = 0, width = 29648, height = 47}, {x = -2440, y = 2678, 
+    width = 24564, height = 47}, {x = 9497, y = 0, width = 9504, height = 0}, 
+  {x = 29600, y = 47, width = 24564, height = 47}, {x = 29600, y = 47, 
+    width = 0, height = 0}, {x = -18184, y = -16393, width = 22429, 
+    height = 34}, {x = -18136, y = -16393, width = 12276, height = 84}, {
+    x = 12276, y = 84, width = 63104, height = 2678}, {x = -16072, 
+    y = -16393, width = 21517, height = 78}, {x = -2432, y = 2678, 
+    width = 63104, height = 2678}, {x = 593, y = 0, width = 35424, 
+    height = 76}, {x = 0, y = 0, width = 4, height = 0}, {x = 0, y = 0, 
+    width = 47392, height = 49143}, {x = 2104, y = 2644, width = 1265, 
+    height = 0}, {x = 0, y = 0, width = 24564, height = 47}, {x = -21808, 
+    y = 2681, width = 43808, height = 2681}, {x = 60, y = 0, width = 16804, 
+    height = 30}, {x = -21868, y = 2681, width = 43752, height = 2681}, {
+    x = 60, y = 0, width = 28660, height = 85}, {x = 2096, y = 2644, 
+    width = 3, height = 0}, {x = -28672, y = 0, width = 36864, height = 0}, {
+    x = 2096, y = 2644, width = 4, height = 0}, {x = 23, y = 0, width = 0, 
+    height = 0}, {x = -32768, y = 16465, width = 34000, height = 2681}, {
+    x = 0, y = 16461, width = 23, height = 0}, {x = -21868, y = 2681, 
+    width = 0, height = 16470}, {x = -17012, y = -16393, width = 35424, 
+    height = 76}, {x = 0, y = 0, width = 4, height = 0}, {x = 0, y = 0, 
+    width = 1, height = 0}, {x = 0, y = 16461, width = 76, height = 0}, {
+    x = 0, y = 0, width = 24564, height = 47}, {x = -21844, y = 2681, 
+    width = 43848, height = 2681}, {x = 100, y = 0, width = 16804, 
+    height = 30}, {x = -21944, y = 2681, width = 43752, height = 2681}, {
+    x = 100, y = 0, width = 87, height = 0}, {x = 0, y = 0, width = 32768, 
+    height = 16456}, {x = 0, y = 0, width = 0, height = 16434}, {x = 72, 
+    y = 0, width = 13, height = 0}, {x = -32768, y = 16458, width = 0, 
+    height = 0}, {x = 0, y = 16434, width = 33616, height = 2681}, {x = 0, 
+    y = 0, width = 32768, height = 16462}, {x = -21944, y = 2681, width = 0, 
+    height = 16434}, {x = -17012, y = -16393, width = 35424, height = 76}, {
+    x = 0, y = 0, width = 4, height = 0}, {x = 0, y = 0, width = 1, 
+    height = 0}, {x = 0, y = 0, width = 49152, height = 16468}, {x = 0, 
+    y = 0, width = 24564, height = 47}, {x = -21900, y = 2681, width = 43940, 
+    height = 2681}, {x = 192, y = 0, width = 16804, height = 30}, {
+    x = -22092, y = 2681, width = 43752, height = 2681}, {x = 192, y = 0, 
+    width = 16384, height = 16472}, {x = 0, y = 0, width = 0, 
+    height = 16434}, {x = 87, y = 0, width = 0, height = 0}, {x = 16384, 
+    y = 16474, width = 27, height = 0}, {x = 0, y = 16434, width = 88, 
+    height = 0}, {x = 0, y = 0, width = 31920, height = 2681}, {x = 0, y = 0, 
+    width = 0, height = 16434}, {x = -22092, y = 2681, width = 0, 
+    height = 0}, {x = -17012, y = -16393, width = 35424, height = 76}, {
+    x = 0, y = 0, width = 4, height = 0}, {x = 0, y = 0, width = 1, 
+    height = 0}, {x = 0, y = 0, width = 0, height = 16434}, {x = 3, y = 0, 
+    width = 24564, height = 47}, {x = -22044, y = 2681, width = 44092, 
+    height = 2681}, {x = 344, y = 0, width = 16804, height = 30}, {
+    x = -22388, y = 2681, width = 43752, height = 2681}, {x = 344, y = 0, 
+    width = 0, height = 16434}, {x = 43, y = 0, width = 0, height = 0}, {
+    x = 8192, y = 16482, width = 0, height = 0}, {x = 0, y = 16434, 
+    width = 63, height = 0}, {x = 0, y = 0, width = 40960, height = 16483}, {
+    x = 0, y = 0, width = 30544, height = 2681}, {x = 48, y = 0, width = 0, 
+    height = 0}, {x = -22388, y = 2681, width = 0, height = 0}, {x = -17012, 
+    y = -16393, width = 35424, height = 76}, {x = 0, y = 0, width = 4, 
+    height = 0}, {x = 0, y = 0, width = 1, height = 0}, {x = 2, y = 0, 
+    width = 1, height = 0}, {x = -2168, y = 58, width = 24564, height = 47}, {
+    x = -22316, y = 2681, width = 44412, height = 2681}, {x = 664, y = 0, 
+    width = 16804, height = 30}, {x = -22980, y = 2681, width = 43752, 
+    height = 2681}, {x = 664, y = 0, width = 65333, height = 150}, {x = 2, 
+    y = 0, width = 67, height = 0}, {x = -2168, y = 58, width = 2, 
+    height = 0}, {x = 16432, y = 2666, width = 131, height = 0}, {x = -17448, 
+    y = -16393, width = 18372, height = 243}, {x = -7888, y = 2622, 
+    width = 24880, height = 2681}, {x = -17512, y = -16393, width = 8, 
+    height = 0}, {x = -22980, y = 2681, width = 1, height = 0}, {x = -17012, 
+    y = -16393, width = 35424, height = 76}, {x = 0, y = 0, width = 4, 
+    height = 0}, {x = 0, y = 0, width = 1, height = 0}, {x = -17412, 
+    y = -16393, width = 48120, height = 49143}, {x = 12, y = 0, 
+    width = 24564, height = 47}, {x = -22892, y = 2681, width = 45020, 
+    height = 2681}, {x = 1272, y = 0, width = 16804, height = 30}, {
+    x = -24164, y = 2681, width = 43752, height = 2681}, {x = 1272, y = 0, 
+    width = 45044, height = 146}, {x = -22784, y = 2672, width = 3, 
+    height = 0}, {x = 0, y = 0, width = 16428, height = 2666}, {x = 0, y = 0, 
+    width = 275, height = 0}, {x = -14583, y = 2667, width = 45044, 
+    height = 146}, {x = -17316, y = -16393, width = 15408, height = 2681}, {
+    x = -17384, y = -16393, width = 44022, height = 143}, {x = 13182, y = 34, 
+    width = 38020, height = 2570}, {x = -17012, y = -16393, width = 8726, 
+    height = 34}, {x = 0, y = 0, width = 4, height = 0}, {x = 0, y = 0, 
+    width = 1, height = 0}, {x = 25696, y = 2671, width = 0, height = 0}, {
+    x = 22, y = 0, width = 28664, height = 45}, {x = 641, y = 0, 
+    width = 5144, height = 0}, {x = 101, y = 0, width = 5121, height = 0}, {
+    x = 29656, y = 47, width = 2104, height = 2677}, {x = 5128, y = 0, 
+    width = 4672, height = 2677}, {x = 4672, y = 2677, width = 648, 
+    height = 0}, {x = 29600, y = 47, width = 14592, height = 0}, {x = 2104, 
+    y = 2677, width = 2564, height = 0}, {x = 13182, y = 34, width = 25013, 
+    height = 34}, {x = -21784, y = 2681, width = 2112, height = 2677}, {
+    x = 2564, y = 0, width = 1304, height = 0}, {x = 29600, y = 47, 
+    width = 20489, height = 0}, {x = 20489, y = 0, width = 13600, 
+    height = 2}, {x = 641, y = 0, width = 24564, height = 47}, {x = -21784, 
+    y = 2681, width = 29600, height = 47}, {x = 15360, y = 0, width = 15360, 
+    height = 0}, {x = 20488, y = 0, width = 40968, height = 0}, {x = 32, 
+    y = 0, width = 1, height = 0}, {x = 29600, y = 47, width = 20488, 
+    height = 0}, {x = -24568, y = 0, width = 40960, height = 0}, {x = -21792, 
+    y = 2681, width = 12276, height = 84}, {x = -13436, y = -16393, 
+    width = 48592, height = 49143}, {x = -17064, y = -16393, width = 64269, 
+    height = 78}, {x = -21784, y = 2681, width = 40960, height = 0}, {
+    x = 29656, y = 47, width = 12276, height = 84}, {x = 5492, y = 2671, 
+    width = 50924, height = 49143}, {x = 0, y = 0, width = 0, height = 0}, {
+    x = 28136, y = 2671, width = 51084, height = 49143}, {x = -256, y = -1, 
+    width = 65535, height = 65535}, {x = -256, y = -1, width = 65535, 
+    height = 65535}, {x = 0, y = 0, width = 35668, height = 78}, {x = -17096, 
+    y = -16393, width = 50804, height = 49143}, {x = 25344, y = 0, width = 0, 
+    height = 0}, {x = 25600, y = 0, width = 8726, height = 34}, {x = -17004, 
+    y = -16393, width = 0, height = 0}, {x = 0, y = 0, width = 28385, 
+    height = 45}, {x = 29644, y = 47, width = 65532, height = 65535}, {
+    x = 29644, y = 47, width = 29600, height = 47}, {x = 0, y = 0, 
+    width = 17, height = 0}, {x = 29648, y = 47, width = 24564, height = 47}, 
+  {x = 23880, y = 2680, width = 19864, height = 1}, {x = -16944, y = -16393, 
+    width = 8726, height = 34}, {x = 41, y = 0, width = 12276, height = 84}, {
+    x = 29600, y = 47, width = 24564, height = 47}, {x = 29600, y = 47, 
+    width = 50924, height = 49143}, {x = -16984, y = -16393, width = 22429, 
+    height = 34}, {x = 17, y = 0, width = 25600, height = 0}, {x = 12276, 
+    y = 84, width = 0, height = 0}, {x = -16920, y = -16393, width = 37665, 
+    height = 78}, {x = 20608, y = 2606, width = 22429, height = 34}, {x = 0, 
+    y = 0, width = 19864, height = 1}, {x = 29600, y = 47, width = 24564, 
+    height = 47}, {x = 29600, y = 47, width = 0, height = 0}, {x = -16920, 
+    y = -16393, width = 22429, height = 34}, {x = 14336, y = 0, 
+    width = 12276, height = 84}, {x = 12276, y = 84, width = 50924, 
+    height = 49143}, {x = -14424, y = -16393, width = 40448, height = 76}, {
+    x = -28304, y = 2679, width = 28140, height = 2671}, {x = 1, y = 0, 
+    width = 35424, height = 76}, {x = 4988, y = 2664, width = 64912, 
+    height = 2674}, {x = 0, y = 0, width = 25600, height = 0}, {x = 28660, 
+    y = 85, width = 28660, height = 85}...}
+	xrects = (XRectangle *) 0xa7740b8
+	i = <value optimized out>
+#8  0x004ebb4d in _cairo_surface_fill_rectangles (surface=0xa716528, 
+    op=CAIRO_OPERATOR_OVER, color=0xa2b2370, rects=0xa76f680, num_rects=593)
+    at /build/buildd/cairo-1.8.8/src/cairo-surface.c:1459
+	status = <value optimized out>
+	__PRETTY_FUNCTION__ = "_cairo_surface_fill_rectangles"
+#9  0x004ebce5 in _cairo_surface_fill_region (surface=0xa716528, 
+    op=CAIRO_OPERATOR_OVER, color=0xa2b2370, region=0xbff7cb04)
+    at /build/buildd/cairo-1.8.8/src/cairo-surface.c:1410
+	num_boxes = 593
+	boxes = (cairo_box_int_t *) 0xa76d168
+	stack_rects = {{x = 23720, y = 593, width = 174304256, 
+    height = 173737048}, {x = -1074282072, y = 5582427, width = 0, 
+    height = 175203152}, {x = 0, y = 9480532, width = 0, height = 170828080}, 
+  {x = 71680, y = 59392, width = 9613300, height = 174304256}, {
+    x = -1074282024, y = 9483074, width = 174304256, height = 170828080}, {
+    x = 175203152, y = 71680, width = 59392, height = 174248112}, {
+    x = -1074282024, y = 9436878, width = 9613300, height = 174304256}, {
+    x = -1074281944, y = 9483293, width = 174304256, height = 170828080}, {
+    x = 175203152, y = 9481679, width = 59392, height = 3}, {x = 0, 
+    y = 9481903, width = 9613300, height = 0}, {x = 0, y = 9480532, 
+    width = 4294932480, height = 61440}, {x = 45056, y = 9613300, 
+    width = 9613300, height = 0}, {x = -1074281672, y = 9485267, 
+    width = 174304256, height = 174835440}, {x = 173737048, y = 13675617, 
+    width = 9908212, height = 36}, {x = -1074281880, y = 13675617, 
+    width = 9908212, height = 173729200}, {x = -1074281864, y = 9895733, 
+    width = 2, height = 3862516}, {x = -1074281768, y = 3481538, 
+    width = 171893040, height = 3862516}, {x = -1074281736, y = 13675617, 
+    width = 9908212, height = 72}, {x = -1074281816, y = 9895733, width = 2, 
+    height = 0}, {x = 61440, y = 0, width = 0, height = 3862516}, {
+    x = -1074281704, y = 3481538, width = 171893040, height = 2236950}, {
+    x = 40, y = 8, width = 0, height = 0}, {x = 8, y = 64, width = 174248112, 
+    height = 174248112}, {x = -1074281704, y = 15843535, width = 174248116, 
+    height = 3}, {x = 12, y = 168631336, width = 72, height = 175318672}, {
+    x = 175318672, y = 10488, width = 3109792, height = 3104756}, {
+    x = 3109792, y = 175202608, width = 3220685608, height = 2250653}, {
+    x = -1074281672, y = 168896820, width = 12709876, height = 175202576}, {
+    x = -1074281656, y = 12489882, width = 175308184, height = 3077752064}, {
+    x = 540392961, y = 9486176, width = 12484796, height = 5517300}, {
+    x = -1074281624, y = 5127508, width = 175202608, height = 3077751968}, {
+    x = -1074281592, y = 2, width = 7213044, height = 175202576}, {
+    x = -1074281592, y = 5164692, width = 175202608, height = 170244176}, {
+    x = -1074281560, y = 7213044, width = 175202440, height = 175197904}, {
+    x = -1074281560, y = 5061389, width = 173785104, height = 174248112}, {
+    x = 0, y = -1217215232, width = 168909196, height = 175202440}, {
+    x = -1074281528, y = 5061448, width = 175202440, height = 170244176}, {
+    x = 0, y = 7270388, width = 175197512, height = 168441842}, {
+    x = -1074281496, y = 5035245, width = 175197540, height = 175197904}, {
+    x = 7260608, y = 7271112, width = 12867552, height = 170244176}, {
+    x = -1074281464, y = 7168736, width = 175197512, height = 1079083008}, {
+    x = 0, y = 174246596, width = 168022096, height = 168022096}, {
+    x = -1074281240, y = 135110033, width = 172945740, height = 0}, {x = 0, 
+    y = 0, width = 0, height = 0}, {x = 2241406, y = 5118879, 
+    width = 1065353216, height = 0}, {x = 1073741824, y = 5517300, 
+    width = 175197544, height = 127}, {x = 172792856, y = -1217084248, 
+    width = 3077779488, height = 3077727328}, {x = 170244176, 
+    y = -1217264668, width = 3077883048, height = 168559582}, {
+    x = -1074281304, y = 170244176, width = 3077729804, height = 174246592}, {
+    x = -1217156212, y = -1, width = 0, height = 7168688}, {x = 174246592, 
+    y = 136462168, width = 0, height = 168441580}, {x = -1217272024, 
+    y = 168022096, width = 4294967295, height = 136462168}, {x = 8, 
+    y = 168022096, width = 136458496, height = 2}, {x = -1074281240, 
+    y = 135654020, width = 174246236, height = 174246592}, {x = 172889764, 
+    y = 169232284, width = 3076727856, height = 136461728}, {x = -1074281192, 
+    y = 2, width = 174246236, height = 172947200}, {x = -1074281096, 
+    y = 135125508, width = 174246236, height = 0}, {x = -1217264668, y = 0, 
+    width = 173032730, height = 2236950}, {x = -1074281136, y = -1218239440, 
+    width = 3076727856, height = 0}, {x = -1074281096, y = 134815611, 
+    width = 136462168, height = 2236950}, {x = 0, y = 5013796, width = 2, 
+    height = 0}, {x = 9, y = 0, width = 5517300, height = 0}, {
+    x = -1074281096, y = 5015345, width = 173785116, height = 0}, {
+    x = 3109792, y = 5015252, width = 3220686200, height = 3077779488}, {
+    x = 0, y = -959140889, width = 3077779488, height = 127}, {x = 174859880, 
+    y = -1217239552, width = 3220686232, height = 2236950}, {x = 0, 
+    y = 173118844, width = 3077727744, height = 3335826407}, {
+    x = -1074281000, y = 134795033, width = 172286700, height = 3077727744}, {
+    x = -959140889, y = 5013796, width = 5517300, height = 175197680}, {
+    x = 5518724, y = 1, width = 5517300, height = 0}, {x = 913, 
+    y = 173118844, width = 3077727744, height = 66}, {x = 0, y = 134804343, 
+    width = 172286748, height = 31}, {x = 168022640, y = -1216981952, 
+    width = 2241406, height = 175197512}, {x = -1074280904, y = 2236950, 
+    width = 3077985344, height = 3077985344}, {x = 172764276, y = 3109968, 
+    width = 17, height = 3077985344}, {x = 15034981, y = 2977784, 
+    width = 1537, height = 12312}, {x = 113, y = 12289, width = 3109848, 
+    height = 131072}, {x = 12296, y = 1, width = 3081, height = 136}, {
+    x = 3109792, y = 3104756, width = 175441976, height = 3076}, {
+    x = -1074280816, y = 2253237, width = 175559016, height = 175441984}, {
+    x = 3076, y = 3096, width = 3109792, height = 5023840}, {x = 32, y = 20, 
+    width = 0, height = 0}, {x = 0, y = 0, width = 0, height = 0}, {x = 0, 
+    y = 0, width = 0, height = 0}, {x = 0, y = 0, width = 0, height = 0}, {
+    x = 0, y = 0, width = 0, height = 0}, {x = 0, y = 0, width = 0, 
+    height = 0}, {x = 0, y = 175660368, width = 175736272, height = 2372}, {
+    x = 2372, y = 5016976, width = 16, height = 4}, {x = 0, y = 0, width = 0, 
+    height = 0}, {x = 0, y = 0, width = 0, height = 2236950}, {x = 0, y = 0, 
+    width = 0, height = 0}, {x = 0, y = 0, width = 0, height = 175074796}, {
+    x = 175120564, y = 170807428, width = 0, height = 0}, {x = 0, y = 0, 
+    width = 0, height = 0}, {x = 0, y = 137592, width = 3109792, 
+    height = 3104756}, {x = 3109792, y = -1074280456, width = 3220686728, 
+    height = 2250653}, {x = 25600, y = 0, width = 5517300, 
+    height = 3220686860}, {x = -1074280536, y = 5130823, width = 175559016, 
+    height = 173212180}, {x = -1074280504, y = 5517300, width = 3220686860, 
+    height = 5517300}, {x = -1074279608, y = 5097693, width = 3220686860, 
+    height = 3220686860}, {x = 0, y = 5097936, width = 5098000, 
+    height = 5097456}, {x = -1074280456, y = 135123874, width = 173212180, 
+    height = 0}, {x = -1217264668, y = 0, width = 2576980378, 
+    height = 1069128089}, {x = 13668633, y = 0, width = 0, height = 0}, {
+    x = -1717986918, y = 1069128089, width = 3220687748, height = 14336}, {
+    x = 25344, y = 0, width = 14336, height = 25344}, {x = 14336, y = 25344, 
+    width = 0, height = 1186}, {x = 2048, y = 175559016, width = 11264, 
+    height = 0}, {x = 11264, y = 256, width = 1, height = 3862516}, {
+    x = 11008, y = 0, width = 11008, height = 256}, {x = 0, y = 9895733, 
+    width = 14080, height = 0}, {x = 14080, y = 256, width = 1, 
+    height = 3862516}, {x = 11520, y = 0, width = 11520, height = 256}, {
+    x = 0, y = 172969604, width = 9984, height = 256}, {x = 9984, y = 512, 
+    width = 1, height = 174238996}, {x = 9728, y = 256, width = 9728, 
+    height = 512}, {x = 0, y = 3483554, width = 11264, height = 256}, {
+    x = 11264, y = 512, width = 1, height = 3864456}, {x = 10240, y = 256, 
+    width = 10240, height = 512}, {x = 0, y = 3479327, width = 14080, 
+    height = 256}, {x = 14080, y = 512, width = 1, height = 0}, {x = 11520, 
+    y = 256, width = 11520, height = 512}, {x = 0, y = 15968639, 
+    width = 15360, height = 256}, {x = 15360, y = 512, width = 1, 
+    height = 0}, {x = 14336, y = 256, width = 14336, height = 512}, {x = 0, 
+    y = 172996936, width = 15872, height = 256}, {x = 15872, y = 512, 
+    width = 1, height = 0}}
+	rects = (cairo_rectangle_int_t *) 0xa76f680
+	status = <value optimized out>
+	i = 2121
+	__PRETTY_FUNCTION__ = "_cairo_surface_fill_region"
+#10 0x004eec29 in _clip_and_composite_trapezoids (src=<value optimized out>, 
+    op=CAIRO_OPERATOR_OVER, dst=0xa716528, traps=0xbff7cb84, clip=0x0, 
+    antialias=CAIRO_ANTIALIAS_DEFAULT)
+    at /build/buildd/cairo-1.8.8/src/cairo-surface-fallback.c:617
+	color = (const cairo_color_t *) 0x0
+	clip_surface = <value optimized out>
+	status = <value optimized out>
+	trap_region = {rgn = {extents = {x1 = 0, y1 = 0, x2 = 100, y2 = 100}, 
+    data = 0xa771b98}}
+	clear_region = {rgn = {extents = {x1 = 14080, y1 = 1024, x2 = 0, 
+      y2 = -1074279300}, data = 0x4100}}
+	has_trap_region = 1
+	has_clear_region = <value optimized out>
+	extents = {x = 0, y = 0, width = 100, height = 100}
+	traps_info = {traps = 0x0, antialias = 5086495}
+#11 0x004eee4a in _cairo_surface_fallback_fill (surface=0xa716528, 
+    op=CAIRO_OPERATOR_OVER, source=0xa2b2318, path=0xa714ed4, 
+    fill_rule=CAIRO_FILL_RULE_WINDING, tolerance=0.10000000000000001, 
+    antialias=CAIRO_ANTIALIAS_DEFAULT)
+    at /build/buildd/cairo-1.8.8/src/cairo-surface-fallback.c:902
+	status = <value optimized out>
+	traps = {status = CAIRO_STATUS_SUCCESS, extents = {p1 = {x = 0, 
+      y = 0}, p2 = {x = 25600, y = 25600}}, num_traps = 593, 
+  traps_size = 1024, traps = 0xa79aae8, traps_embedded = {{top = 0, 
+      bottom = 256, left = {p1 = {x = 11008, y = 0}, p2 = {x = 11008, 
+          y = 256}}, right = {p1 = {x = 11264, y = 0}, p2 = {x = 11264, 
+          y = 256}}}}, has_limits = 1, limits = {p1 = {x = 0, y = 0}, p2 = {
+      x = 25600, y = 25600}}}
+	box = {p1 = {x = 0, y = 0}, p2 = {x = 25600, y = 25600}}
+	extents = {x = 0, y = 0, width = 100, height = 100}
+#12 0x004eb2f7 in _cairo_surface_fill (surface=0xa716528, 
+    op=CAIRO_OPERATOR_OVER, source=0xbff7ccb4, path=0xa714ed4, 
+    fill_rule=CAIRO_FILL_RULE_WINDING, tolerance=0.10000000000000001, 
+    antialias=CAIRO_ANTIALIAS_DEFAULT)
+    at /build/buildd/cairo-1.8.8/src/cairo-surface.c:1685
+	status = <value optimized out>
+	dev_source = (cairo_pattern_t *) 0xa2b2318
+	__PRETTY_FUNCTION__ = "_cairo_surface_fill"
+#13 0x004d1ec6 in _cairo_gstate_fill (gstate=0xa714d68, path=0xa714ed4)
+    at /build/buildd/cairo-1.8.8/src/cairo-gstate.c:1021
+	status = <value optimized out>
+	pattern = {base = {type = CAIRO_PATTERN_TYPE_SOLID, ref_count = {
+      ref_count = 0}, status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, 
+      num_elements = 0, element_size = 12, elements = 0x0, is_snapshot = 0}, 
+    matrix = {xx = 1, yx = 0, xy = 0, yy = 1, x0 = 0, y0 = 0}, 
+    filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_PAD}, solid = {base = {
+      type = CAIRO_PATTERN_TYPE_SOLID, ref_count = {ref_count = 0}, 
+      status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, num_elements = 0, 
+        element_size = 12, elements = 0x0, is_snapshot = 0}, matrix = {
+        xx = 1, yx = 0, xy = 0, yy = 1, x0 = 0, y0 = 0}, 
+      filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_PAD}, color = {
+      red = 0.90196078431372551, green = 0.8666666666666667, 
+      blue = 0.83529411764705885, alpha = 1, red_short = 59110, 
+      green_short = 56797, blue_short = 54741, alpha_short = 65535}, 
+    content = CAIRO_CONTENT_COLOR}, surface = {base = {
+      type = CAIRO_PATTERN_TYPE_SOLID, ref_count = {ref_count = 0}, 
+      status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, num_elements = 0, 
+        element_size = 12, elements = 0x0, is_snapshot = 0}, matrix = {
+        xx = 1, yx = 0, xy = 0, yy = 1, x0 = 0, y0 = 0}, 
+      filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_PAD}, 
+    surface = 0xdcdcdcdd}, gradient = {base = {base = {
+        type = CAIRO_PATTERN_TYPE_SOLID, ref_count = {ref_count = 0}, 
+        status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, 
+          num_elements = 0, element_size = 12, elements = 0x0, 
+          is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, x0 = 0, 
+          y0 = 0}, filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_PAD}, 
+      n_stops = 3705461981, stops_size = 1072487644, stops = 0xbbbbbbbc, 
+      stops_embedded = {{offset = -8.6367413138889065e-26, color = {
+            red = 5.2981022517167184e-315, green = -1.4585370572318858e+144, 
+            blue = 8.693816750251282e-311, alpha = 3.3205478193932985e-307, 
+            red_short = 20180, green_short = 2673, blue_short = 14336, 
+            alpha_short = 0}}, {offset = 2.4850575587220144e-258, color = {
+            red = 2.2505932998020619e-258, green = 3.1995329458295109e-307, 
+            blue = 1.0000000389017503, alpha = 2.122014883914767e-312, 
+            red_short = 8180, green_short = 69, blue_short = 57488, 
+            alpha_short = 2677}}}}, linear = {base = {base = {
+          type = CAIRO_PATTERN_TYPE_SOLID, ref_count = {ref_count = 0}, 
+          status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, 
+            num_elements = 0, element_size = 12, elements = 0x0, 
+            is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, 
+            x0 = 0, y0 = 0}, filter = CAIRO_FILTER_GOOD, 
+          extend = CAIRO_EXTEND_PAD}, n_stops = 3705461981, 
+        stops_size = 1072487644, stops = 0xbbbbbbbc, stops_embedded = {{
+            offset = -8.6367413138889065e-26, color = {
+              red = 5.2981022517167184e-315, 
+              green = -1.4585370572318858e+144, 
+              blue = 8.693816750251282e-311, alpha = 3.3205478193932985e-307, 
+              red_short = 20180, green_short = 2673, blue_short = 14336, 
+              alpha_short = 0}}, {offset = 2.4850575587220144e-258, color = {
+              red = 2.2505932998020619e-258, green = 3.1995329458295109e-307, 
+              blue = 1.0000000389017503, alpha = 2.122014883914767e-312, 
+              red_short = 8180, green_short = 69, blue_short = 57488, 
+              alpha_short = 2677}}}}, p1 = {x = -1074278952, y = 3960880}, 
+      p2 = {x = 175197512, y = 0}}, radial = {base = {base = {
+          type = CAIRO_PATTERN_TYPE_SOLID, ref_count = {ref_count = 0}, 
+          status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, 
+            num_elements = 0, element_size = 12, elements = 0x0, 
+            is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, 
+            x0 = 0, y0 = 0}, filter = CAIRO_FILTER_GOOD, 
+          extend = CAIRO_EXTEND_PAD}, n_stops = 3705461981, 
+        stops_size = 1072487644, stops = 0xbbbbbbbc, stops_embedded = {{
+            offset = -8.6367413138889065e-26, color = {
+              red = 5.2981022517167184e-315, 
+              green = -1.4585370572318858e+144, 
+              blue = 8.693816750251282e-311, alpha = 3.3205478193932985e-307, 
+              red_short = 20180, green_short = 2673, blue_short = 14336, 
+              alpha_short = 0}}, {offset = 2.4850575587220144e-258, color = {
+              red = 2.2505932998020619e-258, green = 3.1995329458295109e-307, 
+              blue = 1.0000000389017503, alpha = 2.122014883914767e-312, 
+              red_short = 8180, green_short = 69, blue_short = 57488, 
+              alpha_short = 2677}}}}, c1 = {x = -1074278952, y = 3960880}, 
+      r1 = 175197512, c2 = {x = 0, y = 1078722560}, r2 = 0}}}
+#14 0x004cbefd in *INT_cairo_fill_preserve (cr=0xa714d48)
+    at /build/buildd/cairo-1.8.8/src/cairo.c:2167
+	status = <value optimized out>
+#15 0x004cbf22 in cairo_fill (cr=0xa714d48)
+    at /build/buildd/cairo-1.8.8/src/cairo.c:2143
+No locals.
+#16 0x003e515f in IA__gdk_pixbuf_render_threshold_alpha (pixbuf=0xa6f18e0, 
+    bitmap=0xa2e1fb0, src_x=0, src_y=0, dest_x=0, dest_y=175200384, 
+    width=-1074278776, height=21049332, alpha_threshold=173749136)
+    at /build/buildd/gtk+2.0-2.18.3/gdk/gdkpixbuf-render.c:77
+	gc = (GdkGC *) 0xa5430f0
+	color = {pixel = 100, red = 19784, green = 2673, blue = 0}
+	x = <value optimized out>
+	y = 100
+	p = <value optimized out>
+	start = 0
+	start_status = <value optimized out>
+	status = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gdk_pixbuf_render_threshold_alpha"
+#17 0x003e6bcc in IA__gdk_region_polygon (points=0xa2e8348, 
+    n_points=174863744, fill_rule=2241406)
+    at /build/buildd/gtk+2.0-2.18.3/gdk/gdkpolyreg-generic.c:466
+	region = (GdkRegion *) 0x0
+	pAET = <value optimized out>
+	y = 175660368
+	iPts = <value optimized out>
+	pWETE = <value optimized out>
+	pSLL = (ScanLineList *) 0x0
+	pts = <value optimized out>
+	pPrevAET = <value optimized out>
+	ET = {ymax = 0, ymin = 100, scanlines = {scanline = 100, 
+    edgelist = 0x64, next = 0x64}}
+	AET = {ymax = 0, bres = {minor_axis = 4530164, d = -1074278776, 
+    m = 21049332, m1 = 173749136, incr1 = 175122336, incr2 = 174932632}, 
+  next = 0x0, back = 0xa5b3390, nextWETE = 0xa1512c0, ClockWise = 0}
+	pETEs = <value optimized out>
+	SLLBlock = {SLLs = {{scanline = -10795, edgelist = 0x1000, 
+      next = 0xbff7cd58}, {scanline = 5101756, edgelist = 0xa714ed4, 
+      next = 0x3800}, {scanline = 25344, edgelist = 0xa731ab8, next = 0x0}, {
+      scanline = 175197512, edgelist = 0xbff7cd78, next = 0x4cc246}, {
+      scanline = 175197908, edgelist = 0x3ff00000, next = 0x3af788}, {
+      scanline = 100, edgelist = 0x451ff4, next = 0xa75e090}, {
+      scanline = -1074278952, edgelist = 0x3c7030, next = 0xa714d48}, {
+      scanline = 0, edgelist = 0x404c0000, next = 0x0}, {
+      scanline = 175197512, edgelist = 0xa715880, next = 0xbff7cdb8}, {
+      scanline = 5029629, edgelist = 0xa714d68, next = 0xa714ed4}, {
+      scanline = -1074278952, edgelist = 0x64, next = 0xa715880}, {
+      scanline = 175197512, edgelist = 0xbff7cdd8, next = 0x4cbf22}, {
+      scanline = 175197512, edgelist = 0x3dbfb0, next = 0x0}, {
+      scanline = 4530164, edgelist = 0x0, next = 0x0}, {
+      scanline = -1074278840, edgelist = 0x3e515f, next = 0xa714d48}, {
+      scanline = 175200384, edgelist = 0x0, next = 0x0}, {
+      scanline = 173289712, edgelist = 0xbff7ce9c, next = 0xbff7ce98}, {
+      scanline = 4530164, edgelist = 0xa2e8348, next = 0xa2e1fb0}, {
+      scanline = 3864456, edgelist = 0xa6f18e0, next = 0xa5430f0}, {
+      scanline = 100, edgelist = 0x0, next = 0x0}, {scanline = 100, 
+      edgelist = 0x64, next = 0xa714d48}, {scanline = 0, edgelist = 0x8, 
+      next = 0x64}, {scanline = 100, edgelist = 0x451ff4, next = 0xa2e8348}, {
+      scanline = 170794928, edgelist = 0xbff7ceb8, next = 0x3e6bcc}, {
+      scanline = 175053024, edgelist = 0xa2e1fb0, next = 0x0}}, next = 0x0}
+	fixWAET = 0
+	FirstPtBlock = {pts = {{x = 5016976, y = 16}, {x = 4, y = 0}, {x = 0, 
+      y = 0}, {x = 0, y = 0}, {x = 0, y = 0}, {x = 2236950, y = 0}, {x = 0, 
+      y = 0}, {x = 0, y = 0}, {x = 0, y = 0}, {x = 175074796, y = 175120564}, 
+    {x = 170807428, y = 0}, {x = 0, y = 0}, {x = 0, y = 0}, {x = 0, y = 0}, {
+      x = 137592, y = 3109792}, {x = 3104756, y = 3109792}, {x = -1074280456, 
+      y = -1074280568}, {x = 2250653, y = 25600}, {x = 0, y = 5517300}, {
+      x = -1074280436, y = -1074280536}, {x = 5130823, y = 175559016}, {
+      x = 173212180, y = -1074280504}, {x = 5517300, y = -1074280436}, {
+      x = 5517300, y = -1074279608}, {x = 5097693, y = -1074280436}, {
+      x = -1074280436, y = 0}, {x = 5097936, y = 5098000}, {x = 5097456, 
+      y = -1074280456}, {x = 135123874, y = 173212180}, {x = 0, 
+      y = -1217264668}, {x = 0, y = -1717986918}, {x = 1069128089, 
+      y = 13668633}, {x = 0, y = 0}, {x = 0, y = -1717986918}, {
+      x = 1069128089, y = -1074279548}, {x = 14336, y = 25344}, {x = 0, 
+      y = 14336}, {x = 25344, y = 14336}, {x = 25344, y = 0}, {x = 1186, 
+      y = 2048}, {x = 175559016, y = 11264}, {x = 0, y = 11264}, {x = 256, 
+      y = 1}, {x = 3862516, y = 11008}, {x = 0, y = 11008}, {x = 256, y = 0}, 
+    {x = 9895733, y = 14080}, {x = 0, y = 14080}, {x = 256, y = 1}, {
+      x = 3862516, y = 11520}, {x = 0, y = 11520}, {x = 256, y = 0}, {
+      x = 172969604, y = 9984}, {x = 256, y = 9984}, {x = 512, y = 1}, {
+      x = 174238996, y = 9728}, {x = 256, y = 9728}, {x = 512, y = 0}, {
+      x = 3483554, y = 11264}, {x = 256, y = 11264}, {x = 512, y = 1}, {
+      x = 3864456, y = 10240}, {x = 256, y = 10240}, {x = 512, y = 0}, {
+      x = 3479327, y = 14080}, {x = 256, y = 14080}, {x = 512, y = 1}, {
+      x = 0, y = 11520}, {x = 256, y = 11520}, {x = 512, y = 0}, {
+      x = 15968639, y = 15360}, {x = 256, y = 15360}, {x = 512, y = 1}, {
+      x = 0, y = 14336}, {x = 256, y = 14336}, {x = 512, y = 0}, {
+      x = 172996936, y = 15872}, {x = 256, y = 15872}, {x = 512, y = 1}, {
+      x = 0, y = 175559016}, {x = 593, y = 100}, {x = 0, y = 0}, {
+      x = 5517300, y = 175203624}, {x = 2, y = -1074279608}, {x = 5172265, 
+      y = 175203624}, {x = 2, y = 170599280}, {x = -1074279676, y = 8960}, {
+      x = 768, y = 0}, {x = 134615562, y = 15104}, {x = 512, y = 15104}, {
+      x = 768, y = 1}, {x = 8, y = 10240}, {x = 512, y = 10240}, {x = 768, 
+      y = 0}, {x = -1074279920, y = 16640}, {x = 512, y = 16640}, {x = 768, 
+      y = 1}, {x = 168334504, y = 15616}, {x = 512, y = -1074279676}, {x = 1, 
+      y = 170599192}, {x = -1074279656, y = 0}, {x = 0, y = 100}, {x = 100, 
+      y = 1}, {x = 12132544, y = 8192}, {x = 768, y = 8192}, {x = 1024, 
+      y = 0}, {x = 51, y = 10240}, {x = 768, y = 10240}, {x = 1024, y = 1}, {
+      x = 13663488, y = 8960}, {x = 768, y = 8960}, {x = 1024, y = 0}, {
+      x = 5114909, y = 11520}, {x = 768, y = 11520}, {x = 1024, y = 1}, {
+      x = 0, y = 10496}, {x = 768, y = 10496}, {x = 1024, y = 0}, {
+      x = -1074279316, y = 13824}, {x = 768, y = 13824}, {x = 1024, y = 1}, {
+      x = 0, y = 11776}, {x = 768, y = 11776}, {x = 1024, y = 0}, {x = 0, 
+      y = 15104}, {x = 768, y = 15104}, {x = 1024, y = 1}, {x = 0, 
+      y = 14080}, {x = 768, y = 14080}, {x = 1024, y = 0}, {x = -1074279300, 
+      y = 16640}, {x = 0, y = 0}, {x = 100, y = 100}, {x = 175578008, y = 0}, 
+    {x = 0, y = 100}, {x = 100, y = 0}, {x = 5086495, y = 100}, {x = 0, 
+      y = -8388608}, {x = 5517300, y = 0}, {x = -1074279548, 
+      y = -1074279400}, {x = 5172810, y = 175203624}, {x = -1074279548, 
+      y = 0}, {x = 0, y = -1074279548}, {x = 0, y = -1074279512}, {
+      x = 5126302, y = 170599204}, {x = -1074279456, y = -1717986918}, {
+      x = 1069128089, y = -1074279512}, {x = 0, y = 0}, {x = 0, y = 25600}, {
+      x = 25600, y = 593}, {x = 1024, y = 175745768}, {x = 0, y = 256}, {
+      x = 11008, y = 0}, {x = 11008, y = 256}, {x = 11264, y = 0}, {
+      x = 11264, y = 256}, {x = 1, y = 0}, {x = 0, y = 25600}, {x = 25600, 
+      y = -8388608}, {x = -8388608, y = 16777215}, {x = 16777215, y = 0}, {
+      x = 0, y = 100}, {x = 100, y = 0}, {x = 0, y = 25600}, {x = 25600, 
+      y = 175203624}, {x = 0, y = -1074279304}, {x = 5157623, y = 175203624}, 
+    {x = 2, y = 170599192}, {x = 175197908, y = 0}, {x = -1717986918, 
+      y = 1069128089}, {x = 0, y = 175197544}, {x = 173785104, 
+      y = -1717986918}, {x = 1069128089, y = -1074279244}, {x = 175197848, 
+      y = -572659994}, {x = 170599192, y = 5517300}, {x = 175197908, 
+      y = -1074279256}, {x = 4530164, y = 175197544}, {x = -1074279244, 
+      y = -1074279016}, {x = 5054150, y = 175203624}, {x = 2, 
+      y = -1074279244}, {x = 175197908, y = 0}, {x = -1717986918, 
+      y = 1069128089}, {x = 0, y = 175197908}, {x = 593, y = -1074279208}, {
+      x = 5101890, y = -1074279224}, {x = 0, y = 0}, {x = 0, y = 0}, {x = 0, 
+      y = 12}, {x = 0, y = 0}, {x = 0, y = 1072693248}, {x = 0, y = 0}, {
+      x = 0, y = 0}, {x = 0, y = 1072693248}, {x = 0, y = 0}, {x = 0, y = 0}, 
+    {x = 1, y = 3}, {x = -589505315, y = 1072487644}, {x = -1145324612, 
+      y = 1072413627}, {x = -1162167621, y = 1072347834}, {x = 0, 
+      y = 1072693248}}, next = 0xdddde6e6}
+	curPtBlock = <value optimized out>
+	tmpPtBlock = <value optimized out>
+	numFullPtBlocks = <value optimized out>
+#18 0x0112d114 in check_preview_change (impl=0xa2e8348)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkfilechooserdefault.c:10510
+	iter = {stamp = 1, user_data = 0x2f73a0, user_data2 = 0x3af788, 
+  user_data3 = 0x451ff4}
+	child_iter = {stamp = 3110752, user_data = 0xa708970, 
+  user_data2 = 0x0, user_data3 = 0xa2e8348}
+	cursor_path = (GtkTreePath *) 0x3da66f
+	new_file = (GFile *) 0xbff7cf18
+	new_display_name = 0xa2e8348 "\230\f.\n\006"
+#19 0x003f01f4 in IA__gdk_screen_get_monitor_at_window (screen=0xa2e8348, 
+    window=0xa6c3580) at /build/buildd/gtk+2.0-2.18.3/gdk/gdkscreen.c:320
+	num_monitors = 0
+	i = -1074278552
+	area = 170820424
+	screen_num = 170820424
+	win_rect = {x = 28, y = 173289712, width = 170820424, 
+  height = 1580938752}
+	__PRETTY_FUNCTION__ = "IA__gdk_screen_get_monitor_at_window"
+#20 0x00413754 in gdk_wm_protocols_filter (xev=0xa2e8348, event=0xa6c3580, 
+    data=0x64) at /build/buildd/gtk+2.0-2.18.3/gdk/x11/gdkevents-x11.c:2256
+	toplevel = <value optimized out>
+	win = (GdkWindow *) 0xa6d4298
+	display = (GdkDisplay *) 0xa2e8348
+	atom = 4047368
+#21 0x003e789f in IA__gdk_region_polygon (points=0xa2e8348, 
+    n_points=-1217103624, fill_rule=3220689064)
+    at /build/buildd/gtk+2.0-2.18.3/gdk/gdkpolyreg-generic.c:499
+	region = (GdkRegion *) 0x100
+	pAET = <value optimized out>
+	y = 172969604
+	iPts = <value optimized out>
+	pWETE = <value optimized out>
+	pSLL = (ScanLineList *) 0x0
+	pts = <value optimized out>
+	pPrevAET = <value optimized out>
+	ET = {ymax = 174863744, ymin = 0, scanlines = {scanline = 0, 
+    edgelist = 0x64, next = 0x64}}
+	AET = {ymax = 170191428, bres = {minor_axis = -1218273704, 
+    d = 493094243, m = 3267458, m1 = 3863740, incr1 = 127, 
+    incr2 = 174859880}, next = 0xa2425a8, back = 0x3, nextWETE = 0xa2e8350, 
+  ClockWise = 175154208}
+	pETEs = <value optimized out>
+	SLLBlock = {SLLs = {{scanline = 4530164, edgelist = 0x2f7760, 
+      next = 0xa708970}, {scanline = 0, edgelist = 0xa2e8348, 
+      next = 0xa2e8348}, {scanline = -1074278632, edgelist = 0x3da66f, 
+      next = 0xa2e834c}, {scanline = 1, edgelist = 0x4, next = 0x451ff4}, {
+      scanline = -1074278552, edgelist = 0xa2e8348, next = 0xbff7cfc8}, {
+      scanline = 4129268, edgelist = 0xbff7cf68, next = 0x0}, {scanline = 0, 
+      edgelist = 0xa70a420, next = 0xbff7cf58}, {scanline = 2250856, 
+      edgelist = 0xbff7cf78, next = 0x451ff4}, {scanline = 170782728, 
+      edgelist = 0x0, next = 0xa2e8348}, {scanline = 174863744, 
+      edgelist = 0x2510, next = 0xa70a420}, {scanline = -1074278520, 
+      edgelist = 0x33b2d4, next = 0x2510}, {scanline = 0, edgelist = 0x2, 
+      next = 0xa2e8348}, {scanline = 173676288, edgelist = 0x0, next = 0x0}, {
+      scanline = 100, edgelist = 0x64, next = 0xa6c3580}, {scanline = 0, 
+      edgelist = 0x3dc208, next = 0xa74c148}, {scanline = 175287216, 
+      edgelist = 0x2510, next = 0x3dc6de}, {scanline = 28, 
+      edgelist = 0xa5430f0, next = 0xa2e8348}, {scanline = 1580938752, 
+      edgelist = 0xa6c3580, next = 0xa70a420}, {scanline = 4128539, 
+      edgelist = 0x451ff4, next = 0xa6d4298}, {scanline = 170820424, 
+      edgelist = 0xbff7cfe8, next = 0x413754}, {scanline = 170820424, 
+      edgelist = 0xa6c3580, next = 0x64}, {scanline = 4530164, 
+      edgelist = 0xa6d4298, next = 0x451ff4}, {scanline = -1074278296, 
+      edgelist = 0x3e789f, next = 0xa2e8348}, {scanline = 174863744, 
+      edgelist = 0x64, next = 0xffffffff}, {scanline = -1218273704, 
+      edgelist = 0xb7629e58, next = 0xb92c20}}, next = 0x808e918}
+	fixWAET = 256
+	FirstPtBlock = {pts = {{x = 512, y = 1}, {x = 174238996, y = 9728}, {
+      x = 256, y = 9728}, {x = 512, y = 0}, {x = 3483554, y = 11264}, {
+      x = 256, y = 11264}, {x = 512, y = 1}, {x = 3864456, y = 10240}, {
+      x = 256, y = 10240}, {x = 512, y = 0}, {x = 3479327, y = 14080}, {
+      x = 256, y = 14080}, {x = 512, y = 1}, {x = 0, y = 11520}, {x = 256, 
+      y = 11520}, {x = 512, y = 0}, {x = 15968639, y = 15360}, {x = 256, 
+      y = 15360}, {x = 512, y = 1}, {x = 0, y = 14336}, {x = 256, y = 14336}, 
+    {x = 512, y = 0}, {x = 172996936, y = 15872}, {x = 256, y = 15872}, {
+      x = 512, y = 1}, {x = 0, y = 175559016}, {x = 593, y = 100}, {x = 0, 
+      y = 0}, {x = 5517300, y = 175203624}, {x = 2, y = -1074279608}, {
+      x = 5172265, y = 175203624}, {x = 2, y = 170599280}, {x = -1074279676, 
+      y = 8960}, {x = 768, y = 0}, {x = 134615562, y = 15104}, {x = 512, 
+      y = 15104}, {x = 768, y = 1}, {x = 8, y = 10240}, {x = 512, y = 10240}, 
+    {x = 768, y = 0}, {x = -1074279920, y = 16640}, {x = 512, y = 16640}, {
+      x = 768, y = 1}, {x = 168334504, y = 15616}, {x = 512, 
+      y = -1074279676}, {x = 1, y = 170599192}, {x = -1074279656, y = 0}, {
+      x = 0, y = 100}, {x = 100, y = 1}, {x = 12132544, y = 8192}, {x = 768, 
+      y = 8192}, {x = 1024, y = 0}, {x = 51, y = 10240}, {x = 768, 
+      y = 10240}, {x = 1024, y = 1}, {x = 13663488, y = 8960}, {x = 768, 
+      y = 8960}, {x = 1024, y = 0}, {x = 5114909, y = 11520}, {x = 768, 
+      y = 11520}, {x = 1024, y = 1}, {x = 0, y = 10496}, {x = 768, 
+      y = 10496}, {x = 1024, y = 0}, {x = -1074279316, y = 13824}, {x = 768, 
+      y = 13824}, {x = 1024, y = 1}, {x = 0, y = 11776}, {x = 768, 
+      y = 11776}, {x = 1024, y = 0}, {x = 0, y = 15104}, {x = 768, 
+      y = 15104}, {x = 1024, y = 1}, {x = 0, y = 14080}, {x = 768, 
+      y = 14080}, {x = 1024, y = 0}, {x = -1074279300, y = 16640}, {x = 0, 
+      y = 0}, {x = 100, y = 100}, {x = 175578008, y = 0}, {x = 0, y = 100}, {
+      x = 100, y = 0}, {x = 5086495, y = 100}, {x = 0, y = -8388608}, {
+      x = 5517300, y = 0}, {x = -1074279548, y = -1074279400}, {x = 5172810, 
+      y = 175203624}, {x = -1074279548, y = 0}, {x = 0, y = -1074279548}, {
+      x = 0, y = -1074279512}, {x = 5126302, y = 170599204}, {
+      x = -1074279456, y = -1717986918}, {x = 1069128089, y = -1074279512}, {
+      x = 0, y = 0}, {x = 0, y = 25600}, {x = 25600, y = 593}, {x = 1024, 
+      y = 175745768}, {x = 0, y = 256}, {x = 11008, y = 0}, {x = 11008, 
+      y = 256}, {x = 11264, y = 0}, {x = 11264, y = 256}, {x = 1, y = 0}, {
+      x = 0, y = 25600}, {x = 25600, y = -8388608}, {x = -8388608, 
+      y = 16777215}, {x = 16777215, y = 0}, {x = 0, y = 100}, {x = 100, 
+      y = 0}, {x = 0, y = 25600}, {x = 25600, y = 175203624}, {x = 0, 
+      y = -1074279304}, {x = 5157623, y = 175203624}, {x = 2, y = 170599192}, 
+    {x = 175197908, y = 0}, {x = -1717986918, y = 1069128089}, {x = 0, 
+      y = 175197544}, {x = 173785104, y = -1717986918}, {x = 1069128089, 
+      y = -1074279244}, {x = 175197848, y = -572659994}, {x = 170599192, 
+      y = 5517300}, {x = 175197908, y = -1074279256}, {x = 4530164, 
+      y = 175197544}, {x = -1074279244, y = -1074279016}, {x = 5054150, 
+      y = 175203624}, {x = 2, y = -1074279244}, {x = 175197908, y = 0}, {
+      x = -1717986918, y = 1069128089}, {x = 0, y = 175197908}, {x = 593, 
+      y = -1074279208}, {x = 5101890, y = -1074279224}, {x = 0, y = 0}, {
+      x = 0, y = 0}, {x = 0, y = 12}, {x = 0, y = 0}, {x = 0, 
+      y = 1072693248}, {x = 0, y = 0}, {x = 0, y = 0}, {x = 0, 
+      y = 1072693248}, {x = 0, y = 0}, {x = 0, y = 0}, {x = 1, y = 3}, {
+      x = -589505315, y = 1072487644}, {x = -1145324612, y = 1072413627}, {
+      x = -1162167621, y = 1072347834}, {x = 0, y = 1072693248}, {
+      x = -572659994, y = -10795}, {x = 4096, y = -1074279080}, {x = 5101756, 
+      y = 175197908}, {x = 14336, y = 25344}, {x = 175315640, y = 0}, {
+      x = 175197512, y = -1074279048}, {x = 5030470, y = 175197908}, {
+      x = 1072693248, y = 3864456}, {x = 100, y = 4530164}, {x = 175497360, 
+      y = -1074278952}, {x = 3960880, y = 175197512}, {x = 0, 
+      y = 1078722560}, {x = 0, y = 175197512}, {x = 175200384, 
+      y = -1074278984}, {x = 5029629, y = 175197544}, {x = 175197908, 
+      y = -1074278952}, {x = 100, y = 175200384}, {x = 175197512, 
+      y = -1074278952}, {x = 5029666, y = 175197512}, {x = 4046768, y = 0}, {
+      x = 4530164, y = 0}, {x = 0, y = -1074278840}, {x = 4084063, 
+      y = 175197512}, {x = 175200384, y = 0}, {x = 0, y = 173289712}, {
+      x = -1074278756, y = -1074278760}, {x = 4530164, y = 170820424}, {
+      x = 170794928, y = 3864456}, {x = 175053024, y = 173289712}, {x = 100, 
+      y = 0}, {x = 0, y = 100}, {x = 100, y = 175197512}, {x = 0, y = 8}, {
+      x = 100, y = 100}, {x = 4530164, y = 170820424}, {x = 170794928, 
+      y = -1074278728}, {x = 4090828, y = 175053024}, {x = 170794928, y = 0}, 
+    {x = 0, y = 0}, {x = 4530164, y = -1074278776}, {x = 21049332, 
+      y = 173749136}, {x = 175122336, y = 174932632}, {x = 0, y = 173749136}, 
+    {x = 169153216, y = 0}, {x = 0, y = 100}, {x = 100, y = 100}, {x = 100, 
+      y = 12}, {x = 0, y = 4090283}, {x = 21049332, y = -1074278552}, {
+      x = 173749136, y = -1074278632}, {x = 18010388, y = 170820424}, {
+      x = 174863744, y = 2241406}, {x = 15844226, y = 170805780}, {x = 1, 
+      y = 3109792}}, next = 0x3af788}
+	curPtBlock = <value optimized out>
+	tmpPtBlock = <value optimized out>
+	numFullPtBlocks = <value optimized out>
+#22 0x003eba70 in gdk_rgb_convert_555_br (image_info=0xa2e8348, image=0x1, 
+    x0=11761988, y0=12140088, width=-1074278180, height=511, 
+    buf=0xa03d9e8 "", rowstride=-1217073472, x_align=174387564, 
+    y_align=136458496, cmap=0xd9eebb)
+    at /build/buildd/gtk+2.0-2.18.3/gdk/gdkrgb.c:1976
+	x = <value optimized out>
+	y = 2
+	obuf = (guchar *) 0x1 <Address 0x1 out of bounds>
+	bpl = 12140088
+	bptr = (const guchar *) 0xbff7d09c "ôÏ·"
+	bp2 = (const guchar *) 0x0
+	r = <value optimized out>
+	g = <value optimized out>
+	b = 80 'P'
+#23 0x00ae9c8e in ?? ()
+No symbol table info available.
+#24 0x080dc0d0 in PyEval_EvalFrameEx (f=0x1, throwflag=0)
+    at ../Python/ceval.c:3706
+	sp = (PyObject **) 0xa62c2a0
+	stack_pointer = <value optimized out>
+	next_instr = (unsigned char *) 0xb77478f8 "\001q\215"
+	opcode = <value optimized out>
+	oparg = <value optimized out>
+	why = 172928972
+	err = <value optimized out>
+	x = <value optimized out>
+	v = <value optimized out>
+	w = <value optimized out>
+	u = <value optimized out>
+	t = <value optimized out>
+	stream = <value optimized out>
+	freevars = (PyObject **) 0xa62c29c
+	retval = (PyObject *) 0x0
+	tstate = (PyThreadState *) 0xa03d050
+	co = (PyCodeObject *) 0xb772ea40
+	instr_ub = -1
+	instr_lb = 0
+	instr_prev = <value optimized out>
+	first_instr = (unsigned char *) 0xb7747874 "|"
+	names = (PyObject *) 0xb772782c
+	consts = (PyObject *) 0xb772a62c
+#25 0x080dd384 in PyEval_EvalFrameEx (f=0xa6f719c, throwflag=0)
+    at ../Python/ceval.c:3792
+	sp = (PyObject **) 0xa6f72e4
+	stack_pointer = <value optimized out>
+	next_instr = (unsigned char *) 0xa0bffe9 "\001t\027"
+	opcode = <value optimized out>
+	oparg = <value optimized out>
+	why = 172981860
+	err = <value optimized out>
+	x = <value optimized out>
+	v = <value optimized out>
+	w = <value optimized out>
+	u = <value optimized out>
+	t = <value optimized out>
+	stream = <value optimized out>
+	freevars = (PyObject **) 0xa6f72e0
+	retval = (PyObject *) 0x0
+	tstate = (PyThreadState *) 0xa03d050
+	co = (PyCodeObject *) 0xb7708218
+	instr_ub = -1
+	instr_lb = 0
+	instr_prev = <value optimized out>
+	first_instr = (unsigned char *) 0xa0bfbe4 "|"
+	names = (PyObject *) 0xb77485cc
+	consts = (PyObject *) 0xb7748644
+#26 0x080dddf2 in PyEval_EvalCodeEx (co=0xb7708218, globals=0xb77641c4, 
+    locals=0x0, args=0xa64b798, argcount=1, kws=0x0, kwcount=0, defs=0x0, 
+    defcount=0, closure=0x0) at ../Python/ceval.c:2968
+	f = (PyFrameObject *) 0xa6f719c
+	retval = <value optimized out>
+	freevars = (PyObject **) 0xa6f72e0
+	tstate = (PyThreadState *) 0xa03d050
+	x = <value optimized out>
+	u = <value optimized out>
+#27 0x0816016c in function_call (func=0xa504454, arg=0xa64b78c, kw=0x0)
+    at ../Objects/funcobject.c:524
+	result = <value optimized out>
+	argdefs = <value optimized out>
+	d = (PyObject **) 0x0
+	nk = <value optimized out>
+	nd = 0
+#28 0x0806120a in PyObject_Call (func=0xa504454, arg=0xa64b78c, kw=0x0)
+    at ../Objects/abstract.c:2492
+	result = (PyObject *) 0x0
+	call = (ternaryfunc) 0x81600d0 <function_call>
+#29 0x080684ac in instancemethod_call (func=0xa64689c, arg=0xa64b78c, kw=0x0)
+    at ../Objects/classobject.c:2579
+	self = (PyObject *) 0xa63f874
+	klass = (PyObject *) 0x0
+	result = <value optimized out>
+#30 0x0806120a in PyObject_Call (func=0xa64689c, arg=0xb773202c, kw=0x0)
+    at ../Objects/abstract.c:2492
+	result = (PyObject *) 0xb773202c
+	call = (ternaryfunc) 0x8068350 <instancemethod_call>
+#31 0x080d6ef2 in PyEval_CallObjectWithKeywords (func=0xa64689c, 
+    arg=0xb773202c, kw=0x0) at ../Python/ceval.c:3575
+	result = <value optimized out>
+#32 0x080612a0 in PyObject_CallObject (o=0xa64689c, a=0xb773202c)
+    at ../Objects/abstract.c:2480
+No locals.
+#33 0x0077ee0e in _pyglib_handler_marshal (user_data=0xa4efdac)
+    at /build/buildd/pygobject-2.18.0/glib/pyglib.c:562
+	ret = <value optimized out>
+	res = <value optimized out>
+	state = PyGILState_LOCKED
+	__PRETTY_FUNCTION__ = "_pyglib_handler_marshal"
+#34 0x0033352c in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#35 0x00332e78 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#36 0x00336720 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#37 0x00336b8f in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#38 0x0112d3a9 in bookmarks_check_add_sensitivity (impl=0xb956ac)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkfilechooserdefault.c:2994
+	selection = <value optimized out>
+	data = {impl = 0x3aef01, 
+  tip = 0x1b917c4 <Address 0x1b917c4 out of bounds>}
+	num_selected = 170827376
+	all_folders = 0
+	active = <value optimized out>
+	tip = (gchar *) 0xa702758 ""
+#39 0x00acc028 in ?? ()
+No symbol table info available.
+#40 0x080dbfd5 in PyEval_EvalFrameEx (f=0xb956ac, throwflag=0)
+    at ../Python/ceval.c:3690
+	sp = (PyObject **) 0xa6cbc8c
+	stack_pointer = <value optimized out>
+	next_instr = (unsigned char *) 0xa702758 ""
+	opcode = <value optimized out>
+	oparg = <value optimized out>
+	why = 168933580
+	err = <value optimized out>
+	x = <value optimized out>
+	v = <value optimized out>
+	w = <value optimized out>
+	u = <value optimized out>
+	t = <value optimized out>
+	stream = <value optimized out>
+	freevars = (PyObject **) 0xa6cbc88
+	retval = (PyObject *) 0x0
+	tstate = (PyThreadState *) 0xa03d050
+	co = (PyCodeObject *) 0xb772e848
+	instr_ub = -1
+	instr_lb = 0
+	instr_prev = <value optimized out>
+	first_instr = (unsigned char *) 0xb7629b24 "t"
+	names = (PyObject *) 0xb772a3ac
+	consts = (PyObject *) 0xb772a24c
+#41 0x080dd384 in PyEval_EvalFrameEx (f=0xa70b38c, throwflag=0)
+    at ../Python/ceval.c:3792
+	sp = (PyObject **) 0xa70b4e0
+	stack_pointer = <value optimized out>
+	next_instr = (unsigned char *) 0xa3b22e4 "\001WnX"
+	opcode = <value optimized out>
+	oparg = <value optimized out>
+	why = 172981580
+	err = <value optimized out>
+	x = <value optimized out>
+	v = <value optimized out>
+	w = <value optimized out>
+	u = <value optimized out>
+	t = <value optimized out>
+	stream = <value optimized out>
+	freevars = (PyObject **) 0xa70b4dc
+	retval = (PyObject *) 0x0
+	tstate = (PyThreadState *) 0xa03d050
+	co = (PyCodeObject *) 0xa3c3968
+	instr_ub = -1
+	instr_lb = 0
+	instr_prev = <value optimized out>
+	first_instr = (unsigned char *) 0xa3b22a4 "d\001"
+	names = (PyObject *) 0xa3c392c
+	consts = (PyObject *) 0xa40a72c
+#42 0x080dd384 in PyEval_EvalFrameEx (f=0xa52c124, throwflag=0)
+    at ../Python/ceval.c:3792
+	sp = (PyObject **) 0xa52c278
+	stack_pointer = <value optimized out>
+	next_instr = (unsigned char *) 0xa44d8f9 "\001n\233"
+	opcode = <value optimized out>
+	oparg = <value optimized out>
+	why = 172251932
+	err = <value optimized out>
+	x = <value optimized out>
+	v = <value optimized out>
+	w = <value optimized out>
+	u = <value optimized out>
+	t = <value optimized out>
+	stream = <value optimized out>
+	freevars = (PyObject **) 0xa52c270
+	retval = (PyObject *) 0x0
+	tstate = (PyThreadState *) 0xa03d050
+	co = (PyCodeObject *) 0xa39fb18
+	instr_ub = -1
+	instr_lb = 0
+	instr_prev = <value optimized out>
+	first_instr = (unsigned char *) 0xa44d81c "|"
+	names = (PyObject *) 0xa4093e4
+	consts = (PyObject *) 0xa39d1bc
+#43 0x080dd384 in PyEval_EvalFrameEx (f=0xa525eac, throwflag=0)
+    at ../Python/ceval.c:3792
+	sp = (PyObject **) 0xa525ffc
+	stack_pointer = <value optimized out>
+	next_instr = (unsigned char *) 0xa34ba33 "\001d\002"
+	opcode = <value optimized out>
+	oparg = <value optimized out>
+	why = 172251484
+	err = <value optimized out>
+	x = <value optimized out>
+	v = <value optimized out>
+	w = <value optimized out>
+	u = <value optimized out>
+	t = <value optimized out>
+	stream = <value optimized out>
+	freevars = (PyObject **) 0xa525ff8
+	retval = (PyObject *) 0x0
+	tstate = (PyThreadState *) 0xa03d050
+	co = (PyCodeObject *) 0xa3c3a40
+	instr_ub = -1
+	instr_lb = 0
+	instr_prev = <value optimized out>
+	first_instr = (unsigned char *) 0xa34b9f4 "|\002"
+	names = (PyObject *) 0xa408a1c
+	consts = (PyObject *) 0xa3c0cfc
+#44 0x080dddf2 in PyEval_EvalCodeEx (co=0xa3c3a40, globals=0xa40946c, 
+    locals=0x0, args=0xa0a5c48, argcount=1, kws=0xa0a5c4c, kwcount=0, 
+    defs=0xa43c818, defcount=2, closure=0x0) at ../Python/ceval.c:2968
+	f = (PyFrameObject *) 0xa43c820
+	retval = <value optimized out>
+	freevars = (PyObject **) 0xa525ff8
+	tstate = (PyThreadState *) 0xa03d050
+	x = <value optimized out>
+	u = <value optimized out>
+#45 0x080dc1b4 in PyEval_EvalFrameEx (f=0xa0a5b0c, throwflag=0)
+    at ../Python/ceval.c:3802
+	sp = (PyObject **) 0xa0a5c4c
+	stack_pointer = <value optimized out>
+	next_instr = (unsigned char *) 0xb76f8665 "\001n\001"
+	opcode = <value optimized out>
+	oparg = <value optimized out>
+	why = 172251092
+	err = <value optimized out>
+	x = <value optimized out>
+	v = <value optimized out>
+	w = <value optimized out>
+	u = <value optimized out>
+	t = <value optimized out>
+	stream = <value optimized out>
+	freevars = (PyObject **) 0xa0a5c44
+	retval = (PyObject *) 0x0
+	tstate = (PyThreadState *) 0xa03d050
+	co = (PyCodeObject *) 0xb771aba8
+	instr_ub = -1
+	instr_lb = 0
+	instr_prev = <value optimized out>
+	first_instr = (unsigned char *) 0xb76f85a4 "d"
+	names = (PyObject *) 0xb773a6ac
+	consts = (PyObject *) 0xb771d10c
+#46 0x080dddf2 in PyEval_EvalCodeEx (co=0xb771aba8, globals=0xb77641c4, 
+    locals=0xb77641c4, args=0x0, argcount=0, kws=0x0, kwcount=0, defs=0x0, 
+    defcount=0, closure=0x0) at ../Python/ceval.c:2968
+	f = (PyFrameObject *) 0xbff7e06c
+	retval = <value optimized out>
+	freevars = (PyObject **) 0xa0a5c44
+	tstate = (PyThreadState *) 0xa03d050
+	x = <value optimized out>
+	u = <value optimized out>
+#47 0x080ddef7 in PyEval_EvalCode (co=0xb771aba8, globals=0xb77641c4, 
+    locals=0xb77641c4) at ../Python/ceval.c:522
+No locals.
+#48 0x080faa1f in PyRun_FileExFlags (fp=0xa057af8, 
+    filename=0xbff7eb7d "/usr/share/screenlets/RingSensors/RingSensorsScreenlet.py", start=257, globals=0xb77641c4, locals=0xb77641c4, closeit=1, 
+    flags=0xbff7e06c) at ../Python/pythonrun.c:1335
+	ret = <value optimized out>
+	mod = <value optimized out>
+	arena = (PyArena *) 0xa04b120
+#49 0x080fac12 in PyRun_SimpleFileExFlags (fp=0xa057af8, 
+    filename=0xbff7eb7d "/usr/share/screenlets/RingSensors/RingSensorsScreenlet.py", closeit=1, flags=0xbff7e06c) at ../Python/pythonrun.c:931
+	m = <value optimized out>
+	d = (PyObject *) 0xb77641c4
+	v = <value optimized out>
+	ext = <value optimized out>
+	set_file_name = 1
+	ret = <value optimized out>
+#50 0x0805c8d8 in Py_Main (argc=3, argv=0xbff7e154) at ../Modules/main.c:599
+	c = <value optimized out>
+	sts = 0
+	command = 0x0
+	filename = 0x6 <Address 0x6 out of bounds>
+	module = 0x0
+	fp = (FILE *) 0xa057af8
+	p = <value optimized out>
+	unbuffered = 0
+	skipfirstline = 0
+	stdin_is_interactive = 0
+	help = -1074271363
+	version = 0
+	saw_unbuffered_flag = 1
+	cf = {cf_flags = 0}
+#51 0x0805baeb in main (argc=3, argv=0xbff7e154) at ../Modules/python.c:23
+No locals.

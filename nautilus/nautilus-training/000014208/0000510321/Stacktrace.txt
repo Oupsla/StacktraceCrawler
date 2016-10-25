@@ -1,0 +1,263 @@
+#0  IA__g_type_check_instance_cast (type_instance=0x18d1470, iface_type=25679728) at /build/buildd/glib2.0-2.23.1/gobject/gtype.c:3933
+        node = <value optimized out>
+        iface = <value optimized out>
+        is_instantiatable = <value optimized out>
+#1  0x00007ff3a698869c in ?? () from /usr/lib/libappindicator.so.0
+No symbol table info available.
+#2  0x00007ff3a43d993e in IA__g_closure_invoke (closure=0x18bdd40, return_value=0x0, n_param_values=2, param_values=0x1811f50, invocation_hint=0x7fff1a4cd0e0) at /build/buildd/glib2.0-2.23.1/gobject/gclosure.c:767
+        marshal = 0x65766973736170
+        marshal_data = 0x0
+        __PRETTY_FUNCTION__ = "IA__g_closure_invoke"
+#3  0x00007ff3a43efbf6 in signal_emit_unlocked_R (node=0x1881630, detail=<value optimized out>, instance=<value optimized out>, emission_return=<value optimized out>, instance_and_params=<value optimized out>) at /build/buildd/glib2.0-2.23.1/gobject/gsignal.c:3247
+        tmp = 0x7ff3a5d0f870
+        handler = 0x7ff388051350
+        accumulator = 0x0
+        emission = {
+          next = 0x7fff1a4cd4f0, 
+          instance = 0x17c2e80, 
+          ihint = {
+            signal_id = 492, 
+            detail = 0, 
+            run_type = G_SIGNAL_RUN_FIRST
+          }, 
+          state = EMISSION_RUN, 
+          chain_type = 4
+        }
+        class_closure = 0x18af640
+        handler_list = 0x141fc00
+        return_accu = <value optimized out>
+        accu = {
+          g_type = 0, 
+          data = {{
+              v_int = 0, 
+              v_uint = 0, 
+              v_long = 0, 
+              v_ulong = 0, 
+              v_int64 = 0, 
+              v_uint64 = 0, 
+              v_float = 0, 
+              v_double = 0, 
+              v_pointer = 0x0
+            }, {
+              v_int = 0, 
+              v_uint = 0, 
+              v_long = 0, 
+              v_ulong = 0, 
+              v_int64 = 0, 
+              v_uint64 = 0, 
+              v_float = 0, 
+              v_double = 0, 
+              v_pointer = 0x0
+            }}
+        }
+        signal_id = 492
+        max_sequential_handler_number = <value optimized out>
+        return_value_altered = 1
+#4  0x00007ff3a43f1039 in IA__g_signal_emit_valist (instance=0x17c2e80, signal_id=<value optimized out>, detail=0, var_args=0x7fff1a4cd2d0) at /build/buildd/glib2.0-2.23.1/gobject/gsignal.c:2980
+        signal_return_type = 4
+        param_values = <value optimized out>
+        node = 0x1881630
+        i = <value optimized out>
+        n_params = <value optimized out>
+        __PRETTY_FUNCTION__ = "IA__g_signal_emit_valist"
+#5  0x00007ff3a43f15d3 in IA__g_signal_emit (instance=0x18d1470, signal_id=25679728, detail=2282432512) at /build/buildd/glib2.0-2.23.1/gobject/gsignal.c:3037
+        var_args = {{
+            gp_offset = 32, 
+            fp_offset = 48, 
+            overflow_arg_area = 0x7fff1a4cd3b0, 
+            reg_save_area = 0x7fff1a4cd2f0
+          }}
+#6  0x00000000004fc6f6 in update_status_icon_and_window () at nautilus-progress-info.c:338
+No locals.
+#7  0x00007ff3a43d993e in IA__g_closure_invoke (closure=0x1628580, return_value=0x0, n_param_values=1, param_values=0xd73820, invocation_hint=0x7fff1a4cd500) at /build/buildd/glib2.0-2.23.1/gobject/gclosure.c:767
+        marshal = 0x65766973736170
+        marshal_data = 0x0
+        __PRETTY_FUNCTION__ = "IA__g_closure_invoke"
+#8  0x00007ff3a43efbf6 in signal_emit_unlocked_R (node=0x1625f90, detail=<value optimized out>, instance=<value optimized out>, emission_return=<value optimized out>, instance_and_params=<value optimized out>) at /build/buildd/glib2.0-2.23.1/gobject/gsignal.c:3247
+        tmp = 0x7ff3a5d0f870
+        handler = 0x7ff388061d60
+        accumulator = 0x0
+        emission = {
+          next = 0x0, 
+          instance = 0x18088f0, 
+          ihint = {
+            signal_id = 482, 
+            detail = 0, 
+            run_type = G_SIGNAL_RUN_FIRST
+          }, 
+          state = EMISSION_RUN, 
+          chain_type = 4
+        }
+        class_closure = 0x0
+        handler_list = 0x7ff388061d60
+        return_accu = <value optimized out>
+        accu = {
+          g_type = 0, 
+          data = {{
+              v_int = 0, 
+              v_uint = 0, 
+              v_long = 0, 
+              v_ulong = 0, 
+              v_int64 = 0, 
+              v_uint64 = 0, 
+              v_float = 0, 
+              v_double = 0, 
+              v_pointer = 0x0
+            }, {
+              v_int = 0, 
+              v_uint = 0, 
+              v_long = 0, 
+              v_ulong = 0, 
+              v_int64 = 0, 
+              v_uint64 = 0, 
+              v_float = 0, 
+              v_double = 0, 
+              v_pointer = 0x0
+            }}
+        }
+        signal_id = 482
+        max_sequential_handler_number = <value optimized out>
+        return_value_altered = 0
+#9  0x00007ff3a43f1039 in IA__g_signal_emit_valist (instance=0x18088f0, signal_id=<value optimized out>, detail=0, var_args=0x7fff1a4cd6f0) at /build/buildd/glib2.0-2.23.1/gobject/gsignal.c:2980
+        signal_return_type = 4
+        param_values = <value optimized out>
+        node = 0x1625f90
+        i = <value optimized out>
+        n_params = <value optimized out>
+        __PRETTY_FUNCTION__ = "IA__g_signal_emit_valist"
+#10 0x00007ff3a43f15d3 in IA__g_signal_emit (instance=0x18d1470, signal_id=25679728, detail=2282432512) at /build/buildd/glib2.0-2.23.1/gobject/gsignal.c:3037
+        var_args = {{
+            gp_offset = 24, 
+            fp_offset = 48, 
+            overflow_arg_area = 0x7fff1a4cd7d0, 
+            reg_save_area = 0x7fff1a4cd710
+          }}
+#11 0x00000000004fb572 in idle_callback (data=0x18088f0) at nautilus-progress-info.c:718
+        start_at_idle = 0
+        finish_at_idle = 1
+        changed_at_idle = 0
+        progress_at_idle = 0
+        source = <value optimized out>
+        __PRETTY_FUNCTION__ = "idle_callback"
+#12 0x00007ff3a3cfed4e in g_main_dispatch (context=0xab90a0) at /build/buildd/glib2.0-2.23.1/glib/gmain.c:1960
+        dispatch = 0x7ff3a3cfcf10 <g_idle_dispatch>
+        user_data = 0x18088f0
+        callback = 0x4fb350 <idle_callback>
+        cb_funcs = 0x7ff3a3f895f0
+        cb_data = 0x1876bc0
+        current_source_link = {
+          data = 0x187f0d0, 
+          next = 0x0
+        }
+        source = 0x187f0d0
+        current = 0xb15c50
+        i = 1
+#13 IA__g_main_context_dispatch (context=0xab90a0) at /build/buildd/glib2.0-2.23.1/glib/gmain.c:2513
+No locals.
+#14 0x00007ff3a3d02718 in g_main_context_iterate (context=0xab90a0, block=<value optimized out>, dispatch=<value optimized out>, self=<value optimized out>) at /build/buildd/glib2.0-2.23.1/glib/gmain.c:2591
+        max_priority = 200
+        timeout = 0
+        some_ready = 1
+        nfds = 15
+        allocated_nfds = -1546587360
+        fds = <value optimized out>
+        __PRETTY_FUNCTION__ = "g_main_context_iterate"
+#15 0x00007ff3a3d02b75 in IA__g_main_loop_run (loop=0xdcc830) at /build/buildd/glib2.0-2.23.1/glib/gmain.c:2799
+        self = 0xa72010
+        __PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#16 0x00007ff3a55e6a37 in IA__gtk_main () at /build/buildd/gtk+2.0-2.19.3/gtk/gtkmain.c:1219
+        tmp_list = 0xb38540
+        functions = 0x0
+        init = 0x0
+        loop = <value optimized out>
+#17 0x0000000000444344 in main (argc=1, argv=0x7fff1a4cdd88) at nautilus-main.c:583
+        kill_shell = 0
+        no_default_window = 1
+        browser_window = 0
+        no_desktop = 0
+        version = 0
+        autostart_mode = 1
+        autostart_id = <value optimized out>
+        geometry = 0x0
+        remaining = 0x0
+        perform_self_check = 0
+        application = <value optimized out>
+        context = <value optimized out>
+        file = 0x1
+        uri = <value optimized out>
+        uris = 0x0
+        uris_array = <value optimized out>
+        error = 0x0
+        options = {{
+            long_name = 0x550d4b "check", 
+            short_name = 99 'c', 
+            flags = 0, 
+            arg = G_OPTION_ARG_NONE, 
+            arg_data = 0x7fff1a4cdc78, 
+            description = 0x550dd0 "Perform a quick set of self-check tests.", 
+            arg_description = 0x0
+          }, {
+            long_name = 0x550c81 "version", 
+            short_name = 0 '\000', 
+            flags = 0, 
+            arg = G_OPTION_ARG_NONE, 
+            arg_data = 0x7fff1a4cdc7c, 
+            description = 0x550e00 "Show the version of the program.", 
+            arg_description = 0x0
+          }, {
+            long_name = 0x55501c "geometry", 
+            short_name = 103 'g', 
+            flags = 0, 
+            arg = G_OPTION_ARG_STRING, 
+            arg_data = 0x7fff1a4cdc70, 
+            description = 0x550e28 "Create the initial window with the given geometry.", 
+            arg_description = 0x550c89 "GEOMETRY"
+          }, {
+            long_name = 0x550c92 "no-default-window", 
+            short_name = 110 'n', 
+            flags = 0, 
+            arg = G_OPTION_ARG_NONE, 
+            arg_data = 0x7fff1a4cdc88, 
+            description = 0x550e60 "Only create windows for explicitly specified URIs.", 
+            arg_description = 0x0
+          }, {
+            long_name = 0x550ca4 "no-desktop", 
+            short_name = 0 '\000', 
+            flags = 0, 
+            arg = G_OPTION_ARG_NONE, 
+            arg_data = 0x7fff1a4cdc80, 
+            description = 0x550e98 "Do not manage the desktop (ignore the preference set in the preferences dialog).", 
+            arg_description = 0x0
+          }, {
+            long_name = 0x54d560 "browser", 
+            short_name = 0 '\000', 
+            flags = 0, 
+            arg = G_OPTION_ARG_NONE, 
+            arg_data = 0x7fff1a4cdc84, 
+            description = 0x550caf "open a browser window.", 
+            arg_description = 0x0
+          }, {
+            long_name = 0x573471 "quit", 
+            short_name = 113 'q', 
+            flags = 0, 
+            arg = G_OPTION_ARG_NONE, 
+            arg_data = 0x7fff1a4cdc8c, 
+            description = 0x550cc6 "Quit Nautilus.", 
+            arg_description = 0x0
+          }, {
+            long_name = 0x55678f "", 
+            short_name = 0 '\000', 
+            flags = 0, 
+            arg = G_OPTION_ARG_STRING_ARRAY, 
+            arg_data = 0x7fff1a4cdc68, 
+            description = 0x0, 
+            arg_description = 0x550cd5 "[URI...]"
+          }, {
+            long_name = 0x0, 
+            short_name = 0 '\000', 
+            flags = 0, 
+            arg = G_OPTION_ARG_NONE, 
+            arg_data = 0x0, 
+            description = 0x0, 
+            arg_description = 0x0
+          }}

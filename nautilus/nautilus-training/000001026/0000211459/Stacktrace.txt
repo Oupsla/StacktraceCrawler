@@ -1,0 +1,12 @@
+#0  0xb78a5275 in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+#1  0x080fc2b4 in ?? ()
+#2  0x00006083 in ?? ()
+#3  0xb78a42eb in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+#4  0xb78dd2a8 in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+#5  0xbff7c6b8 in ?? ()
+#6  0x080b8ae0 in ?? ()
+#7  0xbff7c558 in ?? ()
+#8  0xb789b298 in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+#9  0x080ec860 in ?? ()
+#10 0x0000002f in ?? ()
+#11 0x00000000 in ?? ()

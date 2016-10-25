@@ -1,0 +1,110 @@
+#0  g_logv (log_domain=0x7fd4e4d71e86 "Gdk", log_level=<optimized out>, format=0x7fd4e4d7c647 "%s", args1=0x7fff42dc2ab8) at /build/buildd/glib2.0-2.31.10/./glib/gmessages.c:765
+        domain = 0x0
+        data = <optimized out>
+        depth = 0
+        log_func = <optimized out>
+        domain_fatal_mask = <optimized out>
+        masquerade_fatal = <optimized out>
+        test_level = <optimized out>
+        was_fatal = 0
+        was_recursion = 0
+        i = <optimized out>
+#1  0x00007fd4e2ed9d12 in g_log (log_domain=<optimized out>, log_level=<optimized out>, format=<optimized out>) at /build/buildd/glib2.0-2.31.10/./glib/gmessages.c:792
+        args = {{gp_offset = 24, fp_offset = 48, overflow_arg_area = 0x7fff42dc2b90, reg_save_area = 0x7fff42dc2ad0}}
+#2  0x00007fd4e4d51823 in _gdk_x11_display_error_event (display=<optimized out>, error=<optimized out>) at /build/buildd/gtk+3.0-3.3.8/./gdk/x11/gdkdisplay-x11.c:2396
+        buf = "BadDrawable (invalid Pixmap or Window parameter)", '\000' <repeats 15 times>
+        msg = <optimized out>
+        display_x11 = <optimized out>
+        tmp_list = <optimized out>
+        ignore = 0
+#3  0x00007fd4e4d5e5a7 in gdk_x_error (error=0x7fff42dc2c60, xdisplay=<optimized out>) at /build/buildd/gtk+3.0-3.3.8/./gdk/x11/gdkmain-x11.c:312
+        error_display = 0x1d29000
+        manager = <optimized out>
+        displays = 0x0
+#4  gdk_x_error (xdisplay=<optimized out>, error=0x7fff42dc2c60) at /build/buildd/gtk+3.0-3.3.8/./gdk/x11/gdkmain-x11.c:275
+No locals.
+#5  0x00007fd4e61cc07f in _XError (dpy=0x1d1b7e0, rep=<optimized out>) at ../../src/XlibInt.c:1583
+        rtn_val = <optimized out>
+        event = {type = 0, xany = {type = 0, serial = 30521312, send_event = 44040193, display = 0x22c, window = 33854729}, xkey = {type = 0, serial = 30521312, send_event = 44040193, display = 0x22c, window = 33854729, root = 30530856, subwindow = 140734315113728, time = 140552306347292, x = 559, y = 0, x_root = -507538172, y_root = 32724, state = 3, keycode = 65537, same_screen = 1121725896}, xbutton = {type = 0, serial = 30521312, send_event = 44040193, display = 0x22c, window = 33854729, root = 30530856, subwindow = 140734315113728, time = 140552306347292, x = 559, y = 0, x_root = -507538172, y_root = 32724, state = 3, button = 65537, same_screen = 1121725896}, xmotion = {type = 0, serial = 30521312, send_event = 44040193, display = 0x22c, window = 33854729, root = 30530856, subwindow = 140734315113728, time = 140552306347292, x = 559, y = 0, x_root = -507538172, y_root = 32724, state = 3, is_hint = 1 '\001', same_screen = 1121725896}, xcrossing = {type = 0, serial = 30521312, send_event = 44040193, display = 0x22c, window = 33854729, root = 30530856, subwindow = 140734315113728, time = 140552306347292, x = 559, y = 0, x_root = -507538172, y_root = 32724, mode = 3, detail = 65537, same_screen = 1121725896, focus = 32767, state = 559}, xfocus = {type = 0, serial = 30521312, send_event = 44040193, display = 0x22c, window = 33854729, mode = 30530856, detail = 0}, xexpose = {type = 0, serial = 30521312, send_event = 44040193, display = 0x22c, window = 33854729, x = 30530856, y = 0, width = 1121725696, height = 32767, count = -498414308}, xgraphicsexpose = {type = 0, serial = 30521312, send_event = 44040193, display = 0x22c, drawable = 33854729, x = 30530856, y = 0, width = 1121725696, height = 32767, count = -498414308, major_code = 32724, minor_code = 559}, xnoexpose = {type = 0, serial = 30521312, send_event = 44040193, display = 0x22c, drawable = 33854729, major_code = 30530856, minor_code = 0}, xvisibility = {type = 0, serial = 30521312, send_event = 44040193, display = 0x22c, window = 33854729, state = 30530856}, xcreatewindow = {type = 0, serial = 30521312, send_event = 44040193, display = 0x22c, parent = 33854729, window = 30530856, x = 1121725696, y = 32767, width = -498414308, height = 32724, border_width = 559, override_redirect = 0}, xdestroywindow = {type = 0, serial = 30521312, send_event = 44040193, display = 0x22c, event = 33854729, window = 30530856}, xunmap = {type = 0, serial = 30521312, send_event = 44040193, display = 0x22c, event = 33854729, window = 30530856, from_configure = 1121725696}, xmap = {type = 0, serial = 30521312, send_event = 44040193, display = 0x22c, event = 33854729, window = 30530856, override_redirect = 1121725696}, xmaprequest = {type = 0, serial = 30521312, send_event = 44040193, display = 0x22c, parent = 33854729, window = 30530856}, xreparent = {type = 0, serial = 30521312, send_event = 44040193, display = 0x22c, event = 33854729, window = 30530856, parent = 140734315113728, x = -498414308, y = 32724, override_redirect = 559}, xconfigure = {type = 0, serial = 30521312, send_event = 44040193, display = 0x22c, event = 33854729, window = 30530856, x = 1121725696, y = 32767, width = -498414308, height = 32724, border_width = 559, above = 140552297223428, override_redirect = 3}, xgravity = {type = 0, serial = 30521312, send_event = 44040193, display = 0x22c, event = 33854729, window = 30530856, x = 1121725696, y = 32767}, xresizerequest = {type = 0, serial = 30521312, send_event = 44040193, display = 0x22c, window = 33854729, width = 30530856, height = 0}, xconfigurerequest = {type = 0, serial = 30521312, send_event = 44040193, display = 0x22c, parent = 33854729, window = 30530856, x = 1121725696, y = 32767, width = -498414308, height = 32724, border_width = 559, above = 140552297223428, detail = 3, value_mask = 140734315113928}, xcirculate = {type = 0, serial = 30521312, send_event = 44040193, display = 0x22c, event = 33854729, window = 30530856, place = 1121725696}, xcirculaterequest = {type = 0, serial = 30521312, send_event = 44040193, display = 0x22c, parent = 33854729, window = 30530856, place = 1121725696}, xproperty = {type = 0, serial = 30521312, send_event = 44040193, display = 0x22c, window = 33854729, atom = 30530856, time = 140734315113728, state = -498414308}, xselectionclear = {type = 0, serial = 30521312, send_event = 44040193, display = 0x22c, window = 33854729, selection = 30530856, time = 140734315113728}, xselectionrequest = {type = 0, serial = 30521312, send_event = 44040193, display = 0x22c, owner = 33854729, requestor = 30530856, selection = 140734315113728, target = 140552306347292, property = 559, time = 140552297223428}, xselection = {type = 0, serial = 30521312, send_event = 44040193, display = 0x22c, requestor = 33854729, selection = 30530856, target = 140734315113728, property = 140552306347292, time = 559}, xcolormap = {type = 0, serial = 30521312, send_event = 44040193, display = 0x22c, window = 33854729, colormap = 30530856, new = 1121725696, state = 32767}, xclient = {type = 0, serial = 30521312, send_event = 44040193, display = 0x22c, window = 33854729, message_type = 30530856, format = 1121725696, data = {b = "\034\315J\342\324\177\000\000/\002\000\000\000\000\000\000\004\225\277", <incomplete sequence \341>, s = {-13028, -7606, 32724, 0, 559, 0, 0, 0, -27388, -7745}, l = {140552306347292, 559, 140552297223428, 281479271677955, 140734315113928}}}, xmapping = {type = 0, serial = 30521312, send_event = 44040193, display = 0x22c, window = 33854729, request = 30530856, first_keycode = 0, count = 1121725696}, xerror = {type = 0, display = 0x1d1b7e0, resourceid = 44040193, serial = 556, error_code = 9 '\t', request_code = 149 '\225', minor_code = 4 '\004'}, xkeymap = {type = 0, serial = 30521312, send_event = 44040193, display = 0x22c, window = 33854729, key_vector = "(\335\321\001\000\000\000\000\000-\334B\377\177\000\000\034\315J\342\324\177\000\000/\002\000\000\000\000\000"}, xgeneric = {type = 0, serial = 30521312, send_event = 44040193, display = 0x22c, extension = 33854729, evtype = 0}, xcookie = {type = 0, serial = 30521312, send_event = 44040193, display = 0x22c, extension = 33854729, evtype = 0, cookie = 30530856, data = 0x7fff42dc2d00}, pad = {0, 30521312, 44040193, 556, 33854729, 30530856, 140734315113728, 140552306347292, 559, 140552297223428, 281479271677955, 140734315113928, 559, 30526576, 140734315113760, 140552297224529, 30530856, 140552297225060, 21474836480, 30526600, 559, 140734315113760, 0, 36719104}}
+        async = <optimized out>
+        next = <optimized out>
+#6  0x00007fd4e61c8e31 in handle_error (dpy=0x1d1b7e0, err=0x2161070, in_XReply=<optimized out>) at ../../src/xcb_io.c:212
+        ext = <optimized out>
+        ret_code = 295711165
+#7  0x00007fd4e61c8e75 in handle_response (dpy=0x1d1b7e0, response=0x2161070, in_XReply=<optimized out>) at ../../src/xcb_io.c:324
+        async = <optimized out>
+        next = <optimized out>
+#8  0x00007fd4e61c9c80 in _XReply (dpy=0x1d1b7e0, rep=0x7fff42dc2e10, extra=0, discard=1) at ../../src/xcb_io.c:626
+        event = <optimized out>
+        req = 0x2108be0
+        response = 0x2304a00
+        error = 0x0
+        c = 0x1d1cc70
+        reply = <optimized out>
+        current = 0x2108be0
+        __PRETTY_FUNCTION__ = "_XReply"
+#9  0x00007fd4e61c5203 in XSync (dpy=0x1d1b7e0, discard=0) at ../../src/Sync.c:44
+        rep = {type = 128 '\200', revertTo = 7 '\a', sequenceNumber = 0, length = 0, focus = 1880, pad1 = 0, pad2 = 30576640, pad3 = 0, pad4 = 36717088, pad5 = 0}
+        req = <optimized out>
+#10 0x00007fd4e4d2d69c in gdk_flush () at /build/buildd/gtk+3.0-3.3.8/./gdk/gdkdisplay.c:473
+        display = <optimized out>
+        list = 0x2304220
+        l = 0x2304220
+#11 0x00007fd4e64d2bae in gnome_bg_create_surface () from /usr/lib/libgnome-desktop-3.so.2
+No symbol table info available.
+#12 0x000000000049263c in ?? ()
+No symbol table info available.
+#13 0x00000000004926f8 in ?? ()
+No symbol table info available.
+#14 0x0000000000492840 in ?? ()
+No symbol table info available.
+#15 0x00007fd4e2ed27da in g_main_dispatch (context=0x1d3ae00) at /build/buildd/glib2.0-2.31.10/./glib/gmain.c:2513
+        dispatch = 0x7fd4e2ed0430 <g_idle_dispatch>
+        was_in_call = 0
+        user_data = 0x211f070
+        callback = 0x492800
+        cb_funcs = 0x7fd4e317c9a0
+        cb_data = 0x1d2a520
+        current_source_link = {data = 0x1d2d6a0, next = 0x0}
+        need_destroy = <optimized out>
+        source = 0x1d2d6a0
+        current = 0x1e46640
+        i = <optimized out>
+#16 g_main_context_dispatch (context=0x1d3ae00) at /build/buildd/glib2.0-2.31.10/./glib/gmain.c:3050
+No locals.
+#17 0x00007fd4e2ed2ba0 in g_main_context_iterate (dispatch=1, block=<optimized out>, context=0x1d3ae00, self=<optimized out>) at /build/buildd/glib2.0-2.31.10/./glib/gmain.c:3121
+        timeout = 0
+        some_ready = 1
+        fds = <optimized out>
+        max_priority = 200
+        nfds = 9
+        allocated_nfds = <optimized out>
+#18 g_main_context_iterate (context=0x1d3ae00, block=<optimized out>, dispatch=1, self=<optimized out>) at /build/buildd/glib2.0-2.31.10/./glib/gmain.c:3058
+        some_ready = 1
+#19 0x00007fd4e2ed2c64 in g_main_context_iteration (context=0x1d3ae00, may_block=1) at /build/buildd/glib2.0-2.31.10/./glib/gmain.c:3182
+        retval = <optimized out>
+#20 0x00007fd4e3687594 in g_application_run (application=0x1cf3000, argc=<optimized out>, argv=0x7fff42dc3198) at /build/buildd/glib2.0-2.31.10/./gio/gapplication.c:1599
+        arguments = 0x1cee400
+        status = 0
+        i = <optimized out>
+        __PRETTY_FUNCTION__ = "g_application_run"
+#21 0x000000000042b330 in ?? ()
+No symbol table info available.
+#22 0x00007fd4e245130d in __libc_start_main (main=0x42b290, argc=2, ubp_av=0x7fff42dc3198, init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, stack_end=0x7fff42dc3188) at libc-start.c:226
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, -5181533728369677818, 4371272, 140734315114896, 0, 0, 5181949092276857350, 5169773986413931014}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x500300, 0x7fff42dc3198}, data = {prev = 0x0, cleanup = 0x0, canceltype = 5243648}}}
+        not_first_call = <optimized out>
+#23 0x000000000042b371 in ?? ()
+No symbol table info available.
+#24 0x00007fff42dc3188 in ?? ()
+No symbol table info available.
+#25 0x000000000000001c in ?? ()
+No symbol table info available.
+#26 0x0000000000000002 in ?? ()
+No symbol table info available.
+#27 0x00007fff42dc4a4a in ?? ()
+No symbol table info available.
+#28 0x00007fff42dc4a53 in ?? ()
+No symbol table info available.
+#29 0x0000000000000000 in ?? ()
+No symbol table info available.

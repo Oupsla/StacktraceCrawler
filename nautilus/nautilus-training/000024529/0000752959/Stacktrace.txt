@@ -1,0 +1,22 @@
+#0  0x00007f56089305d1 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+No symbol table info available.
+#1  0x00007f5608cbae7e in g_variant_is_object_path () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#2  0x00007f56098e4f65 in g_dbus_connection_register_object () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#3  0x00007f55faf5e2fd in ?? () from /usr/lib/libdbusmenu-glib.so.3
+No symbol table info available.
+#4  0x00007f55faf5f810 in ?? () from /usr/lib/libdbusmenu-glib.so.3
+No symbol table info available.
+#5  0x00007f56098a0d49 in ?? () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#6  0x00007f5608c84bcd in g_main_context_dispatch () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#7  0x00007f5608c853a8 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#8  0x00007f5608c859f2 in g_main_loop_run () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#9  0x0000000000467a24 in app_run ()
+No symbol table info available.
+#10 0x0000000000468988 in main ()
+No symbol table info available.

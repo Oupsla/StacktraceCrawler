@@ -1,0 +1,44 @@
+#0  0x009d3416 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x0055ac8f in raise () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#2  0x0055e2b5 in abort () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#3  0x00553826 in __assert_fail () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#4  0x0607dc56 in ?? () from /usr/lib/i386-linux-gnu/libX11.so.6
+No symbol table info available.
+#5  0x0607dc7f in ?? () from /usr/lib/i386-linux-gnu/libX11.so.6
+No symbol table info available.
+#6  0x0607e47f in _XEventsQueued () from /usr/lib/i386-linux-gnu/libX11.so.6
+No symbol table info available.
+#7  0x0606ecf8 in XPending () from /usr/lib/i386-linux-gnu/libX11.so.6
+No symbol table info available.
+#8  0x006fe0be in ?? () from /usr/lib/i386-linux-gnu/libgdk-x11-2.0.so.0
+No symbol table info available.
+#9  0x002a788c in g_main_context_prepare () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#10 0x002a8637 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#11 0x002a8f9b in g_main_loop_run () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#12 0x00ea5fcf in gtk_main () from /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0
+No symbol table info available.
+#13 0x00b4733d in ?? () from /usr/lib/python2.7/dist-packages/gtk-2.0/gtk/_gtk.so
+No symbol table info available.
+#14 0x080f8978 in PyEval_EvalFrameEx ()
+No symbol table info available.
+#15 0x080fd804 in PyEval_EvalCodeEx ()
+No symbol table info available.
+#16 0x080fe177 in PyEval_EvalCode ()
+No symbol table info available.
+#17 0x0811acd0 in ?? ()
+No symbol table info available.
+#18 0x0811b8e9 in PyRun_FileExFlags ()
+No symbol table info available.
+#19 0x0811c4cc in PyRun_SimpleFileExFlags ()
+No symbol table info available.
+#20 0x0812c7c6 in Py_Main ()
+No symbol table info available.
+#21 0x0805da0b in main ()
+No symbol table info available.

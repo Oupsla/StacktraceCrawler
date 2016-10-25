@@ -1,0 +1,64 @@
+#0  gdu_device_get_object_path (device=0x0) at gdu-device.c:712
+No locals.
+#1  0x00007f6fde935069 in gdu_pool_new () at gdu-pool.c:1144
+	device = <value optimized out>
+	n = 4
+	devices = (GPtrArray *) 0x1030c40
+	pool = <value optimized out>
+	error = (GError *) 0x0
+#2  0x00007f6fdeb4d92e in ?? ()
+   from /usr/lib/nautilus/extensions-2.0/libnautilus-gdu.so
+#3  0x0000000000478b2e in ?? ()
+#4  0x0000000000479174 in ?? ()
+#5  0x000000000047e990 in ?? ()
+#6  0x0000000000483275 in ?? ()
+#7  0x000000000046d5e3 in ?? ()
+#8  0x000000000046f81b in fm_directory_view_update_menus ()
+#9  0x0000000000470595 in ?? ()
+#10 0x00007f6ff4a6119b in g_timeout_dispatch (source=0x7f6fe405aa50, 
+    callback=0, user_data=0x7f6ff5373fe8)
+    at /build/buildd/glib2.0-2.21.4/glib/gmain.c:3396
+No locals.
+#11 0x00007f6ff4a60a8e in IA__g_main_context_dispatch (context=0x881400)
+    at /build/buildd/glib2.0-2.21.4/glib/gmain.c:1960
+No locals.
+#12 0x00007f6ff4a64458 in g_main_context_iterate (context=0x881400, 
+    block=<value optimized out>, dispatch=<value optimized out>, 
+    self=<value optimized out>)
+    at /build/buildd/glib2.0-2.21.4/glib/gmain.c:2591
+	max_priority = 0
+	timeout = 0
+	some_ready = 1
+	nfds = 14
+	allocated_nfds = -190378080
+	fds = <value optimized out>
+	__PRETTY_FUNCTION__ = "g_main_context_iterate"
+#13 0x00007f6ff4a648b5 in IA__g_main_loop_run (loop=0xa76ff0)
+    at /build/buildd/glib2.0-2.21.4/glib/gmain.c:2799
+	self = (GThread *) 0x83c690
+	__PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#14 0x00007f6ff633b127 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.17.6/gtk/gtkmain.c:1205
+	tmp_list = (GList *) 0x8cca80
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0x0
+	loop = <value optimized out>
+#15 0x000000000044337a in ?? ()
+#16 0x00007f6ff347eacd in __libc_start_main (main=<value optimized out>, 
+    argc=<value optimized out>, ubp_av=<value optimized out>, 
+    init=<value optimized out>, fini=<value optimized out>, 
+    rtld_fini=<value optimized out>, stack_end=0x7fff10837a58)
+    at libc-start.c:220
+	result = <value optimized out>
+	unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, 1081342820926640557, 
+        4390896, 140733470440032, 0, 0, -1080984204233125459, 
+        -1018282874831351379}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 
+      0x5467e0, 0x7fff10837a68}, data = {prev = 0x0, cleanup = 0x0, 
+      canceltype = 5531616}}}
+	not_first_call = <value optimized out>
+#17 0x0000000000430019 in ?? ()
+#18 0x00007fff10837a58 in ?? ()
+#19 0x000000000000001c in ?? ()
+#20 0x0000000000000001 in ?? ()
+#21 0x00007fff10838b90 in ?? ()
+#22 0x0000000000000000 in ?? ()

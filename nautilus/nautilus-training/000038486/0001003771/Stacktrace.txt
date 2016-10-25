@@ -1,0 +1,93 @@
+#0  0x000000000048204f in ?? ()
+No symbol table info available.
+#1  0x00007f430c38f074 in g_closure_invoke (closure=0x159c820, return_value=0x0, n_param_values=2, param_values=0x7fff032babc0, invocation_hint=0x7fff032bab60) at /build/buildd/glib2.0-2.33.1/./gobject/gclosure.c:777
+        marshal = 0x7f430c391ff0 <g_cclosure_marshal_VOID__PARAM>
+        marshal_data = 0x0
+        in_marshal = <optimized out>
+        real_closure = 0x159c800
+        __PRETTY_FUNCTION__ = "g_closure_invoke"
+#2  0x00007f430c3a0d60 in signal_emit_unlocked_R (node=node@entry=0xc6c530, detail=detail@entry=674, instance=instance@entry=0xcc9ed0, emission_return=emission_return@entry=0x0, instance_and_params=instance_and_params@entry=0x7fff032babc0) at /build/buildd/glib2.0-2.33.1/./gobject/gsignal.c:3547
+        tmp = <optimized out>
+        handler = 0x7f42f8010600
+        accumulator = 0x0
+        emission = {next = 0x0, instance = 0xcc9ed0, ihint = {signal_id = 1, detail = 674, run_type = G_SIGNAL_RUN_FIRST}, state = EMISSION_RUN, chain_type = 4}
+        class_closure = 0xc6c4a0
+        hlist = 0x1582e00
+        handler_list = 0x1582e00
+        return_accu = 0x0
+        accu = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        signal_id = 1
+        max_sequential_handler_number = 8327
+        return_value_altered = 1
+#3  0x00007f430c3a8fe1 in g_signal_emit_valist (instance=0xcc9ed0, signal_id=<optimized out>, detail=674, var_args=var_args@entry=0x7fff032bae18) at /build/buildd/glib2.0-2.33.1/./gobject/gsignal.c:3296
+        instance_and_params = 0x7fff032babc0
+        signal_return_type = 4
+        param_values = 0x7fff032babd8
+        node = 0xc6c530
+        i = <optimized out>
+        n_params = 1
+        __PRETTY_FUNCTION__ = "g_signal_emit_valist"
+#4  0x00007f430c3a9232 in g_signal_emit (instance=<optimized out>, signal_id=<optimized out>, detail=<optimized out>) at /build/buildd/glib2.0-2.33.1/./gobject/gsignal.c:3352
+        var_args = {{gp_offset = 32, fp_offset = 48, overflow_arg_area = 0x7fff032baef0, reg_save_area = 0x7fff032bae30}}
+#5  0x00007f430c393bc5 in g_object_dispatch_properties_changed (object=0xcc9ed0, n_pspecs=5247996, pspecs=0x7f430bb702c0) at /build/buildd/glib2.0-2.33.1/./gobject/gobject.c:1041
+No locals.
+#6  0x00007f430c39567b in g_object_notify_by_spec_internal (pspec=0xcc9e30, object=0xcc9ed0) at /build/buildd/glib2.0-2.33.1/./gobject/gobject.c:1133
+        nqueue = 0x0
+        notify_pspec = 0xcc9e30
+#7  g_object_notify (object=0xcc9ed0, property_name=<optimized out>) at /build/buildd/glib2.0-2.33.1/./gobject/gobject.c:1175
+        pspec = 0xcc9e30
+        __PRETTY_FUNCTION__ = "g_object_notify"
+#8  0x00007f430ea442c3 in ?? () from /usr/lib/x86_64-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#9  0x00007f430e9cc96d in gtk_main_do_event () from /usr/lib/x86_64-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#10 0x00007f430e61ce02 in ?? () from /usr/lib/x86_64-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#11 0x00007f430c0d1835 in g_main_dispatch (context=0xcbdd70) at /build/buildd/glib2.0-2.33.1/./glib/gmain.c:2539
+        dispatch = 0x7f430e61cde0
+        was_in_call = 0
+        user_data = 0x0
+        callback = 0
+        cb_funcs = 0x0
+        cb_data = 0x0
+        current_source_link = {data = 0xcc0a80, next = 0x0}
+        need_destroy = <optimized out>
+        source = 0xcc0a80
+        current = 0xdb8a20
+        i = <optimized out>
+#12 g_main_context_dispatch (context=context@entry=0xcbdd70) at /build/buildd/glib2.0-2.33.1/./glib/gmain.c:3075
+No locals.
+#13 0x00007f430c0d1b68 in g_main_context_iterate (context=context@entry=0xcbdd70, block=block@entry=1, dispatch=dispatch@entry=1, self=<error reading variable: Unhandled dwarf expression opcode 0xfa>) at /build/buildd/glib2.0-2.33.1/./glib/gmain.c:3146
+        max_priority = 0
+        timeout = 0
+        some_ready = 1
+        nfds = <optimized out>
+        allocated_nfds = <optimized out>
+        fds = 0x102bf00
+#14 0x00007f430c0d1c24 in g_main_context_iteration (context=0xcbdd70, context@entry=0x0, may_block=may_block@entry=1) at /build/buildd/glib2.0-2.33.1/./glib/gmain.c:3207
+        retval = <optimized out>
+#15 0x00007f430c670d4c in g_application_run (application=0xc7e000, argc=<optimized out>, argv=0x7fff032bb258) at /build/buildd/glib2.0-2.33.1/./gio/gapplication.c:1570
+        arguments = 0xc6d080
+        status = -1431655766
+        i = <optimized out>
+        __PRETTY_FUNCTION__ = "g_application_run"
+#16 0x000000000042b13b in ?? ()
+No symbol table info available.
+#17 0x00007f430b5bc76d in __libc_start_main (main=0x42b080, argc=2, ubp_av=0x7fff032bb258, init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, stack_end=0x7fff032bb248) at libc-start.c:226
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, -6739403631768282951, 4370796, 140733246583376, 0, 0, 6739305124612102329, 6701007344331479225}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x4ff140, 0x7fff032bb258}, data = {prev = 0x0, cleanup = 0x0, canceltype = 5239104}}}
+        not_first_call = <optimized out>
+#18 0x000000000042b195 in ?? ()
+No symbol table info available.
+#19 0x00007fff032bb248 in ?? ()
+No symbol table info available.
+#20 0x000000000000001c in ?? ()
+No symbol table info available.
+#21 0x0000000000000002 in ?? ()
+No symbol table info available.
+#22 0x00007fff032bc7a8 in ?? ()
+No symbol table info available.
+#23 0x00007fff032bc7b1 in ?? ()
+No symbol table info available.
+#24 0x0000000000000000 in ?? ()
+No symbol table info available.

@@ -1,0 +1,15 @@
+#0  0xb58eba20 in ?? ()
+#1  0xb724910f in *__GI_exit (status=0) at exit.c:100
+No locals.
+#2  0xb7230b5e in __libc_start_main (main=0x8080c70 <main>, argc=1, 
+    ubp_av=0xbfe69c34, init=0x81a2350 <__libc_csu_init>, 
+    fini=0x81a2340 <__libc_csu_fini>, rtld_fini=0xb8043d30 <_dl_fini>, 
+    stack_end=0xbfe69c2c) at libc-start.c:252
+	result = 0
+	unwind_buf = {cancel_jmp_buf = {{jmp_buf = {-1221140492, 0, 0, 
+        -1075405816, 1263893576, -1066112423}, mask_was_saved = 0}}, priv = {
+    pad = {0x0, 0x0, 0x1, 0x806be40}, data = {prev = 0x0, cleanup = 0x0, 
+      canceltype = 1}}}
+	not_first_call = <value optimized out>
+#3  0x0806be61 in _start () at ../sysdeps/i386/elf/start.S:119
+No locals.

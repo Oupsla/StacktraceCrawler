@@ -1,0 +1,48 @@
+#0  0xb45028f4 in gdu_device_get_object_path () from /usr/lib/i386-linux-gnu/libgdu.so.0
+No symbol table info available.
+#1  0xb44fb586 in gdu_pool_new_for_address () from /usr/lib/i386-linux-gnu/libgdu.so.0
+No symbol table info available.
+#2  0xb44fba53 in gdu_pool_new () from /usr/lib/i386-linux-gnu/libgdu.so.0
+No symbol table info available.
+#3  0xb497cf1f in unity::launcher::DeviceLauncherIcon::DeviceLauncherIcon(_GVolume*) () from /usr/lib/compiz/libunityshell.so
+No symbol table info available.
+#4  0xb497ea64 in unity::launcher::DeviceLauncherSection::OnVolumeAdded(_GVolumeMonitor*, _GVolume*, unity::launcher::DeviceLauncherSection*) () from /usr/lib/compiz/libunityshell.so
+No symbol table info available.
+#5  0xb68e023a in g_cclosure_marshal_VOID__OBJECT () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#6  0xb68ddf8c in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#7  0xb68ef845 in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#8  0xb68f70c2 in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#9  0xb68f76af in g_signal_emit_by_name () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#10 0xb6a4ea0d in ?? () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#11 0xb68e023a in g_cclosure_marshal_VOID__OBJECT () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#12 0xb68ddf8c in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#13 0xb68ef845 in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#14 0xb68f70c2 in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#15 0xb68f76af in g_signal_emit_by_name () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#16 0xb262d5d6 in ?? () from /usr/lib/i386-linux-gnu/gio/modules/libgioremote-volume-monitor.so
+No symbol table info available.
+#17 0xb700b490 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#18 0xb700da2a in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#19 0xb700de35 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#20 0xb700e27b in g_main_loop_run () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#21 0xb7106063 in Glib::MainLoop::run() () from /usr/lib/i386-linux-gnu/libglibmm-2.4.so.1
+No symbol table info available.
+#22 0x08072497 in CompScreen::eventLoop() ()
+No symbol table info available.
+#23 0x08065634 in main ()
+No symbol table info available.

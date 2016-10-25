@@ -1,0 +1,57 @@
+#0  nautilus_window_slot_get_current_uri (slot=0x0) at nautilus-window-slot.c:655
+        __PRETTY_FUNCTION__ = "nautilus_window_slot_get_current_uri"
+#1  0x00000000004555ed in update_places (sidebar=0x162a4d0) at nautilus-places-sidebar.c:468
+        bookmark = <value optimized out>
+        selection = 0x113dcf0
+        last_iter = {stamp = 0, user_data = 0x0, user_data2 = 0x0, user_data3 = 0x0}
+        select_path = 0x0
+        model = 0x1a93150
+        volume_monitor = <value optimized out>
+        mounts = <value optimized out>
+        l = <value optimized out>
+        ll = <value optimized out>
+        mount = <value optimized out>
+        drives = <value optimized out>
+        drive = <value optimized out>
+        volumes = <value optimized out>
+        volume = <value optimized out>
+        bookmark_count = <value optimized out>
+        index = <value optimized out>
+        location = <value optimized out>
+        mount_uri = <value optimized out>
+        name = <value optimized out>
+        desktop_path = <value optimized out>
+        last_uri = 0x0
+        path = <value optimized out>
+        bookmark_name = <value optimized out>
+        icon = <value optimized out>
+        root = <value optimized out>
+        slot = <value optimized out>
+        tooltip = <value optimized out>
+        network_mounts = <value optimized out>
+        file = <value optimized out>
+#2  0x00007fbe5e8a005e in g_signal_type_cclosure_new (itype=0, struct_offset=26028448) at /build/buildd/glib2.0-2.29.6/./gobject/gclosure.c:931
+        closure = <value optimized out>
+        __PRETTY_FUNCTION__ = "g_signal_type_cclosure_new"
+#3  0x65746e6f430a3635 in ?? ()
+No symbol table info available.
+#4  0x63697665443d7478 in ?? ()
+No symbol table info available.
+#5  0x00007fbe5e89f775 in closure_invoke_notifiers (closure=0x0) at /build/buildd/glib2.0-2.29.6/./gobject/gclosure.c:274
+        ndata = <value optimized out>
+#6  closure_invoke_notifiers (closure=0x0) at /build/buildd/glib2.0-2.29.6/./gobject/gclosure.c:559
+No locales.
+#7  g_closure_invalidate (closure=0x0) at /build/buildd/glib2.0-2.29.6/./gobject/gclosure.c:570
+        was_invalid = <value optimized out>
+        __PRETTY_FUNCTION__ = "g_closure_invalidate"
+#8  0x00007fff9b1a9ab0 in ?? ()
+No symbol table info available.
+#9  0x00007fbe5e8afed0 in LOOKUP_SIGNAL_NODE (instance=<value optimized out>, mask=0, signal_id=0, detail=<value optimized out>, closure=<value optimized out>, func=0x0, data=0x18d29a0, one_and_only=17241568) at /build/buildd/glib2.0-2.29.6/./gobject/gsignal.c:303
+No locales.
+#10 handlers_find (instance=<value optimized out>, mask=0, signal_id=0, detail=<value optimized out>, closure=<value optimized out>, func=0x0, data=0x18d29a0, one_and_only=17241568) at /build/buildd/glib2.0-2.29.6/./gobject/gsignal.c:491
+        hlist = 0x0
+        handler = <value optimized out>
+        node = 0x0
+        mlist = 0x0
+#11 0x0000000000000000 in ?? ()
+No symbol table info available.

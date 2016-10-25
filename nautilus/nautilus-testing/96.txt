@@ -1,0 +1,113 @@
+#0  strlen () at ../sysdeps/x86_64/strlen.S:48
+No locals.
+#1  0x00007f0879a1775e in _IO_vfprintf_internal (s=0x7fff8636b240, 
+    format=<value optimized out>, ap=0x7fff8636b390) at vfprintf.c:1581
+	len = <value optimized out>
+	string_malloced = 0
+	alt = 0
+	is_long = 0
+	prec = -1
+	is_negative = 0
+	base = 21219872
+	string = 0x6052e1a0 <Address 0x6052e1a0 out of bounds>
+	space = 0
+	width = 0
+	showsign = 0
+	group = 0
+	is_char = 0
+	pad = 32 ' '
+	the_arg = {pa_wchar = 100, pa_int = 100, pa_long_int = 100, 
+  pa_long_long_int = 100, pa_u_int = 100, pa_u_long_int = 100, 
+  pa_u_long_long_int = 100, pa_double = 4.9406564584124654e-322, 
+  pa_long_double = <invalid float value>, 
+  pa_string = 0x64 <Address 0x64 out of bounds>, pa_wstring = 0x64, 
+  pa_pointer = 0x64}
+	left = 0
+	is_long_double = 0
+	is_short = 0
+	use_outdigits = 0
+	spec = 115 's'
+	_buffer = {__routine = 0x7fff8636b380, __arg = 0x1, 
+  __canceltype = 19053728, __prev = 0x1e62340}
+	_avail = 0
+	thousands_sep = 0x0
+	grouping = 0xffffffffffffffff <Address 0xffffffffffffffff out of bounds>
+	done = 78
+	f = (const unsigned char *) 0x7f08723f3c8f "are your folders."
+	lead_str_end = <value optimized out>
+	work_buffer = "0­6\206ÿ\177\000\000\000ÿe{\b\177\000\000\026\000\000\000ÿ\177", '\0' <repeats 18 times>, "\231¯f{\b\177\000\000\000\000\000\000\000\000\000\000\026\000\000\000\000\000\000\000\000\230%\001\000\000\000\000P[>\001\000\000\000\000À®6\206ÿ\177", '\0' <repeats 18 times>, "\231¯f{\b\177\000\000XÊC\001\000\000\000\000\001\000\000\000\001\000\000\000 \000\000\0000\000\000\000à¯6\206ÿ\177\000\000pñO`\b\177\000\000\000\000\000\000\000\000\000\000\001", '\0' <repeats 23 times>, "C¹f{\b\177\000\000\001", '\0' <repeats 63 times>, "\030\000\000\0000\000\000\000\000¯6\206ÿ\177\000\000@®6\206ÿ\177\000\000\026\217"...
+	workstart = 0x0
+	workend = 0x7fff8636b108 "@´6\206ÿ\177"
+	ap_save = {{gp_offset = 8, fp_offset = 48, 
+    overflow_arg_area = 0x7fff8636b470, reg_save_area = 0x7fff8636b3b0}}
+	nspecs_done = 1
+	save_errno = 2
+	readonly_format = 0
+	jump_table = {1, 0, 0, 4, 0, 14, 0, 6, 0, 0, 7, 2, 0, 3, 9, 0, 5, 8, 
+  8, 8, 8, 8, 8, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 26, 0, 25, 0, 19, 19, 19, 0, 
+  29, 0, 0, 12, 0, 0, 0, 0, 0, 0, 21, 0, 0, 0, 0, 18, 0, 13, 0, 0, 0, 0, 0, 
+  0, 26, 0, 20, 15, 19, 19, 19, 10, 15, 28, 0, 11, 24, 23, 17, 22, 12, 0, 21, 
+  27, 16, 0, 0, 18, 0, 13}
+	__PRETTY_FUNCTION__ = "_IO_vfprintf_internal"
+	step0_jumps = {0, -2590, -1536, -931, -1440, -1344, -2496, -2292, 
+  -1985, -1751, -1027, -1124, 333, 3797, 2126, 2176, 3782, 3846, 1109, 1645, 
+  -828, -44, 3244, -585, -506, -4434, 2956, 3510, 3616, -2388}
+	step1_jumps = {0, 0, 0, 0, 0, 0, 0, 0, 0, -1751, -1027, -1124, 333, 
+  3797, 2126, 2176, 3782, 3846, 1109, 1645, -828, -44, 3244, -585, -506, 
+  -4434, 2956, 3510, 3616, 0}
+	step2_jumps = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1027, -1124, 333, 3797, 
+  2126, 2176, 3782, 3846, 1109, 1645, -828, -44, 3244, -585, -506, -4434, 
+  2956, 3510, 3616, 0}
+	step3a_jumps = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1230, 0, 0, 0, 2126, 
+  2176, 3782, 3846, 1109, 0, 0, 0, 0, -585, 0, 0, 0, 0, 0, 0}
+	step3b_jumps = {0 <repeats 11 times>, 333, 0, 0, 2126, 2176, 3782, 
+  3846, 1109, 1645, -828, -44, 3244, -585, -506, -4434, 2956, 0, 0, 0}
+	step4_jumps = {0 <repeats 14 times>, 2126, 2176, 3782, 3846, 1109, 
+  1645, -828, -44, 3244, -585, -506, -4434, 2956, 0, 0, 0}
+	step4_jumps = {2756 <repeats 14 times>, 3347, 3397, 1996, 2114, 3699, 
+  3714, -2858, 2267, 437, 1003, 3658, -3945, -4713, 2756, 2756, 2756}
+#2  0x00007f0879accd80 in *__GI___vasprintf_chk (result_ptr=0x7fff8636b3a8, 
+    flags=1, 
+    format=0x7f08723f3c50 " to install the Windows networks sharing service in order to share your folders.", args=0x7fff8636b390) at vasprintf_chk.c:68
+	sf = {_sbf = {_f = {_flags = -72515584, 
+      _IO_read_ptr = 0x7f0860547080 "/usr/sbin/synaptic --hide-main-window --non-interactive --set-selections-file backup,unix::inodep", 
+      _IO_read_end = 0x7f0860547080 "/usr/sbin/synaptic --hide-main-window --non-interactive --set-selections-file backup,unix::inodep", 
+      _IO_read_base = 0x7f0860547080 "/usr/sbin/synaptic --hide-main-window --non-interactive --set-selections-file backup,unix::inodep", 
+      _IO_write_base = 0x7f0860547080 "/usr/sbin/synaptic --hide-main-window --non-interactive --set-selections-file backup,unix::inodep", 
+      _IO_write_ptr = 0x7f08605470ce "backup,unix::inodep", 
+      _IO_write_end = 0x7f08605470e4 "", 
+      _IO_buf_base = 0x7f0860547080 "/usr/sbin/synaptic --hide-main-window --non-interactive --set-selections-file backup,unix::inodep", 
+      _IO_buf_end = 0x7f08605470e4 "", _IO_save_base = 0x0, 
+      _IO_backup_base = 0x0, _IO_save_end = 0x0, _markers = 0x0, 
+      _chain = 0x0, _fileno = 1916722831, _flags2 = 4, 
+      _old_offset = 4294967296, _cur_column = 0, _vtable_offset = 0 '\0', 
+      _shortbuf = "", _lock = 0x0, _offset = 140735445120000, 
+      _codecvt = 0x156ae60, _wide_data = 0x7f08723edeec, _freeres_list = 0x0, 
+      _freeres_buf = 0x7f0879a4a790, _freeres_size = 139674377290240, 
+      _mode = -1, 
+      _unused2 = "\000\000\000\000\200|J`\b\177\000\000@}T`\b\177\000"}, 
+    _vtable = 0x7f0879d39740}, _s = {
+    _allocate_buffer = 0x7f0879a4a790 <*__GI___libc_malloc>, 
+    _free_buffer = 0x7f0879a48200 <*__GI___libc_free>}}
+	ret = -1
+	needed = <value optimized out>
+#3  0x00007f087afb134b in IA__g_vasprintf (string=0x6052e1a0, 
+    format=<value optimized out>, args=<value optimized out>)
+    at /usr/include/bits/stdio2.h:199
+	len = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_vasprintf"
+#4  0x00007f087af9dcb1 in IA__g_strdup_printf (
+    format=0x6052e1a0 <Address 0x6052e1a0 out of bounds>)
+    at /build/buildd/glib2.0-2.20.0/glib/gstrfuncs.c:244
+	args = {{gp_offset = 24, fp_offset = 48, 
+    overflow_arg_area = 0x7fff8636b470, reg_save_area = 0x7fff8636b3b0}}
+#5  0x00007f08723f1ada in on_wait_timeout (data=0x6052e1a0)
+    at nautilus-share.c:658
+	status = 0
+#6  0x00007f0860547d30 in ?? ()
+#7  0x000000006052e1a0 in ?? ()
+#8  0xfffffffb8636b640 in ?? ()
+#9  0x0000000001271be0 in ?? ()
+#10 0x00000000019992b0 in ?? ()
+#11 0x0000000001251800 in ?? ()
+#12 0x0000000000000000 in ?? ()

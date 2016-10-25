@@ -1,0 +1,101 @@
+#0  0x002d9320 in g_object_ref () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#1  0x003bda88 in g_datalist_clear () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#2  0x002db410 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#3  0x009b4680 in nautilus_menu_item_finalize (object=0xb4d12210) at nautilus-menu-item.c:225
+No locals.
+#4  0x002d91bb in g_object_unref () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#5  0x080b0124 in extension_action_callback_data_free (data=0xca167d0) at fm-directory-view.c:4574
+No locals.
+#6  0x002d6b51 in g_closure_unref () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#7  0x002eb9fa in g_signal_handlers_destroy () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#8  0x002d8f45 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#9  0x002d9110 in g_object_unref () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#10 0x0083b31f in free_node (node=0xa033ec8) at /build/buildd/gtk+2.0-2.18.3/gtk/gtkuimanager.c:1093
+	info = (Node *) 0xb74c4f40
+#11 0x0083ba53 in update_node (self=<value optimized out>, node=<value optimized out>, in_popup=1, 
+    popup_accels=0) at /build/buildd/gtk+2.0-2.18.3/gtk/gtkuimanager.c:2759
+	child = <value optimized out>
+	action = <value optimized out>
+	action_name = <value optimized out>
+	__PRETTY_FUNCTION__ = "update_node"
+#12 0x0083b9df in update_node (self=<value optimized out>, node=<value optimized out>, in_popup=1, 
+    popup_accels=0) at /build/buildd/gtk+2.0-2.18.3/gtk/gtkuimanager.c:2737
+	child = (GNode *) 0x0
+	action = <value optimized out>
+	action_name = <value optimized out>
+	__PRETTY_FUNCTION__ = "update_node"
+#13 0x0083b9df in update_node (self=<value optimized out>, node=<value optimized out>, in_popup=1, 
+    popup_accels=0) at /build/buildd/gtk+2.0-2.18.3/gtk/gtkuimanager.c:2737
+	child = (GNode *) 0x9ede230
+	action = <value optimized out>
+	action_name = <value optimized out>
+	__PRETTY_FUNCTION__ = "update_node"
+#14 0x0083b9df in update_node (self=<value optimized out>, node=<value optimized out>, in_popup=0, 
+    popup_accels=0) at /build/buildd/gtk+2.0-2.18.3/gtk/gtkuimanager.c:2737
+	child = (GNode *) 0x9e85208
+	action = <value optimized out>
+	action_name = <value optimized out>
+	__PRETTY_FUNCTION__ = "update_node"
+#15 0x0083caf6 in do_updates_idle (self=0xb4f38e00) at /build/buildd/gtk+2.0-2.18.3/gtk/gtkuimanager.c:2779
+No locals.
+#16 0x00138f78 in gdk_threads_dispatch (data=0xa10ec60) at /build/buildd/gtk+2.0-2.18.3/gdk/gdk.c:506
+	ret = 0
+#17 0x003d2101 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#18 0x003d3e88 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#19 0x003d7730 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#20 0x003d7b9f in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#21 0x00720419 in IA__gtk_main () at /build/buildd/gtk+2.0-2.18.3/gtk/gtkmain.c:1218
+	tmp_list = (GList *) 0x0
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0x1
+	loop = (GMainLoop *) 0x9d03ba8
+#22 0x0808185f in main (argc=1, argv=0xbfe2f6c4) at nautilus-main.c:588
+	kill_shell = 0
+	no_default_window = 1
+	browser_window = 0
+	no_desktop = 0
+	version = 0
+	autostart_mode = 1
+	autostart_id = <value optimized out>
+	geometry = (gchar *) 0x0
+	remaining = (gchar **) 0x0
+	perform_self_check = 0
+	application = (NautilusApplication *) 0x9af0c00
+	context = <value optimized out>
+	file = (GFile *) 0x1
+	uri = <value optimized out>
+	uris = (char **) 0x0
+	uris_array = <value optimized out>
+	error = (GError *) 0x0
+	options = {{long_name = 0x81a6e36 "check", short_name = 99 'c', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfe2f5e0, description = 0x81a6e78 "Perform a quick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x81a6d2f "version", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbfe2f5ec, 
+    description = 0x81a6ea4 "Show the version of the program.", arg_description = 0x0}, {
+    long_name = 0x81aaa38 "geometry", short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+    arg_data = 0xbfe2f5e8, description = 0x81a6ec8 "Create the initial window with the given geometry.", 
+    arg_description = 0x81a6d37 "GEOMETRY"}, {long_name = 0x81a6d40 "no-default-window", 
+    short_name = 110 'n', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfe2f5f8, 
+    description = 0x81a6efc "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {
+    long_name = 0x81a6d52 "no-desktop", short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfe2f5f0, 
+    description = 0x81a6f30 "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {long_name = 0x81a3a2b "browser", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbfe2f5f4, description = 0x81a6d5d "open a browser window.", 
+    arg_description = 0x0}, {long_name = 0x81c663d "quit", short_name = 113 'q', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbfe2f5fc, description = 0x81a6d74 "Quit Nautilus.", 
+    arg_description = 0x0}, {long_name = 0x81abd81 "", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0xbfe2f5e4, description = 0x0, 
+    arg_description = 0x81a6d83 "[URI...]"}, {long_name = 0x0, short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0x0, description = 0x0, arg_description = 0x0}}

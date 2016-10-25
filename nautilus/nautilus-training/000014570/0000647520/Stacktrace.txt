@@ -1,0 +1,267 @@
+#0  0xb77f2424 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0xb6cfb941 in raise (sig=6) at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+        resultvar = <value optimized out>
+        pid = -1226657804
+        selftid = 1957
+#2  0xb6cfee42 in abort () at abort.c:92
+        act = {__sigaction_handler = {sa_handler = 0xa0, sa_sigaction = 0xa0}, sa_mask = {__val = {305, 16, 3068314560, 3068309492, 3068314560, 140, 3214988112, 3067354717, 165276224, 3068309492, 3068309492, 141, 3214988312, 3067289544, 170051736, 170051736, 140, 165276224, 0, 4222451712, 170051736, 170051837, 170051736, 170051736, 170051876, 170052036, 170051736, 170052036, 0, 0, 0, 0}}, sa_flags = 0, sa_restorer = 0x4}
+        sigs = {__val = {32, 0 <repeats 31 times>}}
+#3  0xb6cf48e8 in __assert_fail (assertion=0xb696c4e5 "ret != inval_id", file=0xb696c4a9 "../../src/xcb_io.c", line=385, function=0xb696c664 "_XAllocID") at assert.c:81
+        buf = 0xa16d8d0 "transmission: ../../src/xcb_io.c:385: _XAllocID: Проверочное утверждение «ret != inval_id» не выполнено.\n"
+#4  0xb68fcc99 in _XAllocID (dpy=0x9c38300) at ../../src/xcb_io.c:385
+        ret = 4294967295
+        __PRETTY_FUNCTION__ = "_XAllocID"
+#5  0xb6896de7 in XRenderCreatePicture (dpy=0x9c38300, drawable=53017159, format=0x9c6c058, valuemask=256, attributes=0xbfa0d548) at ../../src/Picture.c:90
+        info = 0x9c55150
+        pid = <value optimized out>
+#6  0xb6c3ec5c in _cairo_xlib_surface_ensure_src_picture (display=<value optimized out>, surface=<value optimized out>, attributes=0xbfa0d6c8, xc=20, yc=429) at /build/buildd/cairo-1.10.0/src/cairo-xlib-surface.c:1070
+        pa = {repeat = -1079978992, alpha_map = 3214992012, alpha_x_origin = -1223429193, alpha_y_origin = 169229193, clip_x_origin = 4, clip_y_origin = -1079978312, clip_mask = 3214988368, graphics_exposures = -1079978896, subwindow_mode = 1, poly_edge = -1228406796, poly_mode = 168935632, dither = 0, component_alpha = -1079978584}
+#7  _cairo_xlib_surface_set_attributes (display=<value optimized out>, surface=<value optimized out>, attributes=0xbfa0d6c8, xc=20, yc=429) at /build/buildd/cairo-1.10.0/src/cairo-xlib-surface.c:1770
+        status = <value optimized out>
+        pa = {repeat = -1229003636, alpha_map = 168935664, alpha_x_origin = 169229056, alpha_y_origin = -1079978568, clip_x_origin = -1228677698, clip_y_origin = -1228405184, clip_mask = 168935632, graphics_exposures = 163808000, subwindow_mode = -1228406796, poly_edge = 0, poly_mode = 168935632, dither = 3214988744, component_alpha = -1228693671}
+        mask = <value optimized out>
+#8  0xb6c416c6 in _cairo_xlib_surface_composite (op=CAIRO_OPERATOR_OVER, src_pattern=0xbfa0e328, mask_pattern=0x0, abstract_dst=0xa2a2808, src_x=4, src_y=413, mask_x=0, mask_y=0, dst_x=4, dst_y=413, width=0, height=0, clip_region=0x0) at /build/buildd/cairo-1.10.0/src/cairo-xlib-surface.c:2495
+        src_attr = {matrix = {xx = 1, yx = 0, xy = 0, yy = 1, x0 = 0, y0 = 0}, extend = CAIRO_EXTEND_NONE, filter = CAIRO_FILTER_NEAREST, has_component_alpha = 0, x_offset = -4, y_offset = -413, extra = 0xffffffff}
+        mask_attr = {matrix = {xx = -nan(0xfffffffffffff), yx = 2.4402951596100632e-312, xy = 6.7903881500431797e-313, yy = -2.1908937116806653e-41, x0 = -nan(0xfffffffffffff), y0 = 6.3659873733898826e-314}, extend = CAIRO_EXTEND_REPEAT, filter = 4294967295, has_component_alpha = 2, x_offset = 0, y_offset = 102, extra = 0x0}
+        src = 0xa14a398
+        mask = 0x0
+        display = 0xa11c0d0
+        status = <value optimized out>
+        operation = <value optimized out>
+        itx = <value optimized out>
+        ity = <value optimized out>
+        is_integer_translation = <value optimized out>
+        gc = <value optimized out>
+        __PRETTY_FUNCTION__ = "_cairo_xlib_surface_composite"
+#9  0xb6c1c061 in _cairo_surface_composite (op=CAIRO_OPERATOR_OVER, src=0xbfa0e328, mask=0x0, dst=0xa2a2808, src_x=4, src_y=413, mask_x=0, mask_y=0, dst_x=4, dst_y=413, width=32, height=32, clip_region=0x0) at /build/buildd/cairo-1.10.0/src/cairo-surface.c:1802
+        status = <value optimized out>
+        __PRETTY_FUNCTION__ = "_cairo_surface_composite"
+#10 0xb6c203a7 in _composite_rectangle (src=<value optimized out>, op=CAIRO_OPERATOR_OVER, dst=0xa2a2808, traps=0xbfa0dd68, antialias=CAIRO_ANTIALIAS_DEFAULT, clip=0x0, extents=0xbfa0e224) at /build/buildd/cairo-1.10.0/src/cairo-surface-fallback.c:762
+No locals.
+#11 _clip_and_composite_trapezoids (src=<value optimized out>, op=CAIRO_OPERATOR_OVER, dst=0xa2a2808, traps=0xbfa0dd68, antialias=CAIRO_ANTIALIAS_DEFAULT, clip=0x0, extents=0xbfa0e224) at /build/buildd/cairo-1.10.0/src/cairo-surface-fallback.c:812
+        trap_region = 0x0
+        traps_info = {traps = 0xbfa0d938, antialias = 101}
+        clip_region = 0x0
+        clip_surface = 0
+        status = <value optimized out>
+#12 0xb6c205b5 in _cairo_surface_fallback_fill (surface=0xa2a2808, op=CAIRO_OPERATOR_OVER, source=0xbfa0e328, path=0xb6c80714, fill_rule=CAIRO_FILL_RULE_WINDING, tolerance=0.10000000000000001, antialias=CAIRO_ANTIALIAS_DEFAULT, clip=0x0) at /build/buildd/cairo-1.10.0/src/cairo-surface-fallback.c:1216
+        polygon = {status = CAIRO_STATUS_SUCCESS, first_point = {x = 119296, y = 0}, last_point = {x = 1, y = -1079974808}, current_point = {x = 1076644038, y = -1079975100}, current_edge = {dx = -1228405460, dy = -1079977432}, has_current_point = 0, has_current_edge = 0, extents = {p1 = {x = 2147483647, y = 2147483647}, p2 = {x = -2147483648, y = -2147483648}}, limit = {p1 = {x = 1024, y = 105728}, p2 = {x = 9216, y = 113920}}, limits = 0xbfa0e004, num_limits = 1, num_edges = 0, edges_size = 32, edges = 0xbfa0d9e8, edges_embedded = {{line = {p1 = {x = 0, y = 1}, p2 = {x = -1223429193, y = 96988}}, top = -1223424087, bottom = 169524164, dir = 169524048}, {line = {p1 = {x = -1079975084, y = 1957}, p2 = {x = -1223766028, y = -1223423856}}, top = 169500968, bottom = -1079977384, dir = -1224465571}, {line = {p1 = {x = -1223764700, y = 378}, p2 = {x = -1079977384, y = 101}}, top = -1079977216, bottom = 0, dir = -1079977384}, {line = {p1 = {x = 168452608, y = -1223429193}, p2 = {x = -1079977340, y = -1223424087}}, top = -1223467020, bottom = 169500968, dir = 1390}, {line = {p1 = {x = 1957, y = -1223766028}, p2 = {x = -1223423856, y = 169500968}}, top = -1079977304, bottom = -1224465571, dir = -1223764700}, {line = {p1 = {x = -1079977325, y = -1216417760}, p2 = {x = -1228349452, y = 169500960}}, top = 0, bottom = -1079977272, dir = -1224214207}, {line = {p1 = {x = 169500960, y = 1390}, p2 = {x = 96896, y = -1223172831}}, top = 169500968, bottom = 1390, dir = -1079977256}, {line = {p1 = {x = -1222959116, y = -1228997441}, p2 = {x = -1228349452, y = -1079977256}}, top = -1223416767, bottom = -1223745548, dir = 1}, {line = {p1 = {x = -1079977240, y = -1223754427}, p2 = {x = 1, y = -1228193804}}, top = -1079977192, bottom = -1228315665, dir = 163888872}, {line = {p1 = {x = -1223766028, y = -1079977160}, p2 = {x = -1223568335, y = 163718944}}, top = 168768736, bottom = -1079977128, dir = 163888232}, {line = {p1 = {x = 170950976, y = 32}, p2 = {x = -1228315952, y = 4}}, top = 163723104, bottom = 32, dir = 3}, {line = {p1 = {x = 32, y = 163888232}, p2 = {x = -1079976892, y = 0}}, top = -1223467020, bottom = 165426296, dir = 163888904}, {line = {p1 = {x = -1079977128, y = -1223682621}, p2 = {x = 165426304, y = 1}}, top = 13, bottom = -1228193804, dir = -1228193804}, {line = {p1 = {x = 164509104, y = -1079976792}, p2 = {x = -1228307236, y = 165426296}}, top = -1079976892, bottom = -1224226029, dir = -1226652736}, {line = {p1 = {x = 169277792, y = -1223766028}, p2 = {x = -1226657804, y = -1226652736}}, top = -1079976740, bottom = -1079977032, dir = -1227614590}, {line = {p1 = {x = -1223416767, y = -1223745548}, p2 = {x = 16, y = 135160160}}, top = -1226652736, bottom = 13, dir = 173404128}, {line = {p1 = {x = 466976, y = -1223766028}, p2 = {x = 13, y = -1079976740}}, top = -1079976984, bottom = -1224315380, dir = 1}, {line = {p1 = {x = 13, y = 0}, p2 = {x = -1223167785, y = -1079977320}}, top = -1223766028, bottom = -1079976920, dir = -1223416767}, {line = {p1 = {x = -1223745548, y = 40}, p2 = {x = -1079976952, y = -1223754427}}, top = 1, bottom = 0, dir = -1079976936}, {line = {p1 = {x = -1223754427, y = 1}, p2 = {x = -1223766028, y = -1079976840}}, top = -1223416767, bottom = -1223745548, dir = 16}, {line = {p1 = {x = -1079976904, y = -1223754427}, p2 = {x = 1, y = 0}}, top = -1079976856, bottom = -1224414392, dir = 1085}, {line = {p1 = {x = -1223766028, y = -1079976792}, p2 = {x = -1224225206, y = 163718944}}, top = 163888872, bottom = 0, dir = -1223416767}, {line = {p1 = {x = -1223745548, y = 0}, p2 = {x = -1079976840, y = -1223754427}}, top = 1, bottom = -1079976660, dir = -1079976760}, {line = {p1 = {x = -1223140985, y = 169500672}, p2 = {x = -1223766028, y = -1079976728}}, top = -1224221737, bottom = 163718944, dir = 1085}, {line = {p1 = {x = 135160160, y = -1223568335}, p2 = {x = -1223745548, y = 1}}, top = -1079976776, bottom = -1223754427, dir = 1}, {line = {p1 = {x = 0, y = -1079976760}, p2 = {x = 8, y = 0}}, top = -1223766028, bottom = -1079976696, dir = -1224220782}, {line = {p1 = {x = 163718944, y = 1085}, p2 = {x = 135160160, y = -1223467020}}, top = -1079976564, bottom = 26, dir = -1079976664}, {line = {p1 = {x = -1223682152, y = 165426300}, p2 = {x = 2, y = 1}}, top = -1224217907, bottom = 8, dir = 0}, {line = {p1 = {x = 4, y = -1222959116}, p2 = {x = -1224217943, y = 165426296}}, top = 165426304, bottom = 165426300, dir = 0}, {line = {p1 = {x = 170001568, y = 166793354}, p2 = {x = -1222959116, y = -1079976564}}, top = 26, bottom = -1079976632, dir = -1223137786}, {line = {p1 = {x = 165426296, y = 0}, p2 = {x = 0, y = -1223137860}}, top = -1222959116, bottom = -1079976564, dir = -1079975336}, {line = {p1 = {x = -1223137545, y = 170960912}, p2 = {x = 0, y = 0}}, top = 26, bottom = 169213712, dir = 169243680}}}
+        traps = {status = CAIRO_STATUS_SUCCESS, limits = 0xbfa0e004, num_limits = 1, maybe_region = 1, has_intersections = 0, is_rectilinear = 1, is_rectangular = 1, num_traps = 1, traps_size = 16, traps = 0xbfa0dd84, traps_embedded = {{top = 105728, bottom = 113920, left = {p1 = {x = 1024, y = 105728}, p2 = {x = 1024, y = 113920}}, right = {p1 = {x = 9216, y = 105728}, p2 = {x = 9216, y = 113920}}}, {top = 13, bottom = 166793354, left = {p1 = {x = 0, y = 4}, p2 = {x = 0, y = 0}}, right = {p1 = {x = 4, y = 0}, p2 = {x = 169243680, y = 0}}}, {top = 166793354, bottom = -1079976424, left = {p1 = {x = -1224414392, y = 170387624}, p2 = {x = 1, y = 63}}, right = {p1 = {x = 166793328, y = 166793354}, p2 = {x = 166793328, y = 163726992}}}, {top = 170387624, bottom = 0, left = {p1 = {x = 8, y = -1079976392}, p2 = {x = -1223467020, y = 1}}, right = {p1 = {x = 0, y = -1079976328}, p2 = {x = -1223615608, y = 163726992}}}, {top = 170387624, bottom = -1079976360, left = {p1 = {x = -1223555055, y = 0}, p2 = {x = 169175280, y = 1957}}, right = {p1 = {x = -1228406796, y = 0}, p2 = {x = 169229056, y = -1079976296}}}, {top = -1227609979, bottom = 1, left = {p1 = {x = -1079976272, y = -1223424087}, p2 = {x = 0, y = 72}}, right = {p1 = {x = 165306540, y = -1223615635}, p2 = {x = -1223467020, y = -1223423856}}}, {top = 0, bottom = -1079976008, left = {p1 = {x = -1223585123, y = -1223465944}, p2 = {x = 80, y = -1079976280}}, right = {p1 = {x = -1223754427, y = 1}, p2 = {x = 16, y = -1079976264}}}, {top = -1223754427, bottom = 1, left = {p1 = {x = -1223766028, y = -1079976168}, p2 = {x = -1224225206, y = 163718944}}, right = {p1 = {x = -1223766028, y = -1079976152}, p2 = {x = -1224225206, y = 163718944}}}, {top = 1077, bottom = -1079976200, left = {p1 = {x = 8, y = -1228349452}, p2 = {x = -1228349452, y = -1079976200}}, right = {p1 = {x = 1, y = -1223745548}, p2 = {x = 56, y = -1079976184}}}, {top = 1, bottom = -1223429193, left = {p1 = {x = -1228193804, y = -1223424087}, p2 = {x = 2, y = 163905312}}, right = {p1 = {x = -1223766028, y = 1957}, p2 = {x = -1223416767, y = -1223745548}}}, {top = 169023624, bottom = -1079976136, left = {p1 = {x = -1223754427, y = 1}, p2 = {x = 0, y = 170930768}}, right = {p1 = {x = -1224197820, y = -1222872201}, p2 = {x = -1222872201, y = -1079976024}}}, {top = -1224221737, bottom = 163718944, left = {p1 = {x = -1223766028, y = -1079976056}, p2 = {x = -1224414270, y = -1222872201}}, right = {p1 = {x = -1222872201, y = -1079976072}, p2 = {x = -1223754427, y = -1223429193}}}, {top = 163726896, bottom = -1223424087, left = {p1 = {x = 1308026755, y = -1223745548}, p2 = {x = 1, y = 1957}}, right = {p1 = {x = -1223766028, y = 801}, p2 = {x = -1223423856, y = -1079975976}}}, {top = -1224466887, bottom = -1223764748, left = {p1 = {x = -1222872201, y = -1079975960}, p2 = {x = -1224220782, y = 163718944}}, right = {p1 = {x = 16, y = -1223585829}, p2 = {x = -1223467020, y = 8}}}, {top = 164139440, bottom = -1079975976, left = {p1 = {x = -1223582014, y = 170387624}, p2 = {x = 1, y = 801}}, right = {p1 = {x = -1079975956, y = 8}, p2 = {x = -1223467020, y = -1079975928}}}, {top = -1223672255, bottom = 170387624, left = {p1 = {x = 1, y = 801}, p2 = {x = 164139440, y = -1223764700}}, right = {p1 = {x = 170930768, y = 0}, p2 = {x = -1223467020, y = 8}}}}}
+        boxes_stack = {{p1 = {x = 1024, y = 105728}, p2 = {x = 9216, y = 113920}}, {p1 = {x = 8, y = -1079975824}, p2 = {x = -1223467020, y = -1223467020}}, {p1 = {x = 8, y = -1079975736}, p2 = {x = -1223676115, y = 0}}, {p1 = {x = 8, y = -1079975824}, p2 = {x = 0, y = 1}}, {p1 = {x = 169213200, y = 24}, p2 = {x = 163790712, y = -1079975836}}, {p1 = {x = -1223766028, y = -1079975768}, p2 = {x = -1224220782, y = -1223429193}}, {p1 = {x = 0, y = -1223466068}, p2 = {x = 170387624, y = 164135544}}, {p1 = {x = 164121624, y = 164121496}, p2 = {x = 164121440, y = 164287488}}, {p1 = {x = 164121384, y = 164121328}, p2 = {x = 164139440, y = -1079975768}}, {p1 = {x = -1227612579, y = -1079975720}, p2 = {x = 0, y = -1223766028}}, {p1 = {x = 167854168, y = -1079975736}, p2 = {x = -1224315754, y = 167854168}}, {p1 = {x = 168681520, y = -1223676595}, p2 = {x = -1223467020, y = 1}}, {p1 = {x = 1, y = -1079975560}, p2 = {x = -1223667613, y = 167854168}}, {p1 = {x = 55, y = 166852416}, p2 = {x = 1, y = 163790716}}, {p1 = {x = -1079975660, y = -1227626602}, p2 = {x = -1228373564, y = 392}}, {p1 = {x = 24, y = -1079975560}, p2 = {x = 163790712, y = -1223502916}}, {p1 = {x = 0, y = -1223502972}, p2 = {x = 0, y = -1223511251}}, {p1 = {x = 164381864, y = -1079975592}, p2 = {x = -1223571928, y = 164390656}}, {p1 = {x = 170387624, y = -1079975560}, p2 = {x = -1223545520, y = 164044792}}, {p1 = {x = 54, y = 53}, p2 = {x = 170387624, y = -1079975592}}, {p1 = {x = -1227612579, y = -1079975560}, p2 = {x = -1223544776, y = 164044792}}, {p1 = {x = 170701304, y = -1079975560}, p2 = {x = 0, y = 170701304}}, {p1 = {x = -1223766028, y = -1223545571}, p2 = {x = -1223467020, y = 170701280}}, {p1 = {x = 170387624, y = -1079975368}, p2 = {x = -1223666265, y = 164381864}}, {p1 = {x = 8, y = 170701304}, p2 = {x = 0, y = -1223745548}}, {p1 = {x = -1223766028, y = -1079975416}, p2 = {x = 165112200, y = 163718944}}, {p1 = {x = -1223766028, y = -1079975400}, p2 = {x = 163750684, y = 1}}, {p1 = {x = 0, y = 170387624}, p2 = {x = 164381864, y = 163750652}}, {p1 = {x = 192, y = 8}, p2 = {x = 170701304, y = 170701472}}, {p1 = {x = 16, y = -1079975244}, p2 = {x = 170387624, y = 170069528}}, {p1 = {x = 0, y = 0}, p2 = {x = 0, y = 0}}, {p1 = {x = 0, y = -1079975400}, p2 = {x = -1228822641, y = 170053432}}}
+        clip_boxes = 0xbfa0e004
+        num_boxes = 1
+        is_rectilinear = 3968
+        extents = {source = {x = 4, y = 413, width = 32, height = 32}, mask = {x = 4, y = 413, width = 32, height = 32}, bounded = {x = 4, y = 413, width = 32, height = 32}, unbounded = {x = 1, y = 101, width = 595, height = 362}, is_bounded = 6}
+        rect = {x = 0, y = 0, width = 613, height = 500}
+        status = <value optimized out>
+        __PRETTY_FUNCTION__ = "_cairo_surface_fallback_fill"
+#13 0xb6c1d0a6 in _cairo_surface_fill (surface=0xa2a2808, op=CAIRO_OPERATOR_OVER, source=0xbfa0e328, path=0xb6c80714, fill_rule=CAIRO_FILL_RULE_WINDING, tolerance=0.10000000000000001, antialias=CAIRO_ANTIALIAS_DEFAULT, clip=0xbfa0e428) at /build/buildd/cairo-1.10.0/src/cairo-surface.c:2270
+        status = CAIRO_STATUS_SUCCESS
+#14 0xb6bf26f7 in _cairo_gstate_fill (gstate=0xb6c80480, path=0xb6c80714) at /build/buildd/cairo-1.10.0/src/cairo-gstate.c:1290
+        source_pattern = {type = CAIRO_PATTERN_TYPE_SURFACE, base = {type = CAIRO_PATTERN_TYPE_SURFACE, ref_count = {ref_count = 0}, status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, num_elements = 0, element_size = 12, elements = 0x0, is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, x0 = -4, y0 = -413}, filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_NONE, has_component_alpha = 0}, solid = {base = {type = CAIRO_PATTERN_TYPE_SURFACE, ref_count = {ref_count = 0}, status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, num_elements = 0, element_size = 12, elements = 0x0, is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, x0 = -4, y0 = -413}, filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_NONE, has_component_alpha = 0}, color = {red = 1.7059983886430779e-313, green = -0.032986670732498162, blue = 2.1734544479288695e-311, alpha = -8.4137777788995164e-45, red_short = 21135, green_short = 46814, blue_short = 65524, alpha_short = 46791}}, surface = {base = {type = CAIRO_PATTERN_TYPE_SURFACE, ref_count = {ref_count = 0}, status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, num_elements = 0, element_size = 12, elements = 0x0, is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, x0 = -4, y0 = -413}, filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_NONE, has_component_alpha = 0}, surface = 0xa22cf38}, gradient = {base = {base = {type = CAIRO_PATTERN_TYPE_SURFACE, ref_count = {ref_count = 0}, status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, num_elements = 0, element_size = 12, elements = 0x0, is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, x0 = -4, y0 = -413}, filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_NONE, has_component_alpha = 0}, n_stops = 170053432, stops_size = 8, stops = 0xffffffff, stops_embedded = {{offset = 3.0000014277433849, color = {red = 1.2731975251714855e-313, green = -2.1245440126767405e-44, blue = -8.4176731409679716e-45, alpha = -0.032989284813097403, red_short = 0, green_short = 0, blue_short = 4, alpha_short = 0}}, {offset = 26388279066592, color = {red = -1.0061240866520293e-42, green = 9.7187849493048814e-260, blue = -5.7439678024366098e-45, alpha = 3.7104130755883961e-314, red_short = 58440, green_short = 928, blue_short = 4, alpha_short = 0}}}}, linear = {base = {base = {type = CAIRO_PATTERN_TYPE_SURFACE, ref_count = {ref_count = 0}, status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, num_elements = 0, element_size = 12, elements = 0x0, is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, x0 = -4, y0 = -413}, filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_NONE, has_component_alpha = 0}, n_stops = 170053432, stops_size = 8, stops = 0xffffffff, stops_embedded = {{offset = 3.0000014277433849, color = {red = 1.2731975251714855e-313, green = -2.1245440126767405e-44, blue = -8.4176731409679716e-45, alpha = -0.032989284813097403, red_short = 0, green_short = 0, blue_short = 4, alpha_short = 0}}, {offset = 26388279066592, color = {red = -1.0061240866520293e-42, green = 9.7187849493048814e-260, blue = -5.7439678024366098e-45, alpha = 3.7104130755883961e-314, red_short = 58440, green_short = 928, blue_short = 4, alpha_short = 0}}}}, p1 = {x = -1228405664, y = 0}, p2 = {x = 1024, y = 105728}}, radial = {base = {base = {type = CAIRO_PATTERN_TYPE_SURFACE, ref_count = {ref_count = 0}, status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, num_elements = 0, element_size = 12, elements = 0x0, is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, x0 = -4, y0 = -413}, filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_NONE, has_component_alpha = 0}, n_stops = 170053432, stops_size = 8, stops = 0xffffffff, stops_embedded = {{offset = 3.0000014277433849, color = {red = 1.2731975251714855e-313, green = -2.1245440126767405e-44, blue = -8.4176731409679716e-45, alpha = -0.032989284813097403, red_short = 0, green_short = 0, blue_short = 4, alpha_short = 0}}, {offset = 26388279066592, color = {red = -1.0061240866520293e-42, green = 9.7187849493048814e-260, blue = -5.7439678024366098e-45, alpha = 3.7104130755883961e-314, red_short = 58440, green_short = 928, blue_short = 4, alpha_short = 0}}}}, c1 = {x = -1228405664, y = 0}, r1 = 1024, c2 = {x = 105728, y = -1228404972}, r2 = 170387624}}}
+        extents = {x = 0, y = 0, width = 613, height = 500}
+        box = {p1 = {x = 1024, y = 105728}, p2 = {x = 9216, y = 113920}}
+        pattern = 0xbfa0e328
+        op = CAIRO_OPERATOR_OVER
+        clip = {path = 0xa1abb50, all_clipped = 0}
+        status = <value optimized out>
+#15 0xb6be8896 in cairo_fill_preserve (cr=0xb6c80460) at /build/buildd/cairo-1.10.0/src/cairo.c:2448
+        status = <value optimized out>
+#16 0xb6be88c2 in cairo_fill (cr=0xb6c80460) at /build/buildd/cairo-1.10.0/src/cairo.c:2424
+No locals.
+#17 0xb73f3a35 in gtk_cell_renderer_pixbuf_render (cell=0x9d76988, window=0xa1568f0, widget=0x9dbe170, background_area=0xbfa0e658, cell_area=0xbfa0e658, expose_area=0xbfa0e658, flags=0) at /build/buildd/gtk+2.0-2.21.7/gtk/gtkcellrendererpixbuf.c:768
+        pixbuf = <value optimized out>
+        invisible = 0xa27e8a8
+        colorized = 0xa3031a0
+        pix_rect = {x = 3, y = 312, width = 32, height = 32}
+        draw_rect = {x = 3, y = 312, width = 32, height = 32}
+        cr = 0xb6c80460
+#18 0xb73efe30 in IA__gtk_cell_renderer_render (cell=0x9d76988, window=0xa1568f0, widget=0x9dbe170, background_area=0xbfa0e658, cell_area=0xbfa0e658, expose_area=0xbfa0e658, flags=<value optimized out>) at /build/buildd/gtk+2.0-2.21.7/gtk/gtkcellrenderer.c:578
+        __PRETTY_FUNCTION__ = "IA__gtk_cell_renderer_render"
+#19 0x08077e79 in ?? ()
+No symbol table info available.
+#20 0xb73efe30 in IA__gtk_cell_renderer_render (cell=0x9dbe170, window=0xa1568f0, widget=0x9dbe170, background_area=0xbfa0e798, cell_area=0xbfa0e7a8, expose_area=0xbfa0e7b8, flags=<value optimized out>) at /build/buildd/gtk+2.0-2.21.7/gtk/gtkcellrenderer.c:578
+        __PRETTY_FUNCTION__ = "IA__gtk_cell_renderer_render"
+#21 0xb75eae49 in gtk_tree_view_column_cell_process_action (tree_column=<value optimized out>, window=<value optimized out>, background_area=0xbfa0e9b8, cell_area=0xbfa0e9a8, flags=0, action=0, expose_area=0xbfa0ef74, focus_rectangle=0x0, editable_widget=0x0, event=0x0, path_string=0x0) at /build/buildd/gtk+2.0-2.21.7/gtk/gtktreeviewcolumn.c:2835
+        info = 0x9dc0c28
+        list = 0x9cec3a0
+        real_expose_area = {x = 1, y = 292, width = 593, height = 73}
+        depth = 595
+        expand_cell_count = 0
+        full_requested_width = <value optimized out>
+        extra_space = 382
+        min_x = 2147483647
+        min_y = 2147483647
+        max_x = 0
+        max_y = <value optimized out>
+        focus_line_width = 1
+        special_cells = 0
+        horizontal_separator = 2
+        cursor_row = 0
+        first_cell = <value optimized out>
+        rtl = 0
+        rtl_cell_area = {x = 2, y = 293, width = 209, height = 71}
+        rtl_background_area = {x = 0, y = 292, width = 595, height = 73}
+        __PRETTY_FUNCTION__ = "gtk_tree_view_column_cell_process_action"
+#22 0xb75ebcb4 in _gtk_tree_view_column_cell_render (tree_column=0x9d7d330, window=0xa1568f0, background_area=0xbfa0e9b8, cell_area=0xbfa0e9a8, expose_area=0xbfa0ef74, flags=0) at /build/buildd/gtk+2.0-2.21.7/gtk/gtktreeviewcolumn.c:3168
+        __PRETTY_FUNCTION__ = "_gtk_tree_view_column_cell_render"
+#23 0xb75e5cf9 in gtk_tree_view_bin_expose (widget=<value optimized out>, event=<value optimized out>) at /build/buildd/gtk+2.0-2.21.7/gtk/gtktreeview.c:4751
+        column = 0x9d7d330
+        detail = <value optimized out>
+        state = GTK_STATE_NORMAL
+        parity = 0
+        is_separator = 0
+        is_first = 0
+        is_last = 0
+        path = <value optimized out>
+        tree = 0xa06c478
+        list = 0x9cec390
+        node = 0xa0b9e60
+        cursor = 0x9dc1a80
+        cursor_tree = 0xa06c478
+        drag_highlight = 0x0
+        drag_highlight_tree = 0x0
+        iter = {stamp = -1465282053, user_data = 0xa073350, user_data2 = 0xa30bc28, user_data3 = 0x0}
+        new_y = <value optimized out>
+        y_offset = 365
+        cell_offset = <value optimized out>
+        max_height = 73
+        depth = 1
+        background_area = {x = 0, y = 292, width = 595, height = 73}
+        cell_area = {x = 1, y = 292, width = 593, height = 73}
+        flags = <value optimized out>
+        highlight_x = 0
+        expander_cell_width = 0
+        bin_window_width = 595
+        bin_window_height = 362
+        cursor_path = 0x9cdc560
+        drag_dest_path = 0x0
+        first_column = <value optimized out>
+        last_column = <value optimized out>
+        vertical_separator = 0
+        horizontal_separator = 2
+        focus_line_width = 1
+        allow_rules = 1
+        has_special_cell = 0
+        rtl = 0
+        n_visible_columns = <value optimized out>
+        pointer_x = -1079973320
+        pointer_y = -1230962700
+        grid_line_width = 164320848
+        got_pointer = 0
+        row_ending_details = 0
+        draw_vgrid_lines = 0
+        draw_hgrid_lines = 0
+        __PRETTY_FUNCTION__ = "gtk_tree_view_bin_expose"
+#24 0xb75e74fa in gtk_tree_view_expose (widget=0x9dbe170, event=0xbfa0ef68) at /build/buildd/gtk+2.0-2.21.7/gtk/gtktreeview.c:5082
+        retval = <value optimized out>
+        tmp_list = <value optimized out>
+#25 0xb74b6898 in _gtk_marshal_BOOLEAN__BOXED (closure=0x9c68520, return_value=0xbfa0ecb4, n_param_values=2, param_values=0xa2e5d18, invocation_hint=0xbfa0eca0, marshal_data=0xb75e73f0) at /build/buildd/gtk+2.0-2.21.7/gtk/gtkmarshalers.c:86
+        data1 = 0x9dbe170
+        data2 = 0x9c68678
+        v_return = <value optimized out>
+        __PRETTY_FUNCTION__ = "_gtk_marshal_BOOLEAN__BOXED"
+#26 0xb70fdb27 in g_type_class_meta_marshal (closure=0x9c68520, return_value=0xbfa0ecb4, n_param_values=2, param_values=0xa2e5d18, invocation_hint=0xbfa0eca0, marshal_data=0xc8) at /build/buildd/glib2.0-2.25.15/gobject/gclosure.c:877
+        callback = <value optimized out>
+#27 0xb70ff4b2 in g_closure_invoke (closure=0x9c68520, return_value=0xbfa0ecb4, n_param_values=2, param_values=0xa2e5d18, invocation_hint=0xbfa0eca0) at /build/buildd/glib2.0-2.25.15/gobject/gclosure.c:766
+        marshal = 0xb70fdad0 <g_type_class_meta_marshal>
+        marshal_data = 0xc8
+        __PRETTY_FUNCTION__ = "g_closure_invoke"
+#28 0xb7117d36 in signal_emit_unlocked_R (node=<value optimized out>, detail=<value optimized out>, instance=0x9dbe170, emission_return=0xbfa0ee0c, instance_and_params=0xa2e5d18) at /build/buildd/glib2.0-2.25.15/gobject/gsignal.c:3290
+        accumulator = 0x9c577d0
+        emission = {next = 0x0, instance = 0x9dbe170, ihint = {signal_id = 41, detail = 0, run_type = G_SIGNAL_RUN_LAST}, state = EMISSION_RUN, chain_type = 164099744}
+        class_closure = 0x9c68520
+        handler_list = 0x0
+        return_accu = <value optimized out>
+        accu = {g_type = 20, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        signal_id = 41
+        max_sequential_handler_number = 169028
+        return_value_altered = 0
+#29 0xb71195db in g_signal_emit_valist (instance=0x9dbe170, signal_id=41, detail=0, var_args=0xbfa0ee70 "\234\350\213\306\t\350\250\021\n\312\344_\267\364ow\267p\341\333\t\270p\341\333\tp\341\333\tx\206\306\t\364\001") at /build/buildd/glib2.0-2.25.15/gobject/gsignal.c:2993
+        return_value = {g_type = 20, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        error = <value optimized out>
+        signal_return_type = 20
+        param_values = 0xa2e5d2c
+        node = 0x9c578b8
+        i = <value optimized out>
+        n_params = 1
+        __PRETTY_FUNCTION__ = "g_signal_emit_valist"
+#30 0xb7119ec2 in g_signal_emit (instance=0x9dbe170, signal_id=41, detail=0) at /build/buildd/glib2.0-2.25.15/gobject/gsignal.c:3040
+No locals.
+#31 0xb75fe736 in gtk_widget_event_internal (widget=<value optimized out>, event=0xbfa0ef68) at /build/buildd/gtk+2.0-2.21.7/gtk/gtkwidget.c:4983
+        signal_num = <value optimized out>
+        return_val = 0
+#32 0xb74af49b in IA__gtk_main_do_event (event=0xbfa0ef68) at /build/buildd/gtk+2.0-2.21.7/gtk/gtkmain.c:1590
+        event_widget = 0x9dbe170
+        grab_widget = <value optimized out>
+        window_group = 0x9ced040
+        rewritten_event = 0x0
+        tmp_list = <value optimized out>
+        __PRETTY_FUNCTION__ = "IA__gtk_main_do_event"
+#33 0xb730186b in _gdk_window_process_updates_recurse (window=0xa1568f0, expose_region=0xa0f2560) at /build/buildd/gtk+2.0-2.21.7/gdk/gdkwindow.c:5414
+        event = {type = GDK_EXPOSE, any = {type = GDK_EXPOSE, window = 0xa1568f0, send_event = 0 '\000'}, expose = {type = GDK_EXPOSE, window = 0xa1568f0, send_event = 0 '\000', area = {x = 0, y = 0, width = 595, height = 362}, region = 0xa0f2560, count = 0}, no_expose = {type = GDK_EXPOSE, window = 0xa1568f0, send_event = 0 '\000'}, visibility = {type = GDK_EXPOSE, window = 0xa1568f0, send_event = 0 '\000', state = GDK_VISIBILITY_UNOBSCURED}, motion = {type = GDK_EXPOSE, window = 0xa1568f0, send_event = 0 '\000', time = 0, x = 1.262587495624337e-311, y = 3.165162299154421e-260, axes = 0x0, state = 3073308945, is_hint = 27044, device = 0x1, x_root = -1.0061245988303484e-42, y_root = 3.1651623608741575e-260}, button = {type = GDK_EXPOSE, window = 0xa1568f0, send_event = 0 '\000', time = 0, x = 1.262587495624337e-311, y = 3.165162299154421e-260, axes = 0x0, state = 3073308945, button = 169175460, device = 0x1, x_root = -1.0061245988303484e-42, y_root = 3.1651623608741575e-260}, scroll = {type = GDK_EXPOSE, window = 0xa1568f0, send_event = 0 '\000', time = 0, x = 1.262587495624337e-311, y = 3.165162299154421e-260, state = 0, direction = 3073308945, device = 0xa1569a4, x_root = -0.033079862594604499, y_root = 1.3415489762894623e-259}, key = {type = GDK_EXPOSE, window = 0xa1568f0, send_event = 0 '\000', time = 0, state = 0, keyval = 595, length = 362, string = 0xa0f2560 "\002", hardware_keycode = 0, group = 0 '\000', is_modifier = 0}, crossing = {type = GDK_EXPOSE, window = 0xa1568f0, send_event = 0 '\000', subwindow = 0x0, time = 0, x = 7.6816247662339764e-312, y = 8.3380874097168138e-316, x_root = 4.3520569623006376e-260, y_root = -0.033079862594604499, mode = 3073798132, detail = 170950752, focus = 168764768, state = 1}, focus_change = {type = GDK_EXPOSE, window = 0xa1568f0, send_event = 0 '\000', in = 2554}, configure = {type = GDK_EXPOSE, window = 0xa1568f0, send_event = 0 '\000', x = 0, y = 0, width = 595, height = 362}, property = {type = GDK_EXPOSE, window = 0xa1568f0, send_event = 0 '\000', atom = 0x0, time = 0, state = 595}, selection = {type = GDK_EXPOSE, window = 0xa1568f0, send_event = 0 '\000', selection = 0x0, target = 0x0, property = 0x253, time = 362, requestor = 168764768}, owner_change = {type = GDK_EXPOSE, window = 0xa1568f0, send_event = 0 '\000', owner = 0, reason = GDK_OWNER_CHANGE_NEW_OWNER, selection = 0x253, time = 362, selection_time = 168764768}, proximity = {type = GDK_EXPOSE, window = 0xa1568f0, send_event = 0 '\000', time = 0, device = 0x0}, client = {type = GDK_EXPOSE, window = 0xa1568f0, send_event = 0 '\000', message_type = 0x0, data_format = 0, data = {b = "S\002\000\000j\001\000\000`%\017\n\000\000\000\000\021\371.\267", s = {595, 0, 362, 0, 9568, 2575, 0, 0, -1775, -18642}, l = {595, 362, 168764768, 0, -1221658351}}}, dnd = {type = GDK_EXPOSE, window = 0xa1568f0, send_event = 0 '\000', context = 0x0, time = 0, x_root = 595, y_root = 0}, window_state = {type = GDK_EXPOSE, window = 0xa1568f0, send_event = 0 '\000', changed_mask = 0, new_window_state = 0}, setting = {type = GDK_EXPOSE, window = 0xa1568f0, send_event = 0 '\000', action = GDK_SETTING_ACTION_NEW, name = 0x0}, grab_broken = {type = GDK_EXPOSE, window = 0xa1568f0, send_event = 0 '\000', keyboard = 0, implicit = 0, grab_window = 0x253}}
+        child = 0xa1568f0
+        child_region = 0x9fa4d78
+        r = {x = 16, y = 362, width = 170898796, height = 167911288}
+        l = <value optimized out>
+        children = 0x0
+#34 0xb730181a in _gdk_window_process_updates_recurse (window=0xa156840, expose_region=0xa308060) at /build/buildd/gtk+2.0-2.21.7/gdk/gdkwindow.c:5387
+        child = 0xa1568f0
+        child_region = 0xa0f2560
+        r = {x = 0, y = 0, width = 595, height = 362}
+        l = 0xa0f3970
+        children = 0xa0f3970
+#35 0xb730181a in _gdk_window_process_updates_recurse (window=0x9c4d230, expose_region=0xa2fb560) at /build/buildd/gtk+2.0-2.21.7/gdk/gdkwindow.c:5387
+        child = 0xa156840
+        child_region = 0xa308060
+        r = {x = 1, y = 101, width = 595, height = 362}
+        l = 0xa0de070
+        children = 0xa31cca0
+#36 0xb7331614 in _gdk_windowing_window_process_updates_recurse (window=0x9c4d230, region=0xa2fb560) at /build/buildd/gtk+2.0-2.21.7/gdk/x11/gdkwindow-x11.c:5566
+No locals.
+#37 0xb72fdfe4 in gdk_window_process_updates_internal (window=0x9c4d230) at /build/buildd/gtk+2.0-2.21.7/gdk/gdkwindow.c:5573
+        expose_region = 0xa2fb560
+        save_region = 163861032
+        clip_box = {x = 0, y = 0, width = 613, height = 500}
+#38 0xb7302f47 in IA__gdk_window_process_all_updates () at /build/buildd/gtk+2.0-2.21.7/gdk/gdkwindow.c:5681
+        old_update_windows = 0xa2e5a88
+        tmp_list = 0xa2e5a88
+        in_process_all_updates = 1
+        got_recursive_update = 0
+#39 0xb7302fcb in gdk_window_update_idle (data=0x0) at /build/buildd/gtk+2.0-2.21.7/gdk/gdkwindow.c:5307
+No locals.
+#40 0xb72d9b78 in gdk_threads_dispatch (data=0x9ddab50) at /build/buildd/gtk+2.0-2.21.7/gdk/gdk.c:512
+        ret = 0
+#41 0xb705c001 in g_idle_dispatch (source=0x9fbe358, callback=0, user_data=0x9ddab50) at /build/buildd/glib2.0-2.25.15/glib/gmain.c:4224
+No locals.
+#42 0xb705e015 in g_main_dispatch (context=0x9c4eda8) at /build/buildd/glib2.0-2.25.15/glib/gmain.c:2119
+        dispatch = 0xb705bfe0 <g_idle_dispatch>
+        user_data = 0x9ddab50
+        callback = 0xb72d9b10 <gdk_threads_dispatch>
+        cb_funcs = 0xb70ed33c
+        cb_data = 0x9f75198
+        current_source_link = {data = 0x9fbe358, next = 0x0}
+        source = 0x9fbe358
+        current = 0xa166e58
+        i = 0
+#43 g_main_context_dispatch (context=0x9c4eda8) at /build/buildd/glib2.0-2.25.15/glib/gmain.c:2672
+No locals.
+#44 0xb7061e28 in g_main_context_iterate (context=0x9c4eda8, block=<value optimized out>, dispatch=1, self=0x9c22c48) at /build/buildd/glib2.0-2.25.15/glib/gmain.c:2750
+        max_priority = 120
+        timeout = 0
+        some_ready = 1
+        nfds = <value optimized out>
+        allocated_nfds = <value optimized out>
+        fds = <value optimized out>
+        __PRETTY_FUNCTION__ = "g_main_context_iterate"
+#45 0xb7062367 in g_main_loop_run (loop=0xa11aa20) at /build/buildd/glib2.0-2.25.15/glib/gmain.c:2958
+        self = 0x9c22c48
+        __PRETTY_FUNCTION__ = "g_main_loop_run"
+#46 0xb74af749 in IA__gtk_main () at /build/buildd/gtk+2.0-2.21.7/gtk/gtkmain.c:1237
+        tmp_list = 0x9c89f20
+        functions = 0x0
+        init = 0x9d45678
+        loop = 0xa11aa20
+#47 0x080710d0 in main ()
+No symbol table info available.

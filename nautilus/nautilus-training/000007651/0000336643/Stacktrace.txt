@@ -1,0 +1,107 @@
+#0  *__GI___libc_realloc (oldmem=0x2, bytes=899) at malloc.c:3656
+	ar_ptr = <value optimized out>
+	nb = <value optimized out>
+	oldp = <value optimized out>
+	oldsize = <value optimized out>
+	newp = <value optimized out>
+	hook = (void *(*)(void *, size_t, const void *)) 0
+#1  0x00007f5da6ba0489 in fft8 (z=0x2)
+    at /build/buildd/ffmpeg-debian-0.svn20090204/libavcodec/fft.c:329
+	r0 = -3.68934881e+19
+	i0 = 1.32445984e+27
+	r1 = 1.46956356e-25
+	i1 = 2.88951887e-13
+	t1 = 3.91033618e-25
+	t2 = 1.92750591e+33
+	t3 = 1.54105057e+10
+	t4 = <value optimized out>
+	t5 = 3.39615136e+38
+	t6 = 1.12103877e-44
+	t7 = <value optimized out>
+	t8 = <value optimized out>
+#2  0x0000000001787230 in ?? ()
+#3  0x00007f5da6d311af in iv_Decode_Chunk (s=0x5, 
+    cur=0x7f5db726ded0 "\213\0069\aº\001", ref=0x7f5d9fffea10 "\005", 
+    width=32605, height=<value optimized out>, 
+    buf1=0x3 <Address 0x3 out of bounds>, cb_offset=0, 
+    hdr=0x7f5d9ffff950 "Pùÿ\237]\177", buf2=0x7f5dbc712040 "", 
+    min_width_160=-1173306438)
+    at /build/buildd/ffmpeg-debian-0.svn20090204/libavcodec/indeo3.c:353
+	bit_buf = 0 '\0'
+	bit_pos = 24124672
+	lv = 2
+	lv1 = <value optimized out>
+	lv2 = <value optimized out>
+	width_tbl_arr = {32267840, 1, 140040556985316, 140040554552710, 
+  140040479238016, 140040479237960, 140040272679200, 24006352, 31788512, 1}
+	ref_vectors = (const signed char *) 0x1da6090 "p*Ú\001"
+	cur_frm_pos = (uint8_t *) 0x0
+	ref_frm_pos = (uint8_t *) 0x7f5da404f010 "àÖ\032\002"
+	cp2 = <value optimized out>
+	cur_lp = (uint32_t *) 0x7f5da6f17824
+	ref_lp = <value optimized out>
+	correction_lp = {0x0, 0x21b0db0}
+	correctionloworder_lp = {0x49abc527, 0x9039f}
+	correctionhighorder_lp = {0x7f5daab51120, 0x7f5db6def1d7}
+	correction_type_sp = {0x7f5db704e780 "à¨Z»]\177", 
+  0x7f5db704e748 "\001"}
+	strip_tbl = {{xpos = 35593996, ypos = 3294275229408, 
+    width = 140040093035564, height = 0, split_flag = 0, 
+    split_direction = 35314384, usl7 = 0}, {xpos = 140040205888395, ypos = 1, 
+    width = 7, height = 140040160473104, split_flag = 35585560, 
+    split_direction = 1, usl7 = 1}, {xpos = 35313376, ypos = 140040207491224, 
+    width = 1, height = 3418826246304, split_flag = 35593200, 
+    split_direction = 140040093035724, usl7 = 35314384}, {xpos = 35313376, 
+    ypos = 140040093035724, width = 796, height = 35593200, 
+    split_flag = 35314384, split_direction = 0, usl7 = 140040205888395}, {
+    xpos = 1, ypos = 35313376, width = 35315776, height = 35593200, 
+    split_flag = 0, split_direction = 140040218356683, usl7 = 23984128}, {
+    xpos = 1, ypos = 140040483743248, width = 32278688, height = 1, 
+    split_flag = 31088784, split_direction = 848, usl7 = 140040093035631}, {
+    xpos = 140040093035648, ypos = 140040093035632, width = 804, 
+    height = 219043332096, split_flag = 35315776, split_direction = 40000000, 
+    usl7 = 0}, {xpos = 140040093035952, ypos = 3418819430848, 
+    width = 34220864, height = 140040093035728, split_flag = 0, 
+    split_direction = 140040530352656, usl7 = 32278704}, {xpos = 0, 
+    ypos = 804, width = 140040466766336, height = 796, split_flag = 0, 
+    split_direction = 140040556985316, usl7 = 0}, {xpos = 3054995496, 
+    ypos = 0, width = 34220864, height = 35315776, split_flag = 796, 
+    split_direction = 0, usl7 = 140040556985316}, {xpos = 35616768, 
+    ypos = 140040218365056, width = 140040093035948, height = 35316056, 
+    split_flag = 31, split_direction = 1, usl7 = 35315776}, {
+    xpos = 140040481420095, ypos = 1, width = 35315776, height = 31, 
+    split_flag = 140040554282036, split_direction = 3, 
+    usl7 = 140040093035948}, {xpos = 140040093035952, ypos = 140040093035936, 
+    width = 140040093035956, height = 32197152, split_flag = 40000000, 
+    split_direction = 140040479239648, usl7 = 35616768}, {xpos = 3145728849, 
+    ypos = 3421864521184, width = 140040556985316, height = 140040218362448, 
+    split_flag = 32278688, split_direction = 32197152, 
+    usl7 = 140040479239648}, {xpos = 25463232, ypos = 140040554418038, 
+    width = 32278320, height = 140040481419749, split_flag = 32278688, 
+    split_direction = 0, usl7 = 32278320}, {xpos = 32278688, ypos = 25463232, 
+    width = 32197152, height = 140040479239648, split_flag = 140040554422867, 
+    split_direction = 140040479239648, usl7 = 1}, {xpos = 140040556985316, 
+    ypos = 140040554414929, width = 32269520, height = 32197152, 
+    split_flag = 32253120, split_direction = 25463232, usl7 = 32267840}, {
+    xpos = 1, ypos = 140040556985316, width = 140040296495154, height = 0, 
+    split_flag = 2032, split_direction = 140040530387832, usl7 = 0}, {
+    xpos = 140040530359753, ypos = 140040463681114, width = 1, 
+    height = 32267840, split_flag = 140040530352656, split_direction = 1, 
+    usl7 = 1}, {xpos = 140040479237960, ypos = 140040556985316, 
+    width = 140040476744642, height = 140040556985316, split_flag = 31788512, 
+    split_direction = 35327408, usl7 = 140040479239648}}
+	strip = (struct ustr *) 0x1787504
+	i = <value optimized out>
+	j = 35877712
+	k = 2
+	lp1 = -1543164520
+	lp2 = <value optimized out>
+	flag1 = -1610618104
+	cmd = <value optimized out>
+	blks_width = 0
+	blks_height = -1542988704
+	region_160_width = 32605
+	rle_v1 = 35593229
+	rle_v2 = 0
+	rle_v3 = -1494323136
+#4  0x0000000000000000 in ?? ()

@@ -1,0 +1,83 @@
+#0  IA__g_logv (log_domain=0xb75ececb "GLib-GObject", log_level=G_LOG_LEVEL_ERROR, 
+    format=0xb75f1f37 "%s()%s`%s'", args1=0xb56bef2c "\032\037_·w>_·\213\207e·1u.·èÙ9\bXÑ-·")
+    at /build/buildd/glib2.0-2.15.6/glib/gmessages.c:503
+	depth = 1
+	domain = (GLogDomain *) 0x0
+	data = (gpointer) 0x0
+	log_func = (GLogFunc) 0x807e3d0 <log_override_cb>
+	domain_fatal_mask = 5
+	test_level = <value optimized out>
+	was_recursion = 0
+	i = <value optimized out>
+#1  0xb7547229 in IA__g_log (log_domain=0xb75ececb "GLib-GObject", log_level=G_LOG_LEVEL_ERROR, 
+    format=0xb75f1f37 "%s()%s`%s'") at /build/buildd/glib2.0-2.15.6/glib/gmessages.c:517
+	args = 0xb56bef2c "\032\037_·w>_·\213\207e·1u.·èÙ9\bXÑ-·"
+#2  0xb75e5689 in IA__g_type_class_ref (type=138008040) at /build/buildd/glib2.0-2.15.6/gobject/gtype.c:2403
+	_arg = (gpointer) 0x0
+	_tname = <value optimized out>
+	ptype = <value optimized out>
+	pclass = (GTypeClass *) 0x839d8d0
+	node = (TypeNode *) 0x839d5e8
+	_action = " invalidly modified type "
+#3  0xb75c9768 in IA__g_object_newv (object_type=138008040, n_parameters=0, parameters=0x0)
+    at /build/buildd/glib2.0-2.15.6/gobject/gobject.c:853
+	nqueue = <value optimized out>
+	object = <value optimized out>
+	class = (GObjectClass *) 0x0
+	unref_class = (GObjectClass *) 0x0
+	slist = <value optimized out>
+	n_total_cparams = <value optimized out>
+	n_cparams = <value optimized out>
+	n_oparams = <value optimized out>
+	n_cvalues = <value optimized out>
+	clist = <value optimized out>
+	i = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_object_newv"
+#4  0xb75c9cc1 in IA__g_object_new_valist (object_type=138008040, first_property_name=0x0, 
+    var_args=0xb56bf1c8 "èñkµÔnV·\204n_·ð\215.·\204n_·\200f_·H\232\035\b\020\230\035\b")
+    at /build/buildd/glib2.0-2.15.6/gobject/gobject.c:986
+	error = <value optimized out>
+	pspec = <value optimized out>
+	params = <value optimized out>
+	name = <value optimized out>
+	object = <value optimized out>
+	n_params = <value optimized out>
+	n_alloced_params = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_object_new_valist"
+#5  0xb75c9e30 in IA__g_object_new (object_type=138008040, first_property_name=0x0)
+    at /build/buildd/glib2.0-2.15.6/gobject/gobject.c:795
+	var_args = 0xb56bf1c8 "èñkµÔnV·\204n_·ð\215.·\204n_·\200f_·H\232\035\b\020\230\035\b"
+	__PRETTY_FUNCTION__ = "IA__g_object_new"
+#6  0xb764050a in _g_local_file_enumerator_new (filename=0x839d188 "/home/carlo/Modelli", 
+    attributes=0x839d000 "standard::*,access::*,mountable::*,time::*,unix::*,owner::*,selinux::*,thumbnail::*,mountable::*", flags=G_FILE_QUERY_INFO_NONE, cancellable=0x8248ea8, error=0xb56bf278)
+    at /build/buildd/glib2.0-2.15.6/gio/glocalfileenumerator.c:160
+	dir = (GDir *) 0x839d768
+	dir_error = (GError *) 0x0
+#7  0xb763e90d in g_local_file_enumerate_children (file=0x8284890, 
+    attributes=0x839d000 "standard::*,access::*,mountable::*,time::*,unix::*,owner::*,selinux::*,thumbnail::*,mountable::*", flags=G_FILE_QUERY_INFO_NONE, cancellable=0x8248ea8, error=0xb56bf278)
+    at /build/buildd/glib2.0-2.15.6/gio/glocalfile.c:577
+No locals.
+#8  0xb7616e40 in IA__g_file_enumerate_children (file=0x8284890, 
+    attributes=0x839d000 "standard::*,access::*,mountable::*,time::*,unix::*,owner::*,selinux::*,thumbnail::*,mountable::*", flags=G_FILE_QUERY_INFO_NONE, cancellable=0x8248ea8, error=0xb56bf278)
+    at /build/buildd/glib2.0-2.15.6/gio/gfile.c:826
+	__PRETTY_FUNCTION__ = "IA__g_file_enumerate_children"
+#9  0xb7617fcb in enumerate_children_async_thread (res=0x839dc30, object=0x8284890, cancellable=0x8248ea8)
+    at /build/buildd/glib2.0-2.15.6/gio/gfile.c:3940
+	error = (GError *) 0x0
+	data = (EnumerateChildrenAsyncData *) 0x839d7c0
+	enumerator = <value optimized out>
+#10 0xb762e4e9 in run_in_thread (job=0x839cc48, c=0x8248ea8, _data=0x839cc90)
+    at /build/buildd/glib2.0-2.15.6/gio/gsimpleasyncresult.c:613
+	simple = (GSimpleAsyncResult *) 0x839dc30
+#11 0xb7627764 in io_job_thread (data=0x839cc48, user_data=0x0)
+    at /build/buildd/glib2.0-2.15.6/gio/gioscheduler.c:178
+	job = (GIOSchedulerJob *) 0x839cc48
+	result = <value optimized out>
+#12 0xb7567c7b in g_thread_pool_thread_proxy (data=0x81dc220)
+    at /build/buildd/glib2.0-2.15.6/glib/gthreadpool.c:265
+	task = (gpointer) 0x839cc48
+	pool = (GRealThreadPool *) 0x81dc220
+#13 0xb7565fef in g_thread_create_proxy (data=0x8387788) at /build/buildd/glib2.0-2.15.6/glib/gthread.c:635
+	__PRETTY_FUNCTION__ = "g_thread_create_proxy"
+#14 0xb72e54fb in start_thread () from /lib/tls/i686/cmov/libpthread.so.0
+#15 0xb72678ee in clone () from /lib/tls/i686/cmov/libc.so.6

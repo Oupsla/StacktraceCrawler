@@ -1,0 +1,10 @@
+#0  0x05236057 in ?? ()
+No symbol table info available.
+#1  0x0846f578 in ?? ()
+No symbol table info available.
+#2  0x0072139f in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#3  0x0093b96e in start_thread () from /lib/tls/i686/cmov/libpthread.so.0
+No symbol table info available.
+#4  0x07433a4e in clone () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.

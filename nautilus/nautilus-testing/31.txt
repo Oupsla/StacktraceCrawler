@@ -1,0 +1,22 @@
+#0  0x00007ff68ddbddd6 in closure_accel_activate (closure=<optimized out>, return_value=0x1752360, n_param_values=<optimized out>, param_values=<optimized out>, invocation_hint=<optimized out>, marshal_data=<optimized out>) at /build/buildd/gtk+3.0-3.8.4/./gtk/gtkaction.c:1643
+No locals.
+#1  0x000000000046dcce in ?? ()
+No symbol table info available.
+#2  0x000000000046ff3e in ?? ()
+No symbol table info available.
+#3  0x0000000000433199 in ?? ()
+No symbol table info available.
+#4  0x000000000046d129 in ?? ()
+No symbol table info available.
+#5  0x000000000046d17f in ?? ()
+No symbol table info available.
+#6  0x00007ff68b510e33 in g_main_context_add_poll () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#7  0x0000000001234770 in ?? ()
+No symbol table info available.
+#8  0x00007ff68b5102d6 in g_main_context_check () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#9  0x00000000015937c0 in ?? ()
+No symbol table info available.
+#10 0x0000000000000000 in ?? ()
+No symbol table info available.

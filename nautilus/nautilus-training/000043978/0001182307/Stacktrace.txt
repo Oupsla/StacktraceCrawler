@@ -1,0 +1,253 @@
+#0  g_type_check_instance (type_instance=type_instance@entry=0x2958390) at /build/buildd/glib2.0-2.37.0/./gobject/gtype.c:4082
+No locals.
+#1  0x00007f7980a18b93 in g_signal_handler_disconnect (instance=0x2958390, handler_id=3748) at /build/buildd/glib2.0-2.37.0/./gobject/gsignal.c:2580
+        _g_boolean_var_ = <optimized out>
+        handler = <optimized out>
+        signal_id = 0
+        __PRETTY_FUNCTION__ = "g_signal_handler_disconnect"
+#2  0x00000000004652e9 in ?? ()
+No symbol table info available.
+#3  0x00007f7980a0ee40 in g_object_run_dispose (object=0x26b38c0) at /build/buildd/glib2.0-2.37.0/./gobject/gobject.c:1062
+        __PRETTY_FUNCTION__ = "g_object_run_dispose"
+#4  0x00007f7982fc38fa in gtk_box_forall (container=<optimized out>, include_internals=<optimized out>, callback=0x7f79831cb150 <gtk_widget_destroy>, callback_data=0x0) at /build/buildd/gtk+3.0-3.6.4/./gtk/gtkbox.c:1865
+        box = <optimized out>
+        priv = 0x28a6120
+        child = <optimized out>
+        children = 0x0
+#5  0x00007f7983009572 in gtk_container_destroy (widget=0x28a61d0) at /build/buildd/gtk+3.0-3.6.4/./gtk/gtkcontainer.c:1377
+        container = 0x28a61d0
+        priv = 0x28a6130
+#6  0x00007f7980a084f2 in g_closure_invoke (closure=0x22c2000, return_value=0x0, n_param_values=1, param_values=0x7fffe59a4640, invocation_hint=0x7fffe59a45e0) at /build/buildd/glib2.0-2.37.0/./gobject/gclosure.c:777
+        marshal = 0x7f7980a06e70 <g_type_class_meta_marshal>
+        marshal_data = 0x98
+        in_marshal = 1
+        real_closure = 0x22c1fe0
+        __PRETTY_FUNCTION__ = "g_closure_invoke"
+#7  0x00007f7980a1ace4 in signal_emit_unlocked_R (node=node@entry=0x22c2070, detail=detail@entry=0, instance=instance@entry=0x28a61d0, emission_return=emission_return@entry=0x0, instance_and_params=instance_and_params@entry=0x7fffe59a4640) at /build/buildd/glib2.0-2.37.0/./gobject/gsignal.c:3700
+        need_unset = 0
+        accumulator = 0x0
+        emission = {next = 0x7fffe59a4a50, instance = 0x28a61d0, ihint = {signal_id = 14, detail = 0, run_type = G_SIGNAL_RUN_CLEANUP}, state = EMISSION_STOP, chain_type = 37702736}
+        handler_list = 0x0
+        return_accu = 0x0
+        accu = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        signal_id = 14
+        max_sequential_handler_number = 5471
+        return_value_altered = <optimized out>
+#8  0x00007f7980a22b9e in g_signal_emit_valist (instance=<optimized out>, signal_id=<optimized out>, detail=<optimized out>, var_args=var_args@entry=0x7fffe59a47c8) at /build/buildd/glib2.0-2.37.0/./gobject/gsignal.c:3328
+        instance_and_params = 0x7fffe59a4640
+        signal_return_type = <optimized out>
+        param_values = 0x7fffe59a4658
+        i = <optimized out>
+        n_params = <optimized out>
+        __PRETTY_FUNCTION__ = "g_signal_emit_valist"
+#9  0x00007f7980a22e82 in g_signal_emit (instance=instance@entry=0x28a61d0, signal_id=<optimized out>, detail=detail@entry=0) at /build/buildd/glib2.0-2.37.0/./gobject/gsignal.c:3384
+        var_args = {{gp_offset = 24, fp_offset = 48, overflow_arg_area = 0x7fffe59a48a0, reg_save_area = 0x7fffe59a47e0}}
+#10 0x00007f79831d6c20 in gtk_widget_dispose (object=0x28a61d0) at /build/buildd/gtk+3.0-3.6.4/./gtk/gtkwidget.c:10270
+        widget = 0x28a61d0
+        priv = 0x28a6140
+#11 0x00007f7980a0ee40 in g_object_run_dispose (object=0x28a61d0) at /build/buildd/glib2.0-2.37.0/./gobject/gobject.c:1062
+        __PRETTY_FUNCTION__ = "g_object_run_dispose"
+#12 0x00007f7982fc38fa in gtk_box_forall (container=<optimized out>, include_internals=<optimized out>, callback=0x7f79831cb150 <gtk_widget_destroy>, callback_data=0x0) at /build/buildd/gtk+3.0-3.6.4/./gtk/gtkbox.c:1865
+        box = <optimized out>
+        priv = 0x231c790
+        child = <optimized out>
+        children = 0x28dbc40
+#13 0x00007f7983009572 in gtk_container_destroy (widget=0x231c840) at /build/buildd/gtk+3.0-3.6.4/./gtk/gtkcontainer.c:1377
+        container = 0x231c840
+        priv = 0x231c7a0
+#14 0x00007f7980a084f2 in g_closure_invoke (closure=0x22c2000, return_value=0x0, n_param_values=1, param_values=0x7fffe59a4ac0, invocation_hint=0x7fffe59a4a60) at /build/buildd/glib2.0-2.37.0/./gobject/gclosure.c:777
+        marshal = 0x7f7980a06e70 <g_type_class_meta_marshal>
+        marshal_data = 0x98
+        in_marshal = 1
+        real_closure = 0x22c1fe0
+        __PRETTY_FUNCTION__ = "g_closure_invoke"
+#15 0x00007f7980a1ace4 in signal_emit_unlocked_R (node=node@entry=0x22c2070, detail=detail@entry=0, instance=instance@entry=0x231c840, emission_return=emission_return@entry=0x0, instance_and_params=instance_and_params@entry=0x7fffe59a4ac0) at /build/buildd/glib2.0-2.37.0/./gobject/gsignal.c:3700
+        need_unset = 0
+        accumulator = 0x0
+        emission = {next = 0x7fffe59a51d0, instance = 0x231c840, ihint = {signal_id = 14, detail = 0, run_type = G_SIGNAL_RUN_CLEANUP}, state = EMISSION_STOP, chain_type = 37995296}
+        handler_list = 0x0
+        return_accu = 0x0
+        accu = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        signal_id = 14
+        max_sequential_handler_number = 5471
+        return_value_altered = <optimized out>
+#16 0x00007f7980a22b9e in g_signal_emit_valist (instance=<optimized out>, signal_id=<optimized out>, detail=<optimized out>, var_args=var_args@entry=0x7fffe59a4c48) at /build/buildd/glib2.0-2.37.0/./gobject/gsignal.c:3328
+        instance_and_params = 0x7fffe59a4ac0
+        signal_return_type = <optimized out>
+        param_values = 0x7fffe59a4ad8
+        i = <optimized out>
+        n_params = <optimized out>
+        __PRETTY_FUNCTION__ = "g_signal_emit_valist"
+#17 0x00007f7980a22e82 in g_signal_emit (instance=instance@entry=0x231c840, signal_id=<optimized out>, detail=detail@entry=0) at /build/buildd/glib2.0-2.37.0/./gobject/gsignal.c:3384
+        var_args = {{gp_offset = 24, fp_offset = 48, overflow_arg_area = 0x7fffe59a4d20, reg_save_area = 0x7fffe59a4c60}}
+#18 0x00007f79831d6c20 in gtk_widget_dispose (object=0x231c840) at /build/buildd/gtk+3.0-3.6.4/./gtk/gtkwidget.c:10270
+        widget = 0x231c840
+        priv = 0x231c7b0
+#19 0x00007f7980a0cf0c in g_object_unref (_object=0x231c840) at /build/buildd/glib2.0-2.37.0/./gobject/gobject.c:3152
+        weak_locations = 0x0
+        object = 0x231c840
+        old_ref = <optimized out>
+        __PRETTY_FUNCTION__ = "g_object_unref"
+#20 0x00007f7980a0b654 in g_cclosure_marshal_VOID__OBJECTv (closure=0x22daa50, return_value=<optimized out>, instance=<optimized out>, args=<optimized out>, marshal_data=0x44b5e0, n_params=<optimized out>, param_types=0x22daa80) at /build/buildd/glib2.0-2.37.0/./gobject/gmarshal.c:1316
+        cc = 0x22daa50
+        data1 = <optimized out>
+        data2 = <optimized out>
+        callback = <optimized out>
+        arg0 = 0x231c840
+        args_copy = {{gp_offset = 32, fp_offset = 48, overflow_arg_area = 0x7fffe59a5060, reg_save_area = 0x7fffe59a4fa0}}
+#21 0x00007f7980a087a7 in _g_closure_invoke_va (closure=0x22daa50, return_value=0x0, instance=0x2798600, args=0x7fffe59a4f88, n_params=1, param_types=0x22daa80) at /build/buildd/glib2.0-2.37.0/./gobject/gclosure.c:840
+        marshal = 0x7f7980a06cf0 <g_type_class_meta_marshalv>
+        marshal_data = 0x340
+        in_marshal = 0
+        real_closure = 0x22daa30
+        __PRETTY_FUNCTION__ = "_g_closure_invoke_va"
+#22 0x00007f7980a22541 in g_signal_emit_valist (instance=0x2798600, signal_id=<optimized out>, detail=<optimized out>, var_args=var_args@entry=0x7fffe59a4f88) at /build/buildd/glib2.0-2.37.0/./gobject/gsignal.c:3234
+        return_accu = 0x0
+        accu = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        accumulator = 0x0
+        emission = {next = 0x7fffe59a5650, instance = 0x2798600, ihint = {signal_id = 84, detail = 0, run_type = G_SIGNAL_RUN_FIRST}, state = EMISSION_RUN, chain_type = 39662656}
+        signal_id = 84
+        instance_type = <optimized out>
+        emission_return = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        rtype = 4
+        static_scope = 0
+        fastpath_handler = <optimized out>
+        closure = 0x22daa50
+        run_type = <optimized out>
+        l = <optimized out>
+        fastpath = <optimized out>
+        instance_and_params = <optimized out>
+        signal_return_type = <optimized out>
+        param_values = <optimized out>
+        i = <optimized out>
+        n_params = <optimized out>
+        __PRETTY_FUNCTION__ = "g_signal_emit_valist"
+#23 0x00007f7980a22e82 in g_signal_emit (instance=<optimized out>, signal_id=<optimized out>, detail=<optimized out>) at /build/buildd/glib2.0-2.37.0/./gobject/gsignal.c:3384
+        var_args = {{gp_offset = 24, fp_offset = 48, overflow_arg_area = 0x7fffe59a5060, reg_save_area = 0x7fffe59a4fa0}}
+#24 0x00007f798073dd98 in g_list_foreach (list=<optimized out>, func=0x47ccb0, user_data=0x24325c0) at /build/buildd/glib2.0-2.37.0/./glib/glist.c:949
+        next = 0x0
+#25 0x000000000047dd5c in ?? ()
+No symbol table info available.
+#26 0x00007f7980a08578 in g_closure_invoke (closure=0x22c2000, return_value=0x0, n_param_values=1, param_values=0x7fffe59a5240, invocation_hint=0x7fffe59a51e0) at /build/buildd/glib2.0-2.37.0/./gobject/gclosure.c:777
+        marshal = 0x7f7980a06e70 <g_type_class_meta_marshal>
+        marshal_data = 0x98
+        in_marshal = 0
+        real_closure = 0x22c1fe0
+        __PRETTY_FUNCTION__ = "g_closure_invoke"
+#27 0x00007f7980a1ace4 in signal_emit_unlocked_R (node=node@entry=0x22c2070, detail=detail@entry=0, instance=instance@entry=0x24325c0, emission_return=emission_return@entry=0x0, instance_and_params=instance_and_params@entry=0x7fffe59a5240) at /build/buildd/glib2.0-2.37.0/./gobject/gsignal.c:3700
+        need_unset = 0
+        accumulator = 0x0
+        emission = {next = 0x0, instance = 0x24325c0, ihint = {signal_id = 14, detail = 0, run_type = G_SIGNAL_RUN_CLEANUP}, state = EMISSION_STOP, chain_type = 37949040}
+        handler_list = 0x29d5190
+        return_accu = 0x0
+        accu = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        signal_id = 14
+        max_sequential_handler_number = 5467
+        return_value_altered = <optimized out>
+#28 0x00007f7980a22b9e in g_signal_emit_valist (instance=<optimized out>, signal_id=<optimized out>, detail=<optimized out>, var_args=var_args@entry=0x7fffe59a53c8) at /build/buildd/glib2.0-2.37.0/./gobject/gsignal.c:3328
+        instance_and_params = 0x7fffe59a5240
+        signal_return_type = <optimized out>
+        param_values = 0x7fffe59a5258
+        i = <optimized out>
+        n_params = <optimized out>
+        __PRETTY_FUNCTION__ = "g_signal_emit_valist"
+#29 0x00007f7980a22e82 in g_signal_emit (instance=instance@entry=0x24325c0, signal_id=<optimized out>, detail=detail@entry=0) at /build/buildd/glib2.0-2.37.0/./gobject/gsignal.c:3384
+        var_args = {{gp_offset = 24, fp_offset = 48, overflow_arg_area = 0x7fffe59a54a0, reg_save_area = 0x7fffe59a53e0}}
+#30 0x00007f79831d6c20 in gtk_widget_dispose (object=0x24325c0) at /build/buildd/gtk+3.0-3.6.4/./gtk/gtkwidget.c:10270
+        widget = 0x24325c0
+        priv = 0x2432530
+#31 0x00007f7980a0ee40 in g_object_run_dispose (object=0x24325c0) at /build/buildd/glib2.0-2.37.0/./gobject/gobject.c:1062
+        __PRETTY_FUNCTION__ = "g_object_run_dispose"
+#32 0x000000000047e73c in ?? ()
+No symbol table info available.
+#33 0x00007f798309d5ac in _gtk_marshal_BOOLEAN__BOXEDv (closure=0x22d3ce0, return_value=0x7fffe59a5610, instance=<optimized out>, args=<optimized out>, marshal_data=<optimized out>, n_params=<optimized out>, param_types=0x22d3d10) at /build/buildd/gtk+3.0-3.6.4/./gtk/gtkmarshalers.c:130
+        cc = <optimized out>
+        data1 = <optimized out>
+        data2 = <optimized out>
+        callback = <optimized out>
+        arg0 = 0x2969e00
+        args_copy = {{gp_offset = 32, fp_offset = 48, overflow_arg_area = 0x7fffe59a57f0, reg_save_area = 0x7fffe59a5730}}
+        v_return = <optimized out>
+        __PRETTY_FUNCTION__ = "_gtk_marshal_BOOLEAN__BOXEDv"
+#34 0x00007f7980a087a7 in _g_closure_invoke_va (closure=0x22d3ce0, return_value=0x7fffe59a5610, instance=0x24325c0, args=0x7fffe59a5718, n_params=1, param_types=0x22d3d10) at /build/buildd/glib2.0-2.37.0/./gobject/gclosure.c:840
+        marshal = 0x7f7980a06cf0 <g_type_class_meta_marshalv>
+        marshal_data = 0x1a0
+        in_marshal = 0
+        real_closure = 0x22d3cc0
+        __PRETTY_FUNCTION__ = "_g_closure_invoke_va"
+#35 0x00007f7980a22541 in g_signal_emit_valist (instance=0x24325c0, signal_id=<optimized out>, detail=<optimized out>, var_args=var_args@entry=0x7fffe59a5718) at /build/buildd/glib2.0-2.37.0/./gobject/gsignal.c:3234
+        return_accu = 0x7fffe59a5610
+        accu = {g_type = 20, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        accumulator = 0x22d5ea0
+        emission = {next = 0x0, instance = 0x24325c0, ihint = {signal_id = 45, detail = 0, run_type = G_SIGNAL_RUN_LAST}, state = EMISSION_RUN, chain_type = 37949040}
+        signal_id = 45
+        instance_type = <optimized out>
+        emission_return = {g_type = 20, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        rtype = 20
+        static_scope = 0
+        fastpath_handler = <optimized out>
+        closure = 0x22d3ce0
+        run_type = <optimized out>
+        l = <optimized out>
+        fastpath = <optimized out>
+        instance_and_params = <optimized out>
+        signal_return_type = <optimized out>
+        param_values = <optimized out>
+        i = <optimized out>
+        n_params = <optimized out>
+        __PRETTY_FUNCTION__ = "g_signal_emit_valist"
+#36 0x00007f7980a22e82 in g_signal_emit (instance=instance@entry=0x24325c0, signal_id=<optimized out>, detail=detail@entry=0) at /build/buildd/glib2.0-2.37.0/./gobject/gsignal.c:3384
+        var_args = {{gp_offset = 24, fp_offset = 48, overflow_arg_area = 0x7fffe59a57f0, reg_save_area = 0x7fffe59a5730}}
+#37 0x00007f79831cc77e in gtk_widget_event_internal (widget=widget@entry=0x24325c0, event=event@entry=0x2969e00) at /build/buildd/gtk+3.0-3.6.4/./gtk/gtkwidget.c:6303
+        signal_num = <optimized out>
+        return_val = 0
+#38 0x00007f79831ccb99 in gtk_widget_event (widget=widget@entry=0x24325c0, event=event@entry=0x2969e00) at /build/buildd/gtk+3.0-3.6.4/./gtk/gtkwidget.c:5960
+        __PRETTY_FUNCTION__ = "gtk_widget_event"
+#39 0x00007f798309d383 in gtk_main_do_event (event=0x2969e00) at /build/buildd/gtk+3.0-3.6.4/./gtk/gtkmain.c:1596
+        event_widget = 0x24325c0
+        grab_widget = 0x24325c0
+        topmost_widget = <optimized out>
+        window_group = 0x7f7948011390
+        rewritten_event = <optimized out>
+        device = 0x0
+        tmp_list = <optimized out>
+        __PRETTY_FUNCTION__ = "gtk_main_do_event"
+#40 0x00007f7982ccc5e2 in gdk_event_source_dispatch (source=source@entry=0x22da2f0, callback=<optimized out>, user_data=<optimized out>) at /build/buildd/gtk+3.0-3.6.4/./gdk/x11/gdkeventsource.c:358
+        display = <optimized out>
+        event = 0x2969e00
+#41 0x00007f7980741226 in g_main_dispatch (context=0x22f2120) at /build/buildd/glib2.0-2.37.0/./glib/gmain.c:3058
+        dispatch = 0x7f7982ccc5c0 <gdk_event_source_dispatch>
+        was_in_call = 0
+        user_data = 0x0
+        callback = 0x0
+        cb_funcs = 0x0
+        cb_data = 0x0
+        need_destroy = <optimized out>
+        current_source_link = {data = 0x22da2f0, next = 0x0}
+        source = 0x22da2f0
+        current = 0x2303880
+        i = 0
+#42 g_main_context_dispatch (context=context@entry=0x22f2120) at /build/buildd/glib2.0-2.37.0/./glib/gmain.c:3634
+No locals.
+#43 0x00007f7980741578 in g_main_context_iterate (context=context@entry=0x22f2120, block=block@entry=1, dispatch=dispatch@entry=1, self=<optimized out>) at /build/buildd/glib2.0-2.37.0/./glib/gmain.c:3705
+        max_priority = 2147483647
+        timeout = -1
+        some_ready = 1
+        nfds = <optimized out>
+        allocated_nfds = 6
+        fds = 0x22c7b90
+#44 0x00007f798074161c in g_main_context_iteration (context=0x22f2120, context@entry=0x0, may_block=may_block@entry=1) at /build/buildd/glib2.0-2.37.0/./glib/gmain.c:3766
+        retval = <optimized out>
+#45 0x00007f7980ce854c in g_application_run (application=0x22c81d0, argc=<optimized out>, argv=0x7fffe59a5b08) at /build/buildd/glib2.0-2.37.0/./gio/gapplication.c:1624
+        arguments = 0x22c7610
+        status = 0
+        i = <optimized out>
+        __PRETTY_FUNCTION__ = "g_application_run"
+#46 0x000000000042bfcb in ?? ()
+No symbol table info available.
+#47 0x00007f797fc15ea5 in __libc_start_main (main=0x42bf10, argc=2, ubp_av=0x7fffe59a5b08, init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, stack_end=0x7fffe59a5af8) at libc-start.c:260
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, -4909591437101341809, 4374524, 140737045486336, 0, 0, 4909604935284712335, 4985307882694927247}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x4f7cc0, 0x7fffe59a5b08}, data = {prev = 0x0, cleanup = 0x0, canceltype = 5209280}}}
+        not_first_call = <optimized out>
+#48 0x000000000042c025 in ?? ()
+No symbol table info available.

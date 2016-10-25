@@ -1,0 +1,175 @@
+#0  *INT_cairo_surface_get_font_options (surface=0xb786a6a0, options=0x9d48af8)
+    at /build/buildd/cairo-1.6.4/src/cairo-surface.c:633
+No locals.
+#1  0xb74cac00 in _pango_cairo_update_context (cr=0x9d5ce00, context=0x9d77260)
+    at /build/buildd/pango1.0-1.21.3/pango/pangocairo-context.c:104
+	info = (PangoCairoContextInfo *) 0x9e4f840
+	cairo_matrix = {xx = -2.3139826952538139e-42, yx = 2.7719267965808411e-261, 
+  xy = -2.6063987300623165e-42, yy = 2.9784281919814716e-261, x0 = -2.5720528816744253e-42, 
+  y0 = 2.7809205675632512e-261}
+	target = (cairo_surface_t *) 0xb786a6a0
+	pango_matrix = {xx = -1.8340070775041223e-41, xy = 2.7809205675172657e-261, 
+  yx = -1.6089388737117407e-41, yy = 2.2035228339223775e-314, x0 = -2.3121407541083193e-42, 
+  y0 = 2.9784281919611379e-261}
+	current_matrix = <value optimized out>
+	merged_options = <value optimized out>
+	old_merged_options = <value optimized out>
+	changed = <value optimized out>
+	identity_matrix = {xx = 1, xy = 0, yx = 0, yy = 1, x0 = 0, y0 = 0}
+#2  0xb78b1586 in rsvg_cairo_create_pango_context (ctx=0x9d5c288) at rsvg-cairo-draw.c:467
+	fontmap = <value optimized out>
+	context = (PangoContext *) 0x9d77260
+	render = (RsvgCairoRender *) 0x9bf17d8
+#3  0xb78a9ea4 in rsvg_text_render_text (ctx=0x9d5c288, text=0x9dfaac8 "Bibliography", x=0xbfba2c58, 
+    y=0xbfba2c50) at rsvg-text.c:847
+	context = <value optimized out>
+	layout = <value optimized out>
+	iter = <value optimized out>
+	state = (RsvgState *) 0x9d724f0
+	w = <value optimized out>
+	h = 12
+#4  0xb78aa2c0 in _rsvg_node_text_type_children (self=0x9b730f0, ctx=0x9d5c288, x=0xbfba2c58, 
+    y=0xbfba2c50, lastwasspace=0xbfba2c64) at rsvg-text.c:178
+	str = (GString *) 0x9e1bcb0
+	node = (RsvgNode *) 0x9b738e8
+	i = 0
+#5  0xb78aa42d in _rsvg_node_text_type_children (self=0x9bd5948, ctx=0x9d5c288, x=0xbfba2c58, 
+    y=0xbfba2c50, lastwasspace=0xbfba2c64) at rsvg-text.c:290
+	tspan = (RsvgNodeText *) 0x0
+	node = (RsvgNode *) 0x9b730f0
+	i = 0
+#6  0xb78aa60c in _rsvg_node_text_draw (self=0x9bd5948, ctx=0x9d5c288, dominate=0) at rsvg-text.c:253
+	x = 10
+	y = 2958.5572142000001
+	lastwasspace = 0
+#7  0xb78a36e1 in rsvg_node_draw (self=0x9d48af8, ctx=0x9d5c288, dominate=0) at rsvg-structure.c:53
+	state = (RsvgState *) 0xb786aff4
+	stacksave = (GSList *) 0x0
+#8  0xb78a41da in rsvg_node_svg_draw (self=0x9d61e70, ctx=0x9d5c288, dominate=0) at rsvg-structure.c:309
+	state = <value optimized out>
+	affine = {1, 0, 0, 1, 0, 0}
+	affine_old = {1, 0, 0, 1, 0, 0}
+	affine_new = {1, 0, 0, 1, 0, 0}
+	i = 207
+	nx = 0
+	ny = 0
+	nw = 256
+	nh = 3170
+#9  0xb78a36e1 in rsvg_node_draw (self=0x9d48af8, ctx=0x9d5c288, dominate=0) at rsvg-structure.c:53
+	state = (RsvgState *) 0xb786aff4
+	stacksave = (GSList *) 0x0
+#10 0xb78b1abf in rsvg_handle_render_cairo_sub (handle=0x9d5e408, cr=0x9d5ce00, id=0x0)
+    at rsvg-cairo-render.c:228
+	drawsub = (RsvgNode *) 0x9d72150
+	__PRETTY_FUNCTION__ = "rsvg_handle_render_cairo_sub"
+#11 0xb78b201e in rsvg_handle_get_pixbuf_sub (handle=0x9d5e408, id=0x0) at rsvg.c:100
+	dimensions = {width = 256, height = 3170, em = 256, ex = 3170}
+	output = <value optimized out>
+	surface = (cairo_surface_t *) 0x9bb8ff8
+	cr = (cairo_t *) 0x9d5ce00
+	rowstride = 1024
+	__PRETTY_FUNCTION__ = "rsvg_handle_get_pixbuf_sub"
+#12 0xb78b20f5 in rsvg_handle_get_pixbuf (handle=0x9d5e408) at rsvg.c:133
+No locals.
+#13 0xb807f4d4 in ReadSVGImage (image_info=0x9b40da0, exception=0x9b2e030) at coders/svg.c:2756
+	y = <value optimized out>
+	quantum_info = {quantum = 0, format = UndefinedQuantumFormat, minimum = 0, maximum = 0, 
+  scale = 0, pad = 0, min_is_white = MagickFalse, pack = MagickFalse, semaphore = 0x0, signature = 0}
+	q = <value optimized out>
+	pixel_info = <value optimized out>
+	error = (GError *) 0x0
+	p = <value optimized out>
+	x = <value optimized out>
+	svg_info = <value optimized out>
+	SAXModules = {internalSubset = 0xb8086020 <SVGInternalSubset>, 
+  isStandalone = 0xb807bb10 <SVGIsStandalone>, hasInternalSubset = 0xb807bab0 <SVGHasInternalSubset>, 
+  hasExternalSubset = 0xb807ba50 <SVGHasExternalSubset>, resolveEntity = 0xb8085c30 <SVGResolveEntity>, 
+  getEntity = 0xb8085bc0 <SVGGetEntity>, entityDecl = 0xb8085a80 <SVGEntityDeclaration>, 
+  notationDecl = 0xb8085970 <SVGNotationDeclaration>, 
+  attributeDecl = 0xb8085800 <SVGAttributeDeclaration>, elementDecl = 0xb8085720 <SVGElementDeclaration>, 
+  unparsedEntityDecl = 0xb8085640 <SVGUnparsedEntityDeclaration>, 
+  setDocumentLocator = 0xb807ba00 <SVGSetDocumentLocator>, startDocument = 0xb8085580 <SVGStartDocument>, 
+  endDocument = 0xb8085480 <SVGEndDocument>, startElement = 0xb8081570 <SVGStartElement>, 
+  endElement = 0xb8080880 <SVGEndElement>, reference = 0xb8080600 <SVGReference>, 
+  characters = 0xb807bb70 <SVGCharacters>, ignorableWhitespace = 0xb807b9a0 <SVGIgnorableWhitespace>, 
+  processingInstruction = 0xb807b940 <SVGProcessingInstructions>, comment = 0xb8080570 <SVGComment>, 
+  warning = 0xb8080410 <SVGWarning>, error = 0xb80802b0 <SVGError>, fatalError = 0xb80802b0 <SVGError>, 
+  getParameterEntity = 0xb8080240 <SVGGetParameterEntity>, cdataBlock = 0xb8080170 <SVGCDataBlock>, 
+  externalSubset = 0xb8085ce0 <SVGExternalSubset>, initialized = 0, _private = 0x0, startElementNs = 0, 
+  endElementNs = 0, serror = 0}
+	filename = "X\\\t¸svg\000rial-elements.svg\000ckage archive/inkscape-0.46/share/tutorials/tutorial-elements.svg\000\001\000\000\000ô\177\n¸\207ð\226|\000§Ú·ÌCº¿_b\t¸¼Cº¿îmô·°Cº¿Ä\207\n¸\000\000\000\000ôï\000¸0à²\t\204dº¿8dº¿\225nô·", '\0' <repeats 12 times>, " \tÂ·\214Cº¿¼Cº¿°Cº¿\000\000\000\000\233\206\236H\225é\037\004üCº¿H¥"...
+	file = <value optimized out>
+	image = (Image *) 0x9d58f90
+	status = <value optimized out>
+	unique_file = <value optimized out>
+	n = <value optimized out>
+	svg_info = {file = 0xbfba5204, exception = 0xbfba51b8, image = 0xb7f46e95, image_info = 0x0, 
+  affine = {sx = 0, rx = 0, ry = 0, sy = 0, tx = 0, ty = 0}, width = 0, height = 0, size = 0x0, 
+  title = 0x0, comment = 0x0, n = 0, scale = 0xb7f46dee, pointsize = 0, element = {
+    cx = -6.221787602377617e-39, cy = -0.10282063713375056, major = -3.752760661740715e-39, 
+    minor = -5.8323183266841876e-39, angle = 0}, segment = {x1 = 0, y1 = 0, x2 = 0, y2 = 0}, bounds = {
+    x = 0, y = 0, width = 0, height = 0}, center = {x = 0, y = 0, width = 0, 
+    height = -5.8454044400538284e-39}, view_box = {x = -5.8613980724158562e-39, y = 0, width = 0, 
+    height = 0}, radius = {x = 0, y = 0}, stop_color = 0x0, offset = 0x0, text = 0x0, vertices = 0x0, 
+  url = 0x0, parser = 0x0, document = 0x0}
+	message = "3625 L 338.52736,197.82364 z \" transform=\"matrix(-0.614962,-4.549602e-2,-6.191898e-2,0.451855,207.7892,-117.1536)\"/>\n  </g></g></svg>520,276.01151 212.40410,288.85074 C 225.24316,301.68979 289.99433,3"...
+	__PRETTY_FUNCTION__ = "ReadSVGImage"
+#14 0xb7ec55b1 in ReadImage (image_info=0x9b3a9d8, exception=0x9b2e030) at magick/constitute.c:386
+	filename = "/home/babak/Desktop/package archive/inkscape-0.46/share/tutorials/tutorial-elements.svg\000 \204º¿bÂÿ·(\204º¿)tº¿(tº¿`Ü\000¸ÿÿÿÿ\031\000\000\000\220f\215·\200¾Î·(Ý\000¸øtº¿æ¦\t¸ì\203º¿\000\000\000\000ping\000t\000l-elements.svg\000ckage archive/inkscape-0.46/sh"...
+	magick = "SVG\000\213¸Ã·èã²\txáÑ·(\000\000\000@dº¿4dº¿\004\000\000\000ðã²\tÀ9Ð·\200dº¿X¸\b¸îûç·ècº¿\000\000\000\000\000\000\000\000(\000\000\000páÑ·páÑ·\004\000\000\000Èã²\t8\000\000\000\005\000\000\000èã²\tØá²\t\000\000\000\000NÓÿ·À$þ·\020Áÿ·ôÏÑ·pà²\t\230dº¿8dº¿´:Ã·\230dº¿Î)¯·8dº¿/home/babak\000¨\222¼·´:Ã·@áÑ·\003\000\000\000ô\177\n¸´:Ã·X¸\b¸\220dº¿+¥\t¸Xà²\t"...
+	magick_filename = "/home/babak/Desktop/package archive/inkscape-0.46/share/tutorials/tutorial-elements.svg", '\0' <repeats 302 times>, "proc/11963/exe", '\0' <repeats 2993 times>, "È´¼·\020ii\r\030aº¿X\\\t¸xS½·å\016è·\000\000\000\000ð¤Ú·ÀÍ\217·\002\000º¿\030´\t¸\020\016è·ü¤Ú·ô\177\n¸ìÌ\217·\005\000\000\000Øú¼·\020ii\rXaº¿X\\\t"...
+	value = <value optimized out>
+	delegate_info = <value optimized out>
+	magick_info = (const MagickInfo *) 0x9d7e540
+	sans_exception = {severity = UndefinedException, error_number = 0, reason = 0x0, 
+  description = 0x0, exceptions = 0x0, relinquish = MagickFalse, semaphore = 0x0, signature = 1414746708}
+	geometry_info = {rho = 0, sigma = 0, xi = 0, psi = 0, chi = 0}
+	image = (Image *) 0xbfba5358
+	next = <value optimized out>
+	read_info = (ImageInfo *) 0x9b40da0
+	flags = <value optimized out>
+	__PRETTY_FUNCTION__ = "ReadImage"
+#15 0xb7f98eaf in ReadStream (image_info=0x9b36838, stream=0xb7ec4390 <PingStream>, exception=0x9b2e030)
+    at magick/stream.c:796
+	cache_methods = {acquire_indexes_from_handler = 0xb7f959f0 <AcquireIndexesFromStream>, 
+  acquire_one_pixel_from_handler = 0xb7f99e20 <AcquireOnePixelFromStream>, 
+  acquire_pixel_handler = 0xb7f99a90 <AcquirePixelStream>, 
+  destroy_pixel_handler = 0xb7f991a0 <DestroyPixelStream>, 
+  get_indexes_from_handler = 0xb7f957b0 <GetIndexesFromStream>, 
+  get_one_pixel_from_handler = 0xb7f999b0 <GetOnePixelFromStream>, 
+  get_pixel_handler = 0xb7f998a0 <GetPixelStream>, 
+  get_pixels_from_handler = 0xb7f958d0 <GetPixelsFromStream>, 
+  set_pixel_handler = 0xb7f99560 <SetPixelStream>, sync_pixel_handler = 0xb7f993b0 <SyncPixelStream>}
+	image = <value optimized out>
+	read_info = (ImageInfo *) 0x9b3a9d8
+	__PRETTY_FUNCTION__ = "ReadStream"
+#16 0xb7ec67eb in PingImage (image_info=0x9b32698, exception=0x9b2e030) at magick/constitute.c:250
+	image = <value optimized out>
+	ping_info = <value optimized out>
+	__PRETTY_FUNCTION__ = "PingImage"
+#17 0xb7e04af8 in IdentifyImageCommand (image_info=0x9b2e3f0, argc=5, argv=0x9b32570, 
+    metadata=0xbfba85a4, exception=0x9b2e030) at wand/identify.c:293
+	filename = 0x9b325c8 "/home/babak/Desktop/package archive/inkscape-0.46/share/tutorials/tutorial-elements.svg"
+	image = <value optimized out>
+	identify_info = (ImageInfo *) 0x9b32698
+	format = 0x9b325a0 "%w;\\n%h;\\n%c;\\n"
+	option = <value optimized out>
+	image_stack = {0x0, 0x0, 0xb800eff4, 0x9b2e058, 0x9b2e3f0, 0xbfba8518, 0xb7f37e97, 0x9b2e058, 
+  0xb7db0690, 0xb808bb00, 0x6b9, 0xffffffff, 0xb80a7ff4, 0x80482f8, 0xb80a8668, 0xbfba8550, 0xb809a52b, 
+  0xb80a8820, 0x0, 0x1, 0x1, 0x0, 0x80484dc, 0xa, 0x0, 0x804a020, 0x1, 0xb7db0690, 0xbfba8bf5, 0x9b2e3f0, 
+  0xbfba8654, 0xbfba85b8, 0xb80a0060}
+	j = 1
+	k = 0
+	pend = MagickFalse
+	status = 1
+	i = 4
+	count = 0
+	__PRETTY_FUNCTION__ = "IdentifyImageCommand"
+#18 0x080489f7 in main (argc=5, argv=0xbfba8654) at utilities/identify.c:101
+	option = 0xbfba8bf5 "/home/babak/Desktop/package archive/inkscape-0.46/share/tutorials/tutorial-elements.svg"
+	text = 0x0
+	exception = (ExceptionInfo *) 0x9b2e030
+	image_info = (ImageInfo *) 0x9b2e3f0
+	regard_warnings = MagickFalse
+	status = <value optimized out>
+	i = <value optimized out>

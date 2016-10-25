@@ -1,0 +1,11 @@
+#0  0xb73e485c in g_type_check_instance_cast ()
+   from /usr/lib/libgobject-2.0.so.0
+#1  0xb62392ab in volumes_drives_changed (volume_monitor=0x81cc3c8, 
+    volume=0x811bd90, user_data=0x81da508) at gtkfilesystemgio.c:398
+No locals.
+#2  0xb73d3f5a in g_cclosure_marshal_VOID__OBJECT ()
+   from /usr/lib/libgobject-2.0.so.0
+#3  0xb73c7759 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+#4  0xb73dbd1d in ?? () from /usr/lib/libgobject-2.0.so.0
+#5  0x0854ef00 in ?? ()
+#6  0x00000000 in ?? ()

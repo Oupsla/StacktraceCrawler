@@ -1,0 +1,101 @@
+#0  0x00000000 in ?? ()
+#1  0xb5ff886f in cb_probe (pad=0x8d37d40, e=0x86e94f0, user_data=0x8d6aa60) at gststreaminfo.c:200
+	codec = (gchar *) 0x8e6a630 "MPEG-4 AAC audio"
+	lang = <value optimized out>
+	list = (GstTagList *) 0x8d635b0
+	__PRETTY_FUNCTION__ = "cb_probe"
+#2  0xb8007836 in gst_marshal_BOOLEAN__POINTER (closure=0xb1f014a0, return_value=0xb1efed70, 
+    n_param_values=2, param_values=0xb1efede0, invocation_hint=0xb1efed5c, marshal_data=0xb5ff8670)
+    at gstmarshal.c:584
+	data1 = (gpointer) 0xb1efeb4c
+	data2 = <value optimized out>
+	v_return = <value optimized out>
+	__PRETTY_FUNCTION__ = "gst_marshal_BOOLEAN__POINTER"
+#3  0xb70fbc4b in IA__g_closure_invoke (closure=0xb1f014a0, return_value=0xb1efed70, 
+    n_param_values=2, param_values=0xb1efede0, invocation_hint=0xb1efed5c)
+    at /build/buildd/glib2.0-2.18.2/gobject/gclosure.c:767
+	marshal = (GClosureMarshal) 0xb80077a0 <gst_marshal_BOOLEAN__POINTER>
+	marshal_data = (gpointer) 0x0
+	__PRETTY_FUNCTION__ = "IA__g_closure_invoke"
+#4  0xb7112095 in signal_emit_unlocked_R (node=0x8367a28, detail=181, instance=0x8d37d40, 
+    emission_return=0xb1efee08, instance_and_params=0xb1efede0)
+    at /build/buildd/glib2.0-2.18.2/gobject/gsignal.c:3244
+	tmp = <value optimized out>
+	handler = (Handler *) 0x8356f00
+	accumulator = (SignalAccumulator *) 0x8367ac8
+	emission = {next = 0xb4f15b24, instance = 0x8d37d40, ihint = {signal_id = 17, detail = 181, 
+    run_type = G_SIGNAL_RUN_FIRST}, state = EMISSION_RUN, chain_type = 4}
+	class_closure = (GClosure *) 0x8367968
+	handler_list = (Handler *) 0x8356f00
+	return_accu = (GValue *) 0xb1efed70
+	accu = {g_type = 20, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, 
+      v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, 
+      v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+	signal_id = 17
+	max_sequential_handler_number = 1362
+	return_value_altered = 0
+#5  0xb7fc7ad5 in gst_pad_emit_have_data_signal (pad=0x8d37d40, obj=0x86e94f0) at gstpad.c:3817
+	ret = {g_type = 20, data = {{v_int = 1, v_uint = 1, v_long = 1, v_ulong = 1, v_int64 = 1, 
+      v_uint64 = 1, v_float = 1.40129846e-45, v_double = 4.9406564584124654e-324, v_pointer = 0x1}, {
+      v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, 
+      v_double = 0, v_pointer = 0x0}}}
+	args = {{g_type = 137711376, data = {{v_int = 148077888, v_uint = 148077888, 
+        v_long = 148077888, v_ulong = 148077888, v_int64 = 148077888, v_uint64 = 148077888, 
+        v_float = 1.27285467e-33, v_double = 7.3160197369527772e-316, v_pointer = 0x8d37d40}, {
+        v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, 
+        v_double = 0, v_pointer = 0x0}}}, {g_type = 196, data = {{v_int = 141464816, 
+        v_uint = 141464816, v_long = 141464816, v_ulong = 141464816, v_int64 = 141464816, 
+        v_uint64 = 141464816, v_float = 7.1795595e-34, v_double = 6.9892905680853108e-316, 
+        v_pointer = 0x86e94f0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, 
+        v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}}
+	res = <value optimized out>
+	detail = <value optimized out>
+#6  0xb7fc8425 in gst_pad_push_event (pad=0x8d37d40, event=0x86e94f0) at gstpad.c:4472
+	peerpad = <value optimized out>
+	result = <value optimized out>
+	__PRETTY_FUNCTION__ = "gst_pad_push_event"
+#7  0xb7fbc84a in gst_proxy_pad_do_event (pad=0x8d38578, event=0x86e94f0) at gstghostpad.c:142
+	res = 148286768
+#8  0xb7fc7efc in gst_pad_send_event (pad=0x8d38578, event=0x86e94f0) at gstpad.c:4630
+	result = <value optimized out>
+	eventfunc = (GstPadEventFunction) 0xb7fbc820 <gst_proxy_pad_do_event>
+	serialized = <value optimized out>
+	need_unlock = 1
+	__PRETTY_FUNCTION__ = "gst_pad_send_event"
+#9  0xb7fc8665 in gst_pad_push_event (pad=0x8d60b50, event=0x86e94f0) at gstpad.c:4486
+	peerpad = (GstPad *) 0x8d38578
+	result = <value optimized out>
+	__PRETTY_FUNCTION__ = "gst_pad_push_event"
+#10 0xb7fc9e2b in gst_pad_event_default (pad=0x8d60a90, event=0x86e94f0) at gstpad.c:3247
+	__PRETTY_FUNCTION__ = "gst_pad_event_default"
+#11 0xb2075af3 in gst_faad_sink_event (pad=0x8d60a90, event=0x86e94f0) at gstfaad.c:945
+	faad = (GstFaad *) 0x8e7a008
+	res = <value optimized out>
+	__FUNCTION__ = "gst_faad_sink_event"
+#12 0xb7fc7efc in gst_pad_send_event (pad=0x8d60a90, event=0x86e94f0) at gstpad.c:4630
+	result = <value optimized out>
+	eventfunc = (GstPadEventFunction) 0xb2075a30 <gst_faad_sink_event>
+	serialized = <value optimized out>
+	need_unlock = 1
+	__PRETTY_FUNCTION__ = "gst_pad_send_event"
+#13 0xb7fc8665 in gst_pad_push_event (pad=0x8d609d0, event=0x86e94f0) at gstpad.c:4486
+	peerpad = (GstPad *) 0x8d60a90
+	result = <value optimized out>
+	__PRETTY_FUNCTION__ = "gst_pad_push_event"
+#14 0xb5fc832f in gst_queue_loop (pad=0x8d609d0) at gstqueue.c:1093
+	queue = (GstQueue *) 0x87e3ac0
+	ret = GST_FLOW_OK
+	__PRETTY_FUNCTION__ = "gst_queue_loop"
+#15 0xb7fec803 in gst_task_func (task=0x8d5f240, tclass=0x8369c50) at gsttask.c:192
+	lock = (GStaticRecMutex *) 0x8798ee0
+	tself = (GThread *) 0xb1f01f70
+	__PRETTY_FUNCTION__ = "gst_task_func"
+#16 0xb709a6c6 in g_thread_pool_thread_proxy (data=0x8367720)
+    at /build/buildd/glib2.0-2.18.2/glib/gthreadpool.c:265
+	task = (gpointer) 0x8d5f240
+	pool = (GRealThreadPool *) 0x8367720
+#17 0xb709902f in g_thread_create_proxy (data=0xb1f01f70)
+    at /build/buildd/glib2.0-2.18.2/glib/gthread.c:635
+	__PRETTY_FUNCTION__ = "g_thread_create_proxy"
+#18 0xb796f50f in start_thread () from /lib/tls/i686/cmov/libpthread.so.0
+#19 0xb6fb87ee in clone () from /lib/tls/i686/cmov/libc.so.6

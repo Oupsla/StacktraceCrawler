@@ -1,0 +1,56 @@
+#0  0x00007f716785aec0 in g_str_hash () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#1  0x00007f716782935d in g_hash_table_lookup () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#2  0x00007f715c958545 in ?? () from /usr/lib/nautilus/extensions-2.0/libnautilus-ubuntuone.so
+No symbol table info available.
+#3  0x00007f716812e3e0 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#4  0x00007f716782124e in g_datalist_id_set_data_full () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#5  0x00007f716812ed8a in g_object_unref () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#6  0x00007f7167835b6c in g_list_foreach () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#7  0x00000000004b31bc in ?? ()
+No symbol table info available.
+#8  0x00000000004b32a8 in ?? ()
+No symbol table info available.
+#9  0x0000000000470940 in ?? ()
+No symbol table info available.
+#10 0x0000000000474ec6 in ?? ()
+No symbol table info available.
+#11 0x0000000000475792 in ?? ()
+No symbol table info available.
+#12 0x0000000000460c2a in ?? ()
+No symbol table info available.
+#13 0x0000000000461dca in ?? ()
+No symbol table info available.
+#14 0x00000000004626d3 in ?? ()
+No symbol table info available.
+#15 0x00000000004b7314 in ?? ()
+No symbol table info available.
+#16 0x00007f7167838342 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#17 0x00007f716783c2a8 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#18 0x00007f716783c7b5 in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#19 0x00007f71693983e7 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#20 0x0000000000441d42 in ?? ()
+No symbol table info available.
+#21 0x00007f716643dd8e in __libc_start_main () from /lib/libc.so.6
+No symbol table info available.
+#22 0x000000000042ef89 in ?? ()
+No symbol table info available.
+#23 0x00007fffd714aec8 in ?? ()
+No symbol table info available.
+#24 0x000000000000001c in ?? ()
+No symbol table info available.
+#25 0x0000000000000001 in ?? ()
+No symbol table info available.
+#26 0x00007fffd714bb61 in ?? ()
+No symbol table info available.
+#27 0x0000000000000000 in ?? ()
+No symbol table info available.

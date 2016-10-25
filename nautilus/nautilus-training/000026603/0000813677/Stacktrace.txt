@@ -1,0 +1,48 @@
+#0  0x00007f6cb3aa28da in g_object_unref () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#1  0x00007f6cb48b5322 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#2  0x00007f6cb3aa2682 in ?? () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#3  0x00007f6cb3aa2992 in g_object_unref () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#4  0x00007f6cb3ac8203 in g_value_unset () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#5  0x00007f6cb3abc73c in g_signal_emit_valist () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#6  0x00007f6cb3abc8d2 in g_signal_emit () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#7  0x00007f6cb48b53fd in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#8  0x00007f6cb48b5f9d in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#9  0x00007f6cb4829b67 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#10 0x00007f6cb41b56d1 in g_simple_async_result_complete () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#11 0x00007f6cb41b5778 in ?? () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#12 0x00007f6cb37e5cbd in g_main_context_dispatch () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#13 0x00007f6cb37e64b8 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#14 0x00007f6cb37e69f2 in g_main_loop_run () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#15 0x00007f6cb48790ad in gtk_main () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#16 0x0000000000411239 in ?? ()
+No symbol table info available.
+#17 0x00007f6cb2d5ae1f in __libc_start_main () from /lib/x86_64-linux-gnu/libc.so.6
+No symbol table info available.
+#18 0x00000000004112a5 in ?? ()
+No symbol table info available.
+#19 0x00007fffcc387ae8 in ?? ()
+No symbol table info available.
+#20 0x000000000000001c in ?? ()
+No symbol table info available.
+#21 0x0000000000000002 in ?? ()
+No symbol table info available.
+#22 0x00007fffcc38892c in ?? ()
+No symbol table info available.
+#23 0x0000000000000000 in ?? ()
+No symbol table info available.

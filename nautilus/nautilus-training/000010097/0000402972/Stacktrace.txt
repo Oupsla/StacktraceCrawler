@@ -1,0 +1,7 @@
+#0  0x04d24ec4 in ?? () from /usr/lib/nautilus/extensions-2.0/libnautilus-ubuntuone.so
+#1  0x003203f3 in g_object_unref () from /usr/lib/libgobject-2.0.so.0
+#2  0x0814508d in ?? ()
+#3  0x0816c4fc in ?? ()
+#4  0x08081363 in ?? ()
+#5  0x00a877c5 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+#6  0x0806be31 in ?? ()

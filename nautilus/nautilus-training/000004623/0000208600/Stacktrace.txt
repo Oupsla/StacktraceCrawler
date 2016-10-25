@@ -1,0 +1,108 @@
+#0  0xb76926f0 in IA__g_object_notify (object=0x81dddb0, property_name=0xb663e918 "codec")
+    at /build/buildd/glib2.0-2.16.1/gobject/gobjectnotifyqueue.c:120
+	nqueue = <value optimized out>
+	pspec = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_object_notify"
+#1  0xb663809c in cb_probe (pad=0x8158f00, e=0x822b028, user_data=0x81dddb0) at gststreaminfo.c:198
+	codec = (gchar *) 0x8234520 "MPEG-4 AAC audio"
+	lang = <value optimized out>
+	list = (GstTagList *) 0xb540e968
+	__PRETTY_FUNCTION__ = "cb_probe"
+#2  0xb773dd16 in gst_marshal_BOOLEAN__POINTER (closure=0x8237e38, return_value=0xb459ad40, 
+    n_param_values=2, param_values=0xb459ae10, invocation_hint=0xb459ad2c, marshal_data=0xb6637f30)
+    at gstmarshal.c:584
+	data1 = (gpointer) 0x8158f00
+	data2 = <value optimized out>
+	v_return = <value optimized out>
+	__PRETTY_FUNCTION__ = "gst_marshal_BOOLEAN__POINTER"
+#3  0xb768d759 in IA__g_closure_invoke (closure=0x8237e38, return_value=0xb459ad40, n_param_values=2, 
+    param_values=0xb459ae10, invocation_hint=0xb459ad2c)
+    at /build/buildd/glib2.0-2.16.1/gobject/gclosure.c:490
+	marshal = (GClosureMarshal) 0xb773dcb0 <gst_marshal_BOOLEAN__POINTER>
+	marshal_data = (gpointer) 0x0
+	__PRETTY_FUNCTION__ = "IA__g_closure_invoke"
+#4  0xb76a1d1d in signal_emit_unlocked_R (node=0x8078e10, detail=99, instance=0x8158f00, 
+    emission_return=0xb459ae38, instance_and_params=0xb459ae10)
+    at /build/buildd/glib2.0-2.16.1/gobject/gsignal.c:2440
+	tmp = <value optimized out>
+	handler = (Handler *) 0x8223120
+	accumulator = (SignalAccumulator *) 0x8078e60
+	emission = {next = 0xb5d927a4, instance = 0x8158f00, ihint = {signal_id = 10, detail = 99, 
+    run_type = G_SIGNAL_RUN_FIRST}, state = EMISSION_RUN, chain_type = 4}
+	class_closure = (GClosure *) 0x806e450
+	handler_list = (Handler *) 0x8223120
+	return_accu = (GValue *) 0xb459ad40
+	accu = {g_type = 20, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, 
+      v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, 
+      v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+	signal_id = 10
+	max_sequential_handler_number = 66
+	return_value_altered = 0
+#5  0xb76a3d9e in IA__g_signal_emitv (instance_and_params=0xb459ae10, signal_id=10, detail=99, 
+    return_value=0xb459ae38) at /build/buildd/glib2.0-2.16.1/gobject/gsignal.c:2111
+	instance = (gpointer) 0x8158f00
+	node = (SignalNode *) 0x8078e10
+	__PRETTY_FUNCTION__ = "IA__g_signal_emitv"
+#6  0xb7705701 in gst_pad_emit_have_data_signal (pad=0x8158f00, obj=0x822b028) at gstpad.c:3463
+	ret = {g_type = 20, data = {{v_int = 1, v_uint = 1, v_long = 1, v_ulong = 1, v_int64 = 1, 
+      v_uint64 = 1, v_float = 1.40129846e-45, v_double = 4.9406564584124654e-324, v_pointer = 0x1}, {
+      v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, 
+      v_pointer = 0x0}}}
+	args = {{g_type = 134709704, data = {{v_int = 135630592, v_uint = 135630592, v_long = 135630592, 
+        v_ulong = 135630592, v_int64 = 135630592, v_uint64 = 135630592, v_float = 4.50061522e-34, 
+        v_double = 6.7010416032310607e-316, v_pointer = 0x8158f00}, {v_int = 0, v_uint = 0, v_long = 0, 
+        v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}, {
+    g_type = 196, data = {{v_int = 136491048, v_uint = 136491048, v_long = 136491048, v_ulong = 136491048, 
+        v_int64 = 136491048, v_uint64 = 136491048, v_float = 4.89571724e-34, 
+        v_double = 6.7435537781668582e-316, v_pointer = 0x822b028}, {v_int = 0, v_uint = 0, v_long = 0, 
+        v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}}
+	res = <value optimized out>
+	detail = <value optimized out>
+#7  0xb770627a in gst_pad_push_event (pad=0x8158f00, event=0x822b028) at gstpad.c:4118
+	peerpad = <value optimized out>
+	result = <value optimized out>
+	__PRETTY_FUNCTION__ = "gst_pad_push_event"
+#8  0xb76fad5a in gst_proxy_pad_do_event (pad=0x8159718, event=0x822b028) at gstghostpad.c:142
+	res = 0
+#9  0xb7705956 in gst_pad_send_event (pad=0x8159718, event=0x822b028) at gstpad.c:4276
+	result = <value optimized out>
+	eventfunc = (GstPadEventFunction) 0xb76fad30 <gst_proxy_pad_do_event>
+	serialized = <value optimized out>
+	need_unlock = 1
+	__PRETTY_FUNCTION__ = "gst_pad_send_event"
+#10 0xb7706086 in gst_pad_push_event (pad=0xb5408e58, event=0x822b028) at gstpad.c:4132
+	peerpad = (GstPad *) 0x8159718
+	result = <value optimized out>
+	__PRETTY_FUNCTION__ = "gst_pad_push_event"
+#11 0xb77072d9 in gst_pad_event_default (pad=0xb5408d98, event=0x822b028) at gstpad.c:2950
+	__PRETTY_FUNCTION__ = "gst_pad_event_default"
+#12 0xb5dbc2fc in gst_faad_sink_event (pad=0xb5408d98, event=0x822b028) at gstfaad.c:891
+	faad = (GstFaad *) 0x822f830
+	res = <value optimized out>
+	__FUNCTION__ = "gst_faad_sink_event"
+#13 0xb7705956 in gst_pad_send_event (pad=0xb5408d98, event=0x822b028) at gstpad.c:4276
+	result = <value optimized out>
+	eventfunc = (GstPadEventFunction) 0xb5dbc290 <gst_faad_sink_event>
+	serialized = <value optimized out>
+	need_unlock = 1
+	__PRETTY_FUNCTION__ = "gst_pad_send_event"
+#14 0xb7706086 in gst_pad_push_event (pad=0xb5408cd8, event=0x822b028) at gstpad.c:4132
+	peerpad = (GstPad *) 0xb5408d98
+	result = <value optimized out>
+	__PRETTY_FUNCTION__ = "gst_pad_push_event"
+#15 0xb660bd9f in gst_queue_loop (pad=0xb5408cd8) at gstqueue.c:1067
+	queue = (GstQueue *) 0xb5409450
+	ret = GST_FLOW_OK
+	__PRETTY_FUNCTION__ = "gst_queue_loop"
+#16 0xb7725340 in gst_task_func (task=0x816fb90, tclass=0x8179840) at gsttask.c:192
+	lock = (GStaticRecMutex *) 0xb5415198
+	tself = (GThread *) 0xb5416ec8
+	__PRETTY_FUNCTION__ = "gst_task_func"
+#17 0xb74dc61b in g_thread_pool_thread_proxy (data=0x81798d0)
+    at /build/buildd/glib2.0-2.16.1/glib/gthreadpool.c:265
+	task = (gpointer) 0x816fb90
+	pool = (GRealThreadPool *) 0x81798d0
+#18 0xb74da9ef in g_thread_create_proxy (data=0xb5416ec8) at /build/buildd/glib2.0-2.16.1/glib/gthread.c:635
+	__PRETTY_FUNCTION__ = "g_thread_create_proxy"
+#19 0xb723f4fb in start_thread () from /lib/tls/i686/cmov/libpthread.so.0
+#20 0xb71c1d4e in clone () from /lib/tls/i686/cmov/libc.so.6

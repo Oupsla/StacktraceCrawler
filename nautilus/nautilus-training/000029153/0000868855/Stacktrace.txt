@@ -1,0 +1,67 @@
+#0  0x0062753b in gtk_tree_model_get_valist () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#1  0x00627750 in gtk_tree_model_get () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#2  0x08093fb9 in ?? ()
+No symbol table info available.
+#3  0x08095a15 in ?? ()
+No symbol table info available.
+#4  0x00a4814c in g_cclosure_marshal_VOID__VOID () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#5  0x00a46c3c in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#6  0x00a599f0 in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#7  0x00a62787 in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#8  0x00a628f3 in g_signal_emit () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#9  0x00669605 in gtk_widget_activate () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#10 0x00531a0a in gtk_menu_shell_activate_item () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#11 0x00531e1c in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#12 0x00524855 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#13 0x0051a1a2 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#14 0x00a4568d in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#15 0x00a46c3c in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#16 0x00a59838 in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#17 0x00a62599 in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#18 0x00a628f3 in g_signal_emit () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#19 0x0066a423 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#20 0x005198e2 in gtk_propagate_event () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#21 0x00519d48 in gtk_main_do_event () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#22 0x0026a13c in ?? () from /usr/lib/libgdk-3.so.0
+No symbol table info available.
+#23 0x00291ec8 in ?? () from /usr/lib/libgdk-3.so.0
+No symbol table info available.
+#24 0x00e3425f in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#25 0x00e34990 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#26 0x00e34f9b in g_main_loop_run () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#27 0x00518f95 in gtk_main () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#28 0x0042cfe4 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#29 0x00c2e50c in g_application_run () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#30 0x08067914 in ?? ()
+No symbol table info available.
+#31 0x00f6f113 in __libc_start_main () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#32 0x0806794d in ?? ()
+No symbol table info available.
+Backtrace stopped: Not enough registers or memory available to unwind further

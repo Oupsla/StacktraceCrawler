@@ -1,0 +1,118 @@
+#0  oobs_share_smb_new (path=0x0, name=0x82275b4 "/home/andrew", comment=0x0, 
+    flags=0) at oobs-share-smb.c:339
+	__PRETTY_FUNCTION__ = "oobs_share_smb_new"
+#1  0xb5909fa2 in oobs_smb_config_update (object=0x819c540)
+    at oobs-smbconfig.c:250
+	priv = (OobsSMBConfigPrivate *) 0x819c588
+	reply = <value optimized out>
+	iter = {dummy1 = 0x81fcf38, dummy2 = 0x600000, dummy3 = 1075967084, 
+  dummy4 = 136302396, dummy5 = 175, dummy6 = 136302456, dummy7 = 60, 
+  dummy8 = -1222512060, dummy9 = -1217999541, dummy10 = 135906632, 
+  dummy11 = 726, pad1 = 136302392, pad2 = 0, pad3 = 0x81fb8b8}
+	array_iter = {dummy1 = 0x81fcf38, dummy2 = 0x600000, 
+  dummy3 = 1075968108, dummy4 = 136302396, dummy5 = 166, dummy6 = 136302456, 
+  dummy7 = 8, dummy8 = -1222512132, dummy9 = 8, dummy10 = 135906632, 
+  dummy11 = -1217878588, pad1 = 136296632, pad2 = -1220986356, pad3 = 0x0}
+	list_iter = {stamp = 3072455792, data = 0xb5909d9b}
+	share = <value optimized out>
+#2  0xb59005af in update_object_from_message (object=0x819c540, 
+    message=0x81fcf38) at oobs-object.c:347
+	priv = <value optimized out>
+	class = (OobsObjectClass *) 0x81ef068
+#3  0xb5900f4e in async_message_cb (pending_call=0x81d1118, data=0x81d1190)
+    at oobs-object.c:418
+	priv = <value optimized out>
+	result = <value optimized out>
+	reply = (DBusMessage *) 0x81fcf38
+	error = {name = 0x0, message = 0x0, dummy1 = 1, dummy2 = 0, 
+  dummy3 = 0, dummy4 = 1, dummy5 = 0, padding1 = 0xb5900e4b}
+#4  0xb7206f71 in _dbus_pending_call_complete (pending=0x81d1118)
+    at dbus-pending-call.c:198
+	user_data = (void *) 0x82275b4
+#5  0xb71f6f73 in complete_pending_call_and_unlock (connection=0x81fba10, 
+    pending=0x81d1118, message=<value optimized out>) at dbus-connection.c:2170
+No locals.
+#6  0xb71f8b19 in dbus_connection_dispatch (connection=0x81fba10)
+    at dbus-connection.c:4296
+	message = (DBusMessage *) 0x81fcf38
+	link = <value optimized out>
+	filter_list_copy = <value optimized out>
+	message_link = (DBusList *) 0x81d224c
+	result = <value optimized out>
+	status = DBUS_DISPATCH_DATA_REMAINS
+	__FUNCTION__ = "dbus_connection_dispatch"
+#7  0xb72288fd in message_queue_dispatch (source=0x81fd1f0, callback=0, 
+    user_data=0x0) at dbus-gmain.c:101
+	connection = (DBusConnection *) 0x81fba10
+#8  0xb75e5d76 in IA__g_main_context_dispatch (context=0x819ef98)
+    at /build/buildd/glib2.0-2.15.4/glib/gmain.c:2064
+No locals.
+#9  0xb75e9133 in g_main_context_iterate (context=0x819ef98, block=1, 
+    dispatch=1, self=0x816f408)
+    at /build/buildd/glib2.0-2.15.4/glib/gmain.c:2697
+	got_ownership = <value optimized out>
+	max_priority = 0
+	timeout = 0
+	some_ready = 1
+	nfds = <value optimized out>
+	allocated_nfds = <value optimized out>
+	fds = (GPollFD *) 0x8220580
+	__PRETTY_FUNCTION__ = "g_main_context_iterate"
+#10 0xb75e9517 in IA__g_main_loop_run (loop=0x8220570)
+    at /build/buildd/glib2.0-2.15.4/glib/gmain.c:2905
+	got_ownership = -1220991712
+	self = (GThread *) 0x816f408
+	__PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#11 0xb79d3d54 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.12.7/gtk/gtkmain.c:1163
+	tmp_list = (GList *) 0x81c8f80
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0x0
+	loop = (GMainLoop *) 0x8220570
+#12 0x0807c34d in main (argc=3, argv=0xbf942c64) at nautilus-main.c:572
+	kill_shell = 0
+	restart_shell = 0
+	no_default_window = 0
+	browser_window = 0
+	no_desktop = 1
+	startup_id = <value optimized out>
+	startup_id_copy = 0x81c8f80 "\001"
+	session_to_load = 0x0
+	geometry = (gchar *) 0x0
+	remaining = (const gchar **) 0x818fc98
+	perform_self_check = 0
+	context = <value optimized out>
+	application = (NautilusApplication *) 0x819bc50
+	program = (GnomeProgram *) 0x8183c58
+	options = {{long_name = 0x8149de0 "check", short_name = 99 'c', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbf942b30, 
+    description = 0x8149e0c "Perform a quick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x814cf5b "geometry", 
+    short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+    arg_data = 0xbf942b38, 
+    description = 0x8149e38 "Create the initial window with the given geometry.", arg_description = 0x8149c56 "GEOMETRY"}, {
+    long_name = 0x8149c5f "no-default-window", short_name = 110 'n', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbf942b48, 
+    description = 0x8149e6c "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {long_name = 0x8149c71 "no-desktop", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbf942b40, 
+    description = 0x8149ea0 "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {
+    long_name = 0x814bff2 "browser", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbf942b44, 
+    description = 0x8149c7c "open a browser window.", arg_description = 0x0}, {
+    long_name = 0x8149de8 "quit", short_name = 113 'q', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbf942b50, 
+    description = 0x8149c93 "Quit Nautilus.", arg_description = 0x0}, {
+    long_name = 0x8149def "restart", short_name = 0 '\0', flags = 1, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbf942b4c, 
+    description = 0x8149ca2 "Restart Nautilus.", arg_description = 0x0}, {
+    long_name = 0x814e0d1 "", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0xbf942b34, description = 0x0, 
+    arg_description = 0x8149cb4 "[URI...]"}, {
+    long_name = 0x8146655 "load-session", short_name = 108 'l', flags = 0, 
+    arg = G_OPTION_ARG_STRING, arg_data = 0xbf942b3c, 
+    description = 0x8149ef4 "Load a saved session from the specified file. Implies \"--no-default-window\".", arg_description = 0x8149cbd "FILENAME"}, {
+    long_name = 0x0, short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x0, description = 0x0, arg_description = 0x0}}
+#13 0xb7252450 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+#14 0x08069c31 in _start ()

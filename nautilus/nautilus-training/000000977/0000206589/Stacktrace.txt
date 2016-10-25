@@ -1,0 +1,18 @@
+#0  0xb766fbfc in ?? () from /usr/lib/libgobject-2.0.so.0
+#1  0x081744c8 in ?? ()
+#2  0x00000002 in ?? ()
+#3  0xbf9b9638 in ?? ()
+#4  0xb766beee in g_type_interface_get_plugin ()
+   from /usr/lib/libgobject-2.0.so.0
+#5  0xb37152ab in ?? () from /usr/lib/gtk-2.0/2.10.0/filesystems/libgio.so
+#6  0x087f5f38 in ?? ()
+#7  0x08637ea0 in ?? ()
+#8  0xbf9b9698 in ?? ()
+#9  0xb737c8c5 in pthread_getspecific ()
+   from /lib/tls/i686/cmov/libpthread.so.0
+#10 0xb765f00a in g_cclosure_marshal_VOID__POINTER ()
+   from /usr/lib/libgobject-2.0.so.0
+#11 0xb7652759 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+#12 0xb7666f8b in ?? () from /usr/lib/libgobject-2.0.so.0
+#13 0x0881ff48 in ?? ()
+#14 0x00000000 in ?? ()

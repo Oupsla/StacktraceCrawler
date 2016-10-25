@@ -1,0 +1,8 @@
+#0  0x08161038 in ?? ()
+No symbol table info available.
+#1  0x08080c80 in ?? ()
+No symbol table info available.
+#2  0x0796bbd6 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#3  0x0806c741 in ?? ()
+No symbol table info available.

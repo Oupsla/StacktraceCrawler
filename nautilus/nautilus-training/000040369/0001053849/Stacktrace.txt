@@ -1,0 +1,44 @@
+#0  0x00007fc7b40a7e8c in g_type_check_instance_cast () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#1  0x00007fc7b22dcd1b in ?? () from /usr/lib/x86_64-linux-gnu/libdbusmenu-gtk3.so.4
+No symbol table info available.
+#2  0x00007fc7b4085300 in g_closure_invoke () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#3  0x00007fc7b4097370 in ?? () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#4  0x00007fc7b409f601 in g_signal_emit_valist () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#5  0x00007fc7b409f852 in g_signal_emit () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#6  0x00007fc7b4089e35 in ?? () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#7  0x00007fc7b408b8eb in g_object_notify () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#8  0x00007fc7b4dd8b83 in ?? () from /usr/lib/x86_64-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#9  0x00007fc7b4d50f7d in gtk_main_do_event () from /usr/lib/x86_64-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#10 0x00007fc7b496d032 in ?? () from /usr/lib/x86_64-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#11 0x00007fc7b3dc5bb5 in g_main_context_dispatch () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#12 0x00007fc7b3dc5ee8 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#13 0x00007fc7b3dc62e2 in g_main_loop_run () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#14 0x000000000040bcc2 in ?? ()
+No symbol table info available.
+#15 0x00007fc7b39e276d in __libc_start_main () from /lib/x86_64-linux-gnu/libc.so.6
+No symbol table info available.
+#16 0x000000000040bda9 in ?? ()
+No symbol table info available.
+#17 0x00007fffe634f548 in ?? ()
+No symbol table info available.
+#18 0x000000000000001c in ?? ()
+No symbol table info available.
+#19 0x0000000000000002 in ?? ()
+No symbol table info available.
+#20 0x00007fffe634fa02 in ?? ()
+No symbol table info available.
+#21 0x0000000000000000 in ?? ()
+No symbol table info available.

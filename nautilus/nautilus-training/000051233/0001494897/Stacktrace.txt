@@ -1,0 +1,44 @@
+#0  0x00007fd1bf60b267 in __GI_raise (sig=sig@entry=6) at ../sysdeps/unix/sysv/linux/raise.c:55
+        resultvar = 0
+        pid = 1816
+        selftid = 1863
+#1  0x00007fd1bf60ceca in __GI_abort () at abort.c:89
+        save_stage = 2
+        act = {__sigaction_handler = {sa_handler = 0x7fd1ac001610, sa_sigaction = 0x7fd1ac001610}, sa_mask = {__val = {145, 140538850251488, 140538910469920, 140538650802016, 140538510579216, 145, 140538850251488, 140538650802144, 140538853953248, 0, 140538836002972, 0, 131072, 0, 0, 140538510573568}}, sa_flags = 1184, sa_restorer = 0x1}
+        sigs = {__val = {32, 0 <repeats 15 times>}}
+#2  0x00007fd1c0152ed5 in g_assertion_message () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#3  0x00007fd1c0152f6a in g_assertion_message_expr () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#4  0x00007fd1c073ed82 in g_file_monitor_source_handle_event () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#5  0x00007fd1c0744b7d in ?? () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#6  0x00007fd1c0743fd8 in ?? () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#7  0x00007fd1c07441a6 in ?? () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#8  0x00007fd1c07433ea in ?? () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#9  0x00007fd1c012ceea in g_main_context_dispatch () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#10 0x00007fd1c012d290 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#11 0x00007fd1c012d33c in g_main_context_iteration () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#12 0x00007fd1c012d379 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#13 0x00007fd1c0153d25 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#14 0x00007fd1bf9a76aa in start_thread (arg=0x7fd1b45bd700) at pthread_create.c:333
+        __res = <optimized out>
+        pd = 0x7fd1b45bd700
+        now = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {140538650810112, 4433880826167057367, 0, 140735156993615, 140538650810816, 0, -4455423798680069161, -4455414448185648169}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+        pagesize_m1 = <optimized out>
+        sp = <optimized out>
+        freesize = <optimized out>
+        __PRETTY_FUNCTION__ = "start_thread"
+#15 0x00007fd1bf6dceed in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:109
+No locals.

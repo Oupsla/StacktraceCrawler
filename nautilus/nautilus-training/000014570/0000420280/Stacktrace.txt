@@ -1,0 +1,771 @@
+#0  0x00df9422 in __kernel_vsyscall ()
+#1  0x004da4f1 in *__GI_raise (sig=6)
+    at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+	resultvar = <value optimized out>
+	pid = 6307828
+	selftid = 16642
+#2  0x004dd952 in *__GI_abort () at abort.c:88
+	act = {__sigaction_handler = {
+    sa_handler = 0x52090d <*__GI___libc_realloc+221>, 
+    sa_sigaction = 0x52090d <*__GI___libc_realloc+221>}, sa_mask = {__val = {
+      112, 96, 3212958144, 3212958384, 3212958172, 112, 96, 85, 172668184, 
+      6307828, 85, 84, 3212958344, 5307522, 172668192, 85, 3212958384, 
+      172668192, 0, 4222451712, 172668192, 172668192, 172668192, 172668192, 
+      172668276, 172668292, 172668192, 172668292, 0, 0, 0, 0}}, sa_flags = 0, 
+  sa_restorer = 0x68}
+	sigs = {__val = {32, 0 <repeats 31 times>}}
+#3  0x004d3652 in *__GI___assert_fail (assertion=0xd1cb65 "ret != inval_id", 
+    file=0xd1cb29 "../../src/xcb_io.c", line=378, 
+    function=0xd1cce4 "_XAllocID") at assert.c:83
+	buf = 0xa4ab520 "gnome-panel: ../../src/xcb_io.c:378: _XAllocID: Assertion `ret != inval_id' failed.\n"
+#4  0x00cad199 in _XAllocID (dpy=0xa07fea8) at ../../src/xcb_io.c:378
+	ret = 4294967295
+	__PRETTY_FUNCTION__ = "_XAllocID"
+#5  0x00c83048 in XCreatePixmap (dpy=0xa07fea8, d=41988404, width=8, 
+    height=3, depth=32) at ../../src/CrPixmap.c:58
+No locals.
+#6  0x00353dc9 in _cairo_xlib_surface_create_similar_with_format (
+    abstract_src=0xa4a42c0, format=<value optimized out>, width=8, height=3)
+    at /build/buildd/cairo-1.8.8/src/cairo-xlib-surface.c:155
+	dpy = (Display *) 0xa07fea8
+	pix = 168296104
+	xrender_format = <value optimized out>
+#7  0x00358cfc in _cairo_xlib_surface_clone_similar (
+    abstract_surface=0xa4a42c0, src=0xa4b94a0, src_x=0, src_y=0, width=8, 
+    height=3, clone_offset_x=0xbf81de78, clone_offset_y=0xbf81de7c, 
+    clone_out=0xbf81e1cc)
+    at /build/buildd/cairo-1.8.8/src/cairo-xlib-surface.c:1201
+	status = <value optimized out>
+#8  0x0033d5ee in _cairo_surface_clone_similar (surface=0xa4a42c0, 
+    src=0xa4b94a0, src_x=0, src_y=0, width=8, height=3, 
+    clone_offset_x=0xbf81de78, clone_offset_y=0xbf81de7c, 
+    clone_out=0xbf81e1cc)
+    at /build/buildd/cairo-1.8.8/src/cairo-surface.c:1147
+	status = <value optimized out>
+	image = <value optimized out>
+	image_extra = <value optimized out>
+#9  0x003334ef in _cairo_pattern_acquire_surface (pattern=0xbf81dfac, 
+    dst=0xa4a42c0, x=<value optimized out>, y=<value optimized out>, width=8, 
+    height=3, surface_out=0xbf81e1cc, attributes=0xbf81e178)
+    at /build/buildd/cairo-1.8.8/src/cairo-pattern.c:1435
+	status = <value optimized out>
+	__PRETTY_FUNCTION__ = "_cairo_pattern_acquire_surface"
+#10 0x00334bde in _cairo_pattern_acquire_surfaces (src=0xa457088, mask=0x0, 
+    dst=0xa4a42c0, src_x=2, src_y=2, mask_x=2, mask_y=2, width=243, height=3, 
+    src_out=0xbf81e1cc, mask_out=0xbf81e1c8, src_attributes=0xbf81e178, 
+    mask_attributes=0xbf81e130)
+    at /build/buildd/cairo-1.8.8/src/cairo-pattern.c:2168
+	status = <value optimized out>
+	src_tmp = {base = {type = CAIRO_PATTERN_TYPE_LINEAR, ref_count = {
+      ref_count = 0}, status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, 
+      num_elements = 0, element_size = 12, elements = 0x0, is_snapshot = 0}, 
+    matrix = {xx = 1, yx = 0, xy = 0, yy = 1, x0 = 0, y0 = 0}, 
+    filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_PAD}, solid = {base = {
+      type = CAIRO_PATTERN_TYPE_LINEAR, ref_count = {ref_count = 0}, 
+      status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, num_elements = 0, 
+        element_size = 12, elements = 0x0, is_snapshot = 0}, matrix = {
+        xx = 1, yx = 0, xy = 0, yy = 1, x0 = 0, y0 = 0}, 
+      filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_PAD}, color = {
+      red = 4.2439915829186759e-314, green = 1.5874130388863365e-314, 
+      blue = -3.8806658959614171e+280, alpha = -1.5315447005068503e+188, 
+      red_short = 48523, green_short = 16338, blue_short = 46291, 
+      alpha_short = 54521}, content = 1070644888}, surface = {base = {
+      type = CAIRO_PATTERN_TYPE_LINEAR, ref_count = {ref_count = 0}, 
+      status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, num_elements = 0, 
+        element_size = 12, elements = 0x0, is_snapshot = 0}, matrix = {
+        xx = 1, yx = 0, xy = 0, yy = 1, x0 = 0, y0 = 0}, 
+      filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_PAD}, surface = 0x2}, 
+  gradient = {base = {base = {type = CAIRO_PATTERN_TYPE_LINEAR, ref_count = {
+          ref_count = 0}, status = CAIRO_STATUS_SUCCESS, user_data = {
+          size = 0, num_elements = 0, element_size = 12, elements = 0x0, 
+          is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, x0 = 0, 
+          y0 = 0}, filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_PAD}, 
+      n_stops = 2, stops_size = 2, stops = 0xbf81e010, stops_embedded = {{
+          offset = 0, color = {red = 0.37424206192773607, 
+            green = 0.29281899985507909, blue = 0.26163311766033565, 
+            alpha = 0.57999999999999996, red_short = 24526, 
+            green_short = 19190, blue_short = 17146, alpha_short = 38010}}, {
+          offset = 1, color = {red = 0.37424206192773607, 
+            green = 0.29281899985507909, blue = 0.26163311766033565, 
+            alpha = 0, red_short = 24526, green_short = 19190, 
+            blue_short = 17146, alpha_short = 0}}}}, linear = {base = {
+        base = {type = CAIRO_PATTERN_TYPE_LINEAR, ref_count = {
+            ref_count = 0}, status = CAIRO_STATUS_SUCCESS, user_data = {
+            size = 0, num_elements = 0, element_size = 12, elements = 0x0, 
+            is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, 
+            x0 = 0, y0 = 0}, filter = CAIRO_FILTER_GOOD, 
+          extend = CAIRO_EXTEND_PAD}, n_stops = 2, stops_size = 2, 
+        stops = 0xbf81e010, stops_embedded = {{offset = 0, color = {
+              red = 0.37424206192773607, green = 0.29281899985507909, 
+              blue = 0.26163311766033565, alpha = 0.57999999999999996, 
+              red_short = 24526, green_short = 19190, blue_short = 17146, 
+              alpha_short = 38010}}, {offset = 1, color = {
+              red = 0.37424206192773607, green = 0.29281899985507909, 
+              blue = 0.26163311766033565, alpha = 0, red_short = 24526, 
+              green_short = 19190, blue_short = 17146, alpha_short = 0}}}}, 
+      p1 = {x = 512, y = 512}, p2 = {x = 512, y = 1280}}, radial = {base = {
+        base = {type = CAIRO_PATTERN_TYPE_LINEAR, ref_count = {
+            ref_count = 0}, status = CAIRO_STATUS_SUCCESS, user_data = {
+            size = 0, num_elements = 0, element_size = 12, elements = 0x0, 
+            is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, 
+            x0 = 0, y0 = 0}, filter = CAIRO_FILTER_GOOD, 
+          extend = CAIRO_EXTEND_PAD}, n_stops = 2, stops_size = 2, 
+        stops = 0xbf81e010, stops_embedded = {{offset = 0, color = {
+              red = 0.37424206192773607, green = 0.29281899985507909, 
+              blue = 0.26163311766033565, alpha = 0.57999999999999996, 
+              red_short = 24526, green_short = 19190, blue_short = 17146, 
+              alpha_short = 38010}}, {offset = 1, color = {
+              red = 0.37424206192773607, green = 0.29281899985507909, 
+              blue = 0.26163311766033565, alpha = 0, red_short = 24526, 
+              green_short = 19190, blue_short = 17146, alpha_short = 0}}}}, 
+      c1 = {x = 512, y = 512}, r1 = 512, c2 = {x = 1280, y = 169116216}, 
+      r2 = 171131176}}}
+	mask_tmp = {base = {type = CAIRO_PATTERN_TYPE_LINEAR, ref_count = {
+      ref_count = 172653320}, status = CAIRO_STATUS_SUCCESS, user_data = {
+      size = 172638912, num_elements = 2, element_size = 2, elements = 0x2, 
+      is_snapshot = 2}, matrix = {xx = 4.2439915829186759e-314, 
+      yx = 4.6683907521293943e-313, xy = 1.4045685364011902e-307, 
+      yy = 1.1971593611692094e-307, x0 = 4.4840355356796925e-259, 
+      y0 = 4.4081472750114005e-305}, filter = 243, 
+    extend = CAIRO_EXTEND_REFLECT}, solid = {base = {
+      type = CAIRO_PATTERN_TYPE_LINEAR, ref_count = {ref_count = 172653320}, 
+      status = CAIRO_STATUS_SUCCESS, user_data = {size = 172638912, 
+        num_elements = 2, element_size = 2, elements = 0x2, is_snapshot = 2}, 
+      matrix = {xx = 4.2439915829186759e-314, yx = 4.6683907521293943e-313, 
+        xy = 1.4045685364011902e-307, yy = 1.1971593611692094e-307, 
+        x0 = 4.4840355356796925e-259, y0 = 4.4081472750114005e-305}, 
+      filter = 243, extend = CAIRO_EXTEND_REFLECT}, color = {
+      red = 4.2439915829186759e-314, green = 1.4045676876028746e-307, 
+      blue = 1.0784608582108268e-307, alpha = 5.8314047176537477e-314, 
+      red_short = 2, green_short = 0, blue_short = 16372, alpha_short = 57}, 
+    content = 3367705}, surface = {base = {type = CAIRO_PATTERN_TYPE_LINEAR, 
+      ref_count = {ref_count = 172653320}, status = CAIRO_STATUS_SUCCESS, 
+      user_data = {size = 172638912, num_elements = 2, element_size = 2, 
+        elements = 0x2, is_snapshot = 2}, matrix = {
+        xx = 4.2439915829186759e-314, yx = 4.6683907521293943e-313, 
+        xy = 1.4045685364011902e-307, yy = 1.1971593611692094e-307, 
+        x0 = 4.4840355356796925e-259, y0 = 4.4081472750114005e-305}, 
+      filter = 243, extend = CAIRO_EXTEND_REFLECT}, surface = 0x2}, 
+  gradient = {base = {base = {type = CAIRO_PATTERN_TYPE_LINEAR, ref_count = {
+          ref_count = 172653320}, status = CAIRO_STATUS_SUCCESS, user_data = {
+          size = 172638912, num_elements = 2, element_size = 2, 
+          elements = 0x2, is_snapshot = 2}, matrix = {
+          xx = 4.2439915829186759e-314, yx = 4.6683907521293943e-313, 
+          xy = 1.4045685364011902e-307, yy = 1.1971593611692094e-307, 
+          x0 = 4.4840355356796925e-259, y0 = 4.4081472750114005e-305}, 
+        filter = 243, extend = CAIRO_EXTEND_REFLECT}, n_stops = 2, 
+      stops_size = 2, stops = 0x2, stops_embedded = {{
+          offset = -0.0087267756527182674, color = {
+            red = -0.0087296068726786195, green = 4.2439915829186759e-314, 
+            blue = 1.0784432480207986e-307, alpha = -0.0087301135128256893, 
+            red_short = 63246, green_short = 51, blue_short = 57556, 
+            alpha_short = 49025}}, {offset = 0, color = {
+            red = 4.3292865374851548e-314, green = 4.2439915829186759e-314, 
+            blue = 4.2439915829186759e-314, alpha = 5.156449772055493e-312, 
+            red_short = 22, green_short = 0, blue_short = 243, 
+            alpha_short = 0}}}}, linear = {base = {base = {
+          type = CAIRO_PATTERN_TYPE_LINEAR, ref_count = {
+            ref_count = 172653320}, status = CAIRO_STATUS_SUCCESS, 
+          user_data = {size = 172638912, num_elements = 2, element_size = 2, 
+            elements = 0x2, is_snapshot = 2}, matrix = {
+            xx = 4.2439915829186759e-314, yx = 4.6683907521293943e-313, 
+            xy = 1.4045685364011902e-307, yy = 1.1971593611692094e-307, 
+            x0 = 4.4840355356796925e-259, y0 = 4.4081472750114005e-305}, 
+          filter = 243, extend = CAIRO_EXTEND_REFLECT}, n_stops = 2, 
+        stops_size = 2, stops = 0x2, stops_embedded = {{
+            offset = -0.0087267756527182674, color = {
+              red = -0.0087296068726786195, green = 4.2439915829186759e-314, 
+              blue = 1.0784432480207986e-307, alpha = -0.0087301135128256893, 
+              red_short = 63246, green_short = 51, blue_short = 57556, 
+              alpha_short = 49025}}, {offset = 0, color = {
+              red = 4.3292865374851548e-314, green = 4.2439915829186759e-314, 
+              blue = 4.2439915829186759e-314, alpha = 5.156449772055493e-312, 
+              red_short = 22, green_short = 0, blue_short = 243, 
+              alpha_short = 0}}}}, p1 = {x = 2, y = 2}, p2 = {x = 2, y = 2}}, 
+    radial = {base = {base = {type = CAIRO_PATTERN_TYPE_LINEAR, ref_count = {
+            ref_count = 172653320}, status = CAIRO_STATUS_SUCCESS, 
+          user_data = {size = 172638912, num_elements = 2, element_size = 2, 
+            elements = 0x2, is_snapshot = 2}, matrix = {
+            xx = 4.2439915829186759e-314, yx = 4.6683907521293943e-313, 
+            xy = 1.4045685364011902e-307, yy = 1.1971593611692094e-307, 
+            x0 = 4.4840355356796925e-259, y0 = 4.4081472750114005e-305}, 
+          filter = 243, extend = CAIRO_EXTEND_REFLECT}, n_stops = 2, 
+        stops_size = 2, stops = 0x2, stops_embedded = {{
+            offset = -0.0087267756527182674, color = {
+              red = -0.0087296068726786195, green = 4.2439915829186759e-314, 
+              blue = 1.0784432480207986e-307, alpha = -0.0087301135128256893, 
+              red_short = 63246, green_short = 51, blue_short = 57556, 
+              alpha_short = 49025}}, {offset = 0, color = {
+              red = 4.3292865374851548e-314, green = 4.2439915829186759e-314, 
+              blue = 4.2439915829186759e-314, alpha = 5.156449772055493e-312, 
+              red_short = 22, green_short = 0, blue_short = 243, 
+              alpha_short = 0}}}}, c1 = {x = 2, y = 2}, r1 = 2, c2 = {x = 2, 
+        y = 1}, r2 = 0}}}
+#11 0x00358634 in _cairo_xlib_surface_composite (op=CAIRO_OPERATOR_OVER, 
+    src_pattern=0xa457088, mask_pattern=0x0, abstract_dst=0xa4a42c0, src_x=2, 
+    src_y=2, mask_x=2, mask_y=2, dst_x=2, dst_y=2, width=243, height=3)
+    at /build/buildd/cairo-1.8.8/src/cairo-xlib-surface.c:1713
+	src_attr = {matrix = {xx = 4.4081472750115073e-305, 
+    yx = 7.231408565490733e-307, xy = 1.4045683225681736e-307, 
+    yy = 1.4045683225682028e-307, x0 = 1.0784608582109469e-307, 
+    y0 = 4.3535526664141326e-259}, extend = 3212960332, 
+  filter = CAIRO_FILTER_FAST, x_offset = 3367705, y_offset = 3751924, 
+  acquired = -1082006920, extra = 0x31f6c4}
+	mask_attr = {matrix = {xx = 3.9520821952066835e-307, 
+    yx = 1.587413216749969e-314, xy = -0.0087312462940736593, 
+    yy = 0.10000000000000001, x0 = 1.0609978955814493e-313, 
+    y0 = 4.2439915937881201e-314}, extend = 245, filter = CAIRO_FILTER_BEST, 
+  x_offset = 245, y_offset = 2, acquired = -1082007180, extra = 0x200}
+	src = (cairo_xlib_surface_t *) 0x2
+	mask = <value optimized out>
+	status = <value optimized out>
+	operation = <value optimized out>
+	itx = <value optimized out>
+	ity = <value optimized out>
+	is_integer_translation = <value optimized out>
+	__PRETTY_FUNCTION__ = "_cairo_xlib_surface_composite"
+#12 0x0033d336 in _cairo_surface_composite (op=CAIRO_OPERATOR_OVER, 
+    src=0xa457088, mask=0x0, dst=0xa4a42c0, src_x=2, src_y=2, mask_x=2, 
+    mask_y=2, dst_x=2, dst_y=2, width=243, height=3)
+    at /build/buildd/cairo-1.8.8/src/cairo-surface.c:1288
+	status = <value optimized out>
+	__PRETTY_FUNCTION__ = "_cairo_surface_composite"
+#13 0x0033fb2a in _clip_and_composite_trapezoids (src=<value optimized out>, 
+    op=CAIRO_OPERATOR_OVER, dst=0xa4a42c0, traps=0xbf81e474, clip=0xa4ac648, 
+    antialias=CAIRO_ANTIALIAS_DEFAULT)
+    at /build/buildd/cairo-1.8.8/src/cairo-surface-fallback.c:449
+	clip_surface = <value optimized out>
+	status = <value optimized out>
+	trap_region = {rgn = {extents = {x1 = 2, y1 = 2, x2 = 245, y2 = 5}, 
+    data = 0x0}}
+	clear_region = {rgn = {extents = {x1 = 172672448, y1 = 6307828, 
+      x2 = 6312864, y2 = 172638912}, data = 0xbf81e418}}
+	has_trap_region = 1
+	has_clear_region = <value optimized out>
+	extents = {x = 2, y = 2, width = 243, height = 3}
+	traps_info = {traps = 0x18, antialias = CAIRO_ANTIALIAS_DEFAULT}
+#14 0x0033fe4a in _cairo_surface_fallback_fill (surface=0xa4a42c0, 
+    op=CAIRO_OPERATOR_OVER, source=0xa457088, path=0xa4a8c64, 
+    fill_rule=CAIRO_FILL_RULE_WINDING, tolerance=0.10000000000000001, 
+    antialias=CAIRO_ANTIALIAS_DEFAULT)
+    at /build/buildd/cairo-1.8.8/src/cairo-surface-fallback.c:902
+	status = <value optimized out>
+	traps = {status = CAIRO_STATUS_SUCCESS, extents = {p1 = {x = 512, 
+      y = 512}, p2 = {x = 62720, y = 1280}}, num_traps = 1, traps_size = 1, 
+  traps = 0xbf81e494, traps_embedded = {{top = 512, bottom = 1280, left = {
+        p1 = {x = 512, y = 512}, p2 = {x = 512, y = 1280}}, right = {p1 = {
+          x = 62720, y = 512}, p2 = {x = 62720, y = 1280}}}}, has_limits = 1, 
+  limits = {p1 = {x = 512, y = 512}, p2 = {x = 62720, y = 6144}}}
+	box = {p1 = {x = 512, y = 512}, p2 = {x = 62720, y = 6144}}
+	extents = {x = 2, y = 2, width = 243, height = 22}
+#15 0x0033c2f7 in _cairo_surface_fill (surface=0xa4a42c0, 
+    op=CAIRO_OPERATOR_OVER, source=0xbf81e5a4, path=0xa4a8c64, 
+    fill_rule=CAIRO_FILL_RULE_WINDING, tolerance=0.10000000000000001, 
+    antialias=CAIRO_ANTIALIAS_DEFAULT)
+    at /build/buildd/cairo-1.8.8/src/cairo-surface.c:1685
+	status = <value optimized out>
+	dev_source = (cairo_pattern_t *) 0xa457088
+	__PRETTY_FUNCTION__ = "_cairo_surface_fill"
+#16 0x00322ec6 in _cairo_gstate_fill (gstate=0xa4ac5c0, path=0xa4a8c64)
+    at /build/buildd/cairo-1.8.8/src/cairo-gstate.c:1021
+	status = <value optimized out>
+	pattern = {base = {type = CAIRO_PATTERN_TYPE_LINEAR, ref_count = {
+      ref_count = 0}, status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, 
+      num_elements = 0, element_size = 12, elements = 0x0, is_snapshot = 0}, 
+    matrix = {xx = 1, yx = 0, xy = 0, yy = 1, x0 = 0, y0 = 0}, 
+    filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_PAD}, solid = {base = {
+      type = CAIRO_PATTERN_TYPE_LINEAR, ref_count = {ref_count = 0}, 
+      status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, num_elements = 0, 
+        element_size = 12, elements = 0x0, is_snapshot = 0}, matrix = {
+        xx = 1, yx = 0, xy = 0, yy = 1, x0 = 0, y0 = 0}, 
+      filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_PAD}, color = {
+      red = 4.2439915829186759e-314, green = 1.5874137938186433e-314, 
+      blue = -3.8806658959614171e+280, alpha = -1.5315447005068503e+188, 
+      red_short = 48523, green_short = 16338, blue_short = 46291, 
+      alpha_short = 54521}, content = 1070644888}, surface = {base = {
+      type = CAIRO_PATTERN_TYPE_LINEAR, ref_count = {ref_count = 0}, 
+      status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, num_elements = 0, 
+        element_size = 12, elements = 0x0, is_snapshot = 0}, matrix = {
+        xx = 1, yx = 0, xy = 0, yy = 1, x0 = 0, y0 = 0}, 
+      filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_PAD}, surface = 0x2}, 
+  gradient = {base = {base = {type = CAIRO_PATTERN_TYPE_LINEAR, ref_count = {
+          ref_count = 0}, status = CAIRO_STATUS_SUCCESS, user_data = {
+          size = 0, num_elements = 0, element_size = 12, elements = 0x0, 
+          is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, x0 = 0, 
+          y0 = 0}, filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_PAD}, 
+      n_stops = 2, stops_size = 2, stops = 0xbf81e608, stops_embedded = {{
+          offset = 0, color = {red = 0.37424206192773607, 
+            green = 0.29281899985507909, blue = 0.26163311766033565, 
+            alpha = 0.57999999999999996, red_short = 24526, 
+            green_short = 19190, blue_short = 17146, alpha_short = 38010}}, {
+          offset = 1, color = {red = 0.37424206192773607, 
+            green = 0.29281899985507909, blue = 0.26163311766033565, 
+            alpha = 0, red_short = 24526, green_short = 19190, 
+            blue_short = 17146, alpha_short = 0}}}}, linear = {base = {
+        base = {type = CAIRO_PATTERN_TYPE_LINEAR, ref_count = {
+            ref_count = 0}, status = CAIRO_STATUS_SUCCESS, user_data = {
+            size = 0, num_elements = 0, element_size = 12, elements = 0x0, 
+            is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, 
+            x0 = 0, y0 = 0}, filter = CAIRO_FILTER_GOOD, 
+          extend = CAIRO_EXTEND_PAD}, n_stops = 2, stops_size = 2, 
+        stops = 0xbf81e608, stops_embedded = {{offset = 0, color = {
+              red = 0.37424206192773607, green = 0.29281899985507909, 
+              blue = 0.26163311766033565, alpha = 0.57999999999999996, 
+              red_short = 24526, green_short = 19190, blue_short = 17146, 
+              alpha_short = 38010}}, {offset = 1, color = {
+              red = 0.37424206192773607, green = 0.29281899985507909, 
+              blue = 0.26163311766033565, alpha = 0, red_short = 24526, 
+              green_short = 19190, blue_short = 17146, alpha_short = 0}}}}, 
+      p1 = {x = 512, y = 512}, p2 = {x = 512, y = 1280}}, radial = {base = {
+        base = {type = CAIRO_PATTERN_TYPE_LINEAR, ref_count = {
+            ref_count = 0}, status = CAIRO_STATUS_SUCCESS, user_data = {
+            size = 0, num_elements = 0, element_size = 12, elements = 0x0, 
+            is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, 
+            x0 = 0, y0 = 0}, filter = CAIRO_FILTER_GOOD, 
+          extend = CAIRO_EXTEND_PAD}, n_stops = 2, stops_size = 2, 
+        stops = 0xbf81e608, stops_embedded = {{offset = 0, color = {
+              red = 0.37424206192773607, green = 0.29281899985507909, 
+              blue = 0.26163311766033565, alpha = 0.57999999999999996, 
+              red_short = 24526, green_short = 19190, blue_short = 17146, 
+              alpha_short = 38010}}, {offset = 1, color = {
+              red = 0.37424206192773607, green = 0.29281899985507909, 
+              blue = 0.26163311766033565, alpha = 0, red_short = 24526, 
+              green_short = 19190, blue_short = 17146, alpha_short = 0}}}}, 
+      c1 = {x = 512, y = 512}, r1 = 512, c2 = {x = 1280, y = -1082005848}, 
+      r2 = 3294486}}}
+#17 0x0031cefd in *INT_cairo_fill_preserve (cr=0xa4a8ad8)
+    at /build/buildd/cairo-1.8.8/src/cairo.c:2167
+	status = <value optimized out>
+#18 0x0031cf22 in cairo_fill (cr=0xa4a8ad8)
+    at /build/buildd/cairo-1.8.8/src/cairo.c:2143
+No locals.
+#19 0x08168236 in murrine_draw_button (cr=0xa4a8ad8, colors=0xa462af0, 
+    widget=0xbf81e918, x=0, y=0, width=247, height=26, 
+    horizontal=<value optimized out>) at ./src/murrine_draw.c:226
+	pat = (cairo_pattern_t *) 0xa4123b8
+	shadow = {r = 0.37424206192773607, g = 0.29281899985507909, 
+  b = 0.26163311766033565}
+	xos = 1
+	yos = 1
+	glow_shade_custom = 1.2
+	highlight_shade_custom = 1
+	lightborder_shade_custom = 1
+	fill = {r = 0.40195315480277716, g = 0.30980392156862746, 
+  b = 0.27450980392156865}
+	border = {r = 0.18473034250044432, g = 0.14773792862187998, 
+  b = 0.13335484039324758}
+	mrn_gradient_custom = {gradient_shades = {1.1000000000000001, 1, 1, 
+    0.87}, rgba_opacity = 0.90000000000000002, gradients = 1 '\001', 
+  use_rgba = 0 '\0'}
+#20 0x0815e6d9 in murrine_style_draw_box (style=0xa462800, window=0xa2b8bf0, 
+    state_type=GTK_STATE_ACTIVE, shadow_type=GTK_SHADOW_IN, area=0xa3e929c, 
+    widget=0xa4704d8, detail=0x11aea55 "button", x=0, y=0, width=247, 
+    height=26) at ./src/murrine_style.c:829
+	params = {active = 1 '\001', prelight = 0 '\0', disabled = 0 '\0', 
+  ltr = 1 '\001', focus = 0 '\0', is_default = 0 '\0', 
+  state_type = MRN_STATE_ACTIVE, corners = 15 '\017', xthickness = 3 '\003', 
+  ythickness = 3 '\003', parentbg = {r = 0.17254901960784313, 
+    g = 0.16862745098039217, b = 0.16078431372549021}, glazestyle = 0, 
+  glowstyle = 2, lightborderstyle = 1, reliefstyle = 2, roundness = 2, 
+  glow_shade = 1.2, highlight_shade = 1, 
+  lightborder_shade = 1.1500000000000001, mrn_gradient = {gradient_shades = {
+      1.1000000000000001, 1, 1, 0.87}, rgba_opacity = 0.90000000000000002, 
+    gradients = 1 '\001', use_rgba = 0 '\0'}, style = MRN_STYLE_MURRINE, 
+  style_functions = 0xa10869c}
+	horizontal = <value optimized out>
+	colors = (const MurrineColors *) 0xa462af0
+	cr = (cairo_t *) 0xa4a8ad8
+	__PRETTY_FUNCTION__ = "murrine_style_draw_box"
+#21 0x00fdf7bb in IA__gtk_paint_box (style=0xa462800, window=0xa2b8bf0, 
+    state_type=GTK_STATE_ACTIVE, shadow_type=GTK_SHADOW_IN, area=0xa3e929c, 
+    widget=0xa4704d8, detail=0x11aea55 "button", x=0, y=0, width=247, 
+    height=26) at /build/buildd/gtk+2.0-2.17.7/gtk/gtkstyle.c:6090
+	__PRETTY_FUNCTION__ = "IA__gtk_paint_box"
+#22 0x00e7a6ef in _gtk_button_paint (button=0xa4704d8, area=0xa3e929c, 
+    state_type=GTK_STATE_ACTIVE, shadow_type=GTK_SHADOW_IN, 
+    main_detail=0x11d2c56 "togglebutton", 
+    default_detail=0x11d2c42 "togglebuttondefault")
+    at /build/buildd/gtk+2.0-2.17.7/gtk/gtkbutton.c:1506
+	widget = (GtkWidget *) 0xa4704d8
+	width = 247
+	height = <value optimized out>
+	x = <value optimized out>
+	y = <value optimized out>
+	border_width = <value optimized out>
+	default_border = {left = 0, right = 0, top = 0, bottom = 0}
+	default_outside_border = {left = 0, right = 0, top = 0, bottom = 0}
+	interior_focus = 1
+	focus_width = 0
+	focus_pad = 0
+#23 0x010312d4 in gtk_toggle_button_expose (widget=0xa4704d8, event=0xa3e9290)
+    at /build/buildd/gtk+2.0-2.17.7/gtk/gtktogglebutton.c:440
+	child = (GtkWidget *) 0xa3f2270
+	button = (GtkButton *) 0x4102
+	state_type = GTK_STATE_ACTIVE
+	shadow_type = <value optimized out>
+#24 0x00f522c8 in _gtk_marshal_BOOLEAN__BOXED (closure=0xa0aad68, 
+    return_value=0xbf81ed54, n_param_values=2, param_values=0xa0deaa0, 
+    invocation_hint=0xbf81ed40, marshal_data=0x10311e0)
+    at /build/buildd/gtk+2.0-2.17.7/gtk/gtkmarshalers.c:84
+	data1 = (gpointer) 0xa4704d8
+	data2 = (gpointer) 0xa09c210
+	v_return = <value optimized out>
+	__PRETTY_FUNCTION__ = "_gtk_marshal_BOOLEAN__BOXED"
+#25 0x00456779 in g_type_class_meta_marshal (closure=0xa0aad68, 
+    return_value=0xbf81ed54, n_param_values=2, param_values=0xa0deaa0, 
+    invocation_hint=0xbf81ed40, marshal_data=0xc8)
+    at /build/buildd/glib2.0-2.21.5/gobject/gclosure.c:878
+	callback = <value optimized out>
+#26 0x00458018 in IA__g_closure_invoke (closure=0xa0aad68, 
+    return_value=0xbf81ed54, n_param_values=2, param_values=0xa0deaa0, 
+    invocation_hint=0xbf81ed40)
+    at /build/buildd/glib2.0-2.21.5/gobject/gclosure.c:767
+	marshal = (GClosureMarshal) 0x456730 <g_type_class_meta_marshal>
+	marshal_data = (gpointer) 0xc8
+	__PRETTY_FUNCTION__ = "IA__g_closure_invoke"
+#27 0x0046e7ee in signal_emit_unlocked_R (node=<value optimized out>, 
+    detail=<value optimized out>, instance=0xa4704d8, 
+    emission_return=0xbf81ee9c, instance_and_params=0xa0deaa0)
+    at /build/buildd/glib2.0-2.21.5/gobject/gsignal.c:3285
+	accumulator = (SignalAccumulator *) 0xa0aae40
+	emission = {next = 0xbf81f268, instance = 0xa4704d8, ihint = {
+    signal_id = 47, detail = 0, run_type = G_SIGNAL_RUN_LAST}, 
+  state = EMISSION_RUN, chain_type = 168428440}
+	class_closure = (GClosure *) 0xa0aad68
+	handler_list = (Handler *) 0xa4a90e0
+	return_accu = <value optimized out>
+	accu = {g_type = 20, data = {{v_int = 0, v_uint = 0, v_long = 0, 
+      v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, 
+      v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, 
+      v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+	signal_id = 47
+	max_sequential_handler_number = 19982
+	return_value_altered = 0
+#28 0x0046fd98 in IA__g_signal_emit_valist (instance=0xa4704d8, signal_id=47, 
+    detail=0, 
+    var_args=0xbf81ef00 ",?\201? ?\201?H?\201???%\001?\004G\n\220\222>\nH?\201??\004G\n?\004G\nP\213\006\n?")
+    at /build/buildd/glib2.0-2.21.5/gobject/gsignal.c:2990
+	return_value = {g_type = 20, data = {{v_int = 0, v_uint = 0, 
+      v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, 
+      v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, 
+      v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, 
+      v_pointer = 0x0}}}
+	error = <value optimized out>
+	signal_return_type = 20
+	node = (SignalNode *) 0xa0aaf28
+	i = <value optimized out>
+	n_params = 1
+	__PRETTY_FUNCTION__ = "IA__g_signal_emit_valist"
+#29 0x00470396 in IA__g_signal_emit (instance=0xa4704d8, signal_id=47, 
+    detail=0) at /build/buildd/glib2.0-2.21.5/gobject/gsignal.c:3037
+No locals.
+#30 0x01087b7e in gtk_widget_event_internal (widget=<value optimized out>, 
+    event=0xa3e9290) at /build/buildd/gtk+2.0-2.17.7/gtk/gtkwidget.c:4786
+	signal_num = <value optimized out>
+	return_val = 0
+#31 0x00eac009 in IA__gtk_container_propagate_expose (container=0xa2c3000, 
+    child=0xa4704d8, event=0xa3e8f28)
+    at /build/buildd/gtk+2.0-2.17.7/gtk/gtkcontainer.c:2731
+	child_event = (GdkEvent *) 0xa3e9290
+	__PRETTY_FUNCTION__ = "IA__gtk_container_propagate_expose"
+#32 0x00eae156 in gtk_container_expose_child (child=0xa4704d8, 
+    client_data=0xbf81f068)
+    at /build/buildd/gtk+2.0-2.17.7/gtk/gtkcontainer.c:2619
+No locals.
+#33 0x012940f9 in wnck_tasklist_forall (container=0xa2c3000, 
+    include_internals=1, callback=0xeae110 <gtk_container_expose_child>, 
+    callback_data=0xbf81f068) at tasklist.c:1784
+	tasklist = (WnckTasklist *) 0xa2c3000
+	tmp = (GList *) 0xa44d140
+#34 0x00eacc90 in IA__gtk_container_forall (container=0xa2c3000, 
+    callback=0xeae110 <gtk_container_expose_child>, callback_data=0xbf81f068)
+    at /build/buildd/gtk+2.0-2.17.7/gtk/gtkcontainer.c:1499
+	__PRETTY_FUNCTION__ = "IA__gtk_container_forall"
+#35 0x00eae0fc in gtk_container_expose (widget=0xa2c3000, event=0xa3e8f28)
+    at /build/buildd/gtk+2.0-2.17.7/gtk/gtkcontainer.c:2642
+	data = {container = 0xa2c3000, event = 0xa3e8f28}
+	__PRETTY_FUNCTION__ = "gtk_container_expose"
+#36 0x012948b7 in wnck_tasklist_expose (widget=0xa2c3000, event=0xa3e8f28)
+    at tasklist.c:1764
+	tasklist = (WnckTasklist *) 0xa2c3000
+	gc = <value optimized out>
+	__PRETTY_FUNCTION__ = "wnck_tasklist_expose"
+#37 0x00f522c8 in _gtk_marshal_BOOLEAN__BOXED (closure=0xa0aad68, 
+    return_value=0xbf81f284, n_param_values=2, param_values=0xa2afcf0, 
+    invocation_hint=0xbf81f270, marshal_data=0x1294800)
+    at /build/buildd/gtk+2.0-2.17.7/gtk/gtkmarshalers.c:84
+	data1 = (gpointer) 0xa2c3000
+	data2 = (gpointer) 0xa09c210
+	v_return = <value optimized out>
+	__PRETTY_FUNCTION__ = "_gtk_marshal_BOOLEAN__BOXED"
+#38 0x00456779 in g_type_class_meta_marshal (closure=0xa0aad68, 
+    return_value=0xbf81f284, n_param_values=2, param_values=0xa2afcf0, 
+    invocation_hint=0xbf81f270, marshal_data=0xc8)
+    at /build/buildd/glib2.0-2.21.5/gobject/gclosure.c:878
+	callback = <value optimized out>
+#39 0x00458018 in IA__g_closure_invoke (closure=0xa0aad68, 
+    return_value=0xbf81f284, n_param_values=2, param_values=0xa2afcf0, 
+    invocation_hint=0xbf81f270)
+    at /build/buildd/glib2.0-2.21.5/gobject/gclosure.c:767
+	marshal = (GClosureMarshal) 0x456730 <g_type_class_meta_marshal>
+	marshal_data = (gpointer) 0xc8
+	__PRETTY_FUNCTION__ = "IA__g_closure_invoke"
+#40 0x0046e7ee in signal_emit_unlocked_R (node=<value optimized out>, 
+    detail=<value optimized out>, instance=0xa2c3000, 
+    emission_return=0xbf81f3cc, instance_and_params=0xa2afcf0)
+    at /build/buildd/glib2.0-2.21.5/gobject/gsignal.c:3285
+	accumulator = (SignalAccumulator *) 0xa0aae40
+	emission = {next = 0xbf81f7e8, instance = 0xa2c3000, ihint = {
+    signal_id = 47, detail = 0, run_type = G_SIGNAL_RUN_LAST}, 
+  state = EMISSION_RUN, chain_type = 170663240}
+	class_closure = (GClosure *) 0xa0aad68
+	handler_list = (Handler *) 0x0
+	return_accu = <value optimized out>
+	accu = {g_type = 20, data = {{v_int = 0, v_uint = 0, v_long = 0, 
+      v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, 
+      v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, 
+      v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+	signal_id = 47
+	max_sequential_handler_number = 19982
+	return_value_altered = 0
+#41 0x0046fd98 in IA__g_signal_emit_valist (instance=0xa2c3000, signal_id=47, 
+    detail=0, var_args=0xbf81f430 "\\?\201?P?\201?x?\201???%\001")
+    at /build/buildd/glib2.0-2.21.5/gobject/gsignal.c:2990
+	return_value = {g_type = 20, data = {{v_int = 0, v_uint = 0, 
+      v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, 
+      v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, 
+      v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, 
+      v_pointer = 0x0}}}
+	error = <value optimized out>
+	signal_return_type = 20
+	node = (SignalNode *) 0xa0aaf28
+	i = <value optimized out>
+	n_params = 1
+	__PRETTY_FUNCTION__ = "IA__g_signal_emit_valist"
+#42 0x00470396 in IA__g_signal_emit (instance=0xa2c3000, signal_id=47, 
+    detail=0) at /build/buildd/glib2.0-2.21.5/gobject/gsignal.c:3037
+No locals.
+#43 0x01087b7e in gtk_widget_event_internal (widget=<value optimized out>, 
+    event=0xa3e8f28) at /build/buildd/gtk+2.0-2.17.7/gtk/gtkwidget.c:4786
+	signal_num = <value optimized out>
+	return_val = 0
+#44 0x00eac009 in IA__gtk_container_propagate_expose (container=0xa093540, 
+    child=0xa2c3000, event=0xbf81faa8)
+    at /build/buildd/gtk+2.0-2.17.7/gtk/gtkcontainer.c:2731
+	child_event = (GdkEvent *) 0xa3e8f28
+	__PRETTY_FUNCTION__ = "IA__gtk_container_propagate_expose"
+#45 0x00eae156 in gtk_container_expose_child (child=0xa2c3000, 
+    client_data=0xbf81f578)
+    at /build/buildd/gtk+2.0-2.17.7/gtk/gtkcontainer.c:2619
+No locals.
+#46 0x00e6e1aa in gtk_bin_forall (container=0xa093540, include_internals=1, 
+    callback=0xeae110 <gtk_container_expose_child>, callback_data=0xbf81f578)
+    at /build/buildd/gtk+2.0-2.17.7/gtk/gtkbin.c:128
+No locals.
+#47 0x00eacc90 in IA__gtk_container_forall (container=0xa093540, 
+    callback=0xeae110 <gtk_container_expose_child>, callback_data=0xbf81f578)
+    at /build/buildd/gtk+2.0-2.17.7/gtk/gtkcontainer.c:1499
+	__PRETTY_FUNCTION__ = "IA__gtk_container_forall"
+#48 0x00eae0fc in gtk_container_expose (widget=0xa093540, event=0xbf81faa8)
+    at /build/buildd/gtk+2.0-2.17.7/gtk/gtkcontainer.c:2642
+	data = {container = 0xa093540, event = 0xbf81faa8}
+	__PRETTY_FUNCTION__ = "gtk_container_expose"
+#49 0x00ece1a3 in gtk_event_box_expose (widget=0xa093540, event=0xbf81faa8)
+    at /build/buildd/gtk+2.0-2.17.7/gtk/gtkeventbox.c:574
+No locals.
+#50 0x059659bf in panel_applet_expose (widget=0xa093540, event=0xbf81faa8)
+    at panel-applet.c:842
+	focus_width = 0
+	x = 1
+	y = -1082001800
+	width = <value optimized out>
+	height = <value optimized out>
+	__PRETTY_FUNCTION__ = "panel_applet_expose"
+#51 0x00f522c8 in _gtk_marshal_BOOLEAN__BOXED (closure=0xa0aad68, 
+    return_value=0xbf81f804, n_param_values=2, param_values=0xa0de718, 
+    invocation_hint=0xbf81f7f0, marshal_data=0x5965920)
+    at /build/buildd/gtk+2.0-2.17.7/gtk/gtkmarshalers.c:84
+	data1 = (gpointer) 0xa093540
+	data2 = (gpointer) 0xa09c210
+	v_return = <value optimized out>
+	__PRETTY_FUNCTION__ = "_gtk_marshal_BOOLEAN__BOXED"
+#52 0x00456779 in g_type_class_meta_marshal (closure=0xa0aad68, 
+    return_value=0xbf81f804, n_param_values=2, param_values=0xa0de718, 
+    invocation_hint=0xbf81f7f0, marshal_data=0xc8)
+    at /build/buildd/glib2.0-2.21.5/gobject/gclosure.c:878
+	callback = <value optimized out>
+#53 0x004580f2 in IA__g_closure_invoke (closure=0xa0aad68, 
+    return_value=0xbf81f804, n_param_values=2, param_values=0xa0de718, 
+    invocation_hint=0xbf81f7f0)
+    at /build/buildd/glib2.0-2.21.5/gobject/gclosure.c:767
+	marshal = (GClosureMarshal) 0x456730 <g_type_class_meta_marshal>
+	marshal_data = (gpointer) 0xc8
+	__PRETTY_FUNCTION__ = "IA__g_closure_invoke"
+#54 0x0046e7ee in signal_emit_unlocked_R (node=<value optimized out>, 
+    detail=<value optimized out>, instance=0xa093540, 
+    emission_return=0xbf81f94c, instance_and_params=0xa0de718)
+    at /build/buildd/glib2.0-2.21.5/gobject/gsignal.c:3285
+	accumulator = (SignalAccumulator *) 0xa0aae40
+	emission = {next = 0x0, instance = 0xa093540, ihint = {
+    signal_id = 47, detail = 0, run_type = G_SIGNAL_RUN_LAST}, 
+  state = EMISSION_RUN, chain_type = 168751952}
+	class_closure = (GClosure *) 0xa0aad68
+	handler_list = (Handler *) 0x0
+	return_accu = <value optimized out>
+	accu = {g_type = 20, data = {{v_int = 0, v_uint = 0, v_long = 0, 
+      v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, 
+      v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, 
+      v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+	signal_id = 47
+	max_sequential_handler_number = 19982
+	return_value_altered = 0
+#55 0x0046fd98 in IA__g_signal_emit_valist (instance=0xa093540, signal_id=47, 
+    detail=0, 
+    var_args=0xbf81f9b0 "??\201?\020?\t\n`zJ\n??%\001@5\t\n??\201???\201?@5\t\n@5\t\nP\213\006\n\032") at /build/buildd/glib2.0-2.21.5/gobject/gsignal.c:2990
+	return_value = {g_type = 20, data = {{v_int = 0, v_uint = 0, 
+      v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, 
+      v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, 
+      v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, 
+      v_pointer = 0x0}}}
+	error = <value optimized out>
+	signal_return_type = 20
+	node = (SignalNode *) 0xa0aaf28
+	i = <value optimized out>
+	n_params = 1
+	__PRETTY_FUNCTION__ = "IA__g_signal_emit_valist"
+#56 0x00470396 in IA__g_signal_emit (instance=0xa093540, signal_id=47, 
+    detail=0) at /build/buildd/glib2.0-2.21.5/gobject/gsignal.c:3037
+No locals.
+#57 0x01087b7e in gtk_widget_event_internal (widget=<value optimized out>, 
+    event=0xbf81faa8) at /build/buildd/gtk+2.0-2.17.7/gtk/gtkwidget.c:4786
+	signal_num = <value optimized out>
+	return_val = 0
+#58 0x00f4b070 in IA__gtk_main_do_event (event=0xbf81faa8)
+    at /build/buildd/gtk+2.0-2.17.7/gtk/gtkmain.c:1558
+	event_widget = (GtkWidget *) 0xa093540
+	grab_widget = <value optimized out>
+	window_group = (GtkWindowGroup *) 0xa145ad0
+	rewritten_event = (GdkEvent *) 0x0
+	tmp_list = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_main_do_event"
+#59 0x0090942c in _gdk_window_process_updates_recurse (window=0xa2b8bf0, 
+    expose_region=0xa4adcc0)
+    at /build/buildd/gtk+2.0-2.17.7/gdk/gdkwindow.c:4799
+	event = {type = GDK_EXPOSE, any = {type = GDK_EXPOSE, 
+    window = 0xa2b8bf0, send_event = 0 '\0'}, expose = {type = GDK_EXPOSE, 
+    window = 0xa2b8bf0, send_event = 0 '\0', area = {x = 0, y = 0, 
+      width = 1235, height = 26}, region = 0xa4adcc0, count = 0}, 
+  no_expose = {type = GDK_EXPOSE, window = 0xa2b8bf0, send_event = 0 '\0'}, 
+  visibility = {type = GDK_EXPOSE, window = 0xa2b8bf0, send_event = 0 '\0', 
+    state = GDK_VISIBILITY_UNOBSCURED}, motion = {type = GDK_EXPOSE, 
+    window = 0xa2b8bf0, send_event = 0 '\0', time = 0, 
+    x = 2.6206648018421113e-311, y = 4.3677423606860263e-259, axes = 0x0, 
+    state = 9384849, is_hint = -29708, device = 0x1, 
+    x_root = 8.2994643683072745e-306, y_root = 4.3677424603872536e-259}, 
+  button = {type = GDK_EXPOSE, window = 0xa2b8bf0, send_event = 0 '\0', 
+    time = 0, x = 2.6206648018421113e-311, y = 4.3677423606860263e-259, 
+    axes = 0x0, state = 9384849, button = 170626036, device = 0x1, 
+    x_root = 8.2994643683072745e-306, y_root = 4.3677424603872536e-259}, 
+  scroll = {type = GDK_EXPOSE, window = 0xa2b8bf0, send_event = 0 '\0', 
+    time = 0, x = 2.6206648018421113e-311, y = 4.3677423606860263e-259, 
+    state = 0, direction = 9384849, device = 0xa2b8bf4, 
+    x_root = -0.0087795853614807146, y_root = 4.1594143780033914e-259}, 
+  key = {type = GDK_EXPOSE, window = 0xa2b8bf0, send_event = 0 '\0', 
+    time = 0, state = 0, keyval = 1235, length = 26, 
+    string = 0xa4adcc0 "\002", hardware_keycode = 0, group = 0 '\0', 
+    is_modifier = 0}, crossing = {type = GDK_EXPOSE, window = 0xa2b8bf0, 
+    send_event = 0 '\0', subwindow = 0x0, time = 0, 
+    x = 5.5171891175268153e-313, y = 8.5314433598631773e-316, 
+    x_root = 1.1197554959434082e-259, y_root = -0.0087795853614807146, 
+    mode = 9916404, detail = 172594368, focus = 172678336, state = 1}, 
+  focus_change = {type = GDK_EXPOSE, window = 0xa2b8bf0, send_event = 0 '\0', 
+    in = 2631}, configure = {type = GDK_EXPOSE, window = 0xa2b8bf0, 
+    send_event = 0 '\0', x = 0, y = 0, width = 1235, height = 26}, 
+  property = {type = GDK_EXPOSE, window = 0xa2b8bf0, send_event = 0 '\0', 
+    atom = 0x0, time = 0, state = 1235}, selection = {type = GDK_EXPOSE, 
+    window = 0xa2b8bf0, send_event = 0 '\0', selection = 0x0, target = 0x0, 
+    property = 0x4d3, time = 26, requestor = 172678336}, owner_change = {
+    type = GDK_EXPOSE, window = 0xa2b8bf0, send_event = 0 '\0', owner = 0, 
+    reason = GDK_OWNER_CHANGE_NEW_OWNER, selection = 0x4d3, time = 26, 
+    selection_time = 172678336}, proximity = {type = GDK_EXPOSE, 
+    window = 0xa2b8bf0, send_event = 0 '\0', time = 0, device = 0x0}, 
+  client = {type = GDK_EXPOSE, window = 0xa2b8bf0, send_event = 0 '\0', 
+    message_type = 0x0, data_format = 0, data = {
+      b = "?\004\000\000\032\000\000\000??J\n\000\000\000\000\2213\217", s = {
+        1235, 0, 26, 0, -9024, 2634, 0, 0, 13201, 143}, l = {1235, 26, 
+        172678336, 0, 9384849}}}, dnd = {type = GDK_EXPOSE, 
+    window = 0xa2b8bf0, send_event = 0 '\0', context = 0x0, time = 0, 
+    x_root = 1235, y_root = 0}, window_state = {type = GDK_EXPOSE, 
+    window = 0xa2b8bf0, send_event = 0 '\0', changed_mask = 0, 
+    new_window_state = 0}, setting = {type = GDK_EXPOSE, window = 0xa2b8bf0, 
+    send_event = 0 '\0', action = GDK_SETTING_ACTION_NEW, name = 0x0}, 
+  grab_broken = {type = GDK_EXPOSE, window = 0xa2b8bf0, send_event = 0 '\0', 
+    keyboard = 0, implicit = 0, grab_window = 0x4d3}}
+	child = (GdkWindowObject *) 0xa479348
+	child_region = (GdkRegion *) 0xa477080
+	r = {x = -1082000696, y = 26, width = 168364040, height = 172358248}
+	l = <value optimized out>
+	children = (GList *) 0xa472950
+#60 0x00909498 in _gdk_window_process_updates_recurse (window=0xa2b8b48, 
+    expose_region=0xa4994c0)
+    at /build/buildd/gtk+2.0-2.17.7/gdk/gdkwindow.c:4773
+	child = (GdkWindowObject *) 0xa2b8bf0
+	child_region = (GdkRegion *) 0xa4adcc0
+	r = {x = 0, y = 0, width = 1235, height = 26}
+	l = (GList *) 0xa48dc40
+	children = (GList *) 0xa48dc40
+#61 0x009322f4 in _gdk_windowing_window_process_updates_recurse (
+    window=0xa2b8b48, region=0xa4994c0)
+    at /build/buildd/gtk+2.0-2.17.7/gdk/x11/gdkwindow-x11.c:5547
+No locals.
+#62 0x00900c87 in gdk_window_process_updates_internal (window=0xa2b8b48)
+    at /build/buildd/gtk+2.0-2.17.7/gdk/gdkwindow.c:4907
+	window_rect = {x = 0, y = 0, width = 1235, height = 26}
+	expose_region = (GdkRegion *) 0xa4994c0
+	window_region = <value optimized out>
+	save_region = 1
+	clip_box = {x = 0, y = 0, width = 1235, height = 26}
+#63 0x0090484f in IA__gdk_window_process_all_updates ()
+    at /build/buildd/gtk+2.0-2.17.7/gdk/gdkwindow.c:4991
+	old_update_windows = (GSList *) 0xa474298
+	tmp_list = (GSList *) 0xa459660
+	in_process_all_updates = 1
+#64 0x0090487b in gdk_window_update_idle (data=0x0)
+    at /build/buildd/gtk+2.0-2.17.7/gdk/gdkwindow.c:4693
+No locals.
+#65 0x008de0c8 in gdk_threads_dispatch (data=0xa48dd00)
+    at /build/buildd/gtk+2.0-2.17.7/gdk/gdk.c:498
+	ret = 0
+#66 0x0078eff1 in g_idle_dispatch (source=0xa460a48, callback=0, 
+    user_data=0xa48dd00) at /build/buildd/glib2.0-2.21.5/glib/gmain.c:4065
+No locals.
+#67 0x00790d78 in IA__g_main_context_dispatch (context=0xa094b78)
+    at /build/buildd/glib2.0-2.21.5/glib/gmain.c:1960
+No locals.
+#68 0x00794620 in g_main_context_iterate (context=0xa094b78, 
+    block=<value optimized out>, dispatch=1, self=0xa05f220)
+    at /build/buildd/glib2.0-2.21.5/glib/gmain.c:2591
+	max_priority = 120
+	timeout = 0
+	some_ready = 1
+	nfds = <value optimized out>
+	allocated_nfds = <value optimized out>
+	fds = <value optimized out>
+	__PRETTY_FUNCTION__ = "g_main_context_iterate"
+#69 0x00794a8f in IA__g_main_loop_run (loop=0xa216858)
+    at /build/buildd/glib2.0-2.21.5/glib/gmain.c:2799
+	self = (GThread *) 0xa05f220
+	__PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#70 0x00f4b2f9 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.17.7/gtk/gtkmain.c:1205
+	tmp_list = (GList *) 0x0
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0x0
+	loop = (GMainLoop *) 0xa216858
+#71 0x08062f3b in main (argc=1, argv=0xbf81fff4) at main.c:147
+	context = (GOptionContext *) 0xa05f070
+	program = <value optimized out>
+	app = (GAppInfo *) 0x80b1bb0
+	new_app = (GAppInfo *) 0x604304
+	gc = (GConfClient *) 0xa0d9258
+	l = (GList *) 0xa05f070

@@ -1,0 +1,51 @@
+#0  0x00b0b639 in ?? () from /usr/lib/libgvfscommon.so.0
+No symbol table info available.
+#1  0x00b0ba0e in g_mount_spec_match_with_path ()
+   from /usr/lib/libgvfscommon.so.0
+No symbol table info available.
+#2  0x00d31812 in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+No symbol table info available.
+#3  0x00d31a1d in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+No symbol table info available.
+#4  0x00d3403f in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+No symbol table info available.
+#5  0x0015a086 in g_file_find_enclosing_mount_async ()
+   from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#6  0x080fd61b in ?? ()
+No symbol table info available.
+#7  0x080ff209 in ?? ()
+No symbol table info available.
+#8  0x0017eb00 in g_simple_async_result_complete ()
+   from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#9  0x00d3f508 in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+No symbol table info available.
+#10 0x00d3421c in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+No symbol table info available.
+#11 0x00d31b9f in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+No symbol table info available.
+#12 0x00b0adfd in ?? () from /usr/lib/libgvfscommon.so.0
+No symbol table info available.
+#13 0x00835761 in ?? () from /lib/libdbus-1.so.3
+No symbol table info available.
+#14 0x008253c6 in ?? () from /lib/libdbus-1.so.3
+No symbol table info available.
+#15 0x00827992 in dbus_connection_dispatch () from /lib/libdbus-1.so.3
+No symbol table info available.
+#16 0x00b0981d in ?? () from /usr/lib/libgvfscommon.so.0
+No symbol table info available.
+#17 0x0040ee05 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#18 0x00412b08 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#19 0x0041305f in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#20 0x00f98029 in gtk_events_pending () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#21 0x08080bd8 in ?? ()
+No symbol table info available.
+#22 0x02e14bd6 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#23 0x0806c4b1 in ?? ()
+No symbol table info available.

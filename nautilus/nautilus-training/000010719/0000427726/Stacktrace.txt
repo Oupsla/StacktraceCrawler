@@ -1,0 +1,122 @@
+#0  malloc_consolidate (av=<value optimized out>) at malloc.c:5089
+	fb = (mfastbinptr *) 0x50093a8
+	maxfb = (mfastbinptr *) 0x50093cc
+	p = (mchunkptr) 0x50093d0
+	nextp = (mchunkptr) 0xa087a98
+	unsorted_bin = (mchunkptr) 0x50093d0
+	first_unsorted = <value optimized out>
+	nextchunk = (mchunkptr) 0xf090e68
+	size = 168327832
+	nextsize = <value optimized out>
+	prevsize = <value optimized out>
+	bck = <value optimized out>
+	fwd = <value optimized out>
+	__PRETTY_FUNCTION__ = "malloc_consolidate"
+#1  0x04f21552 in _int_malloc (av=<value optimized out>, 
+    bytes=<value optimized out>) at malloc.c:4338
+	nb = 32648
+	idx = 0
+	bin = <value optimized out>
+	victim = <value optimized out>
+	size = <value optimized out>
+	victim_index = <value optimized out>
+	remainder = <value optimized out>
+	remainder_size = <value optimized out>
+	block = <value optimized out>
+	bit = <value optimized out>
+	map = <value optimized out>
+	fwd = <value optimized out>
+	bck = <value optimized out>
+	__PRETTY_FUNCTION__ = "_int_malloc"
+#2  0x04f23908 in *__GI___libc_malloc (bytes=32640) at malloc.c:3638
+	ar_ptr = (mstate) 0x50093a0
+	victim = <value optimized out>
+	__PRETTY_FUNCTION__ = "__libc_malloc"
+#3  0x04ecbbd5 in __gconv_open (toset=<value optimized out>, 
+    fromset=<value optimized out>, handle=<value optimized out>, flags=0)
+    at gconv_open.c:284
+	n = <value optimized out>
+	lastp = <value optimized out>
+	runp = <value optimized out>
+	steps = (struct __gconv_step *) 0xa0879c8
+	nsteps = 2
+	result = (__gconv_t) 0xa087a48
+	cnt = 0
+	res = 0
+	conv_flags = 0
+	errhand = <value optimized out>
+	ignore = <value optimized out>
+	trans = (struct trans_struct *) 0x0
+#4  0x04ecb5ec in iconv_open (tocode=0x5f12ff1 "ASCII", 
+    fromcode=0x5f118c6 "UTF-8") at iconv_open.c:72
+	tocode_len = <value optimized out>
+	tocode_conv = 0xb7e34040 "ASCII//"
+	tocode_usealloca = true
+	fromcode_len = <value optimized out>
+	fromcode_conv = 0xb7e34020 "UTF-8//"
+	fromcode_usealloca = true
+	cd = <value optimized out>
+	res = <value optimized out>
+#5  0x00431dbe in try_conversion (to_codeset=0xa087a98 "", 
+    from_codeset=0x50093d0 "ø\207\b\n\230z\b\n\230z\b\n\230z\b\nðx\b\nðx\b\nà\223", cd=0xb7e340bc) at /build/buildd/glib2.0-2.21.6/glib/gconvert.c:71
+No locals.
+#6  0x00431e09 in IA__g_iconv_open (to_codeset=0x5f12ff1 "ASCII", 
+    from_codeset=0x5f118c6 "UTF-8")
+    at /build/buildd/glib2.0-2.21.6/glib/gconvert.c:123
+	cd = <value optimized out>
+#7  0x0043239b in open_converter (to_codeset=0xa087a98 "", 
+    from_codeset=<value optimized out>, error=0xb7e341dc)
+    at /build/buildd/glib2.0-2.21.6/glib/gconvert.c:500
+	cd = <value optimized out>
+#8  0x00432785 in IA__g_convert (str=0xa087198 "HL-DT-ST DVD+-RW GSA-T21N", 
+    len=25, to_codeset=0xa087a98 "", 
+    from_codeset=0x50093d0 "ø\207\b\n\230z\b\n\230z\b\n\230z\b\nðx\b\nðx\b\nà\223", bytes_read=0x0, bytes_written=0x0, error=0xb7e341dc)
+    at /build/buildd/glib2.0-2.21.6/glib/gconvert.c:741
+	res = <value optimized out>
+	cd = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_convert"
+#9  0x00432c59 in IA__g_convert_with_fallback (
+    str=0xa087198 "HL-DT-ST DVD+-RW GSA-T21N", len=25, 
+    to_codeset=0x5f12ff1 "ASCII", from_codeset=0x5f118c6 "UTF-8", 
+    fallback=0x5f12fcf "_", bytes_read=0x0, bytes_written=0x0, error=0x0)
+    at /build/buildd/glib2.0-2.21.6/glib/gconvert.c:837
+	utf8 = (gchar *) 0x5ef969e "g_convert_with_fallback"
+	dest = (gchar *) 0xec4336 "\203ì\024\211Æe¡\f"
+	outp = <value optimized out>
+	insert_str = (const gchar *) 0xed4ff4 ",ß\001"
+	p = <value optimized out>
+	inbytes_remaining = <value optimized out>
+	save_p = <value optimized out>
+	save_inbytes = 3085124080
+	outbytes_remaining = <value optimized out>
+	err = <value optimized out>
+	cd = (GIConv) 0x1
+	outbuf_size = 5
+	have_error = <value optimized out>
+	local_error = (GError *) 0x0
+	__PRETTY_FUNCTION__ = "IA__g_convert_with_fallback"
+#10 0x05f0be33 in brasero_drive_probe_thread (data=0xa039158)
+    at brasero-drive.c:1066
+	hdr = {type = 5 '\005', qualifier = 0 '\0', reserved0 = 0 '\0', 
+  rmb = 1 '\001', ansi_ver = 5 '\005', ecma_ver = 0 '\0', iso_ver = 0 '\0', 
+  response_format = 2 '\002', reserved1 = 1 '\001', norm_aca = 1 '\001', 
+  trmtsk = 0 '\0', aerc = 0 '\0', add_len = 91 '[', reserved2 = 0 '\0', 
+  addr16 = 0 '\0', addr32 = 0 '\0', ack_req = 0 '\0', mchngr = 0 '\0', 
+  multiP = 0 '\0', vs1 = 0 '\0', enc_serv = 0 '\0', reserved3 = 0 '\0', 
+  vs2 = 0 '\0', cmd_queue = 0 '\0', transdis = 0 '\0', linked = 0 '\0', 
+  sync = 0 '\0', wbus16 = 0 '\0', wbus32 = 0 '\0', rel_addr = 0 '\0', 
+  vendor = "HL-DT-ST", name = "DVD+-RW GSA-T21N", revision = "A100"}
+	res = <value optimized out>
+	counter = <value optimized out>
+	device = <value optimized out>
+	code = BRASERO_SCSI_ERR_UNKNOWN
+	priv = (BraseroDrivePrivate *) 0xa039168
+	handle = (BraseroDeviceHandle *) 0xa0871f8
+	drive = (BraseroDrive *) 0xa039158
+#11 0x0047448f in g_thread_create_proxy (data=0xa0790b8)
+    at /build/buildd/glib2.0-2.21.6/glib/gthread.c:635
+	__PRETTY_FUNCTION__ = "g_thread_create_proxy"
+#12 0x009b080e in start_thread () from /lib/tls/i686/cmov/libpthread.so.0
+No symbol table info available.
+#13 0x04f8081e in clone () at ../sysdeps/unix/sysv/linux/i386/clone.S:130
+No locals.

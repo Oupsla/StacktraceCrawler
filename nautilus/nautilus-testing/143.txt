@@ -1,0 +1,38 @@
+#0  0x00007fb05c4a4c60 in g_logv () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#1  0x00007fb059c5b94d in ?? () from /usr/lib/x86_64-linux-gnu/libwayland-client.so.0
+No symbol table info available.
+#2  0x00007fb059c58e09 in wl_display_connect () from /usr/lib/x86_64-linux-gnu/libwayland-client.so.0
+No symbol table info available.
+#3  0x00007fb05ea9f7c1 in ?? () from /usr/lib/x86_64-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#4  0x00007fb05ea63117 in gdk_display_manager_open_display () from /usr/lib/x86_64-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#5  0x00007fb05ee9a1d2 in gtk_init_check () from /usr/lib/x86_64-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#6  0x00007fb05ee9a1e9 in gtk_init () from /usr/lib/x86_64-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#7  0x00007fb05edacc96 in ?? () from /usr/lib/x86_64-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#8  0x000000000042cd64 in ?? ()
+No symbol table info available.
+#9  0x00007fb05c773314 in ?? () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#10 0x00007fb05c78c778 in g_signal_emit_valist () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#11 0x00007fb05c78d072 in g_signal_emit () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#12 0x00007fb05ca56a82 in g_application_register () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#13 0x000000000042c8de in ?? ()
+No symbol table info available.
+#14 0x00007fb05ca57527 in g_application_run () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#15 0x000000000042b5b1 in ?? ()
+No symbol table info available.
+#16 0x00007fb05b971ec5 in __libc_start_main (main=0x42b4f0, argc=1, argv=0x7fff2fd0f858, init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, stack_end=0x7fff2fd0f848) at libc-start.c:287
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, -4941122077292620265, 4371946, 140733995612240, 0, 0, 4941508753454405143, 4903624533578618391}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x4ed290, 0x7fff2fd0f858}, data = {prev = 0x0, cleanup = 0x0, canceltype = 5165712}}}
+        not_first_call = <optimized out>
+#17 0x000000000042b613 in ?? ()
+No symbol table info available.

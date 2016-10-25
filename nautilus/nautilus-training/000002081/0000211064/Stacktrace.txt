@@ -1,0 +1,7 @@
+#0  0xb77182e6 in gconf_client_remove_dir () from /usr/lib/libgconf-2.so.4
+#1  0xb6129c67 in ?? ()
+   from /usr/lib/nautilus/extensions-2.0/libnautilus-actions.so
+#2  0xb400000c in ?? ()
+#3  0xb612e10c in ?? ()
+   from /usr/lib/nautilus/extensions-2.0/libnautilus-actions.so
+#4  0x00000000 in ?? ()

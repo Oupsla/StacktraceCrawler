@@ -1,0 +1,145 @@
+#0  malloc_consolidate (av=<value optimized out>) at malloc.c:5089
+	fb = (mfastbinptr *) 0x368b3a8
+	maxfb = (mfastbinptr *) 0x368b3cc
+	p = (mchunkptr) 0x368b3d0
+	nextp = (mchunkptr) 0x9f8f500
+	unsorted_bin = (mchunkptr) 0x368b3d0
+	first_unsorted = <value optimized out>
+	nextchunk = (mchunkptr) 0xd61a8d0
+	size = 167310592
+	nextsize = <value optimized out>
+	prevsize = <value optimized out>
+	bck = <value optimized out>
+	fwd = <value optimized out>
+	__PRETTY_FUNCTION__ = "malloc_consolidate"
+#1  0x035a34b2 in _int_malloc (av=<value optimized out>, 
+    bytes=<value optimized out>) at malloc.c:4338
+	nb = 1048
+	idx = 57193376
+	bin = <value optimized out>
+	victim = <value optimized out>
+	size = <value optimized out>
+	victim_index = <value optimized out>
+	remainder = <value optimized out>
+	remainder_size = <value optimized out>
+	block = <value optimized out>
+	bit = <value optimized out>
+	map = <value optimized out>
+	fwd = <value optimized out>
+	bck = <value optimized out>
+	__PRETTY_FUNCTION__ = "_int_malloc"
+#2  0x035a46f9 in _int_memalign (av=0x368b3a0, alignment=512, bytes=504)
+    at malloc.c:5426
+	nb = 512
+	p = (mchunkptr) 0x9f8f4d8
+	brk = 0x9f8f478 ""
+	newsize = 3213056784
+	remainder = <value optimized out>
+	size = <value optimized out>
+	__PRETTY_FUNCTION__ = "_int_memalign"
+#3  0x035a5d4f in *__GI___libc_memalign (alignment=512, bytes=504)
+    at malloc.c:3858
+	ar_ptr = <value optimized out>
+	p = (void *) 0x368b3a0
+	__PRETTY_FUNCTION__ = "__libc_memalign"
+#4  0x035a5f8c in __posix_memalign (memptr=0xbf835b7c, alignment=167310592, 
+    size=167310592) at malloc.c:6249
+	mem = <value optimized out>
+#5  0x0032b83e in slab_allocator_alloc_chunk (chunk_size=32)
+    at /build/buildd/glib2.0-2.21.6/glib/gslice.c:1136
+No locals.
+#6  0x0032c7cd in IA__g_slice_alloc (mem_size=28)
+    at /build/buildd/glib2.0-2.21.6/glib/gslice.c:666
+	tmem = (ThreadMemory *) 0x9f197f0
+	ix = 24
+	chunk_size = <value optimized out>
+	mem = <value optimized out>
+#7  0x002aed11 in IA__g_signal_connect_data (instance=0x9f5b498, 
+    detailed_signal=0x7638ce4 "drive-connected", 
+    c_handler=0x7626b10 <brasero_medium_monitor_connected_cb>, 
+    data=0x9f31ef0, destroy_data=0, connect_flags=0)
+    at /build/buildd/glib2.0-2.21.6/gobject/gsignal.c:558
+	node = <value optimized out>
+	signal_id = 39
+	handler_seq_no = <value optimized out>
+	detail = <value optimized out>
+	itype = 167297080
+	__PRETTY_FUNCTION__ = "IA__g_signal_connect_data"
+#8  0x0762703b in brasero_medium_monitor_init (object=0x9f31ef0)
+    at brasero-medium-monitor.c:735
+	iter = (GList *) 0x0
+	drives = (GList *) 0x9f8e190
+	volumes = (GList *) 0x9f8e190
+	drive = <value optimized out>
+	priv = (BraseroMediumMonitorPrivate *) 0x9f31f00
+#9  0x002bc3bf in IA__g_type_create_instance (type=167296296)
+    at /build/buildd/glib2.0-2.21.6/gobject/gtype.c:1674
+	node = (TypeNode *) 0x9f8bd28
+	instance = (GTypeInstance *) 0x9f31ef0
+	class = (GTypeClass *) 0x9f8bdb0
+	i = 5730816
+	total_size = <value optimized out>
+#10 0x0029fd38 in g_object_constructor (type=167296296, 
+    n_construct_properties=0, construct_params=0x0)
+    at /build/buildd/glib2.0-2.21.6/gobject/gobject.c:1338
+	object = (GObject *) 0xbf835eb0
+#11 0x002a08cc in IA__g_object_newv (object_type=167296296, n_parameters=0, 
+    parameters=0x0) at /build/buildd/glib2.0-2.21.6/gobject/gobject.c:1215
+	nqueue = (GObjectNotifyQueue *) 0xbf835edc
+	object = <value optimized out>
+	class = (GObjectClass *) 0x9f8bdb0
+	unref_class = (GObjectClass *) 0x9f8bdb0
+	slist = <value optimized out>
+	n_total_cparams = <value optimized out>
+	n_cparams = 0
+	n_oparams = 0
+	n_cvalues = <value optimized out>
+	clist = (GList *) 0x0
+	newly_constructed = 787846
+	i = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_object_newv"
+#12 0x002a1502 in IA__g_object_new_valist (object_type=167296296, 
+    first_property_name=0x0, 
+    var_args=0xbf836028 "Ì\210c\aô\017d\a©[b\aô\017d\aX`\203¿\216Ob\aX\\ô\tÌ\210c\a") at /build/buildd/glib2.0-2.21.6/gobject/gobject.c:1278
+	params = (GParameter *) 0x154ff4
+	name = <value optimized out>
+	object = <value optimized out>
+	n_params = <value optimized out>
+	n_alloced_params = 5725463
+	__PRETTY_FUNCTION__ = "IA__g_object_new_valist"
+#13 0x002a167e in IA__g_object_new (object_type=167296296, 
+    first_property_name=0x0)
+    at /build/buildd/glib2.0-2.21.6/gobject/gobject.c:1060
+	__PRETTY_FUNCTION__ = "IA__g_object_new"
+#14 0x07625be5 in brasero_medium_monitor_get_default ()
+    at brasero-medium-monitor.c:891
+No locals.
+#15 0x07624f8e in brasero_media_library_start () at brasero-media.c:536
+No locals.
+#16 0x09c162db in nautilus_module_initialize (module=0x9f71830)
+    at nautilus-burn-extension.c:932
+No locals.
+#17 0x08145ede in ?? ()
+No symbol table info available.
+#18 0x002bd8c0 in IA__g_type_module_use (module=0x9f71830)
+    at /build/buildd/glib2.0-2.21.6/gobject/gtypemodule.c:257
+	tmp_list = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_type_module_use"
+#19 0x0814601a in ?? ()
+No symbol table info available.
+#20 0x0806f9bf in ?? ()
+No symbol table info available.
+#21 0x080814c8 in ?? ()
+No symbol table info available.
+#22 0x0354cb56 in __libc_start_main (
+    main=0x8080df0 <g_themed_icon_append_name@plt+85740>, argc=1, 
+    ubp_av=0xbf836464, init=0x81a2d70, fini=0x81a2d60, 
+    rtld_fini=0x144d20 <_dl_fini>, stack_end=0xbf83645c) at libc-start.c:220
+	result = <value optimized out>
+	unwind_buf = {cancel_jmp_buf = {{jmp_buf = {57188340, 0, 0, 
+        -1081908168, 66566227, -1398403286}, mask_was_saved = 0}}, priv = {
+    pad = {0x0, 0x0, 0x1, 0x806bf20}, data = {prev = 0x0, cleanup = 0x0, 
+      canceltype = 1}}}
+	not_first_call = <value optimized out>
+#23 0x0806bf41 in ?? ()
+No symbol table info available.

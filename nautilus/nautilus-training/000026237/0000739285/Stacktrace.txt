@@ -1,0 +1,33 @@
+#0  0x00897416 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x082c8e71 in raise () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#2  0x082cc34e in abort () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#3  0x0046cf27 in g_logv () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#4  0x0046cf62 in g_log () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#5  0x0026f3a3 in ?? () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#6  0x00272075 in ?? () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#7  0x00a0bc72 in g_object_newv () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#8  0x00a0c900 in g_object_new_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#9  0x00a0ca17 in g_object_new () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#10 0x00272ad1 in g_settings_new () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#11 0x04786cae in ?? ()
+No symbol table info available.
+#12 0x0478a815 in ?? ()
+No symbol table info available.
+#13 0x00deac40 in ?? () from /lib/ld-linux.so.2
+No symbol table info available.
+#14 0x04787478 in ?? ()
+No symbol table info available.
+#15 0x08e25080 in ?? ()
+No symbol table info available.
+Backtrace stopped: previous frame inner to this frame (corrupt stack?)

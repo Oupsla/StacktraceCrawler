@@ -1,0 +1,46 @@
+#0  0x00007f96418f9445 in __GI_raise (sig=<optimized out>) at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+        resultvar = 0
+        pid = <optimized out>
+        selftid = 1939
+#1  0x00007f96418fcbab in __GI_abort () at abort.c:91
+        save_stage = 2
+        act = {__sigaction_handler = {sa_handler = 0x400, sa_sigaction = 0x400}, sa_mask = {__val = {140283333394380, 140283321556040, 140283393000672, 59146480, 140737461202936, 1, 133, 4294967295, 59146480, 1, 39642912, 3092568, 0, 59086832, 55258064, 140283332993024}}, sa_flags = 1169155956, sa_restorer = 0x7f9600000005}
+        sigs = {__val = {32, 0 <repeats 15 times>}}
+#2  0x00007f964241ad97 in g_assertion_message () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#3  0x00007f964241b2b4 in g_assertion_message_expr () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#4  0x0000000000480006 in ?? ()
+No symbol table info available.
+#5  0x00000000004800da in ?? ()
+No symbol table info available.
+#6  0x000000000049416c in ?? ()
+No symbol table info available.
+#7  0x00007f96423f98b5 in g_main_context_dispatch () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#8  0x00007f96423f9be8 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#9  0x00007f96423f9ca4 in g_main_context_iteration () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#10 0x00007f9642999d6c in g_application_run () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#11 0x000000000042ae2b in ?? ()
+No symbol table info available.
+#12 0x00007f96418e476d in __libc_start_main (main=0x42ad70, argc=2, ubp_av=0x7ffffe61b468, init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, stack_end=0x7ffffe61b458) at libc-start.c:226
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, -199742559512415717, 4370012, 140737461204064, 0, 0, 199746010390213147, 150549735272100379}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x4f6ce0, 0x7ffffe61b468}, data = {prev = 0x0, cleanup = 0x0, canceltype = 5205216}}}
+        not_first_call = <optimized out>
+#13 0x000000000042ae85 in ?? ()
+No symbol table info available.
+#14 0x00007ffffe61b458 in ?? ()
+No symbol table info available.
+#15 0x000000000000001c in ?? ()
+No symbol table info available.
+#16 0x0000000000000002 in ?? ()
+No symbol table info available.
+#17 0x00007ffffe61ca0e in ?? ()
+No symbol table info available.
+#18 0x00007ffffe61ca17 in ?? ()
+No symbol table info available.
+#19 0x0000000000000000 in ?? ()
+No symbol table info available.

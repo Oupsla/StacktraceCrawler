@@ -1,0 +1,19 @@
+#0  0x00007f015c7ed960 in ?? ()
+#1  0x00007f0168d606ed in *__GI_exit (status=0) at exit.c:75
+	atfct = <value optimized out>
+	onfct = <value optimized out>
+	cxafct = (void (*)(void *, int)) 0x7f015c7ed960
+	old = <value optimized out>
+#2  0x00007f0168d485ad in __libc_start_main (main=0x442540 <main>, argc=2, 
+    ubp_av=0x7fff756cbf88, init=0x54a660 <__libc_csu_init>, 
+    fini=<value optimized out>, rtld_fini=<value optimized out>, 
+    stack_end=0x7fff756cbf78) at libc-start.c:252
+	result = 0
+	unwind_buf = {cancel_jmp_buf = {{jmp_buf = {5547616, 
+        -3121175454081344379, 4388848, 140735163449216, 0, 0, 
+        3121471383739047045, 3075266811400428677}, mask_was_saved = 0}}, 
+  priv = {pad = {0x0, 0x0, 0x2, 0x442540}, data = {prev = 0x0, cleanup = 0x0, 
+      canceltype = 2}}}
+	not_first_call = <value optimized out>
+#3  0x000000000042f819 in _start () at ../sysdeps/x86_64/elf/start.S:113
+No locals.

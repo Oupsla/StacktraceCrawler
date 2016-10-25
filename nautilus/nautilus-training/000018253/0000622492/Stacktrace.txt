@@ -1,0 +1,144 @@
+#0  0x00007fd976303e0f in g_object_set (_object=0xa6d9100, 
+    first_property_name=0x7fd978367d4a "ubuntu-local")
+    at /build/buildd/glib2.0-2.25.14/gobject/gobject.c:1677
+        __r = <value optimised out>
+        var_args = {{gp_offset = 32, fp_offset = 48, 
+            overflow_arg_area = 0x7ffffd43eb00, 
+            reg_save_area = 0x7ffffd43ea30}}
+        __PRETTY_FUNCTION__ = "g_object_set"
+#1  0x00007fd9781265f4 in show_local_notify (proxy=<value optimised out>, 
+    pspec=<value optimised out>, shell=0xa6d9100)
+    at /build/buildd/gtk+2.0-2.21.6/gtk/gtkmenushell.c:425
+        local = 0
+#2  0x00007fd9762fd6ce in g_closure_invoke (closure=0xa6dbc30, 
+    return_value=0x0, n_param_values=2, param_values=0xf930600, 
+    invocation_hint=0x7ffffd43ec60)
+    at /build/buildd/glib2.0-2.25.14/gobject/gclosure.c:766
+        marshal = 0x415
+        marshal_data = 0xa5b
+        __PRETTY_FUNCTION__ = "g_closure_invoke"
+#3  0x00007fd976315f59 in signal_emit_unlocked_R (node=0x2363980, 
+    detail=<value optimised out>, instance=<value optimised out>, 
+    emission_return=<value optimised out>, 
+    instance_and_params=<value optimised out>)
+    at /build/buildd/glib2.0-2.25.14/gobject/gsignal.c:3252
+        tmp = <value optimised out>
+        handler = 0xa6d7470
+        accumulator = 0x0
+        emission = {next = 0x0, instance = 0x25f41e0, ihint = {signal_id = 1, 
+            detail = 1495, run_type = G_SIGNAL_RUN_FIRST}, 
+          state = EMISSION_RUN, chain_type = 4}
+        class_closure = 0x23638d0
+        handler_list = 0xa6d7190
+        return_accu = <value optimised out>
+        accu = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, 
+              v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, 
+              v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, 
+              v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, 
+              v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        signal_id = 1
+        max_sequential_handler_number = <value optimised out>
+        return_value_altered = 1
+#4  0x00007fd9763176d6 in g_signal_emit_valist (instance=0x25f41e0, 
+    signal_id=<value optimised out>, detail=1495, var_args=0x7ffffd43ee50)
+    at /build/buildd/glib2.0-2.25.14/gobject/gsignal.c:2983
+        signal_return_type = 4
+        param_values = <value optimised out>
+        node = 0x2363980
+        i = <value optimised out>
+        n_params = <value optimised out>
+        __PRETTY_FUNCTION__ = "g_signal_emit_valist"
+#5  0x00007fd976317f43 in g_signal_emit (instance=0xa6d9100, 
+    signal_id=2016836938, detail=4249086687)
+    at /build/buildd/glib2.0-2.25.14/gobject/gsignal.c:3040
+        var_args = {{gp_offset = 32, fp_offset = 48, 
+            overflow_arg_area = 0x7ffffd43ef30, 
+            reg_save_area = 0x7ffffd43ee70}}
+#6  0x00007fd976301bb9 in g_object_dispatch_properties_changed (
+    object=0x25f41e0, n_pspecs=1, pspecs=<value optimised out>)
+    at /build/buildd/glib2.0-2.25.14/gobject/gobject.c:799
+        i = 1
+#7  0x00007fd976300e2c in g_object_notify_queue_thaw (object=0x25f41e0, 
+    nqueue=<value optimised out>)
+    at /build/buildd/glib2.0-2.25.14/gobject/gobjectnotifyqueue.c:132
+        context = 0x7fd97653a730
+        pspecs_mem = {0x25e79e0, 0x7fd975a5bcf1, 0x25f41e0, 0x0, 
+          0x7fd97653b148, 0xa5b, 0x14, 0x25f41e0, 0x1, 0x7ffffd43f0b0, 
+          0x25e79e0, 0x7fd97632a370, 0x25f41e0, 0x0, 0x25e79e0, 
+          0x7fd97631a688}
+        pspecs = 0x7ffffd43ef70
+        free_me = 0x0
+        slist = <value optimised out>
+        n_pspecs = 1
+#8  0x00007fd97630399b in g_object_set_valist (object=0x25f41e0, 
+    first_property_name=0x7fd97984dc70 "H\203\354\b\213w\020H\211\372\211\360\203\340\177@\366\306|u%\205\300u,\307B\b", var_args=0x7ffffd43f130)
+    at /build/buildd/glib2.0-2.25.14/gobject/gobject.c:1580
+        nqueue = 0xaa13400
+        name = 0x0
+        __PRETTY_FUNCTION__ = "g_object_set_valist"
+#9  0x00007fd976303e84 in g_object_set (_object=0x25f41e0, 
+    first_property_name=0x7fd96822cb30 "show-local")
+    at /build/buildd/glib2.0-2.25.14/gobject/gobject.c:1680
+        var_args = {{gp_offset = 32, fp_offset = 48, 
+            overflow_arg_area = 0x7ffffd43f220, 
+            reg_save_area = 0x7ffffd43f150}}
+        __PRETTY_FUNCTION__ = "g_object_set"
+#10 0x00007fd96822aff9 in ?? ()
+   from /usr/lib/gtk-2.0/2.10.0/menuproxies/libappmenu.so
+No symbol table info available.
+#11 0x00007fd979a6d5aa in complete_pending_call_and_unlock (
+    connection=0x23d28b0, pending=0xdf92c50, message=<value optimised out>)
+    at dbus-connection.c:2234
+No locals.
+#12 0x00007fd979a6f80f in dbus_connection_dispatch (connection=0x23d28b0)
+    at dbus-connection.c:4397
+        message = 0xa9404c0
+        link = <value optimised out>
+        filter_list_copy = <value optimised out>
+        message_link = <value optimised out>
+        result = <value optimised out>
+        status = <value optimised out>
+        __FUNCTION__ = "dbus_connection_dispatch"
+#13 0x00007fd979efca45 in message_queue_dispatch (
+    source=<value optimised out>, callback=<value optimised out>, 
+    user_data=<value optimised out>) at dbus-gmain.c:101
+        connection = 0x23d28b0
+#14 0x00007fd975a3dcb2 in g_main_dispatch (context=0x2381aa0)
+    at /build/buildd/glib2.0-2.25.14/glib/gmain.c:2119
+        dispatch = 0x7fd979efca30 <message_queue_dispatch>
+        user_data = 0x0
+        callback = 0
+        cb_funcs = 0x0
+        cb_data = 0x0
+        current_source_link = {data = 0x23bb8d0, next = 0x0}
+        source = 0x23bb8d0
+        current = 0x2387e70
+        i = 1
+#15 g_main_context_dispatch (context=0x2381aa0)
+    at /build/buildd/glib2.0-2.25.14/glib/gmain.c:2672
+No locals.
+#16 0x00007fd975a41c18 in g_main_context_iterate (context=0x2381aa0, 
+    block=<value optimised out>, dispatch=<value optimised out>, 
+    self=<value optimised out>)
+    at /build/buildd/glib2.0-2.25.14/glib/gmain.c:2750
+        max_priority = 0
+        timeout = 0
+        some_ready = 1
+        nfds = 11
+        allocated_nfds = 1973742416
+        fds = <value optimised out>
+        __PRETTY_FUNCTION__ = "g_main_context_iterate"
+#17 0x00007fd975a42125 in g_main_loop_run (loop=0x2bf9e50)
+    at /build/buildd/glib2.0-2.25.14/glib/gmain.c:2958
+        self = 0x23480e0
+        __PRETTY_FUNCTION__ = "g_main_loop_run"
+#18 0x00007fd97810aa47 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.21.6/gtk/gtkmain.c:1237
+        tmp_list = 0x23cc920
+        functions = 0x0
+        init = 0x2382900
+        loop = <value optimised out>
+#19 0x0000000000402613 in main (argc=1, argv=0x7ffffd43f678) at main.c:646
+        shell = 0x2382900
+        client = <value optimised out>
+        error = 0x0

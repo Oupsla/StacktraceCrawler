@@ -1,0 +1,88 @@
+#0  0xb72413ca in free () from /lib/tls/i686/cmov/libc.so.6
+#1  0xb7586be1 in IA__g_free (mem=0x81cbaec) at /build/buildd/glib2.0-2.15.5/glib/gmem.c:190
+No locals.
+#2  0x080e863b in link_info_nautilus_link_read_callback (source_object=0xb4c078b0, res=0x87acc00, 
+    user_data=0xb4c08798) at nautilus-directory-async.c:3599
+	state = <value optimized out>
+	file_size = 27738168
+	file_contents = 0x81cbaec "tes"
+	result = 0
+	directory = (NautilusDirectory *) 0x81ca0b8
+#3  0xb766eac1 in IA__g_simple_async_result_complete (simple=0x87acc00)
+    at /build/buildd/glib2.0-2.15.5/gio/gsimpleasyncresult.c:553
+	__PRETTY_FUNCTION__ = "IA__g_simple_async_result_complete"
+#4  0xb7656496 in load_contents_open_callback (obj=0xb4c078b0, open_res=0x84cde90, user_data=0xb4c00b78)
+    at /build/buildd/glib2.0-2.15.5/gio/gfile.c:4898
+	stream = (GFileInputStream *) 0x0
+	error = (GError *) 0x87c5150
+	res = (GSimpleAsyncResult *) 0x87acc00
+#5  0xb766eac1 in IA__g_simple_async_result_complete (simple=0x84cde90)
+    at /build/buildd/glib2.0-2.15.5/gio/gsimpleasyncresult.c:553
+	__PRETTY_FUNCTION__ = "IA__g_simple_async_result_complete"
+#6  0xb766eb2e in complete_in_idle_cb (data=0x84cde90)
+    at /build/buildd/glib2.0-2.15.5/gio/gsimpleasyncresult.c:563
+No locals.
+#7  0xb757d191 in g_idle_dispatch (source=0x87f8018, callback=0, user_data=0x84cde90)
+    at /build/buildd/glib2.0-2.15.5/glib/gmain.c:4142
+No locals.
+#8  0xb757ed36 in IA__g_main_context_dispatch (context=0x819d518)
+    at /build/buildd/glib2.0-2.15.5/glib/gmain.c:2064
+No locals.
+#9  0xb75820f3 in g_main_context_iterate (context=0x819d518, block=1, dispatch=1, self=0x816f408)
+    at /build/buildd/glib2.0-2.15.5/glib/gmain.c:2697
+	got_ownership = <value optimized out>
+	max_priority = 0
+	timeout = 0
+	some_ready = 1
+	nfds = <value optimized out>
+	allocated_nfds = <value optimized out>
+	fds = (GPollFD *) 0xb4c04750
+	__PRETTY_FUNCTION__ = "g_main_context_iterate"
+#10 0xb75824d7 in IA__g_main_loop_run (loop=0x81bc1b0) at /build/buildd/glib2.0-2.15.5/glib/gmain.c:2905
+	got_ownership = -1221425888
+	self = (GThread *) 0x816f408
+	__PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#11 0xb796d044 in IA__gtk_main () at /build/buildd/gtk+2.0-2.12.8/gtk/gtkmain.c:1163
+	tmp_list = (GList *) 0x81bc1b0
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0x0
+	loop = (GMainLoop *) 0x81bc1b0
+#12 0x0807c3bd in main (argc=5, argv=0xbfa74564) at nautilus-main.c:572
+	kill_shell = 0
+	restart_shell = 0
+	no_default_window = 0
+	browser_window = 0
+	no_desktop = 0
+	startup_id = <value optimized out>
+	startup_id_copy = 0x81bc1b0 "\030Õ\031\b\001"
+	session_to_load = 0x0
+	geometry = (gchar *) 0x0
+	remaining = (const gchar **) 0x0
+	perform_self_check = 0
+	context = <value optimized out>
+	application = (NautilusApplication *) 0x819a850
+	program = (GnomeProgram *) 0x8182858
+	options = {{long_name = 0x814a320 "check", short_name = 99 'c', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfa74430, description = 0x814a34c "Perform a quick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x814d47b "geometry", short_name = 103 'g', flags = 0, 
+    arg = G_OPTION_ARG_STRING, arg_data = 0xbfa74438, 
+    description = 0x814a378 "Create the initial window with the given geometry.", 
+    arg_description = 0x814a196 "GEOMETRY"}, {long_name = 0x814a19f "no-default-window", 
+    short_name = 110 'n', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfa74448, 
+    description = 0x814a3ac "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {
+    long_name = 0x814a1b1 "no-desktop", short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfa74440, 
+    description = 0x814a3e0 "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {long_name = 0x814c522 "browser", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbfa74444, description = 0x814a1bc "open a browser window.", 
+    arg_description = 0x0}, {long_name = 0x814a328 "quit", short_name = 113 'q', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbfa74450, description = 0x814a1d3 "Quit Nautilus.", 
+    arg_description = 0x0}, {long_name = 0x814a32f "restart", short_name = 0 '\0', flags = 1, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbfa7444c, description = 0x814a1e2 "Restart Nautilus.", 
+    arg_description = 0x0}, {long_name = 0x814e5f1 "", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0xbfa74434, description = 0x0, 
+    arg_description = 0x814a1f4 "[URI...]"}, {long_name = 0x8146b95 "load-session", short_name = 108 'l', 
+    flags = 0, arg = G_OPTION_ARG_STRING, arg_data = 0xbfa7443c, 
+    description = 0x814a434 "Load a saved session from the specified file. Implies \"--no-default-window\".", arg_description = 0x814a1fd "FILENAME"}, {long_name = 0x0, short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0x0, description = 0x0, arg_description = 0x0}}
+#13 0xb71e8450 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+#14 0x08069d01 in _start ()

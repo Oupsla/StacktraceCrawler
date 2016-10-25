@@ -1,0 +1,30 @@
+#0  0x00007f152103848d in ?? () from /lib/libc.so.6
+No symbol table info available.
+#1  0x00007f1521039db2 in ?? () from /lib/libc.so.6
+No symbol table info available.
+#2  0x00007f152103e0f4 in calloc () from /lib/libc.so.6
+No symbol table info available.
+#3  0x00007f1522609c3a in g_malloc0 () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#4  0x00007f152365aa1e in ?? () from /usr/lib/libgdk_pixbuf-2.0.so.0
+No symbol table info available.
+#5  0x00007f1522f24d53 in g_type_create_instance () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#6  0x00007f1522f01d4c in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#7  0x00007f1522f04fb1 in g_object_newv () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#8  0x00007f1522f05c6c in g_object_new () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#9  0x00007f1524d3cd15 in ?? () from /usr/lib/libgnome-desktop-2.so.17
+No symbol table info available.
+#10 0x00007f1524d3d3ac in gnome_desktop_thumbnail_factory_generate_thumbnail () from /usr/lib/libgnome-desktop-2.so.17
+No symbol table info available.
+#11 0x00000000005006db in ?? ()
+No symbol table info available.
+#12 0x00007f152134ad8c in start_thread () from /lib/libpthread.so.0
+No symbol table info available.
+#13 0x00007f15210a161d in clone () from /lib/libc.so.6
+No symbol table info available.
+#14 0x0000000000000000 in ?? ()
+No symbol table info available.

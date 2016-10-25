@@ -1,0 +1,65 @@
+#0  0x00007f9879aa07a8 in g_list_remove () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#1  0x00000000004f7240 in ?? ()
+No symbol table info available.
+#2  0x00007f987a385950 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#3  0x00007f9879a8d642 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#4  0x00007f9879a8da51 in g_datalist_id_set_data_full ()
+   from /lib/libglib-2.0.so.0
+No symbol table info available.
+#5  0x00007f987a38620a in g_object_unref () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#6  0x00007f9879aa00ac in g_list_foreach () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#7  0x000000000052ba89 in ?? ()
+No symbol table info available.
+#8  0x00000000004d9f8a in ?? ()
+No symbol table info available.
+#9  0x00007f987a386294 in g_object_unref () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#10 0x00000000004a922e in ?? ()
+No symbol table info available.
+#11 0x00000000004a9be3 in ?? ()
+No symbol table info available.
+#12 0x00007f987a386294 in g_object_unref () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#13 0x00007f9879aa00ac in g_list_foreach () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#14 0x000000000052ba89 in ?? ()
+No symbol table info available.
+#15 0x000000000043519e in ?? ()
+No symbol table info available.
+#16 0x00007f987a38419e in g_closure_invoke ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#17 0x00007f987a39973d in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#18 0x00007f987a39aad6 in g_signal_emit_valist ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#19 0x00007f987a39b093 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#20 0x00007f987b5c6a1e in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#21 0x00007f987a38620a in g_object_unref () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#22 0x000000000051b448 in ?? ()
+No symbol table info available.
+#23 0x0000000000444326 in ?? ()
+No symbol table info available.
+#24 0x00007f98786afc4d in __libc_start_main () from /lib/libc.so.6
+No symbol table info available.
+#25 0x0000000000430a39 in ?? ()
+No symbol table info available.
+#26 0x00007fffd1c35678 in ?? ()
+No symbol table info available.
+#27 0x000000000000001c in ?? ()
+No symbol table info available.
+#28 0x0000000000000001 in ?? ()
+No symbol table info available.
+#29 0x00007fffd1c36ad9 in ?? ()
+No symbol table info available.
+#30 0x0000000000000000 in ?? ()
+No symbol table info available.

@@ -1,0 +1,33 @@
+#0  0x005a5597 in g_type_check_instance () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#1  0x0059a74a in g_signal_handlers_disconnect_matched () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#2  0x0809d1a6 in ?? ()
+No symbol table info available.
+#3  0x080a2ce4 in ?? ()
+No symbol table info available.
+#4  0x080deff5 in ?? ()
+No symbol table info available.
+#5  0x080e375c in ?? ()
+No symbol table info available.
+#6  0x00f81110 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#7  0x00f8525f in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#8  0x00f85990 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#9  0x00f85f9b in g_main_loop_run () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#10 0x0086cf95 in gtk_main () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#11 0x00780fe4 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#12 0x00de750c in g_application_run () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#13 0x08067914 in ?? ()
+No symbol table info available.
+#14 0x02c90113 in __libc_start_main () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#15 0x0806794d in ?? ()
+No symbol table info available.
+Backtrace stopped: Not enough registers or memory available to unwind further

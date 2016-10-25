@@ -1,0 +1,45 @@
+#0  0xb522aee0 in ?? ()
+#1  0xb75f9f1f in type_iface_vtable_iface_init_Wm (iface=0x844fa90, node=<value optimized out>)
+    at /build/buildd/glib2.0-2.15.5/gobject/gtype.c:1718
+	entry = <value optimized out>
+	iholder = (IFaceHolder *) 0x8ac1c70
+	vtable = (GTypeInterface *) 0x8b90168
+	i = <value optimized out>
+	__PRETTY_FUNCTION__ = "type_iface_vtable_iface_init_Wm"
+#2  0xb75fe9e4 in IA__g_type_class_ref (type=145067080) at /build/buildd/glib2.0-2.15.5/gobject/gtype.c:1906
+	ptype = <value optimized out>
+	pclass = (GTypeClass *) 0x817aa70
+	node = (TypeNode *) 0x8a58c48
+	_action = " invalidly modified type "
+#3  0xb75e2768 in IA__g_object_newv (object_type=145067080, n_parameters=0, parameters=0x0)
+    at /build/buildd/glib2.0-2.15.5/gobject/gobject.c:853
+	nqueue = <value optimized out>
+	object = <value optimized out>
+	class = (GObjectClass *) 0x0
+	unref_class = (GObjectClass *) 0x0
+	slist = <value optimized out>
+	n_total_cparams = <value optimized out>
+	n_cparams = <value optimized out>
+	n_oparams = <value optimized out>
+	n_cvalues = <value optimized out>
+	clist = <value optimized out>
+	i = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_object_newv"
+#4  0xb75e2cc1 in IA__g_object_new_valist (object_type=145067080, first_property_name=0x0, 
+    var_args=0xbff0e6f8 "<÷\026\001\212Â\032¶¨\v\033¶Èÿ\203\b8çð¿MW\032¶hå­\bhe\235\b8çð¿áOU·\f")
+    at /build/buildd/glib2.0-2.15.5/gobject/gobject.c:986
+	error = <value optimized out>
+	pspec = <value optimized out>
+	params = <value optimized out>
+	name = <value optimized out>
+	object = <value optimized out>
+	n_params = <value optimized out>
+	n_alloced_params = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_object_new_valist"
+#5  0xb75e2e30 in IA__g_object_new (object_type=145067080, first_property_name=0x0)
+    at /build/buildd/glib2.0-2.15.5/gobject/gobject.c:795
+	var_args = 0xbff0e6f8 "<÷\026\001\212Â\032¶¨\v\033¶Èÿ\203\b8çð¿MW\032¶hå­\bhe\235\b8çð¿áOU·\f"
+	__PRETTY_FUNCTION__ = "IA__g_object_new"
+#6  0xb61ac2d2 in ?? ()
+#7  0x08a58c48 in ?? ()
+#8  0x00000000 in ?? ()

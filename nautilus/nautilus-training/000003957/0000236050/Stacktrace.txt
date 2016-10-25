@@ -1,0 +1,32 @@
+#0  0xb763785c in ?? ()
+#1  0x080b961b in ?? () from /usr/bin/nautilus
+#2  0x08114eee in ?? () from /usr/bin/nautilus
+#3  0x08119864 in ?? () from /usr/bin/nautilus
+#4  0x080bb8bb in ?? () from /usr/bin/nautilus
+#5  0x080a83d6 in ?? () from /usr/bin/nautilus
+#6  0xb7627a4f in ?? ()
+#7  0xb761a759 in ?? ()
+#8  0xb762ed1d in ?? ()
+#9  0xb7630916 in ?? ()
+#10 0xb7630c59 in ?? ()
+#11 0x0810b03a in ?? () from /usr/bin/nautilus
+#12 0x080f25fa in ?? () from /usr/bin/nautilus
+#13 0x0810b160 in ?? () from /usr/bin/nautilus
+#14 0x080ec792 in ?? () from /usr/bin/nautilus
+#15 0xb767fa43 in ?? ()
+#16 0xb696f910 in ?? ()
+#17 0xb696d860 in ?? ()
+#18 0xb6976786 in ?? ()
+#19 0xb697bc2a in ?? ()
+#20 0xb6d39e01 in ?? ()
+#21 0xb6d29b53 in ?? ()
+#22 0xb6d2b6f9 in ?? ()
+#23 0xb6d2bdae in ?? ()
+#24 0xb69759b5 in ?? ()
+#25 0xb766e9da in ?? ()
+#26 0xb767fc79 in ?? ()
+#27 0xb76797b4 in ?? ()
+#28 0xb75bb69b in ?? ()
+#29 0xb75b9a6f in ?? ()
+#30 0xb73404fb in ?? ()
+#31 0xb72c2e5e in ?? ()

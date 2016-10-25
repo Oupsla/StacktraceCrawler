@@ -1,0 +1,36 @@
+#0  0x00007f6e2515149f in ?? () from /lib/x86_64-linux-gnu/libc.so.6
+No symbol table info available.
+#1  0x00007f6e266aee7e in g_variant_is_object_path () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#2  0x00007f6e2798ff65 in g_dbus_connection_register_object () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#3  0x00007f6e23ce031d in ?? () from /usr/lib/libdbusmenu-glib.so.3
+No symbol table info available.
+#4  0x00007f6e23ce1830 in ?? () from /usr/lib/libdbusmenu-glib.so.3
+No symbol table info available.
+#5  0x00007f6e2794bd49 in ?? () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#6  0x00007f6e26678bcd in g_main_context_dispatch () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#7  0x00007f6e266793a8 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#8  0x00007f6e266799f2 in g_main_loop_run () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#9  0x00007f6e2821caf7 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#10 0x00000000004427d2 in ?? ()
+No symbol table info available.
+#11 0x00007f6e25040eff in __libc_start_main () from /lib/x86_64-linux-gnu/libc.so.6
+No symbol table info available.
+#12 0x000000000042f349 in ?? ()
+No symbol table info available.
+#13 0x00007fffe2de53c8 in ?? ()
+No symbol table info available.
+#14 0x000000000000001c in ?? ()
+No symbol table info available.
+#15 0x0000000000000001 in ?? ()
+No symbol table info available.
+#16 0x00007fffe2de5ad8 in ?? ()
+No symbol table info available.
+#17 0x0000000000000000 in ?? ()
+No symbol table info available.

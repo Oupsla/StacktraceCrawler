@@ -1,0 +1,46 @@
+#0  0x00000000004bee6a in ?? ()
+No symbol table info available.
+#1  0x00000000004befcb in ?? ()
+No symbol table info available.
+#2  0x00007f660c266bb9 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#3  0x00007f660c266b6d in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#4  0x0000000000461ad2 in ?? ()
+No symbol table info available.
+#5  0x0000000000465a52 in ?? ()
+No symbol table info available.
+#6  0x00007f660c53a5e7 in ?? () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#7  0x00007f660c553088 in g_signal_emit_valist () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#8  0x00007f660c553ce2 in g_signal_emit () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#9  0x00000000004a2028 in ?? ()
+No symbol table info available.
+#10 0x00000000004a3169 in ?? ()
+No symbol table info available.
+#11 0x00000000004a337a in ?? ()
+No symbol table info available.
+#12 0x00007f660c7c86a7 in ?? () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#13 0x00007f660c7ebef7 in g_simple_async_result_complete () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#14 0x00007f660c7ebf59 in ?? () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#15 0x00007f660c26ace5 in g_main_context_dispatch () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#16 0x00007f660c26b048 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#17 0x00007f660c26b0ec in g_main_context_iteration () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#18 0x00007f660c81d67c in g_application_run () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#19 0x000000000042b561 in ?? ()
+No symbol table info available.
+#20 0x00007f660b73eec5 in __libc_start_main (main=0x42b4a0, argc=2, argv=0x7fffb4d676a8, init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, stack_end=0x7fffb4d67698) at libc-start.c:287
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, 7865311630449518967, 4371866, 140736227341984, 0, 0, -7865436772580120201, -7788089732888843913}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x4ed5b0, 0x7fffb4d676a8}, data = {prev = 0x0, cleanup = 0x0, canceltype = 5166512}}}
+        not_first_call = <optimized out>
+#21 0x000000000042b5c3 in ?? ()
+No symbol table info available.

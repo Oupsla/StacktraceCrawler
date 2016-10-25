@@ -1,0 +1,22 @@
+#0  0x007f387e in g_timer_stop () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#1  0x00c440ed in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#2  0x00135c2e in ?? () from /usr/lib/libgdk-3.so.0
+No symbol table info available.
+#3  0x007ca7af in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#4  0x007c90cf in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#5  0x007c9800 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#6  0x007c9e0b in g_main_loop_run () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#7  0x00b47675 in gtk_main () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#8  0x00a4a344 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#9  0x0029d1fc in g_application_run () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#10 0x00119a48 in main ()
+No symbol table info available.

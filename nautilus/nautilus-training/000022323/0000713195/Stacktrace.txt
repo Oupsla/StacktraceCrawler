@@ -1,0 +1,34 @@
+#0  0x00dfe3a9 in g_atomic_int_exchange_and_add () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#1  0x00e692ed in g_variant_unref () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#2  0x00cfd97f in ?? () from /usr/lib/gtk-2.0/2.10.0/menuproxies/libappmenu.so
+No symbol table info available.
+#3  0x009350f6 in g_simple_async_result_complete () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#4  0x0098e9b4 in ?? () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#5  0x009350f6 in g_simple_async_result_complete () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#6  0x00983763 in ?? () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#7  0x009350f6 in g_simple_async_result_complete () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#8  0x0093522e in ?? () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#9  0x00e25501 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#10 0x00e29cb8 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#11 0x00e2a480 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#12 0x00e2ab43 in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#13 0x002429c9 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#14 0x08059e1d in ?? ()
+No symbol table info available.
+#15 0x009f5ce6 in __libc_start_main () from /lib/libc.so.6
+No symbol table info available.
+#16 0x08056081 in ?? ()
+No symbol table info available.

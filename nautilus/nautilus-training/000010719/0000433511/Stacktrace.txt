@@ -1,0 +1,162 @@
+#0  _int_malloc (av=0x7fe9fe754e40, bytes=8) at malloc.c:4278
+	p = <value optimized out>
+	nb = <value optimized out>
+	idx = 0
+	bin = <value optimized out>
+	victim = (mchunkptr) 0x2631a5932f
+	size = <value optimized out>
+	victim_index = <value optimized out>
+	remainder = <value optimized out>
+	remainder_size = <value optimized out>
+	block = <value optimized out>
+	bit = <value optimized out>
+	map = <value optimized out>
+	fwd = <value optimized out>
+	bck = <value optimized out>
+	__PRETTY_FUNCTION__ = "_int_malloc"
+#1  0x00007fe9fe4647ee in *__GI___libc_malloc (bytes=8) at malloc.c:3638
+	ar_ptr = (mstate) 0x7fe9fe754e40
+	victim = <value optimized out>
+	__PRETTY_FUNCTION__ = "__libc_malloc"
+#2  0x00007fe9ff7e9383 in IA__g_malloc (n_bytes=8)
+    at /build/buildd/glib2.0-2.21.6/glib/gmem.c:131
+	mem = (gpointer) 0x0
+#3  0x00007fe9ff802749 in IA__g_strndup (str=0xdd5510 "Plugin1", n=7)
+    at /build/buildd/glib2.0-2.21.6/glib/gstrfuncs.c:155
+	new_str = (gchar *) 0x0
+#4  0x00007fe9ff802a06 in IA__g_ascii_strdown (str=0xdd5510 "Plugin1", len=8)
+    at /build/buildd/glib2.0-2.21.6/glib/gstrfuncs.c:1730
+	result = <value optimized out>
+	s = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_ascii_strdown"
+#5  0x00007fe9ef4c1015 in gst_object_set_name (object=0xdd3170, 
+    name=<value optimized out>) at gstobject.c:620
+	result = <value optimized out>
+	__PRETTY_FUNCTION__ = "gst_object_set_name"
+#6  0x00007fe9ffec0e4d in g_object_constructor (type=<value optimized out>, 
+    n_construct_properties=0, construct_params=0xdd5770)
+    at /build/buildd/glib2.0-2.21.6/gobject/gobject.c:942
+	value = (GValue *) 0xdbcc30
+	pspec = (GParamSpec *) 0xda4030
+	nqueue = <value optimized out>
+	object = (GObject *) 0xdd3170
+#7  0x00007fe9ffec17be in IA__g_object_newv (
+    object_type=<value optimized out>, n_parameters=14505824, 
+    parameters=<value optimized out>)
+    at /build/buildd/glib2.0-2.21.6/gobject/gobject.c:1215
+	nqueue = <value optimized out>
+	object = <value optimized out>
+	class = (GObjectClass *) 0xdd25d0
+	unref_class = (GObjectClass *) 0x0
+	slist = <value optimized out>
+	n_total_cparams = 1
+	n_cparams = 1
+	n_oparams = <value optimized out>
+	n_cvalues = <value optimized out>
+	clist = (GList *) 0x0
+	newly_constructed = <value optimized out>
+	i = 14404656
+	__PRETTY_FUNCTION__ = "IA__g_object_newv"
+#8  0x00007fe9ffec2345 in IA__g_object_new_valist (object_type=14433136, 
+    first_property_name=0x0, var_args=0x7fff844b3dd0)
+    at /build/buildd/glib2.0-2.21.6/gobject/gobject.c:1278
+	params = <value optimized out>
+	name = <value optimized out>
+	object = <value optimized out>
+	n_params = <value optimized out>
+	n_alloced_params = 32767
+	__PRETTY_FUNCTION__ = "IA__g_object_new_valist"
+#9  0x00007fe9ffec249c in IA__g_object_new (object_type=14433136, 
+    first_property_name=0x0)
+    at /build/buildd/glib2.0-2.21.6/gobject/gobject.c:1060
+	var_args = {{gp_offset = 16, fp_offset = 48, 
+    overflow_arg_area = 0x7fff844b3ec0, reg_save_area = 0x7fff844b3df0}}
+	__PRETTY_FUNCTION__ = "IA__g_object_new"
+#10 0x00007fe9ef52764c in gst_registry_binary_load_plugin (registry=0xd43a00, 
+    in=0x7fff844b4000, 
+    end=0x7fea02d3069d <Address 0x7fea02d3069d out of bounds>)
+    at gstregistrybinary.c:1140
+	plugin = <value optimized out>
+	i = <value optimized out>
+	n = 46809088
+	__PRETTY_FUNCTION__ = "gst_registry_binary_load_plugin"
+#11 0x00007fe9ef528e72 in gst_registry_binary_read_cache (registry=0xd43a00, 
+    location=0xdd5550 "/root/.gstreamer-0.10/registry.x86_64.bin")
+    at gstregistrybinary.c:1298
+	mapped = (GMappedFile *) 0xdb9e80
+	contents = (
+    gchar *) 0x7fea02ca4000 <Address 0x7fea02ca4000 out of bounds>
+	in = (gchar *) 0x0
+	size = 575133
+	err = (GError *) 0x0
+	res = <value optimized out>
+	timer = (GTimer *) 0xdd5510
+	seconds = -5.4861240687936887e+303
+	__PRETTY_FUNCTION__ = "gst_registry_binary_read_cache"
+#12 0x00007fe9ef4bdd07 in ensure_current_registry (error=0x0) at gst.c:910
+	registry_file = (
+    gchar *) 0xdd5550 "/root/.gstreamer-0.10/registry.x86_64.bin"
+	default_registry = (GstRegistry *) 0xd43a00
+	ret = 1
+	have_cache = <value optimized out>
+	__PRETTY_FUNCTION__ = "ensure_current_registry"
+#13 0x00007fe9ef4bf358 in init_post (context=<value optimized out>, 
+    group=<value optimized out>, data=<value optimized out>, error=0x0)
+    at gst.c:1128
+	__PRETTY_FUNCTION__ = "init_post"
+#14 0x00007fe9ff7ef6c9 in IA__g_option_context_parse (context=0xdb7630, 
+    argc=0x0, argv=0x0, error=0x0)
+    at /build/buildd/glib2.0-2.21.6/glib/goption.c:1947
+	group = (GOptionGroup *) 0x8
+	i = 0
+	j = <value optimized out>
+	k = <value optimized out>
+	list = (GList *) 0xdb6ee0
+#15 0x00007fe9ef4bea9d in gst_init_check (argc=0x0, argv=0x0, err=0x0)
+    at gst.c:452
+	group = <value optimized out>
+	ctx = (GOptionContext *) 0xdb7630
+	res = <value optimized out>
+	__PRETTY_FUNCTION__ = "gst_init_check"
+#16 0x00007fe9edb395dd in brasero_burn_library_start (argc=0x0, argv=0x0)
+    at burn-basics.c:232
+	client = <value optimized out>
+#17 0x00007fe9edd993e2 in nautilus_module_initialize (module=0xd5a300)
+    at nautilus-burn-extension.c:933
+No locals.
+#18 0x00000000004f2b86 in ?? ()
+No symbol table info available.
+#19 0x00007fe9ffede574 in IA__g_type_module_use (module=0xd5a300)
+    at /build/buildd/glib2.0-2.21.6/gobject/gtypemodule.c:257
+	tmp_list = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_type_module_use"
+#20 0x00000000004f2c98 in ?? ()
+No symbol table info available.
+#21 0x00000000004338e3 in ?? ()
+No symbol table info available.
+#22 0x0000000000443502 in ?? ()
+No symbol table info available.
+#23 0x00007fe9fe408abd in __libc_start_main (main=<value optimized out>, 
+    argc=<value optimized out>, ubp_av=<value optimized out>, 
+    init=<value optimized out>, fini=<value optimized out>, 
+    rtld_fini=<value optimized out>, stack_end=0x7fff844b46f8)
+    at libc-start.c:220
+	result = <value optimized out>
+	unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, 5998944308958561873, 
+        4391200, 140735412913920, 0, 0, -5998934864568285615, 
+        -6011332908703054255}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 
+      0x547140, 0x7fff844b4708}, data = {prev = 0x0, cleanup = 0x0, 
+      canceltype = 5534016}}}
+	not_first_call = <value optimized out>
+#24 0x0000000000430149 in ?? ()
+No symbol table info available.
+#25 0x00007fff844b46f8 in ?? ()
+No symbol table info available.
+#26 0x000000000000001c in ?? ()
+No symbol table info available.
+#27 0x0000000000000001 in ?? ()
+No symbol table info available.
+#28 0x00007fff844b49e1 in ?? ()
+No symbol table info available.
+#29 0x0000000000000000 in ?? ()
+No symbol table info available.

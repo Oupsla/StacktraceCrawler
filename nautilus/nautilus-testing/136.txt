@@ -1,0 +1,136 @@
+#0  0x00750422 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x0098f4d1 in *__GI_raise (sig=6)
+    at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+	resultvar = <value optimized out>
+	pid = 11243508
+	selftid = 2550
+#2  0x00992932 in *__GI_abort () at abort.c:92
+	act = {__sigaction_handler = {sa_handler = 0xd6fff4, 
+    sa_sigaction = 0xd6fff4}, sa_mask = {__val = {3214997168, 3086740624, 
+      3214997124, 14004233, 3214997108, 5635308, 3214997096, 14092236, 0, 
+      3086698304, 5, 0, 1, 5882246, 171564680, 4294967295, 11244896, 6418420, 
+      6418420, 114, 3214997208, 3086740184, 0, 3214997168, 3214997096, 
+      3214997108, 0, 94, 5669160, 296, 11248544, 11243508}}, 
+  sa_flags = 11248544, sa_restorer = 0x820cf0c <stderr@@GLIBC_2.0>}
+	sigs = {__val = {32, 0 <repeats 31 times>}}
+#3  0x005baddc in g_assertion_message () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#4  0x005bb43d in g_assertion_message_expr () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#5  0x08123f2a in nautilus_file_get_internal (location=0x0, create=6)
+    at nautilus-file.c:656
+	self_owned = -1079969784
+	directory = <value optimized out>
+	file = <value optimized out>
+	parent = <value optimized out>
+	basename = 0x1 <Address 0x1 out of bounds>
+	__PRETTY_FUNCTION__ = "nautilus_file_get_internal"
+#6  0x080a41f2 in got_file_info_for_view_selection_callback (file=0xa0b21e0, 
+    callback_data=0xa352890) at nautilus-window-manage-views.c:1099
+	error = (GError *) 0xa593030
+	view_id = 0xa06c140 ""
+	mimetype = 0x1df5f0 "\022"
+	window = (NautilusWindow *) 0xa2bd010
+	slot = (NautilusWindowSlot *) 0xa352890
+	viewed_file = <value optimized out>
+	location = <value optimized out>
+	mount_op = (GMountOperation *) 0xa593030
+	__PRETTY_FUNCTION__ = "got_file_info_for_view_selection_callback"
+#7  0x080a44f3 in mount_not_mounted_callback (source_object=0xa0e6d48, 
+    res=0xa5ad330, user_data=0xa599b20) at nautilus-window-manage-views.c:995
+	slot = (NautilusWindowSlot *) 0xa352890
+	error = (GError *) 0xa593030
+	cancellable = (GCancellable *) 0xa584780
+#8  0x002227bc in g_simple_async_result_complete ()
+   from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#9  0x00fc9368 in _g_simple_async_result_complete_with_cancellable (
+    result=0xa5ad330, cancellable=0x0) at gvfsdaemondbus.c:1050
+No locals.
+#10 0x00fc11ff in mount_reply (reply=0x0, error=0xa592e80, 
+    user_data=0xa588420) at gdaemonfile.c:1754
+	res = (GSimpleAsyncResult *) 0x0
+#11 0x00f39b1d in handle_async_reply (pending=<value optimized out>, 
+    data=0xa5b3f28) at gdbusutils.c:1219
+	reply = (DBusMessage *) 0xa34b360
+	error = (GError *) 0xa592e80
+#12 0x00b0c7c1 in dbus_pending_call_steal_reply (pending=0xa5b3f28)
+    at dbus-pending-call.c:668
+	message = <value optimized out>
+	__FUNCTION__ = "dbus_pending_call_steal_reply"
+#13 0x0a5b3f28 in ?? ()
+No symbol table info available.
+#14 0x00afc416 in complete_pending_call_and_unlock (connection=0xa0b85a0, 
+    pending=0xa453f98, message=0xa34b360) at dbus-connection.c:2227
+No locals.
+#15 0x00afe9d2 in dbus_connection_dispatch (connection=0xa0b85a0)
+    at dbus-connection.c:4390
+	message = <value optimized out>
+	link = <value optimized out>
+	filter_list_copy = <value optimized out>
+	message_link = <value optimized out>
+	result = <value optimized out>
+	status = <value optimized out>
+	__FUNCTION__ = "dbus_connection_dispatch"
+#16 0x00f3853d in dbus_source_dispatch (source=0xa0baaa0, callback=0, 
+    user_data=0x0) at gdbusutils.c:810
+	connection = (DBusConnection *) 0xa0b85a0
+#17 0x00593e78 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#18 0x00597720 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#19 0x00597b8f in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#20 0x011302d9 in gtk_marshal_VOID__POINTER_INT_INT_POINTER_UINT_UINT ()
+   from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#21 0x0808178c in main (argc=1, argv=0xbfa0fed4) at nautilus-main.c:595
+	kill_shell = 0
+	no_default_window = 1
+	browser_window = 0
+	no_desktop = 0
+	version = 0
+	autostart_mode = 1
+	autostart_id = <value optimized out>
+	geometry = (gchar *) 0x0
+	remaining = (gchar **) 0x0
+	perform_self_check = 0
+	application = (NautilusApplication *) 0xa092028
+	context = <value optimized out>
+	file = (GFile *) 0x1
+	uri = <value optimized out>
+	uris = (char **) 0x0
+	uris_array = <value optimized out>
+	error = (GError *) 0x0
+	options = {{long_name = 0x81a6b76 "ignal", short_name = 99 'c', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfa0fdf0, 
+    description = 0x81a6bb8 " requested dump of debug log", 
+    arg_description = 0x0}, {long_name = 0x81a6a6f "ata", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfa0fdfc, 
+    description = 0x81a6be4 "ick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x81aa758 "ialWindow", 
+    short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+    arg_data = 0xbfa0fdf8, 
+    description = 0x81a6c08 " the version of the program.", 
+    arg_description = 0x81a6a77 ""}, {long_name = 0x81a6a80 "-debug-log.txt", 
+    short_name = 110 'n', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfa0fe08, 
+    description = 0x81a6c3c "indow with the given geometry.", 
+    arg_description = 0x0}, {long_name = 0x81a6a92 "sion", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfa0fe00, 
+    description = 0x81a6c70 "for explicitly specified URIs.", 
+    arg_description = 0x0}, {long_name = 0x81a376b "CII", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfa0fe04, description = 0x81a6a9d "RY", 
+    arg_description = 0x0}, {long_name = 0x81c635d "lient == global_client", 
+    short_name = 113 'q', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfa0fe0c, description = 0x81a6ab4 "-desktop", 
+    arg_description = 0x0}, {long_name = 0x81abaa1 "entation Team", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_STRING_ARRAY, 
+    arg_data = 0xbfa0fdf4, description = 0x0, 
+    arg_description = 0x81a6ac3 " browser window."}, {long_name = 0x0, 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x0, 
+    description = 0x0, arg_description = 0x0}}

@@ -1,0 +1,86 @@
+#0  0x00007f6aaeb061c1 in iv_Decode_Chunk (s=0x0, 
+    cur=0x7f6aaebe289f "Áø\aÁþ\a\001ÈK\215\f<M\001ìH\230B\017¶\204\020", 
+    ref=0x2359b98 "@ÖF\002", width=0, height=<value optimized out>, 
+    buf1=0x1abc0 <Address 0x1abc0 out of bounds>, cb_offset=0, 
+    hdr=0x7f6aa77fe950 "Pé\177§j\177", buf2=0x0, min_width_160=0)
+    at /build/buildd/ffmpeg-debian-0.svn20090204/libavcodec/indeo3.c:360
+	bit_buf = 0 '\0'
+	bit_pos = 0
+	lv = 1
+	lv1 = <value optimized out>
+	lv2 = <value optimized out>
+	width_tbl_arr = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+	ref_vectors = (const signed char *) 0x246d640 ""
+	cur_frm_pos = (uint8_t *) 0x246d640 ""
+	ref_frm_pos = (uint8_t *) 0x22a9ad0 "Àë÷®j\177"
+	cp2 = <value optimized out>
+	cur_lp = (uint32_t *) 0x246d640
+	ref_lp = <value optimized out>
+	correction_lp = {0x7f6abf07a040, 0x7f6ab00e8400}
+	correctionloworder_lp = {0x0, 0x7f6aa77fe950}
+	correctionhighorder_lp = {0x0, 0x778bb9f33eb35302}
+	correction_type_sp = {0x0, 0x0}
+	strip_tbl = {{xpos = 140096386336272, ypos = 140096358480496, 
+    width = 1, height = 155648, split_flag = 109552, 
+    split_direction = 140096053435583, usl7 = 140096053435600}, {
+    xpos = 140096053435584, ypos = 109512, width = 523986010112, 
+    height = 36315840, split_flag = 33000000, split_direction = 0, 
+    usl7 = 140096053435904}, {xpos = 470316128908032, ypos = 35504512, 
+    width = 140096053435680, height = 0, split_flag = 140096358533648, 
+    split_direction = 36332272, usl7 = 0}, {xpos = 109512, 
+    ypos = 140096358480384, width = 109504, height = 0, 
+    split_flag = 140096441486308, split_direction = 0, usl7 = 3112134696}, {
+    xpos = 0, ypos = 35504512, width = 36315840, height = 109504, 
+    split_flag = 0, split_direction = 140096441486308, usl7 = 31115888}, {
+    xpos = 140096184310912, ypos = 140096053435900, width = 36316120, 
+    height = 0, split_flag = 1, split_direction = 36315840, 
+    usl7 = 140096384013119}, {xpos = 1, ypos = 36315840, width = 0, 
+    height = 140096438783028, split_flag = 5, 
+    split_direction = 140096053435900, usl7 = 140096053435904}, {
+    xpos = 140096053435888, ypos = 140096053435908, width = 30721168, 
+    height = 33000000, split_flag = 140096381832672, 
+    split_direction = 31115888, usl7 = 3195654993}, {xpos = 470319237352928, 
+    ypos = 140096441486308, width = 140096184308304, height = 36332256, 
+    split_flag = 30721168, split_direction = 140096381832672, 
+    usl7 = 30126848}, {xpos = 140096438919030, ypos = 36331888, 
+    width = 140096384012773, height = 36332256, split_flag = 0, 
+    split_direction = 36331888, usl7 = 36332256}, {xpos = 30126848, 
+    ypos = 30721168, width = 140096381832672, height = 140096438923859, 
+    split_flag = 140096381832672, split_direction = 1, 
+    usl7 = 140096441486308}, {xpos = 140096438915921, ypos = 36341456, 
+    width = 30721168, height = 34334016, split_flag = 30126848, 
+    split_direction = 36341312, usl7 = 1}, {xpos = 140096441486308, 
+    ypos = 140096229488690, width = 0, height = 2032, split_flag = 63600, 
+    split_direction = 36358032, usl7 = 140096358480384}, {
+    xpos = 140096355395162, ypos = 0, width = 36341312, 
+    height = 140096358533648, split_flag = 1, split_direction = 1, 
+    usl7 = 140096381830984}, {xpos = 140096441486308, ypos = 140096379337666, 
+    width = 140096441486308, height = 30746368, split_flag = 36353984, 
+    split_direction = 140096381832672, usl7 = 36341312}, {xpos = 1, 
+    ypos = 140096441486308, width = 140096439053702, 
+    height = 140096381831040, split_flag = 140096381830984, 
+    split_direction = 140096197002240, usl7 = 28742704}, {xpos = 30746368, 
+    ypos = 1, width = 140096381831040, height = 140096381830984, 
+    split_flag = 140096197002240, split_direction = 140096379343319, 
+    usl7 = 1235821997}, {xpos = 759613, ypos = 0, width = 36353984, 
+    height = 140096358540720, split_flag = 140096358533648, 
+    split_direction = 140096381831040, usl7 = 140096381830984}, {
+    xpos = 140096197002240, ypos = 140096379337844, width = 0, height = 0, 
+    split_flag = 0, split_direction = 140096053438800, 
+    usl7 = 140096448208960}, {xpos = 140096358527930, ypos = 140096053438800, 
+    width = 0, height = 0, split_flag = 0, split_direction = 0, usl7 = 0}}
+	strip = (struct ustr *) 0x1d5d680
+	i = <value optimized out>
+	j = 36346576
+	k = -508645243
+	lp1 = -1353925685
+	lp2 = <value optimized out>
+	flag1 = 36346576
+	cmd = <value optimized out>
+	blks_width = 0
+	blks_height = 0
+	region_160_width = 0
+	rle_v1 = -1484792548
+	rle_v2 = 32618
+	rle_v3 = 109504
+#1  0x0000000000000000 in ?? ()

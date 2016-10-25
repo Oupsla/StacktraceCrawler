@@ -1,0 +1,27 @@
+#0  gconf_client_remove_dir (client=0xa00000c, dirname=0x7f5f8d853f30 "/apps/nautilus-actions/configurations", err=0x0)
+    at gconf-client.c:705
+	found = <value optimized out>
+	__PRETTY_FUNCTION__ = "gconf_client_remove_dir"
+#1  0x00007f5f8d8505ea in nautilus_actions_config_gconf_reader_finalize (object=0x80d870)
+    at nautilus-actions-config-gconf-reader.c:63
+	__PRETTY_FUNCTION__ = "nautilus_actions_config_gconf_reader_finalize"
+#2  0x00007f5f9713f9a0 in IA__g_object_unref (_object=<value optimized out>)
+    at /build/buildd/glib2.0-2.16.3/gobject/gobject.c:1793
+	object = (GObject *) 0x80d870
+	old_ref = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_object_unref"
+#3  0x00007f5f8d84daa0 in nautilus_actions_instance_dispose (obj=0x80d840) at nautilus-actions.c:178
+No locals.
+#4  0x00007f5f9713f92f in IA__g_object_unref (_object=<value optimized out>)
+    at /build/buildd/glib2.0-2.16.3/gobject/gobject.c:1765
+	object = (GObject *) 0x80d840
+	old_ref = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_object_unref"
+#5  0x00000000004dbddc in ?? ()
+#6  0x00007f5f9a7501e8 in eel_debug_shut_down () at eel-debug.c:110
+	f = (ShutdownFunction *) 0x81afc0
+#7  0x000000000043ffea in ?? ()
+#8  0x00007f5f958841c4 in __libc_start_main () from /lib/libc.so.6
+#9  0x000000000042d289 in ?? ()
+#10 0x00007fffa2dbb018 in ?? ()
+#11 0x0000000000000000 in ?? ()

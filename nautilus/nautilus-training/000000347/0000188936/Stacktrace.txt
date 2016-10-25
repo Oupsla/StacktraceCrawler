@@ -1,0 +1,23 @@
+#0  0xb732c2eb in g_hash_table_foreach_remove_or_steal (hash_table=0x80fed80, 
+    func=0xb7e30b30 <remove_one_stack>, user_data=0x0, notify=1)
+    at /build/buildd/glib2.0-2.14.1/glib/ghash.c:620
+	node = (GHashNode *) 0x80fed80
+	prev = (GHashNode *) 0x0
+	i = 11
+	deleted = 0
+#1  0xb7e309bc in clear_stack_table (stack_table=0x0) at gnome-vfs-module-callback.c:389
+No locals.
+#2  0xb7e30a37 in _gnome_vfs_module_callback_clear_stacks () at gnome-vfs-module-callback.c:961
+No locals.
+#3  0xb7e27e24 in _gnome_vfs_job_execute (job=0x80a2520) at gnome-vfs-job.c:1751
+No locals.
+#4  0xb7e273ca in thread_entry_point (data=0x80a2520, user_data=0x0) at gnome-vfs-job-queue.c:65
+	complete = <value optimized out>
+#5  0xb735e0c8 in g_thread_pool_thread_proxy (data=0x8084590)
+    at /build/buildd/glib2.0-2.14.1/glib/gthreadpool.c:265
+	task = (gpointer) 0x80a2520
+	pool = (GRealThreadPool *) 0x8084590
+#6  0xb735c5af in g_thread_create_proxy (data=0x836ff00) at /build/buildd/glib2.0-2.14.1/glib/gthread.c:635
+	__PRETTY_FUNCTION__ = "g_thread_create_proxy"
+#7  0xb72f746b in start_thread () from /lib/tls/i686/cmov/libpthread.so.0
+#8  0xb727a6de in clone () from /lib/tls/i686/cmov/libc.so.6

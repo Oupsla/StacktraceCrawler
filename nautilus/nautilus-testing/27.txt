@@ -1,0 +1,107 @@
+#0  0x0811a981 in nautilus_file_set_display_name (file=0x0, 
+    display_name=0x8e90018 "øñè\b\002", 
+    edit_name=0xbfba04c8 "X\005º¿\222\020;", custom=135386282)
+    at nautilus-file.c:217
+	changed = <value optimized out>
+#1  0x0811ab2a in compare_by_display_name (file_1=0x0, file_2=0x8e90018)
+    at nautilus-file.c:3686
+	name_1 = <value optimized out>
+	name_2 = <value optimized out>
+	key_1 = 0x0
+	key_2 = <value optimized out>
+	sort_last_1 = 0
+	sort_last_2 = 0
+	compare = <value optimized out>
+#2  0x0807dce4 in selection_changed_callback (window=0x8f3a400, 
+    panel=0x8f114c8) at nautilus-information-panel.c:1124
+	selection = (GList *) 0x811d4aa
+	file = (NautilusFile *) 0x0
+	uri = 0x811ab19 "¨\215\223Í\032úÿë´\215\203Í\032úÿë¢\215¶"
+	name = <value optimized out>
+#3  0x003be94c in g_cclosure_marshal_VOID__VOID ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#4  0x003b1092 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#5  0x003c66f8 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#6  0x003c7a7d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#7  0x003c7d92 in g_signal_emit_by_name () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#8  0x080a2308 in nautilus_window_report_selection_changed (window=0x8e90018)
+    at nautilus-window-manage-views.c:110
+No locals.
+#9  0x081590a1 in nautilus_window_info_report_selection_changed (
+    window=0x8e90018) at nautilus-window-info.c:152
+	__PRETTY_FUNCTION__ = "nautilus_window_info_report_selection_changed"
+#10 0x080b14d7 in fm_directory_view_send_selection_change (view=0x8f10098)
+    at fm-directory-view.c:2270
+No locals.
+#11 0x080b6b88 in display_selection_info_idle_callback (data=0x8f10098)
+    at fm-directory-view.c:2871
+No locals.
+#12 0x0021a0f1 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#13 0x0021be78 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#14 0x0021f720 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#15 0x0021fb8f in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#16 0x0110d2d9 in gtk_marshal_VOID__POINTER_POINTER_UINT_UINT (
+    closure=0x8c08478, return_value=0x0, n_param_values=1, param_values=0x0, 
+    invocation_hint=0x0, marshal_data=0x0)
+    at /build/buildd/gtk+2.0-2.18.1/gtk/gtkmarshal.c:829
+	data1 = <value optimized out>
+	data2 = <value optimized out>
+	__PRETTY_FUNCTION__ = "gtk_marshal_VOID__POINTER_POINTER_UINT_UINT"
+#17 0x0808178c in main (argc=1, argv=0xbfba0ce4) at nautilus-main.c:595
+	kill_shell = 0
+	no_default_window = 1
+	browser_window = 0
+	no_desktop = 0
+	version = 0
+	autostart_mode = 1
+	autostart_id = <value optimized out>
+	geometry = (gchar *) 0x0
+	remaining = (gchar **) 0x0
+	perform_self_check = 0
+	application = (NautilusApplication *) 0x13f1ff4
+	context = <value optimized out>
+	file = (GFile *) 0x1
+	uri = <value optimized out>
+	uris = (char **) 0x0
+	uris_array = <value optimized out>
+	error = (GError *) 0x0
+	options = {{long_name = 0x81a6b76 "ignal", short_name = 99 'c', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfba0c00, 
+    description = 0x81a6bb8 " requested dump of debug log", 
+    arg_description = 0x0}, {long_name = 0x81a6a6f "ata", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfba0c0c, 
+    description = 0x81a6be4 "ick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x81aa758 "ialWindow", 
+    short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+    arg_data = 0xbfba0c08, 
+    description = 0x81a6c08 " the version of the program.", 
+    arg_description = 0x81a6a77 ""}, {long_name = 0x81a6a80 "-debug-log.txt", 
+    short_name = 110 'n', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfba0c18, 
+    description = 0x81a6c3c "indow with the given geometry.", 
+    arg_description = 0x0}, {long_name = 0x81a6a92 "sion", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfba0c10, 
+    description = 0x81a6c70 "for explicitly specified URIs.", 
+    arg_description = 0x0}, {long_name = 0x81a376b "CII", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfba0c14, description = 0x81a6a9d "RY", 
+    arg_description = 0x0}, {long_name = 0x81c635d "lient == global_client", 
+    short_name = 113 'q', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfba0c1c, description = 0x81a6ab4 "-desktop", 
+    arg_description = 0x0}, {long_name = 0x81abaa1 "entation Team", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_STRING_ARRAY, 
+    arg_data = 0xbfba0c04, description = 0x0, 
+    arg_description = 0x81a6ac3 " browser window."}, {long_name = 0x0, 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x0, 
+    description = 0x0, arg_description = 0x0}}

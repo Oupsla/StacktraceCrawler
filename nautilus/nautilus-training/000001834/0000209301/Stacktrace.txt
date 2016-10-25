@@ -1,0 +1,24 @@
+#0  0xb6d96ef4 in ?? () from /usr/lib/libdbus-1.so.3
+#1  0x085d2968 in ?? ()
+#2  0x088e6e60 in ?? ()
+#3  0xbf8456a8 in ?? ()
+#4  0xb6da1ff4 in ?? () from /usr/lib/libdbus-1.so.3
+#5  0x0809e0e0 in ?? ()
+#6  0x08632070 in ?? ()
+#7  0xbf845678 in ?? ()
+#8  0xb6d8dfb8 in ?? () from /usr/lib/libdbus-1.so.3
+#9  0x458b18ec in ?? ()
+#10 0xb6da1ff4 in ?? () from /usr/lib/libdbus-1.so.3
+#11 0xbf845698 in ?? ()
+#12 0xb6d76c15 in ?? () from /usr/lib/libdbus-1.so.3
+#13 0x458b18ec in ?? ()
+#14 0xb7fb7ff4 in ?? () from /lib/ld-linux.so.2
+#15 0xb69fb4b4 in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+#16 0x081cf6b8 in ?? ()
+#17 0xb6da1ff4 in ?? () from /usr/lib/libdbus-1.so.3
+#18 0x088d9b90 in ?? ()
+#19 0xbf8456b8 in ?? ()
+#20 0xb6d88d35 in ?? () from /usr/lib/libdbus-1.so.3
+#21 0x0809e0e0 in ?? ()
+#22 0x00000005 in ?? ()
+#23 0x00000000 in ?? ()

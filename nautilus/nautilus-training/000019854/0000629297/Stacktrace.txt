@@ -1,0 +1,114 @@
+#0  0x08132373 in ?? ()
+No symbol table info available.
+#1  0xb70330fc in g_cclosure_marshal_VOID__STRING ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#2  0xb70231b2 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#3  0xb703bde5 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#4  0xb703d45c in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#5  0xb703dbc2 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#6  0xb73d9152 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#7  0xb703271c in g_cclosure_marshal_VOID__VOID ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#8  0xb70231b2 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#9  0xb703bde5 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#10 0xb703d45c in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#11 0xb703d745 in g_signal_emit_by_name () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#12 0xb7442a07 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#13 0xb703271c in g_cclosure_marshal_VOID__VOID ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#14 0xb70231b2 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#15 0xb703bde5 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#16 0xb703d45c in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#17 0xb703dbc2 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#18 0xb170017b in ?? () from /usr/lib/gtk-2.0/2.10.0/immodules/im-ibus.so
+No symbol table info available.
+#19 0xb703271c in g_cclosure_marshal_VOID__VOID ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#20 0xb70231b2 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#21 0xb703bde5 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#22 0xb703d45c in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#23 0xb703dbc2 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#24 0xb16cea7d in ?? () from /usr/lib/libibus.so.2
+No symbol table info available.
+#25 0xb16dcd74 in ibus_marshal_BOOLEAN__POINTER () from /usr/lib/libibus.so.2
+No symbol table info available.
+#26 0xb7021827 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#27 0xb70231b2 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#28 0xb703ba36 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#29 0xb703d2db in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#30 0xb703dbc2 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#31 0xb16c330d in ibus_proxy_handle_signal () from /usr/lib/libibus.so.2
+No symbol table info available.
+#32 0xb16c3b34 in ?? () from /usr/lib/libibus.so.2
+No symbol table info available.
+#33 0xb16dcd74 in ibus_marshal_BOOLEAN__POINTER () from /usr/lib/libibus.so.2
+No symbol table info available.
+#34 0xb70231b2 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#35 0xb703bde5 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#36 0xb703d2db in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#37 0xb703dbc2 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#38 0xb16c1b98 in ?? () from /usr/lib/libibus.so.2
+No symbol table info available.
+#39 0xb16dcd74 in ibus_marshal_BOOLEAN__POINTER () from /usr/lib/libibus.so.2
+No symbol table info available.
+#40 0xb7021827 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#41 0xb70231b2 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#42 0xb703ba36 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#43 0xb703d2db in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#44 0xb703dbc2 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#45 0xb16c01d4 in ?? () from /usr/lib/libibus.so.2
+No symbol table info available.
+#46 0xb689c358 in dbus_connection_dispatch () from /lib/libdbus-1.so.3
+No symbol table info available.
+#47 0xb16be31d in ?? () from /usr/lib/libibus.so.2
+No symbol table info available.
+#48 0xb6f4d9b5 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#49 0xb6f517c8 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#50 0xb6f51d07 in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#51 0xb745d749 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#52 0x0807f667 in ?? ()
+No symbol table info available.
+#53 0xb6a1fce7 in __libc_start_main () from /lib/libc.so.6
+No symbol table info available.
+#54 0x0806a721 in ?? ()
+No symbol table info available.

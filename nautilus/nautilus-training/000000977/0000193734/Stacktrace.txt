@@ -1,0 +1,6 @@
+#0  0xb73e978c in ?? () from /usr/lib/libgobject-2.0.so.0
+#1  0x00000050 in ?? ()
+#2  0x00000122 in ?? ()
+#3  0xb73fde84 in ?? () from /usr/lib/libgobject-2.0.so.0
+#4  0xb73fd680 in ?? () from /usr/lib/libgobject-2.0.so.0
+#5  0x00000000 in ?? ()

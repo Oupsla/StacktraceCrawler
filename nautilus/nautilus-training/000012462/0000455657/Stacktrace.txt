@@ -1,0 +1,81 @@
+#0  0x00635289 in g_type_check_instance () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#1  0x00634655 in g_signal_handlers_disconnect_matched ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#2  0x080d6db8 in remove_pending (startup_data=0x2, 
+    cancel_call_when_ready=<value optimized out>, cancel_timed_wait=1, 
+    cancel_destroy_handler=1) at fm-properties-window.c:5322
+No locals.
+#3  0x080dfc75 in is_directory_ready_callback (file=0x985ce10, data=0x9289668)
+    at fm-properties-window.c:5349
+	new_window = (FMPropertiesWindow *) 0x9547a60
+#4  0x080fa655 in ready_callback_call (directory=0x9287030, 
+    callback=<value optimized out>) at nautilus-directory-async.c:1252
+	file_list = <value optimized out>
+#5  0x080feb84 in call_ready_callbacks_at_idle (callback_data=0x9287030)
+    at nautilus-directory-async.c:1835
+	directory = (NautilusDirectory *) 0x9287030
+	node = <value optimized out>
+	next = <value optimized out>
+	callback = (ReadyCallback *) 0x92b67c8
+#6  0x004e60f1 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#7  0x004e7e78 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#8  0x004eb720 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#9  0x004ebb8f in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#10 0x0103c419 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkmain.c:1218
+	tmp_list = (GList *) 0x0
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0x1
+	loop = (GMainLoop *) 0x93e2380
+#11 0x080817ef in main (argc=1, argv=0xbf94d444) at nautilus-main.c:588
+	kill_shell = 0
+	no_default_window = 1
+	browser_window = 0
+	no_desktop = 0
+	version = 0
+	autostart_mode = 1
+	autostart_id = <value optimized out>
+	geometry = (gchar *) 0x0
+	remaining = (gchar **) 0x0
+	perform_self_check = 0
+	application = (NautilusApplication *) 0x925e000
+	context = <value optimized out>
+	file = (GFile *) 0x1
+	uri = <value optimized out>
+	uris = (char **) 0x0
+	uris_array = <value optimized out>
+	error = (GError *) 0x0
+	options = {{long_name = 0x81a6c16 "check", short_name = 99 'c', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbf94d360, 
+    description = 0x81a6c58 "Perform a quick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x81a6b0f "version", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbf94d36c, 
+    description = 0x81a6c84 "Show the version of the program.", 
+    arg_description = 0x0}, {long_name = 0x81aa7f8 "geometry", 
+    short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+    arg_data = 0xbf94d368, 
+    description = 0x81a6ca8 "Create the initial window with the given geometry.", arg_description = 0x81a6b17 "GEOMETRY"}, {
+    long_name = 0x81a6b20 "no-default-window", short_name = 110 'n', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbf94d378, 
+    description = 0x81a6cdc "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {long_name = 0x81a6b32 "no-desktop", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbf94d370, 
+    description = 0x81a6d10 "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {
+    long_name = 0x81a380b "browser", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbf94d374, 
+    description = 0x81a6b3d "open a browser window.", arg_description = 0x0}, 
+  {long_name = 0x81c63fd "quit", short_name = 113 'q', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbf94d37c, 
+    description = 0x81a6b54 "Quit Nautilus.", arg_description = 0x0}, {
+    long_name = 0x81abb41 "", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0xbf94d364, 
+    description = 0x0, arg_description = 0x81a6b63 "[URI...]"}, {
+    long_name = 0x0, short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x0, description = 0x0, arg_description = 0x0}}

@@ -1,0 +1,72 @@
+#0  magazine_cache_push_magazine (ix=1, magazine_chunks=<value optimized out>, count=51)
+    at /build/buildd/glib2.0-2.14.1/glib/gslice.c:470
+	current = (ChunkLink *) 0x82038d0
+	next = <value optimized out>
+	prev = <value optimized out>
+#1  0x4e73b305 in thread_memory_magazine2_unload (tmem=<value optimized out>, ix=0)
+    at /build/buildd/glib2.0-2.14.1/glib/gslice.c:744
+	mag = (Magazine *) 0x81842d8
+#2  0x4e73c1ee in IA__g_slice_free1 (mem_size=12, mem_block=0x81e0100)
+    at /build/buildd/glib2.0-2.14.1/glib/gslice.c:868
+	tmem = (ThreadMemory *) 0x8183ed0
+	ix = 1
+	chunk_size = 16
+	acat = <value optimized out>
+#3  0x4e71e350 in IA__g_list_remove (list=0x0, data=0x81e05b0)
+    at /build/buildd/glib2.0-2.14.1/glib/glist.c:231
+	tmp = (GList *) 0x0
+#4  0xb7d95afe in ip_stop_watching (sub=0x81e05b0) at inotify-path.c:219
+	dir = <value optimized out>
+#5  0xb7d96407 in ih_sub_cancel (sub=0x81e05b0) at inotify-helper.c:137
+No locals.
+#6  0xb7d90059 in inotify_monitor_cancel (method=0xb7d98820, method_handle=0x81e05b0) at file-method.c:2683
+No locals.
+#7  0xb7d8fd0e in do_monitor_cancel (method=0xb7d98820, method_handle=0x0) at file-method.c:2740
+No locals.
+#8  0x415efab7 in _gnome_vfs_monitor_do_cancel (handle=0x81dfdc8) at gnome-vfs-monitor.c:192
+	result = <value optimized out>
+#9  0x415f0391 in gnome_vfs_monitor_cancel (handle=0x0) at gnome-vfs-ops.c:837
+	__PRETTY_FUNCTION__ = "gnome_vfs_monitor_cancel"
+#10 0x080feb78 in destroy_xdg_dir_cache () at nautilus-file-utilities.c:382
+No locals.
+#11 0x411f893c in eel_debug_shut_down () at eel-debug.c:110
+	f = (ShutdownFunction *) 0x81e04f8
+#12 0x0807f123 in main (argc=4, argv=0xbfef5a54) at nautilus-main.c:572
+	kill_shell = 0
+	restart_shell = 0
+	no_default_window = 1
+	browser_window = 0
+	no_desktop = 0
+	startup_id = <value optimized out>
+	startup_id_copy = 0x81cda20 "X\233L\bHÕ\"\bion/zip"
+	session_to_load = 0x0
+	geometry = (gchar *) 0x0
+	remaining = (const gchar **) 0x0
+	perform_self_check = 0
+	context = <value optimized out>
+	application = (NautilusApplication *) 0x81cbee8
+	program = (GnomeProgram *) 0x818dc10
+	options = {{long_name = 0x8147676 "check", short_name = 99 'c', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfef5920, description = 0x81476c4 "Perform a quick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x814a744 "geometry", short_name = 103 'g', flags = 0, 
+    arg = G_OPTION_ARG_STRING, arg_data = 0xbfef5928, 
+    description = 0x81476f0 "Create the initial window with the given geometry.", 
+    arg_description = 0x81474e5 "GEOMETRY"}, {long_name = 0x81474ee "no-default-window", 
+    short_name = 110 'n', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfef5938, 
+    description = 0x8147724 "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {
+    long_name = 0x8147500 "no-desktop", short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfef5930, 
+    description = 0x8147758 "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {long_name = 0x81497fb "browser", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbfef5934, description = 0x814750b "open a browser window.", 
+    arg_description = 0x0}, {long_name = 0x814767e "quit", short_name = 113 'q', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbfef5940, description = 0x8147522 "Quit Nautilus.", 
+    arg_description = 0x0}, {long_name = 0x8147685 "restart", short_name = 0 '\0', flags = 1, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbfef593c, description = 0x8147531 "Restart Nautilus.", 
+    arg_description = 0x0}, {long_name = 0x814ba5c "", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0xbfef5924, description = 0x0, 
+    arg_description = 0x8147543 "[URI...]"}, {long_name = 0x8143bdc "load-session", short_name = 108 'l', 
+    flags = 0, arg = G_OPTION_ARG_STRING, arg_data = 0xbfef592c, 
+    description = 0x81477ac "Load a saved session from the specified file. Implies \"--no-default-window\".", arg_description = 0x814754c "FILENAME"}, {long_name = 0x0, short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0x0, description = 0x0, arg_description = 0x0}}
+#13 0x4e44e050 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+#14 0x08069441 in _start ()

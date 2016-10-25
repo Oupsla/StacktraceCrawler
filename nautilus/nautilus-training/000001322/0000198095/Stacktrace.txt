@@ -1,0 +1,11 @@
+#0  0x0808744b in ?? ()
+#1  0x0815033a in ?? ()
+#2  0x403aca0c in ?? ()
+#3  0x08322b08 in ?? ()
+#4  0xb76ba680 in ?? () from /usr/lib/libgobject-2.0.so.0
+#5  0x08087420 in ?? ()
+#6  0x08595c08 in ?? ()
+#7  0xbf8e7628 in ?? ()
+#8  0xb76961a5 in g_cclosure_marshal_VOID__BOOLEAN ()
+   from /usr/lib/libgobject-2.0.so.0
+Backtrace stopped: frame did not save the PC

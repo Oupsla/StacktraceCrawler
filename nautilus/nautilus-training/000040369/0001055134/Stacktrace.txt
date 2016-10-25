@@ -1,0 +1,6 @@
+#0  g_type_check_instance_cast (type_instance=0x7f65ed217640, type_instance@entry=<error reading variable: Cannot access memory at address 0x7fff1fde18b8>, iface_type=140075745324288, iface_type@entry=<error reading variable: Cannot access memory at address 0x7fff1fde18b8>) at /build/buildd/glib2.0-2.33.14/./gobject/gtype.c:3997
+        node = 0x7fff1fde1a90
+        iface = 0x0
+        is_instantiatable = <optimized out>
+        check = <optimized out>
+Cannot access memory at address 0x7fff1fde18b8

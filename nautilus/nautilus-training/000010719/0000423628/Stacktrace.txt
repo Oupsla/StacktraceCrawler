@@ -1,0 +1,158 @@
+#0  malloc_consolidate (av=<value optimized out>) at malloc.c:5089
+	fb = (mfastbinptr *) 0x6a063a8
+	maxfb = (mfastbinptr *) 0x6a063cc
+	p = (mchunkptr) 0x6a063d0
+	nextp = (mchunkptr) 0xa066b60
+	unsorted_bin = (mchunkptr) 0x6a063d0
+	first_unsorted = <value optimized out>
+	nextchunk = (mchunkptr) 0x10a6cf30
+	size = 168192864
+	nextsize = <value optimized out>
+	prevsize = <value optimized out>
+	bck = <value optimized out>
+	fwd = <value optimized out>
+	__PRETTY_FUNCTION__ = "malloc_consolidate"
+#1  0x0691e552 in _int_malloc (av=<value optimized out>, 
+    bytes=<value optimized out>) at malloc.c:4338
+	nb = 6152
+	idx = 167913968
+	bin = <value optimized out>
+	victim = <value optimized out>
+	size = <value optimized out>
+	victim_index = <value optimized out>
+	remainder = <value optimized out>
+	remainder_size = <value optimized out>
+	block = <value optimized out>
+	bit = <value optimized out>
+	map = <value optimized out>
+	fwd = <value optimized out>
+	bck = <value optimized out>
+	__PRETTY_FUNCTION__ = "_int_malloc"
+#2  0x069213b9 in _int_realloc (av=<value optimized out>, oldp=0xa0219e8, 
+    oldsize=4104, nb=6152) at malloc.c:5224
+	nextsize = <value optimized out>
+	newp = <value optimized out>
+	newsize = <value optimized out>
+	newmem = (void *) 0x1008
+	next = (mchunkptr) 0xa0229f0
+	remainder = <value optimized out>
+	remainder_size = <value optimized out>
+	bck = <value optimized out>
+	fwd = <value optimized out>
+	copysize = <value optimized out>
+	ncopies = 3058908760
+	s = <value optimized out>
+	errstr = <value optimized out>
+	__PRETTY_FUNCTION__ = "_int_realloc"
+#3  0x069218cd in *__GI___libc_realloc (oldmem=0xa0219f0, bytes=6144)
+    at malloc.c:3799
+	ar_ptr = (mstate) 0x6a063a0
+	nb = 6152
+	newp = <value optimized out>
+	oldp = (const mchunkptr) 0xa0219e8
+	oldsize = 4104
+	__PRETTY_FUNCTION__ = "__libc_realloc"
+#4  0x0049b10f in IA__g_realloc (mem=0xa0219f0, n_bytes=6144)
+    at /build/buildd/glib2.0-2.21.5/glib/gmem.c:170
+No locals.
+#5  0x0047c2fc in IA__g_quark_from_string (
+    string=0xb6534820 "application/x-ogm-audio")
+    at /build/buildd/glib2.0-2.21.5/glib/gdataset.c:683
+	quark = 1024
+#6  0x027e904d in gst_structure_empty_new (
+    name=0xb6534820 "application/x-ogm-audio") at gststructure.c:194
+	__PRETTY_FUNCTION__ = "gst_structure_empty_new"
+#7  0x027ea651 in gst_structure_from_string (
+    string=0xb6534800 "application/x-ogm-audio", end=0xbfbc3cbc)
+    at gststructure.c:2037
+	name = 0xb6534820 "application/x-ogm-audio"
+	copy = 0xb6534820 "application/x-ogm-audio"
+	w = 0xb6534837 ""
+	r = 0xb6534837 ""
+	save = 0 '\0'
+	structure = (GstStructure *) 0x4
+	field = {name = 5367688, value = {g_type = 3, data = {{
+        v_int = 1146135, v_uint = 1146135, v_long = 1146135, 
+        v_ulong = 1146135, v_int64 = 477469469893033239, 
+        v_uint64 = 477469469893033239, v_float = 1.60607722e-39, 
+        v_double = 9.2021571008385021e-277, v_pointer = 0x117d17}, {
+        v_int = -1236271088, v_uint = 3058696208, v_long = -1236271088, 
+        v_ulong = 3058696208, v_int64 = 181375389637017616, 
+        v_uint64 = 181375389637017616, v_float = -3.09944517e-06, 
+        v_double = 1.5577158027509965e-296, v_pointer = 0xb6500010}}}}
+	__PRETTY_FUNCTION__ = "gst_structure_from_string"
+#8  0x027a7c07 in gst_caps_from_string_inplace (caps=<value optimized out>, 
+    string=0x6a063d0 "ø5\n\n`k\006\n`k\006\n`k\006\nè1\n\nè1\n\nðb\006\nðb\006\nèc \006èc \006\220®\006\n\220®\006\nXf\006\nXf\006\n") at gstcaps.c:1868
+	structure = <value optimized out>
+	s = <value optimized out>
+	__PRETTY_FUNCTION__ = "gst_caps_from_string_inplace"
+#9  0x027a8386 in gst_caps_from_string (
+    string=0xb6534800 "application/x-ogm-audio") at gstcaps.c:1906
+	caps = (GstCaps *) 0xa064980
+#10 0x028073f2 in gst_registry_binary_load_plugin (
+    registry=<value optimized out>, in=0xbfbc3e08, 
+    end=0xb66edcee <Address 0xb66edcee out of bounds>)
+    at gstregistrybinary.c:1008
+	plugin = (GstPlugin *) 0xb651ebf8
+	i = <value optimized out>
+	n = 104
+	__PRETTY_FUNCTION__ = "gst_registry_binary_load_plugin"
+#11 0x028077fd in gst_registry_binary_read_cache (registry=0x9fc8c80, 
+    location=0xa02b628 "/root/.gstreamer-0.10/registry.i486.bin")
+    at gstregistrybinary.c:1296
+	mapped = (GMappedFile *) 0xa01adb0
+	contents = (gchar *) 0xb666c000 <Address 0xb666c000 out of bounds>
+	in = (gchar *) 0xb66c6cdc <Address 0xb66c6cdc out of bounds>
+	size = 531694
+	err = (GError *) 0x0
+	res = <value optimized out>
+	timer = (GTimer *) 0xa02b670
+	seconds = 1.0705882352941176
+	__PRETTY_FUNCTION__ = "gst_registry_binary_read_cache"
+#12 0x02793d03 in ensure_current_registry (error=<value optimized out>)
+    at gst.c:938
+	registry_file = <value optimized out>
+	default_registry = (GstRegistry *) 0x9fc8c80
+	ret = <value optimized out>
+	have_cache = <value optimized out>
+	__PRETTY_FUNCTION__ = "ensure_current_registry"
+#13 0x02795d25 in init_post (context=0xa01c340, group=0xa01d6a8, data=0x0, 
+    error=0x0) at gst.c:1128
+	__PRETTY_FUNCTION__ = "init_post"
+#14 0x004a1a70 in IA__g_option_context_parse (context=0xa01c340, argc=0x0, 
+    argv=0x0, error=0x0) at /build/buildd/glib2.0-2.21.5/glib/goption.c:1947
+	group = (GOptionGroup *) 0xa066b60
+	i = 167887680
+	j = <value optimized out>
+	k = <value optimized out>
+	list = (GList *) 0xa01b010
+#15 0x0279536e in gst_init_check (argc=0x0, argv=0x0, err=0x0) at gst.c:452
+	group = <value optimized out>
+	ctx = (GOptionContext *) 0xa01c340
+	res = <value optimized out>
+	__PRETTY_FUNCTION__ = "gst_init_check"
+#16 0x0375992e in brasero_burn_library_start (argc=0x0, argv=0x0)
+    at burn-basics.c:232
+	client = <value optimized out>
+#17 0x051542ef in nautilus_module_initialize (module=0xa003460)
+    at nautilus-burn-extension.c:933
+No locals.
+#18 0x08145eae in ?? ()
+#19 0x008bf8c0 in IA__g_type_module_use (module=0xa003460)
+    at /build/buildd/glib2.0-2.21.5/gobject/gtypemodule.c:257
+	tmp_list = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_type_module_use"
+#20 0x08145fea in ?? ()
+#21 0x0806f9bf in ?? ()
+#22 0x080814c8 in ?? ()
+#23 0x068c7b56 in __libc_start_main (
+    main=0x8080df0 <g_themed_icon_append_name@plt+85740>, argc=1, 
+    ubp_av=0xbfbc4414, init=0x81a2d40, fini=0x81a2d30, 
+    rtld_fini=0x3a1d30 <_dl_fini>, stack_end=0xbfbc440c) at libc-start.c:220
+	result = <value optimized out>
+	unwind_buf = {cancel_jmp_buf = {{jmp_buf = {111169524, 0, 0, 
+        -1078180888, 163248293, 1774858199}, mask_was_saved = 0}}, priv = {
+    pad = {0x0, 0x0, 0x1, 0x806bf20}, data = {prev = 0x0, cleanup = 0x0, 
+      canceltype = 1}}}
+	not_first_call = <value optimized out>
+#24 0x0806bf41 in ?? ()

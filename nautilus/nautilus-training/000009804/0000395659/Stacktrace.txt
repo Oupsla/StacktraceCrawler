@@ -1,0 +1,597 @@
+#0  cell_view_is_sensitive (cell_view=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.17.2/gtk/gtkcombobox.c:1703
+	cells = (GList *) 0xffffffff8c0364a0
+	list = (GList *) 0xffffffff8c0364a0
+	sensitive = 0
+#1  0x00007f7fac803fdb in update_menu_sensitivity (combo_box=0x17f1450, 
+    menu=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.17.2/gtk/gtkcombobox.c:1781
+	priv = (GtkComboBoxPrivate *) 0x17f14d0
+	children = (GList *) 0x7f7f8c0532e0
+	child = (GList *) 0x7f7f8c0531a0
+	item = (GtkWidget *) 0x17e9390
+	submenu = <value optimized out>
+	sensitive = <value optimized out>
+#2  0x00007f7fac8040ae in gtk_combo_box_menu_popup (combo_box=0x7f7f8c0364a0, 
+    button=1, activate_time=0)
+    at /build/buildd/gtk+2.0-2.17.2/gtk/gtkcombobox.c:1808
+	priv = (GtkComboBoxPrivate *) 0x17f14d0
+	path = <value optimized out>
+	active_item = <value optimized out>
+	requisition = {width = 0, height = 0}
+	width = <value optimized out>
+#3  0x00007f7fac806069 in gtk_combo_box_menu_button_press (
+    widget=<value optimized out>, event=0x29db660, 
+    user_data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.17.2/gtk/gtkcombobox.c:3149
+	combo_box = (GtkComboBox *) 0x17f1450
+	priv = (GtkComboBoxPrivate *) 0x17f14d0
+#4  0x00007f7fac8a7a03 in _gtk_marshal_BOOLEAN__BOXED (closure=0x26c5270, 
+    return_value=0x7f7fb418dba0, n_param_values=<value optimized out>, 
+    param_values=0x274c350, invocation_hint=<value optimized out>, 
+    marshal_data=0x7f7fac805fc0)
+    at /build/buildd/gtk+2.0-2.17.2/gtk/gtkmarshalers.c:84
+	data1 = (gpointer) 0x17d6ba0
+	data2 = (gpointer) 0x17f1450
+	v_return = <value optimized out>
+	__PRETTY_FUNCTION__ = "_gtk_marshal_BOOLEAN__BOXED"
+#5  0x00007f7fb4a9462e in IA__g_closure_invoke (closure=0x26c5270, 
+    return_value=0x7f7fb418dba0, n_param_values=2, param_values=0x274c350, 
+    invocation_hint=0x7f7fb418db60)
+    at /build/buildd/glib2.0-2.21.2/gobject/gclosure.c:767
+	marshal = (GClosureMarshal) 0x7f7f8c0364a0
+	marshal_data = (gpointer) 0x1
+	__PRETTY_FUNCTION__ = "IA__g_closure_invoke"
+#6  0x00007f7fb4aaa836 in signal_emit_unlocked_R (node=0x17a8740, 
+    detail=<value optimized out>, instance=<value optimized out>, 
+    emission_return=<value optimized out>, 
+    instance_and_params=<value optimized out>)
+    at /build/buildd/glib2.0-2.21.2/gobject/gsignal.c:3247
+	tmp = (Handler *) 0x7f7fbb8887c0
+	handler = (Handler *) 0x29f4b20
+	accumulator = (SignalAccumulator *) 0x17a8b00
+	emission = {next = 0x0, instance = 0x17d6ba0, ihint = {
+    signal_id = 36, detail = 0, run_type = G_SIGNAL_RUN_FIRST}, 
+  state = EMISSION_RUN, chain_type = 4}
+	class_closure = (GClosure *) 0x17a86d0
+	handler_list = (Handler *) 0x29f4b20
+	return_accu = <value optimized out>
+	accu = {g_type = 20, data = {{v_int = 0, v_uint = 0, v_long = 0, 
+      v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, 
+      v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, 
+      v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+	signal_id = 36
+	max_sequential_handler_number = <value optimized out>
+	return_value_altered = 0
+#7  0x00007f7fb4aabb3e in IA__g_signal_emit_valist (instance=0x17d6ba0, 
+    signal_id=<value optimized out>, detail=0, var_args=0x7f7fb418dd50)
+    at /build/buildd/glib2.0-2.21.2/gobject/gsignal.c:2990
+	return_value = {g_type = 20, data = {{v_int = 0, v_uint = 0, 
+      v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, 
+      v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, 
+      v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, 
+      v_pointer = 0x0}}}
+	error = <value optimized out>
+	signal_return_type = 20
+	param_values = <value optimized out>
+	node = (SignalNode *) 0x17a8740
+	i = <value optimized out>
+	n_params = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_signal_emit_valist"
+#8  0x00007f7fb4aac203 in IA__g_signal_emit (instance=0x7f7f8c0364a0, 
+    signal_id=3021544048, detail=0)
+    at /build/buildd/glib2.0-2.21.2/gobject/gsignal.c:3037
+	var_args = {{gp_offset = 32, fp_offset = 48, 
+    overflow_arg_area = 0x7f7fb418de30, reg_save_area = 0x7f7fb418dd70}}
+#9  0x00007f7fac9c6bdf in gtk_widget_event_internal (widget=0x17d6ba0, 
+    event=0x29db660) at /build/buildd/gtk+2.0-2.17.2/gtk/gtkwidget.c:4761
+	signal_num = <value optimized out>
+	return_val = 0
+#10 0x00007f7fac89e9d4 in IA__gtk_propagate_event (widget=0x17d6ba0, 
+    event=0x29db660) at /build/buildd/gtk+2.0-2.17.2/gtk/gtkmain.c:2396
+	tmp = (GtkWidget *) 0x17d6ba0
+	handled_event = 25780256
+	__PRETTY_FUNCTION__ = "IA__gtk_propagate_event"
+#11 0x00007f7fac89faf3 in IA__gtk_main_do_event (event=0x29db660)
+    at /build/buildd/gtk+2.0-2.17.2/gtk/gtkmain.c:1601
+	event_widget = <value optimized out>
+	grab_widget = (GtkWidget *) 0x17d6ba0
+	window_group = (GtkWindowGroup *) 0x1896020
+	rewritten_event = (GdkEvent *) 0x0
+	tmp_list = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_main_do_event"
+#12 0x00007f7fac4f590c in gdk_event_dispatch (source=<value optimized out>, 
+    callback=<value optimized out>, user_data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.17.2/gdk/x11/gdkevents-x11.c:2367
+	display = <value optimized out>
+	event = <value optimized out>
+#13 0x00007f7fb43d78fe in IA__g_main_context_dispatch (context=0x16ef520)
+    at /build/buildd/glib2.0-2.21.2/glib/gmain.c:1814
+No locals.
+#14 0x00007f7fb43dafd8 in g_main_context_iterate (context=0x16ef520, 
+    block=<value optimized out>, dispatch=<value optimized out>, 
+    self=<value optimized out>)
+    at /build/buildd/glib2.0-2.21.2/glib/gmain.c:2445
+	max_priority = 0
+	timeout = 0
+	some_ready = 1
+	nfds = 12
+	allocated_nfds = -1270974096
+	fds = <value optimized out>
+	__PRETTY_FUNCTION__ = "g_main_context_iterate"
+#15 0x00007f7fb43db435 in IA__g_main_loop_run (loop=0x26c3e40)
+    at /build/buildd/glib2.0-2.21.2/glib/gmain.c:2653
+	self = (GThread *) 0x16eb720
+	__PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#16 0x00007f7fac81699b in IA__gtk_dialog_run (dialog=0x17f12f0)
+    at /build/buildd/gtk+2.0-2.17.2/gtk/gtkdialog.c:1090
+	ri = {dialog = 0x0, response_id = -1, loop = 0x26c3e40, destroyed = 0}
+	was_modal = 0
+	response_handler = 2364
+	unmap_handler = 2365
+	destroy_handler = 2367
+	delete_handler = 2366
+	__PRETTY_FUNCTION__ = "IA__gtk_dialog_run"
+#17 0x00007f7fb64fa4fa in QGtk::openFilenames (parent=0x0, 
+    caption=<value optimized out>, dir=<value optimized out>, 
+    filter=<value optimized out>, selectedFilter=0x0, options={i = 0})
+    at styles/gtksymbols.cpp:848
+	gtkFileChooser = (GtkWidget *) 0x17f12f0
+	modal_widget = {<QObject> = {_vptr.QObject = 0x7f7fb6baa6d0, 
+    static staticMetaObject = {d = {superdata = 0x0, 
+        stringdata = 0x7f7fb5dcc7a0 "QObject", data = 0x7f7fb5dcc840, 
+        extradata = 0x7f7fb6020040}}, d_ptr = 0x26cd210, 
+    static staticQtMetaObject = {d = {superdata = 0x0, 
+        stringdata = 0x7f7fb5dd6020 "Qt", data = 0x7f7fb5dd8f00, 
+        extradata = 0x0}}}, <QPaintDevice> = {
+    _vptr.QPaintDevice = 0x7f7fb6baa890, painters = 0}, 
+  static staticMetaObject = {d = {superdata = 0x7f7fb6020020, 
+      stringdata = 0x7f7fb67d8be0 "QWidget", data = 0x7f7fb67d9120, 
+      extradata = 0x0}}, data = 0x26cd298}
+	filenames = $2 = -99
+.
+Thread 10 (process 6566):
+#0  clock_nanosleep (clock_id=<value optimized out>, flags=0, 
+    req=0x7f7fb74f1f70, rem=0x7f7fb74f1f70)
+    at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:51
+	oldstate = 0
+	r = <value optimized out>
+#1  0x00007f7fbb322872 in msleep (delay=<value optimized out>)
+    at misc/mtime.c:406
+	d = {quot = 30, rem = 0}
+	ts = {tv_sec = 13, tv_nsec = 488573193}
+	val = <value optimized out>
+#2  0x00007f7fb8772351 in Run (p_intf=0x16cd8c8) at screensaver.c:217
+	canc = 0
+#3  0x00007f7fbb2cf374 in RunInterface (p_this=0x16cd8c8)
+    at interface/interface.c:223
+	val = {i_int = -1154119468, b_bool = 212, f_float = -0.00276999641, 
+  psz_string = 0x7f7fbb3588d4 "gestures", p_address = 0x7f7fbb3588d4, 
+  p_object = 0x7f7fbb3588d4, p_list = 0x7f7fbb3588d4, 
+  i_time = 140186578421972, var = {psz_name = 0x7f7fbb3588d4 "gestures", 
+    i_object_id = 0}, padding = {a = -44 '?', b = -120 '\210', c = 53 '5', 
+    d = -69 '?', e = 127 '\177', f = 127 '\177', g = 0 '\0', h = 0 '\0'}}
+	text = {i_int = -1143112581, b_bool = 123, f_float = -0.00675922399, 
+  psz_string = 0x7f7fbbdd7c7b <Address 0x7f7fbbdd7c7b out of bounds>, 
+  p_address = 0x7f7fbbdd7c7b, p_object = 0x7f7fbbdd7c7b, 
+  p_list = 0x7f7fbbdd7c7b, i_time = 140186589428859, var = {
+    psz_name = 0x7f7fbbdd7c7b <Address 0x7f7fbbdd7c7b out of bounds>, 
+    i_object_id = -1146086912}, padding = {a = 123 '{', b = 124 '|', 
+    c = -35 '?', d = -69 '?', e = 127 '\177', f = 127 '\177', g = 0 '\0', 
+    h = 0 '\0'}}
+	canc = 0
+#4  0x00007f7fbb32af04 in thread_entry (data=<value optimized out>)
+    at misc/threads.c:1061
+	obj = (vlc_object_t *) 0x16cd8c8
+	func = (void *(*)(vlc_object_t *)) 0x7f7fbb2cf1e0 <RunInterface>
+#5  0x00007f7fbb57f3ba in start_thread () from /lib/libpthread.so.0
+#6  0x00007f7fbb87a1bd in clone ()
+    at ../sysdeps/unix/sysv/linux/x86_64/clone.S:112
+No locals.
+#7  0x0000000000000000 in ?? ()
+.
+Thread 9 (process 6565):
+#0  clock_nanosleep (clock_id=<value optimized out>, flags=0, 
+    req=0x7f7fb8a73f10, rem=0x7f7fb8a73f10)
+    at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:51
+	oldstate = 0
+	r = <value optimized out>
+#1  0x00007f7fbb322872 in msleep (delay=<value optimized out>)
+    at misc/mtime.c:406
+	d = {quot = 30, rem = 0}
+	ts = {tv_sec = 13, tv_nsec = 327755622}
+	val = <value optimized out>
+#2  0x00007f7fb8a764fb in Run (p_intf=<value optimized out>) at inhibit.c:245
+	p_input = (input_thread_t *) 0x16e1640
+	__cancel_buf = {__cancel_jmp_buf = {{__cancel_jmp_buf = {23919288, 
+        -2108155013173422819, 140186535542976, 0, 140186590916672, 
+        140734084090736, -2108156072337943267, -2108156073591253731}, 
+      __mask_was_saved = 0}}, __pad = {0x7f7fb8a741b0, 0x0, 0x16cfa38, 
+    0x2016cfa10}}
+	not_first_call = <value optimized out>
+	canc = 0
+	p_playlist = (playlist_t *) 0x16b5298
+#3  0x00007f7fbb2cf374 in RunInterface (p_this=0x16cfab8)
+    at interface/interface.c:223
+	val = {i_int = -1154119468, b_bool = 212, f_float = -0.00276999641, 
+  psz_string = 0x7f7fbb3588d4 "gestures", p_address = 0x7f7fbb3588d4, 
+  p_object = 0x7f7fbb3588d4, p_list = 0x7f7fbb3588d4, 
+  i_time = 140186578421972, var = {psz_name = 0x7f7fbb3588d4 "gestures", 
+    i_object_id = 0}, padding = {a = -44 '?', b = -120 '\210', c = 53 '5', 
+    d = -69 '?', e = 127 '\177', f = 127 '\177', g = 0 '\0', h = 0 '\0'}}
+	text = {i_int = -1143112581, b_bool = 123, f_float = -0.00675922399, 
+  psz_string = 0x7f7fbbdd7c7b <Address 0x7f7fbbdd7c7b out of bounds>, 
+  p_address = 0x7f7fbbdd7c7b, p_object = 0x7f7fbbdd7c7b, 
+  p_list = 0x7f7fbbdd7c7b, i_time = 140186589428859, var = {
+    psz_name = 0x7f7fbbdd7c7b <Address 0x7f7fbbdd7c7b out of bounds>, 
+    i_object_id = -1146086912}, padding = {a = 123 '{', b = 124 '|', 
+    c = -35 '?', d = -69 '?', e = 127 '\177', f = 127 '\177', g = 0 '\0', 
+    h = 0 '\0'}}
+	canc = 0
+#4  0x00007f7fbb32af04 in thread_entry (data=<value optimized out>)
+    at misc/threads.c:1061
+	obj = (vlc_object_t *) 0x16cfab8
+	func = (void *(*)(vlc_object_t *)) 0x7f7fbb2cf1e0 <RunInterface>
+#5  0x00007f7fbb57f3ba in start_thread () from /lib/libpthread.so.0
+#6  0x00007f7fbb87a1bd in clone ()
+    at ../sysdeps/unix/sysv/linux/x86_64/clone.S:112
+No locals.
+#7  0x0000000000000000 in ?? ()
+.
+Thread 8 (process 6563):
+#0  0x00007f7fbb5832e9 in pthread_cond_wait@@GLIBC_2.3.2 ()
+   from /lib/libpthread.so.0
+#1  0x00007f7fbb2d066a in Thread (data=<value optimized out>)
+    at playlist/thread.c:558
+	p_playlist = (playlist_t *) 0x16b5298
+#2  0x00007f7fbb57f3ba in start_thread () from /lib/libpthread.so.0
+#3  0x00007f7fbb87a1bd in clone ()
+    at ../sysdeps/unix/sysv/linux/x86_64/clone.S:112
+No locals.
+#4  0x0000000000000000 in ?? ()
+.
+Thread 7 (process 6561):
+#0  0x00007f7fbb5832e9 in pthread_cond_wait@@GLIBC_2.3.2 ()
+   from /lib/libpthread.so.0
+#1  0x00007f7fbb2d2a2b in Thread (p_data=<value optimized out>)
+    at playlist/fetcher.c:387
+	__cancel_buf = {__cancel_jmp_buf = {{__cancel_jmp_buf = {2000, 
+        2035944378562172189, 25998016, 0, 255, 7, -2108159449272756963, 
+        -2108155023643847395}, __mask_was_saved = 0}}, __pad = {
+    0x7f7fb92821b0, 0x0, 0x0, 0x7f7fbb79d340}}
+	not_first_call = <value optimized out>
+	p_item = <value optimized out>
+	i_ret = 0
+	canc = 0
+	psz_name = <value optimized out>
+	i_activity = <value optimized out>
+	p_fetcher = (playlist_fetcher_t *) 0x16cead8
+	p_playlist = (playlist_t *) 0x16b5298
+#2  0x00007f7fbb57f3ba in start_thread () from /lib/libpthread.so.0
+#3  0x00007f7fbb87a1bd in clone ()
+    at ../sysdeps/unix/sysv/linux/x86_64/clone.S:112
+No locals.
+#4  0x0000000000000000 in ?? ()
+.
+Thread 6 (process 6559):
+#0  0x00007f7fbb5832e9 in pthread_cond_wait@@GLIBC_2.3.2 ()
+   from /lib/libpthread.so.0
+#1  0x00007f7fbb2bd97f in libvlc_InternalWait (p_libvlc=0x15a7888)
+    at libvlc.c:1207
+No locals.
+#2  0x00000000004010bc in main (i_argc=<value optimized out>, 
+    ppsz_argv=<value optimized out>) at vlc.c:157
+	i_ret = <value optimized out>
+	set = {__val = {16391, 0 <repeats 15 times>}}
+	argc = 1
+	ex = {b_raised = 1, i_code = 0, 
+  psz_message = 0x16cbda0 "Interface initialization failed"}
+	dummy = {b_raised = 0, i_code = 750006397, psz_message = 0x0}
+	vlc = <value optimized out>
+.
+Thread 5 (process 6564):
+#0  0x00007f7fbb5832e9 in pthread_cond_wait@@GLIBC_2.3.2 ()
+   from /lib/libpthread.so.0
+#1  0x00007f7fb8d7b5bd in GetAction (p_intf=<value optimized out>)
+    at hotkeys.c:905
+	__cancel_buf = {__cancel_jmp_buf = {{__cancel_jmp_buf = {23982792, 
+        2035944435460003101, 140186538705088, 0, 140186590916672, 0, 
+        -2108155387053681379, -2108155380523018979}, __mask_was_saved = 0}}, 
+  __pad = {0x7f7fb8d77970, 0x0, 0x7f7fbb32af63, 0x7f7fb8d780c0}}
+	not_first_call = <value optimized out>
+	p_sys = (intf_sys_t *) 0x16db9c0
+	i_ret = <value optimized out>
+#2  0x00007f7fb8d7b799 in Run (p_intf=0x16df2c8) at hotkeys.c:180
+	p_input = (input_thread_t *) 0x0
+	i_action = -1193836352
+	__cancel_buf = {__cancel_jmp_buf = {{__cancel_jmp_buf = {23982792, 
+        -2108155013173422819, 140186538705088, 0, 140186590916672, 
+        140734084090736, -2108155387068361443, -2108155380577676003}, 
+      __mask_was_saved = 0}}, __pad = {0x7f7fb8d781b0, 0x0, 0x0, 0x0}}
+	not_first_call = <value optimized out>
+	p_vout = (vout_thread_t *) 0x0
+	p_aout = (aout_instance_t *) 0x0
+	p_playlist = (playlist_t *) 0x16b5298
+	canc = 0
+#3  0x00007f7fbb2cf374 in RunInterface (p_this=0x16df2c8)
+    at interface/interface.c:223
+	val = {i_int = -1154119468, b_bool = 212, f_float = -0.00276999641, 
+  psz_string = 0x7f7fbb3588d4 "gestures", p_address = 0x7f7fbb3588d4, 
+  p_object = 0x7f7fbb3588d4, p_list = 0x7f7fbb3588d4, 
+  i_time = 140186578421972, var = {psz_name = 0x7f7fbb3588d4 "gestures", 
+    i_object_id = 0}, padding = {a = -44 '?', b = -120 '\210', c = 53 '5', 
+    d = -69 '?', e = 127 '\177', f = 127 '\177', g = 0 '\0', h = 0 '\0'}}
+	text = {i_int = -1143112581, b_bool = 123, f_float = -0.00675922399, 
+  psz_string = 0x7f7fbbdd7c7b <Address 0x7f7fbbdd7c7b out of bounds>, 
+  p_address = 0x7f7fbbdd7c7b, p_object = 0x7f7fbbdd7c7b, 
+  p_list = 0x7f7fbbdd7c7b, i_time = 140186589428859, var = {
+    psz_name = 0x7f7fbbdd7c7b <Address 0x7f7fbbdd7c7b out of bounds>, 
+    i_object_id = -1146086912}, padding = {a = 123 '{', b = 124 '|', 
+    c = -35 '?', d = -69 '?', e = 127 '\177', f = 127 '\177', g = 0 '\0', 
+    h = 0 '\0'}}
+	canc = 0
+#4  0x00007f7fbb32af04 in thread_entry (data=<value optimized out>)
+    at misc/threads.c:1061
+	obj = (vlc_object_t *) 0x16df2c8
+	func = (void *(*)(vlc_object_t *)) 0x7f7fbb2cf1e0 <RunInterface>
+#5  0x00007f7fbb57f3ba in start_thread () from /lib/libpthread.so.0
+#6  0x00007f7fbb87a1bd in clone ()
+    at ../sysdeps/unix/sysv/linux/x86_64/clone.S:112
+No locals.
+#7  0x0000000000000000 in ?? ()
+.
+Thread 4 (process 6687):
+#0  0x00007f7fbb58356d in pthread_cond_timedwait@@GLIBC_2.3.2 ()
+   from /lib/libpthread.so.0
+#1  0x00007f7faf9b9612 in g_cond_timed_wait_posix_impl (cond=0x7f7fb0161c14, 
+    entered_mutex=0x3a98, abs_time=<value optimized out>)
+    at /build/buildd/glib2.0-2.21.2/gthread/gthread-posix.c:242
+	result = <value optimized out>
+	end_time = {tv_sec = 1246756759, tv_nsec = 702618000}
+	timed_out = <value optimized out>
+	__PRETTY_FUNCTION__ = "g_cond_timed_wait_posix_impl"
+#2  0x00007f7fb43b2d4f in g_async_queue_pop_intern_unlocked (queue=0x1751a00, 
+    try=0, end_time=0x7f7f95f5b0a0)
+    at /build/buildd/glib2.0-2.21.2/glib/gasyncqueue.c:365
+	retval = <value optimized out>
+	__PRETTY_FUNCTION__ = "g_async_queue_pop_intern_unlocked"
+#3  0x00007f7fb43b2e5f in IA__g_async_queue_timed_pop (queue=0x1751a00, 
+    end_time=<value optimized out>)
+    at /build/buildd/glib2.0-2.21.2/glib/gasyncqueue.c:491
+	retval = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_async_queue_timed_pop"
+#4  0x00007f7fb4401b20 in g_thread_pool_thread_proxy (
+    data=<value optimized out>)
+    at /build/buildd/glib2.0-2.21.2/glib/gthreadpool.c:121
+	task = <value optimized out>
+	pool = (GRealThreadPool *) 0x0
+#5  0x00007f7fb44005b4 in g_thread_create_proxy (data=0x7f7f8c054120)
+    at /build/buildd/glib2.0-2.21.2/glib/gthread.c:635
+	__PRETTY_FUNCTION__ = "g_thread_create_proxy"
+#6  0x00007f7fbb57f3ba in start_thread () from /lib/libpthread.so.0
+#7  0x00007f7fbb87a1bd in clone ()
+    at ../sysdeps/unix/sysv/linux/x86_64/clone.S:112
+No locals.
+#8  0x0000000000000000 in ?? ()
+.
+Thread 3 (process 6562):
+#0  0x00007f7fbb5832e9 in pthread_cond_wait@@GLIBC_2.3.2 ()
+   from /lib/libpthread.so.0
+#1  0x00007f7fbb2d4c6b in Thread (data=<value optimized out>)
+    at playlist/preparser.c:198
+	__cancel_buf = {__cancel_jmp_buf = {{__cancel_jmp_buf = {
+        140186542936144, 2035944438677034269, 0, 0, 140186590916672, 
+        140734084090816, -2108159311305321187, -2108155026937424611}, 
+      __mask_was_saved = 0}}, __pad = {0x7f7fb91811b0, 0x0, 0x0, 0x0}}
+	not_first_call = <value optimized out>
+	p_current = <value optimized out>
+	canc = 0
+	i_activity = <value optimized out>
+	p_preparser = (playlist_preparser_t *) 0x16c5310
+#2  0x00007f7fbb57f3ba in start_thread () from /lib/libpthread.so.0
+#3  0x00007f7fbb87a1bd in clone ()
+    at ../sysdeps/unix/sysv/linux/x86_64/clone.S:112
+No locals.
+#4  0x0000000000000000 in ?? ()
+.
+Thread 2 (process 6567):
+#0  *__GI___sigwait (set=0x7f7fb71ee070, sig=0x7f7fb71ee0fc)
+    at ../nptl/sysdeps/unix/sysv/linux/../../../../../sysdeps/unix/sysv/linux/sigwait.c:65
+	oldtype = 0
+	result = <value optimized out>
+#1  0x00007f7fb71efdbd in SigThread (data=<value optimized out>)
+    at signals.c:103
+	obj = (intf_thread_t *) 0x16cac68
+	set = {__val = {81927, 0 <repeats 15 times>}}
+	signum = 17
+#2  0x00007f7fbb57f3ba in start_thread () from /lib/libpthread.so.0
+#3  0x00007f7fbb87a1bd in clone ()
+    at ../sysdeps/unix/sysv/linux/x86_64/clone.S:112
+No locals.
+#4  0x0000000000000000 in ?? ()
+.
+Thread 1 (process 6571):
+#0  cell_view_is_sensitive (cell_view=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.17.2/gtk/gtkcombobox.c:1703
+	cells = (GList *) 0xffffffff8c0364a0
+	list = (GList *) 0xffffffff8c0364a0
+	sensitive = 0
+#1  0x00007f7fac803fdb in update_menu_sensitivity (combo_box=0x17f1450, 
+    menu=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.17.2/gtk/gtkcombobox.c:1781
+	priv = (GtkComboBoxPrivate *) 0x17f14d0
+	children = (GList *) 0x7f7f8c0532e0
+	child = (GList *) 0x7f7f8c0531a0
+	item = (GtkWidget *) 0x17e9390
+	submenu = <value optimized out>
+	sensitive = <value optimized out>
+#2  0x00007f7fac8040ae in gtk_combo_box_menu_popup (combo_box=0x7f7f8c0364a0, 
+    button=1, activate_time=0)
+    at /build/buildd/gtk+2.0-2.17.2/gtk/gtkcombobox.c:1808
+	priv = (GtkComboBoxPrivate *) 0x17f14d0
+	path = <value optimized out>
+	active_item = <value optimized out>
+	requisition = {width = 0, height = 0}
+	width = <value optimized out>
+#3  0x00007f7fac806069 in gtk_combo_box_menu_button_press (
+    widget=<value optimized out>, event=0x29db660, 
+    user_data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.17.2/gtk/gtkcombobox.c:3149
+	combo_box = (GtkComboBox *) 0x17f1450
+	priv = (GtkComboBoxPrivate *) 0x17f14d0
+#4  0x00007f7fac8a7a03 in _gtk_marshal_BOOLEAN__BOXED (closure=0x26c5270, 
+    return_value=0x7f7fb418dba0, n_param_values=<value optimized out>, 
+    param_values=0x274c350, invocation_hint=<value optimized out>, 
+    marshal_data=0x7f7fac805fc0)
+    at /build/buildd/gtk+2.0-2.17.2/gtk/gtkmarshalers.c:84
+	data1 = (gpointer) 0x17d6ba0
+	data2 = (gpointer) 0x17f1450
+	v_return = <value optimized out>
+	__PRETTY_FUNCTION__ = "_gtk_marshal_BOOLEAN__BOXED"
+#5  0x00007f7fb4a9462e in IA__g_closure_invoke (closure=0x26c5270, 
+    return_value=0x7f7fb418dba0, n_param_values=2, param_values=0x274c350, 
+    invocation_hint=0x7f7fb418db60)
+    at /build/buildd/glib2.0-2.21.2/gobject/gclosure.c:767
+	marshal = (GClosureMarshal) 0x7f7f8c0364a0
+	marshal_data = (gpointer) 0x1
+	__PRETTY_FUNCTION__ = "IA__g_closure_invoke"
+#6  0x00007f7fb4aaa836 in signal_emit_unlocked_R (node=0x17a8740, 
+    detail=<value optimized out>, instance=<value optimized out>, 
+    emission_return=<value optimized out>, 
+    instance_and_params=<value optimized out>)
+    at /build/buildd/glib2.0-2.21.2/gobject/gsignal.c:3247
+	tmp = (Handler *) 0x7f7fbb8887c0
+	handler = (Handler *) 0x29f4b20
+	accumulator = (SignalAccumulator *) 0x17a8b00
+	emission = {next = 0x0, instance = 0x17d6ba0, ihint = {
+    signal_id = 36, detail = 0, run_type = G_SIGNAL_RUN_FIRST}, 
+  state = EMISSION_RUN, chain_type = 4}
+	class_closure = (GClosure *) 0x17a86d0
+	handler_list = (Handler *) 0x29f4b20
+	return_accu = <value optimized out>
+	accu = {g_type = 20, data = {{v_int = 0, v_uint = 0, v_long = 0, 
+      v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, 
+      v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, 
+      v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+	signal_id = 36
+	max_sequential_handler_number = <value optimized out>
+	return_value_altered = 0
+#7  0x00007f7fb4aabb3e in IA__g_signal_emit_valist (instance=0x17d6ba0, 
+    signal_id=<value optimized out>, detail=0, var_args=0x7f7fb418dd50)
+    at /build/buildd/glib2.0-2.21.2/gobject/gsignal.c:2990
+	return_value = {g_type = 20, data = {{v_int = 0, v_uint = 0, 
+      v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, 
+      v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, 
+      v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, 
+      v_pointer = 0x0}}}
+	error = <value optimized out>
+	signal_return_type = 20
+	param_values = <value optimized out>
+	node = (SignalNode *) 0x17a8740
+	i = <value optimized out>
+	n_params = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_signal_emit_valist"
+#8  0x00007f7fb4aac203 in IA__g_signal_emit (instance=0x7f7f8c0364a0, 
+    signal_id=3021544048, detail=0)
+    at /build/buildd/glib2.0-2.21.2/gobject/gsignal.c:3037
+	var_args = {{gp_offset = 32, fp_offset = 48, 
+    overflow_arg_area = 0x7f7fb418de30, reg_save_area = 0x7f7fb418dd70}}
+#9  0x00007f7fac9c6bdf in gtk_widget_event_internal (widget=0x17d6ba0, 
+    event=0x29db660) at /build/buildd/gtk+2.0-2.17.2/gtk/gtkwidget.c:4761
+	signal_num = <value optimized out>
+	return_val = 0
+#10 0x00007f7fac89e9d4 in IA__gtk_propagate_event (widget=0x17d6ba0, 
+    event=0x29db660) at /build/buildd/gtk+2.0-2.17.2/gtk/gtkmain.c:2396
+	tmp = (GtkWidget *) 0x17d6ba0
+	handled_event = 25780256
+	__PRETTY_FUNCTION__ = "IA__gtk_propagate_event"
+#11 0x00007f7fac89faf3 in IA__gtk_main_do_event (event=0x29db660)
+    at /build/buildd/gtk+2.0-2.17.2/gtk/gtkmain.c:1601
+	event_widget = <value optimized out>
+	grab_widget = (GtkWidget *) 0x17d6ba0
+	window_group = (GtkWindowGroup *) 0x1896020
+	rewritten_event = (GdkEvent *) 0x0
+	tmp_list = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_main_do_event"
+#12 0x00007f7fac4f590c in gdk_event_dispatch (source=<value optimized out>, 
+    callback=<value optimized out>, user_data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.17.2/gdk/x11/gdkevents-x11.c:2367
+	display = <value optimized out>
+	event = <value optimized out>
+#13 0x00007f7fb43d78fe in IA__g_main_context_dispatch (context=0x16ef520)
+    at /build/buildd/glib2.0-2.21.2/glib/gmain.c:1814
+No locals.
+#14 0x00007f7fb43dafd8 in g_main_context_iterate (context=0x16ef520, 
+    block=<value optimized out>, dispatch=<value optimized out>, 
+    self=<value optimized out>)
+    at /build/buildd/glib2.0-2.21.2/glib/gmain.c:2445
+	max_priority = 0
+	timeout = 0
+	some_ready = 1
+	nfds = 12
+	allocated_nfds = -1270974096
+	fds = <value optimized out>
+	__PRETTY_FUNCTION__ = "g_main_context_iterate"
+#15 0x00007f7fb43db435 in IA__g_main_loop_run (loop=0x26c3e40)
+    at /build/buildd/glib2.0-2.21.2/glib/gmain.c:2653
+	self = (GThread *) 0x16eb720
+	__PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#16 0x00007f7fac81699b in IA__gtk_dialog_run (dialog=0x17f12f0)
+    at /build/buildd/gtk+2.0-2.17.2/gtk/gtkdialog.c:1090
+	ri = {dialog = 0x0, response_id = -1, loop = 0x26c3e40, destroyed = 0}
+	was_modal = 0
+	response_handler = 2364
+	unmap_handler = 2365
+	destroy_handler = 2367
+	delete_handler = 2366
+	__PRETTY_FUNCTION__ = "IA__gtk_dialog_run"
+#17 0x00007f7fb64fa4fa in QGtk::openFilenames (parent=0x0, 
+    caption=<value optimized out>, dir=<value optimized out>, 
+    filter=<value optimized out>, selectedFilter=0x0, options={i = 0})
+    at styles/gtksymbols.cpp:848
+	gtkFileChooser = (GtkWidget *) 0x17f12f0
+	modal_widget = {<QObject> = {_vptr.QObject = 0x7f7fb6baa6d0, 
+    static staticMetaObject = {d = {superdata = 0x0, 
+        stringdata = 0x7f7fb5dcc7a0 "QObject", data = 0x7f7fb5dcc840, 
+        extradata = 0x7f7fb6020040}}, d_ptr = 0x26cd210, 
+    static staticQtMetaObject = {d = {superdata = 0x0, 
+        stringdata = 0x7f7fb5dd6020 "Qt", data = 0x7f7fb5dd8f00, 
+        extradata = 0x0}}}, <QPaintDevice> = {
+    _vptr.QPaintDevice = 0x7f7fb6baa890, painters = 0}, 
+  static staticMetaObject = {d = {superdata = 0x7f7fb6020020, 
+      stringdata = 0x7f7fb67d8be0 "QWidget", data = 0x7f7fb67d9120, 
+      extradata = 0x0}}, data = 0x26cd298}
+	filenames = $3 = -99
+rax            0x7f7f8c0364a0	140185786606752
+rbx            0xffffffff8c0364a0	-1945934688
+rcx            0x1	1
+rdx            0x0	0
+rsi            0x7f7fb4191a70	140186459118192
+rdi            0x7f7f8c0364a0	140185786606752
+rbp            0x7f7fb418d8bc	0x7f7fb418d8bc
+rsp            0x7f7fb418d8b0	0x7f7fb418d8b0
+r8             0x1	1
+r9             0x1	1
+r10            0x1	1
+r11            0x7f7fbb5825b0	140186580690352
+r12            0xffffffff8c0364a0	-1945934688
+r13            0x178f310	24703760
+r14            0x1797680	24737408
+r15            0x17f1450	25105488
+rip            0x7f7fac803e59	0x7f7fac803e59 <cell_view_is_sensitive+57>
+eflags         0x10286	[ PF SF IF RF ]
+cs             0x33	51
+ss             0x2b	43
+ds             0x0	0
+es             0x0	0
+fs             0x0	0
+gs             0x0	0
+fctrl          0x37f	895
+fstat          0x20	32
+ftag           0xffff	65535
+fiseg          0x7f7f	32639
+fioff          0xba7e7047	-1166118841
+foseg          0x7f7f	32639
+fooff          0xb4189ce8	-1273455384
+fop            0x51f	1311
+mxcsr          0x9fe0	[ PE DAZ IM DM ZM OM UM PM FZ ]

@@ -1,0 +1,25 @@
+#0  0x000000000053dc8f in nautilus_desktop_update_metadata_from_gconf (
+    file=<value optimized out>, name=<value optimized out>)
+    at nautilus-desktop-directory-file.c:551
+	client = (GConfClient *) 0x22bbde0
+	entries = (GSList *) 0x2397790
+	l = (GSList *) 0x2397790
+	dir = <value optimized out>
+	key = 0x26b5ac0 "metadata::nautilus-window-scroll-position"
+	entry = (GConfEntry *) 0x26d2c40
+	value = (GConfValue *) 0x0
+	info = (GFileInfo *) 0x26b02a0
+	changed = <value optimized out>
+	gio_key = 0x26b5ac0 "metadata::nautilus-window-scroll-position"
+	value_list = <value optimized out>
+	i = <value optimized out>
+#1  0x000000000053deaf in nautilus_desktop_set_metadata_string (
+    file=0x26b5aca, name=0x0, key=0x7ffff7a845b0 "", 
+    string=0x18 <Address 0x18 out of bounds>)
+    at nautilus-desktop-directory-file.c:472
+	client = <value optimized out>
+	gconf_key = <value optimized out>
+#2  0x0000000002563000 in ?? ()
+No symbol table info available.
+#3  0x0000000000000000 in ?? ()
+No symbol table info available.

@@ -1,0 +1,20 @@
+#0  0x00b1f422 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x00c2a651 in raise () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#2  0x00c2da82 in abort () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#3  0x00c23718 in __assert_fail () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#4  0x001adc29 in _XAllocID () from /usr/lib/libX11.so.6
+No symbol table info available.
+#5  0x001829e3 in XCreateGC () from /usr/lib/libX11.so.6
+No symbol table info available.
+#6  0x0804ad0e in ?? ()
+No symbol table info available.
+#7  0x0804bfcc in ?? ()
+No symbol table info available.
+#8  0x00c16bd6 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#9  0x08049821 in ?? ()
+No symbol table info available.

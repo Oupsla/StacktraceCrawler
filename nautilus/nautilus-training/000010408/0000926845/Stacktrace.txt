@@ -1,0 +1,38 @@
+#0  0x00007ff7714970d0 in gdu_device_get_object_path () from /usr/lib/x86_64-linux-gnu/libgdu.so.0
+No symbol table info available.
+#1  0x00007ff771490fc2 in gdu_pool_new_for_address () from /usr/lib/x86_64-linux-gnu/libgdu.so.0
+No symbol table info available.
+#2  0x00007ff77149141c in gdu_pool_new () from /usr/lib/x86_64-linux-gnu/libgdu.so.0
+No symbol table info available.
+#3  0x00007ff77374016f in unity::launcher::DeviceLauncherIcon::DeviceLauncherIcon(unity::launcher::Launcher*, _GVolume*) () from /usr/lib/compiz/libunityshell.so
+No symbol table info available.
+#4  0x00007ff7737916ec in unity::launcher::DeviceLauncherSection::OnVolumeAdded(_GVolumeMonitor*, _GVolume*, unity::launcher::DeviceLauncherSection*) () from /usr/lib/compiz/libunityshell.so
+No symbol table info available.
+#5  0x00007ff780adb364 in g_closure_invoke () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#6  0x00007ff780aeb615 in ?? () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#7  0x00007ff780af2feb in g_signal_emit_valist () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#8  0x00007ff780af36c4 in g_signal_emit_by_name () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#9  0x00007ff780adb364 in g_closure_invoke () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#10 0x00007ff780aeb615 in ?? () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#11 0x00007ff780af2feb in g_signal_emit_valist () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#12 0x00007ff780af36c4 in g_signal_emit_by_name () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#13 0x00007ff76d22867b in ?? () from /usr/lib/x86_64-linux-gnu/gio/modules/libgioremote-volume-monitor.so
+No symbol table info available.
+#14 0x00007ff7840aa7da in g_main_context_dispatch () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#15 0x00007ff7840aaba0 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#16 0x00007ff7840aaf9a in g_main_loop_run () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#17 0x000000000042e856 in CompScreen::eventLoop() ()
+No symbol table info available.
+#18 0x000000000042221a in main ()
+No symbol table info available.

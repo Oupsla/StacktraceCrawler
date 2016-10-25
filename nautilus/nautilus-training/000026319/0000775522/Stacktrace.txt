@@ -1,0 +1,62 @@
+#0  g_type_check_instance (type_instance=0x55252063) at /build/buildd/glib2.0-2.26.1/gobject/gtype.c:4046
+No locals.
+#1  0x009ccb45 in g_signal_handlers_disconnect_matched (instance=0x55252063, mask=24, signal_id=0, detail=0, closure=0x0, func=0x80d8100, data=0x9814668) at /build/buildd/glib2.0-2.26.1/gobject/gsignal.c:2672
+        n_handlers = <value optimized out>
+        __PRETTY_FUNCTION__ = "g_signal_handlers_disconnect_matched"
+#2  0x080d8048 in remove_pending (startup_data=0x9814668, cancel_call_when_ready=<value optimized out>, cancel_timed_wait=1, cancel_destroy_handler=1) at fm-properties-window.c:5346
+No locals.
+#3  0x080e171b in is_directory_ready_callback (file=0x94e82a0, data=0x9814668) at fm-properties-window.c:5373
+No locals.
+#4  0x080fcdc5 in ready_callback_call (directory=0x95066c8, callback=<value optimized out>) at nautilus-directory-async.c:1304
+        file_list = <value optimized out>
+#5  0x081013e4 in call_ready_callbacks_at_idle (callback_data=0x95066c8) at nautilus-directory-async.c:1886
+        directory = 0x95066c8
+        node = <value optimized out>
+        next = <value optimized out>
+        callback = 0x97f18b0
+#6  0x002c5841 in g_idle_dispatch (source=0x95d3a28, callback=0x55252063, user_data=0x95066c8) at /build/buildd/glib2.0-2.26.1/glib/gmain.c:4254
+No locals.
+#7  0x002c7855 in g_main_dispatch (context=0x8f68738) at /build/buildd/glib2.0-2.26.1/glib/gmain.c:2149
+        dispatch = 0x2c5820 <g_idle_dispatch>
+        user_data = 0x95066c8
+        callback = 0x8101360 <call_ready_callbacks_at_idle>
+        cb_funcs = 0x35833c
+        cb_data = 0x93abed0
+        current_source_link = {data = 0x95d3a28, next = 0x0}
+        source = 0x95d3a28
+        current = 0x8fab900
+        i = 0
+#8  g_main_context_dispatch (context=0x8f68738) at /build/buildd/glib2.0-2.26.1/glib/gmain.c:2702
+No locals.
+#9  0x002cb668 in g_main_context_iterate (context=0x8f68738, block=<value optimized out>, dispatch=1, self=0x8f38008) at /build/buildd/glib2.0-2.26.1/glib/gmain.c:2780
+        max_priority = 200
+        timeout = 0
+        some_ready = 1
+        nfds = <value optimized out>
+        allocated_nfds = <value optimized out>
+        fds = <value optimized out>
+        __PRETTY_FUNCTION__ = "g_main_context_iterate"
+#10 0x002cbba7 in g_main_loop_run (loop=0x915cd18) at /build/buildd/glib2.0-2.26.1/glib/gmain.c:2988
+        self = 0x8f38008
+        __PRETTY_FUNCTION__ = "g_main_loop_run"
+#11 0x00fbc1d9 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#12 0x0807f377 in main (argc=1, argv=0xbf87fcf4) at nautilus-main.c:544
+        kill_shell = 0
+        no_default_window = 1
+        browser_window = 0
+        no_desktop = 0
+        version = 0
+        autostart_mode = 1
+        autostart_id = <value optimized out>
+        geometry = 0x0
+        remaining = 0x0
+        perform_self_check = 0
+        application = 0x8facdb8
+        context = <value optimized out>
+        file = 0x1
+        uri = <value optimized out>
+        uris = 0x0
+        uris_array = <value optimized out>
+        error = 0x0
+        options = {{long_name = 0x81ae863 "check", short_name = 99 'c', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbf87fc10, description = 0x81ae8a4 "Perform a quick set of self-check tests.", arg_description = 0x0}, {long_name = 0x81cd381 "version", short_name = 0 '\000', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbf87fc1c, description = 0x81ae8d0 "Show the version of the program.", arg_description = 0x0}, {long_name = 0x81b24f8 "geometry", short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, arg_data = 0xbf87fc18, description = 0x81ae8f4 "Create the initial window with the given geometry.", arg_description = 0x81ae7a1 "GEOMETRY"}, {long_name = 0x81ae7aa "no-default-window", short_name = 110 'n', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbf87fc28, description = 0x81ae928 "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {long_name = 0x81ae7bc "no-desktop", short_name = 0 '\000', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbf87fc20, description = 0x81ae95c "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {long_name = 0x81ab3d5 "browser", short_name = 0 '\000', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbf87fc24, description = 0x81ae7c7 "open a browser window.", arg_description = 0x0}, {long_name = 0x81ceb92 "quit", short_name = 113 'q', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbf87fc2c, description = 0x81ae7de "Quit Nautilus.", arg_description = 0x0}, {long_name = 0x81b398f "", short_name = 0 '\000', flags = 0, arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0xbf87fc14, description = 0x0, arg_description = 0x81ae7ed "[URI...]"}, {long_name = 0x0, short_name = 0 '\000', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x0, description = 0x0, arg_description = 0x0}}

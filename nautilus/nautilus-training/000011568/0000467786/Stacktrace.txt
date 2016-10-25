@@ -1,0 +1,8 @@
+#0  0x00a369d8 in ?? ()
+No symbol table info available.
+#1  0x002a236f in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#2  0x00a0680e in start_thread () from /lib/tls/i686/cmov/libpthread.so.0
+No symbol table info available.
+#3  0x0496e7ee in clone () at ../sysdeps/unix/sysv/linux/i386/clone.S:130
+No locals.

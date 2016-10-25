@@ -1,0 +1,65 @@
+#0  0xb76dc1a8 in g_file_query_info () from /usr/lib/libgio-2.0.so.0
+#1  0x0810a264 in custom_basename_to_string (format=0x9b3c460 "%B", 
+    va=0xb49f20a4 "\001") at nautilus-file-operations.c:726
+	file = (GFile *) 0x1
+	info = <value optimized out>
+	name = <value optimized out>
+	basename = <value optimized out>
+#2  0xb801288e in eel_strdup_vprintf_with_custom (custom=0x818c7a0, 
+    format=0xb688eac0 <Address 0xb688eac0 out of bounds>, 
+    va_orig=0xb49f20a4 "\001") at eel-string.c:780
+	va = 0xb49f20a4 "\001"
+	p = 0xb688eae3 <Address 0xb688eae3 out of bounds>
+	num_args = 1
+	i = 0
+	j = 1
+	type = <value optimized out>
+	f = (GString *) 0x9960070
+	str = (GString *) 0x9960050
+	s = <value optimized out>
+	__PRETTY_FUNCTION__ = "eel_strdup_vprintf_with_custom"
+#3  0x08109f2e in f (format=0xb688eac0 <Address 0xb688eac0 out of bounds>)
+    at nautilus-file-operations.c:827
+	res = 0x969d310 ""
+#4  0x0810dbc8 in report_copy_progress (copy_job=0x98a6fb0, 
+    source_info=0xb49f229c, transfer_info=0xb49f2280)
+    at nautilus-file-operations.c:2773
+	files_left = 1
+	total_size = <value optimized out>
+	elapsed = 327
+	transfer_rate = 180.5
+	now = <value optimized out>
+	is_move = 0
+#5  0x0811099b in copy_move_file (copy_job=0x98a6fb0, src=0x9bbfed0, 
+    dest_dir=0x995fe50, same_fs=1, unique_names=0, dest_fs_type=0xb49f22b0, 
+    source_info=0xb49f229c, transfer_info=0xb49f2280, 
+    debuting_files=0x973a078, position=0x0, overwrite=0, 
+    skipped_file=0xb49f22b4) at nautilus-file-operations.c:3754
+	dest = (GFile *) 0x995ffb0
+	new_dest = (GFile *) 0x0
+	error = (GError *) 0x0
+	flags = <value optimized out>
+	primary = 0xb7624a05 "\213]ô\213uø\213}ü\211ì]Ã\215¶"
+	secondary = <value optimized out>
+	details = <value optimized out>
+	response = <value optimized out>
+	pdata = {job = 0x98a6fb0, last_size = 1267, source_info = 0xb49f229c, 
+  transfer_info = 0xb49f2280}
+	would_recurse = <value optimized out>
+	res = <value optimized out>
+	unique_name_nr = 1
+	handled_invalid_filename = 0
+	__PRETTY_FUNCTION__ = "copy_move_file"
+#6  0x0811301b in copy_job (io_job=0x9b3c600, cancellable=0x9a5e1c8, 
+    user_data=0x98a6fb0) at nautilus-file-operations.c:4075
+	source_info = {num_files = 2, num_bytes = 17532198, 
+  num_files_since_progress = 2, op = OP_KIND_COPY}
+	transfer_info = {num_files = 1, num_bytes = 1267, op = OP_KIND_COPY, 
+  last_report_time = 146758718645, last_reported_files_left = 1}
+	dest_fs_id = 0x9b04b98 "l2050"
+	dest = <value optimized out>
+#7  0xb76ec394 in ?? () from /usr/lib/libgio-2.0.so.0
+#8  0xb76256c6 in ?? () from /usr/lib/libglib-2.0.so.0
+#9  0xb762402f in ?? () from /usr/lib/libglib-2.0.so.0
+#10 0xb739f50f in start_thread () from /lib/tls/i686/cmov/libpthread.so.0
+#11 0xb731c7ee in clone () from /lib/tls/i686/cmov/libc.so.6

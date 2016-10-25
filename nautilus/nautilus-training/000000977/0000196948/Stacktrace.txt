@@ -1,0 +1,6 @@
+#0  0xb73d178c in g_type_check_instance_cast ()
+   from /usr/lib/libgobject-2.0.so.0
+#1  0xb625bf86 in ?? () from /usr/lib/gtk-2.0/2.10.0/filesystems/libgio.so
+#2  0x084d9250 in ?? ()
+#3  0x0837b7f8 in ?? ()
+#4  0x00000000 in ?? ()

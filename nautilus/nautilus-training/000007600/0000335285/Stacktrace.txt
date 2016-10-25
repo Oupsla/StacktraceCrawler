@@ -1,0 +1,24 @@
+#0  0xb7199377 in memset () from /lib/tls/i686/cmov/libc.so.6
+#1  0xb439b99c in ff_jpeg_fdct_islow (data=0xb4db8790)
+    at /build/buildd/ffmpeg-debian-0.svn20090204/libavcodec/jfdctint.c:250
+	tmp0 = <value optimized out>
+	tmp1 = <value optimized out>
+	tmp2 = <value optimized out>
+	tmp3 = <value optimized out>
+	tmp4 = <value optimized out>
+	tmp5 = <value optimized out>
+	tmp6 = <value optimized out>
+	tmp7 = <value optimized out>
+	tmp10 = <value optimized out>
+	tmp11 = <value optimized out>
+	tmp12 = <value optimized out>
+	tmp13 = <value optimized out>
+	z1 = <value optimized out>
+	z2 = <value optimized out>
+	z3 = 1073614571
+	z4 = <value optimized out>
+	z5 = <value optimized out>
+	dataptr = <value optimized out>
+#2  0xb4dff9d0 in ?? ()
+#3  0xb7448ac8 in ?? ()
+Backtrace stopped: previous frame inner to this frame (corrupt stack?)

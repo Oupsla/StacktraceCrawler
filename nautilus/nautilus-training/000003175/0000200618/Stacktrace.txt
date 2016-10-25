@@ -1,0 +1,6 @@
+#0  _poppler_document_new_from_pdfdoc (newDoc=0x838c680, error=0xbf8bcccc) at poppler-document.cc:89
+	document = <value optimized out>
+	err = <value optimized out>
+#1  0xb3c4c9d9 in ?? ()
+#2  0x0863e090 in ?? ()
+#3  0x00000000 in ?? ()

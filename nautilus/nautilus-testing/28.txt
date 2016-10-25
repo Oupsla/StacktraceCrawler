@@ -1,0 +1,32 @@
+#0  0x001cb422 in __kernel_vsyscall ()
+#1  0x054bd4f1 in raise () from /lib/tls/i686/cmov/libc.so.6
+#2  0x054c0952 in abort () from /lib/tls/i686/cmov/libc.so.6
+#3  0x054f3fcd in ?? () from /lib/tls/i686/cmov/libc.so.6
+#4  0x054fe0d1 in ?? () from /lib/tls/i686/cmov/libc.so.6
+#5  0x054ff7d2 in ?? () from /lib/tls/i686/cmov/libc.so.6
+#6  0x0550287d in free () from /lib/tls/i686/cmov/libc.so.6
+#7  0x004750c6 in g_free () from /usr/lib/libglib-2.0.so.0
+#8  0x05e19ce7 in gst_object_set_name () from /usr/lib/libgstreamer-0.10.so.0
+#9  0x05e1a88d in ?? () from /usr/lib/libgstreamer-0.10.so.0
+#10 0x00520e26 in ?? () from /usr/lib/libgobject-2.0.so.0
+#11 0x005218cc in g_object_newv () from /usr/lib/libgobject-2.0.so.0
+#12 0x00522502 in g_object_new_valist () from /usr/lib/libgobject-2.0.so.0
+#13 0x0052267e in g_object_new () from /usr/lib/libgobject-2.0.so.0
+#14 0x05e87fef in ?? () from /usr/lib/libgstreamer-0.10.so.0
+#15 0x05e897fd in gst_registry_binary_read_cache ()
+   from /usr/lib/libgstreamer-0.10.so.0
+#16 0x05e15d03 in ?? () from /usr/lib/libgstreamer-0.10.so.0
+#17 0x05e17d25 in ?? () from /usr/lib/libgstreamer-0.10.so.0
+#18 0x0047ba70 in g_option_context_parse () from /usr/lib/libglib-2.0.so.0
+#19 0x05e1736e in gst_init_check () from /usr/lib/libgstreamer-0.10.so.0
+#20 0x00d3692e in brasero_burn_library_start ()
+   from /usr/lib/libbrasero-burn.so.0
+#21 0x00a032ef in nautilus_module_initialize ()
+   from /usr/lib/nautilus/extensions-2.0/libnautilus-brasero-extension.so
+#22 0x08145eae in ?? ()
+#23 0x0053e8c0 in g_type_module_use () from /usr/lib/libgobject-2.0.so.0
+#24 0x08145fea in ?? ()
+#25 0x0806f9bf in ?? ()
+#26 0x080814c8 in ?? ()
+#27 0x054a9b56 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+#28 0x0806bf41 in ?? ()

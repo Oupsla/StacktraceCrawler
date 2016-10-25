@@ -1,0 +1,84 @@
+#0  0x00964b77 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#1  0x009637a1 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#2  0x00963ab8 in g_variant_new_va () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#3  0x00963baf in g_variant_new () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#4  0x00133c11 in brasero_inhibit_suspend () from /usr/lib/libbrasero-burn.so.1
+No symbol table info available.
+#5  0x00129160 in ?? () from /usr/lib/libbrasero-burn.so.1
+No symbol table info available.
+#6  0x0012c708 in brasero_burn_record () from /usr/lib/libbrasero-burn.so.1
+No symbol table info available.
+#7  0x0014915b in ?? () from /usr/lib/libbrasero-burn.so.1
+No symbol table info available.
+#8  0x0014953c in brasero_burn_dialog_run () from /usr/lib/libbrasero-burn.so.1
+No symbol table info available.
+#9  0x0808e403 in brasero_app_burn ()
+No symbol table info available.
+#10 0x080692d6 in ?? ()
+No symbol table info available.
+#11 0x00e69a1c in g_cclosure_marshal_VOID__VOID () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#12 0x00e5a4b2 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#13 0x00e730e5 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#14 0x00e7475c in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#15 0x00e74ec2 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#16 0x00fcc44a in gtk_button_clicked () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#17 0x00fcde58 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#18 0x00e69a1c in g_cclosure_marshal_VOID__VOID () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#19 0x00e58b27 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#20 0x00e5a4b2 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#21 0x00e7298a in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#22 0x00e7475c in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#23 0x00e74ec2 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#24 0x00fcc4ea in gtk_button_released () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#25 0x00fcc714 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#26 0x0109f898 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#27 0x00e58b27 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#28 0x00e5a4b2 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#29 0x00e72d36 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#30 0x00e745db in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#31 0x00e74ec2 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#32 0x011e7736 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#33 0x01096cbd in gtk_propagate_event () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#34 0x0109815f in gtk_main_do_event () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#35 0x0048543a in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#36 0x00927015 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#37 0x0092ae28 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#38 0x0092b367 in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#39 0x01098749 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#40 0x0808cab9 in brasero_app_run_mainwin ()
+No symbol table info available.
+#41 0x0805ed0f in main ()
+No symbol table info available.

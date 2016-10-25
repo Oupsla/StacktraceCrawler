@@ -1,0 +1,76 @@
+#0  0x00007f42f5fd6d05 in raise () from /lib/x86_64-linux-gnu/libc.so.6
+No symbol table info available.
+#1  0x00007f42f5fdaab6 in abort () from /lib/x86_64-linux-gnu/libc.so.6
+No symbol table info available.
+#2  0x00007f42f763051d in g_assertion_message () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#3  0x00007f42f7630ae0 in g_assertion_message_expr () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#4  0x000000000046b4e2 in ?? ()
+No symbol table info available.
+#5  0x0000000000463ec5 in ?? ()
+No symbol table info available.
+#6  0x00000000004688e9 in ?? ()
+No symbol table info available.
+#7  0x000000000046a734 in ?? ()
+No symbol table info available.
+#8  0x000000000046a870 in ?? ()
+No symbol table info available.
+#9  0x00007f42f7606427 in g_list_foreach () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#10 0x000000000046976e in ?? ()
+No symbol table info available.
+#11 0x00007f42f7f0b81c in g_closure_invoke () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#12 0x00007f42f7f1ca36 in ?? () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#13 0x00007f42f7f26258 in g_signal_emit_valist () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#14 0x00007f42f7f2641f in g_signal_emit () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#15 0x00007f42f9217e10 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#16 0x00007f42f7f0eac0 in g_object_run_dispose () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#17 0x000000000042f4ac in ?? ()
+No symbol table info available.
+#18 0x00007f42f91ef428 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#19 0x00007f42f7f0b81c in g_closure_invoke () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#20 0x00007f42f7f1d205 in ?? () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#21 0x00007f42f7f25fa9 in g_signal_emit_valist () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#22 0x00007f42f7f2641f in g_signal_emit () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#23 0x00007f42f930b351 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#24 0x00007f42f91edc1d in gtk_main_do_event () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#25 0x00007f42f8e605cc in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#26 0x00007f42f760abcd in g_main_context_dispatch () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#27 0x00007f42f760b3a8 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#28 0x00007f42f760b9f2 in g_main_loop_run () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#29 0x00007f42f91ec9a7 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#30 0x00000000004427b2 in ?? ()
+No symbol table info available.
+#31 0x00007f42f5fc1eff in __libc_start_main () from /lib/x86_64-linux-gnu/libc.so.6
+No symbol table info available.
+#32 0x000000000042f349 in ?? ()
+No symbol table info available.
+#33 0x00007fff6f58ec58 in ?? ()
+No symbol table info available.
+#34 0x000000000000001c in ?? ()
+No symbol table info available.
+#35 0x0000000000000001 in ?? ()
+No symbol table info available.
+#36 0x00007fff6f58f970 in ?? ()
+No symbol table info available.
+#37 0x0000000000000000 in ?? ()
+No symbol table info available.

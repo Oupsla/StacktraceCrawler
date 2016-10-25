@@ -1,0 +1,37 @@
+#0  0x080d4491 in ?? ()
+No symbol table info available.
+#1  0x080c3fb3 in ?? ()
+No symbol table info available.
+#2  0xb6bbb94a in g_cclosure_marshal_VOID(unsigned int0_t) () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#3  0xb6bb9f8c in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#4  0xb6bcb845 in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#5  0xb6bd30c2 in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#6  0xb6bd3253 in g_signal_emit () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#7  0xb6aa10fe in ?? () from /usr/lib/i386-linux-gnu/libdbusmenu-glib.so.4
+No symbol table info available.
+#8  0xb6aa3dce in dbusmenu_menuitem_handle_event () from /usr/lib/i386-linux-gnu/libdbusmenu-glib.so.4
+No symbol table info available.
+#9  0xb6aa5613 in ?? () from /usr/lib/i386-linux-gnu/libdbusmenu-glib.so.4
+No symbol table info available.
+#10 0xb6afd44f in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#11 0xb6afc6ea in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#12 0xb6afcaf5 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#13 0xb6afcbd1 in g_main_context_iteration () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#14 0xb6cb4c4c in g_application_run () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#15 0x08067bc4 in ?? ()
+No symbol table info available.
+#16 0xb68ef113 in __libc_start_main () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#17 0x08067bfd in ?? ()
+No symbol table info available.
+Backtrace stopped: Not enough registers or memory available to unwind further

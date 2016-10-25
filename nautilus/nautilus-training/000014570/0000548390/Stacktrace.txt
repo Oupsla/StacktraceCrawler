@@ -1,0 +1,811 @@
+#0  0xb7750430 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0xb66fd641 in *__GI_raise (sig=6)
+    at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+        resultvar = <value optimized out>
+        pid = -1232957452
+        selftid = 1535
+#2  0xb6700a72 in *__GI_abort () at abort.c:92
+        act = {__sigaction_handler = {sa_handler = 0xbfc8ca10, 
+            sa_sigaction = 0xbfc8ca10}, sa_mask = {__val = {3061071757, 112, 
+              88, 3217607424, 3217607212, 112, 88, 83, 166494088, 3062009844, 
+              83, 82, 3217607384, 3061002610, 166494096, 83, 3217607424, 
+              166494096, 0, 4222451712, 166494096, 166494096, 166494096, 
+              166494096, 166494178, 166494196, 166494096, 166494196, 0, 0, 0, 
+              0}}, sa_flags = 0, sa_restorer = 0x68}
+        sigs = {__val = {32, 0 <repeats 31 times>}}
+#3  0xb66f6708 in *__GI___assert_fail (
+    assertion=0xb65402c5 "ret != inval_id", 
+    file=0xb6540289 "../../src/xcb_io.c", line=385, 
+    function=0xb6540444 "_XAllocID") at assert.c:81
+        buf = 0x9ec7f90 "rhythmbox: ../../src/xcb_io.c:385: _XAllocID: Assertion `ret != inval_id' failed.\n"
+#4  0xb64d0c29 in _XAllocID (dpy=0x8ef82d8) at ../../src/xcb_io.c:385
+        ret = 4294967295
+        __PRETTY_FUNCTION__ = "_XAllocID"
+#5  0xb64a61a8 in XCreatePixmap (dpy=0x8ef82d8, d=21040805, width=32, 
+    height=32, depth=8) at ../../src/CrPixmap.c:58
+No locals.
+#6  0xb7084fe9 in _cairo_xlib_surface_create_similar_with_format (
+    abstract_src=0x9a7d900, format=<value optimized out>, width=32, height=32)
+    at /build/buildd/cairo-1.8.10/src/cairo-xlib-surface.c:155
+        dpy = 0x8ef82d8
+        pix = 32
+        xrender_format = <value optimized out>
+#7  0xb706ee96 in _cairo_surface_create_similar_scratch (other=0x9a7d900, 
+    content=CAIRO_CONTENT_ALPHA, width=32, height=32)
+    at /build/buildd/cairo-1.8.10/src/cairo-surface.c:241
+        surface = <value optimized out>
+        options = {antialias = 3070569662, subpixel_order = 166334688, 
+          lcd_filter = 3217607880, hint_style = 1792, hint_metrics = 8933}
+        format = <value optimized out>
+#8  0xb706f06b in _cairo_surface_create_similar_solid (other=0x9a7d900, 
+    content=CAIRO_CONTENT_ALPHA, width=32, height=32, color=0xb70ab000)
+    at /build/buildd/cairo-1.8.10/src/cairo-surface.c:317
+        status = <value optimized out>
+        surface = <value optimized out>
+        solid_pattern = {base = {type = 1072651304, ref_count = {
+              ref_count = 1792}, status = 1119354880, user_data = {
+              size = 8933, num_elements = 1119354880, element_size = 2021, 
+              elements = 0x42b80000, is_snapshot = 8704}, matrix = {
+              xx = 4.8896313371757002e-311, yx = 1.8470404399353443e-310, 
+              xy = 5.5303479171275102e-315, yy = 5.3260358834209845e-315, 
+              x0 = 1.5170576092045383e-314, y0 = -2.8775420367209311e-21}, 
+            filter = 1075811563, extend = 2004182447}, color = {
+            red = -0.19375708711131248, green = -0.19377335488068001, 
+            blue = -0.19375899421283974, alpha = -1.4957772456854422e-43, 
+            red_short = 52592, green_short = 49096, blue_short = 52504, 
+            alpha_short = 49096}, content = 3070640125}
+#9  0xb7050cde in _cairo_clip_intersect_mask (clip=0x9ea1098, path=0x9ec7d8c, 
+    fill_rule=CAIRO_FILL_RULE_WINDING, tolerance=0.10000000000000001, 
+    antialias=CAIRO_ANTIALIAS_DEFAULT, target=0x9a7d900)
+    at /build/buildd/cairo-1.8.10/src/cairo-clip.c:486
+        extents = {p1 = {x = 1792, y = 8704}, p2 = {x = 9984, y = 16896}}
+        surface_rect = {x = 7, y = 34, width = 32, height = 32}
+        surface = <value optimized out>
+        pattern = {base = {type = CAIRO_PATTERN_TYPE_SOLID, ref_count = {
+              ref_count = 0}, status = CAIRO_STATUS_SUCCESS, user_data = {
+              size = 0, num_elements = 0, element_size = 12, elements = 0x0, 
+              is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, 
+              x0 = 0, y0 = 0}, filter = CAIRO_FILTER_GOOD, 
+            extend = CAIRO_EXTEND_PAD}, solid = {base = {
+              type = CAIRO_PATTERN_TYPE_SOLID, ref_count = {ref_count = 0}, 
+              status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, 
+                num_elements = 0, element_size = 12, elements = 0x0, 
+                is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, 
+                x0 = 0, y0 = 0}, filter = CAIRO_FILTER_GOOD, 
+              extend = CAIRO_EXTEND_PAD}, color = {red = 1, green = 1, 
+              blue = 1, alpha = 1, red_short = 65535, green_short = 65535, 
+              blue_short = 65535, alpha_short = 65535}, 
+            content = CAIRO_CONTENT_COLOR}, surface = {base = {
+              type = CAIRO_PATTERN_TYPE_SOLID, ref_count = {ref_count = 0}, 
+              status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, 
+                num_elements = 0, element_size = 12, elements = 0x0, 
+                is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, 
+                x0 = 0, y0 = 0}, filter = CAIRO_FILTER_GOOD, 
+              extend = CAIRO_EXTEND_PAD}, surface = 0x0}, gradient = {base = {
+              base = {type = CAIRO_PATTERN_TYPE_SOLID, ref_count = {
+                  ref_count = 0}, status = CAIRO_STATUS_SUCCESS, user_data = {
+                  size = 0, num_elements = 0, element_size = 12, 
+                  elements = 0x0, is_snapshot = 0}, matrix = {xx = 1, yx = 0, 
+                  xy = 0, yy = 1, x0 = 0, y0 = 0}, 
+                filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_PAD}, 
+              n_stops = 0, stops_size = 1072693248, stops = 0x0, 
+              stops_embedded = {{offset = 5.2998088236266445e-315, color = {
+                    red = 5.2998088236266445e-315, 
+                    green = -nan(0xfffff3ff00000), 
+                    blue = 8.6938167555842266e-311, 
+                    alpha = 1.5638604078157623e-314, red_short = 0, 
+                    green_short = 49136, blue_short = 11544, 
+                    alpha_short = 21572}}, {offset = -7.8148893616025346e-12, 
+                  color = {red = 8.6191995010616668e+97, 
+                    green = -2.8961094193203043e+269, 
+                    blue = 4.3274007878933342e-38, 
+                    alpha = -1.5209627806610607e+304, red_short = 1569, 
+                    green_short = 16121, blue_short = 11544, 
+                    alpha_short = 21572}}}}, linear = {base = {base = {
+                  type = CAIRO_PATTERN_TYPE_SOLID, ref_count = {
+                    ref_count = 0}, status = CAIRO_STATUS_SUCCESS, 
+                  user_data = {size = 0, num_elements = 0, element_size = 12, 
+                    elements = 0x0, is_snapshot = 0}, matrix = {xx = 1, 
+                    yx = 0, xy = 0, yy = 1, x0 = 0, y0 = 0}, 
+                  filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_PAD}, 
+                n_stops = 0, stops_size = 1072693248, stops = 0x0, 
+                stops_embedded = {{offset = 5.2998088236266445e-315, color = {
+                      red = 5.2998088236266445e-315, 
+                      green = -nan(0xfffff3ff00000), 
+                      blue = 8.6938167555842266e-311, 
+                      alpha = 1.5638604078157623e-314, red_short = 0, 
+                      green_short = 49136, blue_short = 11544, 
+                      alpha_short = 21572}}, {
+                    offset = -7.8148893616025346e-12, color = {
+                      red = 8.6191995010616668e+97, 
+                      green = -2.8961094193203043e+269, 
+                      blue = 4.3274007878933342e-38, 
+                      alpha = -1.5209627806610607e+304, red_short = 1569, 
+                      green_short = 16121, blue_short = 11544, 
+                      alpha_short = 21572}}}}, p1 = {x = 1072243195, 
+                y = -2022882139}, p2 = {x = 1053937308, y = 1989996768}}, 
+            radial = {base = {base = {type = CAIRO_PATTERN_TYPE_SOLID, 
+                  ref_count = {ref_count = 0}, status = CAIRO_STATUS_SUCCESS, 
+                  user_data = {size = 0, num_elements = 0, element_size = 12, 
+                    elements = 0x0, is_snapshot = 0}, matrix = {xx = 1, 
+                    yx = 0, xy = 0, yy = 1, x0 = 0, y0 = 0}, 
+                  filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_PAD}, 
+                n_stops = 0, stops_size = 1072693248, stops = 0x0, 
+                stops_embedded = {{offset = 5.2998088236266445e-315, color = {
+                      red = 5.2998088236266445e-315, 
+                      green = -nan(0xfffff3ff00000), 
+                      blue = 8.6938167555842266e-311, 
+                      alpha = 1.5638604078157623e-314, red_short = 0, 
+                      green_short = 49136, blue_short = 11544, 
+                      alpha_short = 21572}}, {
+                    offset = -7.8148893616025346e-12, color = {
+                      red = 8.6191995010616668e+97, 
+                      green = -2.8961094193203043e+269, 
+                      blue = 4.3274007878933342e-38, 
+                      alpha = -1.5209627806610607e+304, red_short = 1569, 
+                      green_short = 16121, blue_short = 11544, 
+                      alpha_short = 21572}}}}, c1 = {x = 1072243195, 
+                y = -2022882139}, r1 = 1053937308, c2 = {x = 1989996768, 
+                y = 1071913775}, r2 = -1928713509}}}
+        target_rect = {x = 0, y = 0, width = 1261, height = 927}
+#10 _cairo_clip_clip (clip=0x9ea1098, path=0x9ec7d8c, 
+    fill_rule=CAIRO_FILL_RULE_WINDING, tolerance=0.10000000000000001, 
+    antialias=CAIRO_ANTIALIAS_DEFAULT, target=0x9a7d900)
+    at /build/buildd/cairo-1.8.10/src/cairo-clip.c:609
+        status = CAIRO_STATUS_SUCCESS
+        rectangle = {x = 0, y = 0, width = 1261, height = 927}
+        traps = {status = CAIRO_STATUS_SUCCESS, extents = {p1 = {x = 1792, 
+              y = 8704}, p2 = {x = 9984, y = 16896}}, num_traps = 9, 
+          traps_size = 32, traps = 0x9ef3c00, traps_embedded = {{top = 8704, 
+              bottom = 8743, left = {p1 = {x = 2304, y = 8704}, p2 = {
+                  x = 2103, y = 8743}}, right = {p1 = {x = 9472, y = 8704}, 
+                p2 = {x = 9670, y = 8743}}}}, has_limits = 1, limits = {p1 = {
+              x = 0, y = 0}, p2 = {x = 322816, y = 237312}}}
+#11 0xb705435c in _cairo_gstate_clip (gstate=0x9ea1010, path=0x9ec7d8c)
+    at /build/buildd/cairo-1.8.10/src/cairo-gstate.c:1201
+No locals.
+#12 0xb704dc6d in *INT_cairo_clip_preserve (cr=0x9ec7c00)
+    at /build/buildd/cairo-1.8.10/src/cairo.c:2468
+        status = <value optimized out>
+#13 0xb704dc92 in cairo_clip (cr=0x9ec7c00)
+    at /build/buildd/cairo-1.8.10/src/cairo.c:2433
+No locals.
+#14 0xb5cd9835 in ?? () from /usr/lib/gtk-2.0/2.10.0/engines/libmurrine.so
+No symbol table info available.
+#15 0xb5ccf941 in ?? () from /usr/lib/gtk-2.0/2.10.0/engines/libmurrine.so
+No symbol table info available.
+#16 0xb739f09e in IA__gtk_paint_box (style=0xbfc8d368, window=0x8f0bbf0, 
+    state_type=GTK_STATE_ACTIVE, shadow_type=GTK_SHADOW_IN, area=0x9ef390c, 
+    widget=0x907e0a0, detail=0xb7561835 "button", x=5, y=32, width=36, 
+    height=36) at /build/buildd/gtk+2.0-2.20.0/gtk/gtkstyle.c:6204
+        __PRETTY_FUNCTION__ = "IA__gtk_paint_box"
+#17 0xb725e65a in _gtk_button_paint (button=0x907e0a0, area=0x9ef390c, 
+    state_type=GTK_STATE_ACTIVE, shadow_type=GTK_SHADOW_IN, 
+    main_detail=0xb75857f6 "togglebutton", 
+    default_detail=0xb75857e2 "togglebuttondefault")
+    at /build/buildd/gtk+2.0-2.20.0/gtk/gtkbutton.c:1524
+        width = 36
+        height = 36
+        x = <value optimized out>
+        y = <value optimized out>
+        border_width = <value optimized out>
+        default_border = {left = 0, right = 0, top = 0, bottom = 0}
+        default_outside_border = {left = 0, right = 0, top = 0, bottom = 0}
+        interior_focus = 1
+        focus_width = 1
+        focus_pad = 1
+#18 0xb73ee258 in gtk_toggle_button_expose (widget=0x907e0a0, event=0x9ef3900)
+    at /build/buildd/gtk+2.0-2.20.0/gtk/gtktogglebutton.c:440
+        child = 0x90bae78
+        state_type = <value optimized out>
+        shadow_type = 6
+#19 0xb731d2f4 in _gtk_marshal_BOOLEAN__BOXED (closure=0x8f26570, 
+    return_value=0xbfc8dd94, n_param_values=2, param_values=0x9e7ed68, 
+    invocation_hint=0xbfc8dd80, marshal_data=0xb73ee1d0)
+    at /build/buildd/gtk+2.0-2.20.0/gtk/gtkmarshalers.c:84
+        data1 = 0x6
+        data2 = <value optimized out>
+        v_return = <value optimized out>
+        __PRETTY_FUNCTION__ = "_gtk_marshal_BOOLEAN__BOXED"
+#20 0xb6b798b9 in g_type_class_meta_marshal (closure=0x8f26570, 
+    return_value=0xbfc8dd94, n_param_values=2, param_values=0x9e7ed68, 
+    invocation_hint=0xbfc8dd80, marshal_data=0xc8)
+    at /build/buildd/glib2.0-2.23.6/gobject/gclosure.c:878
+        callback = <value optimized out>
+#21 0xb6b7b178 in IA__g_closure_invoke (closure=0x8f26570, 
+    return_value=0xbfc8dd94, n_param_values=2, param_values=0x9e7ed68, 
+    invocation_hint=0xbfc8dd80)
+    at /build/buildd/glib2.0-2.23.6/gobject/gclosure.c:767
+        marshal = 0xb6b79870 <g_type_class_meta_marshal>
+        marshal_data = 0xc8
+        __PRETTY_FUNCTION__ = "IA__g_closure_invoke"
+#22 0xb6b925c6 in signal_emit_unlocked_R (node=<value optimized out>, 
+    detail=<value optimized out>, instance=0x907e0a0, 
+    emission_return=0xbfc8dedc, instance_and_params=0x9e7ed68)
+    at /build/buildd/glib2.0-2.23.6/gobject/gsignal.c:3286
+        accumulator = 0x8f26500
+        emission = {next = 0xbfc8e1f8, instance = 0x907e0a0, ihint = {
+            signal_id = 66, detail = 0, run_type = G_SIGNAL_RUN_LAST}, 
+          state = EMISSION_RUN, chain_type = 150130552}
+        class_closure = 0x8f26570
+        handler_list = 0x0
+        return_accu = <value optimized out>
+        accu = {g_type = 20, data = {{v_int = 0, v_uint = 0, v_long = 0, 
+              v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, 
+              v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, 
+              v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, 
+              v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        signal_id = 66
+        max_sequential_handler_number = 6108
+        return_value_altered = 0
+#23 0xb6b93e63 in IA__g_signal_emit_valist (instance=0x907e0a0, signal_id=66, 
+    detail=0, 
+    var_args=0xbfc8df40 "l\337ȿpZ\362\b\210\337ȿ\252\240D\267\364\017[\267\240\340\a\t\210\337ȿ\240\340\a\t\240\340\a\tpZ\362\b$")
+    at /build/buildd/glib2.0-2.23.6/gobject/gsignal.c:2991
+        return_value = {g_type = 20, data = {{v_int = 0, v_uint = 0, 
+              v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, 
+              v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, 
+              v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, 
+              v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        error = <value optimized out>
+        signal_return_type = 20
+        node = 0x8f264b8
+        i = <value optimized out>
+        n_params = 1
+        __PRETTY_FUNCTION__ = "IA__g_signal_emit_valist"
+#24 0xb6b94746 in IA__g_signal_emit (instance=0x907e0a0, signal_id=66, 
+    detail=0) at /build/buildd/glib2.0-2.23.6/gobject/gsignal.c:3038
+No locals.
+#25 0xb744a306 in gtk_widget_event_internal (widget=<value optimized out>, 
+    event=0x9ef3900) at /build/buildd/gtk+2.0-2.20.0/gtk/gtkwidget.c:4951
+        signal_num = <value optimized out>
+        return_val = 0
+#26 0xb728b9c3 in IA__gtk_container_propagate_expose (container=0x90964b0, 
+    child=0x907e0a0, event=0x9a42650)
+    at /build/buildd/gtk+2.0-2.20.0/gtk/gtkcontainer.c:2736
+        child_event = 0x9ef3900
+        __PRETTY_FUNCTION__ = "IA__gtk_container_propagate_expose"
+#27 0xb728b9f1 in gtk_container_expose_child (child=0x907e0a0, 
+    client_data=0xbfc8e058)
+    at /build/buildd/gtk+2.0-2.20.0/gtk/gtkcontainer.c:2624
+No locals.
+#28 0xb7253add in gtk_bin_forall (container=0x90964b0, include_internals=1, 
+    callback=0xb728b9d0 <gtk_container_expose_child>, 
+    callback_data=0xbfc8e058) at /build/buildd/gtk+2.0-2.20.0/gtk/gtkbin.c:128
+No locals.
+#29 0xb728c554 in IA__gtk_container_forall (container=0x90964b0, 
+    callback=0xb728b9d0 <gtk_container_expose_child>, 
+    callback_data=0xbfc8e058)
+    at /build/buildd/gtk+2.0-2.20.0/gtk/gtkcontainer.c:1500
+        __PRETTY_FUNCTION__ = "IA__gtk_container_forall"
+#30 0xb728dca7 in gtk_container_expose (widget=0x90964b0, event=0x9a42650)
+    at /build/buildd/gtk+2.0-2.20.0/gtk/gtkcontainer.c:2647
+        data = {container = 0x90964b0, event = 0x9a42650}
+        __PRETTY_FUNCTION__ = "gtk_container_expose"
+#31 0xb731d2f4 in _gtk_marshal_BOOLEAN__BOXED (closure=0x8f26570, 
+    return_value=0xbfc8e214, n_param_values=2, param_values=0x9e54278, 
+    invocation_hint=0xbfc8e200, marshal_data=0xb728dc00)
+    at /build/buildd/gtk+2.0-2.20.0/gtk/gtkmarshalers.c:84
+        data1 = 0x6
+        data2 = <value optimized out>
+        v_return = <value optimized out>
+        __PRETTY_FUNCTION__ = "_gtk_marshal_BOOLEAN__BOXED"
+#32 0xb6b798b9 in g_type_class_meta_marshal (closure=0x8f26570, 
+    return_value=0xbfc8e214, n_param_values=2, param_values=0x9e54278, 
+    invocation_hint=0xbfc8e200, marshal_data=0xc8)
+    at /build/buildd/glib2.0-2.23.6/gobject/gclosure.c:878
+        callback = <value optimized out>
+#33 0xb6b7b178 in IA__g_closure_invoke (closure=0x8f26570, 
+    return_value=0xbfc8e214, n_param_values=2, param_values=0x9e54278, 
+    invocation_hint=0xbfc8e200)
+    at /build/buildd/glib2.0-2.23.6/gobject/gclosure.c:767
+        marshal = 0xb6b79870 <g_type_class_meta_marshal>
+        marshal_data = 0xc8
+        __PRETTY_FUNCTION__ = "IA__g_closure_invoke"
+#34 0xb6b925c6 in signal_emit_unlocked_R (node=<value optimized out>, 
+    detail=<value optimized out>, instance=0x90964b0, 
+    emission_return=0xbfc8e35c, instance_and_params=0x9e54278)
+    at /build/buildd/glib2.0-2.23.6/gobject/gsignal.c:3286
+        accumulator = 0x8f26500
+        emission = {next = 0xbfc8e648, instance = 0x90964b0, ihint = {
+            signal_id = 66, detail = 0, run_type = G_SIGNAL_RUN_LAST}, 
+          state = EMISSION_RUN, chain_type = 150456144}
+        class_closure = 0x8f26570
+        handler_list = 0x0
+        return_accu = <value optimized out>
+        accu = {g_type = 20, data = {{v_int = 0, v_uint = 0, v_long = 0, 
+              v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, 
+              v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, 
+              v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, 
+              v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        signal_id = 66
+        max_sequential_handler_number = 6108
+        return_value_altered = 0
+#35 0xb6b93e63 in IA__g_signal_emit_valist (instance=0x90964b0, signal_id=66, 
+    detail=0, 
+    var_args=0xbfc8e3c0 "\354\343ȿpZ\362\b\b\344ȿ\252\240D\267\364\017[\267\260d\t\t\b\344ȿ\260d\t\t\260d\t\tpZ\362\b$")
+    at /build/buildd/glib2.0-2.23.6/gobject/gsignal.c:2991
+        return_value = {g_type = 20, data = {{v_int = 0, v_uint = 0, 
+              v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, 
+              v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, 
+              v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, 
+              v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        error = <value optimized out>
+        signal_return_type = 20
+        node = 0x8f264b8
+        i = <value optimized out>
+        n_params = 1
+        __PRETTY_FUNCTION__ = "IA__g_signal_emit_valist"
+#36 0xb6b94746 in IA__g_signal_emit (instance=0x90964b0, signal_id=66, 
+    detail=0) at /build/buildd/glib2.0-2.23.6/gobject/gsignal.c:3038
+No locals.
+#37 0xb744a306 in gtk_widget_event_internal (widget=<value optimized out>, 
+    event=0x9a42650) at /build/buildd/gtk+2.0-2.20.0/gtk/gtkwidget.c:4951
+        signal_num = <value optimized out>
+        return_val = 0
+#38 0xb728b9c3 in IA__gtk_container_propagate_expose (container=0x8f0baa0, 
+    child=0x90964b0, event=0x9ed7790)
+    at /build/buildd/gtk+2.0-2.20.0/gtk/gtkcontainer.c:2736
+        child_event = 0x9a42650
+        __PRETTY_FUNCTION__ = "IA__gtk_container_propagate_expose"
+#39 0xb73f58db in toolbar_content_expose (widget=0x8f0baa0, event=0x9ed7790)
+    at /build/buildd/gtk+2.0-2.20.0/gtk/gtktoolbar.c:4106
+        widget = <value optimized out>
+#40 gtk_toolbar_expose (widget=0x8f0baa0, event=0x9ed7790)
+    at /build/buildd/gtk+2.0-2.20.0/gtk/gtktoolbar.c:887
+        content = 0x90a1c00
+        priv = 0x8f0bb10
+        list = 0x9098bb0
+        border_width = <value optimized out>
+#41 0xb731d2f4 in _gtk_marshal_BOOLEAN__BOXED (closure=0x8f26570, 
+    return_value=0xbfc8e664, n_param_values=2, param_values=0x9e7ec50, 
+    invocation_hint=0xbfc8e650, marshal_data=0xb73f5840)
+    at /build/buildd/gtk+2.0-2.20.0/gtk/gtkmarshalers.c:84
+        data1 = 0x6
+        data2 = <value optimized out>
+        v_return = <value optimized out>
+        __PRETTY_FUNCTION__ = "_gtk_marshal_BOOLEAN__BOXED"
+#42 0xb6b798b9 in g_type_class_meta_marshal (closure=0x8f26570, 
+    return_value=0xbfc8e664, n_param_values=2, param_values=0x9e7ec50, 
+    invocation_hint=0xbfc8e650, marshal_data=0xc8)
+    at /build/buildd/glib2.0-2.23.6/gobject/gclosure.c:878
+        callback = <value optimized out>
+#43 0xb6b7b178 in IA__g_closure_invoke (closure=0x8f26570, 
+    return_value=0xbfc8e664, n_param_values=2, param_values=0x9e7ec50, 
+    invocation_hint=0xbfc8e650)
+    at /build/buildd/glib2.0-2.23.6/gobject/gclosure.c:767
+        marshal = 0xb6b79870 <g_type_class_meta_marshal>
+        marshal_data = 0xc8
+        __PRETTY_FUNCTION__ = "IA__g_closure_invoke"
+#44 0xb6b925c6 in signal_emit_unlocked_R (node=<value optimized out>, 
+    detail=<value optimized out>, instance=0x8f0baa0, 
+    emission_return=0xbfc8e7ac, instance_and_params=0x9e7ec50)
+    at /build/buildd/glib2.0-2.23.6/gobject/gsignal.c:3286
+        accumulator = 0x8f26500
+        emission = {next = 0xbfc8eae8, instance = 0x8f0baa0, ihint = {
+            signal_id = 66, detail = 0, run_type = G_SIGNAL_RUN_LAST}, 
+          state = EMISSION_RUN, chain_type = 151115264}
+        class_closure = 0x8f26570
+        handler_list = 0x0
+        return_accu = <value optimized out>
+        accu = {g_type = 20, data = {{v_int = 0, v_uint = 0, v_long = 0, 
+              v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, 
+              v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, 
+              v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, 
+              v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        signal_id = 66
+        max_sequential_handler_number = 6108
+        return_value_altered = 0
+#45 0xb6b93e63 in IA__g_signal_emit_valist (instance=0x8f0baa0, signal_id=66, 
+    detail=0, 
+    var_args=0xbfc8e810 "<\350ȿpZ\362\bX\350ȿ\252\240D\267\364\017[\267\240\272\360\bX\350ȿ\240\272\360\b\240\272\360\bpZ\362\b")
+    at /build/buildd/glib2.0-2.23.6/gobject/gsignal.c:2991
+        return_value = {g_type = 20, data = {{v_int = 0, v_uint = 0, 
+              v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, 
+              v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, 
+              v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, 
+              v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        error = <value optimized out>
+        signal_return_type = 20
+        node = 0x8f264b8
+        i = <value optimized out>
+        n_params = 1
+        __PRETTY_FUNCTION__ = "IA__g_signal_emit_valist"
+#46 0xb6b94746 in IA__g_signal_emit (instance=0x8f0baa0, signal_id=66, 
+    detail=0) at /build/buildd/glib2.0-2.23.6/gobject/gsignal.c:3038
+No locals.
+#47 0xb744a306 in gtk_widget_event_internal (widget=<value optimized out>, 
+    event=0x9ed7790) at /build/buildd/gtk+2.0-2.20.0/gtk/gtkwidget.c:4951
+        signal_num = <value optimized out>
+        return_val = 0
+#48 0xb728b9c3 in IA__gtk_container_propagate_expose (container=0x906e8b0, 
+    child=0x8f0baa0, event=0x9a4c330)
+    at /build/buildd/gtk+2.0-2.20.0/gtk/gtkcontainer.c:2736
+        child_event = 0x9ed7790
+        __PRETTY_FUNCTION__ = "IA__gtk_container_propagate_expose"
+#49 0xb728b9f1 in gtk_container_expose_child (child=0x8f0baa0, 
+    client_data=0xbfc8e948)
+    at /build/buildd/gtk+2.0-2.20.0/gtk/gtkcontainer.c:2624
+No locals.
+#50 0xb7257c75 in gtk_box_forall (container=0x906e8b0, include_internals=1, 
+    callback=0xb728b9d0 <gtk_container_expose_child>, 
+    callback_data=0xbfc8e948)
+    at /build/buildd/gtk+2.0-2.20.0/gtk/gtkbox.c:1251
+        child = <value optimized out>
+        children = <value optimized out>
+#51 0xb728c554 in IA__gtk_container_forall (container=0x906e8b0, 
+    callback=0xb728b9d0 <gtk_container_expose_child>, 
+    callback_data=0xbfc8e948)
+    at /build/buildd/gtk+2.0-2.20.0/gtk/gtkcontainer.c:1500
+        __PRETTY_FUNCTION__ = "IA__gtk_container_forall"
+#52 0xb728dca7 in gtk_container_expose (widget=0x906e8b0, event=0x9a4c330)
+    at /build/buildd/gtk+2.0-2.20.0/gtk/gtkcontainer.c:2647
+        data = {container = 0x906e8b0, event = 0x9a4c330}
+        __PRETTY_FUNCTION__ = "gtk_container_expose"
+#53 0xb731d2f4 in _gtk_marshal_BOOLEAN__BOXED (closure=0x8f26570, 
+    return_value=0xbfc8eb04, n_param_values=2, param_values=0x9011918, 
+    invocation_hint=0xbfc8eaf0, marshal_data=0xb728dc00)
+    at /build/buildd/gtk+2.0-2.20.0/gtk/gtkmarshalers.c:84
+        data1 = 0x6
+        data2 = <value optimized out>
+        v_return = <value optimized out>
+        __PRETTY_FUNCTION__ = "_gtk_marshal_BOOLEAN__BOXED"
+#54 0xb6b798b9 in g_type_class_meta_marshal (closure=0x8f26570, 
+    return_value=0xbfc8eb04, n_param_values=2, param_values=0x9011918, 
+    invocation_hint=0xbfc8eaf0, marshal_data=0xc8)
+    at /build/buildd/glib2.0-2.23.6/gobject/gclosure.c:878
+        callback = <value optimized out>
+#55 0xb6b7b178 in IA__g_closure_invoke (closure=0x8f26570, 
+    return_value=0xbfc8eb04, n_param_values=2, param_values=0x9011918, 
+    invocation_hint=0xbfc8eaf0)
+    at /build/buildd/glib2.0-2.23.6/gobject/gclosure.c:767
+        marshal = 0xb6b79870 <g_type_class_meta_marshal>
+        marshal_data = 0xc8
+        __PRETTY_FUNCTION__ = "IA__g_closure_invoke"
+#56 0xb6b925c6 in signal_emit_unlocked_R (node=<value optimized out>, 
+    detail=<value optimized out>, instance=0x906e8b0, 
+    emission_return=0xbfc8ec4c, instance_and_params=0x9011918)
+    at /build/buildd/glib2.0-2.23.6/gobject/gsignal.c:3286
+        accumulator = 0x8f26500
+        emission = {next = 0xbfc8ef88, instance = 0x906e8b0, ihint = {
+            signal_id = 66, detail = 0, run_type = G_SIGNAL_RUN_LAST}, 
+          state = EMISSION_RUN, chain_type = 148767256}
+        class_closure = 0x8f26570
+        handler_list = 0x0
+        return_accu = <value optimized out>
+        accu = {g_type = 20, data = {{v_int = 0, v_uint = 0, v_long = 0, 
+              v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, 
+              v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, 
+              v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, 
+              v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        signal_id = 66
+        max_sequential_handler_number = 6108
+        return_value_altered = 0
+#57 0xb6b93e63 in IA__g_signal_emit_valist (instance=0x906e8b0, signal_id=66, 
+    detail=0, 
+    var_args=0xbfc8ecb0 "\334\354ȿpZ\362\b\370\354ȿ\252\240D\267\364\017[\267\260\350\006\t\370\354ȿ\260\350\006\t\260\350\006\tpZ\362\b")
+    at /build/buildd/glib2.0-2.23.6/gobject/gsignal.c:2991
+        return_value = {g_type = 20, data = {{v_int = 0, v_uint = 0, 
+              v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, 
+              v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, 
+              v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, 
+              v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        error = <value optimized out>
+        signal_return_type = 20
+        node = 0x8f264b8
+        i = <value optimized out>
+        n_params = 1
+        __PRETTY_FUNCTION__ = "IA__g_signal_emit_valist"
+#58 0xb6b94746 in IA__g_signal_emit (instance=0x906e8b0, signal_id=66, 
+    detail=0) at /build/buildd/glib2.0-2.23.6/gobject/gsignal.c:3038
+No locals.
+#59 0xb744a306 in gtk_widget_event_internal (widget=<value optimized out>, 
+    event=0x9a4c330) at /build/buildd/gtk+2.0-2.20.0/gtk/gtkwidget.c:4951
+        signal_num = <value optimized out>
+        return_val = 0
+#60 0xb728b9c3 in IA__gtk_container_propagate_expose (container=0x9035718, 
+    child=0x906e8b0, event=0x9a4c4b8)
+    at /build/buildd/gtk+2.0-2.20.0/gtk/gtkcontainer.c:2736
+        child_event = 0x9a4c330
+        __PRETTY_FUNCTION__ = "IA__gtk_container_propagate_expose"
+#61 0xb728b9f1 in gtk_container_expose_child (child=0x906e8b0, 
+    client_data=0xbfc8ede8)
+    at /build/buildd/gtk+2.0-2.20.0/gtk/gtkcontainer.c:2624
+No locals.
+#62 0xb7257c75 in gtk_box_forall (container=0x9035718, include_internals=1, 
+    callback=0xb728b9d0 <gtk_container_expose_child>, 
+    callback_data=0xbfc8ede8)
+    at /build/buildd/gtk+2.0-2.20.0/gtk/gtkbox.c:1251
+        child = <value optimized out>
+        children = <value optimized out>
+#63 0xb728c554 in IA__gtk_container_forall (container=0x9035718, 
+    callback=0xb728b9d0 <gtk_container_expose_child>, 
+    callback_data=0xbfc8ede8)
+    at /build/buildd/gtk+2.0-2.20.0/gtk/gtkcontainer.c:1500
+        __PRETTY_FUNCTION__ = "IA__gtk_container_forall"
+#64 0xb728dca7 in gtk_container_expose (widget=0x9035718, event=0x9a4c4b8)
+    at /build/buildd/gtk+2.0-2.20.0/gtk/gtkcontainer.c:2647
+        data = {container = 0x9035718, event = 0x9a4c4b8}
+        __PRETTY_FUNCTION__ = "gtk_container_expose"
+#65 0xb731d2f4 in _gtk_marshal_BOOLEAN__BOXED (closure=0x8f26570, 
+    return_value=0xbfc8efa4, n_param_values=2, param_values=0x9e7ed90, 
+    invocation_hint=0xbfc8ef90, marshal_data=0xb728dc00)
+    at /build/buildd/gtk+2.0-2.20.0/gtk/gtkmarshalers.c:84
+        data1 = 0x6
+        data2 = <value optimized out>
+        v_return = <value optimized out>
+        __PRETTY_FUNCTION__ = "_gtk_marshal_BOOLEAN__BOXED"
+#66 0xb6b798b9 in g_type_class_meta_marshal (closure=0x8f26570, 
+    return_value=0xbfc8efa4, n_param_values=2, param_values=0x9e7ed90, 
+    invocation_hint=0xbfc8ef90, marshal_data=0xc8)
+    at /build/buildd/glib2.0-2.23.6/gobject/gclosure.c:878
+        callback = <value optimized out>
+#67 0xb6b7b178 in IA__g_closure_invoke (closure=0x8f26570, 
+    return_value=0xbfc8efa4, n_param_values=2, param_values=0x9e7ed90, 
+    invocation_hint=0xbfc8ef90)
+    at /build/buildd/glib2.0-2.23.6/gobject/gclosure.c:767
+        marshal = 0xb6b79870 <g_type_class_meta_marshal>
+        marshal_data = 0xc8
+        __PRETTY_FUNCTION__ = "IA__g_closure_invoke"
+#68 0xb6b925c6 in signal_emit_unlocked_R (node=<value optimized out>, 
+    detail=<value optimized out>, instance=0x9035718, 
+    emission_return=0xbfc8f0ec, instance_and_params=0x9e7ed90)
+    at /build/buildd/glib2.0-2.23.6/gobject/gsignal.c:3286
+        accumulator = 0x8f26500
+        emission = {next = 0xbfc8f458, instance = 0x9035718, ihint = {
+            signal_id = 66, detail = 0, run_type = G_SIGNAL_RUN_LAST}, 
+          state = EMISSION_RUN, chain_type = 150748504}
+        class_closure = 0x8f26570
+        handler_list = 0x0
+        return_accu = <value optimized out>
+        accu = {g_type = 20, data = {{v_int = 0, v_uint = 0, v_long = 0, 
+              v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, 
+              v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, 
+              v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, 
+              v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        signal_id = 66
+        max_sequential_handler_number = 6108
+        return_value_altered = 0
+#69 0xb6b93e63 in IA__g_signal_emit_valist (instance=0x9035718, signal_id=66, 
+    detail=0, 
+    var_args=0xbfc8f150 "|\361ȿpZ\362\b\230\361ȿ\252\240D\267\364\017[\267\030W\003\t\230\361ȿ\030W\003\t\030W\003\tpZ\362\b")
+    at /build/buildd/glib2.0-2.23.6/gobject/gsignal.c:2991
+        return_value = {g_type = 20, data = {{v_int = 0, v_uint = 0, 
+              v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, 
+              v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, 
+              v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, 
+              v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        error = <value optimized out>
+        signal_return_type = 20
+        node = 0x8f264b8
+        i = <value optimized out>
+        n_params = 1
+        __PRETTY_FUNCTION__ = "IA__g_signal_emit_valist"
+#70 0xb6b94746 in IA__g_signal_emit (instance=0x9035718, signal_id=66, 
+    detail=0) at /build/buildd/glib2.0-2.23.6/gobject/gsignal.c:3038
+No locals.
+#71 0xb744a306 in gtk_widget_event_internal (widget=<value optimized out>, 
+    event=0x9a4c4b8) at /build/buildd/gtk+2.0-2.20.0/gtk/gtkwidget.c:4951
+        signal_num = <value optimized out>
+        return_val = 0
+#72 0xb728b9c3 in IA__gtk_container_propagate_expose (container=0x8fc2830, 
+    child=0x9035718, event=0xbfc8f718)
+    at /build/buildd/gtk+2.0-2.20.0/gtk/gtkcontainer.c:2736
+        child_event = 0x9a4c4b8
+        __PRETTY_FUNCTION__ = "IA__gtk_container_propagate_expose"
+#73 0xb728b9f1 in gtk_container_expose_child (child=0x9035718, 
+    client_data=0xbfc8f268)
+    at /build/buildd/gtk+2.0-2.20.0/gtk/gtkcontainer.c:2624
+No locals.
+#74 0xb7253add in gtk_bin_forall (container=0x8fc2830, include_internals=1, 
+    callback=0xb728b9d0 <gtk_container_expose_child>, 
+    callback_data=0xbfc8f268) at /build/buildd/gtk+2.0-2.20.0/gtk/gtkbin.c:128
+No locals.
+#75 0xb728c554 in IA__gtk_container_forall (container=0x8fc2830, 
+    callback=0xb728b9d0 <gtk_container_expose_child>, 
+    callback_data=0xbfc8f268)
+    at /build/buildd/gtk+2.0-2.20.0/gtk/gtkcontainer.c:1500
+        __PRETTY_FUNCTION__ = "IA__gtk_container_forall"
+#76 0xb728dca7 in gtk_container_expose (widget=0x8fc2830, event=0xbfc8f718)
+    at /build/buildd/gtk+2.0-2.20.0/gtk/gtkcontainer.c:2647
+        data = {container = 0x8fc2830, event = 0xbfc8f718}
+        __PRETTY_FUNCTION__ = "gtk_container_expose"
+#77 0xb74628a7 in gtk_window_expose (widget=0x8fc2830, event=0xbfc8f718)
+    at /build/buildd/gtk+2.0-2.20.0/gtk/gtkwindow.c:6632
+No locals.
+#78 0xb731d2f4 in _gtk_marshal_BOOLEAN__BOXED (closure=0x8f26570, 
+    return_value=0xbfc8f474, n_param_values=2, param_values=0x9e83a50, 
+    invocation_hint=0xbfc8f460, marshal_data=0xb7462860)
+    at /build/buildd/gtk+2.0-2.20.0/gtk/gtkmarshalers.c:84
+        data1 = 0x6
+        data2 = <value optimized out>
+        v_return = <value optimized out>
+        __PRETTY_FUNCTION__ = "_gtk_marshal_BOOLEAN__BOXED"
+#79 0xb6b798b9 in g_type_class_meta_marshal (closure=0x8f26570, 
+    return_value=0xbfc8f474, n_param_values=2, param_values=0x9e83a50, 
+    invocation_hint=0xbfc8f460, marshal_data=0xc8)
+    at /build/buildd/glib2.0-2.23.6/gobject/gclosure.c:878
+        callback = <value optimized out>
+#80 0xb6b7b252 in IA__g_closure_invoke (closure=0x8f26570, 
+    return_value=0xbfc8f474, n_param_values=2, param_values=0x9e83a50, 
+    invocation_hint=0xbfc8f460)
+    at /build/buildd/glib2.0-2.23.6/gobject/gclosure.c:767
+        marshal = 0xb6b79870 <g_type_class_meta_marshal>
+        marshal_data = 0xc8
+        __PRETTY_FUNCTION__ = "IA__g_closure_invoke"
+#81 0xb6b925c6 in signal_emit_unlocked_R (node=<value optimized out>, 
+    detail=<value optimized out>, instance=0x8fc2830, 
+    emission_return=0xbfc8f5bc, instance_and_params=0x9e83a50)
+    at /build/buildd/glib2.0-2.23.6/gobject/gsignal.c:3286
+        accumulator = 0x8f26500
+        emission = {next = 0x0, instance = 0x8fc2830, ihint = {
+            signal_id = 66, detail = 0, run_type = G_SIGNAL_RUN_LAST}, 
+          state = EMISSION_RUN, chain_type = 150032520}
+        class_closure = 0x8f26570
+        handler_list = 0x0
+        return_accu = <value optimized out>
+        accu = {g_type = 20, data = {{v_int = 0, v_uint = 0, v_long = 0, 
+              v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, 
+              v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, 
+              v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, 
+              v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        signal_id = 66
+        max_sequential_handler_number = 6108
+        return_value_altered = 0
+#82 0xb6b93e63 in IA__g_signal_emit_valist (instance=0x8fc2830, signal_id=66, 
+    detail=0, 
+    var_args=0xbfc8f620 "L\366ȿpZ\362\b\270\257\350\t\252\240D\267\364\017[\267\060(\374\bh\366ȿ0(\374\b0(\374\bpZ\362\b\237\003")
+    at /build/buildd/glib2.0-2.23.6/gobject/gsignal.c:2991
+        return_value = {g_type = 20, data = {{v_int = 0, v_uint = 0, 
+              v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, 
+              v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, 
+              v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, 
+              v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        error = <value optimized out>
+        signal_return_type = 20
+        node = 0x8f264b8
+        i = <value optimized out>
+        n_params = 1
+        __PRETTY_FUNCTION__ = "IA__g_signal_emit_valist"
+#83 0xb6b94746 in IA__g_signal_emit (instance=0x8fc2830, signal_id=66, 
+    detail=0) at /build/buildd/glib2.0-2.23.6/gobject/gsignal.c:3038
+No locals.
+#84 0xb744a306 in gtk_widget_event_internal (widget=<value optimized out>, 
+    event=0xbfc8f718) at /build/buildd/gtk+2.0-2.20.0/gtk/gtkwidget.c:4951
+        signal_num = <value optimized out>
+        return_val = 0
+#85 0xb7316feb in IA__gtk_main_do_event (event=0xbfc8f718)
+    at /build/buildd/gtk+2.0-2.20.0/gtk/gtkmain.c:1572
+        event_widget = 0x8fc2830
+        grab_widget = <value optimized out>
+        window_group = 0x90c9d60
+        rewritten_event = 0x0
+        tmp_list = <value optimized out>
+        __PRETTY_FUNCTION__ = "IA__gtk_main_do_event"
+#86 0xb718582b in _gdk_window_process_updates_recurse (window=0x8f0bbf0, 
+    expose_region=0x9ea8a40)
+    at /build/buildd/gtk+2.0-2.20.0/gdk/gdkwindow.c:5181
+        event = {type = GDK_EXPOSE, any = {type = GDK_EXPOSE, 
+            window = 0x8f0bbf0, send_event = 0 '\000'}, expose = {
+            type = GDK_EXPOSE, window = 0x8f0bbf0, send_event = 0 '\000', 
+            area = {x = 0, y = 27, width = 502, height = 555}, 
+            region = 0x9ea8a40, count = 0}, no_expose = {type = GDK_EXPOSE, 
+            window = 0x8f0bbf0, send_event = 0 '\000'}, visibility = {
+            type = GDK_EXPOSE, window = 0x8f0bbf0, send_event = 0 '\000', 
+            state = GDK_VISIBILITY_UNOBSCURED}, motion = {type = GDK_EXPOSE, 
+            window = 0x8f0bbf0, send_event = 0 '\000', time = 0, 
+            x = 1.0652418870779065e-311, y = 6.7427231100477007e-261, 
+            axes = 0x0, state = 3071764093, is_hint = -25072, 
+            device = 0x9e70ea8, x_root = -2.6253785161729224e-43, 
+            y_root = 7.1385730832628231e-261}, button = {type = GDK_EXPOSE, 
+            window = 0x8f0bbf0, send_event = 0 '\000', time = 0, 
+            x = 1.0652418870779065e-311, y = 6.7427231100477007e-261, 
+            axes = 0x0, state = 3071764093, button = 166305296, 
+            device = 0x9e70ea8, x_root = -2.6253785161729224e-43, 
+            y_root = 7.1385730832628231e-261}, scroll = {type = GDK_EXPOSE, 
+            window = 0x8f0bbf0, send_event = 0 '\000', time = 0, 
+            x = 1.0652418870779065e-311, y = 6.7427231100477007e-261, 
+            state = 0, direction = 3071764093, device = 0x9e99e10, 
+            x_root = 3.7355334204705267e-312, 
+            y_root = 6.0933535866690562e-313}, key = {type = GDK_EXPOSE, 
+            window = 0x8f0bbf0, send_event = 0 '\000', time = 0, state = 27, 
+            keyval = 502, length = 555, string = 0x9ea8a40 "\024", 
+            hardware_keycode = 0, group = 0 '\000', is_modifier = 0}, 
+          crossing = {type = GDK_EXPOSE, window = 0x8f0bbf0, 
+            send_event = 0 '\000', subwindow = 0x0, time = 27, 
+            x = 1.1777076642337471e-311, y = 8.2195606660269821e-316, 
+            x_root = 6.50832960420767e-261, y_root = 3.7355334204705267e-312, 
+            mode = 3071765326, detail = 28, focus = 166467872, 
+            state = 149994480}, focus_change = {type = GDK_EXPOSE, 
+            window = 0x8f0bbf0, send_event = 0 '\000', in = 2497}, 
+          configure = {type = GDK_EXPOSE, window = 0x8f0bbf0, 
+            send_event = 0 '\000', x = 0, y = 27, width = 502, height = 555}, 
+          property = {type = GDK_EXPOSE, window = 0x8f0bbf0, 
+            send_event = 0 '\000', atom = 0x0, time = 27, state = 502}, 
+          selection = {type = GDK_EXPOSE, window = 0x8f0bbf0, 
+            send_event = 0 '\000', selection = 0x0, target = 0x1b, 
+            property = 0x1f6, time = 555, requestor = 166365760}, 
+          owner_change = {type = GDK_EXPOSE, window = 0x8f0bbf0, 
+            send_event = 0 '\000', owner = 0, reason = 27, selection = 0x1f6, 
+            time = 555, selection_time = 166365760}, proximity = {
+            type = GDK_EXPOSE, window = 0x8f0bbf0, send_event = 0 '\000', 
+            time = 0, device = 0x1b}, client = {type = GDK_EXPOSE, 
+            window = 0x8f0bbf0, send_event = 0 '\000', message_type = 0x0, 
+            data_format = 27, data = {
+              b = "\366\001\000\000+\002\000\000@\212\352\t\000\000\000\000}f\027\267", s = {502, 0, 555, 0, -30144, 2538, 0, 0, 26237, -18665}, l = {502, 
+                555, 166365760, 0, -1223203203}}}, dnd = {type = GDK_EXPOSE, 
+            window = 0x8f0bbf0, send_event = 0 '\000', context = 0x0, 
+            time = 27, x_root = 502, y_root = 0}, window_state = {
+            type = GDK_EXPOSE, window = 0x8f0bbf0, send_event = 0 '\000', 
+            changed_mask = 0, new_window_state = 27}, setting = {
+            type = GDK_EXPOSE, window = 0x8f0bbf0, send_event = 0 '\000', 
+            action = GDK_SETTING_ACTION_NEW, 
+            name = 0x1b <Address 0x1b out of bounds>}, grab_broken = {
+            type = GDK_EXPOSE, window = 0x8f0bbf0, send_event = 0 '\000', 
+            keyboard = 0, implicit = 27, grab_window = 0x1f6}}
+        child = 0x8f0bc98
+        child_region = 0x98dd040
+        r = {x = 0, y = 0, width = 1280, height = 27}
+        l = <value optimized out>
+        children = 0xb43c5970
+#87 0xb71ae984 in _gdk_windowing_window_process_updates_recurse (
+    window=0x8f0bbf0, region=0x9ea8a40)
+    at /build/buildd/gtk+2.0-2.20.0/gdk/x11/gdkwindow-x11.c:5569
+No locals.
+#88 0xb7181f83 in gdk_window_process_updates_internal (window=0x8f0bbf0)
+    at /build/buildd/gtk+2.0-2.20.0/gdk/gdkwindow.c:5340
+        expose_region = 0x9ea8a40
+        save_region = 1
+        clip_box = {x = 0, y = 0, width = 1261, height = 927}
+#89 0xb7183f9f in IA__gdk_window_process_all_updates ()
+    at /build/buildd/gtk+2.0-2.20.0/gdk/gdkwindow.c:5448
+        old_update_windows = 0x9e9ba80
+        tmp_list = 0x9e9ba80
+        in_process_all_updates = 1
+        got_recursive_update = 0
+#90 0xb718401b in gdk_window_update_idle (data=0x0)
+    at /build/buildd/gtk+2.0-2.20.0/gdk/gdkwindow.c:5074
+No locals.
+#91 0xb7160318 in gdk_threads_dispatch (data=0xb290eb70)
+    at /build/buildd/gtk+2.0-2.20.0/gdk/gdk.c:512
+        ret = 0
+#92 0xb6ad06c1 in g_idle_dispatch (source=0x9d48648, callback=0, 
+    user_data=0xb290eb70) at /build/buildd/glib2.0-2.23.6/glib/gmain.c:4065
+No locals.
+#93 0xb6ad2645 in g_main_dispatch (context=0x8ef5430)
+    at /build/buildd/glib2.0-2.23.6/glib/gmain.c:1960
+        dispatch = 0xb6ad06a0 <g_idle_dispatch>
+        user_data = 0xb290eb70
+        callback = 0xb71602b0 <gdk_threads_dispatch>
+        cb_funcs = 0xb6b6033c
+        cb_data = 0x9ea1268
+        current_source_link = {data = 0x9d48648, next = 0x0}
+        source = 0x9d48648
+        current = 0x8f254c8
+        i = 0
+#94 IA__g_main_context_dispatch (context=0x8ef5430)
+    at /build/buildd/glib2.0-2.23.6/glib/gmain.c:2513
+No locals.
+#95 0xb6ad6338 in g_main_context_iterate (context=0x8ef5430, 
+    block=<value optimized out>, dispatch=1, self=0x8dc2028)
+    at /build/buildd/glib2.0-2.23.6/glib/gmain.c:2591
+        max_priority = 120
+        timeout = 0
+        some_ready = 1
+        nfds = <value optimized out>
+        allocated_nfds = <value optimized out>
+        fds = <value optimized out>
+        __PRETTY_FUNCTION__ = "g_main_context_iterate"
+#96 0xb6ad6877 in IA__g_main_loop_run (loop=0x8f65ca8)
+    at /build/buildd/glib2.0-2.23.6/glib/gmain.c:2799
+        self = 0x8dc2028
+        __PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#97 0xb7317299 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.20.0/gtk/gtkmain.c:1219
+        tmp_list = 0x8f17ef8
+        functions = 0x0
+        init = 0x8f41020
+        loop = 0x8f65ca8
+#98 0x0804b33e in main ()
+No symbol table info available.

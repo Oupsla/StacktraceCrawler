@@ -1,0 +1,48 @@
+#0  0x00007fe7f0885ba0 in g_list_foreach () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#1  0x00007fe7f0885bcb in g_list_free_full () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#2  0x00007fe7f330dd8c in ?? () from /usr/lib/x86_64-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#3  0x00007fe7f330e480 in ?? () from /usr/lib/x86_64-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#4  0x00007fe7f330e382 in ?? () from /usr/lib/x86_64-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#5  0x00007fe7f330e382 in ?? () from /usr/lib/x86_64-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#6  0x00007fe7f330e382 in ?? () from /usr/lib/x86_64-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#7  0x00007fe7f330e382 in ?? () from /usr/lib/x86_64-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#8  0x00007fe7f330e382 in ?? () from /usr/lib/x86_64-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#9  0x00007fe7f3310f15 in ?? () from /usr/lib/x86_64-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#10 0x00007fe7f2db9ef0 in ?? () from /usr/lib/x86_64-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#11 0x00007fe7f0888bb5 in g_main_context_dispatch () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#12 0x00007fe7f0888ee8 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#13 0x00007fe7f0888fa4 in g_main_context_iteration () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#14 0x00007fe7f0e2b70c in g_application_run () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#15 0x000000000042bce9 in ?? ()
+No symbol table info available.
+#16 0x00007fe7efd7176d in __libc_start_main () from /lib/x86_64-linux-gnu/libc.so.6
+No symbol table info available.
+#17 0x000000000042bd35 in ?? ()
+No symbol table info available.
+#18 0x00007fffeda70ed8 in ?? ()
+No symbol table info available.
+#19 0x000000000000001c in ?? ()
+No symbol table info available.
+#20 0x0000000000000002 in ?? ()
+No symbol table info available.
+#21 0x00007fffeda719fd in ?? ()
+No symbol table info available.
+#22 0x00007fffeda71a06 in ?? ()
+No symbol table info available.
+#23 0x0000000000000000 in ?? ()
+No symbol table info available.

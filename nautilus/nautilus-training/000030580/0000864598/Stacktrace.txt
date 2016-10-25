@@ -1,0 +1,31 @@
+#0  0x06e700fa in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+No symbol table info available.
+#1  0x06e71453 in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+No symbol table info available.
+#2  0x06e71667 in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+No symbol table info available.
+#3  0x06e72a87 in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+No symbol table info available.
+#4  0x06e599ba in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+No symbol table info available.
+#5  0x003fd69c in ?? () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#6  0x003f78ec in ?? () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#7  0x0035a9bc in g_file_query_info () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#8  0x0035ae69 in ?? () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#9  0x0038498d in ?? () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#10 0x0037521c in ?? () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#11 0x00543a27 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#12 0x005415f4 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#13 0x001c2d31 in start_thread () from /lib/i386-linux-gnu/libpthread.so.0
+No symbol table info available.
+#14 0x00cd40ce in clone () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+Backtrace stopped: Not enough registers or memory available to unwind further

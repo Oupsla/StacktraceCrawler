@@ -1,0 +1,38 @@
+#0  0x0807a21f in ?? ()
+#1  0x00bb815c in g_cclosure_marshal_VOID__VOID ()
+   from /usr/lib/libgobject-2.0.so.0
+#2  0x00baa0f2 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+#3  0x00bc0af8 in ?? () from /usr/lib/libgobject-2.0.so.0
+#4  0x00bc1edd in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+#5  0x00bc2396 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+#6  0x00f84d75 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+#7  0x00f86ec5 in gtk_action_activate () from /usr/lib/libgtk-x11-2.0.so.0
+#8  0x00bb815c in g_cclosure_marshal_VOID__VOID ()
+   from /usr/lib/libgobject-2.0.so.0
+#9  0x00ba8779 in ?? () from /usr/lib/libgobject-2.0.so.0
+#10 0x00baa0f2 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+#11 0x00bc0400 in ?? () from /usr/lib/libgobject-2.0.so.0
+#12 0x00bc1edd in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+#13 0x00bc2396 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+#14 0x011b6367 in gtk_widget_activate () from /usr/lib/libgtk-x11-2.0.so.0
+#15 0x0108b120 in gtk_menu_shell_activate_item ()
+   from /usr/lib/libgtk-x11-2.0.so.0
+#16 0x0108d143 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+#17 0x01080c8e in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+#18 0x01079368 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+#19 0x00ba8779 in ?? () from /usr/lib/libgobject-2.0.so.0
+#20 0x00baa0f2 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+#21 0x00bc07ee in ?? () from /usr/lib/libgobject-2.0.so.0
+#22 0x00bc1d98 in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+#23 0x00bc2396 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+#24 0x011aec4e in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+#25 0x01070950 in gtk_propagate_event () from /usr/lib/libgtk-x11-2.0.so.0
+#26 0x01071d7a in gtk_main_do_event () from /usr/lib/libgtk-x11-2.0.so.0
+#27 0x001cc08a in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+#28 0x00380d78 in g_main_context_dispatch () from /usr/lib/libglib-2.0.so.0
+#29 0x00384620 in ?? () from /usr/lib/libglib-2.0.so.0
+#30 0x00384a8f in g_main_loop_run () from /usr/lib/libglib-2.0.so.0
+#31 0x01072399 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+#32 0x08081501 in ?? ()
+#33 0x062f5b56 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+#34 0x0806bf41 in ?? ()

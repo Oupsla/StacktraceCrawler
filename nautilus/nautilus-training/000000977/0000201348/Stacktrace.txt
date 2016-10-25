@@ -1,0 +1,149 @@
+#0  0xb7820bfc in IA__g_type_register_static (parent_type=138320176, 
+    type_name=0x80bcfb8 "\220Æ\v\b", info=0xbf879db8, flags=3071510204)
+    at /build/buildd/glib2.0-2.15.6/gobject/gtype.c:1065
+	pnode = (TypeNode *) 0x83e9930
+	node = <value optimized out>
+	type = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_type_register_static"
+#1  0xb716d2ab in volumes_drives_changed (volume_monitor=0x807c468, 
+    volume=0x80d6d68, user_data=0x83e9930) at gtkfilesystemgio.c:398
+No locals.
+#2  0xb781000a in IA__g_cclosure_marshal_VOID__UCHAR (closure=0x83a8d00, 
+    return_value=0x0, n_param_values=2, param_values=0xbf87a0b4, 
+    invocation_hint=0xbf879fbc, marshal_data=0xb716d280)
+    at /build/buildd/glib2.0-2.15.6/gobject/gmarshal.c:181
+	data1 = (gpointer) 0x807c468
+	data2 = (gpointer) 0x83a8d00
+	__PRETTY_FUNCTION__ = "IA__g_cclosure_marshal_VOID__UCHAR"
+#3  0xb7803759 in toggle_refs_notify (object=<value optimized out>, 
+    is_last_ref=-1216282704)
+    at /build/buildd/glib2.0-2.15.6/gobject/gobject.c:1631
+	tstack = (ToggleRefStack *) 0x83e9930
+	__PRETTY_FUNCTION__ = "toggle_refs_notify"
+#4  0xb7817f8b in signal_emit_unlocked_R (node=0x80bf920, detail=0, 
+    instance=0x807c468, emission_return=0x0, instance_and_params=0xbf87a0b4)
+    at /build/buildd/glib2.0-2.15.6/gobject/gsignal.c:520
+	tmp = <value optimized out>
+	handler = (Handler *) 0x80dafc0
+	accumulator = (SignalAccumulator *) 0x0
+	emission = {next = 0xbf87a524, instance = 0x807c468, ihint = {
+    signal_id = 129, detail = 0, run_type = G_SIGNAL_RUN_FIRST}, 
+  state = EMISSION_RUN, chain_type = 4}
+	class_closure = (GClosure *) 0x80bf8e0
+	handler_list = (Handler *) 0x82472c0
+	return_accu = (GValue *) 0x0
+	accu = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, 
+      v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, 
+      v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, 
+      v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+	signal_id = 129
+	max_sequential_handler_number = 2524
+	return_value_altered = 1
+#5  0xb7819c1f in IA__g_signal_has_handler_pending (instance=0x807c468, 
+    signal_id=3076615664, detail=0, may_be_blocked=-1081629956)
+    at /build/buildd/glib2.0-2.15.6/gobject/gsignal.c:1963
+	node = <value optimized out>
+	mlist = <value optimized out>
+	has_pending = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_signal_has_handler_pending"
+#6  0xb7819ee0 in IA__g_signal_has_handler_pending (instance=0x807c468, 
+    signal_id=3071623149, detail=135097704, may_be_blocked=-1216219037)
+    at /build/buildd/glib2.0-2.15.6/glib/gbsearcharray.h:166
+	mlist = (HandlerMatch *) 0xb7616df0
+	has_pending = 0
+	__PRETTY_FUNCTION__ = "IA__g_signal_has_handler_pending"
+#7  0xb712f7fe in g_output_stream_real_splice (stream=0x0, source=0x0, 
+    flags=134726760, cancellable=0xbf878b44, error=0x80d9f98)
+    at /build/buildd/glib2.0-2.15.6/gio/goutputstream.c:442
+	class = (GOutputStreamClass *) 0xb7a1a020
+	n_read = 1
+	n_written = <value optimized out>
+	bytes_copied = -1081636040
+	buffer = "\b\203\207¿  ¡·  ¡·\000\000\000\000\030\214\207¿¶¬\234·8\213\207¿\002\000\000\0008\213\207¿@\203\207¿\033\000\000\000\210ã%\bZ\000\000\000\000\000\000\000@\203\207¿8\213\207¿@\203\207¿\003\000\000\000\022KRPH\022IDPLO\\\022VHFUHW\022P\\FU\\SW", '\0' <repeats 11 times>, ".@R", '\0' <repeats 17 times>, ".@P", '\0' <repeats 17 times>, ".@H", '\0' <repeats 17 times>, ".@\022", '\0' <repeats 17 times>, ".@I", '\0' <repeats 17 times>, ".@D", '\0' <repeats 17 times>, ".@P", '\0' <repeats 17 times>...
+	p = 0xbf878308 "\030\214\207¿¶¬\234·8\213\207¿\002"
+	res = -1223493680
+#8  0xb781000a in IA__g_cclosure_marshal_VOID__UCHAR (closure=0x80d9f98, 
+    return_value=0x0, n_param_values=2, param_values=0xbf87a624, 
+    invocation_hint=0xbf87a52c, marshal_data=0xb712f7d9)
+    at /build/buildd/glib2.0-2.15.6/gobject/gmarshal.c:181
+	data1 = (gpointer) 0x8071eb0
+	data2 = (gpointer) 0xb7834680
+	__PRETTY_FUNCTION__ = "IA__g_cclosure_marshal_VOID__UCHAR"
+#9  0xb7803759 in toggle_refs_notify (object=<value optimized out>, 
+    is_last_ref=-1216282704)
+    at /build/buildd/glib2.0-2.15.6/gobject/gobject.c:1631
+	tstack = (ToggleRefStack *) 0x83e9930
+	__PRETTY_FUNCTION__ = "toggle_refs_notify"
+#10 0xb7817f8b in signal_emit_unlocked_R (node=0x80bf920, detail=0, 
+    instance=0x8071eb0, emission_return=0x0, instance_and_params=0xbf87a624)
+    at /build/buildd/glib2.0-2.15.6/gobject/gsignal.c:520
+	tmp = <value optimized out>
+	handler = (Handler *) 0x80b1920
+	accumulator = (SignalAccumulator *) 0x0
+	emission = {next = 0x0, instance = 0x8071eb0, ihint = {
+    signal_id = 129, detail = 0, run_type = G_SIGNAL_RUN_FIRST}, 
+  state = EMISSION_RUN, chain_type = 4}
+	class_closure = (GClosure *) 0x80bf8e0
+	handler_list = (Handler *) 0x80b1920
+	return_accu = (GValue *) 0x0
+	accu = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, 
+      v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, 
+      v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, 
+      v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+	signal_id = 129
+	max_sequential_handler_number = 2524
+	return_value_altered = 0
+#11 0xb7819c1f in IA__g_signal_has_handler_pending (instance=0x8071eb0, 
+    signal_id=3076615664, detail=0, may_be_blocked=-1081628564)
+    at /build/buildd/glib2.0-2.15.6/gobject/gsignal.c:1963
+	node = <value optimized out>
+	mlist = <value optimized out>
+	has_pending = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_signal_has_handler_pending"
+#12 0xb7819ee0 in IA__g_signal_has_handler_pending (instance=0x8071eb0, 
+    signal_id=3071247248, detail=135097704, may_be_blocked=-1216086315)
+    at /build/buildd/glib2.0-2.15.6/glib/gbsearcharray.h:166
+	mlist = (HandlerMatch *) 0xb7616df0
+	has_pending = 0
+	__PRETTY_FUNCTION__ = "IA__g_signal_has_handler_pending"
+#13 0xb70efacd in list_emit (monitor=0x8071eb0, 
+    monitor_signal=0xb70f8390 "mount_removed", 
+    object_signal=0xb70f7b31 "unmounted", objects=0x840e890)
+    at ghalvolumemonitor.c:946
+	l = (GList *) 0x840e890
+#14 0xb70efb77 in emit_lists_in_idle (data=0x8397da8)
+    at ghalvolumemonitor.c:979
+No locals.
+#15 0xb7780051 in IA__g_list_remove_link (list=0xbf87a90c, link=0xb71701dc)
+    at /build/buildd/glib2.0-2.15.6/glib/glist.c:273
+No locals.
+#16 0xb7781bf6 in g_source_destroy_internal (source=0x0, context=0x8344a18, 
+    have_lock=137644568) at /build/buildd/glib2.0-2.15.6/glib/gmain.c:964
+	tmp_list = <value optimized out>
+	old_cb_data = (gpointer) 0x8397da8
+	old_cb_funcs = (GSourceCallbackFuncs *) 0xb77f8248
+#17 0xb7784fb3 in g_main_context_iterate (context=0x807af08, block=1, 
+    dispatch=1, self=0x807bf60)
+    at /build/buildd/glib2.0-2.15.6/glib/gmain.c:3002
+	max_priority = 200
+	timeout = 0
+	some_ready = <value optimized out>
+	nfds = 1
+	allocated_nfds = <value optimized out>
+	fds = (GPollFD *) 0x8253b10
+	__PRETTY_FUNCTION__ = "g_main_context_iterate"
+#18 0xb7785397 in IA__g_main_loop_run (loop=0x8253b00)
+    at /build/buildd/glib2.0-2.15.6/glib/gmain.c:2861
+	got_ownership = <value optimized out>
+	self = (GThread *) 0x807bf60
+	__PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#19 0xb7cc0044 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.12.8/gtk/gtkmain.c:1163
+	tmp_list = (GList *) 0x0
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0xb7f1cce0
+	loop = (GMainLoop *) 0x8253b00
+#20 0x08050e6e in main (argc=134557240, argv=0x80b1670) at main.cpp:612
+No locals.
+#21 0xb74d5450 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+#22 0x0804baa1 in _start ()

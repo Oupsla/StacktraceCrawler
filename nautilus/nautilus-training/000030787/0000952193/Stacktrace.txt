@@ -1,0 +1,90 @@
+#0  0x00c2b416 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x05248c8f in __GI_raise (sig=6) at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+        resultvar = <optimized out>
+        resultvar = <optimized out>
+        pid = 87642100
+        selftid = 1788
+#2  0x0524c2b5 in __GI_abort () at abort.c:92
+        save_stage = 2
+        act = {__sigaction_handler = {sa_handler = 0x52, sa_sigaction = 0x52}, sa_mask = {__val = {86568471, 104, 88, 3214782160, 87642100, 170814208, 88, 104, 87642100, 81, 82, 81, 86502764, 170814216, 82, 3214782392, 170814216, 0, 4, 4222451712, 170814216, 170814216, 170814216, 170814216, 170814297, 170814316, 170814216, 170814316, 0, 0, 0, 0}}, sa_flags = 0, sa_restorer = 0}
+        sigs = {__val = {32, 0 <repeats 31 times>}}
+#3  0x05241826 in __GI___assert_fail (assertion=0x596419 "ret != inval_id", file=0x59638a "../../src/xcb_io.c", line=528, function=0x59649e "_XAllocID") at assert.c:81
+        buf = 0xa2e6b08 "nautilus: ../../src/xcb_io.c:528: _XAllocID: Assertion `ret != inval_id' failed.\n"
+#4  0x0051e59f in _XAllocID () from /usr/lib/i386-linux-gnu/libX11.so.6
+No symbol table info available.
+#5  0x004fb0e7 in XCreatePixmap () from /usr/lib/i386-linux-gnu/libX11.so.6
+No symbol table info available.
+#6  0x004716d5 in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#7  0x004533b0 in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#8  0x0045345b in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#9  0x0041bb49 in cairo_push_group_with_content () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#10 0x001695a0 in ?? () from /usr/lib/libgdk-3.so.0
+No symbol table info available.
+#11 0x00144cad in gdk_window_set_icon_list () from /usr/lib/libgdk-3.so.0
+No symbol table info available.
+#12 0x0108ca91 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#13 0x0062a14c in g_cclosure_marshal_VOID__VOID () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#14 0x00628c3c in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#15 0x0063b9f0 in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#16 0x00644787 in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#17 0x006448f3 in g_signal_emit () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#18 0x00ef2227 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#19 0x00ef23cd in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#20 0x0062ab03 in g_cclosure_marshal_VOID__PARAM () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#21 0x00628c3c in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#22 0x0063b9f0 in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#23 0x00644787 in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#24 0x006448f3 in g_signal_emit () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#25 0x0062bd1f in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#26 0x0062b1cf in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#27 0x0062df72 in g_object_notify () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#28 0x00fa2a27 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#29 0x00f25f35 in gtk_main_do_event () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#30 0x0013113c in ?? () from /usr/lib/libgdk-3.so.0
+No symbol table info available.
+#31 0x00159028 in ?? () from /usr/lib/libgdk-3.so.0
+No symbol table info available.
+#32 0x00c6f25f in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#33 0x00c6f990 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#34 0x00c6ff9b in g_main_loop_run () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#35 0x00f25065 in gtk_main () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#36 0x00e39094 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#37 0x0091d50c in g_application_run () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#38 0x08067914 in ?? ()
+No symbol table info available.
+#39 0x05234113 in __libc_start_main (main=0x8067850, argc=2, ubp_av=0xbf9dbd74, init=0x8159220, fini=0x8159290, rtld_fini=0xdbbba0, stack_end=0xbf9dbd6c) at libc-start.c:226
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {87642100, 0, 0, 0, -1415297490, -698604709}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x2, 0x806792c}, data = {prev = 0x0, cleanup = 0x0, canceltype = 2}}}
+        not_first_call = <optimized out>
+#40 0x0806794d in ?? ()
+No symbol table info available.
+Backtrace stopped: Not enough registers or memory available to unwind further

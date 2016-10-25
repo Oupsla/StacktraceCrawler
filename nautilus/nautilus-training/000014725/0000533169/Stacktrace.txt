@@ -1,0 +1,48 @@
+#0  0x0811d1c1 in ?? ()
+No symbol table info available.
+#1  0x0811d36a in ?? ()
+No symbol table info available.
+#2  0x0807c694 in ?? ()
+No symbol table info available.
+#3  0x0020f3ec in g_cclosure_marshal_VOID__VOID ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#4  0x00201152 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#5  0x0021884d in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#6  0x00219fa4 in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#7  0x0021a295 in g_signal_emit_by_name () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#8  0x080a1fb8 in ?? ()
+No symbol table info available.
+#9  0x0815caa1 in ?? ()
+No symbol table info available.
+#10 0x080b2bf7 in ?? ()
+No symbol table info available.
+#11 0x080b8248 in ?? ()
+No symbol table info available.
+#12 0x007f9e81 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#13 0x007fbe05 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#14 0x007ffb08 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#15 0x0080005f in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#16 0x004f6049 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#17 0x08080b98 in ?? ()
+No symbol table info available.
+#18 0x0363ebd6 in __libc_start_main (main=0x8080490, argc=1, 
+    ubp_av=0xbfd35f04, init=0x81a7170, fini=0x81a7160, 
+    rtld_fini=0x99d0b0 <_dl_fini>, stack_end=0xbfd35efc) at libc-start.c:226
+        result = <value optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {58163188, 0, 0, 
+                -1076666664, 4064313, 1633022784}, mask_was_saved = 0}}, 
+          priv = {pad = {0x0, 0x0, 0x1, 0x806c450}, data = {prev = 0x0, 
+              cleanup = 0x0, canceltype = 1}}}
+        not_first_call = <value optimized out>
+#19 0x0806c471 in ?? ()
+No symbol table info available.

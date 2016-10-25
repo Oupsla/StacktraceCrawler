@@ -1,0 +1,10 @@
+#0  0x0808744b in ?? ()
+#1  0x0815033a in ?? ()
+#2  0xb7363a0c in __pthread_mutex_unlock_usercnt ()
+   from /lib/tls/i686/cmov/libpthread.so.0
+#3  0xb764d1a5 in g_cclosure_marshal_VOID__BOOLEAN ()
+   from /usr/lib/libgobject-2.0.so.0
+#4  0xb763e789 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+#5  0xb7654525 in ?? () from /usr/lib/libgobject-2.0.so.0
+#6  0x0852dcb0 in ?? ()
+#7  0x00000000 in ?? ()

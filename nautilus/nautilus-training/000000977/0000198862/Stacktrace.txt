@@ -1,0 +1,13 @@
+#0  0xb73f578c in g_type_check_instance_cast ()
+   from /usr/lib/libgobject-2.0.so.0
+#1  0xb63b1f86 in ?? () from /usr/lib/gtk-2.0/2.10.0/filesystems/libgio.so
+#2  0x08347230 in ?? ()
+#3  0x0837c0d0 in ?? ()
+#4  0xbf92ff38 in ?? ()
+#5  0xb70a2a9e in bsearch () from /lib/tls/i686/cmov/libc.so.6
+#6  0xb73e4435 in g_cclosure_marshal_VOID__OBJECT ()
+   from /usr/lib/libgobject-2.0.so.0
+#7  0xb73d6789 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+#8  0xb73ec525 in ?? () from /usr/lib/libgobject-2.0.so.0
+#9  0x085c4920 in ?? ()
+#10 0x00000000 in ?? ()

@@ -1,0 +1,9 @@
+#0  IA__g_type_check_instance_cast (type_instance=0x8314868, iface_type=138364664)
+    at /build/buildd/glib2.0-2.16.1/gobject/gtype.c:3177
+	node = <value optimized out>
+	iface = <value optimized out>
+#1  0xb62d32ab in ?? () from /usr/lib/gtk-2.0/2.10.0/filesystems/libgio.so
+#2  0x08314868 in ?? ()
+#3  0x083f46f8 in ?? ()
+#4  0x086da750 in ?? ()
+#5  0x00000000 in ?? ()

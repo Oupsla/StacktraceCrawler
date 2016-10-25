@@ -1,0 +1,92 @@
+#0  0xb6d11540 in g_object_unref (_object=0xb3692000) at /build/buildd/glib2.0-2.29.10/./gobject/gobject.c:2680
+        __inst = 0xb3692000
+        __r = <value optimised out>
+        _g_boolean_var_ = <value optimised out>
+        object = 0xb3692000
+        old_ref = <value optimised out>
+        __PRETTY_FUNCTION__ = "g_object_unref"
+#1  0xb739d0e9 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#2  0xb6d1127b in weak_refs_notify (data=0xb36f9738) at /build/buildd/glib2.0-2.29.10/./gobject/gobject.c:2244
+        wstack = 0xb36f9738
+        i = <value optimised out>
+#3  0xb6c2fbe6 in g_data_set_internal (datalist=0xb36685c8, key_id=54, data=0x0, destroy_func=0) at /build/buildd/glib2.0-2.29.10/./glib/gdataset.c:410
+        old = {key = <value optimised out>, data = 0xb36f9738, destroy = 0xb6d11240 <weak_refs_notify>}
+        data = <value optimised out>
+        data_last = <value optimised out>
+        data_end = <value optimised out>
+        d = 0xb36c86f8
+        old_d = <value optimised out>
+#4  g_datalist_id_set_data_full (datalist=0xb36685c8, key_id=54, data=0x0, destroy_func=0) at /build/buildd/glib2.0-2.29.10/./glib/gdataset.c:673
+        __PRETTY_FUNCTION__ = "g_datalist_id_set_data_full"
+#5  0xb6d11309 in g_object_real_dispose (object=0xb36685c0) at /build/buildd/glib2.0-2.29.10/./gobject/gobject.c:896
+No locals.
+#6  0xb74cef70 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#7  0xb7276191 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#8  0xb6d11608 in g_object_unref (_object=0xb36685c0) at /build/buildd/glib2.0-2.29.10/./gobject/gobject.c:2709
+        object = 0xb36685c0
+        old_ref = 1
+        __PRETTY_FUNCTION__ = "g_object_unref"
+#9  0xb6d117c2 in g_value_object_free_value (value=0xac11e904) at /build/buildd/glib2.0-2.29.10/./gobject/gobject.c:3029
+No locals.
+#10 0xb6d38136 in g_value_unset (value=0xac11e904) at /build/buildd/glib2.0-2.29.10/./gobject/gvalue.c:275
+        value_table = <value optimised out>
+        __PRETTY_FUNCTION__ = "g_value_unset"
+#11 0xb6d2bb36 in g_signal_emit_valist (instance=0x986e0e0, signal_id=87, detail=0, var_args=<value optimised out>) at /build/buildd/glib2.0-2.29.10/./gobject/gsignal.c:3016
+        instance_and_params = 0xac11e8f0
+        signal_return_type = 4
+        param_values = 0xac11e904
+        node = 0x1
+        i = <value optimised out>
+        n_params = 1
+        __PRETTY_FUNCTION__ = "g_signal_emit_valist"
+#12 0xb6d2bc83 in g_signal_emit (instance=0x986e0e0, signal_id=87, detail=0) at /build/buildd/glib2.0-2.29.10/./gobject/gsignal.c:3044
+        var_args = 0xbfd95ddc "\300\205f\263x\240A\t\003\321\071\267`\372m\263\340\340\206\t\320\336a\263`\372m\263\364\037ն\364\177g\267\020\275l\263\300\205f\263\340\340\206\t\350\321\071\267\340\340\206\t\300\205f\263"
+#13 0xb72ba346 in gtk_container_remove () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#14 0xb739d1e8 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#15 0xb739deec in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#16 0xb7303c8d in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#17 0xb6db60e2 in g_simple_async_result_complete (simple=0xb36de270) at /build/buildd/glib2.0-2.29.10/./gio/gsimpleasyncresult.c:749
+        current_source = <value optimised out>
+        current_context = <value optimised out>
+        __PRETTY_FUNCTION__ = "g_simple_async_result_complete"
+#18 0xb6db6163 in complete_in_idle_cb_for_thread (_data=0xac122aa0) at /build/buildd/glib2.0-2.29.10/./gio/gsimpleasyncresult.c:816
+        data = 0xac122aa0
+        simple = 0xb36de270
+#19 0xb6c49370 in g_idle_dispatch (source=0xb36e5120, callback=0xb6db6130 <complete_in_idle_cb_for_thread>, user_data=0xac122aa0) at /build/buildd/glib2.0-2.29.10/./glib/gmain.c:4822
+No locals.
+#20 0xb6c4d54f in g_main_dispatch (context=0x94420d8) at /build/buildd/glib2.0-2.29.10/./glib/gmain.c:2473
+        dispatch = 0xb6c49350 <g_idle_dispatch>
+        was_in_call = 0
+        user_data = 0xac122aa0
+        callback = 0xb6db6130 <complete_in_idle_cb_for_thread>
+        cb_funcs = 0xb6cfb35c
+        cb_data = 0xb36e2648
+        current_source_link = {data = 0xb36e5120, next = 0x0}
+        need_destroy = <value optimised out>
+        source = 0xb36e5120
+        current = 0x95b8320
+        i = <value optimised out>
+#21 g_main_context_dispatch (context=0x94420d8) at /build/buildd/glib2.0-2.29.10/./glib/gmain.c:3046
+No locals.
+#22 0xb6c4dc80 in g_main_context_iterate (context=0x94420d8, block=-1228552624, dispatch=1, self=<value optimised out>) at /build/buildd/glib2.0-2.29.10/./glib/gmain.c:3124
+        max_priority = 108
+        timeout = 0
+        some_ready = 1
+        nfds = <value optimised out>
+        allocated_nfds = <value optimised out>
+        fds = 0x98c8570
+#23 0xb6c4e28b in g_main_loop_run (loop=0x979c5f8) at /build/buildd/glib2.0-2.29.10/./glib/gmain.c:3332
+        __PRETTY_FUNCTION__ = "g_main_loop_run"
+#24 0xb735ba45 in gtk_main () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#25 0x08090499 in brasero_app_run_mainwin ()
+No symbol table info available.
+#26 0x0805d9ff in main ()
+No symbol table info available.

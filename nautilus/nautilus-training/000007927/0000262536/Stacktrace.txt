@@ -1,0 +1,221 @@
+#0  0x0000000000508978 in nautilus_icon_canvas_item_get_image (item=0x7f1610709ce0, mask=0x7fff1ae50630, 
+    colormap=0x2160d00) at nautilus-icon-canvas-item.c:496
+	__t = <value optimized out>
+	__r = <value optimized out>
+	pixmap = <value optimized out>
+	canvas = <value optimized out>
+	screen = <value optimized out>
+	gc = <value optimized out>
+	width = <value optimized out>
+	height = <value optimized out>
+	item_offset_x = <value optimized out>
+	item_offset_y = <value optimized out>
+	emblem_rect = {x0 = 18537536, y0 = 0, x1 = 248152129, y1 = 32534}
+	pixbuf = <value optimized out>
+	emblem_pixbuf = <value optimized out>
+	emblem_layout = {icon_item = 0x0, icon_rect = {x0 = 35140688, y0 = 0, x1 = 0, y1 = 0}, 
+  side = 248152129, position = 32534, index = 1, emblem = 0x7f160ef13de0}
+	item_x = <value optimized out>
+	item_y = <value optimized out>
+	is_rtl = <value optimized out>
+	cr = <value optimized out>
+	__PRETTY_FUNCTION__ = "nautilus_icon_canvas_item_get_image"
+#1  0x00000000004e6890 in drag_begin_callback (widget=0x11a84c0, context=0x11adc40, 
+    data=<value optimized out>) at nautilus-icon-dnd.c:1454
+	container = (NautilusIconContainer *) 0x11a84c0
+	screen = <value optimized out>
+	colormap = (GdkColormap *) 0x2160d00
+	pixmap = <value optimized out>
+	mask = <value optimized out>
+	x1 = <value optimized out>
+	y1 = <value optimized out>
+	x2 = 2.5386752943893274e-317
+	y2 = 1.7340814850865239e-316
+	winx = <value optimized out>
+	winy = <value optimized out>
+	use_mask = 0
+#2  0x00007f160f12628d in IA__g_closure_invoke (closure=0x18c8080, return_value=0x0, n_param_values=2, 
+    param_values=0x2178e40, invocation_hint=0x7fff1ae507c0)
+    at /build/buildd/glib2.0-2.17.7/gobject/gclosure.c:767
+	marshal = (GClosureMarshal) 0x42a7e0 <g_cclosure_marshal_VOID__OBJECT@plt>
+	marshal_data = (gpointer) 0x0
+	__PRETTY_FUNCTION__ = "IA__g_closure_invoke"
+#3  0x00007f160f13d020 in signal_emit_unlocked_R (node=0xf28130, detail=0, instance=0x11a84c0, 
+    emission_return=0x0, instance_and_params=0x2178e40)
+    at /build/buildd/glib2.0-2.17.7/gobject/gsignal.c:3244
+	tmp = <value optimized out>
+	handler = (Handler *) 0x1e9ab20
+	accumulator = (SignalAccumulator *) 0x0
+	emission = {next = 0x7fff1ae50d50, instance = 0x11a84c0, ihint = {signal_id = 72, detail = 0, 
+    run_type = G_SIGNAL_RUN_FIRST}, state = EMISSION_RUN, chain_type = 4}
+	class_closure = (GClosure *) 0xf280c0
+	handler_list = (Handler *) 0x1e9ab20
+	return_accu = (GValue *) 0x0
+	accu = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, 
+      v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, 
+      v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+	signal_id = 72
+	max_sequential_handler_number = 9125
+	return_value_altered = 0
+#4  0x00007f160f13e719 in IA__g_signal_emit_valist (instance=0x11a84c0, signal_id=<value optimized out>, 
+    detail=0, var_args=0x7fff1ae509a0) at /build/buildd/glib2.0-2.17.7/gobject/gsignal.c:2977
+	signal_return_type = 4
+	param_values = (GValue *) 0x2178e58
+	node = (SignalNode *) 0xf28130
+	i = 1
+	n_params = 1
+	__PRETTY_FUNCTION__ = "IA__g_signal_emit_valist"
+#5  0x00007f160f13eacd in IA__g_signal_emit_by_name (instance=0x11a84c0, 
+    detailed_signal=0x7f16108bb5a2 "drag-begin") at /build/buildd/glib2.0-2.17.7/gobject/gsignal.c:3071
+	var_args = {{gp_offset = 24, fp_offset = 48, overflow_arg_area = 0x7fff1ae50ae0, 
+    reg_save_area = 0x7fff1ae509f0}}
+	detail = 0
+	signal_id = 72
+	__PRETTY_FUNCTION__ = "IA__g_signal_emit_by_name"
+#6  0x00007f161084cbf3 in gtk_drag_begin_internal (widget=0x11a84c0, site=0x0, target_list=0x1eff450, 
+    actions=46, button=1, event=0x2305ed0) at /build/buildd/gtk+2.0-2.13.7/gtk/gtkdnd.c:2283
+	info = (GtkDragSourceInfo *) 0x22dd6d0
+	targets = <value optimized out>
+	tmp_list = <value optimized out>
+	time = 4347077
+	possible_actions = 46
+	suggested_action = GDK_ACTION_COPY
+	context = (GdkDragContext *) 0x11adc40
+	ipc_widget = (GtkWidget *) 0x2186830
+	cursor = (GdkCursor *) 0x17fd480
+	__PRETTY_FUNCTION__ = "gtk_drag_begin_internal"
+#7  0x00000000004e09f9 in motion_notify_event (widget=0x11a84c0, event=0x2305ed0)
+    at nautilus-icon-container.c:4276
+	container = (NautilusIconContainer *) 0x11a84c0
+	details = (NautilusIconContainerDetails *) 0x1e93ee0
+	world_x = 534
+	world_y = 24
+	canvas_x = 543
+	canvas_y = 28
+	actions = 451216944
+#8  0x00007f161070dc43 in _gtk_marshal_BOOLEAN__BOXED (closure=0xf25b60, return_value=0x7fff1ae50da0, 
+    n_param_values=<value optimized out>, param_values=0x230ad90, invocation_hint=<value optimized out>, 
+    marshal_data=0x4e0840) at /build/buildd/gtk+2.0-2.13.7/gtk/gtkmarshalers.c:84
+	data1 = (gpointer) 0x11a84c0
+	data2 = (gpointer) 0xf16870
+	v_return = <value optimized out>
+	__PRETTY_FUNCTION__ = "_gtk_marshal_BOOLEAN__BOXED"
+#9  0x00007f160f12628d in IA__g_closure_invoke (closure=0xf25b60, return_value=0x7fff1ae50da0, 
+    n_param_values=2, param_values=0x230ad90, invocation_hint=0x7fff1ae50d60)
+    at /build/buildd/glib2.0-2.17.7/gobject/gclosure.c:767
+	marshal = (GClosureMarshal) 0x7f160f1247a0 <g_type_class_meta_marshal>
+	marshal_data = (gpointer) 0x170
+	__PRETTY_FUNCTION__ = "IA__g_closure_invoke"
+#10 0x00007f160f13ccd4 in signal_emit_unlocked_R (node=0xf25bd0, detail=0, instance=0x11a84c0, 
+    emission_return=0x7fff1ae50ee0, instance_and_params=0x230ad90)
+    at /build/buildd/glib2.0-2.17.7/gobject/gsignal.c:3282
+	accumulator = (SignalAccumulator *) 0xf25c50
+	emission = {next = 0x0, instance = 0x11a84c0, ihint = {signal_id = 48, detail = 0, 
+    run_type = G_SIGNAL_RUN_LAST}, state = EMISSION_RUN, chain_type = 18771408}
+	class_closure = (GClosure *) 0xf25b60
+	handler_list = (Handler *) 0x0
+	return_accu = (GValue *) 0x7fff1ae50da0
+	accu = {g_type = 20, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, 
+      v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, 
+      v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+	signal_id = 48
+	max_sequential_handler_number = 9125
+	return_value_altered = 0
+#11 0x00007f160f13e5c8 in IA__g_signal_emit_valist (instance=0x11a84c0, signal_id=<value optimized out>, 
+    detail=0, var_args=0x7fff1ae50f40) at /build/buildd/glib2.0-2.17.7/gobject/gsignal.c:2987
+	return_value = {g_type = 20, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, 
+      v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, 
+      v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+	error = <value optimized out>
+	signal_return_type = 20
+	param_values = (GValue *) 0x230ada8
+	node = (SignalNode *) 0xf25bd0
+	i = 1
+	n_params = 1
+	__PRETTY_FUNCTION__ = "IA__g_signal_emit_valist"
+#12 0x00007f160f13ec83 in IA__g_signal_emit (instance=0x7f1610709ce0, signal_id=451216944, detail=610044232)
+    at /build/buildd/glib2.0-2.17.7/gobject/gsignal.c:3034
+	var_args = {{gp_offset = 32, fp_offset = 48, overflow_arg_area = 0x7fff1ae51020, 
+    reg_save_area = 0x7fff1ae50f60}}
+#13 0x00007f161082995e in gtk_widget_event_internal (widget=0x11a84c0, event=0x2305ed0)
+    at /build/buildd/gtk+2.0-2.13.7/gtk/gtkwidget.c:4745
+	signal_num = <value optimized out>
+	return_val = 0
+#14 0x00007f1610704f3d in IA__gtk_propagate_event (widget=0x11a84c0, event=0x2305ed0)
+    at /build/buildd/gtk+2.0-2.13.7/gtk/gtkmain.c:2363
+	tmp = (GtkWidget *) 0x2305ed0
+	handled_event = 36724432
+	__PRETTY_FUNCTION__ = "IA__gtk_propagate_event"
+#15 0x00007f161070621b in IA__gtk_main_do_event (event=0x2305ed0)
+    at /build/buildd/gtk+2.0-2.13.7/gtk/gtkmain.c:1568
+	event_widget = (GtkWidget *) 0x11a84c0
+	grab_widget = (GtkWidget *) 0x11a84c0
+	window_group = (GtkWindowGroup *) 0x10d7b00
+	rewritten_event = (GdkEvent *) 0x0
+	tmp_list = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_main_do_event"
+#16 0x00007f1610368ebc in gdk_event_dispatch (source=<value optimized out>, callback=<value optimized out>, 
+    user_data=<value optimized out>) at /build/buildd/gtk+2.0-2.13.7/gdk/x11/gdkevents-x11.c:2365
+	display = <value optimized out>
+	event = <value optimized out>
+#17 0x00007f160ec89ea2 in IA__g_main_context_dispatch (context=0xf004c0)
+    at /build/buildd/glib2.0-2.17.7/glib/gmain.c:2073
+No locals.
+#18 0x00007f160ec8d63d in g_main_context_iterate (context=0xf004c0, block=1, dispatch=1, 
+    self=<value optimized out>) at /build/buildd/glib2.0-2.17.7/glib/gmain.c:2706
+	max_priority = 0
+	timeout = 0
+	some_ready = 1
+	nfds = 17
+	allocated_nfds = <value optimized out>
+	fds = (GPollFD *) 0x10ba000
+	__PRETTY_FUNCTION__ = "g_main_context_iterate"
+#19 0x00007f160ec8db6d in IA__g_main_loop_run (loop=0xfd2b90)
+    at /build/buildd/glib2.0-2.17.7/glib/gmain.c:2929
+	self = (GThread *) 0xeb4500
+	__PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#20 0x00007f1610706667 in IA__gtk_main () at /build/buildd/gtk+2.0-2.13.7/gtk/gtkmain.c:1172
+	tmp_list = (GList *) 0xec0bb0
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0xef88b0
+	loop = <value optimized out>
+#21 0x0000000000441d8a in main (argc=<value optimized out>, argv=0x7fff1ae51818) at nautilus-main.c:581
+	kill_shell = 0
+	restart_shell = 0
+	no_default_window = 1
+	browser_window = 1
+	no_desktop = 0
+	autostart_mode = 1
+	startup_id = <value optimized out>
+	autostart_id = <value optimized out>
+	startup_id_copy = 0xec0bb0 ""
+	session_to_load = 0x0
+	geometry = (gchar *) 0x0
+	remaining = (const gchar **) 0x0
+	perform_self_check = 0
+	context = (GOptionContext *) 0xec1e30
+	application = (NautilusApplication *) 0xef88b0
+	program = (GnomeProgram *) 0xed5850
+	options = {{long_name = 0x50d797 "check", short_name = 99 'c', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x7fff1ae51628, description = 0x50d810 "Perform a quick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x511833 "geometry", short_name = 103 'g', flags = 0, 
+    arg = G_OPTION_ARG_STRING, arg_data = 0x7fff1ae51618, 
+    description = 0x50d840 "Create the initial window with the given geometry.", 
+    arg_description = 0x50d625 "GEOMETRY"}, {long_name = 0x50d62e "no-default-window", short_name = 110 'n', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x7fff1ae51634, 
+    description = 0x50d878 "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {
+    long_name = 0x50d640 "no-desktop", short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x7fff1ae5162c, 
+    description = 0x50d8b0 "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {long_name = 0x510872 "browser", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0x7fff1ae51630, description = 0x50d64b "open a browser window.", 
+    arg_description = 0x0}, {long_name = 0x50d79f "quit", short_name = 113 'q', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0x7fff1ae5163c, description = 0x50d662 "Quit Nautilus.", 
+    arg_description = 0x0}, {long_name = 0x50d7a6 "restart", short_name = 0 '\0', flags = 1, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0x7fff1ae51638, description = 0x50d671 "Restart Nautilus.", 
+    arg_description = 0x0}, {long_name = 0x512c88 "", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0x7fff1ae51610, description = 0x0, 
+    arg_description = 0x50d683 "[URI...]"}, {long_name = 0x5098af "load-session", short_name = 108 'l', 
+    flags = 0, arg = G_OPTION_ARG_STRING, arg_data = 0x7fff1ae51620, 
+    description = 0x50d908 "Load a saved session from the specified file. Implies \"--no-default-window\".", 
+    arg_description = 0x50d68c "FILENAME"}, {long_name = 0x0, short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0x0, description = 0x0, arg_description = 0x0}}

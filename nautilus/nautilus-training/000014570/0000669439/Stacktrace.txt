@@ -1,0 +1,92 @@
+#0  0x00b37416 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x080bb941 in raise () from /lib/libc.so.6
+No symbol table info available.
+#2  0x080bee42 in abort () from /lib/libc.so.6
+No symbol table info available.
+#3  0x080b48e8 in __assert_fail () from /lib/libc.so.6
+No symbol table info available.
+#4  0x04ed5c99 in _XAllocID () from /usr/lib/libX11.so.6
+No symbol table info available.
+#5  0x04eab1d8 in XCreatePixmap () from /usr/lib/libX11.so.6
+No symbol table info available.
+#6  0x033ed435 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#7  0x033ed596 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#8  0x033c8fed in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#9  0x033b841c in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#10 0x033ba9c6 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#11 0x033ec3b2 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#12 0x033c70c1 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#13 0x033cb407 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#14 0x033cbdd2 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#15 0x033c872d in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#16 0x0339d544 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#17 0x03393a8c in cairo_paint () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#18 0x0912df37 in ?? () from /usr/lib/evolution/2.30/libevolution-calendar.so.0
+No symbol table info available.
+#19 0x0912ee7a in ?? () from /usr/lib/evolution/2.30/libevolution-calendar.so.0
+No symbol table info available.
+#20 0x004b89f1 in ?? () from /usr/lib/libgnomecanvas-2.so.0
+No symbol table info available.
+#21 0x004bd773 in ?? () from /usr/lib/libgnomecanvas-2.so.0
+No symbol table info available.
+#22 0x010d1284 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#23 0x00a4ea87 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#24 0x00a50412 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#25 0x00a661e6 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#26 0x00a6783b in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#27 0x00a67e62 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#28 0x011ffb96 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#29 0x010caec0 in gtk_main_do_event () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#30 0x00e807bb in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#31 0x00e8076a in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#32 0x00e8076a in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#33 0x00ea9e24 in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#34 0x00e7cf24 in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#35 0x00e7ef2f in gdk_window_process_all_updates () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#36 0x0103fb9f in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#37 0x00e59998 in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#38 0x05b77841 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#39 0x05b79855 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#40 0x05b7d668 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#41 0x05b7dba7 in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#42 0x010cb1d9 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#43 0x08049f4f in ?? ()
+No symbol table info available.
+#44 0x080a7ce7 in __libc_start_main () from /lib/libc.so.6
+No symbol table info available.
+#45 0x080497c1 in ?? ()
+No symbol table info available.

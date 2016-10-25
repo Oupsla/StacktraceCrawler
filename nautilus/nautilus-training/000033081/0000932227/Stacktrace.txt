@@ -1,0 +1,12 @@
+#0  0x00007f905a192c53 in g_object_get () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#1  0x0000000000485efc in ?? ()
+No symbol table info available.
+#2  0x00007f9059ed276b in g_source_get_time () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#3  0x0000000000000001 in ?? ()
+No symbol table info available.
+#4  0x0000000001729b30 in ?? ()
+No symbol table info available.
+#5  0x0000000000000000 in ?? ()
+No symbol table info available.

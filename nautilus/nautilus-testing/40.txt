@@ -1,0 +1,7 @@
+#0  0x00007fe950a724c4 in _gdk_keymap_key_is_modifier (keymap=<value optimized out>, keycode=68)
+    at /build/buildd/gtk+2.0-2.12.9/gdk/x11/gdkkeys-x11.c:1662
+	xkb = <value optimized out>
+	keymap_x11 = <value optimized out>
+	i = <value optimized out>
+	__PRETTY_FUNCTION__ = "_gdk_keymap_key_is_modifier"
+#1  0x0000000000000000 in ?? ()

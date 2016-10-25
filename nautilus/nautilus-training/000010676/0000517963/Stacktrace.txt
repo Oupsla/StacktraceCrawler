@@ -1,0 +1,74 @@
+#0  0x004878f0 in g_list_remove () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#1  0x0814a447 in ?? ()
+No symbol table info available.
+#2  0x00ea6741 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#3  0x00473d45 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#4  0x00474160 in g_datalist_id_set_data_full () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#5  0x00ea6d79 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#6  0x00ea70ab in g_object_unref () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#7  0x004871b7 in g_list_foreach () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#8  0x0818415f in ?? ()
+No symbol table info available.
+#9  0x08184192 in ?? ()
+No symbol table info available.
+#10 0x081294c7 in ?? ()
+No symbol table info available.
+#11 0x00ea7174 in g_object_unref () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#12 0x081263d0 in nautilus_file_unref ()
+No symbol table info available.
+#13 0x080f1c7e in ?? ()
+No symbol table info available.
+#14 0x080f2790 in ?? ()
+No symbol table info available.
+#15 0x00ea7174 in g_object_unref () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#16 0x004871b7 in g_list_foreach () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#17 0x0818415f in ?? ()
+No symbol table info available.
+#18 0x08184192 in ?? ()
+No symbol table info available.
+#19 0x080712bb in ?? ()
+No symbol table info available.
+#20 0x00eb30ec in g_cclosure_marshal_VOID__VOID ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#21 0x00ea34d9 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#22 0x00ea4e52 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#23 0x00ebaf60 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#24 0x00ebc204 in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#25 0x00ebc6a6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#26 0x007e4cfe in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#27 0x00ea70ab in g_object_unref () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#28 0x080a1ed3 in ?? ()
+No symbol table info available.
+#29 0x081723bc in ?? ()
+No symbol table info available.
+#30 0x08081ffa in ?? ()
+No symbol table info available.
+#31 0x097a6bd6 in __libc_start_main (main=0x80818e0, argc=1, 
+    ubp_av=0xbfe30dd4, init=0x81a8540, fini=0x81a8530, 
+    rtld_fini=0xbf1070 <_dl_fini>, stack_end=0xbfe30dcc) at libc-start.c:226
+        result = <value optimised out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {160301044, 0, 0, 
+                -1075638872, 1248587110, 2024192523}, mask_was_saved = 0}}, 
+          priv = {pad = {0x0, 0x0, 0x1, 0x806c5d0}, data = {prev = 0x0, 
+              cleanup = 0x0, canceltype = 1}}}
+        not_first_call = <value optimised out>
+#32 0x0806c5f1 in ?? ()
+No symbol table info available.

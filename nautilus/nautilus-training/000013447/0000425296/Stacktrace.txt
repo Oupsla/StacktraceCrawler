@@ -1,0 +1,20 @@
+#0  0x0030b1c2 in IA__g_type_instance_get_private (instance=0x1, 
+    private_type=163485736)
+    at /build/buildd/glib2.0-2.21.5/gobject/gtype.c:4183
+	instance_node = <value optimized out>
+	private_node = (TypeNode *) 0xfb9ff4
+	parent_node = <value optimized out>
+	class = <value optimized out>
+	offset = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_type_instance_get_private"
+#1  0x00fa8d2e in brasero_medium_probed (data=0x1) at brasero-medium.c:2932
+	priv = <value optimized out>
+#2  0x0057094a in g_thread_cleanup (data=0x9c591a8)
+    at /build/buildd/glib2.0-2.21.5/glib/gthread.c:556
+	node = <value optimized out>
+	i = 0
+#3  0x00d292ef in __nptl_deallocate_tsd ()
+   from /lib/tls/i686/cmov/libpthread.so.0
+#4  0x00d2981c in start_thread () from /lib/tls/i686/cmov/libpthread.so.0
+#5  0x058ce81e in clone () at ../sysdeps/unix/sysv/linux/i386/clone.S:130
+No locals.

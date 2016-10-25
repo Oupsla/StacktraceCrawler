@@ -1,0 +1,15 @@
+#0  0xb744b30e in g_type_value_table_peek () from /usr/lib/libgobject-2.0.so.0
+#1  0xb622c08e in g_file_is_native () from /usr/lib/libgio-2.0.so.0
+#2  0xb62ade07 in ?? ()
+#3  0x0837de40 in ?? ()
+#4  0x08531a38 in ?? ()
+#5  0x0837d380 in ?? ()
+#6  0xb7c42fdc in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+#7  0x0834d6b8 in ?? ()
+#8  0x081dc0b0 in ?? ()
+#9  0xbfc48098 in ?? ()
+#10 0xb79c928a in IA__gtk_file_system_volume_mount (file_system=0x837de40, 
+    volume=0x8337258, callback=0, data=0xb7c42fdc)
+    at /build/buildd/gtk+2.0-2.12.7/gtk/gtkfilesystem.c:604
+	__PRETTY_FUNCTION__ = "IA__gtk_file_system_volume_mount"
+Backtrace stopped: frame did not save the PC

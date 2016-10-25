@@ -1,0 +1,154 @@
+#0  0x00007f5018e8ff5f in g_type_check_instance_cast ()
+   from /usr/lib/libgobject-2.0.so.0
+#1  0x00007f500fb860f4 in volumes_drives_changed (
+    volume_monitor=<value optimized out>, volume=<value optimized out>, 
+    user_data=0x11dfa70) at gtkfilesystemgio.c:398
+No locals.
+#2  0x00007f5018e73bcf in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+#3  0x00007f5018e876bc in ?? () from /usr/lib/libgobject-2.0.so.0
+#4  0x00007f5018e890d5 in g_signal_emit_valist ()
+   from /usr/lib/libgobject-2.0.so.0
+#5  0x00007f5018e89398 in g_signal_emit_by_name ()
+   from /usr/lib/libgobject-2.0.so.0
+#6  0x00007f5018e73bcf in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+#7  0x00007f5018e876bc in ?? () from /usr/lib/libgobject-2.0.so.0
+#8  0x00007f5018e890d5 in g_signal_emit_valist ()
+   from /usr/lib/libgobject-2.0.so.0
+#9  0x00007f5018e89398 in g_signal_emit_by_name ()
+   from /usr/lib/libgobject-2.0.so.0
+#10 0x00007f500f969dec in changed_in_idle (data=<value optimized out>)
+    at ghaldrive.c:324
+	drive = (GHalDrive *) 0xb7fe30
+#11 0x00007f5018085222 in g_main_context_dispatch ()
+   from /usr/lib/libglib-2.0.so.0
+#12 0x00007f50180884d6 in ?? () from /usr/lib/libglib-2.0.so.0
+#13 0x00007f5018088797 in g_main_loop_run () from /usr/lib/libglib-2.0.so.0
+#14 0x000000000045c4c2 in brasero_burn_sleep (burn=0x12889e0, msec=500)
+    at burn.c:226
+	priv = (BraseroBurnPrivate *) 0x1288a00
+#15 0x000000000045cdb3 in brasero_burn_eject_dest_media (self=0x12889e0, 
+    error=0x7fff277b22d0) at burn.c:302
+	priv = (BraseroBurnPrivate *) 0x1288a00
+	elapsed = 4500
+#16 0x000000000045cf14 in brasero_burn_ask_for_dest_media (burn=0x12889e0, 
+    error_type=BRASERO_BURN_ERROR_MEDIA_SPACE, required_media=32770, 
+    error=0x7fff277b22d0) at burn.c:475
+	result = <value optimized out>
+	media = 20936736
+	priv = (BraseroBurnPrivate *) 0x1288a00
+#17 0x000000000045d868 in brasero_burn_reload_dest_media (burn=0x12889e0, 
+    error_code=BRASERO_BURN_ERROR_MEDIA_SPACE, error=0x7fff277b22d0)
+    at burn.c:914
+	priv = (BraseroBurnPrivate *) 0x1288a00
+	required_media = 20936736
+	result = <value optimized out>
+#18 0x000000000045db8d in brasero_burn_run_tasks (burn=0x12889e0, 
+    erase_allowed=1, error=0x6e656574614d6c41) at burn.c:1508
+	action = <value optimized out>
+	result = BRASERO_BURN_ERR
+	tasks = (GSList *) 0x0
+	next = <value optimized out>
+	iter = <value optimized out>
+	priv = (BraseroBurnPrivate *) 0x1288a00
+#19 0x000000000045e06a in brasero_burn_record_session (burn=0x12889e0, 
+    erase_allowed=1, error=0x7fff277b2398) at burn.c:1882
+	session_flags = <value optimized out>
+	track = <value optimized out>
+	type = <value optimized out>
+	priv = (BraseroBurnPrivate *) 0x1288a00
+	result = <value optimized out>
+	ret_error = (GError *) 0x0
+	tracks = <value optimized out>
+	__PRETTY_FUNCTION__ = "brasero_burn_record_session"
+#20 0x000000000045eaa9 in brasero_burn_record (burn=0x12889e0, 
+    session=0x1281960, error=0x7fff277b2398) at burn.c:2221
+	result = BRASERO_BURN_OK
+	priv = (BraseroBurnPrivate *) 0x1288a00
+	__PRETTY_FUNCTION__ = "brasero_burn_record"
+#21 0x0000000000432d63 in brasero_burn_dialog_run (dialog=0x1447080, 
+    session=0x1281960) at brasero-burn-dialog.c:1819
+	media = <value optimized out>
+	error = (GError *) 0x0
+	close_dialog = <value optimized out>
+	result = <value optimized out>
+#22 0x000000000046924c in brasero_project_manager_burn (manager=0x896030, 
+    session=0x1281960) at brasero-project-manager.c:357
+	toplevel = (GtkWidget *) 0x882000
+	dialog = (GtkWidget *) 0x1447080
+	destroy = <value optimized out>
+#23 0x0000000000468ebe in brasero_project_manager_switch (manager=0x896030, 
+    type=<value optimized out>, uris=0x0, uri=0x0, reset=1)
+    at brasero-project-manager.c:435
+	toplevel = (GtkWidget *) 0x882000
+	action = <value optimized out>
+#24 0x00007f5018e73bcf in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+#25 0x00007f5018e876bc in ?? () from /usr/lib/libgobject-2.0.so.0
+#26 0x00007f5018e890d5 in g_signal_emit_valist ()
+   from /usr/lib/libgobject-2.0.so.0
+#27 0x00007f5018e89483 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+#28 0x00007f5018e73bcf in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+#29 0x00007f5018e876bc in ?? () from /usr/lib/libgobject-2.0.so.0
+#30 0x00007f5018e890d5 in g_signal_emit_valist ()
+   from /usr/lib/libgobject-2.0.so.0
+#31 0x00007f5018e89483 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+#32 0x00007f501b8822c9 in gtk_real_button_released (button=0x11dfa70)
+    at /build/buildd/gtk+2.0-2.12.9/gtk/gtkbutton.c:1484
+No locals.
+#33 0x00007f5018e73bcf in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+#34 0x00007f5018e87386 in ?? () from /usr/lib/libgobject-2.0.so.0
+#35 0x00007f5018e890d5 in g_signal_emit_valist ()
+   from /usr/lib/libgobject-2.0.so.0
+#36 0x00007f5018e89483 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+#37 0x00007f501b880b99 in gtk_button_button_release (widget=0x11dfa70, 
+    event=0xb550f0) at /build/buildd/gtk+2.0-2.12.9/gtk/gtkbutton.c:1377
+No locals.
+#38 0x00007f501b94685f in _gtk_marshal_BOOLEAN__BOXED (closure=0x723440, 
+    return_value=0x7fff277b3a20, n_param_values=<value optimized out>, 
+    param_values=0x7fff277b3b00, invocation_hint=<value optimized out>, 
+    marshal_data=0x7f501b880b80)
+    at /build/buildd/gtk+2.0-2.12.9/gtk/gtkmarshalers.c:84
+	data1 = (gpointer) 0x9e0c30
+	data2 = (gpointer) 0x6e656574614d6c41
+	v_return = <value optimized out>
+	__PRETTY_FUNCTION__ = "_gtk_marshal_BOOLEAN__BOXED"
+#39 0x00007f5018e73bcf in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+#40 0x00007f5018e87aa8 in ?? () from /usr/lib/libgobject-2.0.so.0
+#41 0x00007f5018e88de6 in g_signal_emit_valist ()
+   from /usr/lib/libgobject-2.0.so.0
+#42 0x00007f5018e89483 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+#43 0x00007f501ba4de35 in gtk_widget_event_internal (widget=0x9e0c30, 
+    event=0x11ef0b0) at /build/buildd/gtk+2.0-2.12.9/gtk/gtkwidget.c:4678
+	signal_num = <value optimized out>
+	return_val = 0
+#44 0x00007f501b93fb72 in IA__gtk_propagate_event (widget=0x9e0c30, 
+    event=0x11ef0b0) at /build/buildd/gtk+2.0-2.12.9/gtk/gtkmain.c:2336
+	tmp = (GtkWidget *) 0x11e7340
+	handled_event = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_propagate_event"
+#45 0x00007f501b940b15 in IA__gtk_main_do_event (event=0x11ef0b0)
+    at /build/buildd/gtk+2.0-2.12.9/gtk/gtkmain.c:1556
+	event_widget = (GtkWidget *) 0x9e0c30
+	grab_widget = (GtkWidget *) 0x9e0c30
+	window_group = (GtkWindowGroup *) 0x11e7340
+	rewritten_event = (GdkEvent *) 0x0
+	tmp_list = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_main_do_event"
+#46 0x00007f501b5aa59c in gdk_event_dispatch (source=<value optimized out>, 
+    callback=<value optimized out>, user_data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.12.9/gdk/x11/gdkevents-x11.c:2351
+	display = <value optimized out>
+	event = (GdkEvent *) 0x11ef0b0
+#47 0x00007f5018085222 in g_main_context_dispatch ()
+   from /usr/lib/libglib-2.0.so.0
+#48 0x00007f50180884d6 in ?? () from /usr/lib/libglib-2.0.so.0
+#49 0x00007f5018088797 in g_main_loop_run () from /usr/lib/libglib-2.0.so.0
+#50 0x00007f501b940ee3 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.12.9/gtk/gtkmain.c:1163
+	tmp_list = (GList *) 0x877220
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0xb58cc0
+	loop = (GMainLoop *) 0x11f5f20
+#51 0x00000000004256da in main (argc=1, argv=0x7fff277b4238) at main.c:735
+	app = <value optimized out>
+	program = (GnomeProgram *) 0x6d2050
+	context = <value optimized out>

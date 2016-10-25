@@ -1,0 +1,74 @@
+#0  0x0000000000000000 in ?? ()
+#1  0x00007f45e772ea81 in g_object_notify () from /usr/lib/libgobject-2.0.so.0
+#2  0x00007f45ded09988 in cb_probe (pad=0x33da6d0, e=<value optimized out>, user_data=0x350e4c0)
+    at gststreaminfo.c:205
+	codec = (gchar *) 0x35cc530 "MPEG-4 AAC audio"
+	lang = <value optimized out>
+	list = (GstTagList *) 0x35d6720
+	__PRETTY_FUNCTION__ = "cb_probe"
+#3  0x00007f45ef033da8 in gst_marshal_BOOLEAN__POINTER (closure=0x35d6da0, return_value=0x41ce4b30, 
+    n_param_values=<value optimized out>, param_values=0x41ce4ba0, invocation_hint=<value optimized out>, 
+    marshal_data=0x7f45ded097c0) at gstmarshal.c:584
+	data1 = (gpointer) 0x33da6d0
+	data2 = (gpointer) 0x41ce4870
+	v_return = <value optimized out>
+	__PRETTY_FUNCTION__ = "gst_marshal_BOOLEAN__POINTER"
+#4  0x00007f45e772825d in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+#5  0x00007f45e773df5d in ?? () from /usr/lib/libgobject-2.0.so.0
+#6  0x00007f45eeff8d08 in gst_pad_emit_have_data_signal (pad=<value optimized out>, obj=0x35cc2c0) at gstpad.c:3817
+	ret = {g_type = 20, data = {{v_int = 1, v_uint = 1, v_long = 1, v_ulong = 1, v_int64 = 1, v_uint64 = 1, 
+      v_float = 1.40129846e-45, v_double = 4.9406564584124654e-324, v_pointer = 0x1}, {v_int = 0, v_uint = 0, 
+      v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+	args = {{g_type = 34200064, data = {{v_int = 54372048, v_uint = 54372048, v_long = 54372048, 
+        v_ulong = 54372048, v_int64 = 54372048, v_uint64 = 54372048, v_float = 5.57335994e-37, 
+        v_double = 2.6863361010831257e-316, v_pointer = 0x33da6d0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, 
+        v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}, {g_type = 196, data = {{
+        v_int = 56410816, v_uint = 56410816, v_long = 56410816, v_ulong = 56410816, v_int64 = 56410816, 
+        v_uint64 = 56410816, v_float = 6.48757513e-37, v_double = 2.7870646239471724e-316, v_pointer = 0x35cc2c0}, {
+        v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, 
+        v_pointer = 0x0}}}}
+	res = <value optimized out>
+	detail = 1104038000
+#7  0x00007f45eeff95c5 in gst_pad_push_event (pad=0x33da6d0, event=0x35cc2c0) at gstpad.c:4472
+	peerpad = <value optimized out>
+	result = <value optimized out>
+	__PRETTY_FUNCTION__ = "gst_pad_push_event"
+#8  0x00007f45eeff90f8 in gst_pad_send_event (pad=0x32344c0, event=0x35cc2c0) at gstpad.c:4630
+	result = <value optimized out>
+	eventfunc = (GstPadEventFunction) 0x7f45eefee500 <gst_proxy_pad_do_event>
+	serialized = <value optimized out>
+	need_unlock = 1
+	__PRETTY_FUNCTION__ = "gst_pad_send_event"
+#9  0x00007f45eeff9718 in gst_pad_push_event (pad=0x35b8b80, event=0x35cc2c0) at gstpad.c:4486
+	peerpad = (GstPad *) 0x32344c0
+	result = <value optimized out>
+	__PRETTY_FUNCTION__ = "gst_pad_push_event"
+#10 0x00007f45eeffae29 in gst_pad_event_default (pad=0x35b8a10, event=0x35cc2c0) at gstpad.c:3247
+	__PRETTY_FUNCTION__ = "gst_pad_event_default"
+#11 0x00007f45cef76d9d in gst_faad_sink_event (pad=0x35b8a10, event=0x35cc2c0) at gstfaad.c:945
+	faad = (GstFaad *) 0x2615680
+	res = <value optimized out>
+	__FUNCTION__ = "gst_faad_sink_event"
+#12 0x00007f45eeff90f8 in gst_pad_send_event (pad=0x35b8a10, event=0x35cc2c0) at gstpad.c:4630
+	result = <value optimized out>
+	eventfunc = (GstPadEventFunction) 0x7f45cef76ce0 <gst_faad_sink_event>
+	serialized = <value optimized out>
+	need_unlock = 1
+	__PRETTY_FUNCTION__ = "gst_pad_send_event"
+#13 0x00007f45eeff9718 in gst_pad_push_event (pad=0x35b88a0, event=0x35cc2c0) at gstpad.c:4486
+	peerpad = (GstPad *) 0x35b8a10
+	result = <value optimized out>
+	__PRETTY_FUNCTION__ = "gst_pad_push_event"
+#14 0x00007f45de8cf989 in gst_queue_loop (pad=<value optimized out>) at gstqueue.c:1093
+	queue = (GstQueue *) 0x7f45d00025b0
+	ret = GST_FLOW_OK
+	__PRETTY_FUNCTION__ = "gst_queue_loop"
+#15 0x00007f45ef01bc06 in gst_task_func (task=0x7f45d019f5d0, tclass=<value optimized out>) at gsttask.c:192
+	lock = (GStaticRecMutex *) 0x35be3c0
+	tself = (GThread *) 0x35d3050
+	__PRETTY_FUNCTION__ = "gst_task_func"
+#16 0x00007f45e72b67f7 in ?? () from /usr/lib/libglib-2.0.so.0
+#17 0x00007f45e72b5264 in ?? () from /usr/lib/libglib-2.0.so.0
+#18 0x00007f45eb0ba3ea in start_thread () from /lib/libpthread.so.0
+#19 0x00007f45e6fc6c6d in clone () from /lib/libc.so.6
+#20 0x0000000000000000 in ?? ()

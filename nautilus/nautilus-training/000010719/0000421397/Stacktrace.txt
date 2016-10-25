@@ -1,0 +1,28 @@
+#0  0xb71fe4aa in ?? () from /lib/tls/i686/cmov/libc.so.6
+#1  0xb7200948 in malloc () from /lib/tls/i686/cmov/libc.so.6
+#2  0xb770610f in g_realloc () from /usr/lib/libglib-2.0.so.0
+#3  0xb772122f in ?? () from /usr/lib/libglib-2.0.so.0
+#4  0xb772232d in g_string_sized_new () from /usr/lib/libglib-2.0.so.0
+#5  0xb76ecece in ?? () from /usr/lib/libglib-2.0.so.0
+#6  0xb76ed1a4 in g_build_filename () from /usr/lib/libglib-2.0.so.0
+#7  0xb6956631 in ?? () from /usr/lib/libgstreamer-0.10.so.0
+#8  0xb6956aac in ?? () from /usr/lib/libgstreamer-0.10.so.0
+#9  0xb69623a0 in ?? () from /usr/lib/libgstreamer-0.10.so.0
+#10 0xb6962699 in gst_registry_scan_path ()
+   from /usr/lib/libgstreamer-0.10.so.0
+#11 0xb6911ba1 in ?? () from /usr/lib/libgstreamer-0.10.so.0
+#12 0xb691250e in ?? () from /usr/lib/libgstreamer-0.10.so.0
+#13 0xb6913d25 in ?? () from /usr/lib/libgstreamer-0.10.so.0
+#14 0xb770ca70 in g_option_context_parse () from /usr/lib/libglib-2.0.so.0
+#15 0xb691336e in gst_init_check () from /usr/lib/libgstreamer-0.10.so.0
+#16 0xb674992e in brasero_burn_library_start ()
+   from /usr/lib/libbrasero-burn.so.0
+#17 0xb681f2ef in nautilus_module_initialize ()
+   from /usr/lib/nautilus/extensions-2.0/libnautilus-brasero-extension.so
+#18 0x08145eae in ?? ()
+#19 0xb77f38c0 in g_type_module_use () from /usr/lib/libgobject-2.0.so.0
+#20 0x08145fea in ?? ()
+#21 0x0806f9bf in ?? ()
+#22 0x080814c8 in ?? ()
+#23 0xb71a7b56 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+#24 0x0806bf41 in ?? ()

@@ -1,0 +1,77 @@
+#0  0xb78222c8 in IA__g_hash_table_lookup (hash_table=0x558b0026, 
+    key=0xb6c1310c) at /build/buildd/glib2.0-2.20.0/glib/ghash.c:195
+	node = <value optimized out>
+	node_index = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_hash_table_lookup"
+#1  0xb78cee81 in gconf_client_remove_dir (client=0xb7000002, 
+    dirname=0xb6c1310c "/apps/nautilus-actions/configurations", err=0x0)
+    at gconf-client.c:706
+	found = <value optimized out>
+	__PRETTY_FUNCTION__ = "gconf_client_remove_dir"
+#2  0xb6c0ec67 in nautilus_actions_config_gconf_reader_finalize (
+    object=0x8a9edb0) at nautilus-actions-config-gconf-reader.c:63
+	__PRETTY_FUNCTION__ = "nautilus_actions_config_gconf_reader_finalize"
+#3  0xb78f1df3 in IA__g_object_unref (_object=0x8a9edb0)
+    at /build/buildd/glib2.0-2.20.0/gobject/gobject.c:2421
+	object = (GObject *) 0x8a9edb0
+	old_ref = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_object_unref"
+#4  0xb6c0baf4 in nautilus_actions_instance_dispose (obj=0x8a9ed98)
+    at nautilus-actions.c:178
+No locals.
+#5  0xb78f1d58 in IA__g_object_unref (_object=0x8a9ed98)
+    at /build/buildd/glib2.0-2.20.0/gobject/gobject.c:2393
+	object = (GObject *) 0x8a9ed98
+	old_ref = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_object_unref"
+#6  0x0814716d in free_module_objects () at nautilus-module.c:216
+	l = <value optimized out>
+	next = (GList *) 0x8aa7da0
+#7  0x0816dd3c in eel_debug_shut_down () at eel-debug.c:109
+	f = (ShutdownFunction *) 0x8aa2ce0
+#8  0x08080a68 in main (argc=1, argv=0xbff8e934) at nautilus-main.c:528
+	kill_shell = 0
+	no_default_window = 0
+	browser_window = 0
+	no_desktop = 0
+	version = 0
+	autostart_mode = 145295952
+	autostart_id = <value optimized out>
+	geometry = (gchar *) 0x0
+	remaining = (const gchar **) 0x0
+	perform_self_check = 0
+	application = (NautilusApplication *) 0x8a90a50
+	context = <value optimized out>
+	file = <value optimized out>
+	uri = <value optimized out>
+	uris = (char **) 0x0
+	uris_array = (GPtrArray *) 0xb749c000
+	error = (GError *) 0x0
+	options = {{long_name = 0x81a7383 "check", short_name = 99 'c', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbff8e868, 
+    description = 0x81a73c4 "Perform a quick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x81a72b9 "version", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbff8e874, 
+    description = 0x81a73f0 "Show the version of the program.", 
+    arg_description = 0x0}, {long_name = 0x81aacef "geometry", 
+    short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+    arg_data = 0xbff8e870, 
+    description = 0x81a7414 "Create the initial window with the given geometry.", arg_description = 0x81a72c1 "GEOMETRY"}, {
+    long_name = 0x81a72ca "no-default-window", short_name = 110 'n', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbff8e880, 
+    description = 0x81a7448 "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {long_name = 0x81a72dc "no-desktop", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbff8e878, 
+    description = 0x81a747c "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {
+    long_name = 0x81a407b "browser", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbff8e87c, 
+    description = 0x81a72e7 "open a browser window.", arg_description = 0x0}, 
+  {long_name = 0x81c6a39 "quit", short_name = 113 'q', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbff8e884, 
+    description = 0x81a72fe "Quit Nautilus.", arg_description = 0x0}, {
+    long_name = 0x81abeef "", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0xbff8e86c, 
+    description = 0x0, arg_description = 0x81a730d "[URI...]"}, {
+    long_name = 0x0, short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x0, description = 0x0, arg_description = 0x0}}

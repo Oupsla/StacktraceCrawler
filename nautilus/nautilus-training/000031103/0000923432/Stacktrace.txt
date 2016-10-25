@@ -1,0 +1,102 @@
+#0  0x00007f7a7cd023b5 in __GI_raise (sig=6) at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+        resultvar = 0
+        pid = <optimized out>
+        selftid = <optimized out>
+#1  0x00007f7a7cd05b1b in __GI_abort () at abort.c:92
+        save_stage = 2
+        act = {__sigaction_handler = {sa_handler = 0x18, sa_sigaction = 0x18}, sa_mask = {__val = {140164067938601, 140164056558496, 140164132779224, 1024, 0, 140163843802304, 140163843802304, 4294967295, 140163841785888, 140163842580016, 140163842580016, 3084376, 0, 4, 0, 140164067401728}}, sa_flags = -2126880844, sa_restorer = 0x7f7a00000005}
+        sigs = {__val = {32, 0 <repeats 15 times>}}
+#2  0x00007f7a7d7916ed in g_assertion_message (domain=<optimized out>, file=<optimized out>, line=<optimized out>, func=0x511ac0 "nautilus_window_slot_open_location_full", message=0x7f7a700c1fa0 "assertion failed: (target_window == window)") at /build/buildd/glib2.0-2.31.12/./glib/gtestutils.c:1860
+        lstr = "507\000\377\177\000\000\240\273\024\227\377\177\000\000\000\000\000\000\000\000\000\000\345\022Q\000\000\000\000"
+        s = 0x7f7a700c1e30 "x"
+#3  0x00007f7a7d791c12 in g_assertion_message_expr (domain=0x0, file=0x5113b0 "nautilus-window-manage-views.c", line=507, func=0x511ac0 "nautilus_window_slot_open_location_full", expr=<optimized out>) at /build/buildd/glib2.0-2.31.12/./glib/gtestutils.c:1871
+        s = <optimized out>
+#4  0x0000000000480835 in nautilus_window_slot_open_location_full (slot=0x1f618c0, location=0x2462b00, flags=NAUTILUS_WINDOW_OPEN_FLAG_NEW_TAB, new_selection=0x0, callback=0, user_data=0x0) at nautilus-window-manage-views.c:507
+        window = 0x1dde0d0
+        target_window = 0x1dce2e0
+        pane = <optimized out>
+        target_slot = 0x0
+        slot_flags = <optimized out>
+        old_location = 0x202b490
+        old_uri = <optimized out>
+        new_uri = <optimized out>
+        new_slot_position = <optimized out>
+        l = <optimized out>
+        use_same = <optimized out>
+        is_desktop = <optimized out>
+        app = <optimized out>
+        __PRETTY_FUNCTION__ = "nautilus_window_slot_open_location_full"
+#5  0x000000000044c8fe in activate_files (parameters=0x22b5800) at nautilus-mime-actions.c:1754
+        f = 0x2462b00
+        window = <optimized out>
+        flags = NAUTILUS_WINDOW_OPEN_FLAG_NEW_TAB
+        old_working_dir = <optimized out>
+        launch_files = 0x0
+        open_in_app_parameters = <optimized out>
+        executable_path = <optimized out>
+        quoted_path = <optimized out>
+        num_apps = <optimized out>
+        num_unhandled = <optimized out>
+        num_files = <optimized out>
+        launch_desktop_files = 0x0
+        open_in_app_uris = <optimized out>
+        open_in_view_files = 0x1ea18c0
+        action = <optimized out>
+        uri = 0x7f7a70078190 "file:///home/mst/Desktop/testback"
+        location = <optimized out>
+        file = <optimized out>
+        launch_in_terminal_files = 0x0
+        unhandled_open_in_app_uris = <optimized out>
+        count = <optimized out>
+        screen = 0x1c460e0
+        open_files = <optimized out>
+        one_parameters = <optimized out>
+        l = 0x1ea18c0
+#6  activate_callback (files=<optimized out>, callback_data=0x22b5800) at nautilus-mime-actions.c:1976
+        parameters = 0x22b5800
+        l = <optimized out>
+        next = <optimized out>
+        file = <optimized out>
+        location = <optimized out>
+#7  0x00000000004b8332 in file_list_file_ready_callback (user_data=0x7f7a7000b900, file=<optimized out>) at nautilus-file.c:7705
+No locals.
+#8  file_list_file_ready_callback (file=<optimized out>, user_data=0x7f7a7000b900) at nautilus-file.c:7695
+        data = 0x7f7a7000b900
+#9  0x000000000049bb5c in call_ready_callbacks_at_idle (callback_data=<optimized out>) at nautilus-directory-async.c:1861
+        directory = 0x1d7f1c0
+        node = <optimized out>
+        next = <optimized out>
+        callback = 0x7f7a700c56c0
+#10 0x00007f7a7d7717da in g_main_dispatch (context=0x1c52400) at /build/buildd/glib2.0-2.31.12/./glib/gmain.c:2513
+        dispatch = 0x7f7a7d76f430 <g_idle_dispatch>
+        was_in_call = 0
+        user_data = 0x1d7f1c0
+        callback = 0x49bae0 <call_ready_callbacks_at_idle>
+        cb_funcs = 0x7f7a7da1b9a0
+        cb_data = 0x225a970
+        current_source_link = {data = 0x23877e0, next = 0x0}
+        need_destroy = <optimized out>
+        source = 0x23877e0
+        current = 0x1d62770
+        i = <optimized out>
+#11 g_main_context_dispatch (context=0x1c52400) at /build/buildd/glib2.0-2.31.12/./glib/gmain.c:3050
+No locals.
+#12 0x00007f7a7d771ba0 in g_main_context_iterate (dispatch=1, block=<optimized out>, context=0x1c52400, self=<optimized out>) at /build/buildd/glib2.0-2.31.12/./glib/gmain.c:3121
+        timeout = 0
+        some_ready = 1
+        fds = <optimized out>
+        max_priority = 200
+        nfds = 10
+        allocated_nfds = <optimized out>
+#13 g_main_context_iterate (context=0x1c52400, block=<optimized out>, dispatch=1, self=<optimized out>) at /build/buildd/glib2.0-2.31.12/./glib/gmain.c:3058
+        some_ready = 1
+#14 0x00007f7a7d771c64 in g_main_context_iteration (context=0x1c52400, may_block=1) at /build/buildd/glib2.0-2.31.12/./glib/gmain.c:3182
+        retval = <optimized out>
+#15 0x00007f7a7df26724 in g_application_run (application=0x1bfb000, argc=<optimized out>, argv=0x7fff9714bff8) at /build/buildd/glib2.0-2.31.12/./gio/gapplication.c:1496
+        arguments = 0x1bf46c0
+        status = 0
+        i = <optimized out>
+        __PRETTY_FUNCTION__ = "g_application_run"
+#16 0x000000000042b4f0 in main (argc=2, argv=0x7fff9714bff8) at nautilus-main.c:102
+        retval = <optimized out>
+        application = 0x1bfb000

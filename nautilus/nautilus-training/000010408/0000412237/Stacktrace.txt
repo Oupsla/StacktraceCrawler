@@ -1,0 +1,15 @@
+#0  gdu_device_get_object_path (device=0x18) at gdu-device.c:712
+No locals.
+#1  0x0804b0ec in ?? ()
+#2  0x00ff6b56 in __libc_start_main (
+    main=0x804b010 <gtk_misc_set_alignment@plt+2692>, argc=1, 
+    ubp_av=0xbfc92d94, init=0x804c0d0 <gtk_misc_set_alignment@plt+6980>, 
+    fini=0x804c0c0 <gtk_misc_set_alignment@plt+6964>, 
+    rtld_fini=0x181d20 <_dl_fini>, stack_end=0xbfc92d8c) at libc-start.c:220
+	result = <value optimized out>
+	unwind_buf = {cancel_jmp_buf = {{jmp_buf = {18038772, 0, 0, 
+        -1077334680, 207942085, 1626023611}, mask_was_saved = 0}}, priv = {
+    pad = {0x0, 0x0, 0x1, 0x804a5a0}, data = {prev = 0x0, cleanup = 0x0, 
+      canceltype = 1}}}
+	not_first_call = <value optimized out>
+#3  0x0804a5c1 in ?? ()

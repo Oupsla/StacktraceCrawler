@@ -1,0 +1,109 @@
+#0  IA__g_str_hash (v=0x0) at /build/buildd/glib2.0-2.21.2/glib/gstring.c:95
+	p = (
+    const signed char *) 0x7f976abed041 <Address 0x7f976abed041 out of bounds>
+	h = <value optimized out>
+#1  0x00007f9767774a5d in IA__g_hash_table_lookup (hash_table=0x1a04190, 
+    key=0x0) at /build/buildd/glib2.0-2.21.2/glib/ghash.c:195
+	node = <value optimized out>
+	node_index = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_hash_table_lookup"
+#2  0x00007f974d3f16a9 in ?? ()
+#3  0x0000000001fa20c0 in ?? ()
+#4  0x00000000020502e0 in ?? ()
+#5  0x0000000002571260 in ?? ()
+#6  0x00000000004b10d7 in extension_info_start (directory=0x20502e0, 
+    file=0x194ae30, doing_io=<value optimized out>)
+    at nautilus-directory-async.c:4544
+	provider = (NautilusInfoProvider *) 0x194ae30
+	result = <value optimized out>
+	handle = <value optimized out>
+	update_complete = <value optimized out>
+#7  0x00000000004ada2e in nautilus_directory_async_state_changed (
+    directory=0x1fa20c0) at nautilus-directory-async.c:4625
+No locals.
+#8  0x00000000004afbb9 in count_more_files_callback (
+    source_object=<value optimized out>, res=<value optimized out>, 
+    user_data=<value optimized out>) at nautilus-directory-async.c:2556
+	state = (DirectoryCountState *) 0x7f9758012730
+	directory = (NautilusDirectory *) 0x1fa20c0
+	error = (GError *) 0x0
+	files = (GList *) 0x0
+	__PRETTY_FUNCTION__ = "count_more_files_callback"
+#9  0x00007f9768597a65 in next_async_callback_wrapper (
+    source_object=0x2363400, res=0x2402cc0, user_data=0x7f9758012730)
+    at /build/buildd/glib2.0-2.21.2/gio/gfileenumerator.c:299
+	enumerator = (GFileEnumerator *) 0x2363400
+#10 0x00007f97685b2b6c in complete_in_idle_cb (data=0x2402cc0)
+    at /build/buildd/glib2.0-2.21.2/gio/gsimpleasyncresult.c:571
+No locals.
+#11 0x00007f97677838fe in IA__g_main_context_dispatch (context=0x18aec90)
+    at /build/buildd/glib2.0-2.21.2/glib/gmain.c:1814
+No locals.
+#12 0x00007f9767786fd8 in g_main_context_iterate (context=0x18aec90, 
+    block=<value optimized out>, dispatch=<value optimized out>, 
+    self=<value optimized out>)
+    at /build/buildd/glib2.0-2.21.2/glib/gmain.c:2445
+	max_priority = 0
+	timeout = 0
+	some_ready = 1
+	nfds = 18
+	allocated_nfds = 1735997808
+	fds = <value optimized out>
+	__PRETTY_FUNCTION__ = "g_main_context_iterate"
+#13 0x00007f9767787435 in IA__g_main_loop_run (loop=0x1f56380)
+    at /build/buildd/glib2.0-2.21.2/glib/gmain.c:2653
+	self = (GThread *) 0x18674d0
+	__PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#14 0x00007f976904a027 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.17.2/gtk/gtkmain.c:1205
+	tmp_list = (GList *) 0x190e370
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0x0
+	loop = <value optimized out>
+#15 0x00000000004429fa in main (argc=1, argv=0x7fffb3fa6fa8)
+    at nautilus-main.c:549
+	kill_shell = 0
+	no_default_window = 1
+	browser_window = 0
+	no_desktop = 0
+	version = 0
+	autostart_mode = 1
+	autostart_id = <value optimized out>
+	geometry = (gchar *) 0x0
+	remaining = (const gchar **) 0x0
+	perform_self_check = 0
+	application = <value optimized out>
+	context = <value optimized out>
+	file = (GFile *) 0x1
+	uri = <value optimized out>
+	uris = (char **) 0x0
+	uris_array = <value optimized out>
+	error = (GError *) 0x0
+	options = {{long_name = 0x54a959 "check", short_name = 99 'c', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x7fffb3fa6ea8, 
+    description = 0x54a9a0 "Perform a quick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x54a88f "version", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x7fffb3fa6eac, 
+    description = 0x54a9d0 "Show the version of the program.", 
+    arg_description = 0x0}, {long_name = 0x54e7b3 "geometry", 
+    short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+    arg_data = 0x7fffb3fa6ea0, 
+    description = 0x54a9f8 "Create the initial window with the given geometry.", arg_description = 0x54a897 "GEOMETRY"}, {
+    long_name = 0x54a8a0 "no-default-window", short_name = 110 'n', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x7fffb3fa6eb8, 
+    description = 0x54aa30 "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {long_name = 0x54a8b2 "no-desktop", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x7fffb3fa6eb0, 
+    description = 0x54aa68 "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {
+    long_name = 0x547246 "browser", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0x7fffb3fa6eb4, 
+    description = 0x54a8bd "open a browser window.", arg_description = 0x0}, {
+    long_name = 0x56c111 "quit", short_name = 113 'q', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0x7fffb3fa6ebc, 
+    description = 0x54a8d4 "Quit Nautilus.", arg_description = 0x0}, {
+    long_name = 0x54fc01 "", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0x7fffb3fa6e98, 
+    description = 0x0, arg_description = 0x54a8e3 "[URI...]"}, {
+    long_name = 0x0, short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x0, description = 0x0, arg_description = 0x0}}

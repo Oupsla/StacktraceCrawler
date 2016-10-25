@@ -1,0 +1,71 @@
+#0  0x00007f0d09d85c55 in raise (sig=6) at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+        resultvar = 0
+        pid = <value optimized out>
+        selftid = 4940
+#1  0x00007f0d09d89a06 in abort () at abort.c:92
+        save_stage = 2
+        act = {__sigaction_handler = {sa_handler = 0x2775880, sa_sigaction = 0x2775880}, sa_mask = {__val = {139693927202784, 139693895312224, 1, 139693976292256, 139694045709536, 41375872, 139693927202784, 4294967295, 1, 31483280, 41366048, 3096640, 0, 4, 0, 139693992611840}}, sa_flags = 232492196, sa_restorer = 0x5}
+        sigs = {__val = {32, 0 <repeats 15 times>}}
+#2  0x00007f0d0ad5127d in g_assertion_message (domain=<value optimized out>, file=<value optimized out>, line=<value optimized out>, func=0x5123c0 "nautilus_window_slot_open_location_full", message=0x2772c20 "assertion failed: (target_window == window)") at /build/buildd/glib2.0-2.29.14/./glib/gtestutils.c:1425
+        lstr = "507\000\377\177\000\000@]\251_\377\177\000\000`\343\001\005\r\177\000\000\312\033Q\000\000\000\000"
+        s = 0x2773220 "\370\061\017\n\r\177"
+#3  0x00007f0d0ad517a2 in g_assertion_message_expr (domain=0x0, file=0x511c98 "nautilus-window-manage-views.c", line=507, func=0x5123c0 "nautilus_window_slot_open_location_full", expr=<value optimized out>) at /build/buildd/glib2.0-2.29.14/./glib/gtestutils.c:1436
+        s = <value optimized out>
+#4  0x000000000047f5a5 in ?? ()
+No symbol table info available.
+#5  0x000000000044bc2e in ?? ()
+No symbol table info available.
+#6  0x00000000004b6a72 in ?? ()
+No symbol table info available.
+#7  0x000000000049a27c in ?? ()
+No symbol table info available.
+#8  0x00007f0d0ad2d5bd in g_main_dispatch (context=0x1e66610) at /build/buildd/glib2.0-2.29.14/./glib/gmain.c:2500
+        dispatch = 0x7f0d0ad29290 <g_idle_dispatch>
+        was_in_call = 0
+        user_data = 0x1faf1c0
+        callback = 0x49a200
+        cb_funcs = 0x7f0d0afdd650
+        cb_data = 0x2546be0
+        current_source_link = {data = 0x2206c20, next = 0x0}
+        need_destroy = <value optimized out>
+        source = 0x2206c20
+        current = 0x1f1ee30
+        i = <value optimized out>
+#9  g_main_context_dispatch (context=0x1e66610) at /build/buildd/glib2.0-2.29.14/./glib/gmain.c:3083
+No locals.
+#10 0x00007f0d0ad2ddb8 in g_main_context_iterate (context=0x1e66610, block=<value optimized out>, dispatch=1, self=<value optimized out>) at /build/buildd/glib2.0-2.29.14/./glib/gmain.c:3161
+        max_priority = 200
+        timeout = 0
+        some_ready = 1
+        nfds = 9
+        allocated_nfds = <value optimized out>
+        fds = <value optimized out>
+#11 0x00007f0d0ad2e2f2 in g_main_loop_run (loop=0x1e490a0) at /build/buildd/glib2.0-2.29.14/./glib/gmain.c:3369
+        __PRETTY_FUNCTION__ = "g_main_loop_run"
+#12 0x00007f0d0cb06f8d in gtk_main () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#13 0x00007f0d0c043a8e in g_application_run (application=0x1e4a000, argc=<value optimized out>, argv=<value optimized out>) at /build/buildd/glib2.0-2.29.14/./gio/gapplication.c:1325
+        arguments = 0x1e490a0
+        status = 0
+        i = <value optimized out>
+        __PRETTY_FUNCTION__ = "g_application_run"
+#14 0x000000000042ace0 in ?? ()
+No symbol table info available.
+#15 0x00007f0d09d70e1f in __libc_start_main (main=0x42ac40, argc=2, ubp_av=0x7fff5fa961d8, init=<value optimized out>, fini=<value optimized out>, rtld_fini=<value optimized out>, stack_end=0x7fff5fa961c8) at libc-start.c:226
+        result = <value optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, -977248055122193226, 4369656, 140734798324176, 0, 0, 976895467902211254, 894542578344793270}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x500f30, 0x7fff5fa961d8}, data = {prev = 0x0, cleanup = 0x0, canceltype = 5246768}}}
+        not_first_call = <value optimized out>
+#16 0x000000000042ad21 in ?? ()
+No symbol table info available.
+#17 0x00007fff5fa961c8 in ?? ()
+No symbol table info available.
+#18 0x000000000000001c in ?? ()
+No symbol table info available.
+#19 0x0000000000000002 in ?? ()
+No symbol table info available.
+#20 0x00007fff5fa96a70 in ?? ()
+No symbol table info available.
+#21 0x00007fff5fa96a79 in ?? ()
+No symbol table info available.
+#22 0x0000000000000000 in ?? ()
+No symbol table info available.

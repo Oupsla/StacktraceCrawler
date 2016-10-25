@@ -1,0 +1,73 @@
+#0  0xb78bc424 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0xb6a67c8f in raise () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#2  0xb6a6b2b5 in abort () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#3  0xb6a60826 in __assert_fail () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#4  0xb776a59f in _XAllocID () from /usr/lib/i386-linux-gnu/libX11.so.6
+No symbol table info available.
+#5  0xb66889a7 in XRenderCreateCursor () from /usr/lib/i386-linux-gnu/libXrender.so.1
+No symbol table info available.
+#6  0xb68083a2 in XcursorImageLoadCursor () from /usr/lib/i386-linux-gnu/libXcursor.so.1
+No symbol table info available.
+#7  0xb68090a9 in XcursorImagesLoadCursors () from /usr/lib/i386-linux-gnu/libXcursor.so.1
+No symbol table info available.
+#8  0xb6809168 in XcursorImagesLoadCursor () from /usr/lib/i386-linux-gnu/libXcursor.so.1
+No symbol table info available.
+#9  0xb680c3d2 in XcursorLibraryLoadCursor () from /usr/lib/i386-linux-gnu/libXcursor.so.1
+No symbol table info available.
+#10 0xb680c46b in XcursorShapeLoadCursor () from /usr/lib/i386-linux-gnu/libXcursor.so.1
+No symbol table info available.
+#11 0xb70da468 in ?? () from /usr/lib/i386-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#12 0xb70da4df in ?? () from /usr/lib/i386-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#13 0xb6c7ba78 in g_slist_foreach () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#14 0xb70da5eb in gdk_x11_display_set_cursor_theme () from /usr/lib/i386-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#15 0xb732b8e4 in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#16 0xb732de4d in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#17 0xb6d1fdea in g_cclosure_marshal_VOID__PARAM () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#18 0xb6d1c7fd in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#19 0xb6d1ddac in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#20 0xb6d2f51f in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#21 0xb6d36942 in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#22 0xb6d36ad3 in g_signal_emit () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#23 0xb6d20fff in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#24 0xb6d22d80 in g_object_notify () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#25 0xb7331767 in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#26 0xb72a98d5 in gtk_main_do_event () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#27 0xb70c1bbc in ?? () from /usr/lib/i386-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#28 0xb70ef378 in ?? () from /usr/lib/i386-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#29 0xb6c6028a in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#30 0xb6c60695 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#31 0xb6c60771 in g_main_context_iteration () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#32 0xb6e1362c in g_application_run () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#33 0x08067ae4 in ?? ()
+No symbol table info available.
+#34 0xb6a53113 in __libc_start_main () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#35 0x08067b1d in ?? ()
+No symbol table info available.
+Backtrace stopped: Not enough registers or memory available to unwind further

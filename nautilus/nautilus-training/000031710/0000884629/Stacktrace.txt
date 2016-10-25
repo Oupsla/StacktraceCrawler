@@ -1,0 +1,34 @@
+#0  0x00007f1ba083e9cc in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+No symbol table info available.
+#1  0x00007f1ba083f1e8 in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+No symbol table info available.
+#2  0x00007f1ba082a89a in ?? () from /usr/lib/gio/modules/libgvfsdbus.so
+No symbol table info available.
+#3  0x00007f1ba9adb2c6 in ?? () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#4  0x00007f1ba9ad6f28 in ?? () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#5  0x00007f1ba9a9b568 in ?? () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#6  0x00007f1ba9ab8e0c in ?? () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#7  0x00007f1ba9aadae6 in ?? () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#8  0x00007f1ba8879a5f in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#9  0x00007f1ba8877b84 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#10 0x00007f1baaa169ca in start_thread (arg=<value optimized out>) at pthread_create.c:300
+        __res = <value optimized out>
+        pd = 0x7f1b8be1a700
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {139756287665920, 1526409472226741865, 0, 0, 0, 139756287665920, -1505905896358818199, 
+                -1505979012395053463}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, cleanup = 0x0, 
+              canceltype = 0}}}
+        not_first_call = <value optimized out>
+        robust = <value optimized out>
+        freesize = <value optimized out>
+        __PRETTY_FUNCTION__ = "start_thread"
+#11 0x00007f1ba751b70d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:112
+No locals.
+#12 0x0000000000000000 in ?? ()
+No symbol table info available.

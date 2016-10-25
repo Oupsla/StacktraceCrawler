@@ -1,0 +1,110 @@
+#0  0x0049b416 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x0013e1ef in raise () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#2  0x00141835 in abort () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#3  0x00137095 in ?? () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#4  0x00137147 in __assert_fail () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#5  0x00b0f50f in _XAllocID () from /usr/lib/i386-linux-gnu/libX11.so.6
+No symbol table info available.
+#6  0x006ac01d in XRenderCreatePicture () from /usr/lib/i386-linux-gnu/libXrender.so.1
+No symbol table info available.
+#7  0x087b2730 in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#8  0x087b5d9e in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#9  0x08791528 in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#10 0x087956d6 in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#11 0x0879589d in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#12 0x08791c5c in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#13 0x0876706f in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#14 0x0875d1b3 in cairo_paint () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#15 0x00322773 in ?? () from /usr/lib/i386-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#16 0x002f74ad in gdk_window_set_icon_list () from /usr/lib/i386-linux-gnu/libgdk-3.so.0
+No symbol table info available.
+#17 0x03359870 in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#18 0x0035938c in g_cclosure_marshal_VOID__VOID () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#19 0x00357624 in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#20 0x0036a029 in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#21 0x003726d0 in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#22 0x003728d3 in g_signal_emit () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#23 0x031ada86 in ?? () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#24 0x031ae972 in gtk_icon_theme_has_icon () from /usr/lib/i386-linux-gnu/libgtk-3.so.0
+No symbol table info available.
+#25 0x00cd58dd in ?? () from /usr/lib/libappindicator3.so.1
+No symbol table info available.
+#26 0x00cd5bcf in ?? () from /usr/lib/libappindicator3.so.1
+No symbol table info available.
+#27 0x00cd2db4 in ?? () from /usr/lib/libappindicator3.so.1
+No symbol table info available.
+#28 0x00e56aef in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#29 0x00e55d8a in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#30 0x00e56195 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#31 0x00e56271 in g_main_context_iteration () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#32 0x00fa61a4 in g_application_run () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#33 0x0059835a in ffi_call_SYSV () from /usr/lib/i386-linux-gnu/libffi.so.6
+No symbol table info available.
+#34 0x0059808f in ffi_call () from /usr/lib/i386-linux-gnu/libffi.so.6
+No symbol table info available.
+#35 0x006ba2db in ?? () from /usr/lib/libgirepository-1.0.so.1
+No symbol table info available.
+#36 0x006bb8d1 in g_function_info_invoke () from /usr/lib/libgirepository-1.0.so.1
+No symbol table info available.
+#37 0x00559177 in ?? () from /usr/lib/python2.7/dist-packages/gi/_gi.so
+No symbol table info available.
+#38 0x0808a81b in PyEval_EvalFrameEx ()
+No locals.
+#39 0x0808d070 in PyEval_EvalCodeEx ()
+No locals.
+#40 0x08086ffc in PyEval_EvalFrameEx ()
+No locals.
+#41 0x0808d070 in PyEval_EvalCodeEx ()
+No locals.
+#42 0x0819420e in function_call ()
+No locals.
+#43 0x0810e96f in PyObject_Call ()
+No locals.
+#44 0x08103d87 in instancemethod_call.8538 ()
+No locals.
+#45 0x0810e96f in PyObject_Call ()
+No locals.
+#46 0x080fb906 in slot_tp_init.25666 ()
+No locals.
+#47 0x080df899 in type_call.25315 ()
+No locals.
+#48 0x0810e96f in PyObject_Call ()
+No locals.
+#49 0x080873e6 in PyEval_EvalFrameEx ()
+No locals.
+#50 0x0808d070 in PyEval_EvalCodeEx ()
+No locals.
+#51 0x08194991 in PyRun_FileExFlags ()
+No locals.
+#52 0x08194c4a in PyRun_SimpleFileExFlags ()
+No locals.
+#53 0x0819626d in Py_Main ()
+No locals.
+#54 0x0805e76b in main ()
+No locals.

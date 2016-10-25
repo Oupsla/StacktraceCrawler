@@ -1,0 +1,225 @@
+#0  gtk_icon_info_load_symbolic (icon_info=0x0, fg=0xbfae5d10, success_color=0x0, warning_color=0x0, error_color=0x0, was_symbolic=0x0, error=0x0) at /build/buildd/gtk+3.0-3.1.6/./gtk/gtkicontheme.c:3271
+        pixbuf = <value optimized out>
+        css_fg = <value optimized out>
+        css_success = <value optimized out>
+        css_warning = <value optimized out>
+        css_error = <value optimized out>
+        __PRETTY_FUNCTION__ = "gtk_icon_info_load_symbolic"
+#1  0x080a8b8e in lookup_and_color_symbolic_find (bar=0x83c50b0) at nautilus-search-bar.c:175
+        icon_info = <value optimized out>
+        color = {red = 0.44705882352941179, green = 0.62352941176470589, blue = 0.81176470588235294, alpha = 1}
+        icon = <value optimized out>
+        context = 0x83ceb18
+#2  nautilus_search_bar_init (bar=0x83c50b0) at nautilus-search-bar.c:217
+        label = <value optimized out>
+        align = 0x83a1d20
+        icon = 0xbfae5d10
+#3  0x0039421b in g_type_create_instance (type=138088368) at /build/buildd/glib2.0-2.29.8/./gobject/gtype.c:1885
+        node = 0x83b0fb0
+        instance = 0x83c50b0
+        class = 0x83ec008
+        i = <value optimized out>
+        total_size = 0
+#4  0x0037139b in g_object_constructor (type=138088368, n_construct_properties=0, construct_params=0x0) at /build/buildd/glib2.0-2.29.8/./gobject/gobject.c:1629
+        object = <value optimized out>
+#5  0x00373e79 in g_object_newv (object_type=138088368, n_parameters=2, parameters=0x83ea3a8) at /build/buildd/glib2.0-2.29.8/./gobject/gobject.c:1493
+        cparams = 0x0
+        oparams = 0x83ea530
+        nqueue = 0x0
+        object = <value optimized out>
+        class = 0x83ec008
+        unref_class = 0x0
+        slist = <value optimized out>
+        n_total_cparams = <value optimized out>
+        n_cparams = <value optimized out>
+        n_oparams = <value optimized out>
+        n_cvalues = <value optimized out>
+        cvalues = 0x0
+        clist = <value optimized out>
+        newly_constructed = <value optimized out>
+        i = <value optimized out>
+        __PRETTY_FUNCTION__ = "g_object_newv"
+#6  0x00374de3 in g_object_new_valist (object_type=138088368, first_property_name=0x8160b0e "orientation", var_args=0xbfae6068 "") at /build/buildd/glib2.0-2.29.8/./gobject/gobject.c:1610
+        class = 0x83ec008
+        params = 0x83ea3a8
+        name = <value optimized out>
+        object = <value optimized out>
+        n_params = <value optimized out>
+        n_alloced_params = <value optimized out>
+        __PRETTY_FUNCTION__ = "g_object_new_valist"
+#7  0x00375040 in g_object_new (object_type=138088368, first_property_name=0x8160b0e "orientation") at /build/buildd/glib2.0-2.29.8/./gobject/gobject.c:1325
+        object = <value optimized out>
+        var_args = 0xbfae6058 ""
+        __PRETTY_FUNCTION__ = "g_object_new"
+#8  0x080a8da8 in nautilus_search_bar_new () at nautilus-search-bar.c:264
+        bar = 0x0
+#9  0x080a9478 in nautilus_toolbar_constructed (obj=0x83aa028) at nautilus-toolbar.c:135
+        self = 0x83aa028
+        item = <value optimized out>
+        hbox = 0x82744b0
+        toolbar = <value optimized out>
+        search = <value optimized out>
+        context = <value optimized out>
+        ui = <value optimized out>
+#10 0x00374462 in g_object_newv (object_type=137439976, n_parameters=2, parameters=0x8311378) at /build/buildd/glib2.0-2.29.8/./gobject/gobject.c:1521
+        cparams = <value optimized out>
+        oparams = 0x83a95e8
+        nqueue = <value optimized out>
+        object = 0x83aa028
+        class = 0x83a9c00
+        unref_class = 0x0
+        slist = <value optimized out>
+        n_total_cparams = <value optimized out>
+        n_cparams = <value optimized out>
+        n_oparams = 1
+        n_cvalues = <value optimized out>
+        cvalues = <value optimized out>
+        clist = <value optimized out>
+        newly_constructed = 1
+        i = <value optimized out>
+        __PRETTY_FUNCTION__ = "g_object_newv"
+#11 0x00374de3 in g_object_new_valist (object_type=137439976, first_property_name=0x81625d8 "action-group", var_args=0xbfae6298 "") at /build/buildd/glib2.0-2.29.8/./gobject/gobject.c:1610
+        class = 0x83a9c00
+        params = 0x8311378
+        name = <value optimized out>
+        object = <value optimized out>
+        n_params = <value optimized out>
+        n_alloced_params = <value optimized out>
+        __PRETTY_FUNCTION__ = "g_object_new_valist"
+#12 0x00375040 in g_object_new (object_type=137439976, first_property_name=0x81625d8 "action-group") at /build/buildd/glib2.0-2.29.8/./gobject/gobject.c:1325
+        object = <value optimized out>
+        var_args = 0xbfae6288 "\300x1\b\016\v\026\b\001"
+        __PRETTY_FUNCTION__ = "g_object_new"
+#13 0x080a9668 in nautilus_toolbar_new (action_group=0x83178c0) at nautilus-toolbar.c:259
+No locals.
+#14 0x080ca88f in nautilus_window_pane_setup (window=0x830e010) at nautilus-window-pane.c:670
+        header_size_group = 0x83a74f0
+        window = 0x830e010
+        action_group = 0x83178c0
+#15 nautilus_window_pane_new (window=0x830e010) at nautilus-window-pane.c:797
+        pane = 0x8337780
+#16 0x080d13fd in nautilus_window_constructed (self=0x830e010) at nautilus-window.c:635
+        window = 0x830e010
+        table = <value optimized out>
+        menu = <value optimized out>
+        statusbar = <value optimized out>
+        hpaned = 0x839f868
+        vbox = 0x8274208
+        pane = <value optimized out>
+        slot = <value optimized out>
+#17 0x08074527 in nautilus_desktop_window_constructed (obj=0x830e010) at nautilus-desktop-window.c:69
+        action = <value optimized out>
+        accessible = <value optimized out>
+        window = 0x830e010
+#18 0x00374462 in g_object_newv (object_type=137392776, n_parameters=5, parameters=0x8306a58) at /build/buildd/glib2.0-2.29.8/./gobject/gobject.c:1521
+        cparams = <value optimized out>
+        oparams = 0x8306bf8
+        nqueue = <value optimized out>
+        object = 0x830e010
+        class = 0x830ca38
+        unref_class = 0x0
+        slist = <value optimized out>
+        n_total_cparams = <value optimized out>
+        n_cparams = <value optimized out>
+        n_oparams = 3
+        n_cvalues = <value optimized out>
+        cvalues = <value optimized out>
+        clist = <value optimized out>
+        newly_constructed = 1
+        i = <value optimized out>
+        __PRETTY_FUNCTION__ = "g_object_newv"
+#19 0x00374de3 in g_object_new_valist (object_type=137392776, first_property_name=0x815b13d "disable-chrome", var_args=0xbfae6580 "") at /build/buildd/glib2.0-2.29.8/./gobject/gobject.c:1610
+        class = 0x830ca38
+        params = 0x8306a58
+        name = <value optimized out>
+        object = <value optimized out>
+        n_params = <value optimized out>
+        n_alloced_params = <value optimized out>
+        __PRETTY_FUNCTION__ = "g_object_new_valist"
+#20 0x00375040 in g_object_new (object_type=137392776, first_property_name=0x815b13d "disable-chrome") at /build/buildd/glib2.0-2.29.8/./gobject/gobject.c:1325
+        object = <value optimized out>
+        var_args = 0xbfae6558 "\001"
+        __PRETTY_FUNCTION__ = "g_object_new"
+#21 0x08074737 in nautilus_desktop_window_new (application=0x8270c00, screen=0x828f000) at nautilus-desktop-window.c:158
+        window = <value optimized out>
+        width_request = 1366
+        height_request = 768
+#22 0x080686b6 in nautilus_application_create_desktop_windows (application=0x8270c00) at nautilus-application.c:515
+        display = 0x828c000
+        window = <value optimized out>
+        selection_widget = 0x8270ce0
+        screens = 1
+        i = <value optimized out>
+        __PRETTY_FUNCTION__ = "nautilus_application_create_desktop_windows"
+#23 0x0806a2ed in nautilus_application_open_desktop (app=0x8270c00, command_line=0x82f7628) at nautilus-application.c:543
+No locals.
+#24 nautilus_application_command_line (app=0x8270c00, command_line=0x82f7628) at nautilus-application.c:1017
+        accel_map_filename = <value optimized out>
+        perform_self_check = 0
+        version = 0
+        no_default_window = 1
+        no_desktop = 0
+        kill_shell = 0
+        geometry = 0x0
+        remaining = 0x0
+        options = {{long_name = 0x81591a2 "check", short_name = 99 'c', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfae6738, description = 0x8159444 "Perform a quick set of self-check tests.", arg_description = 0x0}, {long_name = 0x81591a8 "version", short_name = 0 '\000', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfae673c, description = 0x8159470 "Show the version of the program.", arg_description = 0x0}, {long_name = 0x8176265 "geometry", short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, arg_data = 0xbfae674c, description = 0x8159494 "Create the initial window with the given geometry.", arg_description = 0x81591b0 "GEOMETRY"}, {long_name = 0x81591b9 "no-default-window", short_name = 110 'n', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfae6740, description = 0x81594c8 "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {long_name = 0x81591cb "no-desktop", short_name = 0 '\000', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfae6744, description = 0x81594fc "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {long_name = 0x81591d6 "quit", short_name = 113 'q', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfae6748, description = 0x81591db "Quit Nautilus.", arg_description = 0x0}, {long_name = 0x8168f6d "", short_name = 0 '\000', flags = 0, arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0xbfae6750, description = 0x0, arg_description = 0x81591ea "[URI...]"}, {long_name = 0x0, short_name = 0 '\000', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x0, description = 0x0, arg_description = 0x0}}
+        context = 0x82f8f18
+        error = 0x0
+        self = 0x8270c00
+        argc = 1
+        argv = 0x82f8cc0
+        uris = 0x0
+        retval = 0
+        __PRETTY_FUNCTION__ = "nautilus_application_command_line"
+#25 0x002b495a in _gio_marshal_INT__OBJECT (closure=0x826e9b8, return_value=0xbfae68f4, n_param_values=2, param_values=0x82f7650, invocation_hint=0xbfae68e0, marshal_data=0x8069550) at /build/buildd/glib2.0-2.29.8/./gio/gio-marshal.c:968
+        callback = 0x8069550 <nautilus_application_command_line>
+        cc = 0x826e9b8
+        data1 = 0x8270c00
+        data2 = 0x826c418
+        v_return = <value optimized out>
+        __PRETTY_FUNCTION__ = "_gio_marshal_INT__OBJECT"
+#26 0x0036d36d in g_type_class_meta_marshal (closure=0x826e9b8, return_value=0xbfae68f4, n_param_values=2, param_values=0x82f7650, invocation_hint=0xbfae68e0, marshal_data=0x50) at /build/buildd/glib2.0-2.29.8/./gobject/gclosure.c:882
+        class = <value optimized out>
+        callback = <value optimized out>
+        offset = 80
+#27 0x0036e91c in g_closure_invoke (closure=0x826e9b8, return_value=0xbfae68f4, n_param_values=2, param_values=0x82f7650, invocation_hint=0xbfae68e0) at /build/buildd/glib2.0-2.29.8/./gobject/gclosure.c:771
+        marshal = 0x36d310 <g_type_class_meta_marshal>
+        marshal_data = 0x50
+        in_marshal = 0
+        __PRETTY_FUNCTION__ = "g_closure_invoke"
+#28 0x003818c8 in signal_emit_unlocked_R (node=0x826f308, detail=0, instance=0x8270c00, emission_return=0xbfae6a2c, instance_and_params=0x82f7650) at /build/buildd/glib2.0-2.29.8/./gobject/gsignal.c:3294
+        accumulator = 0x826f368
+        emission = {next = 0x0, instance = 0x8270c00, ihint = {signal_id = 9, detail = 0, run_type = G_SIGNAL_RUN_LAST}, state = EMISSION_RUN, chain_type = 136758768}
+        class_closure = 0x826e9b8
+        hlist = 0x3
+        handler_list = 0x0
+        return_accu = 0xbfae68f4
+        accu = {g_type = 24, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        signal_id = 9
+        max_sequential_handler_number = 12
+        return_value_altered = 0
+#29 0x0038a5f1 in g_signal_emit_valist (instance=0x8270c00, signal_id=9, detail=0, var_args=0xbfae6a90 "\250j\256\277H:\033\b<\374\004\b") at /build/buildd/glib2.0-2.29.8/./gobject/gsignal.c:2997
+        return_value = {g_type = 24, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        error = 0x0
+        rtype = <value optimized out>
+        static_scope = 0
+        instance_and_params = 0x82f7650
+        signal_return_type = 24
+        param_values = 0x82f7664
+        node = 0x826f308
+        i = <value optimized out>
+        n_params = 1
+        __PRETTY_FUNCTION__ = "g_signal_emit_valist"
+#30 0x0038a8b3 in g_signal_emit (instance=0x8270c00, signal_id=9, detail=0) at /build/buildd/glib2.0-2.29.8/./gobject/gsignal.c:3044
+        var_args = 0xbfae6a8c "(v/\b\250j\256\277H:\033\b<\374\004\b"
+#31 0x002672d1 in g_application_run (application=0x8270c00, argc=2, argv=0xbfae6b94) at /build/buildd/glib2.0-2.29.8/./gio/gapplication.c:1304
+        cmdline = 0x82f7628
+        v = <value optimized out>
+        error = 0x0
+        arguments = 0x82704f0
+        status = <value optimized out>
+        i = <value optimized out>
+        __PRETTY_FUNCTION__ = "g_application_run"
+#32 0x08066b74 in main (argc=2, argv=0xbfae6b94) at nautilus-main.c:102
+        retval = <value optimized out>
+        application = 0x8270c00

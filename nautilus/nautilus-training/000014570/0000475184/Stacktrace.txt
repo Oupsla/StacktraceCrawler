@@ -1,0 +1,139 @@
+#0  0x00e96422 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x00bd04d1 in raise () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#2  0x00bd3932 in abort () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#3  0x00bc9648 in __assert_fail () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#4  0x004bf199 in _XAllocID () from /usr/lib/libX11.so.6
+No symbol table info available.
+#5  0x00495048 in XCreatePixmap () from /usr/lib/libX11.so.6
+No symbol table info available.
+#6  0x00244dc9 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#7  0x00249cfc in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#8  0x0022e5ee in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#9  0x00224793 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#10 0x00225bde in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#11 0x00249634 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#12 0x0022e336 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#13 0x00230b2a in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#14 0x002311d9 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#15 0x0022da63 in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#16 0x0021486a in ?? () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#17 0x0020e093 in cairo_paint () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#18 0x007678df in ?? () from /usr/lib/pymodules/python2.6/cairo/_cairo.so
+No symbol table info available.
+#19 0x080dbfd5 in PyEval_EvalFrameEx ()
+No symbol table info available.
+#20 0x080dd384 in PyEval_EvalFrameEx ()
+No symbol table info available.
+#21 0x080dddf2 in PyEval_EvalCodeEx ()
+No symbol table info available.
+#22 0x0816016c in ?? ()
+No symbol table info available.
+#23 0x0806120a in PyObject_Call ()
+No symbol table info available.
+#24 0x080684ac in ?? ()
+No symbol table info available.
+#25 0x0806120a in PyObject_Call ()
+No symbol table info available.
+#26 0x080d6ef2 in PyEval_CallObjectWithKeywords ()
+No symbol table info available.
+#27 0x080612a0 in PyObject_CallObject ()
+No symbol table info available.
+#28 0x002b803e in ?? ()
+   from /usr/lib/pymodules/python2.6/gtk-2.0/gobject/_gobject.so
+No symbol table info available.
+#29 0x00add072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#30 0x00af27a8 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#31 0x00af39b8 in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#32 0x00af3fb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#33 0x0120196e in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#34 0x010df190 in gtk_main_do_event () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#35 0x001671d4 in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#36 0x0018a734 in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#37 0x0015e87f in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#38 0x00162a50 in gdk_window_process_updates ()
+   from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#39 0x009e9c8e in ?? () from /usr/lib/pymodules/python2.6/gtk-2.0/gtk/_gtk.so
+No symbol table info available.
+#40 0x080dc0d0 in PyEval_EvalFrameEx ()
+No symbol table info available.
+#41 0x080dd384 in PyEval_EvalFrameEx ()
+No symbol table info available.
+#42 0x080dddf2 in PyEval_EvalCodeEx ()
+No symbol table info available.
+#43 0x0816016c in ?? ()
+No symbol table info available.
+#44 0x0806120a in PyObject_Call ()
+No symbol table info available.
+#45 0x080684ac in ?? ()
+No symbol table info available.
+#46 0x0806120a in PyObject_Call ()
+No symbol table info available.
+#47 0x080d6ef2 in PyEval_CallObjectWithKeywords ()
+No symbol table info available.
+#48 0x080612a0 in PyObject_CallObject ()
+No symbol table info available.
+#49 0x006bde0e in _pyglib_handler_marshal ()
+   from /usr/lib/libpyglib-2.0-python2.6.so.0
+No symbol table info available.
+#50 0x005f152c in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#51 0x005f0e78 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#52 0x005f4720 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#53 0x005f4b8f in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#54 0x010df419 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#55 0x009cc028 in ?? () from /usr/lib/pymodules/python2.6/gtk-2.0/gtk/_gtk.so
+No symbol table info available.
+#56 0x080dbfd5 in PyEval_EvalFrameEx ()
+No symbol table info available.
+#57 0x080dd384 in PyEval_EvalFrameEx ()
+No symbol table info available.
+#58 0x080dd384 in PyEval_EvalFrameEx ()
+No symbol table info available.
+#59 0x080dd384 in PyEval_EvalFrameEx ()
+No symbol table info available.
+#60 0x080dddf2 in PyEval_EvalCodeEx ()
+No symbol table info available.
+#61 0x080dc1b4 in PyEval_EvalFrameEx ()
+No symbol table info available.
+#62 0x080dddf2 in PyEval_EvalCodeEx ()
+No symbol table info available.
+#63 0x080ddef7 in PyEval_EvalCode ()
+No symbol table info available.
+#64 0x080faa1f in PyRun_FileExFlags ()
+No symbol table info available.
+#65 0x080fac12 in PyRun_SimpleFileExFlags ()
+No symbol table info available.
+#66 0x0805c8d8 in Py_Main ()
+No symbol table info available.
+#67 0x0805baeb in main ()
+No symbol table info available.

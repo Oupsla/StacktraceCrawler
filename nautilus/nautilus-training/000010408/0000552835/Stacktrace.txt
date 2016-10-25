@@ -1,0 +1,98 @@
+#0  0x00007f7ea1f82db0 in gdu_device_get_object_path ()
+   from /usr/lib/libgdu.so.0
+No symbol table info available.
+#1  0x00007f7ea1f8142c in gdu_pool_new_for_address ()
+   from /usr/lib/libgdu.so.0
+No symbol table info available.
+#2  0x00007f7ea1f8188c in gdu_pool_new () from /usr/lib/libgdu.so.0
+No symbol table info available.
+#3  0x00007f7ea21a79de in ?? ()
+   from /usr/lib/nautilus/extensions-2.0/libnautilus-gdu.so
+No symbol table info available.
+#4  0x000000000047b03e in ?? ()
+No symbol table info available.
+#5  0x00000000004814ce in ?? ()
+No symbol table info available.
+#6  0x00000000004866c5 in ?? ()
+No symbol table info available.
+#7  0x000000000046fa93 in ?? ()
+No symbol table info available.
+#8  0x0000000000471ebb in fm_directory_view_update_menus ()
+No symbol table info available.
+#9  0x0000000000474410 in ?? ()
+No symbol table info available.
+#10 0x00007f7eb96395de in g_closure_invoke ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#11 0x00007f7eb964d598 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#12 0x00007f7eb964ea76 in g_signal_emit_valist ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#13 0x00007f7eb964f033 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#14 0x00000000004e90b6 in ?? ()
+No symbol table info available.
+#15 0x0000000000531b48 in eel_marshal_BOOLEAN__BOXED ()
+No symbol table info available.
+#16 0x00007f7eb96395de in g_closure_invoke ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#17 0x00007f7eb964d598 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#18 0x00007f7eb964e8b9 in g_signal_emit_valist ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#19 0x00007f7eb964f033 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#20 0x0000000000512d25 in ?? ()
+No symbol table info available.
+#21 0x00000000004e7997 in ?? ()
+No symbol table info available.
+#22 0x00007f7eba8200b8 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#23 0x00007f7eb96395de in g_closure_invoke ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#24 0x00007f7eb964d1dd in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#25 0x00007f7eb964e8b9 in g_signal_emit_valist ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#26 0x00007f7eb964f033 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#27 0x00007f7eba936eaf in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#28 0x00007f7eba818583 in gtk_propagate_event ()
+   from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#29 0x00007f7eba81965b in gtk_main_do_event ()
+   from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#30 0x00007f7eba48d7fc in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#31 0x00007f7eb8d478c2 in g_main_context_dispatch ()
+   from /lib/libglib-2.0.so.0
+No symbol table info available.
+#32 0x00007f7eb8d4b748 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#33 0x00007f7eb8d4bc55 in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#34 0x00007f7eba819af7 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#35 0x0000000000443164 in ?? ()
+No symbol table info available.
+#36 0x00007f7eb794dc4d in __libc_start_main () from /lib/libc.so.6
+No symbol table info available.
+#37 0x0000000000430b69 in ?? ()
+No symbol table info available.
+#38 0x00007fff11590d38 in ?? ()
+No symbol table info available.
+#39 0x000000000000001c in ?? ()
+No symbol table info available.
+#40 0x0000000000000001 in ?? ()
+No symbol table info available.
+#41 0x00007fff11592ac0 in ?? ()
+No symbol table info available.
+#42 0x0000000000000000 in ?? ()
+No symbol table info available.

@@ -1,0 +1,34 @@
+#0  0x00007fbf840dcf82 in g_hash_table_lookup () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#1  0x00000000005011af in ?? ()
+No symbol table info available.
+#2  0x00000000004d1dae in ?? ()
+No symbol table info available.
+#3  0x00000000004b2549 in ?? ()
+No symbol table info available.
+#4  0x00000000004b21f2 in ?? ()
+No symbol table info available.
+#5  0x00000000004b3e54 in ?? ()
+No symbol table info available.
+#6  0x00000000004cb534 in ?? ()
+No symbol table info available.
+#7  0x00000000004cb639 in ?? ()
+No symbol table info available.
+#8  0x000000000051bf08 in ?? ()
+No symbol table info available.
+#9  0x00000000004427e4 in ?? ()
+No symbol table info available.
+#10 0x00007fbf82ab5eff in __libc_start_main () from /lib/x86_64-linux-gnu/libc.so.6
+No symbol table info available.
+#11 0x000000000042f349 in ?? ()
+No symbol table info available.
+#12 0x00007fff10cc7858 in ?? ()
+No symbol table info available.
+#13 0x000000000000001c in ?? ()
+No symbol table info available.
+#14 0x0000000000000001 in ?? ()
+No symbol table info available.
+#15 0x00007fff10cc9a7a in ?? ()
+No symbol table info available.
+#16 0x0000000000000000 in ?? ()
+No symbol table info available.

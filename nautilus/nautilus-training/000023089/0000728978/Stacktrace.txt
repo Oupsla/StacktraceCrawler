@@ -1,0 +1,73 @@
+#0  0x00354a9e in g_object_set (_object=0x64656727, first_property_name=0x3f7f15b "show-local") at /build/buildd/glib2.0-2.28.1/./gobject/gobject.c:1816
+        __inst = 0x64656727
+        __r = <value optimised out>
+        _g_boolean_var_ = <value optimised out>
+        object = 0x64656727
+        var_args = <value optimised out>
+        __PRETTY_FUNCTION__ = "g_object_set"
+#1  0x03f7d986 in ?? () from /usr/lib/gtk-2.0/2.10.0/menuproxies/libappmenu.so
+No symbol table info available.
+#2  0x03f7dbc9 in ?? () from /usr/lib/gtk-2.0/2.10.0/menuproxies/libappmenu.so
+No symbol table info available.
+#3  0x0083bc5f in g_simple_async_result_complete (simple=0xa436568) at /build/buildd/glib2.0-2.28.1/./gio/gsimpleasyncresult.c:747
+        current_source = <value optimised out>
+        current_context = <value optimised out>
+        __PRETTY_FUNCTION__ = "g_simple_async_result_complete"
+#4  0x00891b71 in reply_cb (connection=0x9edd1a0, res=0xa4365a0, user_data=0xa436568) at /build/buildd/glib2.0-2.28.1/./gio/gdbusproxy.c:2158
+        simple = 0xa436568
+        value = <value optimised out>
+        error = 0xa53ca00
+#5  0x0083bc5f in g_simple_async_result_complete (simple=0xa4365a0) at /build/buildd/glib2.0-2.28.1/./gio/gsimpleasyncresult.c:747
+        current_source = <value optimised out>
+        current_context = <value optimised out>
+        __PRETTY_FUNCTION__ = "g_simple_async_result_complete"
+#6  0x00886bb3 in g_dbus_connection_call_done (source=0x9edd1a0, result=0xa548e20, user_data=0xa538b90) at /build/buildd/glib2.0-2.28.1/./gio/gdbusconnection.c:4998
+        connection = 0x9edd1a0
+        state = 0xa538b90
+        error = 0xa53ca00
+        reply = 0x0
+        value = <value optimised out>
+#7  0x0083bc5f in g_simple_async_result_complete (simple=0xa548e20) at /build/buildd/glib2.0-2.28.1/./gio/gsimpleasyncresult.c:747
+        current_source = <value optimised out>
+        current_context = <value optimised out>
+        __PRETTY_FUNCTION__ = "g_simple_async_result_complete"
+#8  0x0083bd7d in complete_in_idle_cb (data=0xa548e20) at /build/buildd/glib2.0-2.28.1/./gio/gsimpleasyncresult.c:757
+        simple = 0xa548e20
+#9  0x009d7451 in g_idle_dispatch (source=0xa50d9f8, callback=0x83bd60 <complete_in_idle_cb>, user_data=0xa548e20) at /build/buildd/glib2.0-2.28.1/./glib/gmain.c:4537
+No locals.
+#10 0x009dbc08 in g_main_dispatch (context=0x9e98410) at /build/buildd/glib2.0-2.28.1/./glib/gmain.c:2440
+        dispatch = 0x9d7430 <g_idle_dispatch>
+        was_in_call = 0
+        user_data = 0xa548e20
+        callback = 0x83bd60 <complete_in_idle_cb>
+        cb_funcs = 0xa7133c
+        cb_data = 0xa04df60
+        current_source_link = {data = 0xa50d9f8, next = 0x0}
+        need_destroy = <value optimised out>
+        source = 0xa50d9f8
+        current = 0x9ec5ad0
+        i = <value optimised out>
+#11 g_main_context_dispatch (context=0x9e98410) at /build/buildd/glib2.0-2.28.1/./glib/gmain.c:3013
+No locals.
+#12 0x009dc3d0 in g_main_context_iterate (context=0x9e98410, block=10406048, dispatch=1, self=<value optimised out>) at /build/buildd/glib2.0-2.28.1/./glib/gmain.c:3091
+        max_priority = 0
+        timeout = 0
+        some_ready = 1
+        nfds = <value optimised out>
+        allocated_nfds = <value optimised out>
+        fds = 0xa0e1cd8
+#13 0x009dca93 in g_main_loop_run (loop=0xa011898) at /build/buildd/glib2.0-2.28.1/./glib/gmain.c:3299
+        __PRETTY_FUNCTION__ = "g_main_loop_run"
+#14 0x0051da49 in IA__gtk_main () at /build/buildd/gtk+2.0-2.24.1/gtk/gtkmain.c:1255
+        tmp_list = <value optimised out>
+        functions = 0x0
+        init = <value optimised out>
+        loop = 0xa011898
+#15 0x0807fb66 in ?? ()
+No symbol table info available.
+#16 0x05ce0e36 in __libc_start_main (main=0x807f460, argc=1, ubp_av=0xbfed4674, init=0x81abe50, fini=0x81abeb0, rtld_fini=0xb28a90 <_dl_fini>, stack_end=0xbfed466c) at libc-start.c:226
+        result = <value optimised out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {98721780, 0, 0, -1074969016, 1916447272, 883621212}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x1, 0x806a770}, data = {prev = 0x0, cleanup = 0x0, canceltype = 1}}}
+        not_first_call = <value optimised out>
+#17 0x0806a791 in ?? ()
+No symbol table info available.

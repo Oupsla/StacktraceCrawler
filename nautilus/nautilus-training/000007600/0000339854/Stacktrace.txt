@@ -1,0 +1,125 @@
+#0  0xb749a377 in memset () from /lib/tls/i686/cmov/libc.so.6
+#1  0xac7aa99c in avcodec_default_get_buffer (s=0x9eba8f0, pic=0x9ef6020)
+    at /usr/include/bits/string3.h:85
+	h_shift = <value optimized out>
+	v_shift = <value optimized out>
+	h_chroma_shift = <value optimized out>
+	v_chroma_shift = <value optimized out>
+	size = {-1, 0, 0, 0}
+	tmpsize = -1
+	picture = {data = {0x0, 0x0, 0x0, 0x0}, linesize = {0, 0, 0, 0}}
+	stride_align = {8, 8, 8, 8}
+	i = <value optimized out>
+	w = 992
+	h = 574
+	buf = (InternalBuffer *) 0x9f5c4c0
+#2  0xacef86cc in gst_ffmpegdec_get_buffer (context=0x9eba8f0, 
+    picture=0x9ef6020) at gstffmpegdec.c:854
+	buf = (GstBuffer *) 0x0
+	ffmpegdec = (GstFFMpegDec *) 0x9ebb038
+	width = 960
+	height = 540
+	coded_width = <value optimized out>
+	coded_height = 540
+	res = <value optimized out>
+	__FUNCTION__ = "gst_ffmpegdec_get_buffer"
+	__PRETTY_FUNCTION__ = "gst_ffmpegdec_get_buffer"
+#3  0xac7eeba7 in alloc_picture (s=0xad124020, pic=0x9ef6020, shared=0)
+    at /build/buildd/ffmpeg-0.svn20090204/libavcodec/mpegvideo.c:180
+	big_mb_num = <value optimized out>
+	mb_array_size = <value optimized out>
+	b8_array_size = <value optimized out>
+	r = <value optimized out>
+#4  0xac7f0878 in MPV_frame_start (s=0xad124020, avctx=0x9eba8f0)
+    at /build/buildd/ffmpeg-0.svn20090204/libavcodec/mpegvideo.c:871
+	pic = (AVFrame *) 0x9ef6020
+#5  0xac91f077 in frame_start (h=0xad124020)
+    at /build/buildd/ffmpeg-0.svn20090204/libavcodec/h264.c:2218
+	i = <value optimized out>
+#6  0xac92b51f in decode_slice_header (h=0xad124020, h0=0xad124020)
+    at /build/buildd/ffmpeg-0.svn20090204/libavcodec/h264.c:3847
+	slice_type = 1
+	i = 3074944666
+	j = <value optimized out>
+	default_ref_list_done = 1
+	last_pic_structure = 3
+#7  0xac949625 in decode_nal_units (h=0xad124020, buf=0x9d067d8 "", 
+    buf_size=1780)
+    at /build/buildd/ffmpeg-0.svn20090204/libavcodec/h264.c:7434
+	consumed = 205
+	dst_length = 204
+	bit_length = 1073597807
+	i = <value optimized out>
+	err = <value optimized out>
+	ptr = <value optimized out>
+	nalsize = 205
+	avctx = (AVCodecContext * const) 0x9eba8f0
+	buf_index = 250
+	hx = (H264Context *) 0xad124020
+	context_count = 0
+	start_code = "\000\000\001"
+#8  0xac94bfee in decode_frame (avctx=0x9eba8f0, data=0x9cbb580, 
+    data_size=0xb57c2f10, buf=0x9d067d8 "", buf_size=1780)
+    at /build/buildd/ffmpeg-0.svn20090204/libavcodec/h264.c:7624
+	h = (H264Context *) 0xad124020
+	buf_index = <value optimized out>
+#9  0xac7aa3ae in avcodec_decode_video (avctx=0x9eba8f0, picture=0x9cbb580, 
+    got_picture_ptr=0xb57c2f10, buf=0x9d067d8 "", buf_size=1780)
+    at /build/buildd/ffmpeg-0.svn20090204/libavcodec/utils.c:508
+	ret = 3
+#10 0xacef40c8 in gst_ffmpegdec_frame (ffmpegdec=0x9ebb038, 
+    data=0x9d067d8 "", size=1780, got_data=0xb57c300c, in_timestamp=0, 
+    in_duration=13333333, ret=0xb57c3008) at gstffmpegdec.c:1506
+	oclass = (GstFFMpegDecClass *) 0x9e0bf30
+	outbuf = (GstBuffer *) 0x0
+	have_data = <value optimized out>
+	len = <value optimized out>
+	__FUNCTION__ = "gst_ffmpegdec_frame"
+	__PRETTY_FUNCTION__ = "gst_ffmpegdec_frame"
+#11 0xacef697f in gst_ffmpegdec_chain (pad=0xad201d48, inbuf=0x9a87818)
+    at gstffmpegdec.c:2306
+	ffmpegdec = (GstFFMpegDec *) 0x9ebb038
+	oclass = (GstFFMpegDecClass *) 0x9e0bf30
+	data = (guint8 *) 0xad206f98 ""
+	bdata = (guint8 *) 0xad206f98 ""
+	pdata = (guint8 *) 0x3ffdcd6f <Address 0x3ffdcd6f out of bounds>
+	size = 1780
+	bsize = 1780
+	len = <value optimized out>
+	have_data = 0
+	ret = GST_FLOW_OK
+	in_timestamp = 0
+	in_duration = 13333333
+	__FUNCTION__ = "gst_ffmpegdec_chain"
+#12 0xb5daaac5 in gst_pad_chain_unchecked (pad=0xad201d48, buffer=0x9a87818)
+    at gstpad.c:3890
+	caps = (GstCaps *) 0x9c93ea0
+	caps_changed = <value optimized out>
+	chainfunc = (GstPadChainFunction) 0xacef5d70 <gst_ffmpegdec_chain>
+	ret = <value optimized out>
+	__PRETTY_FUNCTION__ = "gst_pad_chain_unchecked"
+#13 0xb5dabeba in gst_pad_push (pad=0xad201c88, buffer=0x9a87818)
+    at gstpad.c:4057
+	peer = (GstPad *) 0xad201d48
+	ret = <value optimized out>
+	caps = (GstCaps *) 0x9c93ea0
+	caps_changed = 0
+	__PRETTY_FUNCTION__ = "gst_pad_push"
+#14 0xad1ec1a2 in gst_queue_loop (pad=0xad201c88) at gstqueue.c:1047
+	queue = (GstQueue *) 0xad202448
+	ret = GST_FLOW_OK
+	__PRETTY_FUNCTION__ = "gst_queue_loop"
+#15 0xb5dcd593 in gst_task_func (task=0x9a87ae8, tclass=0x96751f0)
+    at gsttask.c:192
+	lock = (GStaticRecMutex *) 0x9db7a30
+	tself = (GThread *) 0x9ebca10
+	__PRETTY_FUNCTION__ = "gst_task_func"
+#16 0xb7944fe6 in g_thread_pool_thread_proxy (data=0x9675280)
+    at /build/buildd/glib2.0-2.19.10/glib/gthreadpool.c:265
+	task = (gpointer) 0x9a87ae8
+	pool = (GRealThreadPool *) 0x9675280
+#17 0xb794397f in g_thread_create_proxy (data=0x9ebca10)
+    at /build/buildd/glib2.0-2.19.10/glib/gthread.c:635
+	__PRETTY_FUNCTION__ = "g_thread_create_proxy"
+#18 0xb758b4ff in start_thread () from /lib/tls/i686/cmov/libpthread.so.0
+#19 0xb750549e in clone () from /lib/tls/i686/cmov/libc.so.6

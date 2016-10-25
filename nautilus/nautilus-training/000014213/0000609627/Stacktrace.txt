@@ -1,0 +1,106 @@
+#0  0x002990c3 in g_type_check_instance () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#1  0x00297635 in g_signal_connect_data () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#2  0x0812aea6 in set_pending_icon_to_reveal (container=0x9cc8b48, 
+    icon=0xa9360f0) at nautilus-icon-container.c:622
+        old_icon = <value optimized out>
+#3  0x0812af89 in end_renaming_mode (container=0x9cc8b48, 
+    commit=<value optimized out>) at nautilus-icon-container.c:8443
+        icon = 0xa9360f0
+        changed_text = <value optimized out>
+#4  0x08137ea8 in icon_toggle_selected (container=0x10, icon=0xa9360f0)
+    at nautilus-icon-container.c:472
+No locals.
+#5  0x0813804c in icon_set_selected (container=0x10, icon=0xa9360f0, select=0)
+    at nautilus-icon-container.c:516
+        __PRETTY_FUNCTION__ = "icon_set_selected"
+#6  0x081381cd in select_one_unselect_others (
+    container=<value optimized out>, icon_to_select=<value optimized out>)
+    at nautilus-icon-container.c:2383
+        selection_changed = 0
+        p = 0xabb94d0
+        icon = 0x0
+#7  0x08139321 in unselect_all (widget=0x9cc8b48, event=0x9bc1d60)
+    at nautilus-icon-container.c:2397
+No locals.
+#8  button_press_event (widget=0x9cc8b48, event=0x9bc1d60)
+    at nautilus-icon-container.c:4264
+        selection_changed = <value optimized out>
+        return_value = <value optimized out>
+        clicked_on_icon = 0
+#9  0x0106c424 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#10 0x0027e8b9 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#11 0x00280252 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#12 0x002945e6 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#13 0x00295c33 in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#14 0x00296256 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#15 0x01199636 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#16 0x01064a5d in gtk_propagate_event () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#17 0x010660c7 in gtk_main_do_event () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#18 0x0016639a in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+No symbol table info available.
+#19 0x003675e5 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#20 0x0036b2d8 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#21 0x0036b817 in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#22 0x010663c9 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#23 0x08080e08 in main (argc=1, argv=0xbfff7a64) at nautilus-main.c:583
+        kill_shell = 0
+        no_default_window = 1
+        browser_window = 0
+        no_desktop = 0
+        version = 0
+        autostart_mode = 1
+        autostart_id = <value optimized out>
+        geometry = 0x0
+        remaining = 0x0
+        perform_self_check = 0
+        application = 0x9bf08f0
+        context = <value optimized out>
+        file = 0x1
+        uri = <value optimized out>
+        uris = 0x0
+        uris_array = <value optimized out>
+        error = 0x0
+        options = {{long_name = 0x81ac7c3 "check", short_name = 99 'c', 
+            flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfff7980, 
+            description = 0x81ac844 "Perform a quick set of self-check tests.", arg_description = 0x0}, {long_name = 0x81cb421 "version", 
+            short_name = 0 '\000', flags = 0, arg = G_OPTION_ARG_NONE, 
+            arg_data = 0xbfff798c, 
+            description = 0x81ac870 "Show the version of the program.", 
+            arg_description = 0x0}, {long_name = 0x81b0478 "geometry", 
+            short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+            arg_data = 0xbfff7988, 
+            description = 0x81ac894 "Create the initial window with the given geometry.", arg_description = 0x81ac701 "GEOMETRY"}, {
+            long_name = 0x81ac70a "no-default-window", short_name = 110 'n', 
+            flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfff7998, 
+            description = 0x81ac8c8 "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {long_name = 0x81ac71c "no-desktop", 
+            short_name = 0 '\000', flags = 0, arg = G_OPTION_ARG_NONE, 
+            arg_data = 0xbfff7990, 
+            description = 0x81ac8fc "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {
+            long_name = 0x81a9343 "browser", short_name = 0 '\000', 
+            flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfff7994, 
+            description = 0x81ac727 "open a browser window.", 
+            arg_description = 0x0}, {long_name = 0x81cd29d "quit", 
+            short_name = 113 'q', flags = 0, arg = G_OPTION_ARG_NONE, 
+            arg_data = 0xbfff799c, description = 0x81ac73e "Quit Nautilus.", 
+            arg_description = 0x0}, {long_name = 0x81b194f "", 
+            short_name = 0 '\000', flags = 0, 
+            arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0xbfff7984, 
+            description = 0x0, arg_description = 0x81ac74d "[URI...]"}, {
+            long_name = 0x0, short_name = 0 '\000', flags = 0, 
+            arg = G_OPTION_ARG_NONE, arg_data = 0x0, description = 0x0, 
+            arg_description = 0x0}}

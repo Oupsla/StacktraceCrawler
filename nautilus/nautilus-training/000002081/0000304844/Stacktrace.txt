@@ -1,0 +1,59 @@
+#0  0xb770ac46 in gconf_client_remove_dir () from /usr/lib/libgconf-2.so.4
+#1  0xb6360c67 in ?? ()
+   from /usr/lib/nautilus/extensions-2.0/libnautilus-actions.so
+#2  0xb764adb3 in g_object_unref () from /usr/lib/libgobject-2.0.so.0
+#3  0xb635daf4 in ?? ()
+   from /usr/lib/nautilus/extensions-2.0/libnautilus-actions.so
+#4  0xb764ad18 in g_object_unref () from /usr/lib/libgobject-2.0.so.0
+#5  0x081448ad in free_module_objects () at nautilus-module.c:219
+	l = <value optimized out>
+	next = (GList *) 0x9d54830
+#6  0xb7fac86c in eel_debug_shut_down () from /usr/lib/libeel-2.so.2
+#7  0x080809c5 in main (argc=1, argv=0xbfc295a4) at nautilus-main.c:605
+	kill_shell = 0
+	restart_shell = 0
+	no_default_window = 0
+	browser_window = 0
+	no_desktop = 0
+	autostart_mode = 0
+	has_sm_argv = 0
+	startup_id = <value optimized out>
+	autostart_id = <value optimized out>
+	startup_id_copy = 0x9d3ecb8 "H\226î\t`/k·è\230Ü\t"
+	session_to_load = 0x0
+	geometry = (gchar *) 0x0
+	remaining = (const gchar **) 0x0
+	perform_self_check = 0
+	context = (GOptionContext *) 0x0
+	application = (NautilusApplication *) 0x9d19c58
+	program = (GnomeProgram *) 0x9cfe858
+	options = {{long_name = 0x8164fe9 "check", short_name = 99 'c', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfc29470, 
+    description = 0x8165058 "Perform a quick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x8168b6f "geometry", 
+    short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+    arg_data = 0xbfc29478, 
+    description = 0x8165084 "Create the initial window with the given geometry.", arg_description = 0x8164e69 "GEOMETRY"}, {
+    long_name = 0x8164e72 "no-default-window", short_name = 110 'n', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfc29488, 
+    description = 0x81650b8 "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {long_name = 0x8164e84 "no-desktop", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfc29480, 
+    description = 0x81650ec "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {
+    long_name = 0x8167c9e "browser", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbfc29484, 
+    description = 0x8164e8f "open a browser window.", arg_description = 0x0}, 
+  {long_name = 0x8164ff1 "quit", short_name = 113 'q', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbfc29490, 
+    description = 0x8164ea6 "Quit Nautilus.", arg_description = 0x0}, {
+    long_name = 0x8164ff8 "restart", short_name = 0 '\0', flags = 1, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbfc2948c, 
+    description = 0x8164eb5 "Restart Nautilus.", arg_description = 0x0}, {
+    long_name = 0x8169d88 "", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0xbfc29474, 
+    description = 0x0, arg_description = 0x8164ec7 "[URI...]"}, {
+    long_name = 0x8161480 "load-session", short_name = 108 'l', flags = 0, 
+    arg = G_OPTION_ARG_STRING, arg_data = 0xbfc2947c, 
+    description = 0x8165140 "Load a saved session from the specified file. Implies \"--no-default-window\".", arg_description = 0x8164ed0 "FILENAME"}, {
+    long_name = 0x0, short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x0, description = 0x0, arg_description = 0x0}}

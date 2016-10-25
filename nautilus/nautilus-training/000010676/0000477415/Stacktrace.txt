@@ -1,0 +1,107 @@
+#0  0x00007fbae8e7cc98 in g_list_remove () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#1  0x00000000004f2ef0 in module_object_weak_notify (
+    user_data=<value optimized out>, object=0x276b660)
+    at nautilus-module.c:145
+No locals.
+#2  0x00007fbae9559d40 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#3  0x00007fbae8e6a667 in g_datalist_id_set_data_full ()
+   from /lib/libglib-2.0.so.0
+No symbol table info available.
+#4  0x00007fbae955a4b1 in g_object_unref () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#5  0x00007fbae8e7c59c in g_list_foreach () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#6  0x0000000000526d29 in eel_g_object_list_free (list=0x29f8800)
+    at eel-glib-extensions.c:802
+No locals.
+#7  0x00000000004d61da in finalize (object=0x2681c10) at nautilus-file.c:819
+	directory = (NautilusDirectory *) 0x267e070
+	file = (NautilusFile *) 0x2681c10
+	uri = <value optimized out>
+	__PRETTY_FUNCTION__ = "finalize"
+#8  0x00007fbae955a52f in g_object_unref () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#9  0x00000000004a557e in nautilus_bookmark_disconnect_file (
+    bookmark=0x2be3670) at nautilus-bookmark.c:486
+	__PRETTY_FUNCTION__ = "nautilus_bookmark_disconnect_file"
+#10 0x00000000004a5f33 in nautilus_bookmark_finalize (object=0x2be3670)
+    at nautilus-bookmark.c:78
+	bookmark = (NautilusBookmark *) 0x2be3670
+	__PRETTY_FUNCTION__ = "nautilus_bookmark_finalize"
+#11 0x00007fbae955a52f in g_object_unref () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#12 0x00007fbae8e7c59c in g_list_foreach () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#13 0x0000000000526d29 in eel_g_object_list_free (list=0x29f8800)
+    at eel-glib-extensions.c:802
+No locals.
+#14 0x0000000000434b0e in clear (bookmarks=0x26c1ed0)
+    at nautilus-bookmark-list.c:207
+No locals.
+#15 0x00007fbae95585ae in g_closure_invoke ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#16 0x00007fbae956dce6 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#17 0x00007fbae956ed39 in g_signal_emit_valist ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#18 0x00007fbae956f283 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#19 0x00007fbaea7547d0 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#20 0x00000000026c1ed0 in ?? ()
+No symbol table info available.
+#21 0x00007fbae955a4b1 in g_object_unref () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#22 0x00000000005166d8 in eel_debug_shut_down () at eel-debug.c:109
+	f = (ShutdownFunction *) 0x26cb730
+#23 0x0000000000443959 in main (argc=1, argv=0x7fffc88eabc8)
+    at nautilus-main.c:598
+	kill_shell = 0
+	no_default_window = 1
+	browser_window = 0
+	no_desktop = 0
+	version = 0
+	autostart_mode = 0
+	autostart_id = <value optimized out>
+	geometry = (gchar *) 0x0
+	remaining = (gchar **) 0x0
+	perform_self_check = 0
+	application = <value optimized out>
+	context = <value optimized out>
+	file = (GFile *) 0x7fffc88ea850
+	uri = <value optimized out>
+	uris = (char **) 0x0
+	uris_array = <value optimized out>
+	error = (GError *) 0x0
+	options = {{long_name = 0x54b6b6 "check", short_name = 99 'c', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x7fffc88eaab8, 
+    description = 0x54b700 "Perform a quick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x54b5af "version", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x7fffc88eaabc, 
+    description = 0x54b730 "Show the version of the program.", 
+    arg_description = 0x0}, {long_name = 0x54f75c "geometry", 
+    short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+    arg_data = 0x7fffc88eaab0, 
+    description = 0x54b758 "Create the initial window with the given geometry.", arg_description = 0x54b5b7 "GEOMETRY"}, {
+    long_name = 0x54b5c0 "no-default-window", short_name = 110 'n', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x7fffc88eaac8, 
+    description = 0x54b790 "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {long_name = 0x54b5d2 "no-desktop", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x7fffc88eaac0, 
+    description = 0x54b7c8 "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {
+    long_name = 0x547f00 "browser", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0x7fffc88eaac4, 
+    description = 0x54b5dd "open a browser window.", arg_description = 0x0}, {
+    long_name = 0x56ced1 "quit", short_name = 113 'q', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0x7fffc88eaacc, 
+    description = 0x54b5f4 "Quit Nautilus.", arg_description = 0x0}, {
+    long_name = 0x550d01 "", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0x7fffc88eaaa8, 
+    description = 0x0, arg_description = 0x54b603 "[URI...]"}, {
+    long_name = 0x0, short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x0, description = 0x0, arg_description = 0x0}}

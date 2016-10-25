@@ -1,0 +1,34 @@
+#0  0x00007f3ddf19d5f0 in ?? ()
+No symbol table info available.
+#1  0x00007f3df3d7fc12 in __run_exit_handlers (status=0) at exit.c:78
+        atfct = <value optimized out>
+        onfct = <value optimized out>
+        cxafct = 0x7f3ddf19d5f0
+        run_list_atexit = <value optimized out>
+        listp = <value optimized out>
+#2  *__GI_exit (status=0) at exit.c:100
+No locals.
+#3  0x00007f3df3d65ac4 in __libc_start_main (main=<value optimized out>, 
+    argc=<value optimized out>, ubp_av=<value optimized out>, 
+    init=<value optimized out>, fini=<value optimized out>, 
+    rtld_fini=<value optimized out>, stack_end=0x7fff3b36b208)
+    at libc-start.c:252
+        result = -551954960
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, 3759952219026639725, 
+                4391792, 140734186828304, 0, 0, -3760366110453118099, 
+                -3866921698553607315}, mask_was_saved = 0}}, priv = {pad = {
+              0x0, 0x0, 0x547710, 0x7fff3b36b218}, data = {prev = 0x0, 
+              cleanup = 0x0, canceltype = 5535504}}}
+        not_first_call = <value optimized out>
+#4  0x0000000000430399 in ?? ()
+No symbol table info available.
+#5  0x00007fff3b36b208 in ?? ()
+No symbol table info available.
+#6  0x000000000000001c in ?? ()
+No symbol table info available.
+#7  0x0000000000000001 in ?? ()
+No symbol table info available.
+#8  0x00007fff3b36caf7 in ?? ()
+No symbol table info available.
+#9  0x0000000000000000 in ?? ()
+No symbol table info available.

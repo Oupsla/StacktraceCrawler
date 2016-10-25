@@ -1,0 +1,11 @@
+#0  0x00007f133338adf0 in gdu_device_get_object_path ()
+   from /usr/lib/libgdu.so.0
+#1  0x00007f1333389069 in gdu_pool_new () from /usr/lib/libgdu.so.0
+#2  0x0000000000403c4c in ?? ()
+#3  0x00007f132fe44acd in __libc_start_main () from /lib/libc.so.6
+#4  0x0000000000403179 in ?? ()
+#5  0x00007fff1adbac58 in ?? ()
+#6  0x000000000000001c in ?? ()
+#7  0x0000000000000001 in ?? ()
+#8  0x00007fff1adbbb99 in ?? ()
+#9  0x0000000000000000 in ?? ()

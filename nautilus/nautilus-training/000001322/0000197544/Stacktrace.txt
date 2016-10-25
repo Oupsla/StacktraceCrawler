@@ -1,0 +1,11 @@
+#0  trash_state_changed_cb (monitor=0x8310c40, state=0, path_bar=0x84d0bf8)
+    at nautilus-pathbar.c:211
+	button_data = (ButtonData *) 0x84d0bf8
+	file = (GFile *) 0x8551230
+	list = (GList *) 0xaaaaaaaa
+#1  0xb761c1a5 in g_cclosure_marshal_VOID__BOOLEAN ()
+   from /usr/lib/libgobject-2.0.so.0
+#2  0xb760d789 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+#3  0xb7623525 in ?? () from /usr/lib/libgobject-2.0.so.0
+#4  0x084a7538 in ?? ()
+#5  0x00000000 in ?? ()

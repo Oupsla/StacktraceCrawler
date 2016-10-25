@@ -1,0 +1,189 @@
+#0  0x00359422 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x0153b4d1 in raise () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#2  0x0153e932 in abort () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#3  0x01534648 in __assert_fail () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#4  0x00f11199 in _XAllocID () from /usr/lib/libX11.so.6
+No symbol table info available.
+#5  0x00ee6883 in XCreateGC () from /usr/lib/libX11.so.6
+No symbol table info available.
+#6  0x001e06f3 in _gdk_x11_gc_new (drawable=0x88f50c0, values=0x0, 
+    values_mask=0) at /build/buildd/gtk+2.0-2.18.2/gdk/x11/gdkgc-x11.c:142
+        gc = 0x88e7708
+        xvalues = {function = 3, plane_mask = 0, foreground = 3215775656, 
+          background = 3278788, line_width = 143140348, 
+          line_style = -1079191628, cap_style = -1079191624, 
+          join_style = 1936942, fill_style = 0, fill_rule = 2273268, 
+          arc_mode = 1, tile = 3278788, stipple = 3215775864, 
+          ts_x_origin = 0, ts_y_origin = -1079191480, font = 2273268, 
+          subwindow_mode = 0, graphics_exposures = 0, 
+          clip_x_origin = -1079191592, clip_y_origin = 2273268, 
+          clip_mask = 143610048, dash_offset = 143482880, dashes = -40 '\330'}
+        xvalues_mask = 4292865
+        __PRETTY_FUNCTION__ = "_gdk_x11_gc_new"
+#7  0x001a72ef in IA__gdk_gc_new_with_values (drawable=0x0, values=0x0, 
+    values_mask=0) at /build/buildd/gtk+2.0-2.18.2/gdk/gdkgc.c:130
+        __PRETTY_FUNCTION__ = "IA__gdk_gc_new_with_values"
+#8  0x001a72ef in IA__gdk_gc_new_with_values (drawable=0x0, values=0x0, 
+    values_mask=0) at /build/buildd/gtk+2.0-2.18.2/gdk/gdkgc.c:130
+        __PRETTY_FUNCTION__ = "IA__gdk_gc_new_with_values"
+#9  0x001a7361 in IA__gdk_gc_new (drawable=0x0)
+    at /build/buildd/gtk+2.0-2.18.2/gdk/gdkgc.c:108
+        __PRETTY_FUNCTION__ = "IA__gdk_gc_new"
+#10 0x001a4255 in _gdk_drawable_get_scratch_gc (drawable=0x88ad320, 
+    graphics_exposures=0) at /build/buildd/gtk+2.0-2.18.2/gdk/gdkdraw.c:1826
+        screen = 0x88900c8
+        __PRETTY_FUNCTION__ = "_gdk_drawable_get_scratch_gc"
+#11 0x001b0560 in IA__gdk_pixbuf_render_pixmap_and_mask_for_colormap (
+    pixbuf=0x8920f28, colormap=0x8892818, pixmap_return=0x88f8e94, 
+    mask_return=0x88f8e98, alpha_threshold=128)
+    at /build/buildd/gtk+2.0-2.18.2/gdk/gdkpixbuf-render.c:307
+        gc = <value optimized out>
+        screen = 0x88900c8
+        __PRETTY_FUNCTION__ = "IA__gdk_pixbuf_render_pixmap_and_mask_for_colormap"
+#12 0x005c626a in get_pixmap_and_mask (window=0x88eb070)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwindow.c:3142
+        screen = 0x88900c8
+        default_icon_info = <value optimized out>
+        best_icon = <value optimized out>
+        best_size = 22
+#13 gtk_window_realize_icon (window=0x88eb070)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwindow.c:3278
+        info = 0x88f8e90
+        icon_list = <value optimized out>
+        __PRETTY_FUNCTION__ = "gtk_window_realize_icon"
+#14 0x005ced26 in gtk_window_realize (widget=0x88eb070)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwindow.c:4854
+        parent_window = 0x8893000
+        attributes = {title = 0x895dd28 "Loading...", event_mask = 64514, 
+          x = 0, y = 3375892, width = 3200, height = 1200, 
+          wclass = GDK_INPUT_OUTPUT, visual = 0x8892008, 
+          colormap = 0x8892818, window_type = GDK_WINDOW_TOPLEVEL, 
+          cursor = 0xffffffff, wmclass_name = 0x8926740 "desktop_window", 
+          wmclass_class = 0x88e8d58 "Nautilus", 
+          override_redirect = 143568899, 
+          type_hint = GDK_WINDOW_TYPE_HINT_NORMAL}
+        __PRETTY_FUNCTION__ = "gtk_window_realize"
+#15 0x080aa0f6 in nautilus_window_realize (widget=0x88eb070)
+    at nautilus-window.c:883
+No locals.
+#16 0x08077022 in realize (widget=0x88eb070) at nautilus-desktop-window.c:229
+No locals.
+#17 0x003139fc in IA__g_cclosure_marshal_VOID__VOID (closure=0x88982d8, 
+    return_value=0x0, n_param_values=1, param_values=0x88ad350, 
+    invocation_hint=0xbfacdc80, marshal_data=0x8076fd0)
+    at /build/buildd/glib2.0-2.22.2/gobject/gmarshal.c:77
+        data1 = 0x6
+        data2 = 0x0
+        __PRETTY_FUNCTION__ = "IA__g_cclosure_marshal_VOID__VOID"
+#18 0x003046f9 in g_type_class_meta_marshal (closure=0x88982d8, 
+    return_value=0x0, n_param_values=1, param_values=0x88ad350, 
+    invocation_hint=0xbfacdc80, marshal_data=0x74)
+    at /build/buildd/glib2.0-2.22.2/gobject/gclosure.c:878
+        callback = <value optimized out>
+#19 0x00306072 in IA__g_closure_invoke (closure=0x88982d8, return_value=0x0, 
+    n_param_values=1, param_values=0x88ad350, invocation_hint=0xbfacdc80)
+    at /build/buildd/glib2.0-2.22.2/gobject/gclosure.c:767
+        marshal = 0x3046b0 <g_type_class_meta_marshal>
+        marshal_data = 0x74
+        __PRETTY_FUNCTION__ = "IA__g_closure_invoke"
+#20 0x0031b0b0 in signal_emit_unlocked_R (node=<value optimized out>, 
+    detail=<value optimized out>, instance=0x88eb070, emission_return=0x0, 
+    instance_and_params=0x88ad350)
+    at /build/buildd/glib2.0-2.22.2/gobject/gsignal.c:3177
+        accumulator = 0x0
+        emission = {next = 0x0, instance = 0x88eb070, ihint = {
+            signal_id = 16, detail = 0, run_type = G_SIGNAL_RUN_FIRST}, 
+          state = EMISSION_RUN, chain_type = 143558640}
+        class_closure = 0x88982d8
+        handler_list = 0x0
+        return_accu = <value optimized out>
+        accu = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, 
+              v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, 
+              v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, 
+              v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, 
+              v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        signal_id = 16
+        max_sequential_handler_number = 350
+        return_value_altered = 0
+#21 0x0031cb2d in IA__g_signal_emit_valist (instance=0x88eb070, signal_id=16, 
+    detail=0, var_args=0xbfacde3c "")
+    at /build/buildd/glib2.0-2.22.2/gobject/gsignal.c:2980
+        signal_return_type = 4
+        node = 0x88a32c0
+        i = <value optimized out>
+        n_params = 0
+        __PRETTY_FUNCTION__ = "IA__g_signal_emit_valist"
+#22 0x0031cfb6 in IA__g_signal_emit (instance=0x88eb070, signal_id=16, 
+    detail=0) at /build/buildd/glib2.0-2.22.2/gobject/gsignal.c:3037
+No locals.
+#23 0x005bd431 in IA__gtk_widget_realize (widget=0x88eb070)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwidget.c:3328
+        mode = <value optimized out>
+        __PRETTY_FUNCTION__ = "IA__gtk_widget_realize"
+#24 0x0806f474 in nautilus_application_create_desktop_windows (
+    application=0x88b7800) at nautilus-application.c:1058
+        window = 0x88eb070
+        screens = 1
+        i = 0
+        create_in_progress = 1
+        display = 0x888c000
+        selection_widget = 0x888f110
+#25 nautilus_application_open_desktop (application=0x88b7800)
+    at nautilus-application.c:1074
+No locals.
+#26 0x0806fdf8 in nautilus_application_startup (application=0x88b7800, 
+    kill_shell=0, no_default_window=1, no_desktop=0, browser_window=0, 
+    geometry=0x0, urls=0x0) at nautilus-application.c:898
+        accel_map_filename = <value optimized out>
+        message = 0xbfacdf38
+#27 0x080817b6 in main (argc=1, argv=0xbface1f4) at nautilus-main.c:574
+        kill_shell = 0
+        no_default_window = 1
+        browser_window = 0
+        no_desktop = 0
+        version = 0
+        autostart_mode = 1
+        autostart_id = <value optimized out>
+        geometry = 0x0
+        remaining = 0x0
+        perform_self_check = 0
+        application = 0x88b7800
+        context = <value optimized out>
+        file = 0x1
+        uri = <value optimized out>
+        uris = 0x0
+        uris_array = <value optimized out>
+        error = 0x0
+        options = {{long_name = 0x81a6c16 "check", short_name = 99 'c', 
+            flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbface110, 
+            description = 0x81a6c58 "Perform a quick set of self-check tests.", arg_description = 0x0}, {long_name = 0x81a6b0f "version", 
+            short_name = 0 '\000', flags = 0, arg = G_OPTION_ARG_NONE, 
+            arg_data = 0xbface11c, 
+            description = 0x81a6c84 "Show the version of the program.", 
+            arg_description = 0x0}, {long_name = 0x81aa7f8 "geometry", 
+            short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+            arg_data = 0xbface118, 
+            description = 0x81a6ca8 "Create the initial window with the given geometry.", arg_description = 0x81a6b17 "GEOMETRY"}, {
+            long_name = 0x81a6b20 "no-default-window", short_name = 110 'n', 
+            flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbface128, 
+            description = 0x81a6cdc "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {long_name = 0x81a6b32 "no-desktop", 
+            short_name = 0 '\000', flags = 0, arg = G_OPTION_ARG_NONE, 
+            arg_data = 0xbface120, 
+            description = 0x81a6d10 "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {
+            long_name = 0x81a380b "browser", short_name = 0 '\000', 
+            flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbface124, 
+            description = 0x81a6b3d "open a browser window.", 
+            arg_description = 0x0}, {long_name = 0x81c63fd "quit", 
+            short_name = 113 'q', flags = 0, arg = G_OPTION_ARG_NONE, 
+            arg_data = 0xbface12c, description = 0x81a6b54 "Quit Nautilus.", 
+            arg_description = 0x0}, {long_name = 0x81abb41 "", 
+            short_name = 0 '\000', flags = 0, 
+            arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0xbface114, 
+            description = 0x0, arg_description = 0x81a6b63 "[URI...]"}, {
+            long_name = 0x0, short_name = 0 '\000', flags = 0, 
+            arg = G_OPTION_ARG_NONE, arg_data = 0x0, description = 0x0, 
+            arg_description = 0x0}}

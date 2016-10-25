@@ -1,0 +1,125 @@
+#0  cell_view_is_sensitive (cell_view=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.17.2/gtk/gtkcombobox.c:1703
+	cells = (GList *) 0x3034b600
+	list = (GList *) 0x3034b600
+	sensitive = 0
+#1  0x00007f003f511fdb in update_menu_sensitivity (combo_box=0x123fb70, 
+    menu=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.17.2/gtk/gtkcombobox.c:1781
+	priv = (GtkComboBoxPrivate *) 0x123fbf0
+	children = (GList *) 0x7f00281faa00
+	child = (GList *) 0x7f00281faa00
+	item = (GtkWidget *) 0x169e700
+	submenu = <value optimized out>
+	sensitive = <value optimized out>
+#2  0x00007f003f5120ae in gtk_combo_box_menu_popup (combo_box=0x7f003034b600, 
+    button=1, activate_time=0)
+    at /build/buildd/gtk+2.0-2.17.2/gtk/gtkcombobox.c:1808
+	priv = (GtkComboBoxPrivate *) 0x123fbf0
+	path = <value optimized out>
+	active_item = <value optimized out>
+	requisition = {width = 14900992, height = 0}
+	width = <value optimized out>
+#3  0x00007f003f514069 in gtk_combo_box_menu_button_press (
+    widget=<value optimized out>, event=0x18709e0, 
+    user_data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.17.2/gtk/gtkcombobox.c:3149
+	combo_box = (GtkComboBox *) 0x123fb70
+	priv = (GtkComboBoxPrivate *) 0x123fbf0
+#4  0x00007f003f5b5a03 in _gtk_marshal_BOOLEAN__BOXED (closure=0x16ce970, 
+    return_value=0x7fff49e9bd30, n_param_values=<value optimized out>, 
+    param_values=0x1874750, invocation_hint=<value optimized out>, 
+    marshal_data=0x7f003f513fc0)
+    at /build/buildd/gtk+2.0-2.17.2/gtk/gtkmarshalers.c:84
+	data1 = (gpointer) 0x1348520
+	data2 = (gpointer) 0x123fb70
+	v_return = <value optimized out>
+	__PRETTY_FUNCTION__ = "_gtk_marshal_BOOLEAN__BOXED"
+#5  0x00007f003cffe27d in IA__g_closure_invoke (closure=0x16ce970, 
+    return_value=0x7fff49e9bd30, n_param_values=2, param_values=0x1874750, 
+    invocation_hint=0x7fff49e9bcf0)
+    at /build/buildd/glib2.0-2.20.1/gobject/gclosure.c:767
+	marshal = (
+    GClosureMarshal) 0x7f003f5b5950 <_gtk_marshal_BOOLEAN__BOXED>
+	marshal_data = (gpointer) 0x0
+	__PRETTY_FUNCTION__ = "IA__g_closure_invoke"
+#6  0x00007f003d013e3b in signal_emit_unlocked_R (node=0xe76e30, detail=0, 
+    instance=0x1348520, emission_return=0x7fff49e9be70, 
+    instance_and_params=0x1874750)
+    at /build/buildd/glib2.0-2.20.1/gobject/gsignal.c:3247
+	tmp = <value optimized out>
+	handler = (Handler *) 0x16d2d50
+	accumulator = (SignalAccumulator *) 0xe77210
+	emission = {next = 0x0, instance = 0x1348520, ihint = {
+    signal_id = 30, detail = 0, run_type = G_SIGNAL_RUN_FIRST}, 
+  state = EMISSION_RUN, chain_type = 4}
+	class_closure = (GClosure *) 0xe75cd0
+	handler_list = (Handler *) 0x16d2d50
+	return_accu = (GValue *) 0x7fff49e9bd30
+	accu = {g_type = 20, data = {{v_int = 0, v_uint = 0, v_long = 0, 
+      v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, 
+      v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, 
+      v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+	signal_id = 30
+	max_sequential_handler_number = 9398
+	return_value_altered = 0
+#7  0x00007f003d0152bd in IA__g_signal_emit_valist (instance=0x1348520, 
+    signal_id=<value optimized out>, detail=0, var_args=0x7fff49e9bed0)
+    at /build/buildd/glib2.0-2.20.1/gobject/gsignal.c:2990
+	return_value = {g_type = 20, data = {{v_int = 0, v_uint = 0, 
+      v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, 
+      v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, 
+      v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, 
+      v_pointer = 0x0}}}
+	error = <value optimized out>
+	signal_return_type = 20
+	param_values = (GValue *) 0x1874768
+	node = (SignalNode *) 0xe76e30
+	i = 1
+	n_params = 1
+	__PRETTY_FUNCTION__ = "IA__g_signal_emit_valist"
+#8  0x00007f003d015953 in IA__g_signal_emit (instance=0x7f003034b600, 
+    signal_id=1105561808, detail=0)
+    at /build/buildd/glib2.0-2.20.1/gobject/gsignal.c:3037
+	var_args = {{gp_offset = 32, fp_offset = 48, 
+    overflow_arg_area = 0x7fff49e9bfb0, reg_save_area = 0x7fff49e9bef0}}
+#9  0x00007f003f6d4bdf in gtk_widget_event_internal (widget=0x1348520, 
+    event=0x18709e0) at /build/buildd/gtk+2.0-2.17.2/gtk/gtkwidget.c:4761
+	signal_num = <value optimized out>
+	return_val = 0
+#10 0x00007f003f5ac9d4 in IA__gtk_propagate_event (widget=0x1348520, 
+    event=0x18709e0) at /build/buildd/gtk+2.0-2.17.2/gtk/gtkmain.c:2396
+	tmp = (GtkWidget *) 0x1348520
+	handled_event = 15606592
+	__PRETTY_FUNCTION__ = "IA__gtk_propagate_event"
+#11 0x00007f003f5adaf3 in IA__gtk_main_do_event (event=0x18709e0)
+    at /build/buildd/gtk+2.0-2.17.2/gtk/gtkmain.c:1601
+	event_widget = <value optimized out>
+	grab_widget = (GtkWidget *) 0x1348520
+	window_group = (GtkWindowGroup *) 0xee2340
+	rewritten_event = (GdkEvent *) 0x0
+	tmp_list = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_main_do_event"
+#12 0x00007f003efe190c in gdk_event_dispatch (source=<value optimized out>, 
+    callback=<value optimized out>, user_data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.17.2/gdk/x11/gdkevents-x11.c:2367
+	display = <value optimized out>
+	event = <value optimized out>
+#13 0x00007f003cd6620a in IA__g_main_context_dispatch (context=0xe5f440)
+    at /build/buildd/glib2.0-2.20.1/glib/gmain.c:1814
+No locals.
+#14 0x00007f003cd698e0 in g_main_context_iterate (context=0xe5f440, block=1, 
+    dispatch=1, self=<value optimized out>)
+    at /build/buildd/glib2.0-2.20.1/glib/gmain.c:2448
+	max_priority = 2147483647
+	timeout = 98
+	some_ready = 1
+	nfds = 11
+	allocated_nfds = <value optimized out>
+	fds = (GPollFD *) 0x1223a70
+	__PRETTY_FUNCTION__ = "g_main_context_iterate"
+#15 0x00007f003cd69dad in IA__g_main_loop_run (loop=0xe5fae0)
+    at /build/buildd/glib2.0-2.20.1/glib/gmain.c:2656
+	self = (GThread *) 0xe921f0
+	__PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#16 0x000000000041313d in main ()

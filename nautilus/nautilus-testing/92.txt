@@ -1,0 +1,36 @@
+#0  0x019260d7 in gdu_device_get_object_path () from /usr/lib/libgdu.so.0
+No symbol table info available.
+#1  0x01924944 in gdu_pool_new () from /usr/lib/libgdu.so.0
+No symbol table info available.
+#2  0x00708544 in ?? ()
+   from /usr/lib/nautilus/extensions-2.0/libnautilus-gdu.so
+No symbol table info available.
+#3  0x00a8b29d in nautilus_menu_provider_get_file_items ()
+   from /usr/lib/libnautilus-extension.so.1
+No symbol table info available.
+#4  0x080be191 in ?? ()
+No symbol table info available.
+#5  0x080c53b3 in ?? ()
+No symbol table info available.
+#6  0x080d03e1 in ?? ()
+No symbol table info available.
+#7  0x080b36c6 in fm_directory_view_update_menus ()
+No symbol table info available.
+#8  0x080b4583 in ?? ()
+No symbol table info available.
+#9  0x005d8d5c in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#10 0x005d85e5 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#11 0x005dc2d8 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#12 0x005dc817 in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#13 0x00f18299 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#14 0x08080e08 in ?? ()
+No symbol table info available.
+#15 0x07e87bd6 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#16 0x0806c6b1 in ?? ()
+No symbol table info available.

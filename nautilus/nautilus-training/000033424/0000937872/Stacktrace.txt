@@ -1,0 +1,44 @@
+#0  0x00b5a416 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x089601ef in raise () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#2  0x08963835 in abort () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#3  0x0051e71d in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#4  0x0058f6d4 in g_cond_wait_until () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#5  0x00523119 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#6  0x00523a51 in g_async_queue_timed_pop () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#7  0x04fbc2c9 in ?? () from /usr/lib/nautilus/extensions-3.0/libnautilus-dropbox.so
+No symbol table info available.
+#8  0x00d5bbf7 in nautilus_menu_provider_get_file_items () from /usr/lib/libnautilus-extension.so.1
+No symbol table info available.
+#9  0x080b2c0b in ?? ()
+No symbol table info available.
+#10 0x080bddfd in ?? ()
+No symbol table info available.
+#11 0x0807900d in ?? ()
+No symbol table info available.
+#12 0x080b6989 in ?? ()
+No symbol table info available.
+#13 0x080b69e5 in ?? ()
+No symbol table info available.
+#14 0x00550acf in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#15 0x0054fd6a in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#16 0x00550175 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#17 0x00550251 in g_main_context_iteration () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#18 0x003471b4 in g_application_run () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#19 0x08067ef8 in ?? ()
+No symbol table info available.
+#20 0x0894b4d3 in __libc_start_main () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#21 0x08067f45 in ?? ()
+No symbol table info available.

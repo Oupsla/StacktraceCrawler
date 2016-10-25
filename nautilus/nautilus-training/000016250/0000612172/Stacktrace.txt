@@ -1,0 +1,65 @@
+#0  IA__g_str_hash (v=0xffffffff)
+    at /build/buildd/glib2.0-2.24.1/glib/gstring.c:134
+        p = 0x0
+        h = <value optimised out>
+#1  0x009ba427 in g_hash_table_lookup_node (hash_table=0xa1d3c60, 
+    key=0xffffffff, notify=1) at /build/buildd/glib2.0-2.24.1/glib/ghash.c:309
+        node = <value optimised out>
+        hash_value = 169341144
+        step = <value optimised out>
+#2  g_hash_table_remove_internal (hash_table=0xa1d3c60, key=0xffffffff, 
+    notify=1) at /build/buildd/glib2.0-2.24.1/glib/ghash.c:1088
+        node = <value optimised out>
+        node_index = <value optimised out>
+        __PRETTY_FUNCTION__ = "g_hash_table_remove_internal"
+#3  0x080d958d in ?? ()
+No symbol table info available.
+#4  0x080e2aa5 in ?? ()
+No symbol table info available.
+#5  0x080fd2c5 in ?? ()
+No symbol table info available.
+#6  0x081018e4 in ?? ()
+No symbol table info available.
+#7  0x009c6661 in g_idle_dispatch (source=0xa2a0ae8, callback=0xa1d3c60, 
+    user_data=0xa018050) at /build/buildd/glib2.0-2.24.1/glib/gmain.c:4065
+No locals.
+#8  0x009c85e5 in g_main_dispatch (context=0x9fc7ef0)
+    at /build/buildd/glib2.0-2.24.1/glib/gmain.c:1960
+        dispatch = 0x9c6640 <g_idle_dispatch>
+        user_data = 0xa018050
+        callback = 0x8101860
+        cb_funcs = 0xa5633c
+        cb_data = 0xa2b6ee0
+        current_source_link = {data = 0xa2a0ae8, next = 0x0}
+        source = 0xa2842a0
+        current = 0x9ffd6b0
+        i = 1
+#9  IA__g_main_context_dispatch (context=0x9fc7ef0)
+    at /build/buildd/glib2.0-2.24.1/glib/gmain.c:2513
+No locals.
+#10 0x009cc2d8 in g_main_context_iterate (context=0x9fc7ef0, 
+    block=<value optimised out>, dispatch=1, self=0x9f99008)
+    at /build/buildd/glib2.0-2.24.1/glib/gmain.c:2591
+        max_priority = 200
+        timeout = 0
+        some_ready = 1
+        nfds = <value optimised out>
+        allocated_nfds = <value optimised out>
+        fds = <value optimised out>
+        __PRETTY_FUNCTION__ = "g_main_context_iterate"
+#11 0x009cc817 in IA__g_main_loop_run (loop=0xa0e4a80)
+    at /build/buildd/glib2.0-2.24.1/glib/gmain.c:2799
+        self = 0x9f99008
+        __PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#12 0x006243c9 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.20.1/gtk/gtkmain.c:1219
+        tmp_list = 0x0
+        functions = 0x0
+        init = 0x1
+        loop = 0xa0e4a80
+#13 0x08080e08 in ?? ()
+No symbol table info available.
+#14 0x07ee3bd6 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#15 0x0806c6b1 in ?? ()
+No symbol table info available.

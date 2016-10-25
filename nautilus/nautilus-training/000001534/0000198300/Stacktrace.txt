@@ -1,0 +1,63 @@
+#0  nautilus_connect_server_dialog_init (dialog=0x80f6000) at nautilus-connect-server-dialog.c:842
+	iter = {stamp = -1216988111, user_data = 0x1, user_data2 = 0x0, user_data3 = 0xb7bb406b}
+	supported = <value optimized out>
+	label = (GtkWidget *) 0x810b010
+	table = <value optimized out>
+	combo = (GtkWidget *) 0x810d880
+	hbox = (GtkWidget *) 0x80d16d8
+	store = (GtkListStore *) 0x80d18d0
+	renderer = <value optimized out>
+	i = 0
+#1  0xb780413e in IA__g_type_create_instance (type=135216136) at /build/buildd/glib2.0-2.15.6/gobject/gtype.c:1575
+	node = (TypeNode *) 0x80f3c08
+	instance = (GTypeInstance *) 0x80f6000
+	class = (GTypeClass *) 0x80f5bc8
+	i = 0
+	total_size = <value optimized out>
+#2  0xb77e8882 in g_object_constructor (type=135216136, n_construct_properties=2, construct_params=0x80f5510)
+    at /build/buildd/glib2.0-2.15.6/gobject/gobject.c:1046
+	object = (GObject *) 0xbfa9daa8
+#3  0xb77e7128 in IA__g_object_newv (object_type=135216136, n_parameters=0, parameters=0x0)
+    at /build/buildd/glib2.0-2.15.6/gobject/gobject.c:937
+	list = <value optimized out>
+	value = (GValue *) 0x80f5514
+	pspec = (GParamSpec *) 0x80dbfb8
+	nqueue = <value optimized out>
+	object = <value optimized out>
+	class = (GObjectClass *) 0x80f5bc8
+	unref_class = (GObjectClass *) 0x80f5bc8
+	slist = <value optimized out>
+	n_total_cparams = 2
+	n_cparams = 0
+	n_oparams = 0
+	n_cvalues = 2
+	clist = (GList *) 0x0
+	i = 3086319604
+	__PRETTY_FUNCTION__ = "IA__g_object_newv"
+#4  0xb77e7cc1 in IA__g_object_new_valist (object_type=135216136, first_property_name=0x0, var_args=0xbfa9dca8 "")
+    at /build/buildd/glib2.0-2.15.6/gobject/gobject.c:986
+	error = <value optimized out>
+	pspec = <value optimized out>
+	params = <value optimized out>
+	name = <value optimized out>
+	object = <value optimized out>
+	n_params = <value optimized out>
+	n_alloced_params = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_object_new_valist"
+#5  0xb7ba36b8 in IA__gtk_widget_new (type=135216136, first_property_name=0x0)
+    at /build/buildd/gtk+2.0-2.12.8/gtk/gtkwidget.c:2738
+	widget = <value optimized out>
+	var_args = 0xbfa9dca8 ""
+	__PRETTY_FUNCTION__ = "IA__gtk_widget_new"
+#6  0x08057384 in nautilus_connect_server_dialog_new (window=0x0, location=0x0) at nautilus-connect-server-dialog.c:957
+	dialog = <value optimized out>
+#7  0x08059be7 in main (argc=1, argv=0xbfa9ddd4) at nautilus-connect-server-dialog-main.c:152
+	dialog = <value optimized out>
+	context = (GOptionContext *) 0x80a9470
+	args = (const char **) 0x0
+	location = <value optimized out>
+	options = {{long_name = 0x809b138 "", short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_STRING_ARRAY, 
+    arg_data = 0xbfa9dd24, description = 0x0, arg_description = 0x809a713 "[URI]"}, {long_name = 0x0, short_name = 0 '\0', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x0, description = 0x0, arg_description = 0x0}}
+#8  0xb74a9450 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+#9  0x08056001 in _start ()

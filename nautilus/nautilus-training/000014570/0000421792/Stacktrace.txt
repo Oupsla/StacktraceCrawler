@@ -1,0 +1,269 @@
+#0  0x00285422 in __kernel_vsyscall ()
+#1  0x002b04d1 in *__GI_raise (sig=6)
+    at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+	resultvar = <value optimized out>
+	pid = 4038644
+	selftid = 3300
+#2  0x002b3932 in *__GI_abort () at abort.c:92
+	act = {__sigaction_handler = {sa_handler = 0xab2ff4, 
+    sa_sigaction = 0xab2ff4}, sa_mask = {__val = {3217080048, 11221032, 
+      3217080004, 11132937, 3217079988, 134528904, 3217079976, 11220940, 0, 
+      2064800, 5, 0, 1, 0, 0, 0, 0, 3217082780, 3217082776, 3217082772, 
+      3217088620, 11220592, 0, 3217080048, 3217079976, 3217079988, 0, 0, 
+      134558922, 0, 0, 0}}, sa_flags = 0, sa_restorer = 0}
+	sigs = {__val = {32, 0 <repeats 31 times>}}
+#3  0x080c8891 in ?? ()
+#4  <signal handler called>
+#5  0x00285422 in __kernel_vsyscall ()
+#6  0x002b04d1 in *__GI_raise (sig=6)
+    at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+	resultvar = <value optimized out>
+	pid = 4038644
+	selftid = 3300
+#7  0x002b3932 in *__GI_abort () at abort.c:92
+	act = {__sigaction_handler = {
+    sa_handler = 0x2f68cd <*__GI___libc_realloc+221>, 
+    sa_sigaction = 0x2f68cd <*__GI___libc_realloc+221>}, sa_mask = {__val = {
+      104, 88, 3217083552, 3217083792, 3217083580, 104, 88, 77, 174783096, 
+      4038644, 77, 76, 3217083752, 3038306, 174783104, 77, 3217083792, 
+      174783104, 0, 4222451712, 174783104, 174783104, 174783104, 174783104, 
+      174783180, 174783204, 174783104, 174783204, 0, 0, 0, 0}}, sa_flags = 0, 
+  sa_restorer = 0x68}
+	sigs = {__val = {32, 0 <repeats 31 times>}}
+#8  0x002a9648 in *__GI___assert_fail (assertion=0x9c3db65 "ret != inval_id", 
+    file=0x9c3db29 "../../src/xcb_io.c", line=378, 
+    function=0x9c3dce4 "_XAllocID") at assert.c:81
+	buf = 0xa6afa80 "cli: ../../src/xcb_io.c:378: _XAllocID: Assertion `ret != inval_id' failed.\n"
+#9  0x09bce199 in _XAllocID (dpy=0xa0857f0) at ../../src/xcb_io.c:378
+	ret = 4294967295
+	__PRETTY_FUNCTION__ = "_XAllocID"
+#10 0x09ba4048 in XCreatePixmap (dpy=0xa0857f0, d=6301670, width=8, 
+    height=60, depth=32) at ../../src/CrPixmap.c:58
+No locals.
+#11 0x00635dc9 in _cairo_xlib_surface_create_similar_with_format (
+    abstract_src=0xa079e08, format=<value optimized out>, width=8, height=60)
+    at /build/buildd/cairo-1.8.8/src/cairo-xlib-surface.c:155
+	dpy = (Display *) 0xa0857f0
+	pix = 168318960
+	xrender_format = <value optimized out>
+#12 0x0063acfc in _cairo_xlib_surface_clone_similar (
+    abstract_surface=0xa079e08, src=0xa6a88f8, src_x=0, src_y=0, width=8, 
+    height=60, clone_offset_x=0xbfc0d158, clone_offset_y=0xbfc0d15c, 
+    clone_out=0xbfc0da3c)
+    at /build/buildd/cairo-1.8.8/src/cairo-xlib-surface.c:1201
+	status = <value optimized out>
+#13 0x0061f5ee in _cairo_surface_clone_similar (surface=0xa079e08, 
+    src=0xa6a88f8, src_x=0, src_y=0, width=8, height=60, 
+    clone_offset_x=0xbfc0d158, clone_offset_y=0xbfc0d15c, 
+    clone_out=0xbfc0da3c)
+    at /build/buildd/cairo-1.8.8/src/cairo-surface.c:1147
+	status = <value optimized out>
+	image = <value optimized out>
+	image_extra = <value optimized out>
+#14 0x006154ef in _cairo_pattern_acquire_surface (pattern=0xa0a5bc0, 
+    dst=0xa079e08, x=<value optimized out>, y=<value optimized out>, width=8, 
+    height=60, surface_out=0xbfc0da3c, attributes=0xbfc0d9ec)
+    at /build/buildd/cairo-1.8.8/src/cairo-pattern.c:1435
+	status = <value optimized out>
+	__PRETTY_FUNCTION__ = "_cairo_pattern_acquire_surface"
+#15 0x006397a5 in _cairo_xlib_surface_composite_trapezoids (
+    op=CAIRO_OPERATOR_OVER, pattern=0xa0a5bc0, abstract_dst=0xa079e08, 
+    antialias=CAIRO_ANTIALIAS_DEFAULT, src_x=19, src_y=9, dst_x=19, dst_y=9, 
+    width=60, height=60, traps=0xa71b000, num_traps=32)
+    at /build/buildd/cairo-1.8.8/src/cairo-xlib-surface.c:2106
+	attributes = {matrix = {xx = 1, yx = 0, xy = 0, yy = 1, x0 = 0, 
+    y0 = 0}, extend = CAIRO_EXTEND_NONE, filter = CAIRO_FILTER_NEAREST, 
+  x_offset = -4, y_offset = -4, acquired = 0, extra = 0x0}
+	src = <value optimized out>
+	status = <value optimized out>
+	operation = <value optimized out>
+	render_reference_x = 3102781
+	render_reference_y = 12544
+	pict_format = (XRenderPictFormat *) 0xbfc0d1e8
+#16 0x0061e132 in _cairo_surface_composite_trapezoids (
+    op=CAIRO_OPERATOR_OVER, pattern=0xa0a5bc0, dst=0xa079e08, 
+    antialias=CAIRO_ANTIALIAS_DEFAULT, src_x=19, src_y=9, dst_x=19, dst_y=9, 
+    width=60, height=60, traps=0xa71b000, num_traps=32)
+    at /build/buildd/cairo-1.8.8/src/cairo-surface.c:1725
+	status = <value optimized out>
+	__PRETTY_FUNCTION__ = "_cairo_surface_composite_trapezoids"
+#17 0x00621f3c in _composite_traps_draw_func (closure=0xbfc0df28, 
+    op=CAIRO_OPERATOR_OVER, src=0xa0a5bc0, dst=0xa079e08, dst_x=0, dst_y=0, 
+    extents=0xbfc0df18)
+    at /build/buildd/cairo-1.8.8/src/cairo-surface-fallback.c:501
+	pattern = {base = {type = CAIRO_PATTERN_TYPE_SOLID, ref_count = {
+      ref_count = 0}, status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, 
+      num_elements = 0, element_size = 12, elements = 0x0, is_snapshot = 0}, 
+    matrix = {xx = 1, yx = 0, xy = 0, yy = 1, x0 = 0, y0 = 0}, 
+    filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_PAD}, color = {red = 1, 
+    green = 1, blue = 1, alpha = 1, red_short = 65535, green_short = 65535, 
+    blue_short = 65535, alpha_short = 65535}, content = CAIRO_CONTENT_COLOR}
+	status = <value optimized out>
+#18 0x00620e5c in _clip_and_composite (clip=0xce4, op=CAIRO_OPERATOR_OVER, 
+    src=0xa0a5bc0, draw_func=0x621e60 <_composite_traps_draw_func>, 
+    draw_closure=0xbfc0df28, dst=0xa079e08, extents=0xbfc0df18)
+    at /build/buildd/cairo-1.8.8/src/cairo-surface-fallback.c:395
+	solid_pattern = {base = {type = 64, ref_count = {ref_count = 20030}, 
+    status = 10803, user_data = {size = 19916, num_elements = 11551, 
+      element_size = 1, elements = 0xbfc0dc64, is_snapshot = 19916}, 
+    matrix = {xx = 4.1866976961451775e-310, yx = 2.1220018541388781e-314, 
+      xy = 4.1866976963065888e-310, yy = 4.1332234022484748e-310, 
+      x0 = 2.122002196032305e-314, y0 = 4.1333823468927874e-310}, 
+    filter = 12964, extend = 19160}, color = {red = 2.1220025206334343e-314, 
+    green = 4.0659028807400917e-310, blue = 3.9857446948430378e-310, 
+    alpha = 2.1220028274482004e-314, red_short = 15358, green_short = 96, 
+    blue_short = 18783, alpha_short = 0}, content = 14242}
+	status = <value optimized out>
+#19 0x006218f7 in _clip_and_composite_trapezoids (src=<value optimized out>, 
+    op=CAIRO_OPERATOR_OVER, dst=0xa079e08, traps=0xbfc0df84, clip=0x0, 
+    antialias=CAIRO_ANTIALIAS_DEFAULT)
+    at /build/buildd/cairo-1.8.8/src/cairo-surface-fallback.c:660
+	status = <value optimized out>
+	trap_region = {rgn = {extents = {x1 = 10803, y1 = 5170, x2 = 11551, 
+      y2 = 0}, data = 0x3fd41b2f}}
+	clear_region = {rgn = {extents = {x1 = 5355, y1 = 12272, x2 = 0, 
+      y2 = 1047645632}, data = 0x13c0}}
+	has_trap_region = 0
+	has_clear_region = <value optimized out>
+	extents = {x = 19, y = 9, width = 60, height = 60}
+	traps_info = {traps = 0xbfc0df84, antialias = CAIRO_ANTIALIAS_DEFAULT}
+#20 0x00621e4a in _cairo_surface_fallback_fill (surface=0xa079e08, 
+    op=CAIRO_OPERATOR_OVER, source=0xa0a5bc0, path=0xa2da38c, 
+    fill_rule=CAIRO_FILL_RULE_WINDING, tolerance=0.10000000000000001, 
+    antialias=CAIRO_ANTIALIAS_DEFAULT)
+    at /build/buildd/cairo-1.8.8/src/cairo-surface-fallback.c:902
+	status = <value optimized out>
+	traps = {status = CAIRO_STATUS_SUCCESS, extents = {p1 = {x = 5018, 
+      y = 2509}, p2 = {x = 20070, y = 17562}}, num_traps = 32, 
+  traps_size = 32, traps = 0xa71b000, traps_embedded = {{top = 2509, 
+      bottom = 2547, left = {p1 = {x = 12544, y = 2509}, p2 = {x = 11773, 
+          y = 2547}}, right = {p1 = {x = 12544, y = 2509}, p2 = {x = 13312, 
+          y = 2547}}}}, has_limits = 1, limits = {p1 = {x = 0, y = 0}, p2 = {
+      x = 25088, y = 25088}}}
+	box = {p1 = {x = 0, y = 0}, p2 = {x = 25088, y = 25088}}
+	extents = {x = 0, y = 0, width = 98, height = 98}
+#21 0x0061e2f7 in _cairo_surface_fill (surface=0xa079e08, 
+    op=CAIRO_OPERATOR_OVER, source=0xbfc0e0b4, path=0xa2da38c, 
+    fill_rule=CAIRO_FILL_RULE_WINDING, tolerance=0.10000000000000001, 
+    antialias=CAIRO_ANTIALIAS_DEFAULT)
+    at /build/buildd/cairo-1.8.8/src/cairo-surface.c:1685
+	status = <value optimized out>
+	dev_source = (cairo_pattern_t *) 0xa0a5bc0
+	__PRETTY_FUNCTION__ = "_cairo_surface_fill"
+#22 0x00604ec6 in _cairo_gstate_fill (gstate=0xa2da220, path=0xa2da38c)
+    at /build/buildd/cairo-1.8.8/src/cairo-gstate.c:1021
+	status = <value optimized out>
+	pattern = {base = {type = CAIRO_PATTERN_TYPE_LINEAR, ref_count = {
+      ref_count = 0}, status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, 
+      num_elements = 0, element_size = 12, elements = 0x0, is_snapshot = 0}, 
+    matrix = {xx = 1, yx = 0, xy = 0, yy = 1, x0 = 0, y0 = 0}, 
+    filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_PAD}, solid = {base = {
+      type = CAIRO_PATTERN_TYPE_LINEAR, ref_count = {ref_count = 0}, 
+      status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, num_elements = 0, 
+        element_size = 12, elements = 0x0, is_snapshot = 0}, matrix = {
+        xx = 1, yx = 0, xy = 0, yy = 1, x0 = 0, y0 = 0}, 
+      filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_PAD}, color = {
+      red = 4.2439915829186759e-314, green = 1.5894530517481157e-314, 
+      blue = 0, alpha = 5.2998088236266445e-315, red_short = 0, 
+      green_short = 16368, blue_short = 0, alpha_short = 0}, 
+    content = 1072693248}, surface = {base = {
+      type = CAIRO_PATTERN_TYPE_LINEAR, ref_count = {ref_count = 0}, 
+      status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, num_elements = 0, 
+        element_size = 12, elements = 0x0, is_snapshot = 0}, matrix = {
+        xx = 1, yx = 0, xy = 0, yy = 1, x0 = 0, y0 = 0}, 
+      filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_PAD}, surface = 0x2}, 
+  gradient = {base = {base = {type = CAIRO_PATTERN_TYPE_LINEAR, ref_count = {
+          ref_count = 0}, status = CAIRO_STATUS_SUCCESS, user_data = {
+          size = 0, num_elements = 0, element_size = 12, elements = 0x0, 
+          is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, x0 = 0, 
+          y0 = 0}, filter = CAIRO_FILTER_GOOD, extend = CAIRO_EXTEND_PAD}, 
+      n_stops = 2, stops_size = 2, stops = 0xbfc0e118, stops_embedded = {{
+          offset = 0, color = {red = 1, green = 1, blue = 1, 
+            alpha = 0.34999999999999998, red_short = 65535, 
+            green_short = 65535, blue_short = 65535, alpha_short = 22937}}, {
+          offset = 1, color = {red = 1, green = 1, blue = 1, alpha = 0, 
+            red_short = 65535, green_short = 65535, blue_short = 65535, 
+            alpha_short = 0}}}}, linear = {base = {base = {
+          type = CAIRO_PATTERN_TYPE_LINEAR, ref_count = {ref_count = 0}, 
+          status = CAIRO_STATUS_SUCCESS, user_data = {size = 0, 
+            num_elements = 0, element_size = 12, elements = 0x0, 
+            is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, 
+            x0 = 0, y0 = 0}, filter = CAIRO_FILTER_GOOD, 
+          extend = CAIRO_EXTEND_PAD}, n_stops = 2, stops_size = 2, 
+        stops = 0xbfc0e118, stops_embedded = {{offset = 0, color = {red = 1, 
+              green = 1, blue = 1, alpha = 0.34999999999999998, 
+              red_short = 65535, green_short = 65535, blue_short = 65535, 
+              alpha_short = 22937}}, {offset = 1, color = {red = 1, 
+              green = 1, blue = 1, alpha = 0, red_short = 65535, 
+              green_short = 65535, blue_short = 65535, alpha_short = 0}}}}, 
+      p1 = {x = 0, y = 0}, p2 = {x = 0, y = 12544}}, radial = {base = {
+        base = {type = CAIRO_PATTERN_TYPE_LINEAR, ref_count = {
+            ref_count = 0}, status = CAIRO_STATUS_SUCCESS, user_data = {
+            size = 0, num_elements = 0, element_size = 12, elements = 0x0, 
+            is_snapshot = 0}, matrix = {xx = 1, yx = 0, xy = 0, yy = 1, 
+            x0 = 0, y0 = 0}, filter = CAIRO_FILTER_GOOD, 
+          extend = CAIRO_EXTEND_PAD}, n_stops = 2, stops_size = 2, 
+        stops = 0xbfc0e118, stops_embedded = {{offset = 0, color = {red = 1, 
+              green = 1, blue = 1, alpha = 0.34999999999999998, 
+              red_short = 65535, green_short = 65535, blue_short = 65535, 
+              alpha_short = 22937}}, {offset = 1, color = {red = 1, 
+              green = 1, blue = 1, alpha = 0, red_short = 65535, 
+              green_short = 65535, blue_short = 65535, alpha_short = 0}}}}, 
+      c1 = {x = 0, y = 0}, r1 = 0, c2 = {x = 12544, y = -1077878344}, 
+      r2 = 6317334}}}
+#23 0x005feefd in *INT_cairo_fill_preserve (cr=0xa2da200)
+    at /build/buildd/cairo-1.8.8/src/cairo.c:2167
+	status = <value optimized out>
+#24 0x005fef22 in cairo_fill (cr=0xa2da200)
+    at /build/buildd/cairo-1.8.8/src/cairo.c:2143
+No locals.
+#25 0x018d0614 in ?? ()
+#26 0x018d05d5 in ?? ()
+#27 0x0199cccb in ?? ()
+#28 0x0199ee82 in ?? ()
+#29 0x0199ed15 in ?? ()
+#30 0x00e5e84e in ?? ()
+#31 0x00146ff1 in g_idle_dispatch (source=0xa662968, callback=0, 
+    user_data=0x0) at /build/buildd/glib2.0-2.21.5/glib/gmain.c:4065
+No locals.
+#32 0x00148d78 in IA__g_main_context_dispatch (context=0xa09ae40)
+    at /build/buildd/glib2.0-2.21.5/glib/gmain.c:1960
+No locals.
+#33 0x0014c620 in g_main_context_iterate (context=0xa09ae40, 
+    block=<value optimized out>, dispatch=1, self=0x9fdfd40)
+    at /build/buildd/glib2.0-2.21.5/glib/gmain.c:2591
+	max_priority = 200
+	timeout = 0
+	some_ready = 1
+	nfds = <value optimized out>
+	allocated_nfds = <value optimized out>
+	fds = <value optimized out>
+	__PRETTY_FUNCTION__ = "g_main_context_iterate"
+#34 0x0014ca8f in IA__g_main_loop_run (loop=0xa02f060)
+    at /build/buildd/glib2.0-2.21.5/glib/gmain.c:2799
+	self = (GThread *) 0x9fdfd40
+	__PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#35 0x03d7a2f9 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.17.7/gtk/gtkmain.c:1205
+	tmp_list = (GList *) 0x0
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0x0
+	loop = (GMainLoop *) 0xa02f060
+#36 0x01416fc0 in ?? ()
+#37 0x01416f83 in ?? ()
+#38 0x002424b8 in ?? ()
+#39 0x00242203 in ?? ()
+#40 0x0811122e in mono_runtime_exec_main ()
+#41 0x0811345a in mono_runtime_run_main ()
+#42 0x080b199d in mono_main ()
+#43 0x0805aba5 in ?? ()
+#44 0x0029cb56 in __libc_start_main (main=0x805ab80 <geteuid@plt+212>, 
+    argc=2, ubp_av=0xbfc0edf4, init=0x81e32e0, fini=0x81e32d0, 
+    rtld_fini=0xaa2d30 <_dl_fini>, stack_end=0xbfc0edec) at libc-start.c:220
+	result = <value optimized out>
+	unwind_buf = {cancel_jmp_buf = {{jmp_buf = {4038644, 0, 0, 
+        -1077875256, 1167867383, -1747932536}, mask_was_saved = 0}}, priv = {
+    pad = {0x0, 0x0, 0x2, 0x805aac0}, data = {prev = 0x0, cleanup = 0x0, 
+      canceltype = 2}}}
+	not_first_call = <value optimized out>
+#45 0x0805aae1 in ?? ()

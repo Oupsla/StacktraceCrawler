@@ -1,0 +1,95 @@
+#0  g_str_hash (v=0x0) at /build/buildd/glib2.0-2.31.4.tested/./glib/ghash.c:1661
+        p = 0x0
+        h = 5381
+#1  0xb6be83f6 in g_hash_table_lookup_node (hash_return=<synthetic pointer>, key=0x0, hash_table=0x9030728) at /build/buildd/glib2.0-2.31.4.tested/./glib/ghash.c:385
+        node_hash = <optimized out>
+        hash_value = <optimized out>
+        have_tombstone = 0
+        step = 0
+        node_index = <optimized out>
+        first_tombstone = 0
+#2  g_hash_table_insert_internal (hash_table=0x9030728, key=0x0, value=0x904bd00, keep_new_key=0) at /build/buildd/glib2.0-2.31.4.tested/./glib/ghash.c:1135
+        key_hash = <optimized out>
+#3  0xb447e450 in ?? () from /usr/lib/libsyncdaemon-1.0.so.1
+No symbol table info available.
+#4  0xb6cb8f8a in g_cclosure_marshal_VOID__POINTER (closure=0x8da7d10, return_value=0x0, n_param_values=2, param_values=0x8f05d38, invocation_hint=0xbfe0bed0, marshal_data=0x0) at /build/buildd/glib2.0-2.31.4.tested/./gobject/gmarshal.c:609
+        callback = 0xb447e3b0
+        cc = 0x8da7d10
+        data1 = 0x8d3f050
+        data2 = 0x8eaaa38
+        __PRETTY_FUNCTION__ = "g_cclosure_marshal_VOID__POINTER"
+#5  0xb573917a in ?? () from /usr/lib/i386-linux-gnu/libdbus-glib-1.so.2
+No symbol table info available.
+#6  0xb6cb6dac in g_closure_invoke (closure=0x8da7d10, return_value=0x0, n_param_values=3, param_values=0x902ec80, invocation_hint=0xbfe0bed0) at /build/buildd/glib2.0-2.31.4.tested/./gobject/gclosure.c:774
+        marshal = 0xb5738fd0
+        marshal_data = 0x0
+        in_marshal = 0
+        __PRETTY_FUNCTION__ = "g_closure_invoke"
+#7  0xb6cc80c5 in signal_emit_unlocked_R (node=0x8b8c788, detail=2870, instance=0x8d3f050, emission_return=0x0, instance_and_params=0x902ec80) at /build/buildd/glib2.0-2.31.4.tested/./gobject/gsignal.c:3302
+        tmp = <optimized out>
+        handler = 0x8c89ce0
+        accumulator = 0x0
+        emission = {next = 0x0, instance = 0x8d3f050, ihint = {signal_id = 243, detail = 2870, run_type = G_SIGNAL_RUN_FIRST}, state = EMISSION_RUN, chain_type = 4}
+        class_closure = 0x0
+        hlist = 0x8db46e0
+        handler_list = 0x8edb5a0
+        return_accu = 0x0
+        accu = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        signal_id = 243
+        max_sequential_handler_number = 10762
+        return_value_altered = 0
+#8  0xb6ccf942 in g_signal_emit_valist (instance=0x8d3f050, signal_id=243, detail=2870, var_args=0xbfe0c084 "") at /build/buildd/glib2.0-2.31.4.tested/./gobject/gsignal.c:3033
+        instance_and_params = 0x902ec80
+        signal_return_type = 4
+        param_values = 0x902ec94
+        node = 0x8b8c788
+        i = <optimized out>
+        n_params = 2
+        __PRETTY_FUNCTION__ = "g_signal_emit_valist"
+#9  0xb6ccfad3 in g_signal_emit (instance=0x8d3f050, signal_id=243, detail=2870) at /build/buildd/glib2.0-2.31.4.tested/./gobject/gsignal.c:3090
+        var_args = 0xbfe0c07c "0\276\365\b`t\v\t"
+#10 0xb5739820 in ?? () from /usr/lib/i386-linux-gnu/libdbus-glib-1.so.2
+No symbol table info available.
+#11 0xb6085441 in dbus_connection_dispatch () from /lib/i386-linux-gnu/libdbus-1.so.3
+No symbol table info available.
+#12 0xb57319ad in ?? () from /usr/lib/i386-linux-gnu/libdbus-glib-1.so.2
+No symbol table info available.
+#13 0xb6bf928a in g_main_dispatch (context=0x8acaea8) at /build/buildd/glib2.0-2.31.4.tested/./glib/gmain.c:2513
+        dispatch = 0xb5731980
+        was_in_call = 0
+        user_data = 0x0
+        callback = 0
+        cb_funcs = 0x0
+        cb_data = 0x0
+        current_source_link = {data = 0x8b8f2c8, next = 0x0}
+        need_destroy = <optimized out>
+        source = 0x8b8f2c8
+        current = 0x8b6fea8
+        i = <optimized out>
+#14 g_main_context_dispatch (context=0x8acaea8) at /build/buildd/glib2.0-2.31.4.tested/./glib/gmain.c:3050
+No locals.
+#15 0xb6bf9695 in g_main_context_iterate (dispatch=1, block=-1228902352, context=0x8acaea8, self=<optimized out>) at /build/buildd/glib2.0-2.31.4.tested/./glib/gmain.c:3121
+        timeout = 0
+        some_ready = 1
+        fds = 0x8b66800
+        max_priority = 0
+        nfds = <optimized out>
+        allocated_nfds = <optimized out>
+#16 g_main_context_iterate (context=0x8acaea8, block=-1228902352, dispatch=1, self=<optimized out>) at /build/buildd/glib2.0-2.31.4.tested/./glib/gmain.c:3058
+        some_ready = 1
+#17 0xb6bf9771 in g_main_context_iteration (context=0x8acaea8, may_block=1) at /build/buildd/glib2.0-2.31.4.tested/./glib/gmain.c:3182
+        retval = <optimized out>
+#18 0xb6dac62c in g_application_run (application=0x8aa0c08, argc=2, argv=0xbfe0c3b4) at /build/buildd/glib2.0-2.31.4.tested/./gio/gapplication.c:1548
+        arguments = 0x8a96538
+        status = 0
+        i = <optimized out>
+        __PRETTY_FUNCTION__ = "g_application_run"
+#19 0x08067ae4 in ?? ()
+No symbol table info available.
+#20 0xb69ec113 in __libc_start_main (main=0x8067a20, argc=2, ubp_av=0xbfe0c3b4, init=0x8158bd0, fini=0x8158c40, rtld_fini=0xb787bbc0, stack_end=0xbfe0c3ac) at libc-start.c:226
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {-1229672460, 0, 0, 0, 585296782, -555413604}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x2, 0x8067afc}, data = {prev = 0x0, cleanup = 0x0, canceltype = 2}}}
+        not_first_call = <optimized out>
+#21 0x08067b1d in ?? ()
+No symbol table info available.
+Backtrace stopped: Not enough registers or memory available to unwind further

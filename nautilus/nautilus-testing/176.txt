@@ -1,0 +1,6 @@
+#0  0x00000000004686ef in nautilus_window_get_active_slot (window=<value optimized out>) at nautilus-window.c:1870
+        __PRETTY_FUNCTION__ = "nautilus_window_get_active_slot"
+#1  0x0000000002b0cc50 in ?? ()
+No symbol table info available.
+#2  0x0000000000000000 in ?? ()
+No symbol table info available.

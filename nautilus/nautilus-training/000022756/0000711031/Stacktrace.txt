@@ -1,0 +1,34 @@
+#0  0x00de869c in g_type_check_instance_cast () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#1  0x07f9851a in ?? () from /usr/lib/libdbusmenu-gtk.so.3
+No symbol table info available.
+#2  0x00dc1701 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#3  0x001d8f69 in g_datalist_id_set_data_full () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#4  0x00dc1789 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#5  0x08473d0a in ?? () from /usr/lib/libdbusmenu-glib.so.3
+No symbol table info available.
+#6  0x00dc1b13 in g_object_unref () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#7  0x08478b48 in ?? () from /usr/lib/libdbusmenu-glib.so.3
+No symbol table info available.
+#8  0x00dc84cf in g_object_set_property () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#9  0x08479359 in dbusmenu_server_set_root () from /usr/lib/libdbusmenu-glib.so.3
+No symbol table info available.
+#10 0x0313df95 in ?? () from /usr/lib/gtk-2.0/2.10.0/menuproxies/libappmenu.so
+No symbol table info available.
+#11 0x001f758c in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#12 0x001f5c68 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#13 0x001f6430 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#14 0x001f6af3 in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#15 0x006512a5 in gtk_dialog_run () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#16 0x080502f7 in main ()
+No symbol table info available.

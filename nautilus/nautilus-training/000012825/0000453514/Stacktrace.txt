@@ -1,0 +1,193 @@
+#0  0x0055e422 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x00f954d1 in *__GI_raise (sig=6)
+    at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+	resultvar = <value optimized out>
+	pid = 17477620
+	selftid = 4831
+#2  0x00f98932 in *__GI_abort () at abort.c:92
+	act = {__sigaction_handler = {
+    sa_handler = 0xfdb82d <*__GI___libc_realloc+221>, 
+    sa_sigaction = 0xfdb82d <*__GI___libc_realloc+221>}, sa_mask = {__val = {
+      104, 96, 3217313616, 3217313856, 3217313644, 104, 96, 90, 141357768, 
+      17477620, 90, 89, 3217313816, 16559042, 141357776, 90, 3217313856, 
+      141357776, 0, 4222451712, 141357776, 141357776, 141357776, 141357776, 
+      141357865, 141357876, 141357776, 141357876, 0, 0, 0, 0}}, sa_flags = 0, 
+  sa_restorer = 0}
+	sigs = {__val = {32, 0 <repeats 31 times>}}
+#3  0x00f8e648 in *__GI___assert_fail (assertion=0xb2db65 "ret != inval_id", 
+    file=0xb2db29 "../../src/xcb_io.c", line=378, 
+    function=0xb2dce4 "_XAllocID") at assert.c:81
+	buf = 0x86cf2d0 "gnome-screenshot: ../../src/xcb_io.c:378: _XAllocID: Assertion `ret != inval_id' failed.\n"
+#4  0x00abe199 in _XAllocID (dpy=0x856d708) at ../../src/xcb_io.c:378
+	ret = 4294967295
+	__PRETTY_FUNCTION__ = "_XAllocID"
+#5  0x00a93883 in XCreateGC (dpy=0x856d708, d=79691840, 
+    valuemask=<value optimized out>, values=0xbfc45110) at ../../src/CrGC.c:93
+	ext = <value optimized out>
+#6  0x001676f3 in _gdk_x11_gc_new (drawable=0x86536f0, values=0x0, 
+    values_mask=0) at /build/buildd/gtk+2.0-2.18.2/gdk/x11/gdkgc-x11.c:142
+	gc = (GdkGC *) 0x87470c0
+	xvalues = {function = 3, plane_mask = 0, foreground = 3217314136, 
+  background = 3672004, line_width = 139910228, line_style = -1077653148, 
+  cap_style = -1077653144, join_style = 1441326, fill_style = 0, 
+  fill_rule = 1777652, arc_mode = 1, tile = 3672004, stipple = 3217314344, 
+  ts_x_origin = 0, ts_y_origin = -1077653000, font = 1777652, 
+  subwindow_mode = 0, graphics_exposures = 0, clip_x_origin = -1077653112, 
+  clip_y_origin = 1777652, clip_mask = 140850928, dash_offset = 140156080, 
+  dashes = -120 '\210'}
+	xvalues_mask = 4292865
+	__PRETTY_FUNCTION__ = "_gdk_x11_gc_new"
+#7  0x0012e2ef in IA__gdk_gc_new_with_values (drawable=0x0, values=0x0, 
+    values_mask=0) at /build/buildd/gtk+2.0-2.18.2/gdk/gdkgc.c:130
+	__PRETTY_FUNCTION__ = "IA__gdk_gc_new_with_values"
+#8  0x0012e2ef in IA__gdk_gc_new_with_values (drawable=0x0, values=0x0, 
+    values_mask=0) at /build/buildd/gtk+2.0-2.18.2/gdk/gdkgc.c:130
+	__PRETTY_FUNCTION__ = "IA__gdk_gc_new_with_values"
+#9  0x0012e361 in IA__gdk_gc_new (drawable=0x0)
+    at /build/buildd/gtk+2.0-2.18.2/gdk/gdkgc.c:108
+	__PRETTY_FUNCTION__ = "IA__gdk_gc_new"
+#10 0x0012b255 in _gdk_drawable_get_scratch_gc (drawable=0x87a7878, 
+    graphics_exposures=0) at /build/buildd/gtk+2.0-2.18.2/gdk/gdkdraw.c:1826
+	screen = (GdkScreen *) 0x857c0c8
+	__PRETTY_FUNCTION__ = "_gdk_drawable_get_scratch_gc"
+#11 0x00137560 in IA__gdk_pixbuf_render_pixmap_and_mask_for_colormap (
+    pixbuf=0x8757688, colormap=0x857b418, pixmap_return=0x86c0d6c, 
+    mask_return=0x86c0d70, alpha_threshold=128)
+    at /build/buildd/gtk+2.0-2.18.2/gdk/gdkpixbuf-render.c:307
+	gc = <value optimized out>
+	screen = (GdkScreen *) 0x857c0c8
+	__PRETTY_FUNCTION__ = "IA__gdk_pixbuf_render_pixmap_and_mask_for_colormap"
+#12 0x0083826a in gtk_window_realize_icon (window=0x85b9018)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwindow.c:3142
+	info = (GtkWindowIconInfo *) 0x86c0d68
+	icon_list = <value optimized out>
+	__PRETTY_FUNCTION__ = "gtk_window_realize_icon"
+#13 0x00840d26 in gtk_window_realize (widget=0x85b9018)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwindow.c:4854
+	parent_window = (GdkWindow *) 0x857e800
+	attributes = {title = 0x85adea0 "Save Screenshot", 
+  event_mask = 64514, x = 5, y = 626, width = 636, height = 234, 
+  wclass = GDK_INPUT_OUTPUT, visual = 0x857ac08, colormap = 0x857b418, 
+  window_type = GDK_WINDOW_TOPLEVEL, cursor = 0x8667650, 
+  wmclass_name = 0x85af4c0 "gnome-screenshot", 
+  wmclass_class = 0x85af4d8 "Gnome-screenshot", 
+  override_redirect = 140218392, type_hint = GDK_WINDOW_TYPE_HINT_DIALOG}
+	__PRETTY_FUNCTION__ = "gtk_window_realize"
+#14 0x003739fc in g_cclosure_marshal_VOID__VOID ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#15 0x003646f9 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#16 0x00366072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#17 0x0037b0b0 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#18 0x0037cb2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#19 0x0037cfb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#20 0x0082f431 in IA__gtk_widget_realize (widget=0x85b9018)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwidget.c:3328
+	mode = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_widget_realize"
+#21 0x00841458 in gtk_window_show (widget=0x85b9018)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwindow.c:4488
+	info = (GtkWindowGeometryInfo *) 0x8757310
+	allocation = {x = 0, y = 0, width = 636, height = 234}
+	configure_request = {x = 0, y = 0, width = 636, height = 234}
+	new_geometry = {min_width = 636, min_height = 234, max_width = 636, 
+  max_height = 234, base_width = 0, base_height = 0, width_inc = 0, 
+  height_inc = 0, min_aspect = 0, max_aspect = 0, 
+  win_gravity = GDK_GRAVITY_NORTH_WEST}
+	new_flags = 70
+#22 0x003739fc in g_cclosure_marshal_VOID__VOID ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#23 0x003646f9 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#24 0x00366072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#25 0x0037b0b0 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#26 0x0037cb2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#27 0x0037cfb6 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#28 0x00830406 in IA__gtk_widget_show (widget=0x85b9018)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwidget.c:3012
+	__PRETTY_FUNCTION__ = "IA__gtk_widget_show"
+#29 0x0083016a in IA__gtk_widget_show_all (widget=0x85b9018)
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkwidget.c:3160
+	__PRETTY_FUNCTION__ = "IA__gtk_widget_show_all"
+#30 0x08050fa4 in screenshot_dialog_new (screenshot=0x85a0890, 
+    initial_uri=0x85689d8 "file:///home/dylan/Desktop/Screenshot-Mozilla%20Firefox%20Start%20Page%20-%20Mozilla%20Firefox.png", take_window_shot=1)
+    at screenshot-dialog.c:290
+	toplevel = (GtkWidget *) 0x85b9018
+	preview_darea = <value optimized out>
+	width = 1440
+	height = 826
+	current_folder = 0x85af5f8 "Sans"
+	current_name = 0x85af808 "Screenshot-Mozilla Firefox Start Page - Mozilla Firefox.png"
+	ext = <value optimized out>
+	pos = -1
+	tmp_file = <value optimized out>
+	parent_file = <value optimized out>
+	res = <value optimized out>
+#31 0x0804ff81 in check_file_done (user_data=0x859c1c0)
+    at gnome-screenshot.c:854
+No locals.
+#32 0x0023da05 in ?? () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#33 0x004890f1 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#34 0x0048ae78 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#35 0x0048e720 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#36 0x0048eb8f in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#37 0x007033a9 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.18.2/gtk/gtkmain.c:1216
+	tmp_list = (GList *) 0x0
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0x0
+	loop = (GMainLoop *) 0x85a8280
+#38 0x0804f707 in main (argc=1, argv=0xbfc46074) at gnome-screenshot.c:1389
+	context = <value optimized out>
+	window_arg = 1
+	area_arg = 0
+	include_border_arg = 0
+	disable_border_arg = 0
+	interactive_arg = 0
+	border_effect_arg = (gchar *) 0x0
+	delay_arg = 0
+	error = (GError *) 0x0
+	entries = {{long_name = 0x8053d00 "window", short_name = 119 'w', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfc45fac, 
+    description = 0x8053978 "Grab a window instead of the entire screen", 
+    arg_description = 0x0}, {long_name = 0x8054142 "area", 
+    short_name = 97 'a', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfc45fa8, 
+    description = 0x80539a4 "Grab an area of the screen instead of the entire screen", arg_description = 0x0}, {long_name = 0x8053d8f "include-border", 
+    short_name = 98 'b', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfc45fa4, 
+    description = 0x80539dc "Include the window border with the screenshot", 
+    arg_description = 0x0}, {long_name = 0x8053d9e "remove-border", 
+    short_name = 66 'B', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfc45fa0, 
+    description = 0x8053a0c "Remove the window border from the screenshot", 
+    arg_description = 0x0}, {long_name = 0x8053e5f "delay", 
+    short_name = 100 'd', flags = 0, arg = G_OPTION_ARG_INT, 
+    arg_data = 0xbfc45f94, 
+    description = 0x8053a3c "Take screenshot after specified delay [in seconds]", arg_description = 0x8053d41 "seconds"}, {
+    long_name = 0x8053dac "border-effect", short_name = 101 'e', flags = 0, 
+    arg = G_OPTION_ARG_STRING, arg_data = 0xbfc45f98, 
+    description = 0x8053a70 "Effect to add to the border (shadow, border or none)", arg_description = 0x8053db3 "effect"}, {
+    long_name = 0x8053dba "interactive", short_name = 105 'i', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbfc45f9c, 
+    description = 0x8053dc6 "Interactively set options", 
+    arg_description = 0x0}, {long_name = 0x0, short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0x0, description = 0x0, 
+    arg_description = 0x0}}
+	__PRETTY_FUNCTION__ = "main"

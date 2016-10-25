@@ -1,0 +1,9 @@
+#0  0x00007f5a45b61d8a in realloc () from /lib/libc.so.6
+#1  0x00007f5a3cc18829 in ff_fft_init (s=0x20, nbits=398829336, 
+    inverse=398829336)
+    at /build/buildd/ffmpeg-debian-0.svn20090119/libavcodec/fft.c:66
+	i = <value optimized out>
+	j = <value optimized out>
+	n = <value optimized out>
+#2  0x00000000000012cb in ?? ()
+#3  0x0000000000000000 in ?? ()

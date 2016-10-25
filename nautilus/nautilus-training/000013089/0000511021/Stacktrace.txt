@@ -1,0 +1,37 @@
+#0  0x00007ffb55aa2e1f in PyThreadState_New ()
+   from /usr/lib/libpython2.6.so.1.0
+No symbol table info available.
+#1  0x00007ffb55aa2ebc in PyGILState_Ensure ()
+   from /usr/lib/libpython2.6.so.1.0
+No symbol table info available.
+#2  0x00007ffb54b86aa0 in ?? ()
+   from /usr/lib/pymodules/python2.6/gtk-2.0/gobject/_gobject.so
+No symbol table info available.
+#3  0x00007ffb6ae4f272 in g_datalist_clear () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#4  0x00007ffb6b543adf in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#5  0x00007ffb6b5419ef in g_object_unref () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#6  0x00000000004cdb0f in ?? ()
+No symbol table info available.
+#7  0x00000000004cdba9 in ?? ()
+No symbol table info available.
+#8  0x000000000051bab8 in ?? ()
+No symbol table info available.
+#9  0x0000000000444356 in ?? ()
+No symbol table info available.
+#10 0x00007ffb69a71c4d in __libc_start_main () from /lib/libc.so.6
+No symbol table info available.
+#11 0x0000000000430aa9 in ?? ()
+No symbol table info available.
+#12 0x00007fff10f03168 in ?? ()
+No symbol table info available.
+#13 0x000000000000001c in ?? ()
+No symbol table info available.
+#14 0x0000000000000001 in ?? ()
+No symbol table info available.
+#15 0x00007fff10f04afa in ?? ()
+No symbol table info available.
+#16 0x0000000000000000 in ?? ()
+No symbol table info available.

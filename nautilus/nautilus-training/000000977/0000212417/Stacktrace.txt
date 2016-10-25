@@ -1,0 +1,28 @@
+#0  0x00007f6245f43f38 in g_type_check_instance_cast ()
+   from /usr/lib/libgobject-2.0.so.0
+#1  0x00007f62341220f4 in ?? ()
+   from /usr/lib/gtk-2.0/2.10.0/filesystems/libgio.so
+#2  0x00007f6245f27bcf in g_closure_invoke ()
+   from /usr/lib/libgobject-2.0.so.0
+#3  0x00007f6245f3b6bc in ?? () from /usr/lib/libgobject-2.0.so.0
+#4  0x00007f6245f3d0d5 in g_signal_emit_valist ()
+   from /usr/lib/libgobject-2.0.so.0
+#5  0x00007f6245f3d398 in g_signal_emit_by_name ()
+   from /usr/lib/libgobject-2.0.so.0
+#6  0x00007f6245f27bcf in g_closure_invoke ()
+   from /usr/lib/libgobject-2.0.so.0
+#7  0x00007f6245f3b6bc in ?? () from /usr/lib/libgobject-2.0.so.0
+#8  0x00007f6245f3d0d5 in g_signal_emit_valist ()
+   from /usr/lib/libgobject-2.0.so.0
+#9  0x00007f6245f3d398 in g_signal_emit_by_name ()
+   from /usr/lib/libgobject-2.0.so.0
+#10 0x00007f623aa2d020 in ?? ()
+   from /usr/lib/gio/modules/libgiohal-volume-monitor.so
+#11 0x00007f623aa2d07e in ?? ()
+   from /usr/lib/gio/modules/libgiohal-volume-monitor.so
+#12 0x00007f6245c94222 in g_main_context_dispatch ()
+   from /usr/lib/libglib-2.0.so.0
+#13 0x00007f6245c974d6 in ?? () from /usr/lib/libglib-2.0.so.0
+#14 0x00007f6245c97797 in g_main_loop_run () from /usr/lib/libglib-2.0.so.0
+#15 0x00007f624771aee3 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+#16 0x00000000004232d2 in main ()

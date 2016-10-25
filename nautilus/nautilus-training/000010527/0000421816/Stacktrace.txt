@@ -1,0 +1,148 @@
+#0  0x00662130 in IA__g_object_ref (_object=0xa3c1b90)
+    at /build/buildd/glib2.0-2.21.5/gobject/gobject.c:2339
+	__r = <value optimized out>
+	old_val = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_object_ref"
+#1  0x00950958 in IA__g_datalist_clear (datalist=0xa361d78)
+    at /build/buildd/glib2.0-2.21.5/glib/gdataset.c:120
+	__PRETTY_FUNCTION__ = "IA__g_datalist_clear"
+#2  0x006646c8 in g_object_finalize (object=0xa361d70)
+    at /build/buildd/glib2.0-2.21.5/gobject/gobject.c:747
+	__PRETTY_FUNCTION__ = "g_object_finalize"
+#3  0x007e7690 in nautilus_menu_item_finalize (object=0xa361d70)
+    at nautilus-menu-item.c:225
+No locals.
+#4  0x006623e3 in IA__g_object_unref (_object=0xa361d70)
+    at /build/buildd/glib2.0-2.21.5/gobject/gobject.c:2421
+	object = (GObject *) 0xa361d70
+	old_ref = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_object_unref"
+#5  0x080afd84 in extension_action_callback_data_free (data=0xa35cd08)
+    at fm-directory-view.c:4564
+No locals.
+#6  0x0065fbd1 in IA__g_closure_unref (closure=0xa3e9948)
+    at /build/buildd/glib2.0-2.21.5/gobject/gclosure.c:254
+	__PRETTY_FUNCTION__ = "IA__g_closure_unref"
+#7  0x00675d1a in IA__g_signal_handlers_destroy (instance=0xa34e5c0)
+    at /build/buildd/glib2.0-2.21.5/gobject/gsignal.c:637
+	handler = (Handler *) 0xa2d9a20
+	i = 1
+	hlbsa = (GBSearchArray *) 0xa065a60
+	__PRETTY_FUNCTION__ = "IA__g_signal_handlers_destroy"
+#8  0x00662025 in g_object_real_dispose (object=0xa34e5c0)
+    at /build/buildd/glib2.0-2.21.5/gobject/gobject.c:739
+No locals.
+#9  0x00662348 in IA__g_object_unref (_object=0xa34e5c0)
+    at /build/buildd/glib2.0-2.21.5/gobject/gobject.c:2393
+	object = (GObject *) 0xa34e5c0
+	old_ref = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_object_unref"
+#10 0x003c38df in free_node (node=0xb406e708)
+    at /build/buildd/gtk+2.0-2.17.7/gtk/gtkuimanager.c:1093
+	info = (Node *) 0xa35cfa0
+#11 0x003c412b in update_node (self=<value optimized out>, 
+    node=<value optimized out>, in_popup=1, popup_accels=0)
+    at /build/buildd/gtk+2.0-2.17.7/gtk/gtkuimanager.c:2759
+	child = <value optimized out>
+	action = <value optimized out>
+	action_name = <value optimized out>
+	__PRETTY_FUNCTION__ = "update_node"
+#12 0x003c40b7 in update_node (self=<value optimized out>, 
+    node=<value optimized out>, in_popup=1, popup_accels=0)
+    at /build/buildd/gtk+2.0-2.17.7/gtk/gtkuimanager.c:2737
+	child = (GNode *) 0x0
+	action = <value optimized out>
+	action_name = <value optimized out>
+	__PRETTY_FUNCTION__ = "update_node"
+#13 0x003c40b7 in update_node (self=<value optimized out>, 
+    node=<value optimized out>, in_popup=1, popup_accels=0)
+    at /build/buildd/gtk+2.0-2.17.7/gtk/gtkuimanager.c:2737
+	child = (GNode *) 0x989f6c0
+	action = <value optimized out>
+	action_name = <value optimized out>
+	__PRETTY_FUNCTION__ = "update_node"
+#14 0x003c40b7 in update_node (self=<value optimized out>, 
+    node=<value optimized out>, in_popup=0, popup_accels=0)
+    at /build/buildd/gtk+2.0-2.17.7/gtk/gtkuimanager.c:2737
+	child = (GNode *) 0x98d82b0
+	action = <value optimized out>
+	action_name = <value optimized out>
+	__PRETTY_FUNCTION__ = "update_node"
+#15 0x003c5636 in do_updates_idle (self=0xa090b40)
+    at /build/buildd/gtk+2.0-2.17.7/gtk/gtkuimanager.c:2779
+No locals.
+#16 0x005bd0c8 in gdk_threads_dispatch (data=0x9c2d3c0)
+    at /build/buildd/gtk+2.0-2.17.7/gdk/gdk.c:498
+	ret = 0
+#17 0x00964ff1 in g_idle_dispatch (source=0xa39d710, callback=0x17, 
+    user_data=0x9c2d3c0) at /build/buildd/glib2.0-2.21.5/glib/gmain.c:4065
+No locals.
+#18 0x00966d78 in IA__g_main_context_dispatch (context=0x97dbdf8)
+    at /build/buildd/glib2.0-2.21.5/glib/gmain.c:1960
+No locals.
+#19 0x0096a620 in g_main_context_iterate (context=0x97dbdf8, 
+    block=<value optimized out>, dispatch=1, self=0x97aa008)
+    at /build/buildd/glib2.0-2.21.5/glib/gmain.c:2591
+	max_priority = 200
+	timeout = 0
+	some_ready = 1
+	nfds = <value optimized out>
+	allocated_nfds = <value optimized out>
+	fds = <value optimized out>
+	__PRETTY_FUNCTION__ = "g_main_context_iterate"
+#20 0x0096aa8f in IA__g_main_loop_run (loop=0x996c740)
+    at /build/buildd/glib2.0-2.21.5/glib/gmain.c:2799
+	self = (GThread *) 0x97aa008
+	__PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#21 0x0028f2f9 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.17.7/gtk/gtkmain.c:1205
+	tmp_list = (GList *) 0x0
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0x1
+	loop = (GMainLoop *) 0x996c740
+#22 0x08081501 in main (argc=1, argv=0xbf9e79e4) at nautilus-main.c:548
+	kill_shell = 0
+	no_default_window = 1
+	browser_window = 0
+	no_desktop = 0
+	version = 0
+	autostart_mode = 1
+	autostart_id = <value optimized out>
+	geometry = (gchar *) 0x0
+	remaining = (const gchar **) 0x0
+	perform_self_check = 0
+	application = (NautilusApplication *) 0x980c200
+	context = <value optimized out>
+	file = (GFile *) 0x1
+	uri = <value optimized out>
+	uris = (char **) 0x0
+	uris_array = <value optimized out>
+	error = (GError *) 0x0
+	options = {{long_name = 0x81a66fa "check", short_name = 99 'c', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbf9e7900, 
+    description = 0x81a673c "Perform a quick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x81a662f "version", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbf9e790c, 
+    description = 0x81a6768 "Show the version of the program.", 
+    arg_description = 0x0}, {long_name = 0x81aa2b8 "geometry", 
+    short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+    arg_data = 0xbf9e7908, 
+    description = 0x81a678c "Create the initial window with the given geometry.", arg_description = 0x81a6637 "GEOMETRY"}, {
+    long_name = 0x81a6640 "no-default-window", short_name = 110 'n', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbf9e7918, 
+    description = 0x81a67c0 "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {long_name = 0x81a6652 "no-desktop", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbf9e7910, 
+    description = 0x81a67f4 "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {
+    long_name = 0x81a332b "browser", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbf9e7914, 
+    description = 0x81a665d "open a browser window.", arg_description = 0x0}, 
+  {long_name = 0x81c5f1d "quit", short_name = 113 'q', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbf9e791c, 
+    description = 0x81a6674 "Quit Nautilus.", arg_description = 0x0}, {
+    long_name = 0x81ab601 "", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0xbf9e7904, 
+    description = 0x0, arg_description = 0x81a6683 "[URI...]"}, {
+    long_name = 0x0, short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x0, description = 0x0, arg_description = 0x0}}

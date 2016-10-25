@@ -1,0 +1,49 @@
+#0  0x00784182 in g_file_equal (file1=0x9a850b0, file2=0xb09e0d40) at /build/buildd/glib2.0-2.29.8/./gio/gfile.c:585
+        __inst = 0xb09e0d40
+        __t = 156106896
+        __r = <value optimized out>
+        _g_boolean_var_ = <value optimized out>
+        iface = <value optimized out>
+        __PRETTY_FUNCTION__ = "g_file_equal"
+#1  0x00fd0498 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#2  0x00f2b6dc in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#3  0x00f347fd in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#4  0x007b10a2 in g_simple_async_result_complete (simple=0x9af1d00) at /build/buildd/glib2.0-2.29.8/./gio/gsimpleasyncresult.c:749
+        current_source = <value optimized out>
+        current_context = <value optimized out>
+        __PRETTY_FUNCTION__ = "g_simple_async_result_complete"
+#5  0x007b1123 in complete_in_idle_cb_for_thread (_data=0x9afbb28) at /build/buildd/glib2.0-2.29.8/./gio/gsimpleasyncresult.c:816
+        data = 0x9afbb28
+        simple = 0x9af1d00
+#6  0x008d3230 in g_idle_dispatch (source=0xb141fd90, callback=0x7b10f0 <complete_in_idle_cb_for_thread>, user_data=0x9afbb28) at /build/buildd/glib2.0-2.29.8/./glib/gmain.c:4844
+No locals.
+#7  0x008d70cf in g_main_dispatch (context=0x94d4f50) at /build/buildd/glib2.0-2.29.8/./glib/gmain.c:2477
+        dispatch = 0x8d3210 <g_idle_dispatch>
+        was_in_call = 0
+        user_data = 0x9afbb28
+        callback = 0x7b10f0 <complete_in_idle_cb_for_thread>
+        cb_funcs = 0x98535c
+        cb_data = 0xb1401dc0
+        current_source_link = {data = 0xb141fd90, next = 0x0}
+        need_destroy = <value optimized out>
+        source = 0xb141fd90
+        current = 0x9546f20
+        i = <value optimized out>
+#8  g_main_context_dispatch (context=0x94d4f50) at /build/buildd/glib2.0-2.29.8/./glib/gmain.c:3050
+No locals.
+#9  0x008d7800 in g_main_context_iterate (context=0x94d4f50, block=9331712, dispatch=1, self=<value optimized out>) at /build/buildd/glib2.0-2.29.8/./glib/gmain.c:3128
+        max_priority = 0
+        timeout = 0
+        some_ready = 1
+        nfds = <value optimized out>
+        allocated_nfds = <value optimized out>
+        fds = 0x9a41418
+#10 0x008d7e0b in g_main_loop_run (loop=0x96884f0) at /build/buildd/glib2.0-2.29.8/./glib/gmain.c:3336
+        __PRETTY_FUNCTION__ = "g_main_loop_run"
+#11 0x00f8c485 in gtk_main () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#12 0x08067258 in main ()
+No symbol table info available.

@@ -1,0 +1,123 @@
+#0  gdu_device_get_object_path (device=0x0) at gdu-device.c:835
+No locales.
+#1  0x00007f156a4d134c in gdu_pool_new_for_address (ssh_user_name=<value optimized out>, ssh_address=<value optimized out>, error=0x7fffae7c4e68) at gdu-pool.c:2108
+        device = <value optimized out>
+        n = 12
+        devices = 0x142f740
+        adapters = <value optimized out>
+        expanders = <value optimized out>
+        ports = <value optimized out>
+        pool = 0x1935700
+        local_error = 0x0
+#2  0x00007f156a4d17ac in gdu_pool_new () at gdu-pool.c:1929
+        pool = <value optimized out>
+        error = 0x0
+#3  0x00007f156a6f785e in get_device_for_device_file (provider=<value optimized out>, window=<value optimized out>, files=<value optimized out>) at nautilus-gdu.c:50
+        pool = <value optimized out>
+#4  get_device_from_nautilus_file (provider=<value optimized out>, window=<value optimized out>, files=<value optimized out>) at nautilus-gdu.c:114
+        file = <value optimized out>
+        info = 0x14e2ea0
+        file_type = G_FILE_TYPE_UNKNOWN
+        mount = <value optimized out>
+        volume = <value optimized out>
+        device_file = 0x16f43e0 "/dev/sdb1"
+        error = 0x0
+#5  nautilus_gdu_get_file_items (provider=<value optimized out>, window=<value optimized out>, files=<value optimized out>) at nautilus-gdu.c:179
+        item = <value optimized out>
+        nautilus_file = 0x1ed5500
+        device = <value optimized out>
+        items = <value optimized out>
+        volume = <value optimized out>
+        pool = <value optimized out>
+#6  0x000000000047a03e in get_all_extension_menu_items (window=0x13bc850, selection=0x1ed8900) at fm-directory-view.c:4674
+        file_items = <value optimized out>
+        items = 0x1cc24a0
+        providers = 0x1cd7e80
+        l = 0x1dbf960
+#7  0x000000000047c477 in reset_extension_actions_menu (view=0x7f155c00b650) at fm-directory-view.c:4943
+        items = <value optimized out>
+        ui_manager = <value optimized out>
+#8  real_update_menus (view=0x7f155c00b650) at fm-directory-view.c:8723
+        selection = 0x1ed8900
+        l = <value optimized out>
+        tip = <value optimized out>
+        label = 0x7f1500000000 <Address 0x7f1500000000 out of bounds>
+        label_with_underscore = 0x1ef4720 "\001"
+        selection_contains_special_link = <value optimized out>
+        selection_contains_desktop_or_home_dir = 1
+        can_create_files = 0
+        can_delete_files = 0
+        can_duplicate_files = 0
+        show_separate_delete_command = <value optimized out>
+        vfolder_directory = 0
+        disable_command_line = <value optimized out>
+        show_open_alternate = 0
+        show_save_search = <value optimized out>
+        save_search_sensitive = <value optimized out>
+        show_save_search_as = <value optimized out>
+        show_open_folder_window = 0
+        action = 0x1e87d70
+        app = 0x1
+        app_icon = <value optimized out>
+        menuitem = <value optimized out>
+        next_pane_is_writable = <value optimized out>
+        show_properties = <value optimized out>
+#9  0x0000000000485565 in fm_icon_view_update_menus (view=0x7f155c00b650) at fm-icon-view.c:1769
+        icon_view = 0x7f155c00b650
+        selection = <value optimized out>
+        action = <value optimized out>
+        icon_container = <value optimized out>
+        editable = <value optimized out>
+#10 0x0000000000470e3b in fm_directory_view_update_menus (view=0x7f155c00b650) at fm-directory-view.c:9869
+        __PRETTY_FUNCTION__ = "fm_directory_view_update_menus"
+#11 0x0000000000471ae5 in update_menus_timeout_callback (data=<value optimized out>) at fm-directory-view.c:3018
+No locales.
+#12 0x00007f1584c2fb1b in g_timeout_dispatch (source=0x2124d80, callback=0x85, user_data=0x84) at /build/buildd/glib2.0-2.26.1/glib/gmain.c:3585
+No locales.
+#13 0x00007f1584c2f342 in g_main_dispatch (context=0xfb2ab0) at /build/buildd/glib2.0-2.26.1/glib/gmain.c:2149
+        dispatch = 0x7f1584c2fb00 <g_timeout_dispatch>
+        user_data = 0x7f155c00b650
+        callback = 0x471aa0 <update_menus_timeout_callback>
+        cb_funcs = 0x7f1584ecf610
+        cb_data = 0x20e0f30
+        current_source_link = {data = 0x2124d80, next = 0x0}
+        source = 0x2124d80
+        current = 0x102c590
+        i = 1
+#14 g_main_context_dispatch (context=0xfb2ab0) at /build/buildd/glib2.0-2.26.1/glib/gmain.c:2702
+No locales.
+#15 0x00007f1584c332a8 in g_main_context_iterate (context=0xfb2ab0, block=<value optimized out>, dispatch=<value optimized out>, self=<value optimized out>) at /build/buildd/glib2.0-2.26.1/glib/gmain.c:2780
+        max_priority = 0
+        timeout = 0
+        some_ready = 1
+        nfds = 18
+        allocated_nfds = -2067529328
+        fds = <value optimized out>
+        __PRETTY_FUNCTION__ = "g_main_context_iterate"
+#16 0x00007f1584c337b5 in g_main_loop_run (loop=0x11e0b00) at /build/buildd/glib2.0-2.26.1/glib/gmain.c:2988
+        self = 0xf72010
+        __PRETTY_FUNCTION__ = "g_main_loop_run"
+#17 0x00007f158678f3e7 in IA__gtk_main () at /build/buildd/gtk+2.0-2.22.0/gtk/gtkmain.c:1237
+        tmp_list = 0x101ed90
+        functions = 0x0
+        init = 0x0
+        loop = <value optimized out>
+#18 0x0000000000441d22 in main (argc=1, argv=0x7fffae7c5648) at nautilus-main.c:544
+        kill_shell = 0
+        no_default_window = 1
+        browser_window = 0
+        no_desktop = 0
+        version = 0
+        autostart_mode = 1
+        autostart_id = <value optimized out>
+        geometry = 0x0
+        remaining = 0x0
+        perform_self_check = 0
+        application = <value optimized out>
+        context = <value optimized out>
+        file = 0x1
+        uri = <value optimized out>
+        uris = 0x0
+        uris_array = <value optimized out>
+        error = 0x0
+        options = {{long_name = 0x553443 "check", short_name = 99 'c', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x7fffae7c5538, description = 0x553488 "Perform a quick set of self-check tests.", arg_description = 0x0}, {long_name = 0x573e79 "version", short_name = 0 '\000', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x7fffae7c553c, description = 0x5534b8 "Show the version of the program.", arg_description = 0x0}, {long_name = 0x55757c "geometry", short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, arg_data = 0x7fffae7c5530, description = 0x5534e0 "Create the initial window with the given geometry.", arg_description = 0x553381 "GEOMETRY"}, {long_name = 0x55338a "no-default-window", short_name = 110 'n', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x7fffae7c5548, description = 0x553518 "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {long_name = 0x55339c "no-desktop", short_name = 0 '\000', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x7fffae7c5540, description = 0x553550 "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {long_name = 0x54fc5f "browser", short_name = 0 '\000', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x7fffae7c5544, description = 0x5533a7 "open a browser window.", arg_description = 0x0}, {long_name = 0x575a0a "quit", short_name = 113 'q', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x7fffae7c554c, description = 0x5533be "Quit Nautilus.", arg_description = 0x0}, {long_name = 0x558caf "", short_name = 0 '\000', flags = 0, arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0x7fffae7c5528, description = 0x0, arg_description = 0x5533cd "[URI...]"}, {long_name = 0x0, short_name = 0 '\000', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x0, description = 0x0, arg_description = 0x0}}

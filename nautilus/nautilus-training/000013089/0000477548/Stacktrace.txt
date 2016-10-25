@@ -1,0 +1,32 @@
+#0  0x02bfe0b6 in PyThreadState_New () from /usr/lib/libpython2.6.so.1.0
+No symbol table info available.
+#1  0x02bfe176 in PyGILState_Ensure () from /usr/lib/libpython2.6.so.1.0
+No symbol table info available.
+#2  0x05d36d79 in pyglib_gil_state_ensure ()
+   from /usr/lib/libpyglib-2.0-python2.6.so.0
+No symbol table info available.
+#3  0x05e297dc in ?? ()
+   from /usr/lib/pymodules/python2.6/gtk-2.0/gobject/_gobject.so
+No symbol table info available.
+#4  0x00600a78 in g_datalist_clear () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#5  0x00304410 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#6  0x0812581f in ?? ()
+No symbol table info available.
+#7  0x003021bb in g_object_unref () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#8  0x081226e0 in nautilus_file_unref ()
+No symbol table info available.
+#9  0x08116f87 in ?? ()
+No symbol table info available.
+#10 0x08117027 in ?? ()
+No symbol table info available.
+#11 0x0816d5dc in ?? ()
+No symbol table info available.
+#12 0x08081871 in ?? ()
+No symbol table info available.
+#13 0x010dcb56 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#14 0x0806c131 in ?? ()
+No symbol table info available.

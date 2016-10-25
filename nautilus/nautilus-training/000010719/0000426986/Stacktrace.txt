@@ -1,0 +1,123 @@
+#0  _int_malloc (av=0x7f39e1f47e40, bytes=15) at malloc.c:4278
+	p = <value optimized out>
+	nb = <value optimized out>
+	idx = 0
+	bin = <value optimized out>
+	victim = (mchunkptr) 0x747367
+	size = <value optimized out>
+	victim_index = <value optimized out>
+	remainder = <value optimized out>
+	remainder_size = <value optimized out>
+	block = <value optimized out>
+	bit = <value optimized out>
+	map = <value optimized out>
+	fwd = <value optimized out>
+	bck = <value optimized out>
+	__PRETTY_FUNCTION__ = "_int_malloc"
+#1  0x00007f39e1c5775e in *__GI___libc_malloc (bytes=15) at malloc.c:3638
+	ar_ptr = (mstate) 0x7f39e1f47e40
+	victim = <value optimized out>
+	__PRETTY_FUNCTION__ = "__libc_malloc"
+#2  0x00007f39e2fdc343 in IA__g_malloc (n_bytes=15)
+    at /build/buildd/glib2.0-2.21.6/glib/gmem.c:131
+	mem = (gpointer) 0x0
+#3  0x00007f39e2ff3d2e in IA__g_strdup (str=0x7f39ce93c099 "gstreamer-0.10")
+    at /build/buildd/glib2.0-2.21.6/glib/gstrfuncs.c:102
+	new_str = (gchar *) 0x0
+	length = 15
+#4  0x00007f39e2fe0461 in IA__g_option_group_set_translation_domain (
+    group=0x29362d0, domain=0xf <Address 0xf out of bounds>)
+    at /build/buildd/glib2.0-2.21.6/glib/goption.c:2232
+	__PRETTY_FUNCTION__ = "IA__g_option_group_set_translation_domain"
+#5  0x00007f39ce8c6842 in gst_init_get_option_group () at gst.c:404
+	group = <value optimized out>
+	gst_args = {{long_name = 0x7f39ce93c571 "gst-version", 
+    short_name = 0 '\0', flags = 8, arg = G_OPTION_ARG_CALLBACK, 
+    arg_data = 0x7f39ce8c7680, 
+    description = 0x7f39ce93c4f7 "Print the GStreamer version", 
+    arg_description = 0x0}, {long_name = 0x7f39ce93c57f "gst-fatal-warnings", 
+    short_name = 0 '\0', flags = 8, arg = G_OPTION_ARG_CALLBACK, 
+    arg_data = 0x7f39ce8c7680, 
+    description = 0x7f39ce93c513 "Make all warnings fatal", 
+    arg_description = 0x0}, {long_name = 0x7f39ce93c5db "gst-debug-help", 
+    short_name = 0 '\0', flags = 8, arg = G_OPTION_ARG_CALLBACK, 
+    arg_data = 0x7f39ce8c7680, 
+    description = 0x7f39ce93cd70 "Print available debug categories and exit", 
+    arg_description = 0x0}, {long_name = 0x7f39ce93c594 "gst-debug-level", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_CALLBACK, 
+    arg_data = 0x7f39ce8c7680, 
+    description = 0x7f39ce93cda0 "Default debug level from 1 (only error) to 5 (anything) or 0 for no output", arg_description = 0x7f39ce93c52b "LEVEL"}, {
+    long_name = 0x7f39ce93c5a6 "gst-debug", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_CALLBACK, arg_data = 0x7f39ce8c7680, 
+    description = 0x7f39ce93cdf0 "Comma-separated list of category_name:level pairs to set specific levels for the individual categories. Example: GST_AUTOPLUG:5,GST_ELEMENT_*:3", arg_description = 0x7f39ce945e29 "LIST"}, {
+    long_name = 0x7f39ce93c5c6 "gst-debug-no-color", short_name = 0 '\0', 
+    flags = 8, arg = G_OPTION_ARG_CALLBACK, arg_data = 0x7f39ce8c7680, 
+    description = 0x7f39ce93ce80 "Disable colored debugging output", 
+    arg_description = 0x0}, {long_name = 0x7f39ce93c5b2 "gst-debug-disable", 
+    short_name = 0 '\0', flags = 8, arg = G_OPTION_ARG_CALLBACK, 
+    arg_data = 0x7f39ce8c7680, 
+    description = 0x7f39ce93c531 "Disable debugging", arg_description = 0x0}, 
+  {long_name = 0x7f39ce93c5ec "gst-plugin-spew", short_name = 0 '\0', 
+    flags = 8, arg = G_OPTION_ARG_CALLBACK, arg_data = 0x7f39ce8c7680, 
+    description = 0x7f39ce93cea8 "Enable verbose plugin loading diagnostics", 
+    arg_description = 0x0}, {long_name = 0x7f39ce93c5fe "gst-plugin-path", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_CALLBACK, 
+    arg_data = 0x7f39ce8c7680, 
+    description = 0x7f39ce93ced8 "Colon-separated paths containing plugins", 
+    arg_description = 0x7f39ce93c543 "PATHS"}, {
+    long_name = 0x7f39ce93c610 "gst-plugin-load", short_name = 0 '\0', 
+    flags = 0, arg = G_OPTION_ARG_CALLBACK, arg_data = 0x7f39ce8c7680, 
+    description = 0x7f39ce93cf08 "Comma-separated list of plugins to preload in addition to the list stored in environment variable GST_PLUGIN_PATH", 
+    arg_description = 0x7f39ce93c549 "PLUGINS"}, {
+    long_name = 0x7f39ce93c622 "gst-disable-segtrap", short_name = 0 '\0', 
+    flags = 8, arg = G_OPTION_ARG_CALLBACK, arg_data = 0x7f39ce8c7680, 
+    description = 0x7f39ce93cf80 "Disable trapping of segmentation faults during plugin loading", arg_description = 0x0}, {
+    long_name = 0x7f39ce93c638 "gst-disable-registry-update", 
+    short_name = 0 '\0', flags = 8, arg = G_OPTION_ARG_CALLBACK, 
+    arg_data = 0x7f39ce8c7680, 
+    description = 0x7f39ce93c551 "Disable updating the registry", 
+    arg_description = 0x0}, {
+    long_name = 0x7f39ce93c656 "gst-disable-registry-fork", 
+    short_name = 0 '\0', flags = 8, arg = G_OPTION_ARG_CALLBACK, 
+    arg_data = 0x7f39ce8c7680, 
+    description = 0x7f39ce93cfc0 "Disable the use of fork() while scanning the registry", arg_description = 0x0}, {long_name = 0x0, short_name = 0 '\0', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x0, description = 0x0, 
+    arg_description = 0x0}}
+#6  0x00007f39ce8c6921 in gst_init_check (argc=0x0, argv=0x0, err=0x0)
+    at gst.c:450
+	group = <value optimized out>
+	ctx = (GOptionContext *) 0x23b0850
+	res = <value optimized out>
+	__PRETTY_FUNCTION__ = "gst_init_check"
+#7  0x00007f39cf4115dd in brasero_burn_library_start (argc=0x0, argv=0x0)
+    at burn-basics.c:232
+	client = <value optimized out>
+#8  0x00007f39cf6713e2 in nautilus_module_initialize (module=0x2341b60)
+    at nautilus-burn-extension.c:933
+No locals.
+#9  0x00000000004f2b86 in ?? ()
+#10 0x00007f39e36d1574 in IA__g_type_module_use (module=0x2341b60)
+    at /build/buildd/glib2.0-2.21.6/gobject/gtypemodule.c:257
+	tmp_list = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_type_module_use"
+#11 0x00000000004f2c98 in ?? ()
+#12 0x00000000004338e3 in ?? ()
+#13 0x0000000000443502 in ?? ()
+#14 0x00007f39e1bfbabd in __libc_start_main (main=<value optimized out>, 
+    argc=<value optimized out>, ubp_av=<value optimized out>, 
+    init=<value optimized out>, fini=<value optimized out>, 
+    rtld_fini=<value optimized out>, stack_end=0x7fff5b4ba618)
+    at libc-start.c:220
+	result = <value optimized out>
+	unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, 4291130132658577527, 
+        4391200, 140734725072416, 0, 0, -4290911706546773897, 
+        -4179644599106084745}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 
+      0x547140, 0x7fff5b4ba628}, data = {prev = 0x0, cleanup = 0x0, 
+      canceltype = 5534016}}}
+	not_first_call = <value optimized out>
+#15 0x0000000000430149 in ?? ()
+#16 0x00007fff5b4ba618 in ?? ()
+#17 0x000000000000001c in ?? ()
+#18 0x0000000000000001 in ?? ()
+#19 0x00007fff5b4bab01 in ?? ()
+#20 0x0000000000000000 in ?? ()

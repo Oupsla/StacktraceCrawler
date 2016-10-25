@@ -1,0 +1,18 @@
+#0  0x00007f6baa73722f in gconf_client_remove_dir ()
+   from /usr/lib/libgconf-2.so.4
+#1  0x00007f6b9fedc5ea in ?? ()
+   from /usr/lib/nautilus/extensions-2.0/libnautilus-actions.so
+#2  0x00007f6baa05f258 in g_object_unref () from /usr/lib/libgobject-2.0.so.0
+#3  0x00007f6b9fed9aa0 in ?? ()
+   from /usr/lib/nautilus/extensions-2.0/libnautilus-actions.so
+#4  0x00007f6baa05f1e2 in g_object_unref () from /usr/lib/libgobject-2.0.so.0
+#5  0x00000000004f1b4c in ?? ()
+#6  0x00007f6bad6c9d88 in eel_debug_shut_down () from /usr/lib/libeel-2.so.2
+#7  0x0000000000441e9d in ?? ()
+#8  0x00007f6ba8785466 in __libc_start_main () from /lib/libc.so.6
+#9  0x000000000042e399 in ?? ()
+#10 0x00007fffb5d37a18 in ?? ()
+#11 0x000000000000001c in ?? ()
+#12 0x0000000000000001 in ?? ()
+#13 0x00007fffb5d37eaa in ?? ()
+#14 0x0000000000000000 in ?? ()

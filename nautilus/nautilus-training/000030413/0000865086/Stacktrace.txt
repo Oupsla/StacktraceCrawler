@@ -1,0 +1,90 @@
+#0  0xb3d1cf99 in gconf_client_get () from /usr/lib/libgconf-2.so.4
+No symbol table info available.
+#1  0xb3d1d4d4 in gconf_client_get_bool () from /usr/lib/libgconf-2.so.4
+No symbol table info available.
+#2  0xb3deb932 in nautilus_open_terminal_get_file_items () from /usr/lib/nautilus/extensions-3.0/libnautilus-open-terminal.so
+No symbol table info available.
+#3  0xb784fbf7 in nautilus_menu_provider_get_file_items (provider=0x8bdf2b0, window=0xb4904008, files=0x0) at nautilus-menu-provider.c:85
+        __PRETTY_FUNCTION__ = "nautilus_menu_provider_get_file_items"
+#4  0x080b291b in get_all_extension_menu_items (window=0xb4904008, selection=0x0) at nautilus-view.c:4576
+        provider = <optimized out>
+        file_items = <optimized out>
+        items = <optimized out>
+        providers = 0xb1d9d590
+        l = 0x8c68a30
+#5  0x080bdd8d in reset_extension_actions_menu (selection=0x0, view=0xb4967998) at nautilus-view.c:4845
+        items = <optimized out>
+        ui_manager = 0xb4906118
+#6  real_update_menus (view=0xb4967998) at nautilus-view.c:8439
+        selection = 0x0
+        l = <optimized out>
+        selection_count = 0
+        tip = <optimized out>
+        label = <optimized out>
+        label_with_underscore = <optimized out>
+        selection_contains_special_link = 0
+        selection_contains_desktop_or_home_dir = 0
+        can_create_files = 1
+        can_delete_files = 0
+        can_copy_files = 0
+        can_link_files = 0
+        can_duplicate_files = 0
+        show_separate_delete_command = <optimized out>
+        show_open_alternate = <optimized out>
+        show_open_in_new_tab = <optimized out>
+        can_open = 0
+        show_app = <optimized out>
+        show_save_search = <optimized out>
+        save_search_sensitive = <optimized out>
+        show_save_search_as = <optimized out>
+        show_desktop_target = <optimized out>
+        action = <optimized out>
+        app = <optimized out>
+        app_icon = <optimized out>
+        menuitem = <optimized out>
+        next_pane_is_writable = 146877856
+        show_properties = <optimized out>
+#7  0x080b69a6 in nautilus_view_update_menus (view=0xb4967998) at nautilus-view.c:813
+No locals.
+#8  nautilus_view_update_menus (view=0xb4967998) at nautilus-view.c:804
+No locals.
+#9  0x080b6a05 in update_menus_timeout_callback (data=0xb4967998) at nautilus-view.c:3509
+        view = 0xb4967998
+#10 0xb6c8092f in g_timeout_dispatch (source=0x8f7bc80, callback=0x80b69c0 <update_menus_timeout_callback>, user_data=0xb4967998) at /build/buildd/glib2.0-2.30.0/./glib/gmain.c:3907
+        timeout_source = 0x8f7bc80
+        again = <optimized out>
+#11 0xb6c7f25f in g_main_dispatch (context=0x8b53d50) at /build/buildd/glib2.0-2.30.0/./glib/gmain.c:2441
+        dispatch = 0xb6c80900 <g_timeout_dispatch>
+        was_in_call = 0
+        user_data = 0xb4967998
+        callback = 0x80b69c0 <update_menus_timeout_callback>
+        cb_funcs = 0xb6d3435c
+        cb_data = 0x8f1b2f8
+        current_source_link = {data = 0x8f7bc80, next = 0x0}
+        need_destroy = <optimized out>
+        source = 0x8f7bc80
+        current = 0x8bdde18
+        i = <optimized out>
+#12 g_main_context_dispatch (context=0x8b53d50) at /build/buildd/glib2.0-2.30.0/./glib/gmain.c:3011
+No locals.
+#13 0xb6c7f990 in g_main_context_iterate (context=0x8b53d50, block=-1228348640, dispatch=1, self=<optimized out>) at /build/buildd/glib2.0-2.30.0/./glib/gmain.c:3089
+        max_priority = 2147483647
+        timeout = 30
+        some_ready = 1
+        nfds = <optimized out>
+        allocated_nfds = <optimized out>
+        fds = 0xb4988450
+#14 0xb6c7ff9b in g_main_loop_run (loop=0x8b274f0) at /build/buildd/glib2.0-2.30.0/./glib/gmain.c:3297
+        __PRETTY_FUNCTION__ = "g_main_loop_run"
+#15 0xb73acf95 in gtk_main () at /build/buildd/gtk+3.0-3.2.0/./gtk/gtkmain.c:1367
+        loop = 0x8b274f0
+#16 0xb72c0fe4 in gtk_application_run_mainloop (application=0x8b27c00) at /build/buildd/gtk+3.0-3.2.0/./gtk/gtkapplication.c:115
+No locals.
+#17 0xb6e3f50c in g_application_run (application=0x8b27c00, argc=2, argv=0xbfe35c24) at /build/buildd/glib2.0-2.30.0/./gio/gapplication.c:1323
+        arguments = 0x8b274f0
+        status = 0
+        i = <optimized out>
+        __PRETTY_FUNCTION__ = "g_application_run"
+#18 0x08067914 in main (argc=2, argv=0xbfe35c24) at nautilus-main.c:102
+        retval = <optimized out>
+        application = 0x8b27c00

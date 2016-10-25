@@ -1,0 +1,234 @@
+#0  malloc_consolidate (av=av@entry=0x7fe70b49a740 <main_arena>) at malloc.c:4128
+        fb = <optimized out>
+        maxfb = 0x7fe70b49a790 <main_arena+80>
+        p = 0x1
+        nextp = <optimized out>
+        unsorted_bin = 0x7fe70b49a798 <main_arena+88>
+        first_unsorted = <optimized out>
+        nextchunk = <optimized out>
+        size = <optimized out>
+        nextsize = <optimized out>
+        prevsize = <optimized out>
+        nextinuse = <optimized out>
+        bck = <optimized out>
+        fwd = <optimized out>
+        __func__ = "malloc_consolidate"
+#1  0x00007fe70b15e528 in _int_free (av=av@entry=0x7fe70b49a740 <main_arena>, p=0x56de3d0, have_lock=have_lock@entry=1) at malloc.c:4036
+        size = 160800
+        fb = <optimized out>
+        nextchunk = 0x57057f0
+        nextsize = 1024
+        nextinuse = <optimized out>
+        prevsize = <optimized out>
+        bck = <optimized out>
+        fwd = <optimized out>
+        errstr = 0x0
+        locked = 0
+        __func__ = "_int_free"
+#2  0x00007fe70b160810 in _int_realloc (av=av@entry=0x7fe70b49a740 <main_arena>, oldp=oldp@entry=0x56de370, oldsize=oldsize@entry=64, nb=nb@entry=96) at malloc.c:4332
+        newp = <optimized out>
+        newsize = <optimized out>
+        newmem = <optimized out>
+        next = 0x56de3b0
+        remainder = <optimized out>
+        remainder_size = <optimized out>
+        bck = <optimized out>
+        fwd = <optimized out>
+        copysize = <optimized out>
+        ncopies = <optimized out>
+        s = <optimized out>
+        d = <optimized out>
+        errstr = 0x0
+        __func__ = "_int_realloc"
+        nextsize = <optimized out>
+#3  0x00007fe70b16185d in __GI___libc_realloc (oldmem=0x56de380, bytes=80) at malloc.c:2996
+        ar_ptr = 0x7fe70b49a740 <main_arena>
+        nb = 96
+        newp = <optimized out>
+        hook = <optimized out>
+        oldp = 0x56de370
+        oldsize = 64
+        __func__ = "__libc_realloc"
+#4  0x00007fe7090ffab2 in ?? () from /usr/lib/x86_64-linux-gnu/libpixman-1.so.0
+No symbol table info available.
+#5  0x00007fe709100a70 in ?? () from /usr/lib/x86_64-linux-gnu/libpixman-1.so.0
+No symbol table info available.
+#6  0x00007fe70910212b in pixman_region32_subtract () from /usr/lib/x86_64-linux-gnu/libpixman-1.so.0
+No symbol table info available.
+#7  0x00007fe70d628c22 in INT_cairo_region_subtract (dst=0x3a03a60, other=<optimized out>) at /build/buildd/cairo-1.12.8/src/cairo-region.c:553
+No locales.
+#8  0x00007fe70e1785db in remove_child_area (window=window@entry=0x3b6e240, until=until@entry=0x0, for_input=for_input@entry=0, region=0x3a03a60, layered_region=layered_region@entry=0x0) at /build/buildd/gtk+3.0-3.6.4/./gdk/gdkwindow.c:806
+        child = 0x3bcf120
+        child_region = 0x4323390
+        r = {x = 244, y = 1, width = 3, height = 737}
+        l = 0x7fe6e4078aa0
+        shape = <optimized out>
+#9  0x00007fe70e17d9b2 in recompute_visible_regions_internal (private=0x3b6e240, recalculate_clip=recalculate_clip@entry=1, recalculate_siblings=recalculate_siblings@entry=0, recalculate_children=recalculate_children@entry=0) at /build/buildd/gtk+3.0-3.6.4/./gdk/gdkwindow.c:1034
+        r = {x = 0, y = 38, width = 247, height = 738}
+        l = <optimized out>
+        child = <optimized out>
+        new_clip = 0x2089940
+        new_layered = 0x27fd440
+        clip_region_changed = 0
+        abs_pos_changed = 0
+        old_abs_x = <optimized out>
+        old_abs_y = <optimized out>
+#10 0x00007fe70e17d6d6 in recompute_visible_regions_internal (private=private@entry=0x3b6e000, recalculate_clip=recalculate_clip@entry=1, recalculate_siblings=recalculate_siblings@entry=1, recalculate_children=<optimized out>, recalculate_children@entry=0) at /build/buildd/gtk+3.0-3.6.4/./gdk/gdkwindow.c:1105
+        r = {x = 88297240, y = 0, width = 60833016, height = 0}
+        l = 0x3496060
+        child = <optimized out>
+        new_clip = <optimized out>
+        new_layered = <optimized out>
+        clip_region_changed = <optimized out>
+        abs_pos_changed = <optimized out>
+        old_abs_x = <optimized out>
+        old_abs_y = <optimized out>
+#11 0x00007fe70e17da5e in recompute_visible_regions (private=private@entry=0x3b6e000, recalculate_siblings=recalculate_siblings@entry=1, recalculate_children=recalculate_children@entry=0) at /build/buildd/gtk+3.0-3.6.4/./gdk/gdkwindow.c:1145
+No locales.
+#12 0x00007fe70e180901 in gdk_window_hide (window=0x3b6e000) at /build/buildd/gtk+3.0-3.6.4/./gdk/gdkwindow.c:5667
+        impl_class = <optimized out>
+        was_mapped = 0
+        did_hide = <optimized out>
+#13 gdk_window_hide (window=0x3b6e000) at /build/buildd/gtk+3.0-3.6.4/./gdk/gdkwindow.c:5607
+No locales.
+#14 0x00007fe70e6a4f6d in update_grip_visibility (window=window@entry=0x1a622d0) at /build/buildd/gtk+3.0-3.6.4/./gtk/gtkwindow.c:5881
+        priv = 0x1a623d0
+        val = 0
+#15 0x00007fe70e6a5a8c in _gtk_window_set_allocation (window=0x1a622d0, allocation=0x7fffc37dddd0) at /build/buildd/gtk+3.0-3.6.4/./gtk/gtkwindow.c:5612
+        widget = 0x1a622d0
+#16 0x00007fe70e6a5b1e in gtk_window_size_allocate (widget=0x1a622d0, allocation=0x7fffc37dddd0) at /build/buildd/gtk+3.0-3.6.4/./gtk/gtkwindow.c:5627
+        window = 0x1a622d0
+        child_allocation = {x = 49135431, y = 0, width = 84, height = 0}
+        child = <optimized out>
+        border_width = <optimized out>
+#17 0x00007fe70e4788dd in gtk_application_window_real_size_allocate (widget=0x1a622d0, allocation=0x7fffc37dddd0) at /build/buildd/gtk+3.0-3.6.4/./gtk/gtkapplicationwindow.c:730
+        window = 0x1a622d0
+#18 0x00007fe70bee59d0 in g_closure_invoke (closure=0x17cbd50, return_value=0x0, n_param_values=2, param_values=0x7fffc37dda10, invocation_hint=0x7fffc37dd9b0) at /build/buildd/glib2.0-2.35.4/./gobject/gclosure.c:777
+        marshal = 0x7fe70bee4630 <g_type_class_meta_marshal>
+        marshal_data = 0xd8
+        in_marshal = 0
+        real_closure = 0x17cbd30
+        __PRETTY_FUNCTION__ = "g_closure_invoke"
+#19 0x00007fe70bef75a3 in signal_emit_unlocked_R (node=node@entry=0x17cbde0, detail=detail@entry=0, instance=instance@entry=0x1a622d0, emission_return=emission_return@entry=0x0, instance_and_params=instance_and_params@entry=0x7fffc37dda10) at /build/buildd/glib2.0-2.35.4/./gobject/gsignal.c:3496
+        accumulator = 0x0
+        emission = {next = 0x7fffc37de0f0, instance = 0x1a622d0, ihint = {signal_id = 21, detail = 0, run_type = G_SIGNAL_RUN_FIRST}, state = EMISSION_RUN, chain_type = 26602688}
+        class_closure = 0x17cbd50
+        hlist = 0x3bb9ad0
+        handler_list = <optimized out>
+        return_accu = 0x0
+        accu = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        signal_id = 21
+        max_sequential_handler_number = 71818
+        return_value_altered = <optimized out>
+#20 0x00007fe70befff9b in g_signal_emit_valist (instance=0x1a622d0, signal_id=<optimized out>, detail=0, var_args=var_args@entry=0x7fffc37ddc68) at /build/buildd/glib2.0-2.35.4/./gobject/gsignal.c:3314
+        instance_and_params = 0x7fffc37dda10
+        signal_return_type = 4
+        param_values = 0x7fffc37dda28
+        node = 0x17cbde0
+        i = <optimized out>
+        n_params = 1
+        __PRETTY_FUNCTION__ = "g_signal_emit_valist"
+#21 0x00007fe70bf001c2 in g_signal_emit (instance=instance@entry=0x1a622d0, signal_id=<optimized out>, detail=detail@entry=0) at /build/buildd/glib2.0-2.35.4/./gobject/gsignal.c:3370
+        var_args = {{gp_offset = 32, fp_offset = 48, overflow_arg_area = 0x7fffc37ddd40, reg_save_area = 0x7fffc37ddc80}}
+#22 0x00007fe70e68e252 in gtk_widget_size_allocate (widget=widget@entry=0x1a622d0, allocation=allocation@entry=0x7fffc37dde40) at /build/buildd/gtk+3.0-3.6.4/./gtk/gtkwidget.c:4928
+        priv = 0x1a62320
+        real_allocation = {x = 0, y = 0, width = 1215, height = 776}
+        old_allocation = {x = 0, y = 0, width = 1215, height = 776}
+        adjusted_allocation = {x = 0, y = 0, width = 1215, height = 776}
+        alloc_needed = 1
+        size_changed = 0
+        position_changed = 0
+        natural_width = 800
+        natural_height = 550
+        dummy = 0
+        min_width = 200
+        min_height = 200
+        __PRETTY_FUNCTION__ = "gtk_widget_size_allocate"
+#23 0x00007fe70e4c8086 in gtk_container_resize_children (container=container@entry=0x1a622d0) at /build/buildd/gtk+3.0-3.6.4/./gtk/gtkcontainer.c:1877
+        allocation = {x = 0, y = 0, width = 1215, height = 776}
+        widget = 0x1a622d0
+        __PRETTY_FUNCTION__ = "gtk_container_resize_children"
+#24 0x00007fe70e6a6079 in gtk_window_move_resize (window=0x1a622d0) at /build/buildd/gtk+3.0-3.6.4/./gtk/gtkwindow.c:7420
+        new_flags = 74
+        priv = 0x1a623d0
+        allocation = {x = 0, y = 0, width = 1215, height = 776}
+        widget = 0x1a622d0
+        info = 0x3aee150
+        new_geometry = {min_width = 200, min_height = 200, max_width = 0, max_height = 0, base_width = 0, base_height = 0, width_inc = 0, height_inc = 0, min_aspect = 0, max_aspect = 0, win_gravity = GDK_GRAVITY_NORTH_WEST}
+        new_request = {x = 0, y = 0, width = 1215, height = 776}
+        configure_request_pos_changed = 0
+        hints_changed = <optimized out>
+        container = 0x1a622d0
+        gdk_window = 0x3a0bea0
+        configure_request_size_changed = 0
+        saved_last_info = {geometry = {min_width = 200, min_height = 200, max_width = 0, max_height = 0, base_width = 0, base_height = 0, width_inc = 0, height_inc = 0, min_aspect = <optimized out>, max_aspect = <optimized out>, win_gravity = <optimized out>}, flags = <optimized out>, configure_request = {x = <optimized out>, y = <optimized out>, width = <optimized out>, height = <optimized out>}}
+#25 gtk_window_check_resize (container=0x1a622d0) at /build/buildd/gtk+3.0-3.6.4/./gtk/gtkwindow.c:6330
+No locales.
+#26 0x00007fe70bee5c97 in _g_closure_invoke_va (closure=0x17d2f20, return_value=0x0, instance=0x1a622d0, args=0x7fffc37de238, n_params=0, param_types=0x0) at /build/buildd/glib2.0-2.35.4/./gobject/gclosure.c:840
+        marshal = 0x7fe70bee4030 <g_type_class_meta_marshalv>
+        marshal_data = 0x348
+        in_marshal = 0
+        real_closure = 0x17d2f00
+        __PRETTY_FUNCTION__ = "_g_closure_invoke_va"
+#27 0x00007fe70beffa90 in g_signal_emit_valist (instance=0x1a622d0, signal_id=<optimized out>, detail=0, var_args=var_args@entry=0x7fffc37de238) at /build/buildd/glib2.0-2.35.4/./gobject/gsignal.c:3225
+        return_accu = <optimized out>
+        accu = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        accumulator = 0x0
+        emission = {next = 0x0, instance = 0x1a622d0, ihint = {signal_id = 85, detail = 0, run_type = G_SIGNAL_RUN_LAST}, state = EMISSION_RUN, chain_type = 26602688}
+        signal_id = <optimized out>
+        instance_type = <optimized out>
+        emission_return = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        rtype = 4
+        static_scope = 0
+        closure = 0x17d2f20
+        run_type = <optimized out>
+        hlist = 0x0
+        l = <optimized out>
+        fastpath = 4
+        instance_and_params = <optimized out>
+        signal_return_type = <optimized out>
+        param_values = <optimized out>
+        node = 0x17d2f50
+        i = <optimized out>
+        n_params = <optimized out>
+        __PRETTY_FUNCTION__ = "g_signal_emit_valist"
+#28 0x00007fe70bf001c2 in g_signal_emit (instance=<optimized out>, signal_id=<optimized out>, detail=<optimized out>) at /build/buildd/glib2.0-2.35.4/./gobject/gsignal.c:3370
+        var_args = {{gp_offset = 24, fp_offset = 48, overflow_arg_area = 0x7fffc37de310, reg_save_area = 0x7fffc37de250}}
+#29 0x00007fe70e4c7fd3 in gtk_container_idle_sizer (data=<optimized out>) at /build/buildd/gtk+3.0-3.6.4/./gtk/gtkcontainer.c:1686
+        container = 0x1a622d0
+        slist = <optimized out>
+        current_time = 10136032591
+#30 0x00007fe70e167df0 in gdk_threads_dispatch (data=0x2158040) at /build/buildd/gtk+3.0-3.6.4/./gdk/gdk.c:788
+        dispatch = 0x2158040
+        ret = 0
+#31 0x00007fe70bc225c5 in g_main_dispatch (context=0x17f0580) at /build/buildd/glib2.0-2.35.4/./glib/gmain.c:2784
+        dispatch = 0x7fe70bc1f880 <g_idle_dispatch>
+        was_in_call = 0
+        user_data = 0x2158040
+        callback = 0x7fe70e167dc0 <gdk_threads_dispatch>
+        cb_funcs = 0x7fe70bed3a00 <g_source_callback_funcs>
+        cb_data = 0x5962460
+        current_source_link = {data = 0x59cde30, next = 0x0}
+        need_destroy = <optimized out>
+        source = 0x59cde30
+        current = 0x1805ba0
+        i = <optimized out>
+#32 g_main_context_dispatch (context=context@entry=0x17f0580) at /build/buildd/glib2.0-2.35.4/./glib/gmain.c:3288
+No locales.
+#33 0x00007fe70bc22908 in g_main_context_iterate (context=context@entry=0x17f0580, block=block@entry=1, dispatch=dispatch@entry=1, self=<optimized out>) at /build/buildd/glib2.0-2.35.4/./glib/gmain.c:3359
+        max_priority = 110
+        timeout = 0
+        some_ready = 1
+        nfds = <optimized out>
+        allocated_nfds = <optimized out>
+        fds = 0x17bb930
+#34 0x00007fe70bc229c4 in g_main_context_iteration (context=0x17f0580, context@entry=0x0, may_block=may_block@entry=1) at /build/buildd/glib2.0-2.35.4/./glib/gmain.c:3420
+        retval = <optimized out>
+#35 0x00007fe70c1c9bcc in g_application_run (application=0x17bd030, argc=argc@entry=2, argv=argv@entry=0x7fffc37de598) at /build/buildd/glib2.0-2.35.4/./gio/gapplication.c:1620
+        arguments = 0x17a97b0
+        status = 41936240
+        i = <optimized out>
+        __PRETTY_FUNCTION__ = "g_application_run"
+#36 0x000000000042b6cb in main (argc=2, argv=0x7fffc37de598) at nautilus-main.c:103
+        retval = <optimized out>
+        application = 0x17bd030

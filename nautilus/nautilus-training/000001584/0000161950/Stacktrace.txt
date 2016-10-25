@@ -1,0 +1,96 @@
+#0  IA__g_slice_alloc (mem_size=12) at /build/buildd/glib2.0-2.14.1/glib/gslice.c:474
+	tmem = (ThreadMemory *) 0x8177f28
+	ix = 1
+	chunk_size = <value optimized out>
+	mem = <value optimized out>
+	acat = <value optimized out>
+#1  0xb74910e6 in IA__g_list_prepend (list=0x0, data=0x8244e20)
+    at /build/buildd/glib2.0-2.14.1/glib/glist.c:95
+No locals.
+#2  0xb748c898 in g_key_file_init (key_file=0x823f780)
+    at /build/buildd/glib2.0-2.14.1/glib/gkeyfile.c:205
+No locals.
+#3  0xb748c8ea in IA__g_key_file_new () at /build/buildd/glib2.0-2.14.1/glib/gkeyfile.c:253
+No locals.
+#4  0x080e2aae in nautilus_debug_log_dump (filename=0x81cc600 "/home/daniel/nautilus-debug-log.txt", 
+    error=0x0) at nautilus-debug-log.c:417
+	file = (FILE *) 0x8454468
+	success = <value optimized out>
+	__PRETTY_FUNCTION__ = "nautilus_debug_log_dump"
+#5  0x0807e776 in dump_debug_log () at nautilus-main.c:213
+No locals.
+#6  0x0807e7bf in sigfatal_handler (sig=11) at nautilus-main.c:258
+	func = <value optimized out>
+#7  <signal handler called>
+#8  0xb74ae097 in magazine_cache_push_magazine (ix=1, magazine_chunks=<value optimized out>, 
+    count=51) at /build/buildd/glib2.0-2.14.1/glib/gslice.c:579
+	current = (ChunkLink *) 0x81cc2b0
+	next = <value optimized out>
+	prev = (ChunkLink *) 0x843f520
+#9  0xb74ae305 in thread_memory_magazine2_unload (tmem=<value optimized out>, ix=352157891)
+    at /build/buildd/glib2.0-2.14.1/glib/gslice.c:744
+	mag = (Magazine *) 0x8178330
+#10 0xb74afee0 in IA__g_slice_free_chain_with_offset (mem_size=12, mem_chain=0x81aa880, 
+    next_offset=4) at /build/buildd/glib2.0-2.14.1/glib/gslice.c:928
+	current = <value optimized out>
+	slice = (gpointer) 0x0
+	chunk_size = 16
+	acat = <value optimized out>
+#11 0xb74913a1 in IA__g_list_free (list=0x81aa880) at /build/buildd/glib2.0-2.14.1/glib/glist.c:53
+No locals.
+#12 0xb7e5aa1f in eel_enumeration_free (enumeration=0x81ab090) at eel-enumeration.c:90
+No locals.
+#13 0xb7e5aa7a in enumeration_table_free_one_node (key=0x81ab078, value=0x81ab1f0, callback_data=0x0)
+    at eel-enumeration.c:421
+	__PRETTY_FUNCTION__ = "enumeration_table_free_one_node"
+#14 0xb7485e96 in IA__g_hash_table_foreach (hash_table=0x8179800, 
+    func=0xb7e5aa40 <enumeration_table_free_one_node>, user_data=0x0)
+    at /build/buildd/glib2.0-2.14.1/glib/ghash.c:680
+	node = (GHashNode *) 0x81aa8a0
+	i = 6
+	__PRETTY_FUNCTION__ = "IA__g_hash_table_foreach"
+#15 0xb7e59646 in enumeration_table_free () at eel-enumeration.c:429
+No locals.
+#16 0xb7e5193c in eel_debug_shut_down () at eel-debug.c:110
+	f = (ShutdownFunction *) 0x81aa300
+#17 0x0807f253 in main (argc=4, argv=0xbff142e4) at nautilus-main.c:563
+	kill_shell = 0
+	restart_shell = 0
+	no_default_window = 1
+	browser_window = 0
+	no_desktop = 0
+	startup_id = <value optimized out>
+	startup_id_copy = 0x81a8888 "\030u:\b"
+	session_to_load = 0x0
+	geometry = (gchar *) 0x0
+	remaining = (const gchar **) 0x0
+	perform_self_check = 0
+	context = <value optimized out>
+	application = (NautilusApplication *) 0x81a3d90
+	program = (GnomeProgram *) 0x8181c10
+	options = {{long_name = 0x81477b6 "check", short_name = 99 'c', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbff141b0, 
+    description = 0x8147828 "Perform a quick set of self-check tests.", arg_description = 0x0}, {
+    long_name = 0x814a8c4 "geometry", short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+    arg_data = 0xbff141b8, 
+    description = 0x8147854 "Create the initial window with the given geometry.", 
+    arg_description = 0x8147625 "GEOMETRY"}, {long_name = 0x814762e "no-default-window", 
+    short_name = 110 'n', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbff141c8, 
+    description = 0x8147888 "Only create windows for explicitly specified URIs.", 
+    arg_description = 0x0}, {long_name = 0x8147640 "no-desktop", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbff141c0, 
+    description = 0x81478bc "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {long_name = 0x814997b "browser", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbff141c4, 
+    description = 0x814764b "open a browser window.", arg_description = 0x0}, {
+    long_name = 0x81477be "quit", short_name = 113 'q', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbff141d0, description = 0x8147662 "Quit Nautilus.", arg_description = 0x0}, {
+    long_name = 0x81477c5 "restart", short_name = 0 '\0', flags = 1, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbff141cc, description = 0x8147671 "Restart Nautilus.", arg_description = 0x0}, {
+    long_name = 0x814bbdc "", short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_STRING_ARRAY, 
+    arg_data = 0xbff141b4, description = 0x0, arg_description = 0x8147683 "[URI...]"}, {
+    long_name = 0x8143d1c "load-session", short_name = 108 'l', flags = 0, 
+    arg = G_OPTION_ARG_STRING, arg_data = 0xbff141bc, 
+    description = 0x8147910 "Load a saved session from the specified file. Implies \"--no-default-window\".", arg_description = 0x814768c "FILENAME"}, {long_name = 0x0, short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0x0, description = 0x0, arg_description = 0x0}}
+#18 0xb71b8050 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+#19 0x08069441 in _start ()

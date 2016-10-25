@@ -1,0 +1,7 @@
+#0  0x40814a26 in strcmp () from /lib/libc.so.6
+No symbol table info available.
+#1  0x4032c7f0 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#2  0x4032c7f0 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+Backtrace stopped: previous frame identical to this frame (corrupt stack?)

@@ -1,0 +1,22 @@
+#0  0xb770e424 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0xb68891ef in raise () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#2  0xb688c835 in abort () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#3  0xb6a7671d in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#4  0xb6ae76d4 in g_cond_wait_until () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#5  0xb6a7b119 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#6  0xb6a7ba51 in g_async_queue_timed_pop () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#7  0xb1a62d08 in ?? () from /usr/lib/nautilus/extensions-3.0/libnautilus-dropbox.so
+No symbol table info available.
+#8  0xb6acb433 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#9  0xb6a05d4c in start_thread () from /lib/i386-linux-gnu/libpthread.so.0
+No symbol table info available.
+#10 0xb694476e in clone () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.

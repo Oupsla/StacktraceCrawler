@@ -1,0 +1,125 @@
+#0  0x00e0ffc2 in g_type_check_instance_cast ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#1  0x08081e86 in fill_menu (window=<value optimized out>, 
+    menu=<value optimized out>, back=<value optimized out>)
+    at nautilus-navigation-action.c:147
+	menu_item = (GtkWidget *) 0x9756178
+	index = 3
+	list = (GList *) 0x982ad10
+	__PRETTY_FUNCTION__ = "fill_menu"
+#2  0x00dff94c in g_cclosure_marshal_VOID__VOID ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#3  0x00df2092 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#4  0x00e076f8 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#5  0x00e08a7d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#6  0x00e08f06 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#7  0x00fa7e9c in popup_menu_under_arrow (button=0x9656c20, 
+    event=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.1/gtk/gtkmenutoolbutton.c:325
+	priv = (GtkMenuToolButtonPrivate *) 0x9656cb8
+#8  0x00fa7f20 in arrow_button_button_press_event_cb (widget=0x965d228, 
+    event=0x74, button=0x9656c20)
+    at /build/buildd/gtk+2.0-2.18.1/gtk/gtkmenutoolbutton.c:363
+No locals.
+#9  0x00f963c4 in _gtk_marshal_BOOLEAN__BOXED (closure=0x95eaac0, 
+    return_value=0xbfcf8a64, n_param_values=2, param_values=0x972fef0, 
+    invocation_hint=0xbfcf8a50, marshal_data=0xfa7f00)
+    at /build/buildd/gtk+2.0-2.18.1/gtk/gtkmarshalers.c:84
+	data1 = (gpointer) 0x74
+	data2 = <value optimized out>
+	v_return = <value optimized out>
+	__PRETTY_FUNCTION__ = "_gtk_marshal_BOOLEAN__BOXED"
+#10 0x00df2092 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#11 0x00e076f8 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#12 0x00e08908 in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#13 0x00e08f06 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#14 0x010b283e in gtk_widget_event_internal (widget=<value optimized out>, 
+    event=0x9768640) at /build/buildd/gtk+2.0-2.18.1/gtk/gtkwidget.c:4767
+	signal_num = <value optimized out>
+	return_val = 0
+#15 0x00f8eb80 in IA__gtk_propagate_event (widget=0x965d228, event=0x9768640)
+    at /build/buildd/gtk+2.0-2.18.1/gtk/gtkmain.c:2404
+	tmp = (GtkWidget *) 0x314d66
+	handled_event = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_propagate_event"
+#16 0x00f8fe09 in IA__gtk_main_do_event (event=0x9768640)
+    at /build/buildd/gtk+2.0-2.18.1/gtk/gtkmain.c:1609
+	event_widget = (GtkWidget *) 0x965d228
+	grab_widget = (GtkWidget *) 0x74
+	window_group = (GtkWindowGroup *) 0x937db70
+	rewritten_event = (GdkEvent *) 0x0
+	tmp_list = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_main_do_event"
+#17 0x0018563a in gdk_event_dispatch (source=0x91e8b70, callback=0, 
+    user_data=0x0)
+    at /build/buildd/gtk+2.0-2.18.1/gdk/x11/gdkevents-x11.c:2369
+	display = <value optimized out>
+	event = <value optimized out>
+#18 0x00316e78 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#19 0x0031a720 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#20 0x0031ab8f in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#21 0x00f90379 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.18.1/gtk/gtkmain.c:1205
+	tmp_list = (GList *) 0x0
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0x1
+	loop = (GMainLoop *) 0x937e530
+#22 0x0808177f in main (argc=1, argv=0xbfcf9184) at nautilus-main.c:588
+	kill_shell = 0
+	no_default_window = 1
+	browser_window = 0
+	no_desktop = 0
+	version = 0
+	autostart_mode = 1
+	autostart_id = <value optimized out>
+	geometry = (gchar *) 0x0
+	remaining = (gchar **) 0x0
+	perform_self_check = 0
+	application = (NautilusApplication *) 0x9219800
+	context = <value optimized out>
+	file = (GFile *) 0x1
+	uri = <value optimized out>
+	uris = (char **) 0x0
+	uris_array = <value optimized out>
+	error = (GError *) 0x0
+	options = {{long_name = 0x81a6b96 "check", short_name = 99 'c', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfcf90a0, 
+    description = 0x81a6bd8 "Perform a quick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x81a6a8f "version", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfcf90ac, 
+    description = 0x81a6c04 "Show the version of the program.", 
+    arg_description = 0x0}, {long_name = 0x81aa778 "geometry", 
+    short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+    arg_data = 0xbfcf90a8, 
+    description = 0x81a6c28 "Create the initial window with the given geometry.", arg_description = 0x81a6a97 "GEOMETRY"}, {
+    long_name = 0x81a6aa0 "no-default-window", short_name = 110 'n', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfcf90b8, 
+    description = 0x81a6c5c "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {long_name = 0x81a6ab2 "no-desktop", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfcf90b0, 
+    description = 0x81a6c90 "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {
+    long_name = 0x81a378b "browser", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbfcf90b4, 
+    description = 0x81a6abd "open a browser window.", arg_description = 0x0}, 
+  {long_name = 0x81c637d "quit", short_name = 113 'q', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbfcf90bc, 
+    description = 0x81a6ad4 "Quit Nautilus.", arg_description = 0x0}, {
+    long_name = 0x81abac1 "", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0xbfcf90a4, 
+    description = 0x0, arg_description = 0x81a6ae3 "[URI...]"}, {
+    long_name = 0x0, short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x0, description = 0x0, arg_description = 0x0}}

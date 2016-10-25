@@ -1,0 +1,6 @@
+#0  0x00000000 in ?? ()
+No symbol table info available.
+#1  0x0804c113 in main (argc=1, argv=0xbfc9ef34)
+    at nautilus-sendto-command.c:706
+	context = (GOptionContext *) 0x9109c08
+	error = (GError *) 0x0

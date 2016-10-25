@@ -1,0 +1,30 @@
+#0  brasero_medium_get_page_2A_write_speed_desc (self=<value optimized out>, 
+    handle=<value optimized out>, code=0xb6e030a4) at brasero-medium.c:1414
+	page_2A = <value optimized out>
+	desc = (BraseroScsiStatusWrSpdDesc *) 0x84d3000
+	data = (BraseroScsiModeData *) 0x84b8168
+	result = <value optimized out>
+	desc_num = 42423
+	i = 27548
+	max_wrt = 65535
+	size = 28
+#1  0xb59d8f6e in brasero_medium_init_real (object=0x8474158, 
+    handle=0x82ceac8) at brasero-medium.c:1441
+	name = <value optimized out>
+	result = <value optimized out>
+	priv = (BraseroMediumPrivate *) 0x8474168
+	code = BRASERO_SCSI_INVALID_COMMAND
+	buffer = '\0' <repeats 255 times>
+#2  0xb59da2be in brasero_medium_probe_thread (self=0x8474158)
+    at brasero-medium.c:3005
+	counter = 139179744
+	path = (const gchar *) 0x843d7e8 "/dev/sr0"
+	code = 3047006507
+	priv = (BraseroMediumPrivate *) 0x8474168
+	handle = (BraseroDeviceHandle *) 0x82ceac8
+#3  0xb79bc66f in g_thread_create_proxy (data=0x84bb6e0)
+    at /build/buildd/glib2.0-2.20.0/glib/gthread.c:635
+	__PRETTY_FUNCTION__ = "g_thread_create_proxy"
+#4  0xb76044ff in start_thread () from /lib/tls/i686/cmov/libpthread.so.0
+#5  0xb757f49e in clone () at ../sysdeps/unix/sysv/linux/i386/clone.S:130
+No locals.

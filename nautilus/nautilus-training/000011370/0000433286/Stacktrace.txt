@@ -1,0 +1,4 @@
+#0  0x04697fad in __gmon_start__@plt () from /usr/lib/libgdu.so.0
+No symbol table info available.
+#1  0x00000000 in ?? ()
+No symbol table info available.

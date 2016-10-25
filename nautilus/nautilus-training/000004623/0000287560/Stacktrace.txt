@@ -1,0 +1,99 @@
+#0  0x00000000 in ?? ()
+#1  0xb66dd86f in cb_probe (pad=0x82fc700, e=0x8345968, user_data=0x83cbe90) at gststreaminfo.c:200
+	codec = (gchar *) 0x84324c0 "H.264 / AVC"
+	lang = <value optimized out>
+	list = (GstTagList *) 0x8430438
+	__PRETTY_FUNCTION__ = "cb_probe"
+#2  0xb7f6c836 in gst_marshal_BOOLEAN__POINTER (closure=0x84323b8, return_value=0xb43f2e20, 
+    n_param_values=2, param_values=0xb43f2e90, invocation_hint=0xb43f2e0c, marshal_data=0xb66dd670)
+    at gstmarshal.c:584
+	data1 = (gpointer) 0xb43f2bfc
+	data2 = <value optimized out>
+	v_return = <value optimized out>
+	__PRETTY_FUNCTION__ = "gst_marshal_BOOLEAN__POINTER"
+#3  0xb7351c4b in IA__g_closure_invoke (closure=0x84323b8, return_value=0xb43f2e20, 
+    n_param_values=2, param_values=0xb43f2e90, invocation_hint=0xb43f2e0c)
+    at /build/buildd/glib2.0-2.18.2/gobject/gclosure.c:767
+	marshal = (GClosureMarshal) 0xb7f6c7a0 <gst_marshal_BOOLEAN__POINTER>
+	marshal_data = (gpointer) 0x0
+	__PRETTY_FUNCTION__ = "IA__g_closure_invoke"
+#4  0xb7368095 in signal_emit_unlocked_R (node=0x8211e28, detail=118, instance=0x82fc700, 
+    emission_return=0xb43f2eb8, instance_and_params=0xb43f2e90)
+    at /build/buildd/glib2.0-2.18.2/gobject/gsignal.c:3244
+	tmp = <value optimized out>
+	handler = (Handler *) 0x8429f20
+	accumulator = (SignalAccumulator *) 0x8211e78
+	emission = {next = 0xb5e14b24, instance = 0x82fc700, ihint = {signal_id = 10, detail = 118, 
+    run_type = G_SIGNAL_RUN_FIRST}, state = EMISSION_RUN, chain_type = 4}
+	class_closure = (GClosure *) 0x8211d38
+	handler_list = (Handler *) 0x8429f20
+	return_accu = (GValue *) 0xb43f2e20
+	accu = {g_type = 20, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, 
+      v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, 
+      v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+	signal_id = 10
+	max_sequential_handler_number = 68
+	return_value_altered = 0
+#5  0xb7f2cad5 in gst_pad_emit_have_data_signal (pad=0x82fc700, obj=0x8345968) at gstpad.c:3817
+	ret = {g_type = 20, data = {{v_int = 1, v_uint = 1, v_long = 1, v_ulong = 1, v_int64 = 1, 
+      v_uint64 = 1, v_float = 1.40129846e-45, v_double = 4.9406564584124654e-324, v_pointer = 0x1}, {
+      v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, 
+      v_double = 0, v_pointer = 0x0}}}
+	args = {{g_type = 136385680, data = {{v_int = 137348864, v_uint = 137348864, 
+        v_long = 137348864, v_ulong = 137348864, v_int64 = 137348864, v_uint64 = 137348864, 
+        v_float = 5.28960703e-34, v_double = 6.7859355197721537e-316, v_pointer = 0x82fc700}, {
+        v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, 
+        v_double = 0, v_pointer = 0x0}}}, {g_type = 196, data = {{v_int = 137648488, 
+        v_uint = 137648488, v_long = 137648488, v_ulong = 137648488, v_int64 = 137648488, 
+        v_uint64 = 137648488, v_float = 5.42718762e-34, v_double = 6.8007389122791075e-316, 
+        v_pointer = 0x8345968}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, 
+        v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}}
+	res = <value optimized out>
+	detail = <value optimized out>
+#6  0xb7f2d425 in gst_pad_push_event (pad=0x82fc700, event=0x8345968) at gstpad.c:4472
+	peerpad = <value optimized out>
+	result = <value optimized out>
+	__PRETTY_FUNCTION__ = "gst_pad_push_event"
+#7  0xb7f2184a in gst_proxy_pad_do_event (pad=0x82fcf08, event=0x8345968) at gstghostpad.c:142
+	res = 138622032
+#8  0xb7f2cefc in gst_pad_send_event (pad=0x82fcf08, event=0x8345968) at gstpad.c:4630
+	result = <value optimized out>
+	eventfunc = (GstPadEventFunction) 0xb7f21820 <gst_proxy_pad_do_event>
+	serialized = <value optimized out>
+	need_unlock = 1
+	__PRETTY_FUNCTION__ = "gst_pad_send_event"
+#9  0xb7f2d665 in gst_pad_push_event (pad=0x8345648, event=0x8345968) at gstpad.c:4486
+	peerpad = (GstPad *) 0x82fcf08
+	result = <value optimized out>
+	__PRETTY_FUNCTION__ = "gst_pad_push_event"
+#10 0xb4b86ed5 in gst_ffmpegdec_sink_event (pad=0x8345588, event=0x8345968) at gstffmpegdec.c:2079
+	ffmpegdec = (GstFFMpegDec *) 0x8431058
+	ret = <value optimized out>
+	__FUNCTION__ = "gst_ffmpegdec_sink_event"
+#11 0xb7f2cefc in gst_pad_send_event (pad=0x8345588, event=0x8345968) at gstpad.c:4630
+	result = <value optimized out>
+	eventfunc = (GstPadEventFunction) 0xb4b86e20 <gst_ffmpegdec_sink_event>
+	serialized = <value optimized out>
+	need_unlock = 1
+	__PRETTY_FUNCTION__ = "gst_pad_send_event"
+#12 0xb7f2d665 in gst_pad_push_event (pad=0x83454c8, event=0x8345968) at gstpad.c:4486
+	peerpad = (GstPad *) 0x8345588
+	result = <value optimized out>
+	__PRETTY_FUNCTION__ = "gst_pad_push_event"
+#13 0xb66ad32f in gst_queue_loop (pad=0x83454c8) at gstqueue.c:1093
+	queue = (GstQueue *) 0x82e99f8
+	ret = GST_FLOW_OK
+	__PRETTY_FUNCTION__ = "gst_queue_loop"
+#14 0xb7f51803 in gst_task_func (task=0x83258f0, tclass=0x8214608) at gsttask.c:192
+	lock = (GStaticRecMutex *) 0x834ad80
+	tself = (GThread *) 0x8433130
+	__PRETTY_FUNCTION__ = "gst_task_func"
+#15 0xb72ef6c6 in g_thread_pool_thread_proxy (data=0x8214698)
+    at /build/buildd/glib2.0-2.18.2/glib/gthreadpool.c:265
+	task = (gpointer) 0x83258f0
+	pool = (GRealThreadPool *) 0x8214698
+#16 0xb72ee02f in g_thread_create_proxy (data=0x8433130)
+    at /build/buildd/glib2.0-2.18.2/glib/gthread.c:635
+	__PRETTY_FUNCTION__ = "g_thread_create_proxy"
+#17 0xb713650f in start_thread () from /lib/tls/i686/cmov/libpthread.so.0
+#18 0xb70b27ee in clone () from /lib/tls/i686/cmov/libc.so.6

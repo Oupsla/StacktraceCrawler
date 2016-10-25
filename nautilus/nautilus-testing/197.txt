@@ -1,0 +1,148 @@
+#0  0xb79e9f16 in IA__g_type_check_is_value_type (type=153264752)
+    at /build/buildd/glib2.0-2.20.0/gobject/gtype.c:3834
+No locals.
+#1  0xb79f06f8 in IA__g_value_type_compatible (src_type=153264752, 
+    dest_type=148471208) at /build/buildd/glib2.0-2.20.0/gobject/gvalue.c:501
+	__PRETTY_FUNCTION__ = "IA__g_value_type_compatible"
+#2  0xb79d2420 in g_value_object_collect_value (value=0x91a72b4, 
+    n_collect_values=1, collect_values=0xbfc63828, collect_flags=0)
+    at /build/buildd/glib2.0-2.20.0/gobject/gobject.c:2711
+No locals.
+#3  0xb79e51d2 in IA__g_signal_emit_valist (instance=0x8fc5a40, 
+    signal_id=428, detail=0, var_args=0xbfc638c0 "")
+    at /build/buildd/glib2.0-2.20.0/gobject/gsignal.c:2952
+	_flags = 0
+	_value_type = <value optimized out>
+	_vtable = (GTypeValueTable *) 0x8d38be0
+	_collect_format = (gchar *) 0x8d38c00 "p"
+	_cvalues = {{v_int = 153264640, v_long = 153264640, 
+    v_int64 = 153264640, v_double = 7.5722793346226149e-316, 
+    v_pointer = 0x922a200}, {v_int = 0, v_long = 0, v_int64 = 0, 
+    v_double = 0, v_pointer = 0x0}, {v_int = 0, v_long = 0, v_int64 = 0, 
+    v_double = 0, v_pointer = 0x0}, {v_int = 0, v_long = 0, v_int64 = 0, 
+    v_double = 0, v_pointer = 0x0}, {v_int = 0, v_long = 0, v_int64 = 0, 
+    v_double = 0, v_pointer = 0x0}, {v_int = 0, v_long = 0, v_int64 = 0, 
+    v_double = 0, v_pointer = 0x0}, {v_int = 0, v_long = 0, v_int64 = 0, 
+    v_double = 0, v_pointer = 0x0}, {v_int = 0, v_long = 0, v_int64 = 0, 
+    v_double = 0, v_pointer = 0x0}}
+	_n_values = <value optimized out>
+	error = <value optimized out>
+	signal_return_type = 4
+	param_values = (GValue *) 0x91a72b4
+	node = (SignalNode *) 0x9190cb8
+	i = 0
+	n_params = 1
+	__PRETTY_FUNCTION__ = "IA__g_signal_emit_valist"
+#4  0xb79e5906 in IA__g_signal_emit (instance=0x8fc5a40, signal_id=428, 
+    detail=0) at /build/buildd/glib2.0-2.20.0/gobject/gsignal.c:3034
+No locals.
+#5  0x0808b484 in nautilus_path_bar_update_path (path_bar=0x8fc5a40, 
+    file_path=0x922a200, emit_signal=<value optimized out>)
+    at nautilus-pathbar.c:1784
+	file = (NautilusFile *) 0x8fd9c80
+	parent_file = (NautilusFile *) 0x0
+	first_directory = 0
+	result = <value optimized out>
+	new_buttons = (GList *) 0x93d9a30
+	l = <value optimized out>
+	fake_root = (GList *) 0x93ccd60
+	current_button_data = (ButtonData *) 0x917a758
+	__PRETTY_FUNCTION__ = "nautilus_path_bar_update_path"
+#6  0x0818e151 in preferences_callback_entry_invoke_function (data=0x1, 
+    callback_data=0x0) at eel-preferences.c:643
+	__PRETTY_FUNCTION__ = "preferences_callback_entry_invoke_function"
+#7  0xb790c277 in IA__g_list_foreach (list=0x8dd32b0, 
+    func=0x818e130 <preferences_callback_entry_invoke_function>, 
+    user_data=0x0) at /build/buildd/glib2.0-2.20.0/glib/glist.c:789
+	next = (GList *) 0x9230320
+#8  0x08191201 in preferences_something_changed_notice (client=0x8d7bba0, 
+    connection_id=2449473546, entry=0x93b1ac0, notice_data=0x8d88ce0)
+    at eel-preferences.c:658
+	__PRETTY_FUNCTION__ = "preferences_something_changed_notice"
+#9  0xb79af594 in notify_listeners_callback (listeners=0x8d8bda8, 
+    key=0x9347b60 "/apps/nautilus/preferences/desktop_is_home_dir", 
+    cnxn_id=2449473546, listener_data=0x8f30cb8, user_data=0xbfc63a34)
+    at gconf-client.c:2385
+	__PRETTY_FUNCTION__ = "notify_listeners_callback"
+#10 0xb799e5be in gconf_listeners_notify (listeners=0x8d8bda8, 
+    all_above=0x9347b60 "/apps/nautilus/preferences/desktop_is_home_dir", 
+    callback=0xb79af4e0 <notify_listeners_callback>, user_data=0xbfc63a34)
+    at gconf-listeners.c:590
+No locals.
+#11 0xb79ac4e4 in notify_one_entry (client=0x8d7bba0, entry=0x93b1ac0)
+    at gconf-client.c:2410
+	cae = {client = 0x8d7bba0, entry = 0x93b1ac0}
+#12 0xb79ac5e0 in notify_idle_callback (data=0x8d7bba0) at gconf-client.c:2450
+No locals.
+#13 0xb790cb51 in g_idle_dispatch (source=0x8d8cc00, callback=0x758918ec, 
+    user_data=0x8d7bba0) at /build/buildd/glib2.0-2.20.0/glib/gmain.c:3922
+No locals.
+#14 0xb790ea58 in IA__g_main_context_dispatch (context=0x8d5b398)
+    at /build/buildd/glib2.0-2.20.0/glib/gmain.c:1814
+No locals.
+#15 0xb7911fbb in g_main_context_iterate (context=0x8d5b398, block=1, 
+    dispatch=1, self=0x8d2c3e8)
+    at /build/buildd/glib2.0-2.20.0/glib/gmain.c:2448
+	max_priority = 200
+	timeout = 0
+	some_ready = 1
+	nfds = 15
+	allocated_nfds = <value optimized out>
+	fds = (GPollFD *) 0x8fc0b58
+	__PRETTY_FUNCTION__ = "g_main_context_iterate"
+#16 0xb791248a in IA__g_main_loop_run (loop=0x8f355a0)
+    at /build/buildd/glib2.0-2.20.0/glib/gmain.c:2656
+	self = (GThread *) 0x8d2c3e8
+	__PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#17 0xb7d1f5c9 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.16.0/gtk/gtkmain.c:1205
+	tmp_list = (GList *) 0xbfc63e30
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0x8d7d7b8
+	loop = (GMainLoop *) 0x8f355a0
+#18 0x08080a56 in main (argc=1, argv=0xbfc63eb4) at nautilus-main.c:518
+	kill_shell = 0
+	no_default_window = 1
+	browser_window = 0
+	no_desktop = 0
+	version = 0
+	autostart_mode = <value optimized out>
+	autostart_id = <value optimized out>
+	geometry = (gchar *) 0x0
+	remaining = (const gchar **) 0x0
+	perform_self_check = 0
+	application = (NautilusApplication *) 0x8d7d7b8
+	context = <value optimized out>
+	file = <value optimized out>
+	uri = <value optimized out>
+	uris = (char **) 0x0
+	uris_array = (GPtrArray *) 0xb757a000
+	error = (GError *) 0x0
+	options = {{long_name = 0x81a7343 "check", short_name = 99 'c', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfc63de8, 
+    description = 0x81a7384 "Perform a quick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x81a7279 "version", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfc63df4, 
+    description = 0x81a73b0 "Show the version of the program.", 
+    arg_description = 0x0}, {long_name = 0x81aacaf "geometry", 
+    short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+    arg_data = 0xbfc63df0, 
+    description = 0x81a73d4 "Create the initial window with the given geometry.", arg_description = 0x81a7281 "GEOMETRY"}, {
+    long_name = 0x81a728a "no-default-window", short_name = 110 'n', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfc63e00, 
+    description = 0x81a7408 "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {long_name = 0x81a729c "no-desktop", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfc63df8, 
+    description = 0x81a743c "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {
+    long_name = 0x81a403b "browser", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbfc63dfc, 
+    description = 0x81a72a7 "open a browser window.", arg_description = 0x0}, 
+  {long_name = 0x81c69f9 "quit", short_name = 113 'q', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbfc63e04, 
+    description = 0x81a72be "Quit Nautilus.", arg_description = 0x0}, {
+    long_name = 0x81abeaf "", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0xbfc63dec, 
+    description = 0x0, arg_description = 0x81a72cd "[URI...]"}, {
+    long_name = 0x0, short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x0, description = 0x0, arg_description = 0x0}}

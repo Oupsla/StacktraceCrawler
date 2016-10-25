@@ -1,0 +1,123 @@
+#0  IA__g_str_hash (v=0x0) at /build/buildd/glib2.0-2.15.3/glib/gstring.c:95
+	h = 0
+#1  0x00007fb846aae8a1 in IA__g_hash_table_lookup (hash_table=0x10b3b00, key=0x0)
+    at /build/buildd/glib2.0-2.15.3/glib/ghash.c:118
+	node = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_hash_table_lookup"
+#2  0x00000000004b8457 in get_link_files (target_file=<value optimized out>) at nautilus-file.c:1484
+	uri = 0x0
+#3  0x00000000004b88b2 in update_links_if_target (target_file=0x0) at nautilus-file.c:1498
+	link_files = <value optimized out>
+	p = <value optimized out>
+#4  0x00000000004b911f in update_info_internal (file=0xc2ee70, info=0x0, update_name=1) at nautilus-file.c:1803
+	node = (GList *) 0x0
+	changed = 1
+	is_symlink = <value optimized out>
+	is_hidden = <value optimized out>
+	is_backup = <value optimized out>
+	is_mountpoint = <value optimized out>
+	has_permissions = <value optimized out>
+	permissions = <value optimized out>
+	can_read = 1
+	can_write = 1
+	can_execute = 1
+	can_delete = 1
+	can_trash = 1
+	can_rename = 1
+	can_mount = 0
+	can_unmount = 0
+	can_eject = <value optimized out>
+	thumbnailing_failed = <value optimized out>
+	uid = <value optimized out>
+	gid = <value optimized out>
+	size = <value optimized out>
+	sort_order = <value optimized out>
+	atime = <value optimized out>
+	mtime = <value optimized out>
+	ctime = 1201112871
+	symlink_name = <value optimized out>
+	mime_type = <value optimized out>
+	selinux_context = 0x0
+	name = 0x0
+	thumbnail_path = <value optimized out>
+	file_type = <value optimized out>
+	icon = <value optimized out>
+	old_activation_location = <value optimized out>
+	activation_uri = <value optimized out>
+#5  0x00000000004bb614 in nautilus_file_new_from_info (directory=0x7f3710, info=0x1548580) at nautilus-file.c:475
+	file = (NautilusFile *) 0xc2ee70
+	mime_type = <value optimized out>
+	__PRETTY_FUNCTION__ = "nautilus_file_new_from_info"
+#6  0x000000000049ecd2 in dequeue_pending_idle_callback (callback_data=<value optimized out>)
+    at nautilus-directory-async.c:888
+	directory = (NautilusDirectory *) 0x7f3710
+	pending_file_info = (GList *) 0x1518920
+	node = (GList *) 0x1518920
+	next = <value optimized out>
+	file = (NautilusFile *) 0x0
+	changed_files = (GList *) 0x0
+	added_files = (GList *) 0x0
+	file_info = (GFileInfo *) 0x1548580
+	mimetype = <value optimized out>
+	name = <value optimized out>
+	dir_load_state = (DirectoryLoadState *) 0x0
+#7  0x00007fb846abb3e4 in IA__g_main_context_dispatch (context=0x796870) at /build/buildd/glib2.0-2.15.3/glib/gmain.c:2064
+No locals.
+#8  0x00007fb846abe6f5 in g_main_context_iterate (context=0x796870, block=1, dispatch=1, self=<value optimized out>)
+    at /build/buildd/glib2.0-2.15.3/glib/gmain.c:2697
+	got_ownership = <value optimized out>
+	max_priority = 200
+	timeout = 0
+	some_ready = 1
+	nfds = <value optimized out>
+	allocated_nfds = <value optimized out>
+	fds = (GPollFD *) 0x15b61f0
+	__PRETTY_FUNCTION__ = "g_main_context_iterate"
+#9  0x00007fb846abea15 in IA__g_main_loop_run (loop=0x7d6cd0) at /build/buildd/glib2.0-2.15.3/glib/gmain.c:2905
+	got_ownership = 1167967248
+	self = (GThread *) 0x74a500
+	__PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#10 0x00007fb848507803 in IA__gtk_main () at /build/buildd/gtk+2.0-2.12.5/gtk/gtkmain.c:1163
+	tmp_list = (GList *) 0x7d6cd0
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0x7918a0
+	loop = (GMainLoop *) 0x7d6cd0
+#11 0x000000000043d942 in main (argc=<value optimized out>, argv=0x7fff52de07d8) at nautilus-main.c:571
+	kill_shell = 0
+	restart_shell = 0
+	no_default_window = 0
+	browser_window = 0
+	no_desktop = 0
+	startup_id = <value optimized out>
+	startup_id_copy = 0x7d6cd0 "phy"
+	session_to_load = 0x0
+	geometry = (gchar *) 0x0
+	remaining = (const gchar **) 0x0
+	perform_self_check = 0
+	context = (GOptionContext *) 0xe00003
+	application = (NautilusApplication *) 0x7918a0
+	program = (GnomeProgram *) 0x76a850
+	options = {{long_name = 0x4f33e7 "check", short_name = 99 'c', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x7fff52de05e8, description = 0x4f3410 "Perform a quick set of self-check tests.", arg_description = 0x0}, 
+  {long_name = 0x4f69a7 "geometry", short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+    arg_data = 0x7fff52de05d8, description = 0x4f3440 "Create the initial window with the given geometry.", 
+    arg_description = 0x4f325e "GEOMETRY"}, {long_name = 0x4f3267 "no-default-window", short_name = 110 'n', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0x7fff52de05f4, 
+    description = 0x4f3478 "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {
+    long_name = 0x4f3279 "no-desktop", short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x7fff52de05ec, 
+    description = 0x4f34b0 "Do not manage the desktop (ignore the preference set in the preferences dialog).", 
+    arg_description = 0x0}, {long_name = 0x4f592a "browser", short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x7fff52de05f0, description = 0x4f3284 "open a browser window.", arg_description = 0x0}, {
+    long_name = 0x4f33ef "quit", short_name = 113 'q', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x7fff52de05fc, 
+    description = 0x4f329b "Quit Nautilus.", arg_description = 0x0}, {long_name = 0x4f33f6 "restart", 
+    short_name = 0 '\0', flags = 1, arg = G_OPTION_ARG_NONE, arg_data = 0x7fff52de05f8, 
+    description = 0x4f32aa "Restart Nautilus.", arg_description = 0x0}, {long_name = 0x4f7d56 "", short_name = 0 '\0', 
+    flags = 0, arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0x7fff52de05d0, description = 0x0, 
+    arg_description = 0x4f32bc "[URI...]"}, {long_name = 0x4ef8e4 "load-session", short_name = 108 'l', flags = 0, 
+    arg = G_OPTION_ARG_STRING, arg_data = 0x7fff52de05e0, 
+    description = 0x4f3508 "Load a saved session from the specified file. Implies \"--no-default-window\".", 
+    arg_description = 0x4f32c5 "FILENAME"}, {long_name = 0x0, short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x0, description = 0x0, arg_description = 0x0}}
+#12 0x00007fb8456901c4 in __libc_start_main () from /lib/libc.so.6
+#13 0x000000000042d069 in _start ()

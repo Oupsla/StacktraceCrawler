@@ -1,0 +1,36 @@
+#0  0x00000000004b8065 in ?? ()
+No symbol table info available.
+#1  0x00000000004b81c4 in ?? ()
+No symbol table info available.
+#2  0x00000000004b86ee in ?? ()
+No symbol table info available.
+#3  0x00007f64d80c3620 in g_hash_table_foreach () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#4  0x00007f64b6eb1436 in reset_all_files () from /usr/lib/nautilus/extensions-3.0/libnautilus-dropbox.so
+No symbol table info available.
+#5  0x00007f64d80d2dda in g_main_context_dispatch () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#6  0x00007f64d80d31a0 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#7  0x00007f64d80d3264 in g_main_context_iteration () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#8  0x00007f64d8670864 in g_application_run () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#9  0x000000000042b969 in ?? ()
+No symbol table info available.
+#10 0x00007f64d75c176d in __libc_start_main () from /lib/x86_64-linux-gnu/libc.so.6
+No symbol table info available.
+#11 0x000000000042b9b5 in ?? ()
+No symbol table info available.
+#12 0x00007fff067c7218 in ?? ()
+No symbol table info available.
+#13 0x000000000000001c in ?? ()
+No symbol table info available.
+#14 0x0000000000000002 in ?? ()
+No symbol table info available.
+#15 0x00007fff067c7b3c in ?? ()
+No symbol table info available.
+#16 0x00007fff067c7b45 in ?? ()
+No symbol table info available.
+#17 0x0000000000000000 in ?? ()
+No symbol table info available.

@@ -1,0 +1,36 @@
+#0  0x00007f87ad9410b2 in g_atomic_int_exchange_and_add () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#1  0x00007f87ad9a6cd2 in g_variant_unref () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#2  0x00007f87a2d2d16d in ?? () from /usr/lib/gtk-2.0/2.10.0/menuproxies/libappmenu.so
+No symbol table info available.
+#3  0x00007f87ae5932a2 in ?? () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#4  0x00007f87ae588f54 in ?? () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#5  0x00007f87ae541fec in ?? () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#6  0x00007f87ad96acfd in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#7  0x00007f87ad96b4e8 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#8  0x00007f87ad96bb2a in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#9  0x00007f87aee18797 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#10 0x0000000000416b40 in ?? ()
+No symbol table info available.
+#11 0x00007f87acc4cd1e in __libc_start_main () from /lib/libc.so.6
+No symbol table info available.
+#12 0x0000000000413329 in ?? ()
+No symbol table info available.
+#13 0x00007fff5b124be8 in ?? ()
+No symbol table info available.
+#14 0x000000000000001c in ?? ()
+No symbol table info available.
+#15 0x0000000000000001 in ?? ()
+No symbol table info available.
+#16 0x00007fff5b125aeb in ?? ()
+No symbol table info available.
+#17 0x0000000000000000 in ?? ()
+No symbol table info available.

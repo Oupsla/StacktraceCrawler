@@ -1,0 +1,79 @@
+#0  0x0000000000000000 in ?? ()
+#1  0x00007f6079f8d675 in ?? () from /usr/lib/libgobject-2.0.so.0
+#2  0x00007f6079f8f185 in g_object_set_valist () from /usr/lib/libgobject-2.0.so.0
+#3  0x00007f6079f8f464 in g_object_set () from /usr/lib/libgobject-2.0.so.0
+#4  0x00007f60711634e0 in set_active_source (play_base_bin=0x27020a0, type=GST_STREAM_TYPE_VIDEO, source_num=0)
+    at gstplaybasebin.c:2484
+	info = (GstStreamInfo *) 0x28466a0
+	group = (GstPlayBaseGroup *) 0x2662870
+	s = (GList *) 0x28f1380
+	num = 0
+	have_active = 0
+	sel = (GstElement *) 0x27378a0
+	__PRETTY_FUNCTION__ = "set_active_source"
+#5  0x00007f60711638b9 in setup_substreams (play_base_bin=0x27020a0) at gstplaybasebin.c:1783
+	group = (GstPlayBaseGroup *) 0x2662870
+	n = 2
+	item = <value optimized out>
+	__PRETTY_FUNCTION__ = "setup_substreams"
+#6  0x00007f6071164e70 in group_commit (play_base_bin=0x27020a0, fatal=<value optimized out>, subtitle=0)
+    at gstplaybasebin.c:484
+	group = (GstPlayBaseGroup *) 0x2662870
+	__PRETTY_FUNCTION__ = "group_commit"
+#7  0x00007f6079f8a25d in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+#8  0x00007f6079f9ff5d in ?? () from /usr/lib/libgobject-2.0.so.0
+#9  0x00007f6079fa1608 in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+#10 0x00007f6079fa1b33 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+#11 0x00007f6079f8a25d in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+#12 0x00007f6079f9ff5d in ?? () from /usr/lib/libgobject-2.0.so.0
+#13 0x00007f6079fa1608 in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+#14 0x00007f6079fa1b33 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+#15 0x00007f6079f8e469 in ?? () from /usr/lib/libgobject-2.0.so.0
+#16 0x00007f607fae2298 in gst_object_dispatch_properties_changed (object=0x28f8450, n_pspecs=1, pspecs=0x436d1c10)
+    at gstobject.c:511
+	parent = <value optimized out>
+	i = <value optimized out>
+	name = <value optimized out>
+	debug_name = (gchar *) 0x7f6079d77de0 "\001"
+	__PRETTY_FUNCTION__ = "gst_object_dispatch_properties_changed"
+#17 0x00007f6079f90a81 in g_object_notify () from /usr/lib/libgobject-2.0.so.0
+#18 0x00007f607fb0dc33 in gst_pad_set_caps (pad=0x28f8450, caps=0x2a3c080) at gstpad.c:2426
+	setcaps = <value optimized out>
+	existing = <value optimized out>
+	__PRETTY_FUNCTION__ = "gst_pad_set_caps"
+#19 0x00007f606ddda4b0 in gst_mp3parse_chain (pad=<value optimized out>, buf=<value optimized out>)
+    at gstmpegaudioparse.c:1328
+	caps = (GstCaps *) 0x2a3c080
+	version = 1
+	flow = GST_FLOW_OK
+	mp3parse = (GstMPEGAudioParse *) 0x28fe150
+	data = <value optimized out>
+	bpf = <value optimized out>
+	available = 1152
+	timestamp = <value optimized out>
+	__PRETTY_FUNCTION__ = "gst_mp3parse_chain"
+#20 0x00007f607fb0e875 in gst_pad_chain_unchecked (pad=0x28f82e0, buffer=0x277ad30) at gstpad.c:3877
+	caps = <value optimized out>
+	caps_changed = 0
+	chainfunc = (GstPadChainFunction) 0x7f606ddd99c0 <gst_mp3parse_chain>
+	ret = <value optimized out>
+	__PRETTY_FUNCTION__ = "gst_pad_chain_unchecked"
+#21 0x00007f607fb0f90b in gst_pad_push (pad=0x28f8170, buffer=0x277ad30) at gstpad.c:4045
+	peer = (GstPad *) 0x28f82e0
+	ret = <value optimized out>
+	caps = (GstCaps *) 0x28f6400
+	caps_changed = 0
+	__PRETTY_FUNCTION__ = "gst_pad_push"
+#22 0x00007f6070f39522 in gst_queue_loop (pad=<value optimized out>) at gstqueue.c:1047
+	queue = (GstQueue *) 0x278e4c0
+	ret = <value optimized out>
+	__PRETTY_FUNCTION__ = "gst_queue_loop"
+#23 0x00007f607fb2dc06 in gst_task_func (task=0x277a720, tclass=<value optimized out>) at gsttask.c:192
+	lock = (GStaticRecMutex *) 0x28fba60
+	tself = (GThread *) 0x28ffe70
+	__PRETTY_FUNCTION__ = "gst_task_func"
+#24 0x00007f6079b187f7 in ?? () from /usr/lib/libglib-2.0.so.0
+#25 0x00007f6079b17264 in ?? () from /usr/lib/libglib-2.0.so.0
+#26 0x00007f60787433ea in start_thread () from /lib/libpthread.so.0
+#27 0x00007f60784b0c6d in clone () from /lib/libc.so.6
+#28 0x0000000000000000 in ?? ()

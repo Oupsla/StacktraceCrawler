@@ -1,0 +1,22 @@
+#0  0x040d76fa in ?? () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#1  0x00562d07 in ?? () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#2  0x0055e86f in ?? () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#3  0x004bec4c in g_file_query_info () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#4  0x004bf126 in ?? () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#5  0x004eaf2d in ?? () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#6  0x004da94c in ?? () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#7  0x008eaa77 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#8  0x008e8644 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#9  0x00272e99 in start_thread () from /lib/i386-linux-gnu/libpthread.so.0
+No symbol table info available.
+#10 0x041346ee in clone () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.

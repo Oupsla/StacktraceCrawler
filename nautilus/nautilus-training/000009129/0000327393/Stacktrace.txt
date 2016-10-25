@@ -1,0 +1,84 @@
+#0  0xb7237025 in _dbus_connection_lock (connection=0xb6d87c90)
+    at dbus-connection.c:355
+No locals.
+#1  0xb7249e35 in _dbus_pending_call_get_connection_and_lock (
+    pending=0x9202728) at dbus-pending-call.c:309
+No locals.
+#2  0xb723bfe5 in reply_handler_timeout (data=0x9202728)
+    at dbus-connection.c:3116
+	connection = <value optimized out>
+	status = <value optimized out>
+#3  0xb724f092 in dbus_timeout_handle (timeout=0x9202758)
+    at dbus-timeout.c:473
+No locals.
+#4  0xb7f6a3d0 in timeout_handler_dispatch (data=0x91feab0)
+    at dbus-gmain.c:343
+No locals.
+#5  0xb7866366 in g_timeout_dispatch (source=0x9202780, callback=0, 
+    user_data=0x91feab0) at /build/buildd/glib2.0-2.19.6/glib/gmain.c:3253
+No locals.
+#6  0xb7865c38 in IA__g_main_context_dispatch (context=0x91dd5a0)
+    at /build/buildd/glib2.0-2.19.6/glib/gmain.c:1814
+No locals.
+#7  0xb78692e3 in g_main_context_iterate (context=0x91dd5a0, block=1, 
+    dispatch=1, self=0x91af3e8)
+    at /build/buildd/glib2.0-2.19.6/glib/gmain.c:2448
+	max_priority = 2147483647
+	timeout = 670
+	some_ready = 1
+	nfds = 10
+	allocated_nfds = <value optimized out>
+	fds = (GPollFD *) 0x93b1398
+	__PRETTY_FUNCTION__ = "g_main_context_iterate"
+#8  0xb7869802 in IA__g_main_loop_run (loop=0x93a7858)
+    at /build/buildd/glib2.0-2.19.6/glib/gmain.c:2656
+	self = (GThread *) 0x91af3e8
+	__PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#9  0xb7ca33d9 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No locals.
+#10 0x0808036e in main (argc=1, argv=0xbfa16364) at nautilus-main.c:501
+	kill_shell = 0
+	no_default_window = 0
+	browser_window = 0
+	no_desktop = 0
+	version = 0
+	autostart_mode = <value optimized out>
+	autostart_id = <value optimized out>
+	geometry = (gchar *) 0x0
+	remaining = (const gchar **) 0x91c4470
+	perform_self_check = 0
+	application = (NautilusApplication *) 0x91c7080
+	context = <value optimized out>
+	file = <value optimized out>
+	uri = <value optimized out>
+	uris = (char **) 0xb7f4bff4
+	uris_array = (GPtrArray *) 0x91ed630
+	error = (GError *) 0x0
+	options = {{long_name = 0x81a54a3 "check", short_name = 99 'c', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfa16298, 
+    description = 0x81a54e4 "Perform a quick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x81a53d9 "version", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfa162a4, 
+    description = 0x81a5510 "Show the version of the program.", 
+    arg_description = 0x0}, {long_name = 0x81a8e4f "geometry", 
+    short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+    arg_data = 0xbfa162a0, 
+    description = 0x81a5534 "Create the initial window with the given geometry.", arg_description = 0x81a53e1 "GEOMETRY"}, {
+    long_name = 0x81a53ea "no-default-window", short_name = 110 'n', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfa162b0, 
+    description = 0x81a5568 "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {long_name = 0x81a53fc "no-desktop", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfa162a8, 
+    description = 0x81a559c "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {
+    long_name = 0x81a223e "browser", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbfa162ac, 
+    description = 0x81a5407 "open a browser window.", arg_description = 0x0}, 
+  {long_name = 0x81c49d9 "quit", short_name = 113 'q', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbfa162b4, 
+    description = 0x81a541e "Quit Nautilus.", arg_description = 0x0}, {
+    long_name = 0x81aa04f "", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0xbfa1629c, 
+    description = 0x0, arg_description = 0x81a542d "[URI...]"}, {
+    long_name = 0x0, short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x0, description = 0x0, arg_description = 0x0}}

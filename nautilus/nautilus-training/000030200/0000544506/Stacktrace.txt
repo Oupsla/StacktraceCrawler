@@ -1,0 +1,48 @@
+#0  0x00007f4bfd882174 in g_slice_alloc () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#1  0x00007f4bfd883cde in g_slist_prepend () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#2  0x00007f4bfe36084d in g_object_notify () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#3  0x00007f4c0023b44a in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#4  0x00007f4bfe37c858 in g_type_create_instance ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#5  0x00007f4bfe35fcec in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#6  0x00007f4c00239177 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#7  0x00007f4bfe360cf1 in g_object_newv () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#8  0x00007f4bfe3619bc in g_object_new () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#9  0x00007f4c00263061 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#10 0x00007f4c00263728 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#11 0x00007f4bfe37ca35 in g_type_create_instance ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#12 0x00007f4bfe35fcec in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#13 0x00007f4bfe36117a in g_object_newv () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#14 0x00007f4bfe3619bc in g_object_new () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#15 0x00007f4bf2ebe1aa in ?? () from /usr/lib/libgnome-bluetooth.so.7
+No symbol table info available.
+#16 0x00007f4bfe37ca35 in g_type_create_instance ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#17 0x00007f4bfe35fcec in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#18 0x00007f4bfe36117a in g_object_newv () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#19 0x00007f4bfe3619bc in g_object_new () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#20 0x00007f4bf30c528b in ?? ()
+   from /usr/lib/nautilus-sendto/plugins/libnstbluetooth.so
+No symbol table info available.
+#21 0x0000000000404617 in _start ()
+No symbol table info available.

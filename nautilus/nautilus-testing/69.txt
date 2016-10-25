@@ -1,0 +1,70 @@
+#0  0x00007f5574ccc038 in gtk_tree_model_get_valist () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#1  0x00007f5574ccc31c in gtk_tree_model_get () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#2  0x000000000045363a in ?? ()
+No symbol table info available.
+#3  0x0000000000454c86 in ?? ()
+No symbol table info available.
+#4  0x00007f557297c0a4 in g_closure_invoke () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#5  0x00007f557298e02a in ?? () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#6  0x00007f55729976b1 in g_signal_emit_valist () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#7  0x00007f5572997852 in g_signal_emit () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#8  0x00007f5574d082fe in gtk_widget_activate () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#9  0x00007f5574bf096e in gtk_menu_shell_activate_item () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#10 0x00007f5574bf0d03 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#11 0x00007f5574bdae58 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#12 0x00007f557297c0a4 in g_closure_invoke () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#13 0x00007f557298de5f in ?? () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#14 0x00007f5572997483 in g_signal_emit_valist () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#15 0x00007f5572997852 in g_signal_emit () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#16 0x00007f5574d08f39 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#17 0x00007f5574bda63a in gtk_propagate_event () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#18 0x00007f5574bdaa3b in gtk_main_do_event () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#19 0x00007f5574853102 in ?? () from /usr/lib/libgdk-3.so.0
+No symbol table info available.
+#20 0x00007f55724b6a5d in g_main_context_dispatch () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#21 0x00007f55724b7258 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#22 0x00007f55724b7792 in g_main_loop_run () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#23 0x00007f5574bd9e1d in gtk_main () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#24 0x00007f5573074a4e in g_application_run () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#25 0x000000000042afe0 in ?? ()
+No symbol table info available.
+#26 0x00007f5571a3930d in __libc_start_main (main=0x42af40, argc=2, ubp_av=0x7fff045610f8, init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, stack_end=0x7fff045610e8) at libc-start.c:226
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, -4414599292476793204, 4370424, 140733266137328, 0, 0, 4414154328038366860, 4329879068253806220}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x500bf0, 0x7fff045610f8}, data = {prev = 0x0, cleanup = 0x0, canceltype = 5245936}}}
+        not_first_call = <optimized out>
+#27 0x000000000042b021 in ?? ()
+No symbol table info available.
+#28 0x00007fff045610e8 in ?? ()
+No symbol table info available.
+#29 0x000000000000001c in ?? ()
+No symbol table info available.
+#30 0x0000000000000002 in ?? ()
+No symbol table info available.
+#31 0x00007fff04561986 in ?? ()
+No symbol table info available.
+#32 0x00007fff0456198f in ?? ()
+No symbol table info available.
+#33 0x0000000000000000 in ?? ()
+No symbol table info available.

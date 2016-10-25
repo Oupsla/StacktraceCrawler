@@ -1,0 +1,22 @@
+#0  0xb718b377 in memset () from /lib/tls/i686/cmov/libc.so.6
+#1  0xb4f7699c in ff_jpeg_fdct_islow (data=0x90ec630)
+    at /build/buildd/ffmpeg-debian-0.svn20090204/libavcodec/jfdctint.c:250
+	tmp0 = <value optimized out>
+	tmp1 = <value optimized out>
+	tmp2 = <value optimized out>
+	tmp3 = <value optimized out>
+	tmp4 = <value optimized out>
+	tmp5 = <value optimized out>
+	tmp6 = <value optimized out>
+	tmp7 = <value optimized out>
+	tmp10 = <value optimized out>
+	tmp11 = <value optimized out>
+	tmp12 = <value optimized out>
+	tmp13 = <value optimized out>
+	z1 = <value optimized out>
+	z2 = <value optimized out>
+	z3 = 1073686079
+	z4 = <value optimized out>
+	z5 = <value optimized out>
+	dataptr = <value optimized out>
+#2  0xb7272170 in main_arena () from /lib/tls/i686/cmov/libc.so.6

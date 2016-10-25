@@ -1,0 +1,158 @@
+#0  nautilus_file_peek_display_name (file=0x0) at nautilus-file.c:3734
+        name = <value optimized out>
+        escaped_name = <value optimized out>
+#1  0x0811da4a in nautilus_file_get_display_name (file=0x0)
+    at nautilus-file.c:3757
+No locals.
+#2  0x0807c914 in selection_changed_callback (window=0x9deb360, panel=
+    0x9dfe968) at nautilus-information-panel.c:1124
+        selection = 0xb111380
+        file = 0x0
+        uri = 0x0
+        name = <value optimized out>
+#3  0x00b6cdcc in IA__g_cclosure_marshal_VOID__VOID (closure=0x9eed068, 
+    return_value=0x0, n_param_values=1, param_values=0xadc2668, 
+    invocation_hint=0xbf9ca350, marshal_data=0x807c870)
+    at /build/buildd/glib2.0-2.24.1/gobject/gmarshal.c:77
+        data1 = 0x0
+        data2 = 0x0
+        __PRETTY_FUNCTION__ = "IA__g_cclosure_marshal_VOID__VOID"
+#4  0x00b5f252 in IA__g_closure_invoke (closure=0x9eed068, return_value=0x0, 
+    n_param_values=1, param_values=0xadc2668, invocation_hint=0xbf9ca350)
+    at /build/buildd/glib2.0-2.24.1/gobject/gclosure.c:767
+        marshal = 0x806a83c <g_cclosure_marshal_VOID__VOID@plt>
+        marshal_data = 0x0
+        __PRETTY_FUNCTION__ = "IA__g_closure_invoke"
+#5  0x00b7399d in signal_emit_unlocked_R (node=<value optimized out>, 
+    detail=<value optimized out>, instance=0x9deb360, emission_return=0x0, 
+    instance_and_params=0xadc2668)
+    at /build/buildd/glib2.0-2.24.1/gobject/gsignal.c:3248
+        tmp = <value optimized out>
+        handler = 0x9fe55c0
+        accumulator = 0x0
+        emission = {next = 0x0, instance = 0x9deb360, ihint = {
+            signal_id = 177, detail = 0, run_type = G_SIGNAL_RUN_FIRST}, 
+          state = EMISSION_RUN, chain_type = 4}
+        class_closure = 0x9a690d8
+        handler_list = <value optimized out>
+        return_accu = <value optimized out>
+        accu = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, 
+              v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, 
+              v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, 
+              v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, 
+              v_float = 0, v_double = 0, v_pointer = 0x0}}}
+        signal_id = 177
+        max_sequential_handler_number = 67115
+        return_value_altered = 0
+#6  0x00b74db4 in IA__g_signal_emit_valist (instance=0x9deb360, 
+    signal_id=177, detail=0, var_args=0xbf9ca578 "")
+    at /build/buildd/glib2.0-2.24.1/gobject/gsignal.c:2981
+        signal_return_type = 4
+        node = 0x9a69008
+        i = <value optimized out>
+        n_params = 0
+        __PRETTY_FUNCTION__ = "IA__g_signal_emit_valist"
+#7  0x00b75085 in IA__g_signal_emit_by_name (instance=0x9deb360, 
+    detailed_signal=0x81ce2f1 "selection_changed")
+    at /build/buildd/glib2.0-2.24.1/gobject/gsignal.c:3075
+        detail = 0
+        signal_id = 177
+        __PRETTY_FUNCTION__ = "IA__g_signal_emit_by_name"
+#8  0x080a2508 in nautilus_window_report_selection_changed (window=0x0)
+    at nautilus-window-manage-views.c:116
+No locals.
+#9  0x0815eaa1 in nautilus_window_info_report_selection_changed (window=
+    0x9deb360) at nautilus-window-info.c:151
+        __PRETTY_FUNCTION__ = "nautilus_window_info_report_selection_changed"
+#10 0x080b3257 in fm_directory_view_send_selection_change (view=0x9df1700)
+    at fm-directory-view.c:2313
+No locals.
+#11 0x080b8908 in display_selection_info_idle_callback (data=0x9df1700)
+    at fm-directory-view.c:2916
+No locals.
+#12 0x00312661 in g_idle_dispatch (source=0xb228738, callback=0, 
+    user_data=0x9df1700) at /build/buildd/glib2.0-2.24.1/glib/gmain.c:4065
+No locals.
+#13 0x003145e5 in g_main_dispatch (context=0x9a11e40)
+    at /build/buildd/glib2.0-2.24.1/glib/gmain.c:1960
+        dispatch = 0x312640 <g_idle_dispatch>
+        user_data = 0x9df1700
+        callback = 0x80b88a0 <display_selection_info_idle_callback>
+        cb_funcs = 0x3a233c
+        cb_data = 0xb1d0300
+        current_source_link = {data = 0xb228738, next = 0x0}
+        source = 0xb228738
+        current = 0x9a35dc8
+        i = 0
+#14 IA__g_main_context_dispatch (context=0x9a11e40)
+    at /build/buildd/glib2.0-2.24.1/glib/gmain.c:2513
+No locals.
+#15 0x003182d8 in g_main_context_iterate (context=0x9a11e40, 
+    block=<value optimized out>, dispatch=1, self=0x99hostname008)
+    at /build/buildd/glib2.0-2.24.1/glib/gmain.c:2591
+        max_priority = 200
+        timeout = 0
+        some_ready = 1
+        nfds = <value optimized out>
+        allocated_nfds = <value optimized out>
+        fds = <value optimized out>
+        __PRETTY_FUNCTION__ = "g_main_context_iterate"
+#16 0x00318817 in IA__g_main_loop_run (loop=0x9b32480)
+    at /build/buildd/glib2.0-2.24.1/glib/gmain.c:2799
+        self = 0x99hostname008
+        __PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#17 0x00e693d9 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.20.1/gtk/gtkmain.c:1219
+        tmp_list = 0x0
+        functions = 0x0
+        init = 0x1
+        loop = 0x9b32480
+#18 0x08080e08 in main (argc=1, argv=0xbf9caa64) at nautilus-main.c:583
+        kill_shell = 0
+        no_default_window = 1
+        browser_window = 0
+        no_desktop = 0
+        version = 0
+        autostart_mode = 1
+        autostart_id = <value optimized out>
+        geometry = 0x0
+        remaining = 0x0
+        perform_self_check = 0
+        application = 0x9a3c8f0
+        context = <value optimized out>
+        file = 0x1
+        uri = <value optimized out>
+        uris = 0x0
+        uris_array = <value optimized out>
+        error = 0x0
+        options = {{long_name = 0x81ac823 "check", short_name = 99 'c', 
+            flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbf9ca980, 
+            description = 
+    0x81ac8a4 "Perform a quick set of self-check tests.", arg_description = 
+    0x0}, {long_name = 0x81cb481 "version", short_name = 0 '\000', flags = 0, 
+            arg = G_OPTION_ARG_NONE, arg_data = 0xbf9ca98c, description = 
+    0x81ac8d0 "Show the version of the program.", arg_description = 0x0}, {
+            long_name = 0x81b04d8 "geometry", short_name = 103 'g', 
+            flags = 0, arg = G_OPTION_ARG_STRING, arg_data = 0xbf9ca988, 
+            description = 
+    0x81ac8f4 "Create the initial window with the given geometry.", 
+            arg_description = 0x81ac761 "GEOMETRY"}, {long_name = 
+    0x81ac76a "no-default-window", short_name = 110 'n', flags = 0, 
+            arg = G_OPTION_ARG_NONE, arg_data = 0xbf9ca998, description = 
+    0x81ac928 "Only create windows for explicitly specified URIs.", 
+            arg_description = 0x0}, {long_name = 0x81ac77c "no-desktop", 
+            short_name = 0 '\000', flags = 0, arg = G_OPTION_ARG_NONE, 
+            arg_data = 0xbf9ca990, description = 
+    0x81ac95c "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {long_name = 0x81a93a3 "browser", 
+            short_name = 0 '\000', flags = 0, arg = G_OPTION_ARG_NONE, 
+            arg_data = 0xbf9ca994, description = 
+    0x81ac787 "open a browser window.", arg_description = 0x0}, {long_name = 
+    0x81cccb2 "quit", short_name = 113 'q', flags = 0, 
+            arg = G_OPTION_ARG_NONE, arg_data = 0xbf9ca99c, description = 
+    0x81ac79e "Quit Nautilus.", arg_description = 0x0}, {long_name = 
+    0x81b19af "", short_name = 0 '\000', flags = 0, 
+            arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0xbf9ca984, 
+            description = 0x0, arg_description = 0x81ac7ad "[URI...]"}, {
+            long_name = 0x0, short_name = 0 '\000', flags = 0, 
+            arg = G_OPTION_ARG_NONE, arg_data = 0x0, description = 0x0, 
+            arg_description = 0x0}}

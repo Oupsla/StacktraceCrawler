@@ -1,0 +1,58 @@
+#0  0x00da7832 in ?? () from /lib/ld-linux.so.2
+No symbol table info available.
+#1  0x00f86f46 in kill () from /lib/libc.so.6
+No symbol table info available.
+#2  0x0815dc9c in ?? ()
+No symbol table info available.
+#3  0x0815f9c9 in mch_exit ()
+No symbol table info available.
+#4  0x08128640 in preserve_exit ()
+No symbol table info available.
+#5  <signal handler called>
+No symbol table info available.
+#6  0x002ad3a9 in g_atomic_int_exchange_and_add () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#7  0x0031832d in g_variant_unref () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#8  0x04dc15bf in ?? () from /usr/lib/gtk-2.0/2.10.0/menuproxies/libappmenu.so
+No symbol table info available.
+#9  0x07d8e146 in g_simple_async_result_complete () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#10 0x07de7934 in ?? () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#11 0x07d8e146 in g_simple_async_result_complete () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#12 0x07ddc6e3 in ?? () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#13 0x07d8e146 in g_simple_async_result_complete () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#14 0x07d8e27e in ?? () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#15 0x002d4471 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#16 0x002d8c28 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#17 0x002d93f0 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#18 0x002d96a4 in g_main_context_iteration () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#19 0x081e1f21 in gui_mch_wait_for_chars ()
+No symbol table info available.
+#20 0x081d2e43 in gui_wait_for_chars ()
+No symbol table info available.
+#21 0x081c2703 in ui_inchar ()
+No symbol table info available.
+#22 0x080edf5c in inchar ()
+No symbol table info available.
+#23 0x080f0130 in ?? ()
+No symbol table info available.
+#24 0x080f189e in vgetc ()
+No symbol table info available.
+#25 0x080f1d3b in safe_vgetc ()
+No symbol table info available.
+#26 0x08141bf5 in normal_cmd ()
+No symbol table info available.
+#27 0x08100068 in main_loop ()
+No symbol table info available.
+#28 0x08101f63 in main ()
+No symbol table info available.

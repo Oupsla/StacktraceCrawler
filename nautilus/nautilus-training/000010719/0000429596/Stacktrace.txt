@@ -1,0 +1,98 @@
+#0  _int_malloc (av=<value optimized out>, bytes=<value optimized out>)
+    at malloc.c:4278
+	p = <value optimized out>
+	nb = 16
+	idx = 0
+	bin = <value optimized out>
+	victim = (mchunkptr) 0x70766177
+	size = <value optimized out>
+	victim_index = <value optimized out>
+	remainder = <value optimized out>
+	remainder_size = <value optimized out>
+	block = <value optimized out>
+	bit = <value optimized out>
+	map = <value optimized out>
+	fwd = <value optimized out>
+	bck = <value optimized out>
+	__PRETTY_FUNCTION__ = "_int_malloc"
+#1  0x08e435df in *__GI___libc_malloc (bytes=10) at malloc.c:3638
+	ar_ptr = (mstate) 0x8f2c3a0
+	victim = <value optimized out>
+	__PRETTY_FUNCTION__ = "__libc_malloc"
+#2  0x0027f3b4 in IA__g_malloc (n_bytes=10)
+    at /build/buildd/glib2.0-2.21.6/glib/gmem.c:131
+	mem = (gpointer) 0x10
+#3  0x00297e61 in IA__g_memdup (mem=0xb6d8bd3a, byte_size=10)
+    at /build/buildd/glib2.0-2.21.6/glib/gstrfuncs.c:119
+	new_mem = (gpointer) 0x0
+#4  0x03bec3c2 in gst_registry_binary_read_cache (registry=0xb6e132bb, 
+    location=0x0) at gstregistrybinary.c:1248
+	mapped = (GMappedFile *) 0x3
+	contents = (gchar *) 0x917b378 "\220®\027\t\001"
+	in = (gchar *) 0x911ac80 "\230¸\027\t\001"
+	size = <value optimized out>
+	err = (GError *) 0x917fdb0
+	res = <value optimized out>
+	timer = (GTimer *) 0x0
+	seconds = 1.0627450980392157
+	__PRETTY_FUNCTION__ = "gst_registry_binary_read_cache"
+#5  0x03bec7fd in gst_registry_binary_read_cache (registry=0x911ac80, 
+    location=0x917c5b8 "/root/.gstreamer-0.10/registry.i486.bin")
+    at gstregistrybinary.c:1310
+	mapped = (GMappedFile *) 0x9153150
+	contents = (gchar *) 0xb6d8a000 <Address 0xb6d8a000 out of bounds>
+	in = (gchar *) 0xb6d8bd3a <Address 0xb6d8bd3a out of bounds>
+	size = 561851
+	err = (GError *) 0x0
+	res = -1227310546
+	timer = (GTimer *) 0x917c600
+	seconds = 1.0627450980392157
+	__PRETTY_FUNCTION__ = "gst_registry_binary_read_cache"
+#6  0x03b78d03 in gst_deinit () at gst.c:1388
+	clock = (GstClock *) 0x3c2bef8
+	__PRETTY_FUNCTION__ = "gst_deinit"
+#7  0x03b7ad25 in gst_object_get_type () at gstobject.c:163
+	g_define_type_id = <value optimized out>
+	g_define_type_id__volatile = 152501680
+#8  0x00285c10 in IA__g_option_context_parse (context=0x916d5e0, argc=0x0, 
+    argv=0x0, error=0x0) at /build/buildd/glib2.0-2.21.6/glib/goption.c:1947
+	group = (GOptionGroup *) 0x10
+	i = 152491488
+	j = <value optimized out>
+	k = <value optimized out>
+	list = (GList *) 0x301ff4
+#9  0x03b7a36e in split_and_iterate (stringlist=<value optimized out>, 
+    separator=<value optimized out>, iterator=0x1) at gst.c:563
+	strings = (gchar **) 0x916d5e0
+	j = 16
+	lastlist = <value optimized out>
+#10 0x048aca5e in brasero_burn_library_start (argc=0x0, argv=0x0)
+    at burn-basics.c:232
+	client = <value optimized out>
+#11 0x00d452ef in nautilus_module_initialize (module=0x9158e00)
+    at nautilus-burn-extension.c:933
+No locals.
+#12 0x08145ede in ?? ()
+No symbol table info available.
+#13 0x002268c0 in IA__g_type_module_use (module=0x9158e00)
+    at /build/buildd/glib2.0-2.21.6/gobject/gtypemodule.c:257
+	tmp_list = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_type_module_use"
+#14 0x0814601a in ?? ()
+No symbol table info available.
+#15 0x0806f9bf in ?? ()
+No symbol table info available.
+#16 0x080814c8 in ?? ()
+No symbol table info available.
+#17 0x08de9b56 in __libc_start_main (
+    main=0x8080df0 <g_themed_icon_append_name@plt+85740>, argc=1, 
+    ubp_av=0xbfe27ab4, init=0x81a2d70, fini=0x81a2d60, 
+    rtld_fini=0x57fd20 <_dl_fini>, stack_end=0xbfe27aac) at libc-start.c:220
+	result = <value optimized out>
+	unwind_buf = {cancel_jmp_buf = {{jmp_buf = {150122484, 0, 0, 
+        -1075676536, -511863470, -1732279748}, mask_was_saved = 0}}, priv = {
+    pad = {0x0, 0x0, 0x1, 0x806bf20}, data = {prev = 0x0, cleanup = 0x0, 
+      canceltype = 1}}}
+	not_first_call = <value optimized out>
+#18 0x0806bf41 in ?? ()
+No symbol table info available.

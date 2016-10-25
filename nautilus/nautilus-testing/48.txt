@@ -1,0 +1,68 @@
+#0  magazine_cache_push_magazine (ix=1, magazine_chunks=<value optimized out>, count=51)
+    at /build/buildd/glib2.0-2.14.1/glib/gslice.c:470
+	current = (ChunkLink *) 0x865eb50
+	next = <value optimized out>
+	prev = <value optimized out>
+#1  0xb74e4305 in thread_memory_magazine2_unload (tmem=<value optimized out>, ix=0)
+    at /build/buildd/glib2.0-2.14.1/glib/gslice.c:744
+	mag = (Magazine *) 0x81782c8
+#2  0xb74e51ee in IA__g_slice_free1 (mem_size=16, mem_block=0x81c5a50)
+    at /build/buildd/glib2.0-2.14.1/glib/gslice.c:868
+	tmem = (ThreadMemory *) 0x8177ec0
+	ix = 1
+	chunk_size = 16
+	acat = <value optimized out>
+#3  0xb74bc168 in g_hash_nodes_destroy (hash_node=0x81c5b50, key_destroy_func=0, value_destroy_func=0)
+    at /build/buildd/glib2.0-2.14.1/glib/ghash.c:875
+	next = (GHashNode *) 0x81c5b50
+#4  0xb74bc5b4 in IA__g_hash_table_remove_all (hash_table=0x81796c0)
+    at /build/buildd/glib2.0-2.14.1/glib/ghash.c:483
+	i = 0
+	__PRETTY_FUNCTION__ = "IA__g_hash_table_remove_all"
+#5  0xb74bc813 in IA__g_hash_table_destroy (hash_table=0x81796c0)
+    at /build/buildd/glib2.0-2.14.1/glib/ghash.c:224
+	__PRETTY_FUNCTION__ = "IA__g_hash_table_destroy"
+#6  0xb7e8f654 in enumeration_table_free () at eel-enumeration.c:430
+No locals.
+#7  0xb7e8793c in eel_debug_shut_down () at eel-debug.c:110
+	f = (ShutdownFunction *) 0x81c42f0
+#8  0x0807f123 in main (argc=4, argv=0xbf9b3214) at nautilus-main.c:572
+	kill_shell = 0
+	restart_shell = 0
+	no_default_window = 1
+	browser_window = 0
+	no_desktop = 0
+	startup_id = <value optimized out>
+	startup_id_copy = 0x81c0780 "\024\024"
+	session_to_load = 0x0
+	geometry = (gchar *) 0x0
+	remaining = (const gchar **) 0x0
+	perform_self_check = 0
+	context = <value optimized out>
+	application = (NautilusApplication *) 0x81beee8
+	program = (GnomeProgram *) 0x8181810
+	options = {{long_name = 0x8147676 "check", short_name = 99 'c', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbf9b30e0, description = 0x81476c4 "Perform a quick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x814a744 "geometry", short_name = 103 'g', flags = 0, 
+    arg = G_OPTION_ARG_STRING, arg_data = 0xbf9b30e8, 
+    description = 0x81476f0 "Create the initial window with the given geometry.", 
+    arg_description = 0x81474e5 "GEOMETRY"}, {long_name = 0x81474ee "no-default-window", 
+    short_name = 110 'n', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbf9b30f8, 
+    description = 0x8147724 "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {
+    long_name = 0x8147500 "no-desktop", short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbf9b30f0, 
+    description = 0x8147758 "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {long_name = 0x81497fb "browser", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbf9b30f4, description = 0x814750b "open a browser window.", 
+    arg_description = 0x0}, {long_name = 0x814767e "quit", short_name = 113 'q', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbf9b3100, description = 0x8147522 "Quit Nautilus.", 
+    arg_description = 0x0}, {long_name = 0x8147685 "restart", short_name = 0 '\0', flags = 1, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbf9b30fc, description = 0x8147531 "Restart Nautilus.", 
+    arg_description = 0x0}, {long_name = 0x814ba5c "", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0xbf9b30e4, description = 0x0, 
+    arg_description = 0x8147543 "[URI...]"}, {long_name = 0x8143bdc "load-session", short_name = 108 'l', 
+    flags = 0, arg = G_OPTION_ARG_STRING, arg_data = 0xbf9b30ec, 
+    description = 0x81477ac "Load a saved session from the specified file. Implies \"--no-default-window\".", 
+    arg_description = 0x814754c "FILENAME"}, {long_name = 0x0, short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0x0, description = 0x0, arg_description = 0x0}}
+#9  0xb71ee050 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+#10 0x08069441 in _start ()

@@ -1,0 +1,35 @@
+#0  0x00007f1f261b3b00 in g_str_hash () from /usr/lib/libglib-2.0.so.0
+#1  0x00007f1f26182e1f in g_hash_table_lookup ()
+   from /usr/lib/libglib-2.0.so.0
+#2  0x00007f1f177f66c9 in ?? ()
+   from /usr/lib/nautilus/extensions-2.0/libnautilus-ubuntuone.so
+#3  0x00000000004b2845 in ?? ()
+#4  0x00000000004af180 in ?? ()
+#5  0x00000000004b0b3e in ?? ()
+#6  0x00000000004ae384 in ?? ()
+#7  0x000000000046f398 in ?? ()
+#8  0x0000000000471e44 in ?? ()
+#9  0x00007f1f2686927d in g_closure_invoke ()
+   from /usr/lib/libgobject-2.0.so.0
+#10 0x00007f1f2687ee3b in ?? () from /usr/lib/libgobject-2.0.so.0
+#11 0x00007f1f26880432 in g_signal_emit_valist ()
+   from /usr/lib/libgobject-2.0.so.0
+#12 0x00007f1f26880953 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+#13 0x00000000004b0588 in ?? ()
+#14 0x00000000004b06b9 in ?? ()
+#15 0x00000000004b08d5 in ?? ()
+#16 0x00007f1f26f98897 in ?? () from /usr/lib/libgio-2.0.so.0
+#17 0x00007f1f26fac2e9 in ?? () from /usr/lib/libgio-2.0.so.0
+#18 0x00007f1f2619120a in g_main_context_dispatch ()
+   from /usr/lib/libglib-2.0.so.0
+#19 0x00007f1f261948e0 in ?? () from /usr/lib/libglib-2.0.so.0
+#20 0x00007f1f26194dad in g_main_loop_run () from /usr/lib/libglib-2.0.so.0
+#21 0x00007f1f279febc7 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+#22 0x0000000000442bc7 in ?? ()
+#23 0x00007f1f24c015a6 in __libc_start_main () from /lib/libc.so.6
+#24 0x000000000042f819 in ?? ()
+#25 0x00007fff31584ec8 in ?? ()
+#26 0x000000000000001c in ?? ()
+#27 0x0000000000000001 in ?? ()
+#28 0x00007fff31585b8a in ?? ()
+#29 0x0000000000000000 in ?? ()

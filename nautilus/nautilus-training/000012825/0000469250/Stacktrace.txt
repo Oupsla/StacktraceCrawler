@@ -1,0 +1,217 @@
+#0  0x00893422 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x0013a4d1 in *__GI_raise (sig=6)
+    at ../nptl/sysdeps/unix/sysv/linux/raise.c:64
+	resultvar = <value optimized out>
+	pid = 2424820
+	selftid = 6410
+#2  0x0013d932 in *__GI_abort () at abort.c:92
+	act = {__sigaction_handler = {
+    sa_handler = 0x18082d <*__GI___libc_realloc+221>, 
+    sa_sigaction = 0x18082d <*__GI___libc_realloc+221>}, sa_mask = {__val = {
+      104, 88, 3070733536, 3070733776, 3070733564, 104, 88, 77, 162407120, 
+      2424820, 77, 76, 3070733736, 1506242, 162407128, 77, 3070733776, 
+      162407128, 0, 4222451712, 162407128, 162407128, 162407128, 162407128, 
+      162407204, 162407228, 162407128, 162407228, 0, 0, 0, 0}}, sa_flags = 0, 
+  sa_restorer = 0xb}
+	sigs = {__val = {32, 0 <repeats 31 times>}}
+#3  0x00133648 in *__GI___assert_fail (assertion=0x7b47b65 "ret != inval_id", 
+    file=0x7b47b29 "../../src/xcb_io.c", line=378, 
+    function=0x7b47ce4 "_XAllocID") at assert.c:81
+	buf = 0x9ae22d8 "vlc: ../../src/xcb_io.c:378: _XAllocID: Assertion `ret != inval_id' failed.\n"
+#4  0x07ad8199 in _XAllocID (dpy=0x98afac8) at ../../src/xcb_io.c:378
+	ret = 4294967295
+	__PRETTY_FUNCTION__ = "_XAllocID"
+#5  0x07aae048 in XCreatePixmap (dpy=0x98afac8, d=157, width=2480, 
+    height=1521, depth=24) at ../../src/CrPixmap.c:58
+No locals.
+#6  0x06793b66 in QX11PixmapData::fromImage (this=0x9c979b0, img=@0xb707d8cc, 
+    flags={i = 0}) at image/qpixmap_x11.cpp:1072
+	dd = <value optimized out>
+	image = {<QPaintDevice> = {_vptr.QPaintDevice = 0x6f15510, 
+    painters = 0}, d = 0x9c98168}
+	dpy = (Display *) 0x98afac8
+	visual = (<anonymous struct> *) 0x98b0878
+	gc = <value optimized out>
+	xi = (XImage *) 0x9ae2278
+	trucol = true
+	nbytes = 15088320
+	newbits = (
+    uchar *) 0xaf8a7008 "p|\200ÿbntÿeoyÿgn}ÿhm|ÿlr}ÿlryÿntyÿYf\200ÿlm\211ÿhe\177ÿ[b{ÿYdzÿZ^vÿ\\d{ÿSi{ÿQ_rÿ^dwÿ[Vkÿj`~ÿaY~ÿWSvÿlm\201ÿbejÿi`\210ÿhWyÿt_xÿ}p\200ÿqo{ÿbixÿbi}ÿcf\202ÿvz\205ÿev\177ÿr{\204ÿgrzÿfiqÿvqzÿftzÿ_rwÿ\\boÿkp\177ÿpq\205ÿdd|ÿ]_wÿbi}ÿ]k}ÿTdtÿfh\212ÿZk~ÿ"...
+#7  0x06780597 in QPixmap::fromImage (image=@0xb707d8cc, flags={i = 0})
+    at image/qpixmap.cpp:1968
+	data = (class QPixmapData *) 0x0
+	gs = <value optimized out>
+#8  0x067835d4 in QPixmap::load (this=0xb707d994, fileName=@0xb707db34, 
+    format=0x0, flags={i = 0}) at image/qpixmap.cpp:804
+	info = {d_ptr = 0x9c95cc8}
+	key = {static null = {<No data fields>}, static shared_null = {ref = {
+      _q_value = 1636}, alloc = 0, size = 0, data = 0x3cc645a, clean = 0, 
+    simpletext = 0, righttoleft = 0, asciiCache = 0, capacity = 0, 
+    reserved = 0, array = {0}}, static shared_empty = {ref = {_q_value = 3}, 
+    alloc = 0, size = 0, data = 0x3cc646e, clean = 0, simpletext = 0, 
+    righttoleft = 0, asciiCache = 0, capacity = 0, reserved = 0, array = {
+      0}}, d = 0x9c98428, static codecForCStrings = 0x0}
+	image = {<QPaintDevice> = {_vptr.QPaintDevice = 0x6f15510, 
+    painters = 0}, d = 0x9c98168}
+	pm = {<QPaintDevice> = {_vptr.QPaintDevice = 0x6f15758, 
+    painters = 0}, data = 0x9c96070}
+#9  0x06783d85 in QPixmap (this=0xb707d994, fileName=@0xb707db34, format=0x0, 
+    flags={i = -1224222280}) at image/qpixmap.cpp:267
+No locals.
+#10 0x010617c4 in BackgroundWidget::updateArt (this=0x99e18e8, url=@0x0)
+    at components/interface_widgets.cpp:225
+No locals.
+#11 0x010ad4d8 in BackgroundWidget::qt_metacall (this=0x99e18e8, 
+    _c=QMetaObject::InvokeMetaMethod, _id=28, _a=0xb707daf8)
+    at components/interface_widgets.moc.cpp:122
+No locals.
+#12 0x03bea263 in QMetaObject::activate (sender=0x99dbf58, 
+    from_signal_index=13, to_signal_index=13, argv=0xb707daf8)
+    at kernel/qobject.cpp:3113
+	c = <value optimized out>
+	method = 28
+	currentSender = {sender = 0x99dbf58, signal = 13, ref = 1}
+	previousSender = (QObjectPrivate::Sender *) 0x0
+	i = 0
+	count = 1
+	signal = 13
+	empty_argv = {0x0}
+	locker = {{mtx = 0x98814a4, val = 159913124}}
+	currentThreadData = <value optimized out>
+	connectionLists = (QObjectConnectionListVector *) 0x99d3460
+#13 0x03beaec2 in QMetaObject::activate (sender=0x99dbf58, m=0x11293c4, 
+    local_signal_index=9, argv=0xb707daf8) at kernel/qobject.cpp:3187
+	signal_index = 6410
+#14 0x010a3c04 in InputManager::artChanged (this=0x99dbf58, _t1=
+      {static null = {<No data fields>}, static shared_null = {ref = {_q_value = 1636}, alloc = 0, size = 0, data = 0x3cc645a, clean = 0, simpletext = 0, righttoleft = 0, asciiCache = 0, capacity = 0, reserved = 0, array = {0}}, static shared_empty = {ref = {_q_value = 3}, alloc = 0, size = 0, data = 0x3cc646e, clean = 0, simpletext = 0, righttoleft = 0, asciiCache = 0, capacity = 0, reserved = 0, array = {0}}, d = 0x9c97d28, static codecForCStrings = 0x0})
+    at input_manager.moc.cpp:249
+	_a = {0x0, 0xb707db34}
+#15 0x00fa4471 in InputManager::UpdateArt (this=0x99dbf58)
+    at input_manager.cpp:606
+	url = {static null = {<No data fields>}, static shared_null = {ref = {
+      _q_value = 1636}, alloc = 0, size = 0, data = 0x3cc645a, clean = 0, 
+    simpletext = 0, righttoleft = 0, asciiCache = 0, capacity = 0, 
+    reserved = 0, array = {0}}, static shared_empty = {ref = {_q_value = 3}, 
+    alloc = 0, size = 0, data = 0x3cc646e, clean = 0, simpletext = 0, 
+    righttoleft = 0, asciiCache = 0, capacity = 0, reserved = 0, array = {
+      0}}, d = 0x9c97d28, static codecForCStrings = 0x0}
+#16 0x00fa4d71 in InputManager::customEvent (this=0x99dbf58, event=0x9aeb680)
+    at input_manager.cpp:181
+	i_type = <value optimized out>
+#17 0x03be465f in QObject::event (this=0x99dbf58, e=0x9aeb680)
+    at kernel/qobject.cpp:1142
+No locals.
+#18 0x066b1f54 in QApplicationPrivate::notify_helper (this=0x9881308, 
+    receiver=0x99dbf58, e=0x9aeb680) at kernel/qapplication.cpp:4056
+	consumed = <value optimized out>
+#19 0x066b967c in QApplication::notify (this=0xb707e320, receiver=0x99dbf58, 
+    e=0x9aeb680) at kernel/qapplication.cpp:3603
+	res = true
+#20 0x03bd46cb in QCoreApplication::notifyInternal (this=0xb707e320, 
+    receiver=0x99dbf58, event=0x9aeb680) at kernel/qcoreapplication.cpp:610
+	result = false
+	cbdata = {0x99dbf58, 0x9aeb680, 0xb707dedf}
+	threadData = (QThreadData *) 0x9881470
+	returnValue = <value optimized out>
+#21 0x03bd52b2 in QCoreApplicationPrivate::sendPostedEvents (receiver=0x0, 
+    event_type=0, data=0x9881470)
+    at ../../include/QtCore/../../src/corelib/kernel/qcoreapplication.h:213
+	pe = (const QPostEvent &) @0x9aeb5c0: {receiver = 0x99dbf58, 
+  event = 0x0, priority = 0}
+	e = (class QEvent *) 0x9aeb680
+	r = (class QObject *) 0x99dbf58
+	locker = {{mtx = 0x9881498, val = 159913112}}
+	startOffset = 0
+	i = (int &) @0x9881490: 57
+#22 0x03bd547d in QCoreApplication::sendPostedEvents (receiver=0x0, 
+    event_type=0) at kernel/qcoreapplication.cpp:1140
+	data = <value optimized out>
+#23 0x03bff3ff in postEventSourceDispatch (s=0x9884c90)
+    at ../../include/QtCore/../../src/corelib/kernel/qcoreapplication.h:218
+No locals.
+#24 0x00adde78 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#25 0x00ae1720 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#26 0x00ae1853 in g_main_context_iteration () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#27 0x03bff02c in QEventDispatcherGlib::processEvents (this=0x9881ee8, flags=
+      {i = 36}) at kernel/qeventdispatcher_glib.cpp:327
+	d = (QEventDispatcherGlibPrivate * const) 0x9881bc8
+	canWait = true
+	result = <value optimized out>
+#28 0x06752be5 in QGuiEventDispatcherGlib::processEvents (this=0x9881ee8, 
+    flags={i = 36}) at kernel/qguieventdispatcher_glib.cpp:202
+	d = (QGuiEventDispatcherGlibPrivate * const) 0x98817a8
+	returnValue = false
+#29 0x03bd2c79 in QEventLoop::processEvents (this=0xb707e224, flags=DWARF-2 expression error: DW_OP_reg operations must be used either alone or in conjuction with DW_OP_piece.
+)
+    at kernel/qeventloop.cpp:149
+	d = (QEventLoopPrivate * const) 0x99fcb98
+#30 0x03bd30ca in QEventLoop::exec (this=0xb707e224, flags={i = 0})
+    at kernel/qeventloop.cpp:201
+	d = (QEventLoopPrivate * const) 0x99fcb98
+	app = <value optimized out>
+#31 0x03bd553f in QCoreApplication::exec () at kernel/qcoreapplication.cpp:888
+	threadData = (QThreadData *) 0x9881470
+	eventLoop = {<QObject> = {_vptr.QObject = 0x3cc57a8, 
+    static staticMetaObject = {d = {superdata = 0x0, 
+        stringdata = 0x3c6dba0 "QObject", data = 0x3c6dc40, 
+        extradata = 0x3cc11b8}}, d_ptr = 0x99fcb98, 
+    static staticQtMetaObject = {d = {superdata = 0x0, 
+        stringdata = 0x3c77380 "Qt", data = 0x3c7a700, extradata = 0x0}}}, 
+  static staticMetaObject = {d = {superdata = 0x3cc11a8, 
+      stringdata = 0x3c7f7a0 "QEventLoop", data = 0x3c7f7c0, 
+      extradata = 0x0}}}
+	returnCode = -1
+#32 0x066b1dd7 in QApplication::exec () at kernel/qapplication.cpp:3525
+No locals.
+#33 0x00f87c24 in Thread (obj=0x98625c8) at qt4.cpp:467
+	p_mi = (class MainInterface *) 0x99b92d8
+	lang = {static null = {<No data fields>}, static shared_null = {
+    ref = {_q_value = 1636}, alloc = 0, size = 0, data = 0x3cc645a, 
+    clean = 0, simpletext = 0, righttoleft = 0, asciiCache = 0, capacity = 0, 
+    reserved = 0, array = {0}}, static shared_empty = {ref = {_q_value = 3}, 
+    alloc = 0, size = 0, data = 0x3cc646e, clean = 0, simpletext = 0, 
+    righttoleft = 0, asciiCache = 0, capacity = 0, reserved = 0, array = {
+      0}}, d = 0x9adb0a0, static codecForCStrings = 0x0}
+	dummy = "vlc"
+	argc = 1
+	display = 0x0
+	app = {<QApplication> = {<QCoreApplication> = {<QObject> = {
+        _vptr.QObject = 0x112fa28, static staticMetaObject = {d = {
+            superdata = 0x0, stringdata = 0x3c6dba0 "QObject", 
+            data = 0x3c6dc40, extradata = 0x3cc11b8}}, d_ptr = 0x9881308, 
+        static staticQtMetaObject = {d = {superdata = 0x0, 
+            stringdata = 0x3c77380 "Qt", data = 0x3c7a700, 
+            extradata = 0x0}}}, static staticMetaObject = {d = {
+          superdata = 0x3cc11a8, stringdata = 0x3c7f820 "QCoreApplication", 
+          data = 0x3c7f8c0, extradata = 0x0}}, static self = 0xb707e320}, 
+    static staticMetaObject = {d = {superdata = 0x3cc57e4, 
+        stringdata = 0x6d4a860 "QApplication", data = 0x6d4aa60, 
+        extradata = 0x0}}}, static staticMetaObject = {d = {
+      superdata = 0x6f13f48, stringdata = 0x10da6a0 "QVLCApp", 
+      data = 0x10da6c0, extradata = 0x0}}}
+	b_loaded = 224
+	argv = {0xb707e37c "vlc", 0x0}
+	qtTranslator = {<QObject> = {_vptr.QObject = 0x3cc5988, 
+    static staticMetaObject = {d = {superdata = 0x0, 
+        stringdata = 0x3c6dba0 "QObject", data = 0x3c6dc40, 
+        extradata = 0x3cc11b8}}, d_ptr = 0x9adbfe0, 
+    static staticQtMetaObject = {d = {superdata = 0x0, 
+        stringdata = 0x3c77380 "Qt", data = 0x3c7a700, extradata = 0x0}}}, 
+  static staticMetaObject = {d = {superdata = 0x3cc11a8, 
+      stringdata = 0x3c7fc60 "QTranslator", data = 0x3c7fc80, 
+      extradata = 0x0}}}
+	path = {static null = {<No data fields>}, static shared_null = {
+    ref = {_q_value = 1636}, alloc = 0, size = 0, data = 0x3cc645a, 
+    clean = 0, simpletext = 0, righttoleft = 0, asciiCache = 0, capacity = 0, 
+    reserved = 0, array = {0}}, static shared_empty = {ref = {_q_value = 3}, 
+    alloc = 0, size = 0, data = 0x3cc646e, clean = 0, simpletext = 0, 
+    righttoleft = 0, asciiCache = 0, capacity = 0, reserved = 0, array = {
+      0}}, d = 0x9adc058, static codecForCStrings = 0x0}
+#34 0x0045580e in start_thread () from /lib/tls/i686/cmov/libpthread.so.0
+No symbol table info available.
+#35 0x001dc7ee in clone () at ../sysdeps/unix/sysv/linux/i386/clone.S:130
+No locals.

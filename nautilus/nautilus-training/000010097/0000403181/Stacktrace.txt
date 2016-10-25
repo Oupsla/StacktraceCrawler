@@ -1,0 +1,145 @@
+#0  ubuntuone_nautilus_finalize (object=<value optimized out>)
+    at ubuntuone-nautilus.c:278
+No locals.
+#1  0x00007fb0399ee73f in IA__g_object_unref (_object=<value optimized out>)
+    at /build/buildd/glib2.0-2.21.4/gobject/gobject.c:2421
+	object = (GObject *) 0xe331b0
+	old_ref = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_object_unref"
+#2  0x00007fb03931046c in IA__g_list_foreach (list=<value optimized out>, 
+    func=0x42e200 <g_object_unref@plt>, user_data=0x0)
+    at /build/buildd/glib2.0-2.21.4/glib/glist.c:789
+	next = (GList *) 0x1429f40
+#3  0x0000000000525c99 in eel_g_object_list_free (list=0xe331b0)
+    at eel-glib-extensions.c:802
+No locals.
+#4  0x00000000004d525a in finalize (object=0xe21680) at nautilus-file.c:818
+	directory = (NautilusDirectory *) 0xe1e010
+	file = (NautilusFile *) 0xe21680
+	uri = <value optimized out>
+	__PRETTY_FUNCTION__ = "finalize"
+#5  0x00007fb0399ee73f in IA__g_object_unref (_object=<value optimized out>)
+    at /build/buildd/glib2.0-2.21.4/gobject/gobject.c:2421
+	object = (GObject *) 0xe21680
+	old_ref = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_object_unref"
+#6  0x00000000004a4a1e in nautilus_bookmark_disconnect_file (
+    bookmark=0x1446010) at nautilus-bookmark.c:486
+	__PRETTY_FUNCTION__ = "nautilus_bookmark_disconnect_file"
+#7  0x00000000004a53d3 in nautilus_bookmark_finalize (object=0x1446010)
+    at nautilus-bookmark.c:78
+	bookmark = (NautilusBookmark *) 0x1446010
+	__PRETTY_FUNCTION__ = "nautilus_bookmark_finalize"
+#8  0x00007fb0399ee73f in IA__g_object_unref (_object=<value optimized out>)
+    at /build/buildd/glib2.0-2.21.4/gobject/gobject.c:2421
+	object = (GObject *) 0x1446010
+	old_ref = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_object_unref"
+#9  0x00007fb03931046c in IA__g_list_foreach (list=<value optimized out>, 
+    func=0x42e200 <g_object_unref@plt>, user_data=0x0)
+    at /build/buildd/glib2.0-2.21.4/glib/glist.c:789
+	next = (GList *) 0x0
+#10 0x0000000000525c99 in eel_g_object_list_free (list=0xe331b0)
+    at eel-glib-extensions.c:802
+No locals.
+#11 0x000000000043463e in clear (bookmarks=0xe8b410)
+    at nautilus-bookmark-list.c:207
+No locals.
+#12 0x00007fb0399ec67e in IA__g_closure_invoke (closure=0xda4d00, 
+    return_value=0x0, n_param_values=1, param_values=0xe96920, 
+    invocation_hint=0x7fff9cc19f00)
+    at /build/buildd/glib2.0-2.21.4/gobject/gclosure.c:767
+	marshal = (GClosureMarshal) 0xe331b0
+	marshal_data = (gpointer) 0x1
+	__PRETTY_FUNCTION__ = "IA__g_closure_invoke"
+#13 0x00007fb039a02bb6 in signal_emit_unlocked_R (node=0xda4d90, 
+    detail=<value optimized out>, instance=<value optimized out>, 
+    emission_return=<value optimized out>, 
+    instance_and_params=<value optimized out>)
+    at /build/buildd/glib2.0-2.21.4/gobject/gsignal.c:3363
+	need_unset = 0
+	accumulator = (SignalAccumulator *) 0x0
+	emission = {next = 0x0, instance = 0xe8b410, ihint = {signal_id = 11, 
+    detail = 0, run_type = G_SIGNAL_RUN_CLEANUP}, state = EMISSION_STOP, 
+  chain_type = 14987936}
+	class_closure = (GClosure *) 0xda4d00
+	handler_list = (Handler *) 0x0
+	return_accu = <value optimized out>
+	accu = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, 
+      v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, 
+      v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, 
+      v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+	signal_id = 11
+	max_sequential_handler_number = 0
+	return_value_altered = 0
+#14 0x00007fb039a03c9e in IA__g_signal_emit_valist (instance=0xe8b410, 
+    signal_id=<value optimized out>, detail=0, var_args=0x7fff9cc1a0f0)
+    at /build/buildd/glib2.0-2.21.4/gobject/gsignal.c:2980
+	signal_return_type = 4
+	param_values = <value optimized out>
+	node = (SignalNode *) 0xda4d90
+	i = <value optimized out>
+	n_params = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_signal_emit_valist"
+#15 0x00007fb039a04223 in IA__g_signal_emit (instance=0xe331b0, 
+    signal_id=17517216, detail=0)
+    at /build/buildd/glib2.0-2.21.4/gobject/gsignal.c:3037
+	var_args = {{gp_offset = 24, fp_offset = 48, 
+    overflow_arg_area = 0x7fff9cc1a1d0, reg_save_area = 0x7fff9cc1a110}}
+#16 0x00007fb03ac1d3de in gtk_object_dispose (gobject=0xe8b410)
+    at /build/buildd/gtk+2.0-2.17.5/gtk/gtkobject.c:421
+No locals.
+#17 0x00007fb0399ee6c1 in IA__g_object_unref (_object=<value optimized out>)
+    at /build/buildd/glib2.0-2.21.4/gobject/gobject.c:2393
+	object = (GObject *) 0xe8b410
+	old_ref = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_object_unref"
+#18 0x0000000000515658 in eel_debug_shut_down () at eel-debug.c:109
+	f = (ShutdownFunction *) 0xee8de0
+#19 0x000000000044336c in main (argc=1, argv=0x7fff9cc1a5b8)
+    at nautilus-main.c:558
+	kill_shell = 0
+	no_default_window = 1
+	browser_window = 0
+	no_desktop = 0
+	version = 0
+	autostart_mode = 1
+	autostart_id = <value optimized out>
+	geometry = (gchar *) 0x0
+	remaining = (const gchar **) 0x0
+	perform_self_check = 0
+	application = <value optimized out>
+	context = <value optimized out>
+	file = (GFile *) 0x1
+	uri = <value optimized out>
+	uris = (char **) 0x0
+	uris_array = <value optimized out>
+	error = (GError *) 0x0
+	options = {{long_name = 0x54a4d9 "check", short_name = 99 'c', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x7fff9cc1a4b8, 
+    description = 0x54a520 "Perform a quick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x54a40f "version", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x7fff9cc1a4bc, 
+    description = 0x54a550 "Show the version of the program.", 
+    arg_description = 0x0}, {long_name = 0x54e3f3 "geometry", 
+    short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+    arg_data = 0x7fff9cc1a4b0, 
+    description = 0x54a578 "Create the initial window with the given geometry.", arg_description = 0x54a417 "GEOMETRY"}, {
+    long_name = 0x54a420 "no-default-window", short_name = 110 'n', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x7fff9cc1a4c8, 
+    description = 0x54a5b0 "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {long_name = 0x54a432 "no-desktop", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x7fff9cc1a4c0, 
+    description = 0x54a5e8 "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {
+    long_name = 0x546de6 "browser", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0x7fff9cc1a4c4, 
+    description = 0x54a43d "open a browser window.", arg_description = 0x0}, {
+    long_name = 0x56b6f1 "quit", short_name = 113 'q', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0x7fff9cc1a4cc, 
+    description = 0x54a454 "Quit Nautilus.", arg_description = 0x0}, {
+    long_name = 0x54f841 "", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0x7fff9cc1a4a8, 
+    description = 0x0, arg_description = 0x54a463 "[URI...]"}, {
+    long_name = 0x0, short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x0, description = 0x0, arg_description = 0x0}}

@@ -1,0 +1,508 @@
+#0  IA__g_type_check_instance_cast (type_instance=0x9610e90, iface_type=148881152)
+    at /build/buildd/glib2.0-2.16.1/gobject/gtype.c:3177
+	node = <value optimized out>
+	iface = <value optimized out>
+#1  0xb68b32ab in volumes_drives_changed (volume_monitor=0x8d77598, volume=0x9383900, user_data=0x9610e90)
+    at gtkfilesystemgio.c:398
+No locals.
+#2  0xb77c0f5a in IA__g_cclosure_marshal_VOID__OBJECT (closure=0x97405e8, return_value=0x0, n_param_values=2, 
+    param_values=0xbfdb5a14, invocation_hint=0xbfdb591c, marshal_data=0xb68b3280)
+    at /build/buildd/glib2.0-2.16.1/gobject/gmarshal.c:636
+	data1 = (gpointer) 0x8d77598
+	data2 = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_cclosure_marshal_VOID__OBJECT"
+#3  0xb77b4759 in IA__g_closure_invoke (closure=0x97405e8, return_value=0x0, n_param_values=2, 
+    param_values=0xbfdb5a14, invocation_hint=0xbfdb591c) at /build/buildd/glib2.0-2.16.1/gobject/gclosure.c:490
+	marshal = (GClosureMarshal) 0x8066d10 <g_cclosure_marshal_VOID__OBJECT@plt>
+	marshal_data = (gpointer) 0x0
+	__PRETTY_FUNCTION__ = "IA__g_closure_invoke"
+#4  0xb77c8d1d in signal_emit_unlocked_R (node=0x8dfdd68, detail=0, instance=0x8d77598, emission_return=0x0, 
+    instance_and_params=0xbfdb5a14) at /build/buildd/glib2.0-2.16.1/gobject/gsignal.c:2440
+	tmp = <value optimized out>
+	handler = (Handler *) 0x90067c0
+	accumulator = (SignalAccumulator *) 0x0
+	emission = {next = 0xbfdb5e84, instance = 0x8d77598, ihint = {signal_id = 363, detail = 0, 
+    run_type = G_SIGNAL_RUN_FIRST}, state = EMISSION_RUN, chain_type = 4}
+	class_closure = (GClosure *) 0x8dfb000
+	handler_list = (Handler *) 0x92c56c0
+	return_accu = (GValue *) 0x0
+	accu = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, 
+      v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, 
+      v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+	signal_id = 363
+	max_sequential_handler_number = 50385
+	return_value_altered = 1
+#5  0xb77ca916 in IA__g_signal_emit_valist (instance=0xb68b61dc, signal_id=363, detail=0, 
+    var_args=0xbfdb5c5c "Sizeévßµ\200V~·\230\\Û¿Z\017|· u×\b")
+    at /build/buildd/glib2.0-2.16.1/gobject/gsignal.c:2199
+	_flags = <value optimized out>
+	_vtable = <value optimized out>
+	_cvalues = {{v_int = 0, v_long = 0, v_int64 = 4121175232528515072, v_double = 3.3425710838089615e-33, 
+    v_pointer = 0x0}, {v_int = 959543346, v_long = 959543346, v_int64 = 2792688285746, 
+    v_double = 1.3797713415303812e-311, v_pointer = 0x39317832}, {v_int = 149229032, v_long = 149229032, 
+    v_int64 = 6733837399708995048, v_double = 1.4782760373118197e+142, v_pointer = 0x8e50de8}, {
+    v_int = 2053722890, v_long = 2053722890, v_int64 = 4121142640075428618, v_double = 3.3202704224522102e-33, 
+    v_pointer = 0x7a69530a}, {v_int = 1866664498, v_long = 1866664498, v_int64 = 8675468274861017650, 
+    v_double = 9.0675670732824668e+271, v_pointer = 0x6f430a32}, {v_int = 1766669684, v_long = 1766669684, 
+    v_int64 = 8742724297225485684, v_double = 2.8246543706280918e+276, v_pointer = 0x694d3d74}, {
+    v_int = 175334768, v_long = 175334768, v_int64 = 7309475597081863536, v_double = 4.2724290467465851e+180, 
+    v_pointer = 0xa736570}, {v_int = 1919439933, v_long = 1919439933, v_int64 = 8027793215336240189, 
+    v_double = 4.633820517957841e+228, v_pointer = 0x7268543d}}
+	_lcopy_format = <value optimized out>
+	_n_values = <value optimized out>
+	return_value = {g_type = 959543346, data = {{v_int = 1953705778, v_uint = 1953705778, 
+      v_long = 1953705778, v_ulong = 1953705778, v_int64 = 8319683848551214898, 
+      v_uint64 = 8319683848551214898, v_float = 7.70681989e+31, v_double = 1.5000892893599766e+248, 
+      v_pointer = 0x74732f32}, {v_int = 1767049821, v_uint = 1767049821, v_long = 1767049821, 
+      v_ulong = 1767049821, v_int64 = -5229037554861143459, v_uint64 = 13217706518848408157, 
+      v_float = 1.59457679e+25, v_double = -1.1022681658302747e-41, v_pointer = 0x69530a5d}}}
+	error = <value optimized out>
+	instance_and_params = (GValue *) 0xbfdb5a14
+	stack_values = {{g_type = 148876504, data = {{v_int = 148338072, v_uint = 148338072, 
+        v_long = 148338072, v_ulong = 148338072, v_int64 = 148338072, v_uint64 = 148338072, 
+        v_float = 1.2967488e-33, v_double = 7.328874534552533e-316, v_pointer = 0x8d77598}, {v_int = 0, 
+        v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, 
+        v_pointer = 0x0}}}, {g_type = 148877448, data = {{v_int = 154679552, v_uint = 154679552, 
+        v_long = 154679552, v_ulong = 154679552, v_int64 = 154679552, v_uint64 = 154679552, 
+        v_float = 2.21749956e-33, v_double = 7.6421852757314679e-316, v_pointer = 0x9383900}, {v_int = 0, 
+        v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, 
+        v_pointer = 0x0}}}, {g_type = 1030060649, data = {{v_int = 171063601, v_uint = 171063601, 
+        v_long = 171063601, v_ulong = 171063601, v_int64 = 8389765489562368305, 
+        v_uint64 = 8389765489562368305, v_float = 8.58114476e-33, v_double = 6.9729125069579754e+252, 
+        v_pointer = 0xa323931}, {v_int = 1031043173, v_uint = 1031043173, v_long = 1031043173, 
+        v_ulong = 1031043173, v_int64 = 7599372764997515365, v_uint64 = 7599372764997515365, 
+        v_float = 0.0596851297, v_double = 1.0714189102058209e+200, v_pointer = 0x3d747865}}}, {
+    g_type = 175334755, data = {{v_int = 1701869908, v_uint = 1701869908, v_long = 1701869908, 
+        v_ulong = 1701869908, v_int64 = 8243931740573301076, v_uint64 = 8243931740573301076, 
+        v_float = 7.0975379e+22, v_double = 1.2978122834943867e+243, v_pointer = 0x65707954}, {
+        v_int = 1869116261, v_uint = 1869116261, v_long = 1869116261, v_ulong = 1869116261, 
+        v_int64 = 723501107034747749, v_uint64 = 723501107034747749, v_float = 7.19400257e+28, 
+        v_double = 2.6820734226790062e-260, v_pointer = 0x6f687365}}}, {g_type = 842608987, data = {{
+        v_int = 842609016, v_uint = 842609016, v_long = 842609016, v_ulong = 842609016, 
+        v_int64 = 7092436241558876536, v_uint64 = 7092436241558876536, v_float = 1.07796652e-08, 
+        v_double = 1.3542062289651027e+166, v_pointer = 0x32393178}, {v_int = 1936549228, v_uint = 1936549228, 
+        v_long = 1936549228, v_ulong = 1936549228, v_int64 = 7589421193534203244, 
+        v_uint64 = 7589421193534203244, v_float = 1.88084631e+31, v_double = 2.2772737080486268e+199, 
+        v_pointer = 0x736d656c}}}, {g_type = 826107258, data = {{v_int = 1124741689, v_uint = 1124741689, 
+        v_long = 1124741689, v_ulong = 1124741689, v_int64 = 7310589519274324537, 
+        v_uint64 = 7310589519274324537, v_float = 138.196182, v_double = 5.2987719418937157e+180, 
+        v_pointer = 0x430a3239}, {v_int = 1161655416, v_uint = 1161655416, v_long = 1161655416, 
+        v_ulong = 1161655416, v_int64 = 7308324516768085112, v_uint64 = 7308324516768085112, 
+        v_float = 3031.2793, v_double = 3.6806825309398191e+180, v_pointer = 0x453d7478}}}, {
+    g_type = 1409971053, data = {{v_int = 1030058105, v_uint = 1030058105, v_long = 1030058105, 
+        v_ulong = 1030058105, v_int64 = 7310019856192335993, v_uint64 = 7310019856192335993, 
+        v_float = 0.0560154654, v_double = 4.773897169864224e+180, v_pointer = 0x3d657079}, {
+        v_int = -1217485519, v_uint = 3077481777, v_long = -1217485519, v_ulong = 3077481777, 
+        v_int64 = 6560067234909037873, v_uint64 = 6560067234909037873, v_float = -1.42243671e-05, 
+        v_double = 3.6100990265003525e+130, v_pointer = 0xb76ea531}}}, {g_type = 2016557361, data = {{
+        v_int = 791820593, v_uint = 791820593, v_long = 791820593, v_ulong = 791820593, 
+        v_int64 = 8390044912165468465, v_uint64 = 8390044912165468465, v_float = 1.62093242e-10, 
+        v_double = 7.2003531747246656e+252, v_pointer = 0x2f323931}, {v_int = -1217046220, 
+        v_uint = 3077921076, v_long = -1217046220, v_ulong = 3077921076, v_int64 = -5340779318258345676, 
+        v_uint64 = 13105964755451205940, v_float = -1.46239072e-05, v_double = -3.7932433916820397e-49, 
+        v_pointer = 0xb7755934}}}, {g_type = 3051470209, data = {{v_int = 1852785418, v_uint = 1852785418, 
+        v_long = 1852785418, v_ulong = 1852785418, v_int64 = 8392569456348316426, 
+        v_uint64 = 8392569456348316426, v_float = 1.85119907e+28, v_double = 1.1178936264599302e+253, 
+        v_pointer = 0x6e6f430a}, {v_int = 1869432125, v_uint = 1869432125, v_long = 1869432125, 
+        v_ulong = 1869432125, v_int64 = -5229037554758761155, v_uint64 = 13217706518950790461, 
+        v_float = 7.34316513e+28, v_double = -1.1022681788786284e-41, v_pointer = 0x6f6d453d}}}, {
+    g_type = 3218823912, data = {{v_int = -1217243405, v_uint = 3077723891, v_long = -1217243405, 
+        v_ulong = 3077723891, v_int64 = 7372691187, v_uint64 = 7372691187, v_float = -1.44445685e-05, 
+        v_double = 3.6425934328932216e-314, v_pointer = 0xb77256f3}, {v_int = -1243497087, 
+        v_uint = 3051470209, v_long = -1243497087, v_ulong = 3051470209, v_int64 = 3618978045532159361, 
+        v_uint64 = 3618978045532159361, v_float = -1.68189592e-06, v_double = 9.3445309635945333e-67, 
+        v_pointer = 0xb5e1bd81}}}, {g_type = 3078264456, data = {{v_int = -1217479184, v_uint = 3077488112, 
+        v_long = -1217479184, v_ulong = 3077488112, v_int64 = 593812698134658544, 
+        v_uint64 = 593812698134658544, v_float = -1.42301287e-05, v_double = 5.611736173892161e-269, 
+        v_pointer = 0xb76ebdf0}, {v_int = -1076143336, v_uint = 3218823960, v_long = -1076143336, 
+        v_ulong = 3218823960, v_int64 = -5228145445752317160, v_uint64 = 13218598627957234456, 
+        v_float = -1.71371746, v_double = -1.2839865185046605e-41, v_pointer = 0xbfdb5b18}}}, {
+    g_type = 3078265616, data = {{v_int = -1243497087, v_uint = 3051470209, v_long = -1243497087, 
+        v_ulong = 3051470209, v_int64 = 7310589521201053057, v_uint64 = 7310589521201053057, 
+        v_float = -1.68189592e-06, v_double = 5.2987737171381096e+180, v_pointer = 0xb5e1bd81}, {
+        v_int = 1178432632, v_uint = 1178432632, v_long = 1178432632, v_ulong = 1178432632, 
+        v_int64 = 6009328477201593464, v_uint64 = 6009328477201593464, v_float = 12125.1172, 
+        v_double = 5.5859714902531569e+93, v_pointer = 0x463d7478}}}, {g_type = 1702130553, data = {{
+        v_int = 5703, v_uint = 5703, v_long = 5703, v_ulong = 5703, v_int64 = -5224643409947388345, 
+        v_uint64 = 13222100663762163271, v_float = 7.99160514e-42, v_double = -2.176636904637192e-41, 
+        v_pointer = 0x1647}, {v_int = -1217485536, v_uint = 3077481760, v_long = -1217485536, 
+        v_ulong = 3077481760, v_int64 = 2897885439264, v_uint64 = 2897885439264, v_float = -1.42243516e-05, 
+        v_double = 1.4317456411239126e-311, v_pointer = 0xb76ea520}}}, {g_type = 3218824200, data = {{
+        v_int = -1216583715, v_uint = 3078383581, v_long = -1216583715, v_ulong = 3078383581, 
+        v_int64 = -4621999674935711779, v_uint64 = 13824744398773839837, v_float = -1.5044553e-05, 
+        v_double = -0.42747705381918683, v_pointer = 0xb77c67dd}, {v_int = 149237120, v_uint = 149237120, 
+        v_long = 149237120, v_ulong = 149237120, v_int64 = 7589421191746891136, 
+        v_uint64 = 7589421191746891136, v_float = 1.37931332e-33, v_double = 2.2772729486011344e+199, 
+        v_pointer = 0x8e52d80}}}, {g_type = 826107258, data = {{v_int = 1124741689, v_uint = 1124741689, 
+        v_long = 1124741689, v_ulong = 1124741689, v_int64 = 7310589519274324537, 
+        v_uint64 = 7310589519274324537, v_float = 138.196182, v_double = 5.2987719418937157e+180, 
+        v_pointer = 0x430a3239}, {v_int = 1228764280, v_uint = 1228764280, v_long = 1228764280, 
+        v_ulong = 1228764280, v_int64 = 8243122709995549816, v_uint64 = 8243122709995549816, 
+        v_float = 776007.5, v_double = 1.1444877462405627e+243, v_pointer = 0x493d7478}}}, {
+    g_type = 3218824136, data = {{v_int = 1818324591, v_uint = 1818324591, v_long = 1818324591, 
+        v_ulong = 1818324591, v_int64 = 8104601408174648943, v_uint64 = 8104601408174648943, 
+        v_float = 1.09011927e+27, v_double = 6.291619077001744e+233, v_pointer = 0x6c616e6f}, {
+        v_int = -1076143048, v_uint = 3218824248, v_long = -1076143048, v_ulong = 3218824248, 
+        v_int64 = 639419719041637432, v_uint64 = 639419719041637432, v_float = -1.71375179, 
+        v_double = 6.1396408250315654e-266, v_pointer = 0xbfdb5c38}}}}
+	free_me = (GValue *) 0x0
+	signal_return_type = 4
+	param_values = (GValue *) 0xbfdb5a28
+	node = (SignalNode *) 0x8dfdd68
+	i = 1
+	n_params = 1
+	__PRETTY_FUNCTION__ = "IA__g_signal_emit_valist"
+#6  0xb77cabd2 in IA__g_signal_emit_by_name (instance=0x8d77598, detailed_signal=0xb5e1bd81 "mount_added")
+    at /build/buildd/glib2.0-2.16.1/gobject/gsignal.c:2267
+	var_args = 0xbfdb5c58 ""
+	detail = 0
+	signal_id = 363
+	__PRETTY_FUNCTION__ = "IA__g_signal_emit_by_name"
+#7  0xb5df770e in child_mount_added (child_monitor=0x8d77520, child_mount=0x9383900, union_monitor=0x8d77598)
+    at /build/buildd/glib2.0-2.16.1/gio/gunionvolumemonitor.c:283
+No locals.
+#8  0xb77c0f5a in IA__g_cclosure_marshal_VOID__OBJECT (closure=0x8e255b0, return_value=0x0, n_param_values=2, 
+    param_values=0xbfdb5f84, invocation_hint=0xbfdb5e8c, marshal_data=0xb5df76e0)
+    at /build/buildd/glib2.0-2.16.1/gobject/gmarshal.c:636
+	data1 = (gpointer) 0x8d77520
+	data2 = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_cclosure_marshal_VOID__OBJECT"
+#9  0xb77b4759 in IA__g_closure_invoke (closure=0x8e255b0, return_value=0x0, n_param_values=2, 
+    param_values=0xbfdb5f84, invocation_hint=0xbfdb5e8c) at /build/buildd/glib2.0-2.16.1/gobject/gclosure.c:490
+	marshal = (GClosureMarshal) 0x8066d10 <g_cclosure_marshal_VOID__OBJECT@plt>
+	marshal_data = (gpointer) 0x0
+	__PRETTY_FUNCTION__ = "IA__g_closure_invoke"
+#10 0xb77c8d1d in signal_emit_unlocked_R (node=0x8dfdd68, detail=0, instance=0x8d77520, emission_return=0x0, 
+    instance_and_params=0xbfdb5f84) at /build/buildd/glib2.0-2.16.1/gobject/gsignal.c:2440
+	tmp = <value optimized out>
+	handler = (Handler *) 0x8df4800
+	accumulator = (SignalAccumulator *) 0x0
+	emission = {next = 0xbfdb63f4, instance = 0x8d77520, ihint = {signal_id = 363, detail = 0, 
+    run_type = G_SIGNAL_RUN_FIRST}, state = EMISSION_RUN, chain_type = 4}
+	class_closure = (GClosure *) 0x8dfb000
+	handler_list = (Handler *) 0x8df4800
+	return_accu = (GValue *) 0x0
+	accu = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, 
+      v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, 
+      v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+	signal_id = 363
+	max_sequential_handler_number = 50385
+	return_value_altered = 0
+#11 0xb77ca916 in IA__g_signal_emit_valist (instance=0xb68b61dc, signal_id=363, detail=0, 
+    var_args=0xbfdb61cc "\200V~·0Î×µÀ%à\b\bbÛ¿\n\020|· u×\bÈ²\"\t")
+    at /build/buildd/glib2.0-2.16.1/gobject/gsignal.c:2199
+	_flags = <value optimized out>
+	_vtable = <value optimized out>
+	_cvalues = {{v_int = 0, v_long = 0, v_int64 = -5229060487458586624, 
+    v_double = -1.0993454669912377e-41, v_pointer = 0x0}, {v_int = 9600, v_long = 9600, 
+    v_int64 = 2791728752000, v_double = 1.3792972688704572e-311, v_pointer = 0x2580}, {v_int = 149229032, 
+    v_long = 149229032, v_int64 = -4621994042867773976, v_double = -0.42778969639422693, 
+    v_pointer = 0x8e50de8}, {v_int = 9600, v_long = 9600, v_int64 = 4294976896, 
+    v_double = 2.1220005339954724e-314, v_pointer = 0x2580}, {v_int = -1217480180, v_long = -1217480180, 
+    v_int64 = -4621993696342132212, v_double = -0.4278089324315324, v_pointer = 0xb76eba0c}, {
+    v_int = -1217070903, v_long = -1217070903, v_int64 = 7372863689, v_double = 3.6426786602052605e-314, 
+    v_pointer = 0xb774f8c9}, {v_int = -1217480180, v_long = -1217480180, v_int64 = -4621993833781085684, 
+    v_double = -0.42780130303700115, v_pointer = 0xb76eba0c}, {v_int = -1216702840, v_long = -1216702840, 
+    v_int64 = 7373231752, v_double = 3.6428605074890658e-314, v_pointer = 0xb77a9688}}
+	_lcopy_format = <value optimized out>
+	_n_values = <value optimized out>
+	return_value = {g_type = 3077487116, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, 
+      v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 1, v_uint = 1, 
+      v_long = 1, v_ulong = 1, v_int64 = -5229037556628193279, v_uint64 = 13217706517081358337, 
+      v_float = 1.40129846e-45, v_double = -1.1022679406244528e-41, v_pointer = 0x1}}}
+	error = <value optimized out>
+	instance_and_params = (GValue *) 0xbfdb5f84
+	stack_values = {{g_type = 148904520, data = {{v_int = 148337952, v_uint = 148337952, 
+        v_long = 148337952, v_ulong = 148337952, v_int64 = 148337952, v_uint64 = 148337952, 
+        v_float = 1.29673778e-33, v_double = 7.3288686057647829e-316, v_pointer = 0x8d77520}, {v_int = 0, 
+        v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, 
+        v_pointer = 0x0}}}, {g_type = 148877448, data = {{v_int = 154679552, v_uint = 154679552, 
+        v_long = 154679552, v_ulong = 154679552, v_int64 = 154679552, v_uint64 = 154679552, 
+        v_float = 2.21749956e-33, v_double = 7.6421852757314679e-316, v_pointer = 0x9383900}, {v_int = 0, 
+        v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, 
+        v_pointer = 0x0}}}, {g_type = 3078510208, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, 
+        v_int64 = -5224640094232641536, v_uint64 = 13222103979476910080, v_float = 0, 
+        v_double = -2.1774820627720343e-41, v_pointer = 0x0}, {v_int = -1076141880, v_uint = 3218825416, 
+        v_long = -1076141880, v_ulong = 3218825416, v_int64 = -5225389734605659960, 
+        v_uint64 = 13221354339103891656, v_float = -1.71389103, v_double = -1.9864027004497998e-41, 
+        v_pointer = 0xbfdb60c8}}}, {g_type = 0, data = {{v_int = 54, v_uint = 54, v_long = 54, v_ulong = 54, 
+        v_int64 = 54, v_uint64 = 54, v_float = 7.56701171e-44, v_double = 2.6679544875427313e-322, 
+        v_pointer = 0x36}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 639198954503798784, 
+        v_uint64 = 639198954503798784, v_float = 0, v_double = 5.9876164025398335e-266, v_pointer = 0x0}}}, {
+    g_type = 0, data = {{v_int = -1218446207, v_uint = 3076521089, v_long = -1218446207, v_ulong = 3076521089, 
+        v_int64 = -5229003773633889151, v_uint64 = 13217740300075662465, v_float = -1.33506264e-05, 
+        v_double = -1.106573493821232e-41, v_pointer = 0xb75ffc81}, {v_int = -1214971432, v_uint = 3079995864, 
+        v_long = -1214971432, v_ulong = 3079995864, v_int64 = 692401645192282584, 
+        v_uint64 = 692401645192282584, v_float = -1.77630427e-05, v_double = 2.2154535206698712e-262, 
+        v_pointer = 0xb79501d8}}}, {g_type = 3218825208, data = {{v_int = -1214980395, v_uint = 3079986901, 
+        v_long = -1214980395, v_ulong = 3079986901, v_int64 = 3079986901, v_uint64 = 3079986901, 
+        v_float = -1.77467391e-05, v_double = 1.5217157174251445e-314, v_pointer = 0xb794ded5}, {v_int = 0, 
+        v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = -5233197262519140352, v_uint64 = 13213546811190411264, 
+        v_float = 0, v_double = -5.7304814350363721e-42, v_pointer = 0x0}}}, {g_type = 0, data = {{
+        v_int = 16777688, v_uint = 16777688, v_long = 16777688, v_ulong = 16777688, 
+        v_int64 = -5229240536765824552, v_uint64 = 13217503536943727064, v_float = 2.35112098e-38, 
+        v_double = -1.0763986593939781e-41, v_pointer = 0x10001d8}, {v_int = -1217485519, v_uint = 3077481777, 
+        v_long = -1217485519, v_ulong = 3077481777, v_int64 = 71796958513, v_uint64 = 71796958513, 
+        v_float = -1.42243671e-05, v_double = 3.5472410677162529e-313, v_pointer = 0xb76ea531}}}, {g_type = 2, 
+    data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 641928079802892288, 
+        v_uint64 = 641928079802892288, v_float = 0, v_double = 9.5313309209837905e-266, v_pointer = 0x0}, {
+        v_int = -1217046220, v_uint = 3077921076, v_long = -1217046220, v_ulong = 3077921076, 
+        v_int64 = -5340779318258345676, v_uint64 = 13105964755451205940, v_float = -1.46239072e-05, 
+        v_double = -3.7932433916820397e-49, v_pointer = 0xb7755934}}}, {g_type = 3050902756, data = {{
+        v_int = -1076142024, v_uint = 3218825272, v_long = -1076142024, v_ulong = 3218825272, 
+        v_int64 = -5218301058587336648, v_uint64 = 13228443015122214968, v_float = -1.71387386, 
+        v_double = -5.9895251382749371e-41, v_pointer = 0xbfdb6038}, {v_int = 1, v_uint = 1, v_long = 1, 
+        v_ulong = 1, v_int64 = -5229037556628193279, v_uint64 = 13217706517081358337, 
+        v_float = 1.40129846e-45, v_double = -1.1022679406244528e-41, v_pointer = 0x1}}}, {
+    g_type = 3218825304, data = {{v_int = -1217243405, v_uint = 3077723891, v_long = -1217243405, 
+        v_ulong = 3077723891, v_int64 = 7372691187, v_uint64 = 7372691187, v_float = -1.44445685e-05, 
+        v_double = 3.6425934328932216e-314, v_pointer = 0xb77256f3}, {v_int = -1244064540, 
+        v_uint = 3050902756, v_long = -1244064540, v_ulong = 3050902756, v_int64 = -5229060484407683868, 
+        v_uint64 = 13217683589301867748, v_float = -1.61738399e-06, v_double = -1.0993458558207179e-41, 
+        v_pointer = 0xb5d914e4}}}, {g_type = 3078264456, data = {{v_int = -1217479184, v_uint = 3077488112, 
+        v_long = -1217479184, v_ulong = 3077488112, v_int64 = 593812698134658544, 
+        v_uint64 = 593812698134658544, v_float = -1.42301287e-05, v_double = 5.611736173892161e-269, 
+        v_pointer = 0xb76ebdf0}, {v_int = -1076141944, v_uint = 3218825352, v_long = -1076141944, 
+        v_ulong = 3218825352, v_int64 = -5228145445752315768, v_uint64 = 13218598627957235848, 
+        v_float = -1.7138834, v_double = -1.2839865185050154e-41, v_pointer = 0xbfdb6088}}}, {
+    g_type = 3078265616, data = {{v_int = -1244064540, v_uint = 3050902756, v_long = -1244064540, 
+        v_ulong = 3050902756, v_int64 = -5229240739890129692, v_uint64 = 13217503333819421924, 
+        v_float = -1.61738399e-06, v_double = -1.0763727717389803e-41, v_pointer = 0xb5d914e4}, {
+        v_int = 155323080, v_uint = 155323080, v_long = 155323080, v_ulong = 155323080, 
+        v_int64 = -5229240708425971000, v_uint64 = 13217503365283580616, v_float = 2.33569699e-33, 
+        v_double = -1.0763767817627165e-41, v_pointer = 0x9420ac8}}}, {g_type = 3077487116, data = {{
+        v_int = 5703, v_uint = 5703, v_long = 5703, v_ulong = 5703, v_int64 = -5224643409947388345, 
+        v_uint64 = 13222100663762163271, v_float = 7.99160514e-42, v_double = -2.176636904637192e-41, 
+        v_pointer = 0x1647}, {v_int = -1217485536, v_uint = 3077481760, v_long = -1217485536, 
+        v_ulong = 3077481760, v_int64 = 2897885439264, v_uint64 = 2897885439264, v_float = -1.42243516e-05, 
+        v_double = 1.4317456411239126e-311, v_pointer = 0xb76ea520}}}, {g_type = 3218825592, data = {{
+        v_int = -1216583715, v_uint = 3078383581, v_long = -1216583715, v_ulong = 3078383581, 
+        v_int64 = -4621993696341235747, v_uint64 = 13824750377368315869, v_float = -1.5044553e-05, 
+        v_double = -0.4278089324812962, v_pointer = 0xb77c67dd}, {v_int = 149237120, v_uint = 149237120, 
+        v_long = 149237120, v_ulong = 149237120, v_int64 = -4621994180306719360, 
+        v_uint64 = 13824749893402832256, v_float = 1.37931332e-33, v_double = -0.42778206700014465, 
+        v_pointer = 0x8e52d80}}}, {g_type = 9600, data = {{v_int = -1217479184, v_uint = 3077488112, 
+        v_long = -1217479184, v_ulong = 3077488112, v_int64 = -5229037553550705168, 
+        v_uint64 = 13217706520158846448, v_float = -1.42301287e-05, v_double = -1.1022683328421661e-41, 
+        v_pointer = 0xb76ebdf0}, {v_int = -1217485519, v_uint = 3077481777, v_long = -1217485519, 
+        v_ulong = 3077481777, v_int64 = -5228020921906846415, v_uint64 = 13218723151802705201, 
+        v_float = -1.42243671e-05, v_double = -1.3157269874586688e-41, v_pointer = 0xb76ea531}}}, {
+    g_type = 3218825528, data = {{v_int = -1217531916, v_uint = 3077435380, v_long = -1217531916, 
+        v_ulong = 3077435380, v_int64 = -5229060484381151244, v_uint64 = 13217683589328400372, 
+        v_float = -1.41821693e-05, v_double = -1.0993458592022306e-41, v_pointer = 0xb76deff4}, {
+        v_int = -1076141656, v_uint = 3218825640, v_long = -1076141656, v_ulong = 3218825640, 
+        v_int64 = 639540046845403560, v_uint64 = 639540046845403560, v_float = -1.71391773, 
+        v_double = 6.24240295449323e-266, v_pointer = 0xbfdb61a8}}}}
+	free_me = (GValue *) 0x0
+	signal_return_type = 4
+	param_values = (GValue *) 0xbfdb5f98
+	node = (SignalNode *) 0x8dfdd68
+	i = 1
+	n_params = 1
+	__PRETTY_FUNCTION__ = "IA__g_signal_emit_valist"
+#12 0xb77cabd2 in IA__g_signal_emit_by_name (instance=0x8d77520, detailed_signal=0xb5d914e4 "mount_added")
+    at /build/buildd/glib2.0-2.16.1/gobject/gsignal.c:2267
+	var_args = 0xbfdb61c8 ""
+	detail = 0
+	signal_id = 363
+	__PRETTY_FUNCTION__ = "IA__g_signal_emit_by_name"
+#13 0xb5d7cf7e in mount_added (daemon_monitor=0x8d77520, mount_info=0x922b2c8) at gdaemonvolumemonitor.c:170
+	mount = (GDaemonMount *) 0x9383900
+	volume = <value optimized out>
+#14 0xb77c100a in IA__g_cclosure_marshal_VOID__POINTER (closure=0x8e025c0, return_value=0x0, n_param_values=2, 
+    param_values=0xbfdb64f4, invocation_hint=0xbfdb63fc, marshal_data=0xb5d7ce30)
+    at /build/buildd/glib2.0-2.16.1/gobject/gmarshal.c:601
+	data1 = (gpointer) 0x8d77520
+	data2 = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__g_cclosure_marshal_VOID__POINTER"
+#15 0xb77b4759 in IA__g_closure_invoke (closure=0x8e025c0, return_value=0x0, n_param_values=2, 
+    param_values=0xbfdb64f4, invocation_hint=0xbfdb63fc) at /build/buildd/glib2.0-2.16.1/gobject/gclosure.c:490
+	marshal = (GClosureMarshal) 0x8061640 <g_cclosure_marshal_VOID__POINTER@plt>
+	marshal_data = (gpointer) 0x0
+	__PRETTY_FUNCTION__ = "IA__g_closure_invoke"
+#16 0xb77c8d1d in signal_emit_unlocked_R (node=0x8e50628, detail=0, instance=0x8d77400, emission_return=0x0, 
+    instance_and_params=0xbfdb64f4) at /build/buildd/glib2.0-2.16.1/gobject/gsignal.c:2440
+	tmp = <value optimized out>
+	handler = (Handler *) 0x8df4940
+	accumulator = (SignalAccumulator *) 0x0
+	emission = {next = 0x0, instance = 0x8d77400, ihint = {signal_id = 382, detail = 0, 
+    run_type = G_SIGNAL_RUN_FIRST}, state = EMISSION_RUN, chain_type = 4}
+	class_closure = (GClosure *) 0x8e25410
+	handler_list = (Handler *) 0x8df4940
+	return_accu = (GValue *) 0x0
+	accu = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, 
+      v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, 
+      v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+	signal_id = 382
+	max_sequential_handler_number = 50385
+	return_value_altered = 0
+#17 0xb77ca916 in IA__g_signal_emit_valist (instance=0xb68b61dc, signal_id=382, detail=0, 
+    var_args=0xbfdb6730 "`\217I\tL\217I\t\001") at /build/buildd/glib2.0-2.16.1/gobject/gsignal.c:2199
+	_flags = <value optimized out>
+	_vtable = <value optimized out>
+	_cvalues = {{v_int = 0, v_long = 0, v_int64 = -4621987995703050240, v_double = -0.42812538146972656, 
+    v_pointer = 0x0}, {v_int = -1217156627, v_long = -1217156627, v_int64 = 7372777965, 
+    v_double = 3.6426363069218364e-314, v_pointer = 0xb773a9ed}, {v_int = 162033664, v_long = 162033664, 
+    v_int64 = 171960725504, v_double = 8.4959886905463076e-313, v_pointer = 0x9a87000}, {v_int = -1216702840, 
+    v_long = -1216702840, v_int64 = 174876956296, v_double = 8.6400696355134686e-313, v_pointer = 0xb77a9688}, 
+  {v_int = 154082992, v_long = 154082992, v_int64 = -4621987858110013776, v_double = -0.42813301941758208, 
+    v_pointer = 0x92f1eb0}, {v_int = -1217156662, v_long = -1217156662, v_int64 = -5225698903672510006, 
+    v_double = -1.9075971421184115e-41, v_pointer = 0xb773a9ca}, {v_int = 1, v_long = 1, 
+    v_int64 = -4621987858264096767, v_double = -0.42813301086425787, v_pointer = 0x1}, {v_int = -1217472315, 
+    v_long = -1217472315, v_int64 = -5218262562936792891, v_double = -6.0287744883517633e-41, 
+    v_pointer = 0xb76ed8c5}}
+	_lcopy_format = <value optimized out>
+	_n_values = <value optimized out>
+	return_value = {g_type = 1, data = {{v_int = 8, v_uint = 8, v_long = 8, v_ulong = 8, 
+      v_int64 = -4621987153889460216, v_uint64 = 13824756919820091400, v_float = 1.12103877e-44, 
+      v_double = -0.42817211151123091, v_pointer = 0x8}, {v_int = 115, v_uint = 115, v_long = 115, 
+      v_ulong = 115, v_int64 = -4621987171069329293, v_uint64 = 13824756902640222323, 
+      v_float = 1.61149323e-43, v_double = -0.42817115783692045, v_pointer = 0x73}}}
+	error = <value optimized out>
+	instance_and_params = (GValue *) 0xbfdb64f4
+	stack_values = {{g_type = 149044424, data = {{v_int = 148337664, v_uint = 148337664, 
+        v_long = 148337664, v_ulong = 148337664, v_int64 = 148337664, v_uint64 = 148337664, 
+        v_float = 1.29671133e-33, v_double = 7.3288543766741827e-316, v_pointer = 0x8d77400}, {v_int = 0, 
+        v_uint = 0, v_long = 0, v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, 
+        v_pointer = 0x0}}}, {g_type = 68, data = {{v_int = 153268936, v_uint = 153268936, v_long = 153268936, 
+        v_ulong = 153268936, v_int64 = 153268936, v_uint64 = 153268936, v_float = 1.95841032e-33, 
+        v_double = 7.5724915852240683e-316, v_pointer = 0x922b2c8}, {v_int = 0, v_uint = 0, v_long = 0, 
+        v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}, {
+    g_type = 3076264948, data = {{v_int = -1076140308, v_uint = 3218826988, v_long = -1076140308, 
+        v_ulong = 3218826988, v_int64 = 492845098732, v_uint64 = 492845098732, v_float = -1.71407843, 
+        v_double = 2.434978320047185e-312, v_pointer = 0xbfdb66ec}, {v_int = -1216238212, v_uint = 3078729084, 
+        v_long = -1216238212, v_ulong = 3078729084, v_int64 = -4621989298294379140, 
+        v_uint64 = 13824754775415172476, v_float = -1.54587833e-05, v_double = -0.42805307312547547, 
+        v_pointer = 0xb781ad7c}}}, {g_type = 3078729716, data = {{v_int = 24, v_uint = 24, v_long = 24, 
+        v_ulong = 24, v_int64 = 24, v_uint64 = 24, v_float = 3.36311631e-44, 
+        v_double = 1.1857575500189917e-322, v_pointer = 0x18}, {v_int = -1216374753, v_uint = 3078592543, 
+        v_long = -1216374753, v_ulong = 3078592543, v_int64 = -4621987425688774625, 
+        v_uint64 = 13824756648020776991, v_float = -1.52346029e-05, v_double = -0.4281570236183842, 
+        v_pointer = 0xb77f981f}}}, {g_type = 114, data = {{v_int = 8, v_uint = 8, v_long = 8, v_ulong = 8, 
+        v_int64 = 34359738376, v_uint64 = 34359738376, v_float = 1.12103877e-44, 
+        v_double = 1.6975966331674704e-313, v_pointer = 0x8}, {v_int = 1, v_uint = 1, v_long = 1, v_ulong = 1, 
+        v_int64 = -5343294321040818175, v_uint64 = 13103449752668733441, v_float = 1.40129846e-45, 
+        v_double = -2.6519359382303447e-49, v_pointer = 0x1}}}, {g_type = 3218826496, data = {{
+        v_int = -1216702840, v_uint = 3078264456, v_long = -1216702840, v_ulong = 3078264456, 
+        v_int64 = 661781414588094088, v_uint64 = 661781414588094088, v_float = -1.49362095e-05, 
+        v_double = 1.93024212490907e-264, v_pointer = 0xb77a9688}, {v_int = -1076140316, v_uint = 3218826980, 
+        v_long = -1076140316, v_ulong = 3218826980, v_int64 = -4621988954556897564, 
+        v_uint64 = 13824755119152654052, v_float = -1.71407747, v_double = -0.42807215438879909, 
+        v_pointer = 0xbfdb66e4}}}, {g_type = 3077622344, data = {{v_int = 154101552, v_uint = 154101552, 
+        v_long = 154101552, v_ulong = 154101552, v_int64 = 13039003440, v_uint64 = 13039003440, 
+        v_float = 2.11133773e-33, v_double = 6.4421236557098354e-314, v_pointer = 0x92f6730}, {v_int = 8, 
+        v_uint = 8, v_long = 8, v_ulong = 8, v_int64 = -5343294321040818168, v_uint64 = 13103449752668733448, 
+        v_float = 1.12103877e-44, v_double = -2.6519359382303474e-49, v_pointer = 0x8}}}, {
+    g_type = 3050910416, data = {{v_int = -1244056880, v_uint = 3050910416, v_long = -1244056880, 
+        v_ulong = 3050910416, v_int64 = -5233186607949335856, v_uint64 = 13213557465760215760, 
+        v_float = -1.61825483e-06, v_double = -5.7372709186252276e-42, v_pointer = 0xb5d932d0}, {
+        v_int = -1244079784, v_uint = 3050887512, v_long = -1244079784, v_ulong = 3050887512, 
+        v_int64 = 664343723330034008, v_uint64 = 664343723330034008, v_float = -1.61565094e-06, 
+        v_double = 3.0049160397847095e-264, v_pointer = 0xb5d8d958}}}, {g_type = 3050884640, data = {{
+        v_int = -1218446207, v_uint = 3076521089, v_long = -1218446207, v_ulong = 3076521089, 
+        v_int64 = -4621987923907052415, v_uint64 = 13824756149802499201, v_float = -1.33506264e-05, 
+        v_double = -0.42812936694821963, v_pointer = 0xb75ffc81}, {v_int = 1024, v_uint = 1024, v_long = 1024, 
+        v_ulong = 1024, v_int64 = -4621987944163441664, v_uint64 = 13824756129546109952, 
+        v_float = 1.43492963e-42, v_double = -0.42812824249273262, v_pointer = 0x400}}}, {g_type = 0, data = {{
+        v_int = -1217053498, v_uint = 3077913798, v_long = -1217053498, v_ulong = 3077913798, 
+        v_int64 = -4621988439301735226, v_uint64 = 13824755634407816390, v_float = -1.46172879e-05, 
+        v_double = -0.42810075679603832, v_pointer = 0xb7753cc6}, {v_int = -1217527440, v_uint = 3077439856, 
+        v_long = -1217527440, v_ulong = 3077439856, v_int64 = -4621988679820377744, 
+        v_uint64 = 13824755393889173872, v_float = -1.41862402e-05, v_double = -0.42808740532929956, 
+        v_pointer = 0xb76e0170}}}, {g_type = 16, data = {{v_int = 2, v_uint = 2, v_long = 2, v_ulong = 2, 
+        v_int64 = -5229240536782602238, v_uint64 = 13217503536926949378, v_float = 2.80259693e-45, 
+        v_double = -1.0763986572557065e-41, v_pointer = 0x2}, {v_int = 149025536, v_uint = 149025536, 
+        v_long = 149025536, v_ulong = 149025536, v_int64 = 206307455744, v_uint64 = 206307455744, 
+        v_float = 1.35988239e-33, v_double = 1.0192942636402375e-312, v_pointer = 0x8e1f300}}}, {g_type = 6, 
+    data = {{v_int = 149025540, v_uint = 149025540, v_long = 149025540, v_ulong = 149025540, 
+        v_int64 = 558494774020, v_uint64 = 558494774020, v_float = 1.35988276e-33, 
+        v_double = 2.7593308122515234e-312, v_pointer = 0x8e1f304}, {v_int = 149025600, v_uint = 149025600, 
+        v_long = 149025600, v_ulong = 149025600, v_int64 = 649883836852859712, v_uint64 = 649883836852859712, 
+        v_float = 1.35988827e-33, v_double = 3.2332911713097267e-265, v_pointer = 0x8e1f340}}}, {
+    g_type = 3078728988, data = {{v_int = 149228184, v_uint = 149228184, v_long = 149228184, 
+        v_ulong = 149228184, v_int64 = -4621986621164287336, v_uint64 = 13824757452545264280, 
+        v_float = 1.37849267e-33, v_double = -0.42820168369886735, v_pointer = 0x8e50a98}, {v_int = 209, 
+        v_uint = 209, v_long = 209, v_ulong = 209, v_int64 = 687194767569, v_uint64 = 687194767569, 
+        v_float = 2.92871379e-43, v_double = 3.3951932665770329e-312, v_pointer = 0xd1}}}, {g_type = 7, 
+    data = {{v_int = -1076140520, v_uint = 3218826776, v_long = -1076140520, v_ulong = 3218826776, 
+        v_int64 = 640059806607697432, v_uint64 = 640059806607697432, v_float = -1.71405315, 
+        v_double = 6.9582441713005866e-266, v_pointer = 0xbfdb6618}, {v_int = 6291456, v_uint = 6291456, 
+        v_long = 6291456, v_ulong = 6291456, v_int64 = -5224429091073032192, v_uint64 = 13222314982636519424, 
+        v_float = 8.81620763e-39, v_double = -2.23126565105956e-41, v_pointer = 0x600000}}}, {
+    g_type = 149025540, data = {{v_int = -1217531916, v_uint = 3077435380, v_long = -1217531916, 
+        v_ulong = 3077435380, v_int64 = 3077435380, v_uint64 = 3077435380, v_float = -1.41821693e-05, 
+        v_double = 1.520455098554402e-314, v_pointer = 0xb76deff4}, {v_int = -1217527488, v_uint = 3077439808, 
+        v_long = -1217527488, v_ulong = 3077439808, v_int64 = -4621988198784040640, 
+        v_uint64 = 13824755874925510976, v_float = -1.41861965e-05, v_double = -0.42811410821015627, 
+        v_pointer = 0xb76e0140}}}, {g_type = 3076529053, data = {{v_int = -1217527488, v_uint = 3077439808, 
+        v_long = -1217527488, v_ulong = 3077439808, v_int64 = 7372407104, v_uint64 = 7372407104, 
+        v_float = -1.41861965e-05, v_double = 3.6424530772423541e-314, v_pointer = 0xb76e0140}, {
+        v_int = -1216702840, v_uint = 3078264456, v_long = -1216702840, v_ulong = 3078264456, 
+        v_int64 = 7373231752, v_uint64 = 7373231752, v_float = -1.49362095e-05, 
+        v_double = 3.6428605074890658e-314, v_pointer = 0xb77a9688}}}}
+	free_me = (GValue *) 0x0
+	signal_return_type = 4
+	param_values = (GValue *) 0xbfdb6508
+	node = (SignalNode *) 0x8e50628
+	i = 1
+	n_params = 1
+	__PRETTY_FUNCTION__ = "IA__g_signal_emit_valist"
+#18 0xb77cac59 in IA__g_signal_emit (instance=0x8d77400, signal_id=382, detail=0)
+    at /build/buildd/glib2.0-2.16.1/gobject/gsignal.c:2243
+	var_args = 0xbfdb672c "È²\"\t`\217I\tL\217I\t\001"
+#19 0xb5d8fead in g_mount_tracker_add_mount (tracker=0x8d77400, info=0x922b2c8) at gmounttracker.c:378
+No locals.
+#20 0xb5d90124 in g_mount_tracker_filter_func (conn=0x8e50a98, message=0x8e1f300, data=0x8d77400)
+    at gmounttracker.c:460
+	tracker = (GMountTracker *) 0x2d646572
+	info = (GMountInfo *) 0x922b2c8
+	iter = {dummy1 = 0x8e1f300, dummy2 = 0x600000, dummy3 = 3078561388, dummy4 = 149025540, dummy5 = 117, 
+  dummy6 = 149025600, dummy7 = 0, dummy8 = -1216238140, dummy9 = 149228184, dummy10 = -1076140120, 
+  dummy11 = -1216282947, pad1 = 149145440, pad2 = -1216237580, pad3 = 0xbfdb67b8}
+#21 0xb77f39f7 in dbus_connection_dispatch (connection=0x8e50a98) at dbus-connection.c:4379
+	filter = (DBusMessageFilter *) 0xb68b61dc
+	next = (DBusList *) 0x0
+	message = (DBusMessage *) 0x8e1f300
+	link = <value optimized out>
+	filter_list_copy = (DBusList *) 0x8e2bdec
+	message_link = (DBusList *) 0x8430b10
+	result = DBUS_HANDLER_RESULT_NOT_YET_HANDLED
+	status = <value optimized out>
+	__FUNCTION__ = "dbus_connection_dispatch"
+#22 0xb5d8ae1d in dbus_source_dispatch (source=0x8e4d410, callback=0, user_data=0x0) at gdbusutils.c:868
+	connection = (DBusConnection *) 0x8e50a98
+#23 0xb7732bd8 in IA__g_main_context_dispatch (context=0x842f5f8)
+    at /build/buildd/glib2.0-2.16.1/glib/gmain.c:2003
+No locals.
+#24 0xb7735e3e in g_main_context_iterate (context=0x842f5f8, block=1, dispatch=1, self=0x84063e8)
+    at /build/buildd/glib2.0-2.16.1/glib/gmain.c:2636
+	got_ownership = <value optimized out>
+	max_priority = 0
+	timeout = 0
+	some_ready = 1
+	nfds = <value optimized out>
+	allocated_nfds = <value optimized out>
+	fds = (GPollFD *) 0x8e621e8
+	__PRETTY_FUNCTION__ = "g_main_context_iterate"
+#25 0xb77361c7 in IA__g_main_loop_run (loop=0x8d91cb0) at /build/buildd/glib2.0-2.16.1/glib/gmain.c:2844
+	got_ownership = -1217485536
+	self = (GThread *) 0x84063e8
+	__PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#26 0x08067bd9 in app_run (full_prog_name=0xbfdb7c24 "gimp-2.4", filenames=0x0, alternate_system_gimprc=0x0, 
+    alternate_gimprc=0x0, session_name=0x0, batch_interpreter=0x0, batch_commands=0x0, as_new=0, 
+    no_interface=0, no_data=0, no_fonts=0, no_splash=0, be_verbose=0, use_shm=1, use_cpu_accel=1, 
+    console_messages=0, use_debug_handler=0, stack_trace_mode=GIMP_STACK_TRACE_NEVER, 
+    pdb_compat_mode=GIMP_PDB_COMPAT_ON) at /build/buildd/gimp-2.4.5/./app/app.c:246
+	install = <value optimized out>
+	update_status_func = <value optimized out>
+	gimp = (Gimp *) 0x8435010
+	config = (GimpBaseConfig *) 0xb70ae098
+	loop = (GMainLoop *) 0x8d91cb0
+	swap_is_ok = 1
+#27 0x08068b88 in main (argc=24772, argv=0x656d696d) at /build/buildd/gimp-2.4.5/./app/main.c:385
+	context = (GOptionContext *) 0x840f450
+	error = (GError *) 0x0
+	abort_message = <value optimized out>
+	i = -1222331736
+#28 0xb75aa450 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+#29 0x080678f1 in _start ()

@@ -1,0 +1,12 @@
+#0  0xb7861275 in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+#1  0xb7857298 in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+#2  0xb7857fed in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+#3  0xb785965b in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+#4  0xb7859a6f in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+#5  0xb76cbdd6 in g_main_context_dispatch () from /usr/lib/libglib-2.0.so.0
+#6  0xb76cf193 in ?? () from /usr/lib/libglib-2.0.so.0
+#7  0xb76cf577 in g_main_loop_run () from /usr/lib/libglib-2.0.so.0
+#8  0xb79e1264 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+#9  0x0805f6e5 in ?? ()
+#10 0xb7453450 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+#11 0x080548a1 in ?? ()

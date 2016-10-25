@@ -1,0 +1,43 @@
+#0  0x00007f33d3941b6d in ?? ()
+   from /usr/lib/nautilus/extensions-2.0/libnautilus-dropbox.so
+#1  0x00007f33d394261a in ?? ()
+   from /usr/lib/nautilus/extensions-2.0/libnautilus-dropbox.so
+#2  0x00007f33f258e27d in g_closure_invoke ()
+   from /usr/lib/libgobject-2.0.so.0
+#3  0x00007f33f25a3dc8 in ?? () from /usr/lib/libgobject-2.0.so.0
+#4  0x00007f33f25a5422 in g_signal_emit_valist ()
+   from /usr/lib/libgobject-2.0.so.0
+#5  0x00007f33f25a5943 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+#6  0x00000000004ce6ac in ?? ()
+#7  0x00000000004b5640 in ?? ()
+#8  0x00000000004b6423 in ?? ()
+#9  0x00007f33f1ea7c63 in g_hash_table_foreach ()
+   from /usr/lib/libglib-2.0.so.0
+#10 0x00000000004b86bf in ?? ()
+#11 0x00000000004bc398 in ?? ()
+#12 0x00000000004c4a29 in ?? ()
+#13 0x00007f33f2cc9cbc in ?? () from /usr/lib/libgio-2.0.so.0
+#14 0x00007f33f1eb60ca in g_main_context_dispatch ()
+   from /usr/lib/libglib-2.0.so.0
+#15 0x00007f33f1eb97a0 in ?? () from /usr/lib/libglib-2.0.so.0
+#16 0x00007f33f1eb9c6d in g_main_loop_run () from /usr/lib/libglib-2.0.so.0
+#17 0x00007f33f37239f7 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+#18 0x0000000000442817 in ?? ()
+#19 0x00007f33f09265a6 in __libc_start_main (
+    main=0x442190 <g_themed_icon_append_name@plt+76952>, argc=1, 
+    ubp_av=0x7ffffd2a8bc8, init=0x549210, fini=<value optimized out>, 
+    rtld_fini=<value optimized out>, stack_end=0x7ffffd2a8bb8)
+    at libc-start.c:220
+	result = <value optimized out>
+	unwind_buf = {cancel_jmp_buf = {{jmp_buf = {5542416, 
+        -5728718533456173216, 4388112, 140737440811968, 0, 0, 
+        5728713474660755296, 5627355470464804704}, mask_was_saved = 0}}, 
+  priv = {pad = {0x0, 0x0, 0x1, 0x442190}, data = {prev = 0x0, cleanup = 0x0, 
+      canceltype = 1}}}
+	not_first_call = <value optimized out>
+#20 0x000000000042f539 in ?? ()
+#21 0x00007ffffd2a8bb8 in ?? ()
+#22 0x000000000000001c in ?? ()
+#23 0x0000000000000001 in ?? ()
+#24 0x00007ffffd2a9b58 in ?? ()
+#25 0x0000000000000000 in ?? ()

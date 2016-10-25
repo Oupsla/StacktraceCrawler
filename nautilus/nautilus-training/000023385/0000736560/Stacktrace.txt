@@ -1,0 +1,59 @@
+#0  0x002deb96 in cairo_set_source_surface () from /usr/lib/libcairo.so.2
+No symbol table info available.
+#1  0x00157993 in IA__gdk_cairo_set_source_pixbuf (cr=0x0, pixbuf=0x931f128, pixbuf_x=0, pixbuf_y=0) at /build/buildd/gtk+2.0-2.22.0/gdk/gdkcairo.c:277
+        width = 0
+        height = 1024
+        gdk_pixels = <value optimised out>
+        gdk_rowstride = 7680
+        n_channels = <value optimised out>
+        cairo_stride = 10240
+        cairo_pixels = 0xac855808 ""
+        surface = 0x92ca5c0
+        key = {unused = 0}
+        j = 0
+#2  0x00126b62 in gnome_bg_create_pixmap () from /usr/lib/libgnome-desktop-2.so.17
+No symbol table info available.
+#3  0x08167aed in ?? ()
+No symbol table info available.
+#4  0x08167cfd in ?? ()
+No symbol table info available.
+#5  0x08167edf in ?? ()
+No symbol table info available.
+#6  0x006b4841 in g_idle_dispatch (source=0x9362e50, callback=0, user_data=0x928a260) at /build/buildd/glib2.0-2.26.1/glib/gmain.c:4254
+No locals.
+#7  0x006b6855 in g_main_dispatch (context=0x91c6290) at /build/buildd/glib2.0-2.26.1/glib/gmain.c:2149
+        dispatch = 0x6b4820 <g_idle_dispatch>
+        user_data = 0x928a260
+        callback = 0x8167e80
+        cb_funcs = 0x74733c
+        cb_data = 0x93d9870
+        current_source_link = {data = 0x9362e50, next = 0x0}
+        source = 0x928a260
+        current = 0x9208d80
+        i = 0
+#8  g_main_context_dispatch (context=0x91c6290) at /build/buildd/glib2.0-2.26.1/glib/gmain.c:2702
+No locals.
+#9  0x006ba668 in g_main_context_iterate (context=0x91c6290, block=<value optimised out>, dispatch=1, self=0x9199008) at /build/buildd/glib2.0-2.26.1/glib/gmain.c:2780
+        max_priority = 200
+        timeout = 0
+        some_ready = 1
+        nfds = <value optimised out>
+        allocated_nfds = <value optimised out>
+        fds = <value optimised out>
+        __PRETTY_FUNCTION__ = "g_main_context_iterate"
+#10 0x006baba7 in g_main_loop_run (loop=0x9327e80) at /build/buildd/glib2.0-2.26.1/glib/gmain.c:2988
+        self = 0x9199008
+        __PRETTY_FUNCTION__ = "g_main_loop_run"
+#11 0x0106b1d9 in IA__gtk_main () at /build/buildd/gtk+2.0-2.22.0/gtk/gtkmain.c:1237
+        tmp_list = 0x0
+        functions = 0x0
+        init = 0x1
+        loop = 0x9327e80
+#12 0x0807f377 in ?? ()
+No symbol table info available.
+#13 0x03b0ece7 in __libc_start_main (main=0x807ec80, argc=1, ubp_av=0xbfee8744, init=0x81ab030, fini=0x81ab020, rtld_fini=0x3fcb60 <_dl_fini>, stack_end=0xbfee873c) at libc-start.c:226
+        result = <value optimised out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {63246324, 0, 0, -1074886888, 1428348798, -369703418}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x1, 0x806a580}, data = {prev = 0x0, cleanup = 0x0, canceltype = 1}}}
+        not_first_call = <value optimised out>
+#14 0x0806a5a1 in ?? ()
+No symbol table info available.

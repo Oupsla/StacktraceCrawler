@@ -1,0 +1,36 @@
+#0  0x08105fc8 in symbolic_link_weak_notify (data=0x0, where_the_object_was=0x7ff) at nautilus-file.c:447
+No locals.
+#1  0x08106066 in nautilus_file_list_unref (list=0x0) at nautilus-file.c:6519
+No locals.
+#2  0x08099d8b in zoom_parameters_changed_callback (view=0x8867d08, window=0x0) at nautilus-window-manage-views.c:1875
+	action = <value optimized out>
+	__PRETTY_FUNCTION__ = "zoom_parameters_changed_callback"
+#3  0x0809d195 in nautilus_window_open_location_full (window=0x7ff, location=0x0, mode=NAUTILUS_WINDOW_OPEN_ACCORDING_TO_MODE, 
+    flags=<value optimized out>, new_selection=0xbf85f838) at nautilus-window-manage-views.c:579
+	target_window = (NautilusWindow *) 0x8542a60
+	do_load_location = 135930504
+	old_location = (GFile *) 0x0
+	old_uri = <value optimized out>
+	new_uri = <value optimized out>
+	__PRETTY_FUNCTION__ = "nautilus_window_open_location_full"
+#4  0x080a0787 in nautilus_window_allow_up (window=0x81a2288, allow=143014288) at nautilus-window.c:302
+	__t = <value optimized out>
+	__PRETTY_FUNCTION__ = "nautilus_window_allow_up"
+#5  0x080840b0 in view_as_menu_switch_views_callback (combo_box=0x8540470, window=0x8863990) at nautilus-navigation-window.c:869
+	active = 139733600
+	__PRETTY_FUNCTION__ = "view_as_menu_switch_views_callback"
+#6  0xb768821a in ?? ()
+#7  0x08540470 in ?? ()
+#8  0x087f52d0 in ?? ()
+#9  0x081a2288 in ?? ()
+#10 0xb767da63 in ?? ()
+#11 0x081a228c in ?? ()
+#12 0x00000001 in ?? ()
+#13 0x08540470 in ?? ()
+#14 0xb76ac680 in ?? ()
+#15 0xfffffff8 in ?? ()
+#16 0x08542a60 in ?? ()
+#17 0xbf85f938 in ?? ()
+#18 0xb767b759 in ?? ()
+#19 0x08542a60 in ?? ()
+#20 0x00000000 in ?? ()

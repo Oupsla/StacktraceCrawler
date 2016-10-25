@@ -1,0 +1,124 @@
+#0  0x00007f4e5def8570 in g_list_length () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#1  0x0000000000462ec1 in nautilus_navigation_window_back_or_forward (
+    window=<value optimized out>, back=1, distance=0, new_tab=0)
+    at nautilus-window-manage-views.c:2051
+	slot = (NautilusWindowSlot *) 0x1989e10
+	list = (GList *) 0x7f4e500ce380
+	location = <value optimized out>
+	len = <value optimized out>
+#2  0x00007f4e5e5d45ae in g_closure_invoke ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#3  0x00007f4e5e5e9983 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#4  0x00007f4e5e5ead39 in g_signal_emit_valist ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#5  0x00007f4e5e5eb283 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#6  0x00007f4e5e5d45ae in g_closure_invoke ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#7  0x00007f4e5e5e9983 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#8  0x00007f4e5e5ead39 in g_signal_emit_valist ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#9  0x00007f4e5e5eb283 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#10 0x00007f4e5f868f0d in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#11 0x00007f4e5e5d45ae in g_closure_invoke ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#12 0x00007f4e5e5e929c in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#13 0x00007f4e5e5ead39 in g_signal_emit_valist ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#14 0x00007f4e5e5eb283 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#15 0x00007f4e5f6fe7ad in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#16 0x00007f4e5f7ad728 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#17 0x00007f4e5e5d45ae in g_closure_invoke ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#18 0x00007f4e5e5e964d in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#19 0x00007f4e5e5eabcc in g_signal_emit_valist ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#20 0x00007f4e5e5eb283 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#21 0x00007f4e5f8b472f in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#22 0x00007f4e5f7a5cd3 in gtk_propagate_event ()
+   from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#23 0x00007f4e5f7a6ca3 in gtk_main_do_event ()
+   from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#24 0x00007f4e5f41bcdc in gdk_event_dispatch (source=<value optimized out>, 
+    callback=<value optimized out>, user_data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gdk/x11/gdkevents-x11.c:2369
+	display = <value optimized out>
+	event = <value optimized out>
+#25 0x00007f4e5defabbe in g_main_context_dispatch ()
+   from /lib/libglib-2.0.so.0
+No symbol table info available.
+#26 0x00007f4e5defe588 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#27 0x00007f4e5defe9e5 in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#28 0x00007f4e5f7a7177 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#29 0x0000000000443947 in main (argc=1, argv=0x7ffffca0de98)
+    at nautilus-main.c:588
+	kill_shell = 0
+	no_default_window = 1
+	browser_window = 0
+	no_desktop = 0
+	version = 0
+	autostart_mode = <value optimized out>
+	autostart_id = <value optimized out>
+	geometry = (gchar *) 0x0
+	remaining = (gchar **) 0x0
+	perform_self_check = 0
+	application = <value optimized out>
+	context = <value optimized out>
+	file = (GFile *) 0x7ffffca0db20
+	uri = <value optimized out>
+	uris = (char **) 0x0
+	uris_array = <value optimized out>
+	error = (GError *) 0x0
+	options = {{long_name = 0x54b6b6 "check", short_name = 99 'c', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x7ffffca0dd88, 
+    description = 0x54b700 "Perform a quick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x54b5af "version", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x7ffffca0dd8c, 
+    description = 0x54b730 "Show the version of the program.", 
+    arg_description = 0x0}, {long_name = 0x54f75c "geometry", 
+    short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+    arg_data = 0x7ffffca0dd80, 
+    description = 0x54b758 "Create the initial window with the given geometry.", arg_description = 0x54b5b7 "GEOMETRY"}, {
+    long_name = 0x54b5c0 "no-default-window", short_name = 110 'n', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0x7ffffca0dd98, 
+    description = 0x54b790 "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {long_name = 0x54b5d2 "no-desktop", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x7ffffca0dd90, 
+    description = 0x54b7c8 "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {
+    long_name = 0x547f00 "browser", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0x7ffffca0dd94, 
+    description = 0x54b5dd "open a browser window.", arg_description = 0x0}, {
+    long_name = 0x56ced1 "quit", short_name = 113 'q', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0x7ffffca0dd9c, 
+    description = 0x54b5f4 "Quit Nautilus.", arg_description = 0x0}, {
+    long_name = 0x550d01 "", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0x7ffffca0dd78, 
+    description = 0x0, arg_description = 0x54b603 "[URI...]"}, {
+    long_name = 0x0, short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x0, description = 0x0, arg_description = 0x0}}

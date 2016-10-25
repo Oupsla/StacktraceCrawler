@@ -1,0 +1,101 @@
+#0  0xb75fed4f in IA__g_drive_eject_finish (drive=0xb72d6520, result=0x87c8290, error=0xbf8324e8)
+    at /build/buildd/glib2.0-2.15.6/gio/gdrive.c:398
+	__t = 136106096
+	__PRETTY_FUNCTION__ = "IA__g_drive_eject_finish"
+#1  0xb693c377 in g_daemon_mount_finalize (object=0x882ec48) at gdaemonmount.c:54
+	mount = <value optimized out>
+#2  0xb761722e in IA__g_mount_eject_finish (mount=0x882ec48, result=0x87c8290, error=0xbf8324e8)
+    at /build/buildd/glib2.0-2.15.6/gio/gmount.c:457
+	__t = 3073205536
+	__PRETTY_FUNCTION__ = "IA__g_mount_eject_finish"
+#3  0x08102bae in unmount_mount_callback (source_object=0x882ec48, res=0x87c8290, user_data=0x88b0160)
+    at nautilus-file-operations.c:1781
+	error = (GError *) 0x0
+	primary = <value optimized out>
+	unmounted = <value optimized out>
+#4  0xb761d291 in IA__g_simple_async_result_complete (simple=0x87c8290)
+    at /build/buildd/glib2.0-2.15.6/gio/gsimpleasyncresult.c:553
+	__PRETTY_FUNCTION__ = "IA__g_simple_async_result_complete"
+#5  0xb693c6b5 in find_mount_by_mount_info (daemon_monitor=<value optimized out>, mount_info=0xbf832568)
+    at gdaemonvolumemonitor.c:100
+	found_mount = <value optimized out>
+	l = (GList *) 0x87c8290
+#6  0xb6946ba6 in get_connection_for_async (dbus_id=<value optimized out>) at gvfsdaemondbus.c:374
+	connection = (DBusConnection *) 0xb69522d0
+#7  0xb694b79a in g_mount_spec_to_string (spec=0x889b758) at gmountspec.c:458
+	str = (GString *) 0x882ac60
+	i = -1231740208
+#8  0xb7149e31 in _dbus_pending_call_complete (pending=0x889b758) at dbus-pending-call.c:198
+	user_data = (void *) 0x57e58955
+#9  0xb7139b53 in complete_pending_call_and_unlock (connection=0x8882400, pending=0x889b758, message=<value optimized out>)
+    at dbus-connection.c:2200
+No locals.
+#10 0xb713b6f9 in dbus_connection_dispatch (connection=0x8882400) at dbus-connection.c:4325
+	message = (DBusMessage *) 0x88092c8
+	link = <value optimized out>
+	filter_list_copy = <value optimized out>
+	message_link = (DBusList *) 0x8884ed4
+	result = <value optimized out>
+	status = DBUS_DISPATCH_DATA_REMAINS
+	__FUNCTION__ = "dbus_connection_dispatch"
+#11 0xb6949fed in add_watch (watch=0x8882550, data=0x0) at gdbusutils.c:951
+No locals.
+#12 0xb752cd86 in IA__g_main_context_dispatch (context=0x81a3d18) at /build/buildd/glib2.0-2.15.6/glib/gmain.c:2065
+No locals.
+#13 0xb7530143 in g_main_context_iterate (context=0x81a3d18, block=1, dispatch=1, self=0x8174408)
+    at /build/buildd/glib2.0-2.15.6/glib/gmain.c:2698
+	got_ownership = <value optimized out>
+	max_priority = 0
+	timeout = 0
+	some_ready = 1
+	nfds = <value optimized out>
+	allocated_nfds = <value optimized out>
+	fds = (GPollFD *) 0x8883038
+	__PRETTY_FUNCTION__ = "g_main_context_iterate"
+#14 0xb7530527 in IA__g_main_loop_run (loop=0x81c2810) at /build/buildd/glib2.0-2.15.6/glib/gmain.c:2906
+	got_ownership = -1221761760
+	self = (GThread *) 0x8174408
+	__PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#15 0xb7919044 in IA__gtk_main () at /build/buildd/gtk+2.0-2.12.8/gtk/gtkmain.c:1163
+	tmp_list = (GList *) 0x81c2810
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0x0
+	loop = (GMainLoop *) 0x81c2810
+#16 0x0807ecfd in main (argc=4, argv=0xbf832ab4) at nautilus-main.c:572
+	kill_shell = 0
+	restart_shell = 0
+	no_default_window = 1
+	browser_window = 0
+	no_desktop = 0
+	startup_id = <value optimized out>
+	startup_id_copy = 0x81c2810 "\030=\032\b\001"
+	session_to_load = 0x0
+	geometry = (gchar *) 0x0
+	remaining = (const gchar **) 0x0
+	perform_self_check = 0
+	context = <value optimized out>
+	application = (NautilusApplication *) 0x81a1450
+	program = (GnomeProgram *) 0x8187858
+	options = {{long_name = 0x814ec9c "check", short_name = 99 'c', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbf832980, description = 0x814ecc8 "Perform a quick set of self-check tests.", arg_description = 0x0}, {
+    long_name = 0x8151dfb "geometry", short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, arg_data = 0xbf832988, 
+    description = 0x814ecf4 "Create the initial window with the given geometry.", arg_description = 0x814eb12 "GEOMETRY"}, {
+    long_name = 0x814eb1b "no-default-window", short_name = 110 'n', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbf832998, description = 0x814ed28 "Only create windows for explicitly specified URIs.", 
+    arg_description = 0x0}, {long_name = 0x814eb2d "no-desktop", short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbf832990, 
+    description = 0x814ed5c "Do not manage the desktop (ignore the preference set in the preferences dialog).", 
+    arg_description = 0x0}, {long_name = 0x8150ea2 "browser", short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbf832994, description = 0x814eb38 "open a browser window.", arg_description = 0x0}, {
+    long_name = 0x814eca4 "quit", short_name = 113 'q', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbf8329a0, 
+    description = 0x814eb4f "Quit Nautilus.", arg_description = 0x0}, {long_name = 0x814ecab "restart", 
+    short_name = 0 '\0', flags = 1, arg = G_OPTION_ARG_NONE, arg_data = 0xbf83299c, 
+    description = 0x814eb5e "Restart Nautilus.", arg_description = 0x0}, {long_name = 0x8152f71 "", short_name = 0 '\0', 
+    flags = 0, arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0xbf832984, description = 0x0, 
+    arg_description = 0x814eb70 "[URI...]"}, {long_name = 0x814b255 "load-session", short_name = 108 'l', flags = 0, 
+    arg = G_OPTION_ARG_STRING, arg_data = 0xbf83298c, 
+    description = 0x814edb0 "Load a saved session from the specified file. Implies \"--no-default-window\".", 
+    arg_description = 0x814eb79 "FILENAME"}, {long_name = 0x0, short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x0, description = 0x0, arg_description = 0x0}}
+#17 0xb7196450 in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+#18 0x08069e61 in _start ()

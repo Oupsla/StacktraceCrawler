@@ -1,0 +1,1080 @@
+#0  0x0813bca0 in nautilus_icon_container_receive_dropped_icons (
+    container=0x9f92498, context=0x0, x=235, y=15) at nautilus-icon-dnd.c:1235
+	drop_target = <value optimized out>
+	local_move_only = <value optimized out>
+	world_x = 235
+	world_y = 15
+	icon_hit = 1
+	action = <value optimized out>
+#1  0x0813cb11 in drag_data_received_callback (widget=0x9f92498, 
+    context=0xa2ffd70, x=235, y=15, data=0xbffb4ad4, info=0, time=2168820, 
+    user_data=0x0) at nautilus-icon-dnd.c:1747
+	background = <value optimized out>
+	tmp = <value optimized out>
+	success = <value optimized out>
+#2  0x00a796bb in _gtk_marshal_VOID__OBJECT_INT_INT_BOXED_UINT_UINT (
+    closure=0x9f0c178, return_value=0x0, n_param_values=7, 
+    param_values=0xa21b2d0, invocation_hint=0xbffb44e0, 
+    marshal_data=0x813c550)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkmarshalers.c:2233
+	data1 = (gpointer) 0x7f683a0
+	data2 = <value optimized out>
+	__PRETTY_FUNCTION__ = "_gtk_marshal_VOID__OBJECT_INT_INT_BOXED_UINT_UINT"
+#3  0x0085bf98 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#4  0x008717a8 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#5  0x00872b2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#6  0x00872e42 in g_signal_emit_by_name () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#7  0x00bbe38b in gtk_drag_selection_received (widget=0xa3df300, 
+    selection_data=0xbffb4ad4, time=2168820, data=0x9f92498)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1745
+	target_info = 0
+	site = <value optimized out>
+	context = (GdkDragContext *) 0xa2ffd70
+	info = (GtkDragDestInfo *) 0xa552c38
+#8  0x00a7a5af in _gtk_marshal_VOID__BOXED_UINT (closure=0xa348558, 
+    return_value=0x0, n_param_values=3, param_values=0x9ea5860, 
+    invocation_hint=0xbffb48b0, marshal_data=0xbbe240)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkmarshalers.c:1461
+	data1 = (gpointer) 0x7f683a0
+	data2 = <value optimized out>
+	__PRETTY_FUNCTION__ = "_gtk_marshal_VOID__BOXED_UINT"
+#9  0x0085c072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#10 0x008717a8 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#11 0x00872b2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#12 0x00872e42 in g_signal_emit_by_name () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#13 0x00ae2655 in gtk_selection_retrieval_report (info=0x9f10700, 
+    type=<value optimized out>, format=8, 
+    buffer=0xa652840 "file:///home/katana/boletos/76524.pdf\r-37:-70:77:105\r\n", length=54, time=2168820)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkselection.c:2940
+	data = {selection = 0xad, target = 0x75, type = 0x75, format = 8, 
+  data = 0xa652840 "file:///home/katana/boletos/76524.pdf\r-37:-70:77:105\r\n", length = 54, display = 0x9e0b000}
+#14 0x00ae4c92 in IA__gtk_selection_convert (widget=0xa3df300, 
+    selection=0xad, target=0x75, time_=2168820)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkselection.c:1089
+	owner_widget = <value optimized out>
+	owner_widget_ptr = (gpointer) 0xa3df1a0
+	selection_data = {selection = 0xad, target = 0x75, type = 0x75, 
+  format = 8, 
+  data = 0xa652840 "file:///home/katana/boletos/76524.pdf\r-37:-70:77:105\r\n", length = 54, display = 0x9e0b000}
+	tmp_list = <value optimized out>
+	owner_window = <value optimized out>
+	display = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_selection_convert"
+#15 0x0813af8f in get_data_on_first_target_we_support (widget=0x9f92498, 
+    context=<value optimized out>, time=2168820, x=235, y=15)
+    at nautilus-icon-dnd.c:493
+	info = 0
+	found = <value optimized out>
+	list = (GtkTargetList *) 0xa5563a8
+	target = <value optimized out>
+	__PRETTY_FUNCTION__ = "get_data_on_first_target_we_support"
+#16 0x0813b368 in drag_drop_callback (widget=0x9f92498, context=0xa2ffd70, 
+    x=235, y=15, time=2168820, data=0x0) at nautilus-icon-dnd.c:1661
+No locals.
+#17 0x00a7bd29 in _gtk_marshal_BOOLEAN__OBJECT_INT_INT_UINT (
+    closure=0xa505980, return_value=0xbffb4d84, n_param_values=5, 
+    param_values=0xa4a8610, invocation_hint=0xbffb4d70, 
+    marshal_data=0x813b310)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkmarshalers.c:411
+	data1 = (gpointer) 0x7f683a0
+	data2 = <value optimized out>
+	v_return = <value optimized out>
+	__PRETTY_FUNCTION__ = "_gtk_marshal_BOOLEAN__OBJECT_INT_INT_UINT"
+#18 0x0085bf98 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#19 0x008717a8 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#20 0x008729b8 in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#21 0x00872e42 in g_signal_emit_by_name () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#22 0x00bbe049 in gtk_drag_dest_drop (widget=0x9f92498, context=0xa2ffd70, 
+    x=235, y=15, time=2168820)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:2315
+	retval = <value optimized out>
+	site = <value optimized out>
+	info = <value optimized out>
+	__PRETTY_FUNCTION__ = "gtk_drag_dest_drop"
+#23 0x00bbc727 in gtk_drag_find_widget (widget=0x9f92498, 
+    data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1917
+	new_allocation = {x = 275, y = 108, width = 731, height = 516}
+	allocation_to_window_x = 0
+	allocation_to_window_y = 0
+	x_offset = 275
+	y_offset = 108
+#24 0x00bbc888 in gtk_drag_find_widget (widget=0xa1db508, 
+    data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1902
+	new_data = {x = 510, y = 123, context = 0xa2ffd70, info = 0xa552c38, 
+  found = 0, toplevel = 0, callback = 0xbbdf70 <gtk_drag_dest_drop>, 
+  time = 2168820}
+	children = (GSList *) 0xa2da320
+	tmp_list = (GSList *) 0x9f0bbc8
+	new_allocation = {x = 275, y = 108, width = 749, height = 516}
+	allocation_to_window_x = 275
+	allocation_to_window_y = 108
+	x_offset = 0
+	y_offset = 0
+#25 0x00bbc888 in gtk_drag_find_widget (widget=0xa2d25b8, 
+    data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1902
+	new_data = {x = 510, y = 123, context = 0xa2ffd70, info = 0xa552c38, 
+  found = 0, toplevel = 0, callback = 0xbbdf70 <gtk_drag_dest_drop>, 
+  time = 2168820}
+	children = (GSList *) 0xa39aba0
+	tmp_list = (GSList *) 0xa39aba0
+	new_allocation = {x = 275, y = 108, width = 749, height = 516}
+	allocation_to_window_x = 275
+	allocation_to_window_y = 108
+	x_offset = 0
+	y_offset = 0
+#26 0x00bbc888 in gtk_drag_find_widget (widget=0x9eeff18, 
+    data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1902
+	new_data = {x = 510, y = 123, context = 0xa2ffd70, info = 0xa552c38, 
+  found = 0, toplevel = 0, callback = 0xbbdf70 <gtk_drag_dest_drop>, 
+  time = 2168820}
+	children = (GSList *) 0xa2da330
+	tmp_list = (GSList *) 0xa2da330
+	new_allocation = {x = 275, y = 108, width = 749, height = 516}
+	allocation_to_window_x = 275
+	allocation_to_window_y = 108
+	x_offset = 0
+	y_offset = 0
+#27 0x00bbc888 in gtk_drag_find_widget (widget=0xa259910, 
+    data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1902
+	new_data = {x = 510, y = 123, context = 0xa2ffd70, info = 0xa552c38, 
+  found = 0, toplevel = 0, callback = 0xbbdf70 <gtk_drag_dest_drop>, 
+  time = 2168820}
+	children = (GSList *) 0xa2da388
+	tmp_list = (GSList *) 0xa3f3cd0
+	new_allocation = {x = 275, y = 108, width = 749, height = 516}
+	allocation_to_window_x = 275
+	allocation_to_window_y = 108
+	x_offset = 0
+	y_offset = 0
+#28 0x00bbc888 in gtk_drag_find_widget (widget=0xa42bf38, 
+    data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1902
+	new_data = {x = 510, y = 123, context = 0xa2ffd70, info = 0xa552c38, 
+  found = 0, toplevel = 0, callback = 0xbbdf70 <gtk_drag_dest_drop>, 
+  time = 2168820}
+	children = (GSList *) 0xa3f59c8
+	tmp_list = (GSList *) 0xa3f59c8
+	new_allocation = {x = 0, y = 108, width = 1024, height = 516}
+	allocation_to_window_x = 0
+	allocation_to_window_y = 108
+	x_offset = 0
+	y_offset = 0
+#29 0x00bbc888 in gtk_drag_find_widget (widget=0xa439cc0, 
+    data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1902
+	new_data = {x = 510, y = 123, context = 0xa2ffd70, info = 0xa552c38, 
+  found = 0, toplevel = 0, callback = 0xbbdf70 <gtk_drag_dest_drop>, 
+  time = 2168820}
+	children = (GSList *) 0xa334540
+	tmp_list = (GSList *) 0xa2da328
+	new_allocation = {x = 0, y = 0, width = 1024, height = 645}
+	allocation_to_window_x = 0
+	allocation_to_window_y = 0
+	x_offset = 0
+	y_offset = 0
+#30 0x00bbc888 in gtk_drag_find_widget (widget=0xa2191a8, 
+    data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1902
+	new_data = {x = 510, y = 123, context = 0xa2ffd70, info = 0xa552c38, 
+  found = 0, toplevel = 0, callback = 0xbbdf70 <gtk_drag_dest_drop>, 
+  time = 2168820}
+	children = (GSList *) 0xa3f66c8
+	tmp_list = (GSList *) 0xa3f66c8
+	new_allocation = {x = 0, y = 0, width = 1024, height = 645}
+	allocation_to_window_x = 0
+	allocation_to_window_y = 0
+	x_offset = 0
+	y_offset = 0
+#31 0x00bbdde0 in _gtk_drag_dest_handle_event (toplevel=0xa2191a8, 
+    event=0xa2f56e0) at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1600
+	data = {x = 510, y = 123, context = 0xa2ffd70, info = 0xa552c38, 
+  found = 0, toplevel = 1, callback = 0xbbdf70 <gtk_drag_dest_drop>, 
+  time = 2168820}
+	tx = 0
+	ty = 78
+	info = (GtkDragDestInfo *) 0xa552c38
+	context = (GdkDragContext *) 0xa2ffd70
+	__PRETTY_FUNCTION__ = "_gtk_drag_dest_handle_event"
+#32 0x00a76094 in IA__gtk_main_do_event (event=0xa2f56e0)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkmain.c:1646
+	event_widget = (GtkWidget *) 0xa2191a8
+	grab_widget = (GtkWidget *) 0x7f683a0
+	window_group = (GtkWindowGroup *) 0xa0d6100
+	rewritten_event = (GdkEvent *) 0x0
+	tmp_list = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_main_do_event"
+#33 0x007bf62a in gdk_event_dispatch (source=0x9e156a0, callback=0, 
+    user_data=0x0)
+    at /build/buildd/gtk+2.0-2.18.3/gdk/x11/gdkevents-x11.c:2369
+	display = <value optimized out>
+	event = <value optimized out>
+#34 0x00442e78 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#35 0x00446720 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#36 0x00446b8f in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#37 0x00bb5b93 in IA__gtk_clipboard_wait_for_contents (clipboard=0x9e12f28, 
+    target=0x7f) at /build/buildd/gtk+2.0-2.18.3/gtk/gtkclipboard.c:1325
+	results = {loop = 0x9f61e18, data = 0x0, format = 0xbffb58f8, 
+  length = 135200366}
+	__PRETTY_FUNCTION__ = "IA__gtk_clipboard_wait_for_contents"
+#38 0x080effe1 in nautilus_clipboard_clear_if_colliding_uris (
+    widget=0xa1db508, item_uris=0xa22c5c0, copied_files_atom=0x7f)
+    at nautilus-clipboard.c:623
+	data = <value optimized out>
+	clipboard_item_uris = (GList *) 0x1
+	l = <value optimized out>
+#39 0x080cc94f in icon_view_move_copy_items (container=0x9f92498, 
+    item_uris=0xa22c5c0, relative_item_points=0xa1e7c98, 
+    target_dir=0xa3ebb68 "file:///home/katana/boletos/net", copy_action=4, 
+    x=219, y=40, view=0xa1db508) at fm-icon-view.c:2586
+No locals.
+#40 0x0814012b in nautilus_marshal_VOID__POINTER_POINTER_POINTER_ENUM_INT_INT
+    (closure=0x9f55c40, return_value=0x0, n_param_values=7, 
+    param_values=0xa21b240, invocation_hint=0xbffb5af0, 
+    marshal_data=0x80cc900) at nautilus-marshal-guts.c:586
+	data1 = (gpointer) 0x7f683a0
+	data2 = <value optimized out>
+	__PRETTY_FUNCTION__ = "nautilus_marshal_VOID__POINTER_POINTER_POINTER_ENUM_INT_INT"
+#41 0x0085bf98 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#42 0x008717a8 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#43 0x00872b2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#44 0x00872e42 in g_signal_emit_by_name () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#45 0x0813bece in nautilus_icon_container_receive_dropped_icons (
+    container=0x9f92498, context=0xa2ffea0, x=219, y=40)
+    at nautilus-icon-dnd.c:1039
+	drop_target = 0x7f683a0 ""
+	local_move_only = <value optimized out>
+	world_x = 219
+	world_y = 40
+	icon_hit = 1
+	action = <value optimized out>
+#46 0x0813cb11 in drag_data_received_callback (widget=0x9f92498, 
+    context=0xa2ffea0, x=219, y=40, data=0xbffb6664, info=0, time=2163596, 
+    user_data=0x0) at nautilus-icon-dnd.c:1747
+	background = <value optimized out>
+	tmp = <value optimized out>
+	success = <value optimized out>
+#47 0x00a796bb in _gtk_marshal_VOID__OBJECT_INT_INT_BOXED_UINT_UINT (
+    closure=0x9f0c178, return_value=0x0, n_param_values=7, 
+    param_values=0xa183750, invocation_hint=0xbffb6070, 
+    marshal_data=0x813c550)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkmarshalers.c:2233
+	data1 = (gpointer) 0x7f683a0
+	data2 = <value optimized out>
+	__PRETTY_FUNCTION__ = "_gtk_marshal_VOID__OBJECT_INT_INT_BOXED_UINT_UINT"
+#48 0x0085bf98 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#49 0x008717a8 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#50 0x00872b2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#51 0x00872e42 in g_signal_emit_by_name () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#52 0x00bbe38b in gtk_drag_selection_received (widget=0xa3df0f0, 
+    selection_data=0xbffb6664, time=2163596, data=0x9f92498)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1745
+	target_info = 0
+	site = <value optimized out>
+	context = (GdkDragContext *) 0xa2ffea0
+	info = (GtkDragDestInfo *) 0xa347bb8
+#53 0x00a7a5af in _gtk_marshal_VOID__BOXED_UINT (closure=0xa338f28, 
+    return_value=0x0, n_param_values=3, param_values=0xa4d1a48, 
+    invocation_hint=0xbffb6440, marshal_data=0xbbe240)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkmarshalers.c:1461
+	data1 = (gpointer) 0x7f683a0
+	data2 = <value optimized out>
+	__PRETTY_FUNCTION__ = "_gtk_marshal_VOID__BOXED_UINT"
+#54 0x0085c072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#55 0x008717a8 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#56 0x00872b2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#57 0x00872e42 in g_signal_emit_by_name () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#58 0x00ae2655 in gtk_selection_retrieval_report (info=0x9ec3a80, 
+    type=<value optimized out>, format=8, 
+    buffer=0xa3ebb28 "file:///home/katana/boletos/76524.pdf\r-47:-40:77:105\r\n", length=54, time=2163596)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkselection.c:2940
+	data = {selection = 0xad, target = 0x75, type = 0x75, format = 8, 
+  data = 0xa3ebb28 "file:///home/katana/boletos/76524.pdf\r-47:-40:77:105\r\n", length = 54, display = 0x9e0b000}
+#59 0x00ae4c92 in IA__gtk_selection_convert (widget=0xa3df0f0, 
+    selection=0xad, target=0x75, time_=2163596)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkselection.c:1089
+	owner_widget = <value optimized out>
+	owner_widget_ptr = (gpointer) 0xa444f10
+	selection_data = {selection = 0xad, target = 0x75, type = 0x75, 
+  format = 8, 
+  data = 0xa3ebb28 "file:///home/katana/boletos/76524.pdf\r-47:-40:77:105\r\n", length = 54, display = 0x9e0b000}
+	tmp_list = <value optimized out>
+	owner_window = <value optimized out>
+	display = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_selection_convert"
+#60 0x0813af8f in get_data_on_first_target_we_support (widget=0x9f92498, 
+    context=<value optimized out>, time=2163596, x=219, y=40)
+    at nautilus-icon-dnd.c:493
+	info = 0
+	found = <value optimized out>
+	list = (GtkTargetList *) 0xa5563a8
+	target = <value optimized out>
+	__PRETTY_FUNCTION__ = "get_data_on_first_target_we_support"
+#61 0x0813b368 in drag_drop_callback (widget=0x9f92498, context=0xa2ffea0, 
+    x=219, y=40, time=2163596, data=0x0) at nautilus-icon-dnd.c:1661
+No locals.
+#62 0x00a7bd29 in _gtk_marshal_BOOLEAN__OBJECT_INT_INT_UINT (
+    closure=0xa505980, return_value=0xbffb6914, n_param_values=5, 
+    param_values=0xa480d48, invocation_hint=0xbffb6900, 
+    marshal_data=0x813b310)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkmarshalers.c:411
+	data1 = (gpointer) 0x7f683a0
+	data2 = <value optimized out>
+	v_return = <value optimized out>
+	__PRETTY_FUNCTION__ = "_gtk_marshal_BOOLEAN__OBJECT_INT_INT_UINT"
+#63 0x0085bf98 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#64 0x008717a8 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#65 0x008729b8 in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#66 0x00872e42 in g_signal_emit_by_name () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#67 0x00bbe049 in gtk_drag_dest_drop (widget=0x9f92498, context=0xa2ffea0, 
+    x=219, y=40, time=2163596)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:2315
+	retval = <value optimized out>
+	site = <value optimized out>
+	info = <value optimized out>
+	__PRETTY_FUNCTION__ = "gtk_drag_dest_drop"
+#68 0x00bbc727 in gtk_drag_find_widget (widget=0x9f92498, 
+    data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1917
+	new_allocation = {x = 275, y = 108, width = 731, height = 516}
+	allocation_to_window_x = 0
+	allocation_to_window_y = 0
+	x_offset = 275
+	y_offset = 108
+#69 0x00bbc888 in gtk_drag_find_widget (widget=0xa1db508, 
+    data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1902
+	new_data = {x = 494, y = 148, context = 0xa2ffea0, info = 0xa347bb8, 
+  found = 0, toplevel = 0, callback = 0xbbdf70 <gtk_drag_dest_drop>, 
+  time = 2163596}
+	children = (GSList *) 0xa3141a0
+	tmp_list = (GSList *) 0x9fcf760
+	new_allocation = {x = 275, y = 108, width = 749, height = 516}
+	allocation_to_window_x = 275
+	allocation_to_window_y = 108
+	x_offset = 0
+	y_offset = 0
+#70 0x00bbc888 in gtk_drag_find_widget (widget=0xa2d25b8, 
+    data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1902
+	new_data = {x = 494, y = 148, context = 0xa2ffea0, info = 0xa347bb8, 
+  found = 0, toplevel = 0, callback = 0xbbdf70 <gtk_drag_dest_drop>, 
+  time = 2163596}
+	children = (GSList *) 0xa583438
+	tmp_list = (GSList *) 0xa583438
+	new_allocation = {x = 275, y = 108, width = 749, height = 516}
+	allocation_to_window_x = 275
+	allocation_to_window_y = 108
+	x_offset = 0
+	y_offset = 0
+#71 0x00bbc888 in gtk_drag_find_widget (widget=0x9eeff18, 
+    data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1902
+	new_data = {x = 494, y = 148, context = 0xa2ffea0, info = 0xa347bb8, 
+  found = 0, toplevel = 0, callback = 0xbbdf70 <gtk_drag_dest_drop>, 
+  time = 2163596}
+	children = (GSList *) 0xa556408
+	tmp_list = (GSList *) 0xa556408
+	new_allocation = {x = 275, y = 108, width = 749, height = 516}
+	allocation_to_window_x = 275
+	allocation_to_window_y = 108
+	x_offset = 0
+	y_offset = 0
+#72 0x00bbc888 in gtk_drag_find_widget (widget=0xa259910, 
+    data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1902
+	new_data = {x = 494, y = 148, context = 0xa2ffea0, info = 0xa347bb8, 
+  found = 0, toplevel = 0, callback = 0xbbdf70 <gtk_drag_dest_drop>, 
+  time = 2163596}
+	children = (GSList *) 0x9fa1438
+	tmp_list = (GSList *) 0xa5563d8
+	new_allocation = {x = 275, y = 108, width = 749, height = 516}
+	allocation_to_window_x = 275
+	allocation_to_window_y = 108
+	x_offset = 0
+	y_offset = 0
+#73 0x00bbc888 in gtk_drag_find_widget (widget=0xa42bf38, 
+    data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1902
+	new_data = {x = 494, y = 148, context = 0xa2ffea0, info = 0xa347bb8, 
+  found = 0, toplevel = 0, callback = 0xbbdf70 <gtk_drag_dest_drop>, 
+  time = 2163596}
+	children = (GSList *) 0xa39a408
+	tmp_list = (GSList *) 0xa39a408
+	new_allocation = {x = 0, y = 108, width = 1024, height = 516}
+	allocation_to_window_x = 0
+	allocation_to_window_y = 108
+	x_offset = 0
+	y_offset = 0
+#74 0x00bbc888 in gtk_drag_find_widget (widget=0xa439cc0, 
+    data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1902
+	new_data = {x = 494, y = 148, context = 0xa2ffea0, info = 0xa347bb8, 
+  found = 0, toplevel = 0, callback = 0xbbdf70 <gtk_drag_dest_drop>, 
+  time = 2163596}
+	children = (GSList *) 0xa3f52c8
+	tmp_list = (GSList *) 0xa2da258
+	new_allocation = {x = 0, y = 0, width = 1024, height = 645}
+	allocation_to_window_x = 0
+	allocation_to_window_y = 0
+	x_offset = 0
+	y_offset = 0
+#75 0x00bbc888 in gtk_drag_find_widget (widget=0xa2191a8, 
+    data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1902
+	new_data = {x = 494, y = 148, context = 0xa2ffea0, info = 0xa347bb8, 
+  found = 0, toplevel = 0, callback = 0xbbdf70 <gtk_drag_dest_drop>, 
+  time = 2163596}
+	children = (GSList *) 0xa5563d0
+	tmp_list = (GSList *) 0xa5563d0
+	new_allocation = {x = 0, y = 0, width = 1024, height = 645}
+	allocation_to_window_x = 0
+	allocation_to_window_y = 0
+	x_offset = 0
+	y_offset = 0
+#76 0x00bbdde0 in _gtk_drag_dest_handle_event (toplevel=0xa2191a8, 
+    event=0xa42cf90) at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1600
+	data = {x = 494, y = 148, context = 0xa2ffea0, info = 0xa347bb8, 
+  found = 0, toplevel = 1, callback = 0xbbdf70 <gtk_drag_dest_drop>, 
+  time = 2163596}
+	tx = 0
+	ty = 78
+	info = (GtkDragDestInfo *) 0xa347bb8
+	context = (GdkDragContext *) 0xa2ffea0
+	__PRETTY_FUNCTION__ = "_gtk_drag_dest_handle_event"
+#77 0x00a76094 in IA__gtk_main_do_event (event=0xa42cf90)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkmain.c:1646
+	event_widget = (GtkWidget *) 0xa2191a8
+	grab_widget = (GtkWidget *) 0x7f683a0
+	window_group = (GtkWindowGroup *) 0xa0d6100
+	rewritten_event = (GdkEvent *) 0x0
+	tmp_list = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_main_do_event"
+#78 0x007bf62a in gdk_event_dispatch (source=0x9e156a0, callback=0, 
+    user_data=0x0)
+    at /build/buildd/gtk+2.0-2.18.3/gdk/x11/gdkevents-x11.c:2369
+	display = <value optimized out>
+	event = <value optimized out>
+#79 0x00442e78 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#80 0x00446720 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#81 0x00446b8f in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#82 0x00bb5b93 in IA__gtk_clipboard_wait_for_contents (clipboard=0x9e12f28, 
+    target=0x7f) at /build/buildd/gtk+2.0-2.18.3/gtk/gtkclipboard.c:1325
+	results = {loop = 0x9fcf148, data = 0x0, format = 0xbffb7488, 
+  length = 135200366}
+	__PRETTY_FUNCTION__ = "IA__gtk_clipboard_wait_for_contents"
+#83 0x080effe1 in nautilus_clipboard_clear_if_colliding_uris (
+    widget=0xa1db508, item_uris=0x9fce1a0, copied_files_atom=0x7f)
+    at nautilus-clipboard.c:623
+	data = <value optimized out>
+	clipboard_item_uris = (GList *) 0x1
+	l = <value optimized out>
+#84 0x080cc94f in icon_view_move_copy_items (container=0x9f92498, 
+    item_uris=0x9fce1a0, relative_item_points=0xa4eff08, 
+    target_dir=0xa568308 "file:///home/katana/boletos/net", copy_action=4, 
+    x=233, y=39, view=0xa1db508) at fm-icon-view.c:2586
+No locals.
+#85 0x0814012b in nautilus_marshal_VOID__POINTER_POINTER_POINTER_ENUM_INT_INT
+    (closure=0x9f55c40, return_value=0x0, n_param_values=7, 
+    param_values=0xa21b000, invocation_hint=0xbffb7680, 
+    marshal_data=0x80cc900) at nautilus-marshal-guts.c:586
+	data1 = (gpointer) 0x7f683a0
+	data2 = <value optimized out>
+	__PRETTY_FUNCTION__ = "nautilus_marshal_VOID__POINTER_POINTER_POINTER_ENUM_INT_INT"
+#86 0x0085bf98 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#87 0x008717a8 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#88 0x00872b2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#89 0x00872e42 in g_signal_emit_by_name () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#90 0x0813bece in nautilus_icon_container_receive_dropped_icons (
+    container=0x9f92498, context=0xa6a29d0, x=233, y=39)
+    at nautilus-icon-dnd.c:1039
+	drop_target = 0x7f683a0 ""
+	local_move_only = <value optimized out>
+	world_x = 233
+	world_y = 39
+	icon_hit = 1
+	action = <value optimized out>
+#91 0x0813cb11 in drag_data_received_callback (widget=0x9f92498, 
+    context=0xa6a29d0, x=233, y=39, data=0xbffb81f4, info=0, time=2161352, 
+    user_data=0x0) at nautilus-icon-dnd.c:1747
+	background = <value optimized out>
+	tmp = <value optimized out>
+	success = <value optimized out>
+#92 0x00a796bb in _gtk_marshal_VOID__OBJECT_INT_INT_BOXED_UINT_UINT (
+    closure=0x9f0c178, return_value=0x0, n_param_values=7, 
+    param_values=0xa21b090, invocation_hint=0xbffb7c00, 
+    marshal_data=0x813c550)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkmarshalers.c:2233
+	data1 = (gpointer) 0x7f683a0
+	data2 = <value optimized out>
+	__PRETTY_FUNCTION__ = "_gtk_marshal_VOID__OBJECT_INT_INT_BOXED_UINT_UINT"
+#93 0x0085bf98 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#94 0x008717a8 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#95 0x00872b2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#96 0x00872e42 in g_signal_emit_by_name () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#97 0x00bbe38b in gtk_drag_selection_received (widget=0xa21d030, 
+    selection_data=0xbffb81f4, time=2161352, data=0x9f92498)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1745
+	target_info = 0
+	site = <value optimized out>
+	context = (GdkDragContext *) 0xa6a29d0
+	info = (GtkDragDestInfo *) 0xa553468
+#98 0x00a7a5af in _gtk_marshal_VOID__BOXED_UINT (closure=0xa3e9b90, 
+    return_value=0x0, n_param_values=3, param_values=0xa4d1b88, 
+    invocation_hint=0xbffb7fd0, marshal_data=0xbbe240)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkmarshalers.c:1461
+	data1 = (gpointer) 0x7f683a0
+	data2 = <value optimized out>
+	__PRETTY_FUNCTION__ = "_gtk_marshal_VOID__BOXED_UINT"
+#99 0x0085c072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#100 0x008717a8 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#101 0x00872b2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#102 0x00872e42 in g_signal_emit_by_name () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#103 0x00ae2655 in gtk_selection_retrieval_report (info=0x9f10680, 
+    type=<value optimized out>, format=8, 
+    buffer=0xa4efcb8 "file:///home/katana/boletos/net_cancela_101009.pdf\r-26:-44:83:105\r\n", length=67, time=2161352)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkselection.c:2940
+	data = {selection = 0xad, target = 0x75, type = 0x75, format = 8, 
+  data = 0xa4efcb8 "file:///home/katana/boletos/net_cancela_101009.pdf\r-26:-44:83:105\r\n", length = 67, display = 0x9e0b000}
+#104 0x00ae4c92 in IA__gtk_selection_convert (widget=0xa21d030, 
+    selection=0xad, target=0x75, time_=2161352)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkselection.c:1089
+	owner_widget = <value optimized out>
+	owner_widget_ptr = (gpointer) 0xa236708
+	selection_data = {selection = 0xad, target = 0x75, type = 0x75, 
+  format = 8, 
+  data = 0xa4efcb8 "file:///home/katana/boletos/net_cancela_101009.pdf\r-26:-44:83:105\r\n", length = 67, display = 0x9e0b000}
+	tmp_list = <value optimized out>
+	owner_window = <value optimized out>
+	display = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_selection_convert"
+#105 0x0813af8f in get_data_on_first_target_we_support (widget=0x9f92498, 
+    context=<value optimized out>, time=2161352, x=233, y=39)
+    at nautilus-icon-dnd.c:493
+	info = 0
+	found = <value optimized out>
+	list = (GtkTargetList *) 0xa5563a8
+	target = <value optimized out>
+	__PRETTY_FUNCTION__ = "get_data_on_first_target_we_support"
+#106 0x0813b368 in drag_drop_callback (widget=0x9f92498, context=0xa6a29d0, 
+    x=233, y=39, time=2161352, data=0x0) at nautilus-icon-dnd.c:1661
+No locals.
+#107 0x00a7bd29 in _gtk_marshal_BOOLEAN__OBJECT_INT_INT_UINT (
+    closure=0xa505980, return_value=0xbffb84a4, n_param_values=5, 
+    param_values=0xa481220, invocation_hint=0xbffb8490, 
+    marshal_data=0x813b310)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkmarshalers.c:411
+	data1 = (gpointer) 0x7f683a0
+	data2 = <value optimized out>
+	v_return = <value optimized out>
+	__PRETTY_FUNCTION__ = "_gtk_marshal_BOOLEAN__OBJECT_INT_INT_UINT"
+#108 0x0085bf98 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#109 0x008717a8 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#110 0x008729b8 in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#111 0x00872e42 in g_signal_emit_by_name () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#112 0x00bbe049 in gtk_drag_dest_drop (widget=0x9f92498, context=0xa6a29d0, 
+    x=233, y=39, time=2161352)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:2315
+	retval = <value optimized out>
+	site = <value optimized out>
+	info = <value optimized out>
+	__PRETTY_FUNCTION__ = "gtk_drag_dest_drop"
+#113 0x00bbc727 in gtk_drag_find_widget (widget=0x9f92498, 
+    data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1917
+	new_allocation = {x = 275, y = 108, width = 731, height = 516}
+	allocation_to_window_x = 0
+	allocation_to_window_y = 0
+	x_offset = 275
+	y_offset = 108
+#114 0x00bbc888 in gtk_drag_find_widget (widget=0xa1db508, 
+    data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1902
+	new_data = {x = 508, y = 147, context = 0xa6a29d0, info = 0xa553468, 
+  found = 0, toplevel = 0, callback = 0xbbdf70 <gtk_drag_dest_drop>, 
+  time = 2161352}
+	children = (GSList *) 0xa3f3c88
+	tmp_list = (GSList *) 0xa556430
+	new_allocation = {x = 275, y = 108, width = 749, height = 516}
+	allocation_to_window_x = 275
+	allocation_to_window_y = 108
+	x_offset = 0
+	y_offset = 0
+#115 0x00bbc888 in gtk_drag_find_widget (widget=0xa2d25b8, 
+    data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1902
+	new_data = {x = 508, y = 147, context = 0xa6a29d0, info = 0xa553468, 
+  found = 0, toplevel = 0, callback = 0xbbdf70 <gtk_drag_dest_drop>, 
+  time = 2161352}
+	children = (GSList *) 0xa334520
+	tmp_list = (GSList *) 0xa334520
+	new_allocation = {x = 275, y = 108, width = 749, height = 516}
+	allocation_to_window_x = 275
+	allocation_to_window_y = 108
+	x_offset = 0
+	y_offset = 0
+#116 0x00bbc888 in gtk_drag_find_widget (widget=0x9eeff18, 
+    data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1902
+	new_data = {x = 508, y = 147, context = 0xa6a29d0, info = 0xa553468, 
+  found = 0, toplevel = 0, callback = 0xbbdf70 <gtk_drag_dest_drop>, 
+  time = 2161352}
+	children = (GSList *) 0x9f3cba8
+	tmp_list = (GSList *) 0x9f3cba8
+	new_allocation = {x = 275, y = 108, width = 749, height = 516}
+	allocation_to_window_x = 275
+	allocation_to_window_y = 108
+	x_offset = 0
+	y_offset = 0
+#117 0x00bbc888 in gtk_drag_find_widget (widget=0xa259910, 
+    data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1902
+	new_data = {x = 508, y = 147, context = 0xa6a29d0, info = 0xa553468, 
+  found = 0, toplevel = 0, callback = 0xbbdf70 <gtk_drag_dest_drop>, 
+  time = 2161352}
+	children = (GSList *) 0xa556420
+	tmp_list = (GSList *) 0xa2da208
+	new_allocation = {x = 275, y = 108, width = 749, height = 516}
+	allocation_to_window_x = 275
+	allocation_to_window_y = 108
+	x_offset = 0
+	y_offset = 0
+#118 0x00bbc888 in gtk_drag_find_widget (widget=0xa42bf38, 
+    data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1902
+	new_data = {x = 508, y = 147, context = 0xa6a29d0, info = 0xa553468, 
+  found = 0, toplevel = 0, callback = 0xbbdf70 <gtk_drag_dest_drop>, 
+  time = 2161352}
+	children = (GSList *) 0x9f0bbd0
+	tmp_list = (GSList *) 0x9f0bbd0
+	new_allocation = {x = 0, y = 108, width = 1024, height = 516}
+	allocation_to_window_x = 0
+	allocation_to_window_y = 108
+	x_offset = 0
+	y_offset = 0
+#119 0x00bbc888 in gtk_drag_find_widget (widget=0xa439cc0, 
+    data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1902
+	new_data = {x = 508, y = 147, context = 0xa6a29d0, info = 0xa553468, 
+  found = 0, toplevel = 0, callback = 0xbbdf70 <gtk_drag_dest_drop>, 
+  time = 2161352}
+	children = (GSList *) 0x9fcf700
+	tmp_list = (GSList *) 0xa39a410
+	new_allocation = {x = 0, y = 0, width = 1024, height = 645}
+	allocation_to_window_x = 0
+	allocation_to_window_y = 0
+	x_offset = 0
+	y_offset = 0
+#120 0x00bbc888 in gtk_drag_find_widget (widget=0xa2191a8, 
+    data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1902
+	new_data = {x = 508, y = 147, context = 0xa6a29d0, info = 0xa553468, 
+  found = 0, toplevel = 0, callback = 0xbbdf70 <gtk_drag_dest_drop>, 
+  time = 2161352}
+	children = (GSList *) 0x9f1b440
+	tmp_list = (GSList *) 0x9f1b440
+	new_allocation = {x = 0, y = 0, width = 1024, height = 645}
+	allocation_to_window_x = 0
+	allocation_to_window_y = 0
+	x_offset = 0
+	y_offset = 0
+#121 0x00bbdde0 in _gtk_drag_dest_handle_event (toplevel=0xa2191a8, 
+    event=0xa285e88) at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1600
+	data = {x = 508, y = 147, context = 0xa6a29d0, info = 0xa553468, 
+  found = 0, toplevel = 1, callback = 0xbbdf70 <gtk_drag_dest_drop>, 
+  time = 2161352}
+	tx = 0
+	ty = 78
+	info = (GtkDragDestInfo *) 0xa553468
+	context = (GdkDragContext *) 0xa6a29d0
+	__PRETTY_FUNCTION__ = "_gtk_drag_dest_handle_event"
+#122 0x00a76094 in IA__gtk_main_do_event (event=0xa285e88)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkmain.c:1646
+	event_widget = (GtkWidget *) 0xa2191a8
+	grab_widget = (GtkWidget *) 0x7f683a0
+	window_group = (GtkWindowGroup *) 0xa0d6100
+	rewritten_event = (GdkEvent *) 0x0
+	tmp_list = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_main_do_event"
+#123 0x007bf62a in gdk_event_dispatch (source=0x9e156a0, callback=0, 
+    user_data=0x0)
+    at /build/buildd/gtk+2.0-2.18.3/gdk/x11/gdkevents-x11.c:2369
+	display = <value optimized out>
+	event = <value optimized out>
+#124 0x00442e78 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#125 0x00446720 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#126 0x00446b8f in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#127 0x00bb5b93 in IA__gtk_clipboard_wait_for_contents (clipboard=0x9e12f28, 
+    target=0x7f) at /build/buildd/gtk+2.0-2.18.3/gtk/gtkclipboard.c:1325
+	results = {loop = 0x9f1b158, data = 0x0, format = 0x7f, 
+  length = 172116304}
+	__PRETTY_FUNCTION__ = "IA__gtk_clipboard_wait_for_contents"
+#128 0x080effe1 in nautilus_clipboard_clear_if_colliding_uris (
+    widget=0xa1db508, item_uris=0xa424950, copied_files_atom=0x7f)
+    at nautilus-clipboard.c:623
+	data = <value optimized out>
+	clipboard_item_uris = (GList *) 0x1
+	l = <value optimized out>
+#129 0x080cc94f in icon_view_move_copy_items (container=0x9f92498, 
+    item_uris=0xa424950, relative_item_points=0xa5867a8, 
+    target_dir=0xa5561a8 "file:///home/katana/boletos/net", copy_action=4, 
+    x=247, y=40, view=0xa1db508) at fm-icon-view.c:2586
+No locals.
+#130 0x0814012b in nautilus_marshal_VOID__POINTER_POINTER_POINTER_ENUM_INT_INT
+    (closure=0x9f55c40, return_value=0x0, n_param_values=7, 
+    param_values=0xa1835a0, invocation_hint=0xbffb9210, 
+    marshal_data=0x80cc900) at nautilus-marshal-guts.c:586
+	data1 = (gpointer) 0x7f683a0
+	data2 = <value optimized out>
+	__PRETTY_FUNCTION__ = "nautilus_marshal_VOID__POINTER_POINTER_POINTER_ENUM_INT_INT"
+#131 0x0085c072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#132 0x008717a8 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#133 0x00872b2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#134 0x00872e42 in g_signal_emit_by_name () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#135 0x0813bece in nautilus_icon_container_receive_dropped_icons (
+    container=0x9f92498, context=0xa6a28a0, x=247, y=40)
+    at nautilus-icon-dnd.c:1039
+	drop_target = 0x7f683a0 ""
+	local_move_only = <value optimized out>
+	world_x = 247
+	world_y = 40
+	icon_hit = 1
+	action = <value optimized out>
+#136 0x0813cb11 in drag_data_received_callback (widget=0x9f92498, 
+    context=0xa6a28a0, x=247, y=40, data=0xbffb9d84, info=0, time=2156557, 
+    user_data=0x0) at nautilus-icon-dnd.c:1747
+	background = <value optimized out>
+	tmp = <value optimized out>
+	success = <value optimized out>
+#137 0x00a796bb in _gtk_marshal_VOID__OBJECT_INT_INT_BOXED_UINT_UINT (
+    closure=0x9f0c178, return_value=0x0, n_param_values=7, 
+    param_values=0xa21b1b0, invocation_hint=0xbffb9790, 
+    marshal_data=0x813c550)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkmarshalers.c:2233
+	data1 = (gpointer) 0x7f683a0
+	data2 = <value optimized out>
+	__PRETTY_FUNCTION__ = "_gtk_marshal_VOID__OBJECT_INT_INT_BOXED_UINT_UINT"
+#138 0x0085c072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#139 0x008717a8 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#140 0x00872b2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#141 0x00872e42 in g_signal_emit_by_name () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#142 0x00bbe38b in gtk_drag_selection_received (widget=0xa2365a8, 
+    selection_data=0xbffb9d84, time=2156557, data=0x9f92498)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1745
+	target_info = 0
+	site = <value optimized out>
+	context = (GdkDragContext *) 0xa6a28a0
+	info = (GtkDragDestInfo *) 0xa6a7560
+#143 0x00a7a5af in _gtk_marshal_VOID__BOXED_UINT (closure=0xa3ec1a0, 
+    return_value=0x0, n_param_values=3, param_values=0xa34fa80, 
+    invocation_hint=0xbffb9b60, marshal_data=0xbbe240)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkmarshalers.c:1461
+	data1 = (gpointer) 0x7f683a0
+	data2 = <value optimized out>
+	__PRETTY_FUNCTION__ = "_gtk_marshal_VOID__BOXED_UINT"
+#144 0x0085c072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#145 0x008717a8 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#146 0x00872b2d in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#147 0x00872e42 in g_signal_emit_by_name () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#148 0x00ae2655 in gtk_selection_retrieval_report (info=0xa4ab120, 
+    type=<value optimized out>, format=8, 
+    buffer=0xa556168 "file:///home/katana/boletos/76524.pdf\r-68:-54:77:105\r\n", length=54, time=2156557)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkselection.c:2940
+	data = {selection = 0xad, target = 0x75, type = 0x75, format = 8, 
+  data = 0xa556168 "file:///home/katana/boletos/76524.pdf\r-68:-54:77:105\r\n", length = 54, display = 0x9e0b000}
+#149 0x00ae4c92 in IA__gtk_selection_convert (widget=0xa2365a8, 
+    selection=0xad, target=0x75, time_=2156557)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkselection.c:1089
+	owner_widget = <value optimized out>
+	owner_widget_ptr = (gpointer) 0xa1b3ce8
+	selection_data = {selection = 0xad, target = 0x75, type = 0x75, 
+  format = 8, 
+  data = 0xa556168 "file:///home/katana/boletos/76524.pdf\r-68:-54:77:105\r\n", length = 54, display = 0x9e0b000}
+	tmp_list = <value optimized out>
+	owner_window = <value optimized out>
+	display = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_selection_convert"
+#150 0x0813af8f in get_data_on_first_target_we_support (widget=0x9f92498, 
+    context=<value optimized out>, time=2156557, x=247, y=40)
+    at nautilus-icon-dnd.c:493
+	info = 0
+	found = <value optimized out>
+	list = (GtkTargetList *) 0xa5563a8
+	target = <value optimized out>
+	__PRETTY_FUNCTION__ = "get_data_on_first_target_we_support"
+#151 0x0813b368 in drag_drop_callback (widget=0x9f92498, context=0xa6a28a0, 
+    x=247, y=40, time=2156557, data=0x0) at nautilus-icon-dnd.c:1661
+No locals.
+#152 0x00a7bd29 in _gtk_marshal_BOOLEAN__OBJECT_INT_INT_UINT (
+    closure=0xa505980, return_value=0xbffba034, n_param_values=5, 
+    param_values=0xa4a8748, invocation_hint=0xbffba020, 
+    marshal_data=0x813b310)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkmarshalers.c:411
+	data1 = (gpointer) 0x7f683a0
+	data2 = <value optimized out>
+	v_return = <value optimized out>
+	__PRETTY_FUNCTION__ = "_gtk_marshal_BOOLEAN__OBJECT_INT_INT_UINT"
+#153 0x0085c072 in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#154 0x008717a8 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#155 0x008729b8 in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#156 0x00872e42 in g_signal_emit_by_name () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#157 0x00bbe049 in gtk_drag_dest_drop (widget=0x9f92498, context=0xa6a28a0, 
+    x=247, y=40, time=2156557)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:2315
+	retval = <value optimized out>
+	site = <value optimized out>
+	info = <value optimized out>
+	__PRETTY_FUNCTION__ = "gtk_drag_dest_drop"
+#158 0x00bbc727 in gtk_drag_find_widget (widget=0x9f92498, 
+    data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1917
+	new_allocation = {x = 275, y = 108, width = 731, height = 516}
+	allocation_to_window_x = 0
+	allocation_to_window_y = 0
+	x_offset = 275
+	y_offset = 108
+#159 0x00bbc888 in gtk_drag_find_widget (widget=0xa1db508, 
+    data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1902
+	new_data = {x = 522, y = 148, context = 0xa6a28a0, info = 0xa6a7560, 
+  found = 0, toplevel = 0, callback = 0xbbdf70 <gtk_drag_dest_drop>, 
+  time = 2156557}
+	children = (GSList *) 0xa520488
+	tmp_list = (GSList *) 0xa2da290
+	new_allocation = {x = 275, y = 108, width = 749, height = 516}
+	allocation_to_window_x = 275
+	allocation_to_window_y = 108
+	x_offset = 0
+	y_offset = 0
+#160 0x00bbc888 in gtk_drag_find_widget (widget=0xa2d25b8, 
+    data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1902
+	new_data = {x = 522, y = 148, context = 0xa6a28a0, info = 0xa6a7560, 
+  found = 0, toplevel = 0, callback = 0xbbdf70 <gtk_drag_dest_drop>, 
+  time = 2156557}
+	children = (GSList *) 0xa2da238
+	tmp_list = (GSList *) 0xa2da238
+	new_allocation = {x = 275, y = 108, width = 749, height = 516}
+	allocation_to_window_x = 275
+	allocation_to_window_y = 108
+	x_offset = 0
+	y_offset = 0
+#161 0x00bbc888 in gtk_drag_find_widget (widget=0x9eeff18, 
+    data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1902
+	new_data = {x = 522, y = 148, context = 0xa6a28a0, info = 0xa6a7560, 
+  found = 0, toplevel = 0, callback = 0xbbdf70 <gtk_drag_dest_drop>, 
+  time = 2156557}
+	children = (GSList *) 0xa3f66a0
+	tmp_list = (GSList *) 0xa3f66a0
+	new_allocation = {x = 275, y = 108, width = 749, height = 516}
+	allocation_to_window_x = 275
+	allocation_to_window_y = 108
+	x_offset = 0
+	y_offset = 0
+#162 0x00bbc888 in gtk_drag_find_widget (widget=0xa259910, 
+    data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1902
+	new_data = {x = 522, y = 148, context = 0xa6a28a0, info = 0xa6a7560, 
+  found = 0, toplevel = 0, callback = 0xbbdf70 <gtk_drag_dest_drop>, 
+  time = 2156557}
+	children = (GSList *) 0x9f11838
+	tmp_list = (GSList *) 0x9fc3c48
+	new_allocation = {x = 275, y = 108, width = 749, height = 516}
+	allocation_to_window_x = 275
+	allocation_to_window_y = 108
+	x_offset = 0
+	y_offset = 0
+#163 0x00bbc888 in gtk_drag_find_widget (widget=0xa42bf38, 
+    data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1902
+	new_data = {x = 522, y = 148, context = 0xa6a28a0, info = 0xa6a7560, 
+  found = 0, toplevel = 0, callback = 0xbbdf70 <gtk_drag_dest_drop>, 
+  time = 2156557}
+	children = (GSList *) 0xa556330
+	tmp_list = (GSList *) 0xa556330
+	new_allocation = {x = 0, y = 108, width = 1024, height = 516}
+	allocation_to_window_x = 0
+	allocation_to_window_y = 108
+	x_offset = 0
+	y_offset = 0
+#164 0x00bbc888 in gtk_drag_find_widget (widget=0xa439cc0, 
+    data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1902
+	new_data = {x = 522, y = 148, context = 0xa6a28a0, info = 0xa6a7560, 
+  found = 0, toplevel = 0, callback = 0xbbdf70 <gtk_drag_dest_drop>, 
+  time = 2156557}
+	children = (GSList *) 0xa2da2c8
+	tmp_list = (GSList *) 0xa334548
+	new_allocation = {x = 0, y = 0, width = 1024, height = 645}
+	allocation_to_window_x = 0
+	allocation_to_window_y = 0
+	x_offset = 0
+	y_offset = 0
+#165 0x00bbc888 in gtk_drag_find_widget (widget=0xa2191a8, 
+    data=<value optimized out>)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1902
+	new_data = {x = 522, y = 148, context = 0xa6a28a0, info = 0xa6a7560, 
+  found = 0, toplevel = 0, callback = 0xbbdf70 <gtk_drag_dest_drop>, 
+  time = 2156557}
+	children = (GSList *) 0xa3f6638
+	tmp_list = (GSList *) 0xa3f6638
+	new_allocation = {x = 0, y = 0, width = 1024, height = 645}
+	allocation_to_window_x = 0
+	allocation_to_window_y = 0
+	x_offset = 0
+	y_offset = 0
+#166 0x00bbdde0 in _gtk_drag_dest_handle_event (toplevel=0xa2191a8, 
+    event=0xa39ecb0) at /build/buildd/gtk+2.0-2.18.3/gtk/gtkdnd.c:1600
+	data = {x = 522, y = 148, context = 0xa6a28a0, info = 0xa6a7560, 
+  found = 0, toplevel = 1, callback = 0xbbdf70 <gtk_drag_dest_drop>, 
+  time = 2156557}
+	tx = 0
+	ty = 78
+	info = (GtkDragDestInfo *) 0xa6a7560
+	context = (GdkDragContext *) 0xa6a28a0
+	__PRETTY_FUNCTION__ = "_gtk_drag_dest_handle_event"
+#167 0x00a76094 in IA__gtk_main_do_event (event=0xa39ecb0)
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkmain.c:1646
+	event_widget = (GtkWidget *) 0xa2191a8
+	grab_widget = (GtkWidget *) 0x7f683a0
+	window_group = (GtkWindowGroup *) 0xa0d6100
+	rewritten_event = (GdkEvent *) 0x0
+	tmp_list = <value optimized out>
+	__PRETTY_FUNCTION__ = "IA__gtk_main_do_event"
+#168 0x007bf62a in gdk_event_dispatch (source=0x9e156a0, callback=0, 
+    user_data=0x0)
+    at /build/buildd/gtk+2.0-2.18.3/gdk/x11/gdkevents-x11.c:2369
+	display = <value optimized out>
+	event = <value optimized out>
+#169 0x00442e78 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#170 0x00446720 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#171 0x00446b8f in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#172 0x00a76419 in IA__gtk_main ()
+    at /build/buildd/gtk+2.0-2.18.3/gtk/gtkmain.c:1218
+	tmp_list = (GList *) 0x0
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0x1
+	loop = (GMainLoop *) 0x9fbb3f0
+#173 0x0808185f in main (argc=1, argv=0xbffbae74) at nautilus-main.c:588
+	kill_shell = 0
+	no_default_window = 1
+	browser_window = 0
+	no_desktop = 0
+	version = 0
+	autostart_mode = 1
+	autostart_id = <value optimized out>
+	geometry = (gchar *) 0x0
+	remaining = (gchar **) 0x0
+	perform_self_check = 0
+	application = (NautilusApplication *) 0x9e45c00
+	context = <value optimized out>
+	file = (GFile *) 0x1
+	uri = <value optimized out>
+	uris = (char **) 0x0
+	uris_array = <value optimized out>
+	error = (GError *) 0x0
+	options = {{long_name = 0x81a6e16 "check", short_name = 99 'c', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbffbad90, 
+    description = 0x81a6e58 "Perform a quick set of self-check tests.", 
+    arg_description = 0x0}, {long_name = 0x81a6d0f "version", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbffbad9c, 
+    description = 0x81a6e84 "Show the version of the program.", 
+    arg_description = 0x0}, {long_name = 0x81aaa18 "geometry", 
+    short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, 
+    arg_data = 0xbffbad98, 
+    description = 0x81a6ea8 "Create the initial window with the given geometry.", arg_description = 0x81a6d17 "GEOMETRY"}, {
+    long_name = 0x81a6d20 "no-default-window", short_name = 110 'n', 
+    flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbffbada8, 
+    description = 0x81a6edc "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {long_name = 0x81a6d32 "no-desktop", 
+    short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbffbada0, 
+    description = 0x81a6f10 "Do not manage the desktop (ignore the preference set in the preferences dialog).", arg_description = 0x0}, {
+    long_name = 0x81a3a0b "browser", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbffbada4, 
+    description = 0x81a6d3d "open a browser window.", arg_description = 0x0}, 
+  {long_name = 0x81c661d "quit", short_name = 113 'q', flags = 0, 
+    arg = G_OPTION_ARG_NONE, arg_data = 0xbffbadac, 
+    description = 0x81a6d54 "Quit Nautilus.", arg_description = 0x0}, {
+    long_name = 0x81abd61 "", short_name = 0 '\0', flags = 0, 
+    arg = G_OPTION_ARG_STRING_ARRAY, arg_data = 0xbffbad94, 
+    description = 0x0, arg_description = 0x81a6d63 "[URI...]"}, {
+    long_name = 0x0, short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x0, description = 0x0, arg_description = 0x0}}

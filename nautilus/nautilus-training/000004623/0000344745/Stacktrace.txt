@@ -1,0 +1,150 @@
+#0  0x0000000000000000 in ?? ()
+#1  0x00007f54268ab695 in g_object_notify_queue_thaw (object=0x23df060, 
+    nqueue=<value optimized out>)
+    at /build/buildd/glib2.0-2.20.0/gobject/gobjectnotifyqueue.c:125
+	context = (GObjectNotifyContext *) 0x7f5418634100
+	pspecs_mem = {0x2062800, 0x139a320, 0x2062800, 0x7f54261ee761, 
+  0x2053c90, 0x7f540756b3f0, 0x7f5426459de0, 0x7f540756b470, 0x2062800, 
+  0x7f540756b3f0, 0x23df060, 0x2062800, 0x7f540756b470, 0x0, 0x2053c90, 
+  0x7f540756b410}
+	pspecs = (GParamSpec **) 0x7f540756b2c0
+	free_me = (GParamSpec **) 0x0
+	slist = <value optimized out>
+	n_pspecs = 1
+#2  0x00007f54268ad1a5 in IA__g_object_set_valist (object=0x23df060, 
+    first_property_name=0x0, var_args=0x7f540756b470)
+    at /build/buildd/glib2.0-2.20.0/gobject/gobject.c:1437
+	nqueue = (GObjectNotifyQueue *) 0x7f5418636280
+	name = (const gchar *) 0x0
+	__PRETTY_FUNCTION__ = "IA__g_object_set_valist"
+#3  0x00007f54268ad454 in IA__g_object_set (_object=0x23df060, 
+    first_property_name=0x7f540d90c6ca "mute")
+    at /build/buildd/glib2.0-2.20.0/gobject/gobject.c:1537
+	var_args = {{gp_offset = 32, fp_offset = 48, 
+    overflow_arg_area = 0x7f540756b560, reg_save_area = 0x7f540756b490}}
+	__PRETTY_FUNCTION__ = "IA__g_object_set"
+#4  0x00007f540d9020d0 in set_active_source (play_base_bin=0x21cc640, 
+    type=GST_STREAM_TYPE_TEXT, source_num=0) at gstplaybasebin.c:2484
+	info = (GstStreamInfo *) 0x23df060
+	group = (GstPlayBaseGroup *) 0x7f541801c510
+	s = (GList *) 0x21f36a0
+	num = 0
+	have_active = 0
+	sel = (GstElement *) 0x22242e0
+	__PRETTY_FUNCTION__ = "set_active_source"
+#5  0x00007f540d9024a9 in setup_substreams (play_base_bin=0x21cc640)
+    at gstplaybasebin.c:1783
+	group = (GstPlayBaseGroup *) 0x7f541801c510
+	n = 3
+	item = <value optimized out>
+	__PRETTY_FUNCTION__ = "setup_substreams"
+#6  0x00007f540d903a60 in group_commit (play_base_bin=0x21cc640, 
+    fatal=<value optimized out>, subtitle=0) at gstplaybasebin.c:484
+	group = (GstPlayBaseGroup *) 0x7f541801c510
+	__PRETTY_FUNCTION__ = "group_commit"
+#7  0x00007f54268a827d in IA__g_closure_invoke (closure=0x2411280, 
+    return_value=0x0, n_param_values=1, param_values=0x7f5418634b40, 
+    invocation_hint=0x7f540756b7d0)
+    at /build/buildd/glib2.0-2.20.0/gobject/gclosure.c:767
+	marshal = (
+    GClosureMarshal) 0x42d7f8 <g_cclosure_marshal_VOID__VOID@plt>
+	marshal_data = (gpointer) 0x0
+	__PRETTY_FUNCTION__ = "IA__g_closure_invoke"
+#8  0x00007f54268bddc8 in signal_emit_unlocked_R (node=0x139dff0, detail=0, 
+    instance=0x1e54540, emission_return=0x0, 
+    instance_and_params=0x7f5418634b40)
+    at /build/buildd/glib2.0-2.20.0/gobject/gsignal.c:3244
+	tmp = <value optimized out>
+	handler = (Handler *) 0x2402320
+	accumulator = (SignalAccumulator *) 0x0
+	emission = {next = 0x7f540756bbc0, instance = 0x1e54540, ihint = {
+    signal_id = 467, detail = 0, run_type = G_SIGNAL_RUN_FIRST}, 
+  state = EMISSION_RUN, chain_type = 4}
+	class_closure = (GClosure *) 0x139dfa0
+	handler_list = (Handler *) 0x2402320
+	return_accu = (GValue *) 0x0
+	accu = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, 
+      v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, 
+      v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, 
+      v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+	signal_id = 467
+	max_sequential_handler_number = 6393
+	return_value_altered = 0
+#9  0x00007f54268bf422 in IA__g_signal_emit_valist (instance=0x1e54540, 
+    signal_id=<value optimized out>, detail=0, var_args=0x7f540756b9b0)
+    at /build/buildd/glib2.0-2.20.0/gobject/gsignal.c:2977
+	signal_return_type = 4
+	param_values = (GValue *) 0x7f5418634b58
+	node = (SignalNode *) 0x139dff0
+	i = 0
+	n_params = 0
+	__PRETTY_FUNCTION__ = "IA__g_signal_emit_valist"
+#10 0x00007f54268bf943 in IA__g_signal_emit (instance=0x23df060, signal_id=1, 
+    detail=123122368) at /build/buildd/glib2.0-2.20.0/gobject/gsignal.c:3034
+	var_args = {{gp_offset = 24, fp_offset = 48, 
+    overflow_arg_area = 0x7f540756ba90, reg_save_area = 0x7f540756b9d0}}
+#11 0x00007f54268a827d in IA__g_closure_invoke (closure=0x2414fb0, 
+    return_value=0x0, n_param_values=1, param_values=0x7f54186361a0, 
+    invocation_hint=0x7f540756bbd0)
+    at /build/buildd/glib2.0-2.20.0/gobject/gclosure.c:767
+	marshal = (
+    GClosureMarshal) 0x42d7f8 <g_cclosure_marshal_VOID__VOID@plt>
+	marshal_data = (gpointer) 0x0
+	__PRETTY_FUNCTION__ = "IA__g_closure_invoke"
+#12 0x00007f54268bddc8 in signal_emit_unlocked_R (node=0x139dff0, detail=0, 
+    instance=0x1d3f2c0, emission_return=0x0, 
+    instance_and_params=0x7f54186361a0)
+    at /build/buildd/glib2.0-2.20.0/gobject/gsignal.c:3244
+	tmp = <value optimized out>
+	handler = (Handler *) 0x24028c0
+	accumulator = (SignalAccumulator *) 0x0
+	emission = {next = 0x0, instance = 0x1d3f2c0, ihint = {
+    signal_id = 467, detail = 0, run_type = G_SIGNAL_RUN_FIRST}, 
+  state = EMISSION_RUN, chain_type = 4}
+	class_closure = (GClosure *) 0x139dfa0
+	handler_list = (Handler *) 0x24028c0
+	return_accu = (GValue *) 0x0
+	accu = {g_type = 0, data = {{v_int = 0, v_uint = 0, v_long = 0, 
+      v_ulong = 0, v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, 
+      v_pointer = 0x0}, {v_int = 0, v_uint = 0, v_long = 0, v_ulong = 0, 
+      v_int64 = 0, v_uint64 = 0, v_float = 0, v_double = 0, v_pointer = 0x0}}}
+	signal_id = 467
+	max_sequential_handler_number = 6393
+	return_value_altered = 0
+#13 0x00007f54268bf422 in IA__g_signal_emit_valist (instance=0x1d3f2c0, 
+    signal_id=<value optimized out>, detail=0, var_args=0x7f540756bdb0)
+    at /build/buildd/glib2.0-2.20.0/gobject/gsignal.c:2977
+	signal_return_type = 4
+	param_values = (GValue *) 0x7f54186361b8
+	node = (SignalNode *) 0x139dff0
+	i = 0
+	n_params = 0
+	__PRETTY_FUNCTION__ = "IA__g_signal_emit_valist"
+#14 0x00007f54268bf943 in IA__g_signal_emit (instance=0x23df060, signal_id=1, 
+    detail=123122368) at /build/buildd/glib2.0-2.20.0/gobject/gsignal.c:3034
+	var_args = {{gp_offset = 24, fp_offset = 48, 
+    overflow_arg_area = 0x7f540756be90, reg_save_area = 0x7f540756bdd0}}
+#15 0x00007f54080b1c1e in gst_matroska_demux_loop (pad=0x1d3f2c0)
+    at matroska-demux.c:4745
+	demux = (GstMatroskaDemux *) 0x1d3f2c0
+	ret = GST_FLOW_OK
+	__FUNCTION__ = "gst_matroska_demux_loop"
+	__PRETTY_FUNCTION__ = "gst_matroska_demux_loop"
+#16 0x00007f5417964d86 in gst_task_func (task=0x1e80be0, 
+    tclass=<value optimized out>) at gsttask.c:192
+	lock = (GStaticRecMutex *) 0x241c750
+	tself = (GThread *) 0x1fa21e0
+	__PRETTY_FUNCTION__ = "gst_task_func"
+#17 0x00007f54261faeb7 in g_thread_pool_thread_proxy (
+    data=<value optimized out>)
+    at /build/buildd/glib2.0-2.20.0/glib/gthreadpool.c:265
+	task = (gpointer) 0x1e80be0
+	pool = (GRealThreadPool *) 0x20562b0
+#18 0x00007f54261f9954 in g_thread_create_proxy (data=0x1fa21e0)
+    at /build/buildd/glib2.0-2.20.0/glib/gthread.c:635
+	__PRETTY_FUNCTION__ = "g_thread_create_proxy"
+#19 0x00007f5424f9b3ba in start_thread () from /lib/libpthread.so.0
+#20 0x00007f5424d07fcd in clone ()
+    at ../sysdeps/unix/sysv/linux/x86_64/clone.S:112
+No locals.
+#21 0x0000000000000000 in ?? ()

@@ -1,0 +1,44 @@
+#0  0x0000000000000000 in ?? ()
+#1  0x00007f98ead86675 in ?? () from /usr/lib/libgobject-2.0.so.0
+#2  0x00007f98ead88185 in g_object_set_valist () from /usr/lib/libgobject-2.0.so.0
+#3  0x00007f98ead88464 in g_object_set () from /usr/lib/libgobject-2.0.so.0
+#4  0x00007f98e1f5c4e0 in set_active_source (play_base_bin=0xe0c020, type=GST_STREAM_TYPE_AUDIO, source_num=0)
+    at gstplaybasebin.c:2484
+	info = (GstStreamInfo *) 0x7f98dc013980
+	group = (GstPlayBaseGroup *) 0x7f98dc013300
+	s = (GList *) 0xe72a20
+	num = 0
+	have_active = 0
+	sel = (GstElement *) 0xe41a10
+	__PRETTY_FUNCTION__ = "set_active_source"
+#5  0x00007f98e1f5c8b9 in setup_substreams (play_base_bin=0xe0c020) at gstplaybasebin.c:1783
+	group = (GstPlayBaseGroup *) 0x7f98dc013300
+	n = 1
+	item = <value optimized out>
+	__PRETTY_FUNCTION__ = "setup_substreams"
+#6  0x00007f98e1f5de70 in group_commit (play_base_bin=0xe0c020, fatal=<value optimized out>, subtitle=0)
+    at gstplaybasebin.c:484
+	group = (GstPlayBaseGroup *) 0x7f98dc013300
+	__PRETTY_FUNCTION__ = "group_commit"
+#7  0x00007f98ead8325d in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+#8  0x00007f98ead98f5d in ?? () from /usr/lib/libgobject-2.0.so.0
+#9  0x00007f98ead9a608 in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+#10 0x00007f98ead9ab33 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+#11 0x00007f98ead8325d in g_closure_invoke () from /usr/lib/libgobject-2.0.so.0
+#12 0x00007f98ead98f5d in ?? () from /usr/lib/libgobject-2.0.so.0
+#13 0x00007f98ead9a608 in g_signal_emit_valist () from /usr/lib/libgobject-2.0.so.0
+#14 0x00007f98ead9ab33 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+#15 0x00007f98e0c7729e in gst_matroska_demux_loop (pad=0xe5c0b0) at matroska-demux.c:4716
+	demux = (GstMatroskaDemux *) 0xe5c0b0
+	ret = GST_FLOW_OK
+	__FUNCTION__ = "gst_matroska_demux_loop"
+	__PRETTY_FUNCTION__ = "gst_matroska_demux_loop"
+#16 0x00007f98f0926c06 in gst_task_func (task=0xe5e000, tclass=<value optimized out>) at gsttask.c:192
+	lock = (GStaticRecMutex *) 0xde3090
+	tself = (GThread *) 0xe5b8e0
+	__PRETTY_FUNCTION__ = "gst_task_func"
+#17 0x00007f98ea9117f7 in ?? () from /usr/lib/libglib-2.0.so.0
+#18 0x00007f98ea910264 in ?? () from /usr/lib/libglib-2.0.so.0
+#19 0x00007f98e953c3ea in start_thread () from /lib/libpthread.so.0
+#20 0x00007f98e92a9c6d in clone () from /lib/libc.so.6
+#21 0x0000000000000000 in ?? ()

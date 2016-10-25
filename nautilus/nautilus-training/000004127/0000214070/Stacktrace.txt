@@ -1,0 +1,83 @@
+#0  0x081063d8 in nautilus_file_invalidate_attributes (file=0x0, file_attributes=2047) at nautilus-file.c:6407
+No locals.
+#1  0x08106476 in nautilus_file_invalidate_all_attributes (file=0x0) at nautilus-file.c:6442
+	all_attributes = <value optimized out>
+#2  0x0809a0ab in begin_location_change (window=0x81a1288, location=0x82fce20, new_selection=0x0, 
+    type=NAUTILUS_LOCATION_CHANGE_STANDARD, distance=0, scroll_pos=0x0) at nautilus-window-manage-views.c:776
+	directory = (NautilusDirectory *) 0x81d4d08
+	file = (NautilusFile *) 0x0
+	current_pos = <value optimized out>
+	__PRETTY_FUNCTION__ = "begin_location_change"
+#3  0x0809d4c5 in nautilus_window_open_location (window=0x81a1288, location=0x82fce20, close_behind=0)
+    at nautilus-window-manage-views.c:606
+No locals.
+#4  0x0806d432 in nautilus_application_load_session (application=0x81a2048, 
+    filename=0x8201e00 "/home/mario/.nautilus/saved-session-5U538T") at nautilus-application.c:1787
+	geometry = <value optimized out>
+	window = (NautilusWindow *) 0x81a1288
+	type = (xmlChar *) 0x82c2ea8 "navigation"
+	location_uri = (xmlChar *) 0x82e0fc8 ""
+	location = (GFile *) 0x82fce20
+	node = (xmlNodePtr) 0x82c1208
+	root_node = <value optimized out>
+	doc = (xmlDocPtr) 0x82c5da0
+	bail = 0
+	__PRETTY_FUNCTION__ = "nautilus_application_load_session"
+#5  0x080938d1 in load_session_at_idle (_data=0x8201d90) at nautilus-shell.c:272
+No locals.
+#6  0xb7550081 in g_idle_dispatch (source=0x822ca20, callback=0, user_data=0x8201d90)
+    at /build/buildd/glib2.0-2.16.2/glib/gmain.c:4087
+No locals.
+#7  0xb7551bd8 in IA__g_main_context_dispatch (context=0x81a6e18) at /build/buildd/glib2.0-2.16.2/glib/gmain.c:2009
+No locals.
+#8  0xb7554e3e in g_main_context_iterate (context=0x81a6e18, block=1, dispatch=1, self=0x8174408)
+    at /build/buildd/glib2.0-2.16.2/glib/gmain.c:2642
+	max_priority = 200
+	timeout = 0
+	some_ready = 1
+	nfds = <value optimized out>
+	allocated_nfds = <value optimized out>
+	fds = (GPollFD *) 0x822c620
+	__PRETTY_FUNCTION__ = "g_main_context_iterate"
+#9  0xb75551c7 in IA__g_main_loop_run (loop=0x81c5bc0) at /build/buildd/glib2.0-2.16.2/glib/gmain.c:2850
+	self = (GThread *) 0x8174408
+	__PRETTY_FUNCTION__ = "IA__g_main_loop_run"
+#10 0xb793b244 in IA__gtk_main () at /build/buildd/gtk+2.0-2.12.9/gtk/gtkmain.c:1163
+	tmp_list = (GList *) 0x0
+	functions = (GList *) 0x0
+	init = (GtkInitFunction *) 0x0
+	loop = (GMainLoop *) 0x81c5bc0
+#11 0x0807f075 in main (argc=137113160, argv=0xbfd6b524) at nautilus-main.c:569
+	kill_shell = 0
+	restart_shell = 0
+	no_default_window = 1
+	browser_window = 0
+	no_desktop = 0
+	startup_id = <value optimized out>
+	startup_id_copy = 0x81c5bc0 "\030n\032\b\001"
+	session_to_load = 0x81935b0 "/home/mario/.nautilus/saved-session-5U538T"
+	geometry = (gchar *) 0x0
+	remaining = (const gchar **) 0x0
+	perform_self_check = 0
+	context = <value optimized out>
+	application = (NautilusApplication *) 0x81a2048
+	program = (GnomeProgram *) 0x8187858
+	options = {{long_name = 0x814e9d2 "check", short_name = 99 'c', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfd6b3f0, description = 0x814ea20 "Perform a quick set of self-check tests.", arg_description = 0x0}, {
+    long_name = 0x8151b7b "geometry", short_name = 103 'g', flags = 0, arg = G_OPTION_ARG_STRING, arg_data = 0xbfd6b3f8, 
+    description = 0x814ea4c "Create the initial window with the given geometry.", arg_description = 0x814e849 "GEOMETRY"}, {
+    long_name = 0x814e852 "no-default-window", short_name = 110 'n', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfd6b408, 
+    description = 0x814ea80 "Only create windows for explicitly specified URIs.", arg_description = 0x0}, {
+    long_name = 0x814e864 "no-desktop", short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfd6b400, 
+    description = 0x814eab4 "Do not manage the desktop (ignore the preference set in the preferences dialog).", 
+    arg_description = 0x0}, {long_name = 0x8150c22 "browser", short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0xbfd6b404, description = 0x814e86f "open a browser window.", arg_description = 0x0}, {
+    long_name = 0x814e9da "quit", short_name = 113 'q', flags = 0, arg = G_OPTION_ARG_NONE, arg_data = 0xbfd6b410, 
+    description = 0x814e886 "Quit Nautilus.", arg_description = 0x0}, {long_name = 0x814e9e1 "restart", short_name = 0 '\0', 
+    flags = 1, arg = G_OPTION_ARG_NONE, arg_data = 0xbfd6b40c, description = 0x814e895 "Restart Nautilus.", 
+    arg_description = 0x0}, {long_name = 0x8152cf1 "", short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_STRING_ARRAY, 
+    arg_data = 0xbfd6b3f4, description = 0x0, arg_description = 0x814e8a7 "[URI...]"}, {long_name = 0x814af20 "load-session", 
+    short_name = 108 'l', flags = 0, arg = G_OPTION_ARG_STRING, arg_data = 0xbfd6b3fc, 
+    description = 0x814eb08 "Load a saved session from the specified file. Implies \"--no-default-window\".", 
+    arg_description = 0x814e8b0 "FILENAME"}, {long_name = 0x0, short_name = 0 '\0', flags = 0, arg = G_OPTION_ARG_NONE, 
+    arg_data = 0x0, description = 0x0, arg_description = 0x0}}

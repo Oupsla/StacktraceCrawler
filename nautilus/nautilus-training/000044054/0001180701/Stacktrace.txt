@@ -1,0 +1,88 @@
+#0  0x00007f66faeeca56 in gtk_action_get_name (action=action@entry=0x2147f40) at /build/buildd/gtk+3.0-3.8.2/./gtk/gtkaction.c:1004
+        __inst = 0x2147f40
+        __t = 27928448
+        __r = <optimised out>
+        _g_boolean_var_ = <optimised out>
+        __PRETTY_FUNCTION__ = "gtk_action_get_name"
+#1  0x00000000004716ae in add_extension_menu_items (view=view@entry=0x1e383c0, files=files@entry=0x1b174e0, menu_items=menu_items@entry=0x1be2040, subdirectory=subdirectory@entry=0x5097e0 "") at nautilus-view.c:4768
+        item = <optimised out>
+        menu = 0x0
+        action = 0x2147f40
+        path = 0x2322280 "/selection/Extension Actions"
+        ui_manager = 0x1b13dc0
+        l = 0x1be22e0
+#2  0x0000000000473175 in reset_extension_actions_menu (selection=0x1b174e0, view=0x1e383c0) at nautilus-view.c:4827
+        items = 0x1be2040
+        ui_manager = <optimised out>
+#3  real_update_menus (view=<optimised out>) at nautilus-view.c:8595
+        selection = 0x1b174e0
+        l = <optimised out>
+        selection_count = 1
+        tip = <optimised out>
+        label = <optimised out>
+        label_with_underscore = <optimised out>
+        selection_contains_special_link = 27928448
+        selection_contains_desktop_or_home_dir = 29237312
+        selection_contains_recent = 0
+        can_create_files = 1
+        can_delete_files = <optimised out>
+        can_move_files = 1
+        can_trash_files = 1
+        can_copy_files = 1
+        can_link_files = 1
+        show_separate_delete_command = <optimised out>
+        show_open_alternate = <optimised out>
+        show_open_in_new_tab = <optimised out>
+        can_open = 1
+        show_app = <optimised out>
+        show_run = <optimised out>
+        show_save_search = <optimised out>
+        save_search_sensitive = <optimised out>
+        show_save_search_as = <optimised out>
+        action = <optimised out>
+        app = <optimised out>
+        app_icon = <optimised out>
+        menuitem = <optimised out>
+        show_properties = <optimised out>
+#4  0x0000000000433d89 in nautilus_canvas_view_update_menus (view=0x1e383c0) at nautilus-canvas-view.c:1261
+        canvas_view = 0x1e383c0
+        action = <optimised out>
+        editable = <optimised out>
+#5  0x0000000000470129 in nautilus_view_update_menus (view=0x1e383c0) at nautilus-view.c:735
+No locals.
+#6  0x000000000047017f in update_menus_timeout_callback (data=<error reading variable: value has been optimised out>) at nautilus-view.c:3596
+        view = 0x1e383c0
+#7  0x00007f66f867ad83 in g_timeout_dispatch (source=source@entry=0x1f8c270, callback=<optimised out>, user_data=<optimised out>) at /build/buildd/glib2.0-2.37.0/./glib/gmain.c:4417
+        timeout_source = 0x1f8c270
+        again = <optimised out>
+#8  0x00007f66f867a226 in g_main_dispatch (context=0x1ab4bd0) at /build/buildd/glib2.0-2.37.0/./glib/gmain.c:3058
+        dispatch = 0x7f66f867ad70 <g_timeout_dispatch>
+        was_in_call = 0
+        user_data = 0x1e383c0
+        callback = 0x470140 <update_menus_timeout_callback>
+        cb_funcs = 0x7f66f892f940 <g_source_callback_funcs>
+        cb_data = 0x224c7c0
+        need_destroy = <optimised out>
+        current_source_link = {data = 0x1f8c270, next = 0x0}
+        source = 0x1f8c270
+        current = 0x7f66e8001da0
+        i = 0
+#9  g_main_context_dispatch (context=context@entry=0x1ab4bd0) at /build/buildd/glib2.0-2.37.0/./glib/gmain.c:3634
+No locals.
+#10 0x00007f66f867a578 in g_main_context_iterate (context=context@entry=0x1ab4bd0, block=block@entry=1, dispatch=dispatch@entry=1, self=<optimised out>) at /build/buildd/glib2.0-2.37.0/./glib/gmain.c:3705
+        max_priority = 2147483647
+        timeout = 53
+        some_ready = 1
+        nfds = <optimised out>
+        allocated_nfds = 7
+        fds = 0x1a8fb80
+#11 0x00007f66f867a61c in g_main_context_iteration (context=0x1ab4bd0, context@entry=0x0, may_block=may_block@entry=1) at /build/buildd/glib2.0-2.37.0/./glib/gmain.c:3766
+        retval = <optimised out>
+#12 0x00007f66f8c2154c in g_application_run (application=0x1a90120, argc=argc@entry=2, argv=argv@entry=0x7fff4b08cf78) at /build/buildd/glib2.0-2.37.0/./gio/gapplication.c:1624
+        arguments = 0x1a7c3c0
+        status = 0
+        i = <optimised out>
+        __PRETTY_FUNCTION__ = "g_application_run"
+#13 0x000000000042b921 in main (argc=2, argv=0x7fff4b08cf78) at nautilus-main.c:104
+        retval = <optimised out>
+        application = 0x1a90120

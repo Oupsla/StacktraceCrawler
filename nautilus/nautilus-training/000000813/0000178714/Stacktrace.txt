@@ -1,0 +1,11 @@
+#0  0xb7abd9f8 in gtk_widget_get_toplevel () from /usr/lib/libgtk-x11-2.0.so.0
+#1  0xb7abda35 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+#2  0x08534cf0 in ?? ()
+#3  0x40ca0fcc in ?? ()
+#4  0x08534cf0 in ?? ()
+#5  0xb7bc2d7c in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+#6  0x08534cf0 in ?? ()
+#7  0x0880d818 in ?? ()
+#8  0xbfca0f08 in ?? ()
+#9  0xb7abe5e7 in gtk_widget_has_screen () from /usr/lib/libgtk-x11-2.0.so.0
+Backtrace stopped: frame did not save the PC

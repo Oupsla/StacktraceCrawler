@@ -1,0 +1,56 @@
+#0  0x00000000004cf79e in ?? ()
+No symbol table info available.
+#1  0x00000000004cf919 in ?? ()
+No symbol table info available.
+#2  0x000000000043f2a9 in ?? ()
+No symbol table info available.
+#3  0x00007f9825ccc5de in g_closure_invoke ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#4  0x00007f9825ce0598 in ?? () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#5  0x00007f9825ce1a76 in g_signal_emit_valist ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#6  0x00007f9825ce1dc8 in g_signal_emit_by_name ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#7  0x0000000000471b43 in ?? ()
+No symbol table info available.
+#8  0x000000000047659b in ?? ()
+No symbol table info available.
+#9  0x00007f98253d98c2 in g_main_context_dispatch ()
+   from /lib/libglib-2.0.so.0
+No symbol table info available.
+#10 0x00007f98253dd748 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#11 0x00007f98253ddc55 in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#12 0x00007f9826eacb27 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#13 0x0000000000443164 in ?? ()
+No symbol table info available.
+#14 0x00007f9823fdfc4d in __libc_start_main (main=<value optimised out>, 
+    argc=<value optimised out>, ubp_av=<value optimised out>, 
+    init=<value optimised out>, fini=<value optimised out>, 
+    rtld_fini=<value optimised out>, stack_end=0x7fff89417f68)
+    at libc-start.c:226
+        result = <value optimised out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, -4168241975989097458, 
+                4393792, 140735496159088, 0, 0, 4168218357986503694, 
+                4113802939072261134}, mask_was_saved = 0}}, priv = {pad = {
+              0x0, 0x0, 0x54d220, 0x7fff89417f78}, data = {prev = 0x0, 
+              cleanup = 0x0, canceltype = 5558816}}}
+        not_first_call = <value optimised out>
+#15 0x0000000000430b69 in ?? ()
+No symbol table info available.
+#16 0x00007fff89417f68 in ?? ()
+No symbol table info available.
+#17 0x000000000000001c in ?? ()
+No symbol table info available.
+#18 0x0000000000000001 in ?? ()
+No symbol table info available.
+#19 0x00007fff89419af7 in ?? ()
+No symbol table info available.
+#20 0x0000000000000000 in ?? ()
+No symbol table info available.

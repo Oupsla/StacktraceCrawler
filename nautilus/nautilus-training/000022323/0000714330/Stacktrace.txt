@@ -1,0 +1,31 @@
+#0  0x008883a9 in g_atomic_int_exchange_and_add () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#1  0x008f32ed in g_variant_unref () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#2  0x076b697f in ?? () from /usr/lib/gtk-2.0/2.10.0/menuproxies/libappmenu.so
+No symbol table info available.
+#3  0x007a80f6 in g_simple_async_result_complete () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#4  0x008019b4 in ?? () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#5  0x007a80f6 in g_simple_async_result_complete () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#6  0x007f6763 in ?? () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#7  0x007a80f6 in g_simple_async_result_complete () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#8  0x007a822e in ?? () from /usr/lib/libgio-2.0.so.0
+No symbol table info available.
+#9  0x008af501 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#10 0x008b3cb8 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#11 0x008b4480 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#12 0x008b4b43 in g_main_loop_run () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#13 0x00d2c9c9 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+No symbol table info available.
+#14 0x08091dba in ?? ()
+No symbol table info available.
+Backtrace stopped: previous frame inner to this frame (corrupt stack?)

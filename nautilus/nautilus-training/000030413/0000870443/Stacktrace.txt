@@ -1,0 +1,48 @@
+#0  0x00007f4410abc8be in gconf_client_get () from /usr/lib/libgconf-2.so.4
+No symbol table info available.
+#1  0x00007f4410abcdb0 in gconf_client_get_bool () from /usr/lib/libgconf-2.so.4
+No symbol table info available.
+#2  0x00007f4410cd2f88 in nautilus_open_terminal_get_file_items () from /usr/lib/nautilus/extensions-3.0/libnautilus-open-terminal.so
+No symbol table info available.
+#3  0x000000000046f08e in ?? ()
+No symbol table info available.
+#4  0x0000000000479562 in ?? ()
+No symbol table info available.
+#5  0x0000000000439e25 in ?? ()
+No symbol table info available.
+#6  0x000000000043365d in ?? ()
+No symbol table info available.
+#7  0x0000000000472bc3 in ?? ()
+No symbol table info available.
+#8  0x0000000000472c22 in ?? ()
+No symbol table info available.
+#9  0x00007f441c7b323b in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#10 0x00007f441c7b1a5d in g_main_context_dispatch () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#11 0x00007f441c7b2258 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#12 0x00007f441c7b2792 in g_main_loop_run () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#13 0x00007f441eed4e1d in gtk_main () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#14 0x00007f441d36fa4e in g_application_run () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#15 0x000000000042af90 in ?? ()
+No symbol table info available.
+#16 0x00007f441bd3430d in __libc_start_main () from /lib/x86_64-linux-gnu/libc.so.6
+No symbol table info available.
+#17 0x000000000042afd1 in ?? ()
+No symbol table info available.
+#18 0x00007fffeabc1a38 in ?? ()
+No symbol table info available.
+#19 0x000000000000001c in ?? ()
+No symbol table info available.
+#20 0x0000000000000002 in ?? ()
+No symbol table info available.
+#21 0x00007fffeabc3a05 in ?? ()
+No symbol table info available.
+#22 0x00007fffeabc3a0e in ?? ()
+No symbol table info available.
+#23 0x0000000000000000 in ?? ()
+No symbol table info available.

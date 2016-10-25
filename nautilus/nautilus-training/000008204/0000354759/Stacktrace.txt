@@ -1,0 +1,54 @@
+#0  0x00007f4c43500c60 in strlen () from /lib/libc.so.6
+#1  0x00007f4c43500996 in strdup () from /lib/libc.so.6
+#2  0x00007f4c31641a6c in ?? ()
+   from /usr/lib/nautilus/extensions-2.0/libnautilus-open-terminal.so
+#3  0x00007f4c4510627d in g_closure_invoke ()
+   from /usr/lib/libgobject-2.0.so.0
+#4  0x00007f4c4511bdc8 in ?? () from /usr/lib/libgobject-2.0.so.0
+#5  0x00007f4c4511d422 in g_signal_emit_valist ()
+   from /usr/lib/libgobject-2.0.so.0
+#6  0x00007f4c4511d943 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+#7  0x00007f4c4510627d in g_closure_invoke ()
+   from /usr/lib/libgobject-2.0.so.0
+#8  0x00007f4c4511bdc8 in ?? () from /usr/lib/libgobject-2.0.so.0
+#9  0x00007f4c4511d422 in g_signal_emit_valist ()
+   from /usr/lib/libgobject-2.0.so.0
+#10 0x00007f4c4511d943 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+#11 0x00007f4c461ddbf3 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+#12 0x00007f4c4510627d in g_closure_invoke ()
+   from /usr/lib/libgobject-2.0.so.0
+#13 0x00007f4c4511b6fb in ?? () from /usr/lib/libgobject-2.0.so.0
+#14 0x00007f4c4511d422 in g_signal_emit_valist ()
+   from /usr/lib/libgobject-2.0.so.0
+#15 0x00007f4c4511d943 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+#16 0x00007f4c463af85b in gtk_widget_activate ()
+   from /usr/lib/libgtk-x11-2.0.so.0
+#17 0x00007f4c462afc5d in gtk_menu_shell_activate_item ()
+   from /usr/lib/libgtk-x11-2.0.so.0
+#18 0x00007f4c462b16a5 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+#19 0x00007f4c462a1c28 in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+#20 0x00007f4c4510627d in g_closure_invoke ()
+   from /usr/lib/libgobject-2.0.so.0
+#21 0x00007f4c4511babe in ?? () from /usr/lib/libgobject-2.0.so.0
+#22 0x00007f4c4511d2ad in g_signal_emit_valist ()
+   from /usr/lib/libgobject-2.0.so.0
+#23 0x00007f4c4511d943 in g_signal_emit () from /usr/lib/libgobject-2.0.so.0
+#24 0x00007f4c463a9eee in ?? () from /usr/lib/libgtk-x11-2.0.so.0
+#25 0x00007f4c4629a4c3 in gtk_propagate_event ()
+   from /usr/lib/libgtk-x11-2.0.so.0
+#26 0x00007f4c4629b5e3 in gtk_main_do_event ()
+   from /usr/lib/libgtk-x11-2.0.so.0
+#27 0x00007f4c45f14d1c in ?? () from /usr/lib/libgdk-x11-2.0.so.0
+#28 0x00007f4c44a2e0ca in g_main_context_dispatch ()
+   from /usr/lib/libglib-2.0.so.0
+#29 0x00007f4c44a317a0 in ?? () from /usr/lib/libglib-2.0.so.0
+#30 0x00007f4c44a31c6d in g_main_loop_run () from /usr/lib/libglib-2.0.so.0
+#31 0x00007f4c4629b9f7 in gtk_main () from /usr/lib/libgtk-x11-2.0.so.0
+#32 0x0000000000442967 in ?? ()
+#33 0x00007f4c4349e5a6 in __libc_start_main () from /lib/libc.so.6
+#34 0x000000000042f659 in ?? ()
+#35 0x00007fff4fe210f8 in ?? ()
+#36 0x000000000000001c in ?? ()
+#37 0x0000000000000001 in ?? ()
+#38 0x00007fff4fe21b7d in ?? ()
+#39 0x0000000000000000 in ?? ()

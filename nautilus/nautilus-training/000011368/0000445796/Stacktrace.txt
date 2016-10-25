@@ -1,0 +1,8 @@
+#0  0x07d0ba20 in ?? ()
+No symbol table info available.
+#1  0x027390cf in exit () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#2  0x02720b5e in __libc_start_main () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#3  0x0806c071 in ?? ()
+No symbol table info available.

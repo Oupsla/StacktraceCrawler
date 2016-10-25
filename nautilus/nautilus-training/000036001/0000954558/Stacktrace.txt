@@ -1,0 +1,6 @@
+#0  0x00007ffe23f49e9c in g_type_check_instance_cast () from /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#1  0x00007ffe22cad403 in ?? () from /usr/lib/x86_64-linux-gnu/libdbusmenu-gtk3.so.4
+No symbol table info available.
+#2  0x0000000000000000 in ?? ()
+No symbol table info available.

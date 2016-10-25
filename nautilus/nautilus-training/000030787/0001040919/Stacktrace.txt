@@ -1,0 +1,45 @@
+#0  0xb7707424 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x4aeae1cf in raise () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#2  0x4aeb1815 in abort () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#3  0x4aea7075 in ?? () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#4  0x4aea7127 in __assert_fail () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#5  0x4b24a4df in _XAllocID () from /usr/lib/i386-linux-gnu/libX11.so.6
+No symbol table info available.
+#6  0x4b2280b2 in XCreatePixmap () from /usr/lib/i386-linux-gnu/libX11.so.6
+No symbol table info available.
+#7  0x428ba57c in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#8  0x4288ab18 in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#9  0x428b86fe in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#10 0x428b9272 in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#11 0x4289da99 in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#12 0x4289e632 in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#13 0x428434f0 in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#14 0x428b9ec1 in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#15 0x428897e9 in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#16 0x4284cba2 in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#17 0x4284561d in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#18 0x4283dafb in cairo_fill () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#19 0xb4eca81b in Oxygen::WindowShadow::shadowPixmap(Oxygen::ColorUtils::Rgba const&, Oxygen::WindowShadowKey const&) const () from /usr/lib/i386-linux-gnu/gtk-3.0/3.0.0/theming-engines/liboxygen-gtk.so
+No symbol table info available.
+#20 0xb4ecac51 in Oxygen::WindowShadow::tileSet(Oxygen::ColorUtils::Rgba const&, Oxygen::WindowShadowKey) const () from /usr/lib/i386-linux-gnu/gtk-3.0/3.0.0/theming-engines/liboxygen-gtk.so
+No symbol table info available.
+#21 0x0a165d68 in ?? ()
+No symbol table info available.
+Backtrace stopped: previous frame inner to this frame (corrupt stack?)

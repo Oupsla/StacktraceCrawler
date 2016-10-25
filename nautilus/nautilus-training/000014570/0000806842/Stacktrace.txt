@@ -1,0 +1,82 @@
+#0  0xb7706424 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0xb6975dd1 in raise () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#2  0xb69792ae in abort () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#3  0xb696e7e8 in __assert_fail () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#4  0xb75b535f in _XAllocID () from /usr/lib/i386-linux-gnu/libX11.so.6
+No symbol table info available.
+#5  0xb75920b7 in XCreatePixmap () from /usr/lib/i386-linux-gnu/libX11.so.6
+No symbol table info available.
+#6  0xb6e37455 in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#7  0xb6e19130 in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#8  0xb6e191db in ?? () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#9  0xb6de1869 in cairo_push_group_with_content () from /usr/lib/i386-linux-gnu/libcairo.so.2
+No symbol table info available.
+#10 0xb70bfe63 in ?? () from /usr/lib/libgdk-3.so.0
+No symbol table info available.
+#11 0xb709395d in gdk_window_set_icon_list () from /usr/lib/libgdk-3.so.0
+No symbol table info available.
+#12 0xb73cccc4 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#13 0xb6d550bc in g_cclosure_marshal_VOID__VOID () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#14 0xb6d3891c in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#15 0xb6d4ba80 in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#16 0xb6d5473f in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#17 0xb6d548b3 in g_signal_emit () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#18 0xb7218fd3 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#19 0xb72191fd in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#20 0xb6d55b4a in g_cclosure_marshal_VOID__PARAM () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#21 0xb6d3891c in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#22 0xb6d4ba80 in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#23 0xb6d5473f in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#24 0xb6d548b3 in g_signal_emit () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#25 0xb6d3a9ff in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#26 0xb6d39d5f in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#27 0xb6d3cf72 in g_object_notify () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#28 0xb72d96c7 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#29 0xb72524c5 in gtk_main_do_event () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#30 0xb707f85c in ?? () from /usr/lib/libgdk-3.so.0
+No symbol table info available.
+#31 0xb70ac378 in ?? () from /usr/lib/libgdk-3.so.0
+No symbol table info available.
+#32 0xb6c710cf in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#33 0xb6c71800 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#34 0xb6c71e0b in g_main_loop_run () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#35 0xb7251675 in gtk_main () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#36 0xb7154344 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#37 0xb6f891fc in g_application_run () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#38 0x080675d4 in ?? ()
+No symbol table info available.
+#39 0xb6961da7 in __libc_start_main () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#40 0x0806760d in ?? ()
+No symbol table info available.

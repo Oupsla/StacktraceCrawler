@@ -1,0 +1,38 @@
+#0  0x00007f90c7def267 in __GI_raise (sig=sig@entry=6) at ../sysdeps/unix/sysv/linux/raise.c:55
+        resultvar = 0
+        pid = 11895
+        selftid = 11895
+#1  0x00007f90c7df0eca in __GI_abort () at abort.c:89
+        save_stage = 2
+        act = {__sigaction_handler = {sa_handler = 0x37aea50, sa_sigaction = 0x37aea50}, sa_mask = {__val = {118, 140259819868896, 140259880075040, 140721098545072, 58387024, 118, 140259819868896, 140721098545200, 5272960, 59156992, 140259805620380, 0, 140259809029176, 0, 4294967295, 140259809029120}}, sa_flags = 58387024, sa_restorer = 0x0}
+        sigs = {__val = {32, 0 <repeats 15 times>}}
+#2  0x00007f90c8936ed5 in g_assertion_message () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#3  0x00007f90c8936f6a in g_assertion_message_expr () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#4  0x00000000004a3ffe in ?? ()
+No symbol table info available.
+#5  0x00000000004aa5ea in ?? ()
+No symbol table info available.
+#6  0x00000000004ad36f in ?? ()
+No symbol table info available.
+#7  0x00000000004aecc8 in ?? ()
+No symbol table info available.
+#8  0x00007f90c8e899ff in ?? () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#9  0x00007f90c8910eea in g_main_context_dispatch () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#10 0x00007f90c8911290 in ?? () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#11 0x00007f90c891133c in g_main_context_iteration () from /lib/x86_64-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#12 0x00007f90c8ed2a7c in g_application_run () from /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#13 0x000000000042b771 in ?? ()
+No symbol table info available.
+#14 0x00007f90c7ddaa40 in __libc_start_main (main=0x42b6b0, argc=2, argv=0x7ffc2f175cd8, init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, stack_end=0x7ffc2f175cc8) at libc-start.c:289
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, 4241989897243203703, 4372400, 140721098546384, 0, 0, -4240475613697533833, -4179590659177834377}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x4ef590, 0x7ffc2f175cd8}, data = {prev = 0x0, cleanup = 0x0, canceltype = 5174672}}}
+        not_first_call = <optimized out>
+#15 0x000000000042b7d9 in ?? ()
+No symbol table info available.

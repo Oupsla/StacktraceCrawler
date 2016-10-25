@@ -1,0 +1,82 @@
+#0  0x002fa422 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x004034d1 in raise () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#2  0x00406932 in abort () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#3  0x003fc648 in __assert_fail () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.
+#4  0x04e70199 in _XAllocID () from /usr/lib/libX11.so.6
+No symbol table info available.
+#5  0x04e46048 in XCreatePixmap () from /usr/lib/libX11.so.6
+No symbol table info available.
+#6  0x03562b66 in QX11PixmapData::fromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) () from /usr/lib/libQtGui.so.4
+No symbol table info available.
+#7  0x0354f597 in QPixmap::fromImage(QImage const&, QFlags<Qt::ImageConversionFlag>) () from /usr/lib/libQtGui.so.4
+No symbol table info available.
+#8  0x035525d4 in QPixmap::load(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) () from /usr/lib/libQtGui.so.4
+No symbol table info available.
+#9  0x03552d85 in QPixmap::QPixmap(QString const&, char const*, QFlags<Qt::ImageConversionFlag>) () from /usr/lib/libQtGui.so.4
+No symbol table info available.
+#10 0x011297c4 in BackgroundWidget::updateArt(QString const&) ()
+   from /usr/lib/vlc/gui/libqt4_plugin.so
+No symbol table info available.
+#11 0x011754d8 in BackgroundWidget::qt_metacall(QMetaObject::Call, int, void**) () from /usr/lib/vlc/gui/libqt4_plugin.so
+No symbol table info available.
+#12 0x01c02263 in QMetaObject::activate(QObject*, int, int, void**) ()
+   from /usr/lib/libQtCore.so.4
+No symbol table info available.
+#13 0x01c02ec2 in QMetaObject::activate(QObject*, QMetaObject const*, int, void**) () from /usr/lib/libQtCore.so.4
+No symbol table info available.
+#14 0x0116bc04 in InputManager::artChanged(QString) ()
+   from /usr/lib/vlc/gui/libqt4_plugin.so
+No symbol table info available.
+#15 0x0106c471 in InputManager::UpdateArt() ()
+   from /usr/lib/vlc/gui/libqt4_plugin.so
+No symbol table info available.
+#16 0x0106cd71 in InputManager::customEvent(QEvent*) ()
+   from /usr/lib/vlc/gui/libqt4_plugin.so
+No symbol table info available.
+#17 0x01bfc65f in QObject::event(QEvent*) () from /usr/lib/libQtCore.so.4
+No symbol table info available.
+#18 0x03480f54 in QApplicationPrivate::notify_helper(QObject*, QEvent*) ()
+   from /usr/lib/libQtGui.so.4
+No symbol table info available.
+#19 0x0348867c in QApplication::notify(QObject*, QEvent*) ()
+   from /usr/lib/libQtGui.so.4
+No symbol table info available.
+#20 0x01bec6cb in QCoreApplication::notifyInternal(QObject*, QEvent*) ()
+   from /usr/lib/libQtCore.so.4
+No symbol table info available.
+#21 0x01bed2b2 in QCoreApplicationPrivate::sendPostedEvents(QObject*, int, QThreadData*) () from /usr/lib/libQtCore.so.4
+No symbol table info available.
+#22 0x01bed47d in QCoreApplication::sendPostedEvents(QObject*, int) ()
+   from /usr/lib/libQtCore.so.4
+No symbol table info available.
+#23 0x01c173ff in ?? () from /usr/lib/libQtCore.so.4
+No symbol table info available.
+#24 0x00555e78 in g_main_context_dispatch () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#25 0x00559720 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#26 0x00559853 in g_main_context_iteration () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#27 0x01c1702c in QEventDispatcherGlib::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /usr/lib/libQtCore.so.4
+No symbol table info available.
+#28 0x03521be5 in ?? () from /usr/lib/libQtGui.so.4
+No symbol table info available.
+#29 0x01beac79 in QEventLoop::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /usr/lib/libQtCore.so.4
+No symbol table info available.
+#30 0x01beb0ca in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) ()
+   from /usr/lib/libQtCore.so.4
+No symbol table info available.
+#31 0x01bed53f in QCoreApplication::exec() () from /usr/lib/libQtCore.so.4
+No symbol table info available.
+#32 0x03480dd7 in QApplication::exec() () from /usr/lib/libQtGui.so.4
+No symbol table info available.
+#33 0x0104fc24 in ?? () from /usr/lib/vlc/gui/libqt4_plugin.so
+No symbol table info available.
+#34 0x0084380e in start_thread () from /lib/tls/i686/cmov/libpthread.so.0
+No symbol table info available.
+#35 0x004a57ee in clone () from /lib/tls/i686/cmov/libc.so.6
+No symbol table info available.

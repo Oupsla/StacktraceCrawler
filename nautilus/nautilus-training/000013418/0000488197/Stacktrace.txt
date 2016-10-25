@@ -1,0 +1,15 @@
+#0  0x00007ff088e1d77d in ?? () from /usr/lib/libbrasero-media.so.0
+No symbol table info available.
+#1  0x00007ff088e1f1f9 in ?? () from /usr/lib/libbrasero-media.so.0
+No symbol table info available.
+#2  0x00007ff088e1f510 in ?? () from /usr/lib/libbrasero-media.so.0
+No symbol table info available.
+#3  0x00007ff084176b34 in ?? () from /lib/libglib-2.0.so.0
+No symbol table info available.
+#4  0x00007ff0875afa04 in start_thread () from /lib/libpthread.so.0
+No symbol table info available.
+#5  0x00007ff083c797bd in clone ()
+    at ../sysdeps/unix/sysv/linux/x86_64/clone.S:112
+No locals.
+#6  0x0000000000000000 in ?? ()
+No symbol table info available.

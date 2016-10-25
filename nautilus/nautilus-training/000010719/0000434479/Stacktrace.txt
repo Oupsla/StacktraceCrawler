@@ -1,0 +1,59 @@
+#0  0x00007f281834d3c6 in ?? () from /lib/libc.so.6
+No symbol table info available.
+#1  0x00007f281834f7ee in malloc () from /lib/libc.so.6
+No symbol table info available.
+#2  0x00007f28196d4383 in g_malloc () from /usr/lib/libglib-2.0.so.0
+No symbol table info available.
+#3  0x00007f2819dac70a in g_object_newv () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#4  0x00007f2819dad345 in g_object_new_valist ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#5  0x00007f2819dad49c in g_object_new () from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#6  0x00007f280c7ead91 in ?? () from /usr/lib/libgstreamer-0.10.so.0
+No symbol table info available.
+#7  0x00007f280c7ebe72 in gst_registry_binary_read_cache ()
+   from /usr/lib/libgstreamer-0.10.so.0
+No symbol table info available.
+#8  0x00007f280c7806c3 in ?? () from /usr/lib/libgstreamer-0.10.so.0
+No symbol table info available.
+#9  0x00007f280c782358 in ?? () from /usr/lib/libgstreamer-0.10.so.0
+No symbol table info available.
+#10 0x00007f28196da6c9 in g_option_context_parse ()
+   from /usr/lib/libglib-2.0.so.0
+No symbol table info available.
+#11 0x00007f280c781a9d in gst_init_check ()
+   from /usr/lib/libgstreamer-0.10.so.0
+No symbol table info available.
+#12 0x00007f280d2ce5dd in brasero_burn_library_start ()
+   from /usr/lib/libbrasero-burn.so.0
+No symbol table info available.
+#13 0x00007f280d52e3e2 in nautilus_module_initialize ()
+   from /usr/lib/nautilus/extensions-2.0/libnautilus-brasero-extension.so
+No symbol table info available.
+#14 0x00000000004f3006 in ?? ()
+No symbol table info available.
+#15 0x00007f2819dc9574 in g_type_module_use ()
+   from /usr/lib/libgobject-2.0.so.0
+No symbol table info available.
+#16 0x00000000004f3118 in ?? ()
+No symbol table info available.
+#17 0x0000000000433a83 in ?? ()
+No symbol table info available.
+#18 0x000000000044378a in ?? ()
+No symbol table info available.
+#19 0x00007f28182f3abd in __libc_start_main () from /lib/libc.so.6
+No symbol table info available.
+#20 0x00000000004302d9 in ?? ()
+No symbol table info available.
+#21 0x00007fffe63fe2b8 in ?? ()
+No symbol table info available.
+#22 0x000000000000001c in ?? ()
+No symbol table info available.
+#23 0x0000000000000001 in ?? ()
+No symbol table info available.
+#24 0x00007fffe63ffead in ?? ()
+No symbol table info available.
+#25 0x0000000000000000 in ?? ()
+No symbol table info available.

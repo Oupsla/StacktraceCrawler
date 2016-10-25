@@ -1,0 +1,13 @@
+#0  0xb747878c in g_type_check_instance_cast ()
+   from /usr/lib/libgobject-2.0.so.0
+#1  0xb62a4f86 in ?? () from /usr/lib/gtk-2.0/2.10.0/filesystems/libgio.so
+#2  0x085e7980 in ?? ()
+#3  0x0839afc0 in ?? ()
+#4  0x08137118 in ?? ()
+#5  0x01443f55 in ?? ()
+#6  0xb62a4f69 in ?? () from /usr/lib/gtk-2.0/2.10.0/filesystems/libgio.so
+#7  0xb748c680 in ?? () from /usr/lib/libgobject-2.0.so.0
+#8  0xbfedbba8 in ?? ()
+#9  0xb7467435 in g_cclosure_marshal_VOID__OBJECT ()
+   from /usr/lib/libgobject-2.0.so.0
+Backtrace stopped: frame did not save the PC

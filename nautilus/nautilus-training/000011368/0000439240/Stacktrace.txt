@@ -1,0 +1,18 @@
+#0  0x00007fb5d21635f0 in ?? ()
+No symbol table info available.
+#1  0x00007fb5dbb60c12 in exit () from /lib/libc.so.6
+No symbol table info available.
+#2  0x00007fb5dbb46ac4 in __libc_start_main () from /lib/libc.so.6
+No symbol table info available.
+#3  0x00000000004302d9 in ?? ()
+No symbol table info available.
+#4  0x00007fff67587b78 in ?? ()
+No symbol table info available.
+#5  0x000000000000001c in ?? ()
+No symbol table info available.
+#6  0x0000000000000001 in ?? ()
+No symbol table info available.
+#7  0x00007fff67589b63 in ?? ()
+No symbol table info available.
+#8  0x0000000000000000 in ?? ()
+No symbol table info available.

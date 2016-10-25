@@ -1,0 +1,57 @@
+#0  0x01000e8e in app_chooser_online_get_default_ready_cb (source=0x92986f0, res=0x939b878, user_data=0x9398000) at /build/buildd/gtk+3.0-3.0.11/./gtk/gtkappchooserdialog.c:164
+        self = 0x9398000
+#1  0x00401732 in g_simple_async_result_complete (simple=0x939b878) at /build/buildd/glib2.0-2.29.4/./gio/gsimpleasyncresult.c:749
+        current_source = <value optimized out>
+        current_context = <value optimized out>
+        __PRETTY_FUNCTION__ = "g_simple_async_result_complete"
+#2  0x01255abd in pk_proxy_created_cb (source=0x93b6ae8, result=0x9373190, user_data=0x92986f0) at /build/buildd/gtk+3.0-3.0.11/./gtk/gtkappchooseronlinepk.c:187
+        self = 0x92986f0
+        proxy = 0x93b6ae8
+#3  0x00401732 in g_simple_async_result_complete (simple=0x9373190) at /build/buildd/glib2.0-2.29.4/./gio/gsimpleasyncresult.c:749
+        current_source = <value optimized out>
+        current_context = <value optimized out>
+        __PRETTY_FUNCTION__ = "g_simple_async_result_complete"
+#4  0x0040186c in complete_in_idle_cb (data=0x9373190) at /build/buildd/glib2.0-2.29.4/./gio/gsimpleasyncresult.c:761
+        simple = <value optimized out>
+#5  0x008d2050 in g_idle_dispatch (source=0x939a108, callback=0x401840 <complete_in_idle_cb>, user_data=0x9373190) at /build/buildd/glib2.0-2.29.4/./glib/gmain.c:4854
+No locals.
+#6  0x008d61ff in g_main_dispatch (context=0x8ed3320) at /build/buildd/glib2.0-2.29.4/./glib/gmain.c:2477
+        dispatch = 0x8d2030 <g_idle_dispatch>
+        was_in_call = 0
+        user_data = 0x9373190
+        callback = 0x401840 <complete_in_idle_cb>
+        cb_funcs = 0x98435c
+        cb_data = 0x929b9c8
+        current_source_link = {data = 0x939a108, next = 0x0}
+        need_destroy = <value optimized out>
+        source = 0x939a108
+        current = 0x8ed21b0
+        i = <value optimized out>
+#7  g_main_context_dispatch (context=0x8ed3320) at /build/buildd/glib2.0-2.29.4/./glib/gmain.c:3050
+No locals.
+#8  0x008d6960 in g_main_context_iterate (context=0x8ed3320, block=9329024, dispatch=1, self=<value optimized out>) at /build/buildd/glib2.0-2.29.4/./glib/gmain.c:3128
+        max_priority = 0
+        timeout = 0
+        some_ready = 1
+        nfds = <value optimized out>
+        allocated_nfds = <value optimized out>
+        fds = 0x9081b40
+#9  0x008d709b in g_main_loop_run (loop=0x8ecab90) at /build/buildd/glib2.0-2.29.4/./glib/gmain.c:3336
+        __PRETTY_FUNCTION__ = "g_main_loop_run"
+#10 0x010e5d05 in gtk_main () at /build/buildd/gtk+3.0-3.0.11/./gtk/gtkmain.c:1358
+        loop = 0x8ecab90
+#11 0x01001e94 in gtk_application_run_mainloop (application=0x8ecb448) at /build/buildd/gtk+3.0-3.0.11/./gtk/gtkapplication.c:85
+No locals.
+#12 0x004339dc in g_application_run (application=0x8ecb448, argc=2, argv=0xbfb35734) at /build/buildd/glib2.0-2.29.4/./gio/gapplication.c:1326
+        arguments = 0x8ecab90
+        status = 0
+        i = <value optimized out>
+        __PRETTY_FUNCTION__ = "g_application_run"
+#13 0x08066b74 in ?? ()
+No symbol table info available.
+#14 0x04192db7 in __libc_start_main (main=0x8066ab0, argc=2, ubp_av=0xbfb35734, init=0x8158c40, fini=0x8158ca0, rtld_fini=0x38ea50, stack_end=0xbfb3572c) at libc-start.c:226
+        result = <value optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {70094836, 0, 0, -1078765816, -965096057, -1836182288}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x2, 0x8066b8c}, data = {prev = 0x0, cleanup = 0x0, canceltype = 2}}}
+        not_first_call = <value optimized out>
+#15 0x08066bad in ?? ()
+No symbol table info available.

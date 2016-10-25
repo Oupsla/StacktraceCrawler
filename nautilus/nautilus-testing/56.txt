@@ -1,0 +1,81 @@
+#0  0x00dca416 in __kernel_vsyscall ()
+No symbol table info available.
+#1  0x05586c8f in raise () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#2  0x0558a2b5 in abort () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#3  0x055bcdfc in ?? () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#4  0x055c7bc2 in ?? () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#5  0x055c8862 in ?? () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#6  0x055cb94d in free () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#7  0x00e14dfb in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#8  0x00e14fc6 in g_free () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#9  0x00e094d8 in g_list_foreach () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#10 0x00e09522 in g_list_free_full () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#11 0x0047e29c in g_cclosure_marshal_VOID__VOID () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#12 0x0047cd8c in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#13 0x004911f0 in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#14 0x00499ebf in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#15 0x0049a033 in g_signal_emit () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#16 0x00aa9325 in gtk_widget_activate () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#17 0x0095c36a in gtk_menu_shell_activate_item () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#18 0x0095c81d in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#19 0x0094c79f in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#20 0x00940f7a in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#21 0x0047b7dd in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#22 0x0047cd8c in g_closure_invoke () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#23 0x00491038 in ?? () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#24 0x00499d71 in g_signal_emit_valist () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#25 0x0049a033 in g_signal_emit () from /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+No symbol table info available.
+#26 0x00aaa183 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#27 0x00940672 in gtk_propagate_event () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#28 0x00940af8 in gtk_main_do_event () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#29 0x0012ca4c in ?? () from /usr/lib/libgdk-3.so.0
+No symbol table info available.
+#30 0x00159a28 in ?? () from /usr/lib/libgdk-3.so.0
+No symbol table info available.
+#31 0x00e0e30f in g_main_context_dispatch () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#32 0x00e0ea40 in ?? () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#33 0x00e0f04b in g_main_loop_run () from /lib/i386-linux-gnu/libglib-2.0.so.0
+No symbol table info available.
+#34 0x0093fd45 in gtk_main () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#35 0x0083f1c4 in ?? () from /usr/lib/libgtk-3.so.0
+No symbol table info available.
+#36 0x00fa6adc in g_application_run () from /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+No symbol table info available.
+#37 0x08067a04 in ?? ()
+No symbol table info available.
+#38 0x05572113 in __libc_start_main () from /lib/i386-linux-gnu/libc.so.6
+No symbol table info available.
+#39 0x08067a3d in ?? ()
+No symbol table info available.
+Backtrace stopped: Not enough registers or memory available to unwind further
