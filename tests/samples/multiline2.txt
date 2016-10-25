@@ -1,0 +1,26 @@
+#0  0x0819fc26 in nautilus_icon_canvas_item_get_image (item=0x1800,
+    mask=0xbffaf4e4, colormap=0x962a418) at nautilus-icon-canvas-item.c:508
+	__t = <value optimized out>
+	__r = <value optimized out>
+	pixmap = <value optimized out>
+	canvas = <value optimized out>
+	screen = <value optimized out>
+	gc = <value optimized out>
+	width = <value optimized out>
+	height = <value optimized out>
+	item_offset_x = <value optimized out>
+	item_offset_y = <value optimized out>
+	icon_rect = {x0 = 170740360, y0 = 157439552, x1 = 136151852,
+  y1 = -1208119308}
+	emblem_rect = {x0 = -1212260364, y0 = 170741888, x1 = -1074072584,
+  y1 = -1214446476}
+	pixbuf = <value optimized out>
+	emblem_pixbuf = <value optimized out>
+	emblem_layout = {icon_item = 0xb7be5ff4, icon_rect = {x0 = 170740360,
+    y0 = 157742496, x1 = -1074072616, y1 = -1212777181}, side = 170740360,
+  position = 157439552, index = -1207228376, emblem = 0xb7c4f29e}
+	item_x = <value optimized out>
+	item_y = <value optimized out>
+	is_rtl = <value optimized out>
+	cr = <value optimized out>
+	__PRETTY_FUNCTION__ = "nautilus_icon_canvas_item_get_image"

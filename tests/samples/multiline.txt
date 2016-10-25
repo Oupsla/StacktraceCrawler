@@ -1,0 +1,9 @@
+#1  0x000000000049ccf1 in thumbnail_read_callback (source_object=<value optimized out>, res=<value optimized out>,
+    user_data=<value optimized out>) at /usr/include/stdlib.h:291
+	state = (ThumbnailState *) 0x1d8e4b0
+	file_size = 1828114
+	file_contents = 0x1de4480 "ð¯\202\001"
+	result = <value optimized out>
+	directory = (NautilusDirectory *) 0xda68a0
+	pixbuf = (GdkPixbuf *) 0x1853680
+	location = <value optimized out>
