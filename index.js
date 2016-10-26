@@ -1,5 +1,7 @@
 const Bluebird = require('bluebird');
 const fs = require('fs');
+const fuzzy = require('fuzzyset.js');
+const parser = require('./utils/parse');
 const filePath = process.argv.length > 2 ? process.argv[2] : 'nautilus';
 const bucketListPath = './nautilus/nautilus-training';
 
@@ -50,17 +52,46 @@ function openStackTracesFromBucket(bucket) {
 }
 
 function getScore(stacktraceAlone, stacktracesSorted) {
-
   let scoreList = stacktracesSorted
-    .map((singleStacktrace) => {
-      return ((stacktraceAlone.length / singleStacktrace.toString().length) * 100);
-    });
+    .map((singleStacktrace) => getScoreByStackTrace(stacktraceAlone, singleStacktrace));
 
   if (!scoreList.length) {
     return 0;
   }
 
   return scoreList.reduce((total, score) => total + score, 0) / scoreList.length; //Average
+}
+
+function getScoreByStackTrace(stacktraceAlone, stacktraceSorted) {
+  let stacktraceAloneParsed = parser.splitStackToLines(stacktraceAlone);
+  let stacktraceSortedParsed = parser.splitStackToLines(stacktraceSorted);
+
+  return stacktraceAloneParsed.reduce((resultByStacktraceAlone, stacktraceAloneLine) => {
+    return stacktraceSortedParsed.reduce((resultBySingleStacktrace, stacktraceSortedLine) => {
+      return resultBySingleStacktrace + getScoreByLine(stacktraceAloneLine, stacktraceSortedLine);
+    }, resultByStacktraceAlone);
+  }, 0);
+  // getScoreByLine(parser.sanitizeLine(stacktraceAloneLine), );
+}
+
+function getScoreByLine(lineParsed, stacktraceSortedLine) { //comparaison between 2 lines
+  let score = 0;
+
+  let fuzz = fuzzy([lineParsed]);
+
+  return fuzz.get(stackTraceSortedLine);
+
+
+
+  if (stacktraceSortedLine.search(lineParsed.method) !== -1 && stacktraceSortedLine.search(lineParsed.path) !== -1) {
+    score += 4;
+  } else if (stacktraceSortedLine.search(lineParsed.path) !== -1) {
+    score += 2;
+  } else if (stacktraceSortedLine.search(lineParsed.method) !== -1) {
+    score++;
+  }
+
+  return score;
 }
 
 function getAllStacktrace(bucketList) {
