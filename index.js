@@ -47,19 +47,17 @@ function getSingleStacktraces() {
   return readDir('./nautilus/nautilus-testing')
     .then((stacktraces) => {
       let promises = stacktraces.reduce((res, stacktrace) => ([...res, { id: stacktrace, content: readFile(`./nautilus/nautilus-testing/${stacktrace}`) }]), []);
-      
-      return Bluebird.map(promises, (stacktrace) => Bluebird.props(stacktrace));
+
+      return Bluebird.map(promises, (stacktrace) => {
+        return Bluebird.props(stacktrace)
+          .then((stacktraceObj) => {
+            return { id: stacktraceObj.id, parsedLines: parser.splitAndSanitizeStack(stacktraceObj.content) };
+          });
+        });
     });
 }
 
-function openStackTracesFromBucket(bucket) {
-  return readDir(`${bucketListPath}/${bucket}`)
-    .then((bucketSubs) => {
-      let promisesStacktraceRead = bucketSubs.map((sub) => readFile(`${bucketListPath}/${bucket}/${sub}/Stacktrace.txt`));
 
-      return Bluebird.all(promisesStacktraceRead);
-    });
-}
 
 function getScore(stacktraceAloneParsed, stacktracesSorted) {
   let scoreList = stacktracesSorted
@@ -72,14 +70,14 @@ function getScore(stacktraceAloneParsed, stacktracesSorted) {
   return scoreList.reduce((total, score) => total + score, 0) / scoreList.length; //Average
 }
 
-function getScoreByStackTrace(stacktraceAloneParsed, stacktraceSorted) {
+function getScoreByStackTrace(stacktraceAloneParsed, stacktraceSortedParsed) { //[{method, path}]
   // let stacktraceAloneParsed = parser.splitStackToLines(stacktraceAlone);
-  let stacktraceSortedParsed = parser.splitStackToLines(stacktraceSorted);
-
+  //let stacktraceSortedParsed = parser.splitStackToLines(stacktraceSorted);
   return stacktraceAloneParsed.reduce((resultByStacktraceAlone, stacktraceAloneLine) => {
     return stacktraceSortedParsed.reduce((resultBySingleStacktrace, stacktraceSortedLine) => {
       let score = getScoreByLine(stacktraceAloneLine, stacktraceSortedLine);
-      return resultBySingleStacktrace + (Array.isArray(score) ? score[0][0] : 0);
+      //console.log(">>>>>>> score : ", score);
+      return resultBySingleStacktrace + score;
     }, resultByStacktraceAlone);
   }, 0);
   // getScoreByLine(parser.sanitizeLine(stacktraceAloneLine), );
@@ -88,21 +86,39 @@ function getScoreByStackTrace(stacktraceAloneParsed, stacktraceSorted) {
 function getScoreByLine(lineParsed, stacktraceSortedLine) { //comparaison between 2 lines
   let score = 0;
 
-  let fuzz = fuzzy([lineParsed]);
+  //let fuzz = fuzzy([lineParsed]);
 
-  return fuzz.get(stacktraceSortedLine);
+  //return fuzz.get(stacktraceSortedLine);
 
+  if(lineParsed.method === "??" || !lineParsed.method || !lineParsed.path)
+    return 0;
 
+  if(stacktraceSortedLine.method === "??" || !stacktraceSortedLine.method || !stacktraceSortedLine.path)
+    return 0;
 
-  if (stacktraceSortedLine.search(lineParsed.method) !== -1 && stacktraceSortedLine.search(lineParsed.path) !== -1) {
-    score += 4;
-  } else if (stacktraceSortedLine.search(lineParsed.path) !== -1) {
-    score += 2;
-  } else if (stacktraceSortedLine.search(lineParsed.method) !== -1) {
-    score++;
+  if (stacktraceSortedLine.method === lineParsed.method && stacktraceSortedLine.path === lineParsed.path) {
+    score += 100;
+  } else if (stacktraceSortedLine.path === lineParsed.path) {
+    score += 5;
+  } else if (stacktraceSortedLine.method === lineParsed.method) {
+    score += 1;
   }
 
   return score;
+}
+
+function openStackTracesFromBucket(bucket) {
+  return readDir(`${bucketListPath}/${bucket}`)
+    .then((bucketSubs) => {
+      let promisesStacktraceRead = bucketSubs.map((sub) => {
+        //console.log("sub : ", sub);
+        return readFile(`${bucketListPath}/${bucket}/${sub}/Stacktrace.txt`)
+          .then((stacktraceContent) => {
+              return parser.splitAndSanitizeStack(stacktraceContent);
+          });
+      });
+      return Bluebird.all(promisesStacktraceRead);
+    });
 }
 
 function getAllStacktrace(bucketList) {
@@ -117,25 +133,28 @@ function compare(stacktraceAloneParsed, bucketsList) {
   let i = Object.keys(bucketsList).length;
   return Object.keys(bucketsList)
     .reduce((result, bucketId) => {
-      console.log('restant : ', --i);
+      //console.log('restant : ', --i);
       return Object.assign({}, result, { [bucketId]: getScore(stacktraceAloneParsed, bucketsList[bucketId]) })
     }, {})
 }
 
 function compareAllBucket(bucketsStacktraces) {
+  //console.log("Compare all buckets");
+  //console.log(bucketsStacktraces);
   return getSingleStacktraces()
     .then((stacktraces) => {
       let i = stacktraces.length;
-      console.log('stacktraces alone : ', i);
+      //console.log('stacktraces alone : ', i);
 
       return stacktraces.reduce((response, stacktrace) => {
-        console.log('stacktraces alone restantes : ', --i);
-        return Object.assign({}, { [stacktrace.id]: compare(parser.splitStackToLines(stacktrace.content), bucketsStacktraces) }, response);
+        //console.log('stacktraces alone restantes : ', --i);
+        return Object.assign({}, { [stacktrace.id]: compare(stacktrace.parsedLines, bucketsStacktraces) }, response);
       }, {})
     });
 }
 
 function getResultByBucket(resultByBucket) {
+  //console.log(resultByBucket);
   let max = 0;
   let maxKey = Object.keys(resultByBucket)
     .reduce((index, key) => {
@@ -152,8 +171,10 @@ function getResultByBucket(resultByBucket) {
 }
 
 function print(results) {
+  result = "";
   Object.keys(results)
-    .forEach((stacktrace) => console.log(`${stacktrace.split('.txt')[0]} -> ${results[stacktrace]}`))
+    .forEach((stacktrace) => result += `${stacktrace.split('.txt')[0]} -> ${results[stacktrace]}\n`)
+  return writeFile("result.txt", result);
 }
 
 function main() {
@@ -161,6 +182,7 @@ function main() {
     console.log('You must indicate a file path');
     return 1;
   }
+  console.time('Start');
 
   getExistingBucketsList()
     .then((bucketList) => getAllStacktrace(bucketList)) //Object like {'myBucket': ['myStacktrace']}
@@ -169,9 +191,10 @@ function main() {
     // .then((stackTraces) => compare(parser.splitStackToLines(fs.readFileSync('./nautilus/nautilus-testing/10.txt')), stackTraces))
     .then((results) => Object.keys(results).reduce((obj, key) => Object.assign({}, {[key]: getResultByBucket(results[key])}, obj), {}))
     .then((results) => print(results))
+    .then(() => console.timeEnd('Start'))
     .catch((err) => console.error(err));
-  
+
+
 }
 
 return main();
-

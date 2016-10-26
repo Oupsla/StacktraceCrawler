@@ -1,5 +1,75 @@
-# TraceCrawler
+# System for crash-to-bucket assignment.
 
+OPL - Thème 2: Crash Analysis
+
+xx/11/2016
+
+Benjamin Coenen - Nicolas Delperdange
+
+
+## Historique :
+
+Version 1 (fuzzy - 3heures) : 0
+Version 2 (homemade - 15886.117ms): 22
+
+
+Improve :
+- Ajouter la stacktrace traité au tableau des buckets*
+- Vérifier le problème de parser
+- Vérifier la moyenne
+- Filtre avancée
+- Sha1
+
+## Table des matières
+**[Introduction](#introduction)**  
+**[Travail technique](#travail-technique)**  
+**[Evaluation](#evaluation)**  
+**[Limitation](#limitation)**  
+**[Conclusion](#conclusion)**  
+**[Glossaire](#glossaire)**
+
+## Introduction
+
+
+### Contexte/Problème
+
+
+### Solution
+
+
+
+
+## Travail technique
+### But
+
+
+### Architecture
+
+
+### Algorithme
+
+
+### Utilisation
+
+
+### Screenshots
+
+
+## Evaluation
+
+
+
+## Limitation
+
+
+## Conclusion
+
+
+
+## Glossaire
+- Bucket : Un bucket est un rassemblement de plusieurs stacktraces dont la source du bug est la même
+
+## Notes
 
 Expliquez nos recherches :
 - Algo de Microsoft
