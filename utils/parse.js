@@ -31,13 +31,18 @@ function removeLineNumberFromLine(line) {
 }
 
 function extractMethodNameFromLine(line) {
-  var re = new RegExp("(in )([^ ]+)" , "im");
-  return re.exec(line)[2];
+  var re = new RegExp("(#[0-9]+ {1,2})(in |)([^ ]+)" , "im");
+  array = re.exec(line);
+  return array[3];
 }
 
 function extractPathFromLine(line) {
   var re = new RegExp('( (at|from) )([^ |\n]+)' , 'im');
-  return re.exec(line)[3];
+  array = re.exec(line);
+
+  if(array == null)
+    return "";
+  return array[3];
 }
 
 function sanitizeLine(line) {
@@ -48,7 +53,28 @@ function sanitizeLine(line) {
     method: extractMethodNameFromLine(line),
     path: extractPathFromLine(line)
   };
+}
 
+function splitStackToLines(stack){
+  var lines = [];
+
+  const regex = /#\d+((?!#\d)[\s\S])*/g;
+  let m;
+
+  while ((m = regex.exec(stack)) !== null) {
+      // This is necessary to avoid infinite loops with zero-width matches
+      if (m.index === regex.lastIndex) {
+          regex.lastIndex++;
+      }
+
+      // The result can be accessed through the `m`-variable.
+      m.forEach((match, groupIndex) => {
+          if(match != "\n")
+            lines.push(match);
+      });
+  }
+
+  return lines;
 }
 
 module.exports = {
@@ -56,12 +82,16 @@ module.exports = {
   removeLineNumberFromLine,
   extractPathFromLine,
   extractMethodNameFromLine,
-  sanitizeLine
+  sanitizeLine,
+  splitStackToLines
 };
 
-/*readFile("./tests/samples/multiline2.txt")
+/*readFile("./tests/samples/stacktrace.txt")
   .then((res) => {
     console.time('Some_Name_Here');
-    console.log(sanitizeLine(res));
+    res = splitStackToLines(res)
+    res.forEach(function(line) {
+        console.log(sanitizeLine(line));
+    });
     console.timeEnd('Some_Name_Here');
   });*/
