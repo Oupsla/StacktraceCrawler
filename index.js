@@ -167,7 +167,7 @@ function main() {
     // .then((bucketList) => openStackTracesFromBucket(bucketList[0]))
     .then((bucketList) => compareAllBucket(bucketList))
     // .then((stackTraces) => compare(parser.splitStackToLines(fs.readFileSync('./nautilus/nautilus-testing/10.txt')), stackTraces))
-    .then((results) => results.map((result) => getResult(result)))
+    .then((results) => Object.keys(results).reduce((obj, key) => Object.assign({}, {[key]: getResultByBucket(results[key])}, obj), {}))
     .then((results) => print(results))
     .catch((err) => console.error(err));
   
