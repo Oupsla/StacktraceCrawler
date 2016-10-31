@@ -71,16 +71,12 @@ function getScore(stacktraceAloneParsed, stacktracesSorted) {
 }
 
 function getScoreByStackTrace(stacktraceAloneParsed, stacktraceSortedParsed) { //[{method, path}]
-  // let stacktraceAloneParsed = parser.splitStackToLines(stacktraceAlone);
-  //let stacktraceSortedParsed = parser.splitStackToLines(stacktraceSorted);
   return stacktraceAloneParsed.reduce((resultByStacktraceAlone, stacktraceAloneLine) => {
     return stacktraceSortedParsed.reduce((resultBySingleStacktrace, stacktraceSortedLine) => {
       let score = getScoreByLine(stacktraceAloneLine, stacktraceSortedLine);
-      //console.log(">>>>>>> score : ", score);
       return resultBySingleStacktrace + score;
     }, resultByStacktraceAlone);
   }, 0);
-  // getScoreByLine(parser.sanitizeLine(stacktraceAloneLine), );
 }
 
 function getScoreByLine(lineParsed, stacktraceSortedLine) { //comparaison between 2 lines
@@ -96,7 +92,10 @@ function getScoreByLine(lineParsed, stacktraceSortedLine) { //comparaison betwee
   if(stacktraceSortedLine.method === "??" || !stacktraceSortedLine.method || !stacktraceSortedLine.path)
     return 0;
 
-  if (stacktraceSortedLine.method === lineParsed.method && stacktraceSortedLine.path === lineParsed.path) {
+  if (stacktraceSortedLine.method === lineParsed.method && stacktraceSortedLine.path === lineParsed.path &&
+      (stacktraceSortedLine.address != null && lineParsed.address != null && stacktraceSortedLine.address === lineParsed.address)) {
+    score += 300;
+  } else if (stacktraceSortedLine.method === lineParsed.method && stacktraceSortedLine.path === lineParsed.path) {
     score += 100;
   } else if (stacktraceSortedLine.path === lineParsed.path) {
     score += 5;

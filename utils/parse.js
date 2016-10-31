@@ -1,9 +1,9 @@
 function removeAddressFromLine(line) {
   var re = new RegExp("0x[0-9a-fA-F]+(\\s|\\n)", 'm');
-  if(re.test(line)){
-    return line.replace(re, '');
+  if(re.test(line)) {
+    return { line: line.replace(re, ''), address: re.exec(line)[0].replace(' ', '') };
   }
-  return line;
+  return { line, address: null };
 }
 
 function removeLineNumberFromLine(line) {
@@ -32,10 +32,12 @@ function extractPathFromLine(line) {
 }
 
 function sanitizeLine(line) {
-  line = removeAddressFromLine(line);
+  let lineObj = removeAddressFromLine(line);
+  line = lineObj.line;
   line = removeLineNumberFromLine(line);
 
   return {
+    address: lineObj.address,
     method: extractMethodNameFromLine(line),
     path: extractPathFromLine(line)
   };

@@ -11,6 +11,7 @@ Benjamin Coenen - Nicolas Delperdange
 
 Version 1 (fuzzy - 3heures) : 0
 Version 2 (homemade - 15886.117ms): 22
+Version 3 (homemade + address - 36440.523ms): 23
 
 
 Improve :
