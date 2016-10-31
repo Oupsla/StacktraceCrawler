@@ -86,11 +86,19 @@ function getScoreByLine(lineParsed, stacktraceSortedLine) { //comparaison betwee
 
   //return fuzz.get(stacktraceSortedLine);
 
-  if(lineParsed.method === "??" || !lineParsed.method || !lineParsed.path)
+  if(lineParsed.method === "??" || !lineParsed.method || !lineParsed.path) {
+    if (stacktraceSortedLine.address != null && lineParsed.address != null && stacktraceSortedLine.address === lineParsed.address) {
+      return 100;
+    }
     return 0;
+  }
 
-  if(stacktraceSortedLine.method === "??" || !stacktraceSortedLine.method || !stacktraceSortedLine.path)
+  if(stacktraceSortedLine.method === "??" || !stacktraceSortedLine.method || !stacktraceSortedLine.path) {
+    if (stacktraceSortedLine.address != null && lineParsed.address != null && stacktraceSortedLine.address === lineParsed.address) {
+      return 100;
+    }
     return 0;
+  }
 
   if (stacktraceSortedLine.method === lineParsed.method && stacktraceSortedLine.path === lineParsed.path &&
       (stacktraceSortedLine.address != null && lineParsed.address != null && stacktraceSortedLine.address === lineParsed.address)) {
@@ -110,7 +118,6 @@ function openStackTracesFromBucket(bucket) {
   return readDir(`${bucketListPath}/${bucket}`)
     .then((bucketSubs) => {
       let promisesStacktraceRead = bucketSubs.map((sub) => {
-        //console.log("sub : ", sub);
         return readFile(`${bucketListPath}/${bucket}/${sub}/Stacktrace.txt`)
           .then((stacktraceContent) => {
               return parser.splitAndSanitizeStack(stacktraceContent);
