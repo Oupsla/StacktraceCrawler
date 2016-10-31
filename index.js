@@ -86,14 +86,14 @@ function getScoreByLine(lineParsed, stacktraceSortedLine) { //comparaison betwee
 
   //return fuzz.get(stacktraceSortedLine);
 
-  if(lineParsed.method === "??" || !lineParsed.method || !lineParsed.path) {
+  if(lineParsed.method === '??' || !lineParsed.method || !lineParsed.path) {
     if (stacktraceSortedLine.address != null && lineParsed.address != null && stacktraceSortedLine.address === lineParsed.address) {
       return 100;
     }
     return 0;
   }
 
-  if(stacktraceSortedLine.method === "??" || !stacktraceSortedLine.method || !stacktraceSortedLine.path) {
+  if(stacktraceSortedLine.method === '??' || !stacktraceSortedLine.method || !stacktraceSortedLine.path) {
     if (stacktraceSortedLine.address != null && lineParsed.address != null && stacktraceSortedLine.address === lineParsed.address) {
       return 100;
     }

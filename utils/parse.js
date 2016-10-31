@@ -45,7 +45,8 @@ function sanitizeLine(line) {
   line = removeLineNumberFromLine(line);
   let method = extractMethodNameFromLine(line);
   let path = extractMethodNameFromLine(line);
-  let frame = extractFrameFromLine(line)
+  let frame = extractFrameFromLine(line);
+
   return {
     address: lineObj.address,
     method,
@@ -77,13 +78,20 @@ function splitStackToLines(stack){
 
 function splitAndSanitizeStack(stacktrace){
   let lines = splitStackToLines(stacktrace);
+  let results = [];
+  let count = 0;
 
-  return lines.map((line) => {
+  lines.forEach((line, index) => {
     let sanitizedLine = sanitizeLine(line);
     sanitizedLine.totalFrame = lines.length;
 
-    return sanitizedLine;
+    if (count === 0 || (count > 0 && sanitizedLine.method !== results[count - 1].method && sanitizedLine.method !== '??')) {
+      results.push(sanitizedLine);
+      count++;
+    }
   });
+
+  return results;
 }
 
 module.exports = {
