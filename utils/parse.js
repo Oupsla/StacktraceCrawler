@@ -14,6 +14,14 @@ function removeLineNumberFromLine(line) {
   return line;
 }
 
+function extractFrameFromLine(line) {
+  var re = new RegExp("^#([0-9]+)" , "im");
+  array = re.exec(line);
+  if(array == null || array.length < 2)
+    return "";
+  return parseInt(array[1], 10);
+}
+
 function extractMethodNameFromLine(line) {
   var re = new RegExp("(#[0-9]+ {1,2})(in |)([^ ]+)" , "im");
   array = re.exec(line);
@@ -35,11 +43,14 @@ function sanitizeLine(line) {
   let lineObj = removeAddressFromLine(line);
   line = lineObj.line;
   line = removeLineNumberFromLine(line);
-
+  let method = extractMethodNameFromLine(line);
+  let path = extractMethodNameFromLine(line);
+  let frame = extractFrameFromLine(line)
   return {
     address: lineObj.address,
-    method: extractMethodNameFromLine(line),
-    path: extractPathFromLine(line)
+    method,
+    path,
+    frame
   };
 }
 
@@ -55,9 +66,8 @@ function splitStackToLines(stack){
           regex.lastIndex++;
       }
 
-      // The result can be accessed through the `m`-variable.
       m.forEach((match, groupIndex) => {
-          if(match != "\n")
+          if(match !== "\n")
             lines.push(match);
       });
   }
@@ -66,15 +76,14 @@ function splitStackToLines(stack){
 }
 
 function splitAndSanitizeStack(stacktrace){
+  let lines = splitStackToLines(stacktrace);
 
-  var lines = splitStackToLines(stacktrace);
+  return lines.map((line) => {
+    let sanitizedLine = sanitizeLine(line);
+    sanitizedLine.totalFrame = lines.length;
 
-  var res = [];
-  lines.forEach(function(line) {
-      res.push(sanitizeLine(line));
+    return sanitizedLine;
   });
-
-  return res;
 }
 
 module.exports = {

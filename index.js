@@ -103,15 +103,35 @@ function getScoreByLine(lineParsed, stacktraceSortedLine) { //comparaison betwee
   if (stacktraceSortedLine.method === lineParsed.method && stacktraceSortedLine.path === lineParsed.path &&
       (stacktraceSortedLine.address != null && lineParsed.address != null && stacktraceSortedLine.address === lineParsed.address)) {
     score += 300;
+    score += (getFrameRate(lineParsed.frame, lineParsed.totalFrame) * 300);
+    score += (getOffsetRate(lineParsed.frame, stacktraceSortedLine.frame, lineParsed.totalFrame, stacktraceSortedLine.totalFrame) * 300);
   } else if (stacktraceSortedLine.method === lineParsed.method && stacktraceSortedLine.path === lineParsed.path) {
     score += 100;
+    score += (getFrameRate(lineParsed.frame, lineParsed.totalFrame) * 100);
+    score += (getOffsetRate(lineParsed.frame, stacktraceSortedLine.frame, lineParsed.totalFrame, stacktraceSortedLine.totalFrame) * 100);
   } else if (stacktraceSortedLine.path === lineParsed.path) {
-    score += 5;
+    score += 15;
+    score += (getOffsetRate(lineParsed.frame, lineParsed.totalFrame) * 15);
+    score += (getOffsetRate(lineParsed.frame, stacktraceSortedLine.frame, lineParsed.totalFrame, stacktraceSortedLine.totalFrame) * 15);
   } else if (stacktraceSortedLine.method === lineParsed.method) {
-    score += 1;
+    score += 5;
+    score += (getFrameRate(lineParsed.frame, lineParsed.totalFrame) * 5);
+    score += (getOffsetRate(lineParsed.frame, stacktraceSortedLine.frame, lineParsed.totalFrame, stacktraceSortedLine.totalFrame) * 5);
   }
 
   return score;
+}
+
+function getFrameRate(frameToCompare, totalFrame) {
+  return (1 - (frameToCompare/totalFrame));
+}
+
+function getOffsetRate(frameToCompare, currentFrame, totalFrameToCompare, totalCurrentFrame) {
+  if (frameToCompare === currentFrame) {
+    return 1;
+  }
+
+  return 1 - (Math.abs(frameToCompare - currentFrame) / Math.max(totalFrameToCompare, totalCurrentFrame));
 }
 
 function openStackTracesFromBucket(bucket) {
