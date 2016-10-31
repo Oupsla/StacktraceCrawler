@@ -110,7 +110,7 @@ Ce papier nous a permis d'affiner nos méthodes de calcul de points en rajoutant
 La distance est la position de la frame courante par rapport à la première frame.
 L'offset est la différence de niveau entre 2 frames dans une stacktrace.
 
-![Stacktrace](https://raw.githubusercontent.com/Oupsla/StacktraceCrawler/master/images/Distance.gif)
+![Stacktrace](https://raw.githubusercontent.com/Oupsla/StacktraceCrawler/master/images/Distance.png)
 
 Plus de points doivent être accordés à une frame dont la position est proche du top, puisque la frame qui est à l'origine du bug est souvent proche du top.
 Et l'offset entre 2 fonctions semblables doit être proche de nul.
@@ -153,29 +153,3 @@ Et l'offset entre 2 fonctions semblables doit être proche de nul.
 - Sentry : https://sentry.io/welcome/ & https://github.com/getsentry/sentry
 - Rollbar : https://rollbar.com/
 - Rebucket : https://www.microsoft.com/en-us/research/publication/rebucket-a-method-for-clustering-duplicate-crash-reports-based-on-call-stack-similarity/
-
-## Notes
-
-Expliquez nos recherches :
-- Algo de Microsoft
-- Sentry / Rollbar
-- https://github.com/bnagy/crashwalk Bucket and triage on-disk crashes. OSX and Linux.
-
-Parlez de leur performance, utilité, ce qu'on a repris pour notre algo.
-
-
-
-Fonctionnement :
-
-Comparer la stacktrace avec chaque bucket ce qui résulte en un score de comparaison
-pour chaque stacktrace contenu dans chaque bucket.
-
-Ensuite associer la stacktrace par rapport au plus haut résultat obtenu (moyenne ou plus haut score)
-
-
-Pour calculer le score :
-- Comparer chaque ligne d'une stacktrace avec chaque ligne d'une autre stacktrace
-- Points :
-  - Si même nom de méthode : 1 Point
-  - Si même path : 2 Points
-  - Si même nom de méthode/path : 4 Points
