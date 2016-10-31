@@ -1,3 +1,5 @@
+const crypto = require('crypto');
+
 function removeAddressFromLine(line) {
   var re = new RegExp("0x[0-9a-fA-F]+(\\s|\\n)", 'm');
   if(re.test(line)) {
@@ -24,10 +26,13 @@ function extractFrameFromLine(line) {
 
 function extractMethodNameFromLine(line) {
   var re = new RegExp("(#[0-9]+ {1,2})(in |)([^ ]+)" , "im");
+  var reNumber = new RegExp("[0-9]{2,}" , "im");
+
   array = re.exec(line);
   if(array == null)
     return "";
-  return array[3];
+
+  return array[3].replace(reNumber, '');
 }
 
 function extractPathFromLine(line) {
@@ -53,6 +58,10 @@ function sanitizeLine(line) {
     path,
     frame
   };
+}
+
+function getSHA1(input) {
+  return crypto.createHash('sha1').update(JSON.stringify(input)).digest('hex')
 }
 
 function splitStackToLines(stack){
@@ -101,5 +110,6 @@ module.exports = {
   extractMethodNameFromLine,
   sanitizeLine,
   splitStackToLines,
-  splitAndSanitizeStack
+  splitAndSanitizeStack,
+  getSHA1
 };

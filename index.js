@@ -71,6 +71,9 @@ function getScore(stacktraceAloneParsed, stacktracesSorted) {
 }
 
 function getScoreByStackTrace(stacktraceAloneParsed, stacktraceSortedParsed) { //[{method, path}]
+  if (parser.getSHA1(stacktraceAloneParsed) === parser.getSHA1(stacktraceSortedParsed)) {
+    return Number.MAX_SAFE_INTEGER;
+  }
   return stacktraceAloneParsed.reduce((resultByStacktraceAlone, stacktraceAloneLine) => {
     return stacktraceSortedParsed.reduce((resultBySingleStacktrace, stacktraceSortedLine) => {
       let score = getScoreByLine(stacktraceAloneLine, stacktraceSortedLine);
@@ -82,24 +85,20 @@ function getScoreByStackTrace(stacktraceAloneParsed, stacktraceSortedParsed) { /
 function getScoreByLine(lineParsed, stacktraceSortedLine) { //comparaison between 2 lines
   let score = 0;
 
-  //let fuzz = fuzzy([lineParsed]);
-
-  //return fuzz.get(stacktraceSortedLine);
-
-  if(lineParsed.method === '??' || !lineParsed.method || !lineParsed.path) {
+  if (lineParsed.method === '??' || !lineParsed.method || !lineParsed.path) {
     if (stacktraceSortedLine.address != null && lineParsed.address != null && stacktraceSortedLine.address === lineParsed.address) {
       return 100;
     }
     return 0;
   }
 
-  if(stacktraceSortedLine.method === '??' || !stacktraceSortedLine.method || !stacktraceSortedLine.path) {
+  if (stacktraceSortedLine.method === '??' || !stacktraceSortedLine.method || !stacktraceSortedLine.path) {
     if (stacktraceSortedLine.address != null && lineParsed.address != null && stacktraceSortedLine.address === lineParsed.address) {
       return 100;
     }
     return 0;
   }
-
+  
   if (stacktraceSortedLine.method === lineParsed.method && stacktraceSortedLine.path === lineParsed.path &&
       (stacktraceSortedLine.address != null && lineParsed.address != null && stacktraceSortedLine.address === lineParsed.address)) {
     score += 300;
@@ -165,12 +164,10 @@ function compare(stacktraceAloneParsed, bucketsList) {
 }
 
 function compareAllBucket(bucketsStacktraces) {
-  //console.log("Compare all buckets");
-  //console.log(bucketsStacktraces);
   return getSingleStacktraces()
     .then((stacktraces) => {
       let i = stacktraces.length;
-      //console.log('stacktraces alone : ', i);
+
 
       return stacktraces.reduce((response, stacktrace) => {
         //console.log('stacktraces alone restantes : ', --i);
@@ -180,7 +177,6 @@ function compareAllBucket(bucketsStacktraces) {
 }
 
 function getResultByBucket(resultByBucket) {
-  //console.log(resultByBucket);
   let max = 0;
   let maxKey = Object.keys(resultByBucket)
     .reduce((index, key) => {
@@ -190,7 +186,6 @@ function getResultByBucket(resultByBucket) {
       } else {
         return index;
       }
-      // return (resultByBucket[key] > max ? resultByBucket[key] : max);
     }, 0);
 
   return maxKey;
@@ -212,9 +207,7 @@ function main() {
 
   getExistingBucketsList()
     .then((bucketList) => getAllStacktrace(bucketList)) //Object like {'myBucket': ['myStacktrace']}
-    // .then((bucketList) => openStackTracesFromBucket(bucketList[0]))
     .then((bucketList) => compareAllBucket(bucketList))
-    // .then((stackTraces) => compare(parser.splitStackToLines(fs.readFileSync('./nautilus/nautilus-testing/10.txt')), stackTraces))
     .then((results) => Object.keys(results).reduce((obj, key) => Object.assign({}, {[key]: getResultByBucket(results[key])}, obj), {}))
     .then((results) => print(results))
     .then(() => console.timeEnd('Start'))
