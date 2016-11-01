@@ -16,7 +16,7 @@ Benjamin Coenen - Nicolas Delperdange
 
 ## Introduction
 Dans le cadre d'un challenge pour le cours d'OPL de l'Université de Lille 1, nous devons réunir des stacktraces (capturées dans des issues Github) dans un même bucket.  
-Un Bucket est donc un ensemble de stacktrace qui sont liés au même problème.
+Un Bucket est donc un ensemble de stacktrace qui sont liées au même problème.
 
 ![Stacktrace](https://raw.githubusercontent.com/Oupsla/StacktraceCrawler/master/images/Bucket.png)
 
@@ -26,7 +26,7 @@ Avant toute chose il faut définir quelques points essentiels d'une stacktrace :
 ![Stacktrace](https://raw.githubusercontent.com/Oupsla/StacktraceCrawler/master/images/Stacktrace.png)
 
 - Une stacktrace est composée d'un ensemble de frames
-- Une frame correspond à un appel de méthode ou procédure et est composé de :
+- Une frame correspond à un appel de méthode ou procédure et est composée de :
   - Un numéro de frame
   - Une adresse
   - Un nom de méthode
@@ -105,32 +105,21 @@ Ils assemblent ensuite les stacktraces dans des buckets sur un principe de dista
 ## Travail technique
 ### But
 
-
 ### Architecture
-
 
 ### Algorithme
 
-
 ### Utilisation
-
 
 ### Screenshots
 
-
 ## Evaluation
-
-
 
 ## Limitation
 
-
 ## Conclusion
 
-
-
 ## Glossaire
-
 
 ## Référence :
 - Crashwalk : https://github.com/bnagy/crashwalk
@@ -138,7 +127,8 @@ Ils assemblent ensuite les stacktraces dans des buckets sur un principe de dista
 - Sentry : https://sentry.io/welcome/ & https://github.com/getsentry/sentry
 - Rollbar : https://rollbar.com/
 - Rebucket : https://www.microsoft.com/en-us/research/publication/rebucket-a-method-for-clustering-duplicate-crash-reports-based-on-call-stack-similarity/
--
+
+
 ## Historique :
 
 - Version 1 (fuzzy - 3heures) : 0
@@ -161,4 +151,4 @@ Ils assemblent ensuite les stacktraces dans des buckets sur un principe de dista
   - Enlever les integers de plus de 2 caractères
 - Enlever les fonctions immunes (comme clone())
 - Implementer la formule de calcul de Rebucket pour la similarité
-- Implementer le Agglomerative Hierarchical clustering technique
+- Implementer le Agglomerative Hierarchical clustering technique 
