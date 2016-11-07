@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "istanbul cover node_modules/.bin/_mocha test/*.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,13 @@
   "homepage": "https://github.com/Oupsla/StacktraceCrawler#readme",
   "dependencies": {
     "bluebird": "^3.4.6",
+    "crypto": "0.0.3",
     "fuzzyset.js": "0.0.1",
     "lodash": "^4.16.4"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2",
+    "sinon": "^1.17.6"
   }
 }

@@ -139,6 +139,7 @@ Ils assemblent ensuite les stacktraces dans des buckets sur un principe de dista
 - Version 6 (+ métrique offset - 115283.663ms) : 33
 - Version 7 (+ enlever les fonctions récursives - 23141.745ms) : 32
 - Version 8 (+ SHA1 - 34978.063ms) : 32
+- Version 9 (+ enlever immunes - 3781.552ms) : 30
 
 ## Améliorations :
 - Ajouter la stacktrace traité au tableau des buckets
@@ -151,4 +152,4 @@ Ils assemblent ensuite les stacktraces dans des buckets sur un principe de dista
   - Enlever les integers de plus de 2 caractères
 - Enlever les fonctions immunes (comme clone())
 - Implementer la formule de calcul de Rebucket pour la similarité
-- Implementer le Agglomerative Hierarchical clustering technique 
+- Implementer le Agglomerative Hierarchical clustering technique

@@ -1,5 +1,11 @@
 const crypto = require('crypto');
 
+const immunesFunction = ['??', 'clone' , 'start_thread', '__libc_start_main',
+'g_main_loop_run', 'gtk_main_do_event', 'gtk_main', 'g_main_context_dispatch',
+'start_thread', 'g_application_run', 'g_main_context_iterate', 'IA__gtk_main',
+'IA__g_main_loop_run', 'IA__g_main_context_dispatch', 'gdk_event_dispatch',
+'IA__gtk_main_do_event', 'IA__gtk_propagate_event'];
+
 function removeAddressFromLine(line) {
   var re = new RegExp("0x[0-9a-fA-F]+(\\s|\\n)", 'm');
   if(re.test(line)) {
@@ -94,7 +100,9 @@ function splitAndSanitizeStack(stacktrace){
     let sanitizedLine = sanitizeLine(line);
     sanitizedLine.totalFrame = lines.length;
 
-    if (count === 0 || (count > 0 && sanitizedLine.method !== results[count - 1].method && sanitizedLine.method !== '??')) {
+    if (count === 0
+      || (count > 0 && sanitizedLine.method !== results[count - 1].method
+        && immunesFunction.indexOf(sanitizedLine.method) != -1)) {
       results.push(sanitizedLine);
       count++;
     }
