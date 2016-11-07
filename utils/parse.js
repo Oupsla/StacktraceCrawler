@@ -55,7 +55,7 @@ function sanitizeLine(line) {
   line = lineObj.line;
   line = removeLineNumberFromLine(line);
   let method = extractMethodNameFromLine(line);
-  let path = extractMethodNameFromLine(line);
+  let path = extractPathFromLine(line);
   let frame = extractFrameFromLine(line);
 
   return {
@@ -102,7 +102,7 @@ function splitAndSanitizeStack(stacktrace){
 
     if (count === 0
       || (count > 0 && sanitizedLine.method !== results[count - 1].method
-        && immunesFunction.indexOf(sanitizedLine.method) != -1)) {
+        && immunesFunction.indexOf(sanitizedLine.method) === -1)) {
       results.push(sanitizedLine);
       count++;
     }
@@ -116,6 +116,7 @@ module.exports = {
   removeLineNumberFromLine,
   extractPathFromLine,
   extractMethodNameFromLine,
+  extractFrameFromLine,
   sanitizeLine,
   splitStackToLines,
   splitAndSanitizeStack,

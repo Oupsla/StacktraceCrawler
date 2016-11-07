@@ -140,6 +140,7 @@ Ils assemblent ensuite les stacktraces dans des buckets sur un principe de dista
 - Version 7 (+ enlever les fonctions récursives - 23141.745ms) : 32
 - Version 8 (+ SHA1 - 34978.063ms) : 32
 - Version 9 (+ enlever immunes - 3781.552ms) : 30
+- Version 10 (coup dur : fix path in method - désactivation des métriques distance - 10804.055ms) : 31
 
 ## Améliorations :
 - Ajouter la stacktrace traité au tableau des buckets
