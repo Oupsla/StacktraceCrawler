@@ -141,16 +141,10 @@ Ils assemblent ensuite les stacktraces dans des buckets sur un principe de dista
 - Version 8 (+ SHA1 - 34978.063ms) : 32
 - Version 9 (+ enlever immunes - 3781.552ms) : 30
 - Version 10 (coup dur : fix path in method - désactivation des métriques distance - 10804.055ms) : 31
+- Version 11 (Rebucket Algo similarity - 49422.940ms) : 43
 
 ## Améliorations :
 - Ajouter la stacktrace traité au tableau des buckets
 - Repasser plusieurs fois l'algo pour affiner
-- Vérifier le problème de parser
-- Vérifier la moyenne
-- Filtre avancée
-- Sha1 (concatener nom de methode et path > comparer les sha1)
-  - Enlever les dates et sha des méthodes et path
-  - Enlever les integers de plus de 2 caractères
-- Enlever les fonctions immunes (comme clone())
-- Implementer la formule de calcul de Rebucket pour la similarité
-- Implementer le Agglomerative Hierarchical clustering technique
+- Possibilité d'add/remove des fonctionnalités
+- Enlever bnaggy (ou le mettre en notes)

@@ -231,6 +231,12 @@ describe('The parser module', function () {
 
   describe('split And Sanitize Stack' , function () {
 
+    it('split and sanitize stackline to lines', function(done) {
+      var result = parser.splitAndSanitizeStack(stacktrace);
+      console.log(result);
+      done();
+    });
+
 
   });
 

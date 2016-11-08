@@ -5,6 +5,13 @@ const fuzzy = require('fuzzyset.js');
 const parser = require('./utils/parse');
 const filePath = process.argv.length > 2 ? process.argv[2] : 'nautilus';
 const bucketListPath = './nautilus/nautilus-training';
+const pathSingleTrace = './nautilus/nautilus-testing';
+const mathjs = require('mathjs');
+
+// coefficient for the distance to the top frame
+let coeffC = 15;
+let coeffO = 10;
+let coeffD = 5;
 
 function readFile(filename) {
   return new Bluebird((resolve, reject) => {
@@ -44,9 +51,9 @@ function getExistingBucketsList() {
 }
 
 function getSingleStacktraces() {
-  return readDir('./nautilus/nautilus-testing')
+  return readDir(pathSingleTrace)
     .then((stacktraces) => {
-      let promises = stacktraces.reduce((res, stacktrace) => ([...res, { id: stacktrace, content: readFile(`./nautilus/nautilus-testing/${stacktrace}`) }]), []);
+      let promises = stacktraces.reduce((res, stacktrace) => ([...res, { id: stacktrace, content: readFile(`${pathSingleTrace}/${stacktrace}`) }]), []);
 
       return Bluebird.map(promises, (stacktrace) => {
         return Bluebird.props(stacktrace)
@@ -71,15 +78,86 @@ function getScore(stacktraceAloneParsed, stacktracesSorted) {
 }
 
 function getScoreByStackTrace(stacktraceAloneParsed, stacktraceSortedParsed) { //[{method, path}]
+
   if (parser.getSHA1(stacktraceAloneParsed) === parser.getSHA1(stacktraceSortedParsed)) {
     return Number.MAX_SAFE_INTEGER;
   }
-  return stacktraceAloneParsed.reduce((resultByStacktraceAlone, stacktraceAloneLine) => {
-    return stacktraceSortedParsed.reduce((resultBySingleStacktrace, stacktraceSortedLine) => {
-      let score = getScoreByLine(stacktraceAloneLine, stacktraceSortedLine);
-      return resultBySingleStacktrace + score;
-    }, resultByStacktraceAlone);
-  }, 0);
+
+  let minimumNumberFrame = Math.min(stacktraceAloneParsed.length,  stacktraceSortedParsed.length);
+  let matrix = getSimilarityMatrix(stacktraceAloneParsed, stacktraceSortedParsed);
+  let sumMinimum = getSum(minimumNumberFrame);
+
+
+  let similarity = mathjs.dotDivide(matrix[matrix.length - 1][matrix[0].length - 1], sumMinimum);
+  return similarity;
+}
+
+function getSimilarityMatrix(stacktraceAloneParsed, stacktraceSortedParsed) {
+  let matrix = [];
+
+  for(let i = 0; i < stacktraceAloneParsed.length ; i++) {
+    let lineOfMatrix = [];
+
+    for(let j = 0; j < stacktraceSortedParsed.length ; j++) {
+
+      if(i === 0 && j === 0) {
+        if(stacktraceAloneParsed[i].method === stacktraceSortedParsed[j].method &&
+          stacktraceAloneParsed[i].path === stacktraceSortedParsed[j].path){
+          lineOfMatrix.push(5);
+        }
+        else if(stacktraceAloneParsed[i].path === stacktraceSortedParsed[j].path){
+          lineOfMatrix.push(1);
+        }
+        else if(stacktraceAloneParsed[i].method === stacktraceSortedParsed[j].method){
+          lineOfMatrix.push(1);
+        }
+        else {
+          lineOfMatrix.push(0);
+        }
+      } else {
+        let result1, result2, result3;
+
+        if(i !== 0 && j !== 0)
+          result1 = matrix[i-1][j-1] + getCost(i, j);
+        else
+          result1 = 0;
+
+        if(i !== 0)
+          result2 = matrix[i-1][j];
+        else
+          result2 = 0;
+
+        if(j !== 0)
+          result3 = matrix[i][j-1];
+        else
+          result3 = 0;
+
+        lineOfMatrix.push(mathjs.max(result1, result2, result3));
+      }
+
+      matrix[i] = lineOfMatrix;
+
+    }
+
+    //matrix.push(lineOfMatrix);
+  }
+  return matrix;
+  //console.log(matrix);
+}
+
+function getSum(minimumNumberFrame) {
+  let sumReturned = 0;
+  for (let i = 0; i <= minimumNumberFrame; i++) {
+    sumReturned += Math.exp(-(coeffC * i));
+  }
+  return sumReturned;
+}
+
+function getCost(i, j) {
+  if(i !== j){
+    return 0;
+  }
+  return Math.exp((-coeffC) * Math.min(i,j)) * Math.exp((-coeffO) * Math.abs(i-j));
 }
 
 function getScoreByLine(lineParsed, stacktraceSortedLine) { //comparaison between 2 lines
