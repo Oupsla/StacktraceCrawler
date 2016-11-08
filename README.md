@@ -144,7 +144,11 @@ Ils assemblent ensuite les stacktraces dans des buckets sur un principe de dista
 - Version 11 (Rebucket Algo similarity - 49422.940ms) : 43
 
 ## Améliorations :
-- Ajouter la stacktrace traité au tableau des buckets
-- Repasser plusieurs fois l'algo pour affiner
+
+
 - Possibilité d'add/remove des fonctionnalités
 - Enlever bnaggy (ou le mettre en notes)
+- Brute force avec les buckets qu'on connait deja
+- Essayer de trouver de meilleurs valeurs (c, o et de comparaisons)
+- Ajouter la stacktrace traité au tableau des buckets
+- Repasser plusieurs fois l'algo pour affiner
