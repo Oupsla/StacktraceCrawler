@@ -47,6 +47,12 @@ function extractPathFromLine(line) {
 
   if(array == null)
     return "";
+
+  let path = array[3];
+
+  // Remove version of library  
+  var re2 = new RegExp('-[\d+.]*[\d+]' , 'g');
+  path = path.replace(/-[\d+.]*[\d+]/g, '');
   return array[3];
 }
 

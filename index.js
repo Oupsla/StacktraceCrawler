@@ -15,13 +15,13 @@ const mathjs = require('mathjs');
 const fscore = require('fscore')
 
 // coefficient for the distance to the top frame
-let coeffC = 15;
-let coeffO = 10;
+let coeffC = 2;
+let coeffO = 2;
 let coeffD = 0.5;
 
-let coeffSame = 5;
-let coeffMethod = 1;
-let coeffPath = 1;
+let coeffSame = 2;
+let coeffMethod = 0.7;
+let coeffPath = 0.2;
 
 function readFile(filename) {
   return new Bluebird((resolve, reject) => {
@@ -116,11 +116,11 @@ function getSimilarityMatrix(stacktraceAloneParsed, stacktraceSortedParsed, c, o
           stacktraceAloneParsed[i].path === stacktraceSortedParsed[j].path){
           lineOfMatrix.push(coeffSame);
         }
-        else if(stacktraceAloneParsed[i].path === stacktraceSortedParsed[j].path){
-          lineOfMatrix.push(coeffPath);
-        }
         else if(stacktraceAloneParsed[i].method === stacktraceSortedParsed[j].method){
           lineOfMatrix.push(coeffMethod);
+        }
+        else if(stacktraceAloneParsed[i].path === stacktraceSortedParsed[j].path){
+          lineOfMatrix.push(coeffPath);
         }
         else {
           lineOfMatrix.push(0);
@@ -303,6 +303,15 @@ function main() {
     return 1;
   }
   console.time('Start');
+  console.log('Parameters : ')
+  console.log("coeffC : " + coeffC);
+  console.log("coeffO : " + coeffO);
+  //console.log("coeffD : " + coeffD);
+
+  console.log("coeffSame : " + coeffSame);
+  console.log("coeffMethod : " + coeffMethod);
+  console.log("coeffPath : " + coeffPath);
+
 
   getExistingBucketsList()
     .then((bucketList) => getAllStacktrace(bucketList)) //Object like {'myBucket': ['myStacktrace']}

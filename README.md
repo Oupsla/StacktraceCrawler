@@ -142,6 +142,7 @@ Ils assemblent ensuite les stacktraces dans des buckets sur un principe de dista
 - Version 9 (+ enlever immunes - 3781.552ms) : 30
 - Version 10 (coup dur : fix path in method - désactivation des métriques distance - 10804.055ms) : 31
 - Version 11 (Rebucket Algo similarity - 49422.940ms) : 43
+- Version 12 (better coeffs + removing version lib - 38022.126ms) : 44
 
 ## Améliorations :
 
