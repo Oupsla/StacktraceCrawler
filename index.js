@@ -1,8 +1,9 @@
 const Bluebird = require('bluebird');
-const fs = require('fs');
+const mathjs = require('mathjs');
 const _ = require('lodash');
 const fuzzy = require('fuzzyset.js');
 const parser = require('./utils/parse');
+const filer = require('./utils/filer');
 const filePath = process.argv.length > 2 ? process.argv[2] : 'nautilus';
 const bucketListPath = './nautilus/nautilus-training';
 const pathSingleTrace = './nautilus/nautilus-testing';
@@ -10,9 +11,6 @@ const pathSingleTrace = './nautilus/nautilus-testing';
 /*const filePath = process.argv.length > 2 ? process.argv[2] : 'dataset2';
 const bucketListPath = './dataset2/training';
 const pathSingleTrace = './dataset2/testing';*/
-
-const mathjs = require('mathjs');
-const fscore = require('fscore')
 
 // coefficient for the distance to the top frame
 let coeffC = 2;
@@ -23,48 +21,33 @@ let coeffSame = 2;
 let coeffMethod = 0.7;
 let coeffPath = 0.2;
 
-function readFile(filename) {
-  return new Bluebird((resolve, reject) => {
-    fs.readFile(filename, 'utf8', function (err, data) {
-      if (err) {
-        return reject(err);
-      }
-      return resolve(data);
-    });
-  });
-}
-
-function readDir(dirname) {
-  return new Bluebird((resolve, reject) => {
-    fs.readdir(dirname, function (err, data) {
-      if (err) {
-        return reject(err);
-      }
-      return resolve(data);
-    });
-  });
-}
-
-function writeFile(filename, data) {
-  return new Bluebird((resolve, reject) => {
-    fs.writeFile(filename, data, (err, resp) => {
-      if (err) {
-        return reject(err);
-      }
-      return resolve(resp);
-    });
-  });
-}
 
 function getExistingBucketsList() {
-  return readDir(bucketListPath);
+  return filer.readDir(bucketListPath);
+}
+
+function getBiggerBucket() {
+  return getExistingBucketsList()
+    .then((buckets) => {
+      return Bluebird.map(buckets, (bucket) => {
+        return Bluebird.props({bucket, stacktraces: filer.readDir(`${bucketListPath}/${bucket}`)});
+      });
+    })
+    .then((results) => {
+      return _.maxBy(results, (item) => item.stacktraces.length);
+    })
+    .catch((err) => console.error(err));
 }
 
 
-function getSingleStacktraces() {
-  return readDir(pathSingleTrace)
+function getSingleStacktraces(stacktracesAlone) {
+  let promise = stacktracesAlone ? Bluebird.resolve(stacktracesAlone.stacktraces) : filer.readDir(pathSingleTrace);
+  return promise
     .then((stacktraces) => {
-      let promises = stacktraces.reduce((res, stacktrace) => ([...res, { id: stacktrace, content: readFile(`${pathSingleTrace}/${stacktrace}`) }]), []);
+      let promises = stacktraces.reduce((res, stacktrace) => {
+        let fullPath = stacktracesAlone ? `${bucketListPath}/${stacktracesAlone.bucket}/${stacktrace}/Stacktrace.txt` : `${pathSingleTrace}/${stacktrace}`;
+        return ([...res, { id: stacktrace, content: filer.readFile(fullPath) }]);
+      }, []);
 
       return Bluebird.map(promises, (stacktrace) => {
         return Bluebird.props(stacktrace)
@@ -230,10 +213,18 @@ function determineOptimalParameters(stacktraces) {
 }
 
 function openStackTracesFromBucket(bucket) {
-  return readDir(`${bucketListPath}/${bucket}`)
+  return filer.readDir(`${bucketListPath}/${bucket}`)
+    .then((stacktraces) => ({ bucket, stacktraces }));
+}
+
+function openStackTracesFromBucketAndSanitize(bucket, filter) {
+  return filer.readDir(`${bucketListPath}/${bucket}`)
     .then((bucketSubs) => {
+      if (filter) {
+        bucketSubs = _.difference(bucketSubs, filter);
+      }
       let promisesStacktraceRead = bucketSubs.map((sub) => {
-        return readFile(`${bucketListPath}/${bucket}/${sub}/Stacktrace.txt`)
+        return filer.readFile(`${bucketListPath}/${bucket}/${sub}/Stacktrace.txt`)
           .then((stacktraceContent) => {
               return parser.splitAndSanitizeStack(stacktraceContent);
           });
@@ -242,9 +233,12 @@ function openStackTracesFromBucket(bucket) {
     });
 }
 
-function getAllStacktrace(bucketList) {
+function getAllStacktrace(bucketList, filter) {
   let promisesAllBuckets = bucketList.reduce((globalObj, bucket) => {
-    return Object.assign({}, { [bucket]: openStackTracesFromBucket(bucket) }, globalObj);
+    if (filter && filter.bucket === bucket) {
+      return Object.assign({}, { [bucket]: openStackTracesFromBucketAndSanitize(bucket, filter.stacktraces) }, globalObj);
+    }
+    return Object.assign({}, { [bucket]: openStackTracesFromBucketAndSanitize(bucket) }, globalObj);
   }, {});
 
   return Bluebird.props(promisesAllBuckets);
@@ -260,12 +254,11 @@ function compare(stacktraceAloneParsed, bucketsList) {
     }, {})
 }
 
-function compareAllBucket(bucketsStacktraces) {
-  return getSingleStacktraces()
+function compareAllBucket(bucketsStacktraces, singleStracktraces) {
+  return getSingleStacktraces(singleStracktraces)
     .then((stacktraces) => {
-      let i = stacktraces.length;
-
-
+      // console.log(stacktraces);
+      // let i = stacktraces.length;
       return stacktraces.reduce((response, stacktrace) => {
         //console.log('stacktraces alone restantes : ', --i);
         return Object.assign({}, { [stacktrace.id]: compare(stacktrace.parsedLines, bucketsStacktraces) }, response);
@@ -291,10 +284,19 @@ function getResultByBucket(resultByBucket) {
 function print(results) {
   result = "";
   Object.keys(results)
-    .forEach((stacktrace) => result += `${stacktrace.split('.txt')[0]} -> ${results[stacktrace]}\n`)
+    .forEach((stacktrace) => result += `${stacktrace.split('.txt')[0]} -> ${results[stacktrace]}\n`); //stacktraceAlone -> bucket
 
   let dateNow = new Date();
-  return writeFile("result"+ dateNow.toISOString() +".txt", result);
+  return filer.writeFile("result"+ dateNow.toISOString() +".txt", result);
+}
+
+function checkResults(expected, results) {
+  let totalFound = Object.keys(results)
+    .reduce((total, stacktrace) =>  total + (results[stacktrace] === expected.bucket ? 1 : 0), 0);
+
+  console.log('totalFound -> ', totalFound);
+  console.log('expected -> ', expected.stacktraces.length);
+  return totalFound / expected.stacktraces.length;
 }
 
 function main() {
@@ -324,4 +326,85 @@ function main() {
 
 }
 
-return main();
+// return main();
+
+ //Pour ces stacktraces lesquelles je vais réussir à mettre dedans, à reconnaitre
+function findEfficiency(c, o) {
+  let bucketMax;
+  let stacktracesAlone;
+  let expected;
+  coeffC = c;
+  coeffO = o;
+
+  return getBiggerBucket()//{bucket, stacktraces}
+    .then((biggerBucket) => { //On va prendre la moitié de ces stackTraces et les mettre en alone
+      stacktracesAlone = biggerBucket.stacktraces.slice(0, biggerBucket.stacktraces.length / 2);
+      bucketMax = biggerBucket;
+      expected = {bucket: bucketMax.bucket, stacktraces: stacktracesAlone};
+
+      return getExistingBucketsList();
+    })
+    // .then((bucketList) => Bluebird.reduce(bucketList, (bucket) => openStackTracesFromBucket(bucket)))
+    .then((bucketList) => getAllStacktrace(bucketList, expected)) //Object like {'myBucket': ['myStacktrace']}
+    .then((bucketList) => compareAllBucket(bucketList, expected))
+    .then((results) => Object.keys(results).reduce((obj, key) => Object.assign({}, {[key]: getResultByBucket(results[key])}, obj), {}))
+    .then((results) => checkResults(expected, results))
+    // .then((results) => console.log(results))
+    // .then((results) => print(results))
+    // .then(() => console.timeEnd('Start'))
+    .catch((err) => console.error(err));
+}
+
+function determineBetterCoeff() {
+  let promises = [];
+  let combi = [];
+  const cMax = 2;
+  const oMax = 2;
+  let maxEfficiency = 0;
+  let betterC = 0;
+  let betterO = 0;
+  let c = 0;
+  let o = 0;
+
+  while(c <= cMax) {
+    o = 0;
+    while(o <= oMax) {
+      combi.push({o, c});
+      o += 0.1;
+    }
+
+    c += 0.1;
+  }
+
+  Bluebird.mapSeries(combi, (coeff) => {
+    console.log('suivant');
+
+    return findEfficiency(coeff.c, coeff.o)
+      .then((efficiency) => {
+        if (efficiency > maxEfficiency) {
+          betterC = c;
+          betterO = o;
+          maxEfficiency = efficiency;
+        }
+        console.log('efficiency : ', efficiency);
+        console.log('coeffC : ', coeffC);
+        console.log('coeffO : ', coeffO);
+      });
+  })
+  .finally(() => {
+    console.log('maxEfficiency : ', maxEfficiency);
+    console.log('betterC : ', betterC);
+    console.log('betterO : ', betterO);
+  });
+
+  // Bluebird.reduce(promises)
+  //   .finally(() => {
+  //     console.log('maxEfficiency : ', maxEfficiency);
+  //     console.log('betterC : ', betterC);
+  //     console.log('betterO : ', betterO);
+  //   });
+
+  
+}
+
+determineBetterCoeff();
