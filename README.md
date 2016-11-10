@@ -1,4 +1,4 @@
-# System for crash-to-bucket assignment. ![Travis](https://api.travis-ci.org/Oupsla/StacktraceCrawler.svg?branch=master)
+# System for crash-to-bucket assignment. [![Build Status](https://travis-ci.org/Oupsla/StacktraceCrawler.svg?branch=master)](https://travis-ci.org/Oupsla/StacktraceCrawler)
 OPL - Thème 2: Crash Analysis  
 15/11/2016
 
