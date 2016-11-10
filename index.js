@@ -2,26 +2,27 @@ const Bluebird = require('bluebird');
 const fs = require('fs');
 const _ = require('lodash');
 const fuzzy = require('fuzzyset.js');
-const parser = require('./utils/parse');
-const filePath = process.argv.length > 2 ? process.argv[2] : 'nautilus';
-const bucketListPath = './nautilus/nautilus-training';
-const pathSingleTrace = './nautilus/nautilus-testing';
-
-/*const filePath = process.argv.length > 2 ? process.argv[2] : 'dataset2';
-const bucketListPath = './dataset2/training';
-const pathSingleTrace = './dataset2/testing';*/
-
 const mathjs = require('mathjs');
-const fscore = require('fscore')
+const fscore = require('fscore');
+const parser = require('./utils/parse');
+
+/*const filePath = process.argv.length > 2 ? process.argv[2] : 'nautilus';
+const bucketListPath = './nautilus/nautilus-training';
+const pathSingleTrace = './nautilus/nautilus-testing';*/
+
+const filePath = process.argv.length > 2 ? process.argv[2] : 'dataset2';
+const bucketListPath = './dataset2/training';
+const pathSingleTrace = './dataset2/testing';
+
 
 // coefficient for the distance to the top frame
 let coeffC = 2;
-let coeffO = 2;
+let coeffO = 1;
 let coeffD = 0.5;
 
 let coeffSame = 2;
 let coeffMethod = 0.7;
-let coeffPath = 0.2;
+let coeffPath = 0.1;
 
 function readFile(filename) {
   return new Bluebird((resolve, reject) => {
@@ -98,9 +99,8 @@ function getScoreByStackTrace(stacktraceAloneParsed, stacktraceSortedParsed) { /
   let minimumNumberFrame = Math.min(stacktraceAloneParsed.length,  stacktraceSortedParsed.length);
   let matrix = getSimilarityMatrix(stacktraceAloneParsed, stacktraceSortedParsed, coeffC, coeffO);
   let sumMinimum = getSum(minimumNumberFrame, coeffC);
-
-
   let similarity = mathjs.dotDivide(matrix[matrix.length - 1][matrix[0].length - 1], sumMinimum);
+
   return similarity;
 }
 
@@ -112,24 +112,14 @@ function getSimilarityMatrix(stacktraceAloneParsed, stacktraceSortedParsed, c, o
 
     for(let j = 0; j < stacktraceSortedParsed.length ; j++) {
       if(i === 0 && j === 0) {
-        if(stacktraceAloneParsed[i].method === stacktraceSortedParsed[j].method &&
-          stacktraceAloneParsed[i].path === stacktraceSortedParsed[j].path){
-          lineOfMatrix.push(coeffSame);
-        }
-        else if(stacktraceAloneParsed[i].method === stacktraceSortedParsed[j].method){
-          lineOfMatrix.push(coeffMethod);
-        }
-        else if(stacktraceAloneParsed[i].path === stacktraceSortedParsed[j].path){
-          lineOfMatrix.push(coeffPath);
-        }
-        else {
-          lineOfMatrix.push(0);
-        }
+        lineOfMatrix.push(getSimilarity(stacktraceAloneParsed, stacktraceSortedParsed, i, j));
       } else {
         let result1, result2, result3;
 
         if(i !== 0 && j !== 0)
-          result1 = matrix[i-1][j-1] + getCost(i, j, c, o, stacktraceAloneParsed.length, stacktraceSortedParsed.length);
+          result1 = matrix[i-1][j-1]
+            + getCost(i, j, c, o, stacktraceAloneParsed.length, stacktraceSortedParsed.length)
+            + (getSimilarity(stacktraceAloneParsed, stacktraceSortedParsed, i, j) / (i + j));
         else
           result1 = 0;
 
@@ -149,6 +139,29 @@ function getSimilarityMatrix(stacktraceAloneParsed, stacktraceSortedParsed, c, o
     }
   }
   return matrix;
+}
+
+function getSimilarity(stacktraceAloneParsed, stacktraceSortedParsed, i, j){
+  if(stacktraceAloneParsed[i].method === "??" || stacktraceSortedParsed[j].method === "??"){
+    if(stacktraceAloneParsed[i].path === stacktraceSortedParsed[j].path)
+      return coeffPath;
+    else
+      return Number.MIN_SAFE_INTEGER;
+  }
+
+  if(stacktraceAloneParsed[i].method === stacktraceSortedParsed[j].method &&
+    stacktraceAloneParsed[i].path === stacktraceSortedParsed[j].path){
+    return coeffSame;
+  }
+  else if(stacktraceAloneParsed[i].method === stacktraceSortedParsed[j].method){
+    return coeffMethod;
+  }
+  else if(stacktraceAloneParsed[i].path === stacktraceSortedParsed[j].path){
+    return coeffPath;
+  }
+  else {
+    return -100;
+  }
 }
 
 function getSum(minimumNumberFrame, c) {

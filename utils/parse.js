@@ -1,6 +1,6 @@
 const crypto = require('crypto');
 
-const immunesFunction = ['??', 'clone' , 'start_thread', '__libc_start_main',
+const immunesFunction = ['clone' , 'start_thread', '__libc_start_main',
 'g_main_loop_run', 'gtk_main_do_event', 'gtk_main', 'g_main_context_dispatch',
 'start_thread', 'g_application_run', 'g_main_context_iterate', 'IA__gtk_main',
 'IA__g_main_loop_run', 'IA__g_main_context_dispatch', 'gdk_event_dispatch',
@@ -50,7 +50,7 @@ function extractPathFromLine(line) {
 
   let path = array[3];
 
-  // Remove version of library  
+  // Remove version of library
   var re2 = new RegExp('-[\d+.]*[\d+]' , 'g');
   path = path.replace(/-[\d+.]*[\d+]/g, '');
   return array[3];

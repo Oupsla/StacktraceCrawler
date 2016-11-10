@@ -231,12 +231,12 @@ describe('The parser module', function () {
 
   describe('split And Sanitize Stack' , function () {
 
-    /*it('split and sanitize stackline to lines', function(done) {
+    it('split and sanitize stackline to lines', function(done) {
       var result = parser.splitAndSanitizeStack(stacktrace);
-      console.log(result);
+      assert.equal(result.length, 7);
+      assert.equal(result[0].method, 'g_hash_table_foreach_remove_or_steal');
       done();
-    });*/
-
+    });
 
   });
 

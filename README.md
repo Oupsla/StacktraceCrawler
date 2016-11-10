@@ -11,8 +11,9 @@ Benjamin Coenen - Nicolas Delperdange
 **[Travail technique](#travail-technique)**  
 **[Evaluation](#evaluation)**  
 **[Limitation](#limitation)**  
-**[Conclusion](#conclusion)**  
-**[Glossaire](#glossaire)**
+**[Conclusion](#conclusion)**
+**[Référence](#référence)**
+**[Annexe](#annexe)**
 
 ## Introduction
 Dans le cadre d'un challenge pour le cours d'OPL de l'Université de Lille 1, nous devons réunir des stacktraces (capturées dans des issues Github) dans un même bucket.  
@@ -87,7 +88,6 @@ Ils assemblent ensuite les stacktraces dans des buckets sur un principe de dista
 
 ## Travail technique
 ### But
-
 Tout le but de ce travail consiste donc à créer le 'meilleur' algorithme pour assembler les bonnes stacktraces dans les bons buckets.  
 Evidemment il est impossible d'obtenir un score de 100%, car même l'être humain ne peut être sûr en regardant 2 stacktraces que celle-ci découlent du même problème avec certitude car trop de facteurs non-prévisible entrent en jeu.
 
@@ -97,7 +97,7 @@ Nous avons aussi fortement découpé notre code en multiples méthodes afin de l
 - index.js, qui s'occupe du calcul du score et du regroupement en bucket
 - parse.js, qui s'occupe de tout le traitement des fichiers et chaînes de caractères (lecture, récupération, nettoyage, ...)
 
-Concernant les librairies utilisées : 
+Concernant les librairies utilisées :
 - Bluebird : librairie permettant d'utiliser des 'promises' (système asynchrone) **[[6]](#référence)**
 - Crypto : librairie de cryptographie pour calculer le SHA1 des stacktraces **[[7]](#référence)**
 - Mathjs : librairie mathématique avec fonctions avancées **[[8]](#référence)**
@@ -107,7 +107,7 @@ Concernant les librairies utilisées :
 ### Algorithme
 Notre algorithme se décompose en 3 étapes :
 - Pré-processing
-- Calcul de la similitude 
+- Calcul de la similitude
 - Groupage en bucket
 
 ![AlgoBucket](https://raw.githubusercontent.com/Oupsla/StacktraceCrawler/master/images/AlgoBucket.png)
@@ -130,26 +130,82 @@ Concernant les informations retirées, nous enlevons :
 Nous obtenons donc au final de cette étape un tableau contenant les différentes frames de chaque stacktraces afin de pouvoir les comparer aisément.
 
 #### Similitude
+Pour calculer la similitude, nous nous basons fortement sur le *Position Dependent Model* de Microsoft.  
+Le principe est de calculer une matrice de similitude entre chaque stacktrace, c'est donc évidemment l'étape la plus longue et la plus lourde en calcul.  
 
+Pour calculer cette matrice, il faut attribuer des points par rapport à la comparaison entre frames (ici nous appliquons une simple comparaison entre le nom de méthode et le chemin) et y ajouter un coût basé sur les principes de distance et offset.
+
+Ces points sont calculés par rapport à des coefficients. Ceux-ci peuvent être fixés au préalable (leur valeur par défaut étant définis par des expériences sur les 2 datasets fournis) ou peuvent être définis automatiquement à travers un processus qui va analyser les buckets confirmés. Mais cette étape est forte lente et parfois ne trouvent pas de meilleurs coefficients que ceux par défaut.
+
+Nous avons aussi améliorés ce calcul en y ajoutant un coût de similitude à chaque étape du calcul de la matrice ce qui a amélioré les résultats.
+
+Voici les fonctions de calculs de Rebucket que nous avons légèrement modifiées.
+Respectivement le calcul de la matrice, le calcul du coût et le calcul de la similarité entre 2 stacktraces.  
+*c* et *o* étant les deux coefficients (distance et offset).
+
+![Fonctions](https://raw.githubusercontent.com/Oupsla/StacktraceCrawler/master/images/Fonctions.png)
 
 
 #### Groupage
+Le placement d'une stacktrace dans un bucket est assez aisé et se base sur les similitudes calculées à l'étape précédent.
 
+Deux options sont possibles :
+- Soit grouper la stacktrace avec la stacktrace d'un bucket qui a obtenu le plus haut score de similarité
+- Soit calculer une moyenne de similitude entre chaque stacktrace d'un bucket et la stacktrace que l'on veut placer
 
+Ces 2 types de groupage obtiennent de meilleurs résultats par rapport au type de dataset fourni. Il est donc envisageable de lancer 2 fois l'algorithme.
 
 ### Utilisation
+Pour lancer le programme, il suffit d'avoir node et de lancer la commande :
+```javascript
+node index.js
+```
 
-### Screenshots
+Si vous voulez ajouter un autre dataset, il faut inclure le dossier dans la hierarchie existante et modifier les constantes situées en haut du fichier *index.js*.
 
 ## Evaluation
+
+### Etapes
+Pour évaluer notre projet d'un point de vue performances, nous possédons 2 métriques :
+- Le temps d'exécutions
+- Les points accordés par l'oracle sur 2 datasets
+
+Voici un graphique réprésentant l'avancement de notre projet par étape
+
+![Historique](https://raw.githubusercontent.com/Oupsla/StacktraceCrawler/master/images/Historique.png)
+
+*Version numéro (technique - temps) : score*
+- Version 1 (librairie fuzzy pour comparer - 3heures) : 0
+- Version 2 (comparaison de chaine simple - 15886.117ms): 22
+- Version 3 (+ comparaison d'addresse - 36440.523ms): 23
+- Version 4 (+ ajout de score pour les méthodes '??' et le chemin - 51045.092ms): 27
+- Version 5 (+ ajout du cout distance - 98183.193ms) : 32
+- Version 6 (+ ajout du cout offset - 115283.663ms) : 33
+- Version 7 (+ enlever les fonctions récursives - 23141.745ms) : 32
+- Version 8 (+ ajout SHA1 pour comparaison identique - 34978.063ms) : 32
+- Version 9 (+ enlever les fonctions immunes - 3781.552ms) : 30
+- Version 10 (fix détecter par les tests - 10804.055ms) : 31
+- Version 11 (Remplacement de par le PDM similarity - 49422.940ms) : 43
+- Version 12 (Coefficient par défaut + suppression des version de lib - 38022.126ms) : 44
+- Version 13 (+ Ajout d'un cout de comparaison a chaque étape - 71630.500ms) : 53
+
+Nous sommes donc assez content de notre avancée par rapport à l'oracle mais aussi au temps d'exécution globale de notre programme, malgré que celui-ci ne soit pas écrit dans le meilleur langage pour faire de l'algorithmique.  
+Sur certains versions (comme par exemple la 7), nous avons perdus des points mais avons quand même préféré les garder car celles-ci étaient logique dans leur intégration mais ne pouvaient se révéler utiles que plus tard par l'ajout d'autres mécanismes.
+
+Nous avons aussi, lors de la version 10, ajouté des tests unitaires sur le parseur et avons rémarqué différents problèmes liés a celui-ci.  
+Nos tests se limitent au parseur car le calcul de points étant assez difficile à tester et changeant constamment par rapport aux nombreux ajouts et modifications apportés.
+
+Cependant notre couverture sur la partie parseur est très bonne et nous est fournie grâce à la librairie Istanbul **[[10]](#référence)** et le framework de test Mocha **[[11]](#référence)**.
+
+![Coverage](https://raw.githubusercontent.com/Oupsla/StacktraceCrawler/master/images/Coverage.png)
+
+Ces tests nous ont donc permis d'être assuré que le parseur faisait bien son boulot et nous avons pu nous concentrer sur l'algorithme de calcul de similarité.
 
 ## Limitation
 
 ## Conclusion
 
-## Glossaire
-
-## Référence :
+## Référence
 - [1] Crashwalk : https://github.com/bnagy/crashwalk
 - [2] AFL : http://lcamtuf.coredump.cx/afl/ & https://en.wikipedia.org/wiki/American_fuzzy_lop_(fuzzer)
 - [3] Sentry : https://sentry.io/welcome/ & https://github.com/getsentry/sentry
@@ -159,19 +215,19 @@ Nous obtenons donc au final de cette étape un tableau contenant les différente
 - [7] Crypto : https://github.com/Gozala/crypto
 - [8] Mathjs : http://mathjs.org/
 - [9] FS : https://nodejs.org/api/fs.html
+- [10] Istanbul : https://github.com/gotwarlost/istanbul
+- [11] Mocha : https://mochajs.org/
 
 
-## Annexe : 
-
+## Annexe
 ### Crashwalk de bnagy
-
 *N'ayant pu retirer quelque chose de concret de ce projet, nous avons préféré déplacer celui-ci en Annexe.*  
 
 Ce projet **[[1]](#référence)** a pour vocation de trier les crashs disque de Linux et de les trier dans différentes buckets.
 Celui-ci est écrit en Go et une partie en Python.
 
 Il nous a fait découvrir le projet "american fuzzy lop (fuzzer) (AFL)" **[[2]](#référence)** qui est un algorithme permettant d'augmenter la couverture des tests.
-AFL demande à lutilisateur de fournir un exemple de commande qui teste l'application et un petit exemple de fichier d'entrée.
+AFL demande à l'utilisateur de fournir un exemple de commande qui teste l'application et un petit exemple de fichier d'entrée.
 
 Après cette phase initiale, AFL commence le processus actuel de 'fuzzing' en appliquant différentes modifications au fichier d'entrée. Quand le programme crash, cella suggère un potentiel nouveau bug ou même une faille de sécurité. Il enregistre donc le fichier d'entrée utilisé pour inspection future.
 
@@ -182,25 +238,10 @@ Voici un exemple de modification d'image par AFL :
 Malgré l'intéret pour ce projet et AFL, nous n'avons pas pu en retirer quelque chose d'intéressant pour notre problème actuel car l'algorithme de tri était trop spécifique aux crashs disque.
 
 
-## Historique :
 
-- Version 1 (fuzzy - 3heures) : 0
-- Version 2 (homemade - 15886.117ms): 22
-- Version 3 (homemade + address - 36440.523ms): 23
-- Version 4 (homemade + address + score for unknown method or path - 51045.092ms): 27
-- Version 5 (+ métriques de distance top - 98183.193ms) : 32
-- Version 6 (+ métrique offset - 115283.663ms) : 33
-- Version 7 (+ enlever les fonctions récursives - 23141.745ms) : 32
-- Version 8 (+ SHA1 - 34978.063ms) : 32
-- Version 9 (+ enlever immunes - 3781.552ms) : 30
-- Version 10 (coup dur : fix path in method - désactivation des métriques distance - 10804.055ms) : 31
-- Version 11 (Rebucket Algo similarity - 49422.940ms) : 43
-- Version 12 (better coeffs + removing version lib - 38022.126ms) : 44
 
-## Améliorations :
-
+## Améliorations
+- Ajouter la stacktrace traité au tableau des buckets
 - Possibilité d'add/remove des fonctionnalités
 - Brute force avec les buckets qu'on connait deja
 - Essayer de trouver de meilleurs valeurs (c, o et de comparaisons)
-- Ajouter la stacktrace traité au tableau des buckets
-- Repasser plusieurs fois l'algo pour affiner
