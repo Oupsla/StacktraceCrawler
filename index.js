@@ -4,12 +4,12 @@ const mathjs = require('mathjs');
 const parser = require('./utils/parse');
 const filer = require('./utils/filer');
 
-/*
-const bucketListPath = './nautilus/nautilus-training';
-const pathSingleTrace = './nautilus/nautilus-testing';*/
 
-const bucketListPath = process.argv.length > 2 ? process.argv[2] : './dataset2/training';
-const pathSingleTrace = process.argv.length > 3 ? process.argv[3] : './dataset2/testing';
+const bucketListPath = process.argv.length > 2 ? process.argv[2] : './nautilus/nautilus-training';
+const pathSingleTrace = process.argv.length > 3 ? process.argv[3] : './nautilus/nautilus-testing';
+
+// const bucketListPath = process.argv.length > 2 ? process.argv[2] : './dataset2/training';
+// const pathSingleTrace = process.argv.length > 3 ? process.argv[3] : './dataset2/testing';
 
 // coefficient for the distance to the top frame
 let coeffC = 2;
@@ -79,9 +79,9 @@ function getSimilarityMatrix(stacktraceAloneParsed, stacktraceSortedParsed, c, o
         let result1, result2, result3;
 
         if (i !== 0 && j !== 0) {
-          result1 = matrix[i-1][j-1]
-            + getCost(i, j, c, o, stacktraceAloneParsed.length, stacktraceSortedParsed.length)
-            + (getSimilarity(stacktraceAloneParsed, stacktraceSortedParsed, i, j) / (i + j));
+          result1 = matrix[i-1][j-1] +
+            getCost(i, j, c, o, stacktraceAloneParsed.length, stacktraceSortedParsed.length) +
+              (getSimilarity(stacktraceAloneParsed, stacktraceSortedParsed, i, j) / (i + j));
         } else {
           result1 = 0;
         }
@@ -175,8 +175,8 @@ function getAllStacktrace(bucketList) {
 function compare(stacktraceAloneParsed, bucketsList) {
   return Object.keys(bucketsList)
     .reduce((result, bucketId) => {
-      return Object.assign({}, result, { [bucketId]: getScore(stacktraceAloneParsed, bucketsList[bucketId]) })
-    }, {})
+      return Object.assign({}, result, { [bucketId]: getScore(stacktraceAloneParsed, bucketsList[bucketId]) });
+    }, {});
 }
 
 function compareAllBucket(bucketsStacktraces) {
@@ -184,7 +184,7 @@ function compareAllBucket(bucketsStacktraces) {
     .then((stacktraces) => {
       return stacktraces.reduce((response, stacktrace) => {
         return Object.assign({}, { [stacktrace.id]: compare(stacktrace.parsedLines, bucketsStacktraces) }, response);
-      }, {})
+      }, {});
     });
 }
 
@@ -206,7 +206,7 @@ function getResultByBucket(resultByBucket) {
 function print(results) {
   let result = '';
   Object.keys(results)
-    .forEach((stacktrace) => result += `${stacktrace.split('.txt')[0]} -> ${results[stacktrace]}\n`)
+    .forEach((stacktrace) => result += `${stacktrace.split('.txt')[0]} -> ${results[stacktrace]}\n`);
 
   let dateNow = new Date();
   return filer.writeFile('result' + dateNow.toISOString() + '.txt', result);
@@ -214,7 +214,7 @@ function print(results) {
 
 function main() {
   console.time('Start');
-  console.log('Parameters : ')
+  console.log('Parameters : ');
   console.log("coeffC : " + coeffC);
   console.log("coeffO : " + coeffO);
   //console.log("coeffD : " + coeffD);
