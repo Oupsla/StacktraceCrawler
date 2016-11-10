@@ -203,7 +203,7 @@ Cependant notre couverture sur la partie parseur est très bonne et nous est fou
 
 ![Coverage](https://raw.githubusercontent.com/Oupsla/StacktraceCrawler/master/images/Coverage.png)
 
-Ces tests nous ont donc permis d'être assuré que le parseur faisait bien son boulot et nous avons pu nous concentrer sur l'algorithme de calcul de similarité.
+Ces tests nous ont donc permis d'être assuré que le parseur faisait bien son boulot et nous avons pu nous concentrer sur l'algorithme de calcul de similarité. De plus les tests sont exécutés automatiquement à chaque push sur github grace à Travis CI **[[12]](#référence)**.
 
 ## Limitation
 Concernant les limitations du projet, nous avons mis en oeuvre l'algorithme du papier de Microsoft, il reste donc assez général quelques soient les stacktraces à analyser. La vraie limitation est situé dans le parseur qui lui est assez spécifique aux type de stacktrace que l'on nous a fourni dans les dataset. Si l'on voudrait l'utiliser avec d'autre stacktraces il nous faudrait alors ne modifier que les fonctions à l'intérieur du fichier `parse.js`.
@@ -224,6 +224,7 @@ Nous possédons aussi une branche contenant l'algorithme permettant de calculer 
 - [9] FS : https://nodejs.org/api/fs.html
 - [10] Istanbul : https://github.com/gotwarlost/istanbul
 - [11] Mocha : https://mochajs.org/
+- [12] Travis CI : https://travis-ci.org
 
 
 ## Annexe
