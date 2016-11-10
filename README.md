@@ -17,7 +17,7 @@ Benjamin Coenen - Nicolas Delperdange
 
 ## Introduction
 Dans le cadre d'un challenge pour le cours d'OPL de l'Université de Lille 1, nous devons réunir des stacktraces (capturées dans des issues Github) dans un même bucket.  
-Un Bucket est donc un ensemble de stacktrace qui sont liées au même problème.
+Un Bucket est donc un ensemble de stacktraces qui sont liées au même problème.
 
 ![Stacktrace](https://raw.githubusercontent.com/Oupsla/StacktraceCrawler/master/images/Bucket.png)
 
@@ -42,13 +42,13 @@ Afin d'un côté s'en inspirer et pourquoi pas les intégrer dans notre projet.
 Après quelques heures de recherches, de discussions et d'essais, nous avons réuni 3 projets : 2 outils de gestion de bugs et un papier de Microsoft.
 
 ### Sentry / Rollbar
-Sentry et Rollbar **[[2-3]](#référence)** sont tous les 2 des gestionnaires de crashs et intègrent un système de triage de stacktrace.
+Sentry et Rollbar **[[2-3]](#référence)** sont tous les 2 des gestionnaires de crashs (accessible en mode Saas) et intègrent un système de triage de stacktrace.
 Sentry est open-source et est disponible sur Github et Rollbar possède une bonne documentation en ligne mais n'est malheureusement pas open-source.
 
 Ces 2 programmes étant très proche de la réalité, nous avons donc parcouru leur documentation à la recherche de bonnes pratiques concernant le groupage d'exception.
 
 Rollbar applique une méthode de tri qui consiste à comparer des empreintes de stacktrace.
-Pour cela il procède comme ce qui suit :
+Pour cela il procède comme suit :
  - Combiner tous les noms de fichiers et noms de méthodes des stacktraces
  - Enlever à cela les dates, sha et entiers de plus de 2 caractères
  - Ajouter le nom de classe d'exception
@@ -63,8 +63,8 @@ Ce projet **[[5]](#référence)** n'est pas un logiciel mais un papier expliquan
 Ce papier nous a permis d'affiner notre algorithme de tri en y rajoutant des concepts fort intéressants !
 
 #### Les fonctions récursives et immunes
-Cette étape de pre-processing consiste à enlever les frames qui possèdent des appels récursifs pour ne garder qu'un appel.  
-Sinon cela causerait un mauvais calcul par la suite dû a la duplication des méthodes.
+Cette étape de pré-processing consiste à enlever les frames qui possèdent des appels récursifs pour ne garder qu'un appel.  
+Sinon cela causerait un mauvais calcul par la suite dû à la duplication des méthodes.
 
 Pendant cette étape, ils enlevent aussi les fonctions immunes, c'est-à-dire, des fonctions qui ne 'peuvent' provoquer de bugs car celles-ci ont été testés de maintes fois.
 
@@ -88,14 +88,15 @@ Ils assemblent ensuite les stacktraces dans des buckets sur un principe de dista
 
 ## Travail technique
 ### But
-Tout le but de ce travail consiste donc à créer le 'meilleur' algorithme pour assembler les bonnes stacktraces dans les bons buckets.  
+Tout le but de ce travail consiste donc à créer le 'meilleur' algorithme pour rassembler les bonnes stacktraces dans les bons buckets.  
 Evidemment il est impossible d'obtenir un score de 100%, car même l'être humain ne peut être sûr en regardant 2 stacktraces que celle-ci découlent du même problème avec certitude car trop de facteurs non-prévisible entrent en jeu.
 
 ### Architecture
 Nous avons utilisé une architecture basée sur NodeJs par soucis de facilité d'écriture et d'utilisation.  
-Nous avons aussi fortement découpé notre code en multiples méthodes afin de le rendre très maléable, le projet étant découpé principalement en 2 fichiers :
+Nous avons aussi fortement découpé notre code en multiples méthodes afin de le rendre très modulaire, le projet étant découpé principalement en 3 fichiers :
 - index.js, qui s'occupe du calcul du score et du regroupement en bucket
 - parse.js, qui s'occupe de tout le traitement des fichiers et chaînes de caractères (lecture, récupération, nettoyage, ...)
+- filer.js, qui gère tout ce qui manipule les fichiers (lecture et écriture de répertoire et fichier)
 
 Concernant les librairies utilisées :
 - Bluebird : librairie permettant d'utiliser des 'promises' (système asynchrone) **[[6]](#référence)**
@@ -119,7 +120,7 @@ Pour cela nous utilisons la librairie FS afin de lire les différents fichiers a
 - Le chemin de la méthode de toutes les frames
 - Le numéro de chaque frame
 
-Avant de faire cela, nous enlevons les méthodes récursives car celles-ci peuvent introduire des erreurs de calculs de similarité par le suite et aussi les fonctions immunes qui sont *réputées* pour ne pas provoquer de bugs (comme la méthode *clone()*) et qui dont ne doivent pas entrer dans le calcul de similarité.
+Avant de faire cela, nous enlevons les méthodes récursives car celles-ci peuvent introduire des erreurs de calculs de similarité par la suite et aussi les fonctions immunes qui sont *réputées* pour ne pas provoquer de bugs (comme la méthode *clone()* par exemple) et qui dont ne doivent pas entrer dans le calcul de similarité.
 
 Concernant les informations retirées, nous enlevons :
 - Les paramètres (différents paramètres pouvant amener au même bug)
@@ -130,12 +131,12 @@ Concernant les informations retirées, nous enlevons :
 Nous obtenons donc au final de cette étape un tableau contenant les différentes frames de chaque stacktraces afin de pouvoir les comparer aisément.
 
 #### Similitude
-Pour calculer la similitude, nous nous basons fortement sur le *Position Dependent Model* de Microsoft.  
+Pour calculer la similitude, nous nous basons fortement sur le *Position Dependent Model* de Microsoft qui utilise le paradigme de la programmation dynamique.  
 Le principe est de calculer une matrice de similitude entre chaque stacktrace, c'est donc évidemment l'étape la plus longue et la plus lourde en calcul.  
 
 Pour calculer cette matrice, il faut attribuer des points par rapport à la comparaison entre frames (ici nous appliquons une simple comparaison entre le nom de méthode et le chemin) et y ajouter un coût basé sur les principes de distance et offset.
 
-Ces points sont calculés par rapport à des coefficients. Ceux-ci peuvent être fixés au préalable (leur valeur par défaut étant définis par des expériences sur les 2 datasets fournis) ou peuvent être définis automatiquement à travers un processus qui va analyser les buckets confirmés. Mais cette étape est forte lente et parfois ne trouvent pas de meilleurs coefficients que ceux par défaut.
+Ces points sont calculés par rapport à des coefficients. Ceux-ci peuvent être fixés au préalable (leur valeur par défaut étant défini par des expériences sur les 2 datasets fournis) ou peuvent être définis automatiquement à travers un processus qui va analyser les buckets confirmés. Mais cette étape est forte lente et parfois ne trouvent pas de meilleurs coefficients que ceux par défaut.
 
 Nous avons aussi améliorés ce calcul en y ajoutant un coût de similitude à chaque étape du calcul de la matrice ce qui a amélioré les résultats.
 
@@ -157,24 +158,27 @@ Ces 2 types de groupage obtiennent de meilleurs résultats par rapport au type d
 
 ### Utilisation
 Pour lancer le programme, il suffit d'avoir node et de lancer la commande :
-```javascript
-node index.js
+```bash
+$ node index.js
 ```
 
-Si vous voulez ajouter un autre dataset, il faut inclure le dossier dans la hierarchie existante et modifier les constantes situées en haut du fichier *index.js*.
+Si vous voulez ajouter un autre dataset, il suffit de lancer le programme de cette façon :
+```bash
+$ node index.js ./cheminVersMesBuckets ./cheminVersMesStacktracesAPlacer
+```
 
 ## Evaluation
 
 ### Etapes
-Pour évaluer notre projet d'un point de vue performances, nous possédons 2 métriques :
-- Le temps d'exécutions
+Pour évaluer notre projet d'un point de vue performance, nous possédons 2 métriques :
+- Le temps d'exécution
 - Les points accordés par l'oracle sur 2 datasets
 
 Voici un graphique réprésentant l'avancement de notre projet par étape
 
 ![Historique](https://raw.githubusercontent.com/Oupsla/StacktraceCrawler/master/images/Historique.png)
 
-*Version numéro (technique - temps) : score*
+*Version numéro (technique - temps) : score pour la dataset 1*
 - Version 1 (librairie fuzzy pour comparer - 3heures) : 0
 - Version 2 (comparaison de chaine simple - 15886.117ms): 22
 - Version 3 (+ comparaison d'addresse - 36440.523ms): 23
@@ -202,6 +206,9 @@ Cependant notre couverture sur la partie parseur est très bonne et nous est fou
 Ces tests nous ont donc permis d'être assuré que le parseur faisait bien son boulot et nous avons pu nous concentrer sur l'algorithme de calcul de similarité.
 
 ## Limitation
+Concernant les limitations du projet, nous avons mis en oeuvre l'algorithme du papier de Microsoft, il reste donc assez général quelques soient les stacktraces à analyser. La vraie limitation est situé dans le parseur qui lui est assez spécifique aux type de stacktrace que l'on nous a fourni dans les dataset. Si l'on voudrait l'utiliser avec d'autre stacktraces il nous faudrait alors ne modifier que les fonctions à l'intérieur du fichier `parse.js`.
+
+Nous possédons aussi une branche contenant l'algorithme permettant de calculer les coéfficiant *c* et *o* de façon optimale. Cependant cet algorithme est très gourmand en temps et nous sommes donc limité dans l'utilisation de celui-ci.
 
 ## Conclusion
 
@@ -221,7 +228,7 @@ Ces tests nous ont donc permis d'être assuré que le parseur faisait bien son b
 
 ## Annexe
 ### Crashwalk de bnagy
-*N'ayant pu retirer quelque chose de concret de ce projet, nous avons préféré déplacer celui-ci en Annexe.*  
+*N'ayant pu retirer quelque chose de concret de ce projet, nous avons préféré déplacer celui-ci en Annexe car il nous a néanmoins aider à arriver à notre résultat final.*  
 
 Ce projet **[[1]](#référence)** a pour vocation de trier les crashs disque de Linux et de les trier dans différentes buckets.
 Celui-ci est écrit en Go et une partie en Python.
@@ -243,5 +250,5 @@ Malgré l'intéret pour ce projet et AFL, nous n'avons pas pu en retirer quelque
 ## Améliorations
 - Ajouter la stacktrace traité au tableau des buckets
 - Possibilité d'add/remove des fonctionnalités
-- Brute force avec les buckets qu'on connait deja
+- Brute force avec les buckets qu'on connait deja -> fait sur la branche *determine_coeff*
 - Essayer de trouver de meilleurs valeurs (c, o et de comparaisons)
