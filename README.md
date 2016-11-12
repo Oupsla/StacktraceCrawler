@@ -11,13 +11,13 @@ Benjamin Coenen - Nicolas Delperdange
 **[Travail technique](#travail-technique)**  
 **[Evaluation](#evaluation)**  
 **[Limitation](#limitation)**  
-**[Conclusion](#conclusion)**
-**[Référence](#référence)**
-**[Annexe](#annexe)**
+**[Conclusion](#conclusion)**  
+**[Référence](#référence)**  
+**[Annexe](#annexe)**  
 
 ## Introduction
 Dans le cadre d'un challenge pour le cours d'OPL de l'Université de Lille 1, nous devons réunir des stacktraces (capturées dans des issues Github) dans un même bucket.  
-Un Bucket est donc un ensemble de stacktraces qui sont liées au même problème.
+Un **Bucket** est donc un ensemble de **stacktraces** qui sont liées au même problème.
 
 ![Stacktrace](https://raw.githubusercontent.com/Oupsla/StacktraceCrawler/master/images/Bucket.png)
 
@@ -27,11 +27,11 @@ Avant toute chose il faut définir quelques points essentiels d'une stacktrace :
 ![Stacktrace](https://raw.githubusercontent.com/Oupsla/StacktraceCrawler/master/images/Stacktrace.png)
 
 - Une stacktrace est composée d'un ensemble de frames
-- Une frame correspond à un appel de méthode ou procédure et est composée de :
-  - Un numéro de frame
-  - Une adresse
-  - Un nom de méthode
-  - Un chemin
+- Une **frame** correspond à un appel de méthode ou procédure et est composée de :
+  - Un **numéro** de frame
+  - Une **adresse**
+  - Un **nom** de méthode
+  - Un **chemin**
   - Et différents paramètres
 
 
@@ -42,7 +42,7 @@ Afin d'un côté s'en inspirer et pourquoi pas les intégrer dans notre projet.
 Après quelques heures de recherches, de discussions et d'essais, nous avons réuni 3 projets : 2 outils de gestion de bugs et un papier de Microsoft.
 
 ### Sentry / Rollbar
-Sentry et Rollbar **[[2-3]](#référence)** sont tous les 2 des gestionnaires de crashs (accessible en mode Saas) et intègrent un système de triage de stacktrace.
+**Sentry et Rollbar** **[[2-3]](#référence)** sont tous les 2 des gestionnaires de crashs (accessibles en mode Saas) et intègrent un système de triage de stacktrace.
 Sentry est open-source et est disponible sur Github et Rollbar possède une bonne documentation en ligne mais n'est malheureusement pas open-source.
 
 Ces 2 programmes étant très proche de la réalité, nous avons donc parcouru leur documentation à la recherche de bonnes pratiques concernant le groupage d'exception.
@@ -71,8 +71,8 @@ Pendant cette étape, ils enlevent aussi les fonctions immunes, c'est-à-dire, d
 #### La distance et l'offset
 Le premier concept est la distance et l'offset d'une frame.  
 
-La distance est la position de la frame courante par rapport à la première frame (top frame).  
-L'offset est la différence de niveau entre 2 frames dans des stacktraces différentes.
+La **distance** est la position de la frame courante par rapport à la première frame (top frame).  
+L'**offset** est la différence de niveau entre 2 frames dans des stacktraces différentes.
 
 ![Stacktrace](https://raw.githubusercontent.com/Oupsla/StacktraceCrawler/master/images/Distance.png)
 
@@ -89,14 +89,15 @@ Ils assemblent ensuite les stacktraces dans des buckets sur un principe de dista
 ## Travail technique
 ### But
 Tout le but de ce travail consiste donc à créer le 'meilleur' algorithme pour rassembler les bonnes stacktraces dans les bons buckets.  
-Evidemment il est impossible d'obtenir un score de 100%, car même l'être humain ne peut être sûr en regardant 2 stacktraces que celle-ci découlent du même problème avec certitude car trop de facteurs non-prévisible entrent en jeu.
+Evidemment il est impossible d'obtenir un score de 100%, car même l'être humain ne peut être sûr en regardant 2 stacktraces que celles-ci découlent du même problème avec certitude car trop de facteurs non-prévisible entrent en jeu.  
+Et il est aussi possible qu'une stacktrace possèdent trop peu d'informations pour pouvoir être triée.
 
 ### Architecture
 Nous avons utilisé une architecture basée sur NodeJs par soucis de facilité d'écriture et d'utilisation.  
 Nous avons aussi fortement découpé notre code en multiples méthodes afin de le rendre très modulaire, le projet étant découpé principalement en 3 fichiers :
-- index.js, qui s'occupe du calcul du score et du regroupement en bucket
-- parse.js, qui s'occupe de tout le traitement des fichiers et chaînes de caractères (lecture, récupération, nettoyage, ...)
-- filer.js, qui gère tout ce qui manipule les fichiers (lecture et écriture de répertoire et fichier)
+- `index.js`, qui s'occupe du calcul du score et du regroupement en bucket
+- `parse.js`, qui s'occupe de tout le traitement des fichiers et chaînes de caractères (lecture, récupération, nettoyage, ...)
+- `filer.js`, qui gère tout ce qui manipule les fichiers (lecture et écriture de répertoire et fichier)
 
 Concernant les librairies utilisées :
 - Bluebird : librairie permettant d'utiliser des 'promises' (système asynchrone) **[[6]](#référence)**
@@ -169,7 +170,7 @@ $ node index.js ./cheminVersMesBuckets ./cheminVersMesStacktracesAPlacer
 
 ## Evaluation
 
-### Etapes
+### Perfomances et Efficacité
 Pour évaluer notre projet d'un point de vue performance, nous possédons 2 métriques :
 - Le temps d'exécution
 - Les points accordés par l'oracle sur 2 datasets
@@ -192,6 +193,7 @@ Voici un graphique réprésentant l'avancement de notre projet par étape
 - Version 11 (Remplacement de par le PDM similarity - 49422.940ms) : 43
 - Version 12 (Coefficient par défaut + suppression des version de lib - 38022.126ms) : 44
 - Version 13 (+ Ajout d'un cout de comparaison a chaque étape - 71630.500ms) : 53
+- Version 14 (+ Ajout de comparaison de méthodes anonymes et adresse - 65304.689ms) : 55
 
 Nous sommes donc assez content de notre avancée par rapport à l'oracle mais aussi au temps d'exécution globale de notre programme, malgré que celui-ci ne soit pas écrit dans le meilleur langage pour faire de l'algorithmique.  
 Sur certains versions (comme par exemple la 7), nous avons perdus des points mais avons quand même préféré les garder car celles-ci étaient logique dans leur intégration mais ne pouvaient se révéler utiles que plus tard par l'ajout d'autres mécanismes.
@@ -205,8 +207,15 @@ Cependant notre couverture sur la partie parseur est très bonne et nous est fou
 
 Ces tests nous ont donc permis d'être assuré que le parseur faisait bien son boulot et nous avons pu nous concentrer sur l'algorithme de calcul de similarité. De plus les tests sont exécutés automatiquement à chaque push sur github grace à Travis CI **[[12]](#référence)**.
 
+En résumé, sur les machines fournis par l'école et avec le premier dataset d'exemple, notre algorithme prend environ +-1min et atteints un score de 55 stacktraces placés sur 108 (sachant que certaines sont impossibles à placer, possédant trop peu d'informations).
+Celui-ci obtient un score de 74 sur 121 pour le 2ieme dataset avec un temps d'1min et 10 secondes en moyenne.
+
+### Facilité d'utilisation
+Comme dit précédemment, nous avons axé notre projet sur un grand découpage de celui-ci, car nous savions que de nombreuses parties de notre algorithme allaient être modifiées très fréquemment. Cela nous a permis de tester les fonctionnalités une à une pour voir si celles-ci étaient bénéfiques tant d'un point de vue de score que de performance.  
+De ce fait, notre code est aussi très facile d'accès et pourrait être adapté pour d'autres types de stacktraces, il ne faudrait alors que modifier les fonctions à l'intérieur du fichier `parse.js`.
+
 ## Limitation
-Concernant les limitations du projet, nous avons mis en oeuvre l'algorithme du papier de Microsoft, il reste donc assez général quelques soient les stacktraces à analyser. La vraie limitation est situé dans le parseur qui lui est assez spécifique aux type de stacktrace que l'on nous a fourni dans les dataset. Si l'on voudrait l'utiliser avec d'autre stacktraces il nous faudrait alors ne modifier que les fonctions à l'intérieur du fichier `parse.js`.
+Concernant les limitations du projet, nous avons mis en oeuvre l'algorithme du papier de Microsoft, il reste donc assez générique quelques soient le type de stacktraces à analyser. La vraie limitation est située dans le parseur qui lui est assez spécifique aux types de stacktrace que l'on nous a fourni dans les datasets.  
 
 Nous possédons aussi une branche contenant l'algorithme permettant de calculer les coéfficiant *c* et *o* de façon optimale. Cependant cet algorithme est très gourmand en temps et nous sommes donc limité dans l'utilisation de celui-ci.
 
@@ -246,10 +255,6 @@ Voici un exemple de modification d'image par AFL :
 Malgré l'intéret pour ce projet et AFL, nous n'avons pas pu en retirer quelque chose d'intéressant pour notre problème actuel car l'algorithme de tri était trop spécifique aux crashs disque.
 
 
-
-
 ## Améliorations
-- Ajouter la stacktrace traité au tableau des buckets
+- Ajouter la stacktrace traitée au tableau des buckets
 - Possibilité d'add/remove des fonctionnalités
-- Brute force avec les buckets qu'on connait deja -> fait sur la branche *determine_coeff*
-- Essayer de trouver de meilleurs valeurs (c, o et de comparaisons)

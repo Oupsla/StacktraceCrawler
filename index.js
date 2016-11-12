@@ -5,19 +5,20 @@ const parser = require('./utils/parse');
 const filer = require('./utils/filer');
 
 
-const bucketListPath = process.argv.length > 2 ? process.argv[2] : './nautilus/nautilus-training';
-const pathSingleTrace = process.argv.length > 3 ? process.argv[3] : './nautilus/nautilus-testing';
+//const bucketListPath = process.argv.length > 2 ? process.argv[2] : './nautilus/nautilus-training';
+//const pathSingleTrace = process.argv.length > 3 ? process.argv[3] : './nautilus/nautilus-testing';
 
-// const bucketListPath = process.argv.length > 2 ? process.argv[2] : './dataset2/training';
-// const pathSingleTrace = process.argv.length > 3 ? process.argv[3] : './dataset2/testing';
+const bucketListPath = process.argv.length > 2 ? process.argv[2] : './dataset2/training';
+const pathSingleTrace = process.argv.length > 3 ? process.argv[3] : './dataset2/testing';
 
 // coefficient for the distance to the top frame
 let coeffC = 2;
-let coeffO = 1;
+let coeffO = 2;
 let coeffD = 0.5;
 
-let coeffSame = 2;
-let coeffMethod = 0.7;
+let coeffAllSame = 4;
+let coeffMethodPath = 2;
+let coeffMethod = 1;
 let coeffPath = 0.1;
 
 function getExistingBucketsList() {
@@ -52,7 +53,11 @@ function getScore(stacktraceAloneParsed, stacktracesSorted) {
   return score;
 }
 
-function getScoreByStackTrace(stacktraceAloneParsed, stacktraceSortedParsed) { //[{method, path}]
+function getScoreByStackTrace(stacktraceAloneParsed, stacktraceSortedParsed) {
+
+  if(stacktraceAloneParsed.length === 0 || stacktraceSortedParsed.length === 0){
+    return Number.MIN_SAFE_INTEGER;
+  }
 
   if (parser.getSHA1(stacktraceAloneParsed) === parser.getSHA1(stacktraceSortedParsed)) {
     return Number.MAX_SAFE_INTEGER;
@@ -108,34 +113,53 @@ function getSimilarityMatrix(stacktraceAloneParsed, stacktraceSortedParsed, c, o
 }
 
 function getSimilarity(stacktraceAloneParsed, stacktraceSortedParsed, i, j) {
-  if (stacktraceAloneParsed[i].method === "??" || stacktraceSortedParsed[j].method === "??") {
-    if (stacktraceAloneParsed[i].path === stacktraceSortedParsed[j].path) {
+  /* Anonymous fonctions */
+  if (stacktraceAloneParsed[i].method === "??" || stacktraceSortedParsed[j].method === "??"
+    || stacktraceAloneParsed[i].method === "" || stacktraceSortedParsed[j].method === "" ) {
+    if (stacktraceAloneParsed[i].path !== '' && stacktraceAloneParsed[i].path === stacktraceSortedParsed[j].path) {
       return coeffPath;
-    } else {
+    }
+    else if(stacktraceAloneParsed[i].address != null && stacktraceAloneParsed[i].address === stacktraceSortedParsed[j].address){
+      return coeffPath;
+    }
+    else {
       return Number.MIN_SAFE_INTEGER;
     }
   }
-
-  if (stacktraceAloneParsed[i].method === stacktraceSortedParsed[j].method &&
-    stacktraceAloneParsed[i].path === stacktraceSortedParsed[j].path) {
-    return coeffSame;
-  }
-  else if (stacktraceAloneParsed[i].method === stacktraceSortedParsed[j].method) {
-    return coeffMethod;
-  }
-  else if (stacktraceAloneParsed[i].path === stacktraceSortedParsed[j].path) {
-    return coeffPath;
-  }
+  /* No-anonymous fonctions */
   else {
-    return -100;
+    // All Same (address, method, path)
+    if (stacktraceAloneParsed[i].method !== "" && stacktraceAloneParsed[i].path !== "" && stacktraceAloneParsed[i].address != null &&
+      stacktraceAloneParsed[i].address === stacktraceSortedParsed[j].address &&
+      stacktraceAloneParsed[i].method === stacktraceSortedParsed[j].method &&
+      stacktraceAloneParsed[i].path === stacktraceSortedParsed[j].path) {
+      return coeffAllSame;
+    }
+    // method && path
+    else if (stacktraceAloneParsed[i].method !== "" && stacktraceAloneParsed[i].path !== "" &&
+      stacktraceAloneParsed[i].method === stacktraceSortedParsed[j].method &&
+      stacktraceAloneParsed[i].path === stacktraceSortedParsed[j].path) {
+      return coeffMethodPath;
+    }
+    // method
+    else if (stacktraceAloneParsed[i].method !== "" && stacktraceAloneParsed[i].method === stacktraceSortedParsed[j].method) {
+      return coeffMethod;
+    }
+    // path
+    else if (stacktraceAloneParsed[i].path !== "" && stacktraceAloneParsed[i].path === stacktraceSortedParsed[j].path) {
+      return coeffPath;
+    }
+    else {
+      return Number.MIN_SAFE_INTEGER;
+    }
   }
 }
 
 function getSum(minimumNumberFrame, c) {
   let sumReturned = 0;
 
-  for (let i = 0; i <= minimumNumberFrame; i++) {
-    sumReturned += Math.exp(-(c * i));
+  for (let j = 0; j <= minimumNumberFrame; j++) {
+    sumReturned += Math.exp(((-c) * j));
   }
 
   return sumReturned;
@@ -219,7 +243,8 @@ function main() {
   console.log("coeffO : " + coeffO);
   //console.log("coeffD : " + coeffD);
 
-  console.log("coeffSame : " + coeffSame);
+  console.log("coeffAllSame : " + coeffAllSame);
+  console.log("coeffMethodPath : " + coeffMethodPath);
   console.log("coeffMethod : " + coeffMethod);
   console.log("coeffPath : " + coeffPath);
 

@@ -106,9 +106,18 @@ function splitAndSanitizeStack(stacktrace){
     let sanitizedLine = sanitizeLine(line);
     sanitizedLine.totalFrame = lines.length;
 
-    if (count === 0
-      || (count > 0 && sanitizedLine.method !== results[count - 1].method
-        && immunesFunction.indexOf(sanitizedLine.method) === -1)) {
+    //Removes lines with nothing
+    if(sanitizedLine.method === "" && sanitizedLine.path === "" && sanitizedLine.address == null){
+      return;
+    }
+
+    //Remove immune fonction && recursive but not if they are anonymous and contains a path
+    if(immunesFunction.indexOf(sanitizedLine.method) === -1
+      && (count === 0
+        || (count > 0 && sanitizedLine.method !== "??" && sanitizedLine.method !== results[count - 1].method)
+        || (count > 0 && sanitizedLine.method === "??" && sanitizedLine.path !== results[count - 1].path)
+      ))
+    {
       results.push(sanitizedLine);
       count++;
     }
