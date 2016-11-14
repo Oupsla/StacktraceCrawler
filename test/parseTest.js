@@ -10,7 +10,7 @@ const assert = chai.assert,
 const parser = require('../utils/parse.js');
 
 
-var multiline, multiline2, singleline, stacktrace, stacktrace2;
+var multiline, multiline2, singleline, stacktrace, stacktrace2, stacktrace3;
 
 function readFile(filename) {
   return new Bluebird((resolve, reject) => {
@@ -59,6 +59,14 @@ before(function(done) {
   readFile('test/samples/stacktrace2.txt')
   .then((stacktraceContent) => {
     stacktrace2 = stacktraceContent;
+    done();
+  });
+});
+
+before(function(done) {
+  readFile('test/samples/stacktrace3.txt')
+  .then((stacktraceContent) => {
+    stacktrace3 = stacktraceContent;
     done();
   });
 });
@@ -243,6 +251,12 @@ describe('The parser module', function () {
       var result = parser.splitAndSanitizeStack(stacktrace);
       assert.equal(result.length, 7);
       assert.equal(result[0].method, 'g_hash_table_foreach_remove_or_steal');
+      done();
+    });
+
+    it('return nothing because of bad stacktrace', function(done) {
+      var result = parser.splitAndSanitizeStack(stacktrace3);
+      assert.equal(result.length, 5);
       done();
     });
   });

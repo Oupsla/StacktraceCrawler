@@ -1,4 +1,4 @@
-# System for crash-to-bucket assignment. [![Build Status](https://travis-ci.org/Oupsla/StacktraceCrawler.svg?branch=master)](https://travis-ci.org/Oupsla/StacktraceCrawler)
+# System for crash-to-bucket assignment. [![Build Status](https://travis-ci.org/Oupsla/StacktraceCrawler.svg?branch=master)](https://travis-ci.org/Oupsla/StacktraceCrawler) [![Coverage Status](https://coveralls.io/repos/github/Oupsla/StacktraceCrawler/badge.svg?branch=master)](https://coveralls.io/github/Oupsla/StacktraceCrawler?branch=master)  
 OPL - Thème 2: Crash Analysis  
 15/11/2016
 
@@ -116,10 +116,11 @@ Notre algorithme se décompose en 3 étapes :
 
 #### Pré-Processing
 La première étape est donc une étape de pré-processing, elle consiste à lire toutes les stacktraces et buckets existants et à en extraire les données utiles.  
-Pour cela nous utilisons la librairie FS afin de lire les différents fichiers auxquels nous appliquons de multiples regex afin d'enlever les informations inutiles et en tirer les informations suivantes :
-- Le nom de méthodes de toutes les frames
-- Le chemin de la méthode de toutes les frames
-- Le numéro de chaque frame
+Pour cela nous utilisons la librairie FS afin de lire les différents fichiers auxquels nous appliquons de multiples regex afin d'enlever les informations inutiles et en tirer les informations suivantes pour chaque frame :
+- Le nom de la méthode
+- Le chemin de la méthode
+- Le numéro de frame
+- L'adresse mémoire
 
 Avant de faire cela, nous enlevons les méthodes récursives car celles-ci peuvent introduire des erreurs de calculs de similarité par la suite et aussi les fonctions immunes qui sont *réputées* pour ne pas provoquer de bugs (comme la méthode *clone()* par exemple) et qui dont ne doivent pas entrer dans le calcul de similarité.
 
@@ -127,7 +128,6 @@ Concernant les informations retirées, nous enlevons :
 - Les paramètres (différents paramètres pouvant amener au même bug)
 - Les numéros de lignes (pouvant trop facilement varier)
 - Les numéros de version de librairies
-- Les méthodes anonymes ne pouvant pas être comparées
 
 Nous obtenons donc au final de cette étape un tableau contenant les différentes frames de chaque stacktraces afin de pouvoir les comparer aisément.
 
@@ -135,23 +135,46 @@ Nous obtenons donc au final de cette étape un tableau contenant les différente
 Pour calculer la similitude, nous nous basons fortement sur le *Position Dependent Model* de Microsoft qui utilise le paradigme de la programmation dynamique.  
 Le principe est de calculer une matrice de similitude entre chaque stacktrace, c'est donc évidemment l'étape la plus longue et la plus lourde en calcul.  
 
-Pour calculer cette matrice, il faut attribuer des points par rapport à la comparaison entre frames (ici nous appliquons une simple comparaison entre le nom de méthode et le chemin) et y ajouter un coût basé sur les principes de distance et offset.
+Pour calculer cette matrice, il faut attribuer des points par rapport à la comparaison entre frames et y ajouter un coût basé sur les principes de distance et offset.  
+Concernant la comparaison nous appliquons des points par rapport aux éléments suivants :
+``` javascript
+    Define coeffs : coeffPath, coeffMethod, coeffAdresse, coeffSame;
 
-Ces points sont calculés par rapport à des coefficients. Ceux-ci peuvent être fixés au préalable (leur valeur par défaut étant défini par des expériences sur les 2 datasets fournis) ou peuvent être définis automatiquement à travers un processus qui va analyser les buckets confirmés. Mais cette étape est forte lente et parfois ne trouvent pas de meilleurs coefficients que ceux par défaut.
+    if (stacktraceToBePlaced is anonymous OR stacktracePlaced is anonymous)
+        if(stacktraceToBePlaced.path === stacktracePlaced.path)
+            return coeffPath;
+        if(stacktraceToBePlaced.adresse === stacktracePlaced.adresse)
+            return coeffPath;
+        return MIN_INTEGER;
+    else
+        if(stacktraceToBePlaced === stacktracePlaced)
+            return coeffSame;
+        if(stacktraceToBePlaced.adresse === stacktracePlaced.adresse)
+            return coeffAdresse;
+        if(stacktraceToBePlaced.method === stacktracePlaced.method)
+            return coeffMethod;
+        if(stacktraceToBePlaced.path === stacktracePlaced.path)
+            return coeffPath;
+        return MIN_INTEGER;
+```
 
-Nous avons aussi améliorés ce calcul en y ajoutant un coût de similitude à chaque étape du calcul de la matrice ce qui a amélioré les résultats.
+Ces coefficients, ainsi que les coefficients de distance, peuvent être fixés au préalable (leur valeur par défaut étant défini par des expériences sur les 2 datasets fournis) ou peuvent être définis automatiquement à travers un processus qui va analyser les buckets confirmés. Mais cette étape est forte lente et parfois ne trouvent pas de meilleurs coefficients que ceux par défaut.
+
+Nous avons aussi amélioré ce calcul en y ajoutant un coût de similitude à chaque étape du calcul de la matrice ce qui a amélioré les résultats.
 
 Voici les fonctions de calculs de Rebucket que nous avons légèrement modifiées.
 Respectivement le calcul de la matrice, le calcul du coût et le calcul de la similarité entre 2 stacktraces.  
-*c* et *o* étant les deux coefficients (distance et offset).
+**C** et **O** étant les deux coefficients de coût (distance et offset).
 
 ![Fonctions](https://raw.githubusercontent.com/Oupsla/StacktraceCrawler/master/images/Fonctions.png)
+
+
 
 
 #### Groupage
 Le placement d'une stacktrace dans un bucket est assez aisé et se base sur les similitudes calculées à l'étape précédent.
 
-Deux options sont possibles :
+Deux options sont possibles pour cette étape :
 - Soit grouper la stacktrace avec la stacktrace d'un bucket qui a obtenu le plus haut score de similarité
 - Soit calculer une moyenne de similitude entre chaque stacktrace d'un bucket et la stacktrace que l'on veut placer
 
@@ -175,7 +198,7 @@ Pour évaluer notre projet d'un point de vue performance, nous possédons 2 mét
 - Le temps d'exécution
 - Les points accordés par l'oracle sur 2 datasets
 
-Voici un graphique réprésentant l'avancement de notre projet par étape
+Voici un graphique réprésentant l'avancement de notre projet par étape :
 
 ![Historique](https://raw.githubusercontent.com/Oupsla/StacktraceCrawler/master/images/Historique.png)
 
@@ -196,7 +219,7 @@ Voici un graphique réprésentant l'avancement de notre projet par étape
 - Version 14 (+ Ajout de comparaison de méthodes anonymes et adresse - 65304.689ms) : 55
 
 Nous sommes donc assez content de notre avancée par rapport à l'oracle mais aussi au temps d'exécution globale de notre programme, malgré que celui-ci ne soit pas écrit dans le meilleur langage pour faire de l'algorithmique.  
-Sur certains versions (comme par exemple la 7), nous avons perdus des points mais avons quand même préféré les garder car celles-ci étaient logique dans leur intégration mais ne pouvaient se révéler utiles que plus tard par l'ajout d'autres mécanismes.
+Sur certains versions (comme par exemple la 7 et 9), nous avons perdus des points mais avons quand même préféré les garder car celles-ci étaient logique dans leur intégration mais ne pouvaient se révéler utiles que plus tard par l'ajout d'autres mécanismes.
 
 Nous avons aussi, lors de la version 10, ajouté des tests unitaires sur le parseur et avons rémarqué différents problèmes liés a celui-ci.  
 Nos tests se limitent au parseur car le calcul de points étant assez difficile à tester et changeant constamment par rapport aux nombreux ajouts et modifications apportés.
@@ -207,8 +230,8 @@ Cependant notre couverture sur la partie parseur est très bonne et nous est fou
 
 Ces tests nous ont donc permis d'être assuré que le parseur faisait bien son boulot et nous avons pu nous concentrer sur l'algorithme de calcul de similarité. De plus les tests sont exécutés automatiquement à chaque push sur github grace à Travis CI **[[12]](#référence)**.
 
-En résumé, sur les machines fournis par l'école et avec le premier dataset d'exemple, notre algorithme prend environ +-1min et atteints un score de 55 stacktraces placés sur 108 (sachant que certaines sont impossibles à placer, possédant trop peu d'informations).
-Celui-ci obtient un score de 74 sur 121 pour le 2ieme dataset avec un temps d'1min et 10 secondes en moyenne.
+En résumé, sur les machines fournis par l'école et avec le premier dataset d'exemple, notre algorithme prend environ +-2min et atteints un score de 56 stacktraces placées sur 108 (sachant que certaines sont impossibles à placer, possédant trop peu d'informations).
+Celui-ci obtient un score de 75 sur 121 pour le 2ieme dataset avec un temps d'1min et 10 secondes en moyenne.
 
 ### Facilité d'utilisation
 Comme dit précédemment, nous avons axé notre projet sur un grand découpage de celui-ci, car nous savions que de nombreuses parties de notre algorithme allaient être modifiées très fréquemment. Cela nous a permis de tester les fonctionnalités une à une pour voir si celles-ci étaient bénéfiques tant d'un point de vue de score que de performance.  
@@ -217,7 +240,7 @@ De ce fait, notre code est aussi très facile d'accès et pourrait être adapté
 ## Limitation
 Concernant les limitations du projet, nous avons mis en oeuvre l'algorithme du papier de Microsoft, il reste donc assez générique quelques soient le type de stacktraces à analyser. La vraie limitation est située dans le parseur qui lui est assez spécifique aux types de stacktrace que l'on nous a fourni dans les datasets.  
 
-Nous possédons aussi une branche contenant l'algorithme permettant de calculer les coéfficiant *c* et *o* de façon optimale. Cependant cet algorithme est très gourmand en temps et nous sommes donc limité dans l'utilisation de celui-ci.
+Nous possédons aussi une branche contenant l'algorithme permettant de calculer les coéfficiant **C** et **O** de façon optimale. Cependant cet algorithme est très gourmand en temps et nous sommes donc limité dans l'utilisation de celui-ci.
 
 ## Conclusion
 

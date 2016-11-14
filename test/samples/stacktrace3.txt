@@ -1,0 +1,11 @@
+#0  0xb7e309bc in clear_stack_table (stack_table=0x0) at gnome-vfs-module-callback.c:389
+No locals.
+#1  0xb7e309bc in clear_stack_table (stack_table=0x0) at gnome-vfs-module-callback.c:389
+No locals.
+#2  0x0000000000e001ed in ?? ()
+#3  0x000000000040fede in ?? ()
+#4   in ?? ()
+#5  0x000000000041fede in ?? ()
+#6  0x000000000041fede in ?? ()
+#7  0x000000000045fede in ?? () at gnome-vfs-module-callback.c:389
+#8  0x000000000046fede in ?? () at gnome-vfs-module-callback.c:389

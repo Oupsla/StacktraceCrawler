@@ -120,7 +120,7 @@ function getSimilarity(stacktraceAloneParsed, stacktraceSortedParsed, i, j) {
       return coeffPath;
     }
     else if(stacktraceAloneParsed[i].address != null && stacktraceAloneParsed[i].address === stacktraceSortedParsed[j].address){
-      return coeffPath;
+      return coeffAllSame;
     }
     else {
       return Number.MIN_SAFE_INTEGER;

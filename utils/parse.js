@@ -115,7 +115,8 @@ function splitAndSanitizeStack(stacktrace){
     if(immunesFunction.indexOf(sanitizedLine.method) === -1
       && (count === 0
         || (count > 0 && sanitizedLine.method !== "??" && sanitizedLine.method !== results[count - 1].method)
-        || (count > 0 && sanitizedLine.method === "??" && sanitizedLine.path !== results[count - 1].path)
+        || (count > 0 && sanitizedLine.method === "??" && sanitizedLine.path !== "" && sanitizedLine.path !== results[count - 1].path)
+        || (count > 0 && sanitizedLine.method === "??" && sanitizedLine.path === "" && sanitizedLine.address !== results[count - 1].address)
       ))
     {
       results.push(sanitizedLine);
