@@ -16,7 +16,7 @@ function removeAddressFromLine(line) {
 
 function removeLineNumberFromLine(line) {
   var re = new RegExp(":[0-9a-fA-F]+$", "m");
-  if(re.test(line)){
+  if(re.test(line)) {
     return line.replace(re, '');
   }
   return line;
@@ -62,13 +62,13 @@ function sanitizeLine(line) {
   line = removeLineNumberFromLine(line);
   let method = extractMethodNameFromLine(line);
   let path = extractPathFromLine(line);
-  let frame = extractFrameFromLine(line);
+  // let frame = extractFrameFromLine(line);
 
   return {
     address: lineObj.address,
     method,
-    path,
-    frame
+    path//,
+    // frame
   };
 }
 
@@ -76,7 +76,7 @@ function getSHA1(input) {
   return crypto.createHash('sha1').update(JSON.stringify(input)).digest('hex')
 }
 
-function splitStackToLines(stack){
+function splitStackToLines(stack) {
   var lines = [];
 
   const regex = /#\d+((?!#\d)[\s\S])*/g;
@@ -89,15 +89,16 @@ function splitStackToLines(stack){
       }
 
       m.forEach((match, groupIndex) => {
-          if(match !== "\n")
+          if(match !== "\n") {
             lines.push(match);
+          }
       });
   }
 
   return lines;
 }
 
-function splitAndSanitizeStack(stacktrace){
+function splitAndSanitizeStack(stacktrace) {
   let lines = splitStackToLines(stacktrace);
   let results = [];
   let count = 0;
@@ -107,7 +108,7 @@ function splitAndSanitizeStack(stacktrace){
     sanitizedLine.totalFrame = lines.length;
 
     //Removes lines with nothing
-    if(sanitizedLine.method === "" && sanitizedLine.path === "" && sanitizedLine.address == null){
+    if(sanitizedLine.method === "" && sanitizedLine.path === "" && sanitizedLine.address == null) {
       return;
     }
 
@@ -117,8 +118,7 @@ function splitAndSanitizeStack(stacktrace){
         || (count > 0 && sanitizedLine.method !== "??" && sanitizedLine.method !== results[count - 1].method)
         || (count > 0 && sanitizedLine.method === "??" && sanitizedLine.path !== "" && sanitizedLine.path !== results[count - 1].path)
         || (count > 0 && sanitizedLine.method === "??" && sanitizedLine.path === "" && sanitizedLine.address !== results[count - 1].address)
-      ))
-    {
+      )) {
       results.push(sanitizedLine);
       count++;
     }
