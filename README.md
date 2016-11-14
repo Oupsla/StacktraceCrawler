@@ -244,6 +244,10 @@ Nous possédons aussi une branche contenant l'algorithme permettant de calculer 
 
 ## Conclusion
 
+Pour conclure, nous pensons être arrivé à un algorithme efficace grâce à une bonne méthodologie. Celle-ci consistant en de nombreuses heures de recherches (4 à 5 heures dans ce cas-ci) afin de trouver des projets ou documents traitant de ce sujet. Ensuite de les lire rapidement, les trier pour pouvoir en extraire les principales données et enfin les appliquer à notre projet.  
+
+Nous sommes assez fier d'avoir pu mettre en oeuvre l'algorithme de Microsoft et d'avoir presque atteint un projet open source utilisable pour la communauté (grâce aux tests, la couverture de tests et l'intégration continue). D'autant que d'après nos recherches il n'y a actuellement aucune version de cet algorithme disponible sur github pour l'instant. #jeSuisOPL 
+
 ## Référence
 - [1] Crashwalk : https://github.com/bnagy/crashwalk
 - [2] AFL : http://lcamtuf.coredump.cx/afl/ & https://en.wikipedia.org/wiki/American_fuzzy_lop_(fuzzer)
