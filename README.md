@@ -1,4 +1,4 @@
-# System for crash-to-bucket assignment. [![Build Status](https://travis-ci.org/Oupsla/StacktraceCrawler.svg?branch=master)](https://travis-ci.org/Oupsla/StacktraceCrawler) [![Coverage Status](https://coveralls.io/repos/github/Oupsla/StacktraceCrawler/badge.svg?branch=master)](https://coveralls.io/github/Oupsla/StacktraceCrawler?branch=master)  
+# System for crash-to-bucket assignment. [![Build Status](https://travis-ci.org/Oupsla/StacktraceCrawler.svg?branch=master)](https://travis-ci.org/Oupsla/StacktraceCrawler) [![Coverage Status](https://coveralls.io/repos/github/Oupsla/StacktraceCrawler/badge.svg)](https://coveralls.io/github/Oupsla/StacktraceCrawler)
 OPL - Thème 2: Crash Analysis  
 15/11/2016
 
